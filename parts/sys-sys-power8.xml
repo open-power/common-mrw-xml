@@ -879,6 +879,18 @@
       <id>X_EREPAIR_THRESHOLD_MNFG</id>
       <default>0</default>
     </attribute>
+    <attribute>
+      <id>WOF_ENABLED</id>
+    </attribute>
+    <attribute>
+      <id>WOF_PROC_SORT</id>
+    </attribute>
+    <attribute>
+      <id>WOF_FREQUENCY_UPLIFT</id>
+    </attribute>
+    <attribute>
+      <id>WOF_REGULATOR_EFFICIENCIES</id>
+    </attribute>
     <hidden_child_id>system_event_sensor</hidden_child_id>
     <hidden_child_id>host_status_sensor</hidden_child_id>
     <hidden_child_id>fw_boot_sensor</hidden_child_id>
