@@ -2353,6 +2353,25 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>unit-muxgroup-bmc</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>IOMUX_GROUP</default>
+		</attribute>
+		<attribute>
+			<id>IO_CONFIG_SELECT</id>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>unit-pingroup-bmc</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>IOMUX_GROUP</default>
+		</attribute>
+	</targetType>		
+	<targetType>
 		<id>unit-iomux_group-fsp2</id>
 		<parent>unit</parent>
 		<attribute>
