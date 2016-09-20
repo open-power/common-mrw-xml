@@ -1866,6 +1866,16 @@
       <id>TYPE</id>
       <default>PROC</default>
     </attribute>
+    <attribute>
+      <id>NPU_MMIO_BAR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>NPU_MMIO_BAR_BASE_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>NPU_MMIO_BAR_SIZE</id>
+    </attribute>
+    
     <child_id>p8p_ex-1</child_id>
     <child_id>p8p_ex-2</child_id>
     <child_id>p8p_ex-3</child_id>
