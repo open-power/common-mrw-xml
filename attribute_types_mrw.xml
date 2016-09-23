@@ -202,7 +202,11 @@
 		<enumerator>
 			<name>VPP</name>
 			<value>11</value>
-		</enumerator>																
+		</enumerator>	
+		<enumerator>
+			<name>3.3VCS</name>
+			<value>12</value>
+		</enumerator>																	
 		<default>UNKNOWN</default>
 	</enumerationType>
 	<enumerationType>
