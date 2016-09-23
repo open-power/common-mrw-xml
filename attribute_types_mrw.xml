@@ -206,7 +206,35 @@
 		<enumerator>
 			<name>3.3VCS</name>
 			<value>12</value>
-		</enumerator>																	
+		</enumerator>
+		<enumerator>
+			<name>1.2VCS</name>
+			<value>13</value>
+		</enumerator>
+		<enumerator>
+			<name>1.1VCS</name>
+			<value>14</value>
+		</enumerator>				
+		<enumerator>
+			<name>1.8V</name>
+			<value>15</value>
+		</enumerator>
+		<enumerator>
+			<name>1.05V</name>
+			<value>16</value>
+		</enumerator>
+		<enumerator>
+			<name>0.9V</name>
+			<value>17</value>
+		</enumerator>	
+		<enumerator>
+			<name>3.3V</name>
+			<value>18</value>
+		</enumerator>
+		<enumerator>
+			<name>5.0V</name>
+			<value>19</value>
+		</enumerator>																										
 		<default>UNKNOWN</default>
 	</enumerationType>
 	<enumerationType>
