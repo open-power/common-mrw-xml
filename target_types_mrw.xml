@@ -43,6 +43,9 @@
 		<attribute>
 			<id>TYPE</id>
 		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>card</id>
@@ -69,6 +72,9 @@
 		</attribute>
 		<attribute>
 			<id>STANDBY_PLUGGABLE</id>
+		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
 		</attribute>
 	</targetType>
 	<targetType>

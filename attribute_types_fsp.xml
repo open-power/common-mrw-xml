@@ -132,6 +132,10 @@
         <name>MRU</name>
         <value>2</value>
     </enumerator>
+    <enumerator>
+    	<name>NA</name>
+    	<value>3</value>
+    </enumerator>
     <default>FRU</default>
 </enumerationType>
 
