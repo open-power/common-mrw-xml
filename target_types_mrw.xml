@@ -67,6 +67,9 @@
 		<attribute>
 			<id>CARD_TYPE</id>
 		</attribute>
+		<attribute>
+			<id>STANDBY_PLUGGABLE</id>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>connector</id>

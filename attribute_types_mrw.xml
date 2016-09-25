@@ -271,6 +271,19 @@
 		<default>GENERIC_OUTPUT</default>
 	</enumerationType>
 	<enumerationType>
+		<id>STANDBY_PLUGGABLE</id>
+		<description>Is the card pluggable at FSP standby</description>
+		<enumerator>
+			<name>NO</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>YES</name>
+			<value>1</value>
+		</enumerator>
+		<default>NO</default>
+	</enumerationType>				
+	<enumerationType>
 		<id>CARD_TYPE</id>
 		<description>Type of card</description>
 		<enumerator>
@@ -1219,6 +1232,20 @@
 		<readable />
 		<writeable />
 	</attribute>
+	<attribute>
+		<id>STANDBY_PLUGGABLE</id>
+		<description>Is a given card pluggable at FSP standby
+		</description>
+		<simpleType>
+			<enumeration>
+				<id>STANDBY_PLUGGABLE</id>
+				<default>NA</default>
+			</enumeration>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
 	<attribute>
 		<id>CARD_TYPE</id>
 		<description>Type of card
