@@ -1709,12 +1709,6 @@
 			<default></default>
 		</attribute>
 		<attribute>
-			<id>I2C_ADDRESS</id>
-		</attribute>
-		<attribute>
-			<id>I2C_SPEED</id>
-		</attribute>
-		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
 		</attribute>
@@ -2143,9 +2137,6 @@
 		</attribute>
 		<attribute>
 			<id>I2C_SPEED</id>
-		</attribute>
-		<attribute>
-			<id>I2C_ADDRESS</id>
 		</attribute>
 		<attribute>
 			<id>BUS_WIDTH</id>
