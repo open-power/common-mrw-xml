@@ -1099,11 +1099,7 @@
 		<attribute>
 			<id>TYPE</id>
 			<default>FSI</default>
-		</attribute>
-		<attribute>
-			<id>FSI_ENGINE</id>
-			<default>0x00</default>
-		</attribute>
+		</attribute>		
 		<attribute>
 			<id>FSI_PORT</id>
 			<default>0x00</default>
