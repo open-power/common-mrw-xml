@@ -43,6 +43,9 @@
 		<attribute>
 			<id>TYPE</id>
 		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>card</id>
@@ -66,6 +69,12 @@
 		</attribute>
 		<attribute>
 			<id>CARD_TYPE</id>
+		</attribute>
+		<attribute>
+			<id>STANDBY_PLUGGABLE</id>
+		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -1090,11 +1099,7 @@
 		<attribute>
 			<id>TYPE</id>
 			<default>FSI</default>
-		</attribute>
-		<attribute>
-			<id>FSI_ENGINE</id>
-			<default>0x00</default>
-		</attribute>
+		</attribute>		
 		<attribute>
 			<id>FSI_PORT</id>
 			<default>0x00</default>
@@ -1700,12 +1705,6 @@
 			<default></default>
 		</attribute>
 		<attribute>
-			<id>I2C_ADDRESS</id>
-		</attribute>
-		<attribute>
-			<id>I2C_SPEED</id>
-		</attribute>
-		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
 		</attribute>
@@ -2134,9 +2133,6 @@
 		</attribute>
 		<attribute>
 			<id>I2C_SPEED</id>
-		</attribute>
-		<attribute>
-			<id>I2C_ADDRESS</id>
 		</attribute>
 		<attribute>
 			<id>BUS_WIDTH</id>
