@@ -3262,12 +3262,12 @@
     </attribute>
 
     <!-- From PHYP Memory Map -->
-    <attribute><id>NPU_MMIO_BAR_ENABLE</id></attribute>
+    <attribute><id>PROC_NPU_MMIO_BAR_ENABLE</id></attribute>
     <attribute><id>NPU_MMIO_BAR_BASE_ADDR</id></attribute>
     <attribute><id>NPU_MMIO_BAR_SIZE</id></attribute>
     <attribute><id>FSP_BASE_ADDR</id></attribute>
     <attribute><id>FSP_BAR_SIZE</id></attribute>
-    <attribute><id>FSP_MMIO_MASK_SIZE</id></attribute>
+    <attribute><id>PROC_FSP_MMIO_MASK_SIZE</id></attribute>
     <attribute><id>PSI_BRIDGE_BASE_ADDR</id></attribute>
     <attribute><id>INTP_BASE_ADDR</id></attribute>
     <attribute><id>PHB_BASE_ADDRS</id></attribute>
@@ -3294,7 +3294,7 @@
     <attribute><id>NVIDIA_PHY1_REG_ADDR</id></attribute>
     <attribute><id>XIVE_CONTROLLER_BAR_ADDR</id></attribute>
     <attribute><id>XIVE_PRESENTATION_BAR_ADDR</id></attribute>
-    <attribute><id>PSI_HB_ESP_ADDR</id></attribute>
+    <attribute><id>PSI_HB_ESB_ADDR</id></attribute>
     <attribute><id>NX_RNG_ADDR</id></attribute>
     <!-- end Memory Map -->
 
