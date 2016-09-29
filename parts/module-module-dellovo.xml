@@ -1867,7 +1867,7 @@
       <default>PROC</default>
     </attribute>
     <attribute>
-      <id>NPU_MMIO_BAR_ENABLE</id>
+      <id>PROC_NPU_MMIO_BAR_ENABLE</id>
     </attribute>
     <attribute>
       <id>NPU_MMIO_BAR_BASE_ADDR</id>
