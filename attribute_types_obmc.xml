@@ -1,2 +1,277 @@
 <attributes>
+	<attribute>
+		<id>MANUFACTURER</id>
+        <description>The manufacturer</description>
+		<simpleType>
+			<string></string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_INCLUDES</id>
+        <description>The files to include at the top of the BMC device tree</description>
+        <simpleType>
+            <string>
+                <default>
+                NA,NA,NA,NA
+                </default>
+            </string>
+        <array>4,1</array>
+        </simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+        <description>The 'compatible' field for the part in the BMC device tree</description>
+		<simpleType>
+			<string>
+                <default></default>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_LABEL_PROPERTY</id>
+        <description>The 'label' property value for the part in the BMC device tree</description>
+		<simpleType>
+			<string>
+                <default></default>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_NODE_NAME</id>
+        <description>The name of a BMC device tree node for this target.</description>
+		<simpleType>
+			<string>
+                <default></default>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_REG_PROPERTY</id>
+        <description>The 'reg' field for the part in the BMC device tree.
+                     Don't include the brackets. </description>
+		<simpleType>
+			<string>
+                <default></default>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <enumerationType>
+        <id>INTERNAL_BUS_NAME</id>
+        <description>Enumeration of internal chip buses</description>
+        <enumerator>
+            <name>NA</name>
+            <value>0</value>
+        </enumerator>
+        <enumerator>
+            <name>ahb</name>
+            <value>1</value>
+        </enumerator>
+        <enumerator>
+            <name>apb</name>
+            <value>2</value>
+        </enumerator>
+        <default></default>
+    </enumerationType>
+
+	<attribute>
+		<id>INTERNAL_BUS</id>
+        <description>The internal chip bus the unit connects to, if applicable</description>
+		<simpleType>
+			<enumeration>
+                <id>INTERNAL_BUS_NAME</id>
+            </enumeration>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>NCSI_MODE</id>
+        <description>1 = Use NC-SI (Network Controller-Sideband Interface) mode</description>
+		<simpleType>
+			<boolean>
+                <default>0</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>USE_HW_CHECKSUM</id>
+        <description>1 = Use hardware checksum mode</description>
+		<simpleType>
+			<boolean>
+                <default>1</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>BMC_DT_MEMORY</id>
+        <description>Allows up to 4 base address,size hexadecimal pairs to
+            describe the BMC's memory layout.
+        </description>
+        <simpleType>
+            <uint32_t>
+                <default>
+                0,0,
+                0,0,
+                0,0,
+                0,0
+                </default>
+            </uint32_t>
+        <array>4,2</array>
+        </simpleType>
+		<readable/>
+    </attribute>
+
+    <attribute>
+        <id>BMC_DT_CHOSEN</id>
+        <description>
+            Specifies the values in the 'chosen' node in the BMC device tree
+        </description>
+        <complexType>
+            <field>
+                <name>stdout-path</name>
+                <description>The full path to the node representing the device used for
+                    boot console output. For an alias, use '(alias)' instead of ampersand.
+                </description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>bootargs</name>
+                <description>The boot arguments that will be passed to the kernel.</description>
+                <type>string</type>
+            </field>
+        </complexType>
+        <readable/>
+    </attribute>
+
+    <attribute>
+		<id>BMC_DT_REG_BASE</id>
+        <description>The register base address for this unit.</description>
+		<simpleType>
+			<uint32_t>
+                <default>0</default>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>BMC_DT_REG_SIZE</id>
+        <description>The size of the register area for this unit.</description>
+		<simpleType>
+			<uint32_t>
+                <default>0</default>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+        <id>BMC_DT_ATTR_NAMES</id>
+        <description>
+            Specifies which attributes, besides the existing BMC_DT_* attributes,
+            should be included as a property for this device's node in the BMC 
+            device tree.  The first column is the name of the MRW attribute, and
+            the second is what the name of the property should be in the device tree.
+        </description>
+        <simpleType>
+            <string>
+                <default>
+                NA, NA,
+                NA, NA,
+                NA, NA,
+                NA, NA
+                </default>
+            </string>
+        <array>4,2</array>
+        </simpleType>
+        <readable/>
+    </attribute>
+
+    <attribute>
+        <id>BMC_DT_ALIASES</id>
+        <description>
+            Specifies the entries for the alias node in the BMC's device tree.
+            For example, serial2 = &amp;uart10
+        </description>
+        <complexType>
+            <field>
+                <name>name1</name>
+                <description>The name of the first alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value1</name>
+                <description>The value of the first alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>name2</name>
+                <description>The name of the second alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value2</name>
+                <description>The value of the second alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>name3</name>
+                <description>The name of the third alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value3</name>
+                <description>The value of the third alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>name4</name>
+                <description>The name of the fourth alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value4</name>
+                <description>The value of the fourth alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>name5</name>
+                <description>The name of the fifth alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value5</name>
+                <description>The value of the fifth alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>name6</name>
+                <description>The name of the sixth alias in the device tree's alias node.</description>
+                <type>string</type>
+            </field>
+            <field>
+                <name>value6</name>
+                <description>The value of the sixth alias in the device tree's alias node.  No ampersand required.</description>
+                <type>string</type>
+            </field>
+        </complexType>
+        <readable/>
+    </attribute>
+
 </attributes>

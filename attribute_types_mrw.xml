@@ -971,6 +971,18 @@
 		<readable />
 		<writeable />
 	</attribute>
+    <attribute>
+		<id>ON_STATE</id>
+		<description>If it takes a logic 0 or 1 to turn on the part</description>
+		<simpleType>
+			<boolean>
+			    <default>0</default>
+			</boolean>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
 	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<description>configuration select
