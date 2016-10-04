@@ -54,7 +54,23 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
+		<default>FLASH</default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+		<default>jedec,spi-nor</default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_LABEL_PROPERTY</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_REG_PROPERTY</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_INCLUDES</id>
+		<default>NA,NA,NA,NA</default>
 	</attribute>
 </targetPart>
 <targetPart>
