@@ -1,5 +1,5 @@
 <partInstance>
-<version>2.1</version>
+<version>2.2</version>
 <targetInstances>
 <targetPart>
 	<id>PCA9551</id>
@@ -19,6 +19,7 @@
 	<child_id>PCA9551.gpio-6</child_id>
 	<child_id>PCA9551.gpio-7</child_id>
 	<child_id>PCA9551.i2c-0</child_id>
+	<child_id>PCA9551.RESET</child_id>
 	<attribute>
 		<id>CCIN</id>
 		<default></default>
@@ -60,6 +61,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
 		<id>TYPE</id>
 		<default></default>
 	</attribute>
@@ -88,8 +93,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -101,7 +110,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -140,8 +159,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -153,7 +176,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -192,8 +225,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -205,7 +242,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -244,8 +291,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -257,7 +308,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -296,8 +357,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -309,7 +374,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -348,8 +423,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -361,7 +440,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -400,8 +489,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -413,7 +506,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -452,8 +555,12 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>GPIO_EXP</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -465,7 +572,17 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
 		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -508,14 +625,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>I2C_ENGINE</id>
-		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>I2C_PORT</id>
-		<default>0x00</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -526,6 +635,76 @@
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>VPD_SIZE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9551.RESET</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9551.RESET</instance_name>
+	<position>-1</position>
+	<parent>unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_INPUT</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>RESOURCE_IS_CRITICAL</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
