@@ -1232,6 +1232,17 @@
 		<readable />
 		<writeable />
 	</attribute>
+		<attribute>
+		<id>COOLING_ZONE_MASK</id>
+		<description>Cooling zone mask for temperature sensors</description>
+		<simpleType>
+			<uint16_t>
+			</uint16_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
 	<attribute>
 		<id>STANDBY_PLUGGABLE</id>
 		<description>Is a given card pluggable at FSP standby
