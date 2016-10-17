@@ -921,6 +921,12 @@
     <attribute>
       <id>X_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
+    <attribute>
+      <id>SYSTEM_NAME</id>
+    </attribute>
+    <attribute>
+      <id>MANUFACTURER</id>
+    </attribute>
     <hidden_child_id>system_event_sensor</hidden_child_id>
     <hidden_child_id>host_status_sensor</hidden_child_id>
     <hidden_child_id>fw_boot_sensor</hidden_child_id>

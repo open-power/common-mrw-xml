@@ -54,7 +54,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default>FLASH</default>
 	</attribute>
 </targetPart>
 <targetPart>

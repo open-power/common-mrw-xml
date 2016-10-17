@@ -1,20 +1,16 @@
 <partInstance>
-<version>2.1</version>
+<version>2.2</version>
 <targetInstances>
 <targetPart>
-	<id>BMP280</id>
-	<type>chip-BMP280</type>
+	<id>SEEPROM</id>
+	<type>chip-SEEPROM</type>
 	<is_root>true</is_root>
-	<instance_name>BMP280</instance_name>
+	<instance_name>SEEPROM</instance_name>
 	<position>-1</position>
 	<parent>chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
-	<child_id>BMP280.i2c-0</child_id>
-	<attribute>
-		<id>CCIN</id>
-		<default></default>
-	</attribute>
+	<child_id>SEEPROM.i2c</child_id>
 	<attribute>
 		<id>CHIP_ID</id>
 		<default></default>
@@ -22,14 +18,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
-	</attribute>
-	<attribute>
-		<id>LOCATION_CODE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>LOCATION_CODE_TYPE</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -41,7 +29,7 @@
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
-		<default>TMP</default>
+		<default>VPD</default>
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
@@ -53,19 +41,31 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default>TMP</default>
+		<default>SEEPROM</default>
 	</attribute>
 	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
-		<default>bosch,bmp280</default>
+		<default></default>
 	</attribute>
+    <attribute>
+      <id>MEMORY_SIZE_IN_KB</id>
+      <default></default>
+    </attribute>
+    <attribute>
+      <id>WRITE_PAGE_SIZE</id>
+      <default>32</default>
+    </attribute>
+    <attribute>
+      <id>BMC_DT_ATTR_NAMES</id>
+      <default>WRITE_PAGE_SIZE, pagesize</default>
+    </attribute>
 </targetPart>
 <targetPart>
-	<id>BMP280.i2c-0</id>
+	<id>SEEPROM.i2c</id>
 	<type>unit-i2c-slave</type>
 	<is_root>false</is_root>
-	<instance_name>BMP280.i2c</instance_name>
-	<position>0</position>
+	<instance_name>SEEPROM.i2c</instance_name>
+	<position>-1</position>
 	<parent>unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -101,6 +101,10 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>VPD_SIZE</id>
 		<default>NA</default>
 	</attribute>
 </targetPart>

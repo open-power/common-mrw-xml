@@ -1,2 +1,66 @@
 <attributes>
+	<attribute>
+		<id>MANUFACTURER</id>
+        <description>The manufacturer</description>
+		<simpleType>
+			<string></string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+        <description>The 'compatible' field for the part in the BMC device tree</description>
+		<simpleType>
+			<string>
+                <default></default>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>NCSI_MODE</id>
+        <description>1 = Use NC-SI (Network Controller-Sideband Interface) mode</description>
+		<simpleType>
+			<boolean>
+                <default>0</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>USE_HW_CHECKSUM</id>
+        <description>1 = Use hardware checksum mode</description>
+		<simpleType>
+			<boolean>
+                <default>1</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+        <id>BMC_DT_ATTR_NAMES</id>
+        <description>
+            Specifies which attributes, besides the existing BMC_DT_* attributes,
+            should be included as a property for this device's node in the BMC 
+            device tree.  The first column is the name of the MRW attribute, and
+            the second is what the name of the property should be in the device tree.
+        </description>
+        <simpleType>
+            <string>
+                <default>
+                NA, NA,
+                NA, NA,
+                NA, NA,
+                NA, NA
+                </default>
+            </string>
+        <array>4,2</array>
+        </simpleType>
+        <readable/>
+    </attribute>
+
 </attributes>
