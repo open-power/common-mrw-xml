@@ -3579,7 +3579,7 @@
     <parent>unit</parent>
     <attribute>
         <id>TYPE</id>
-        <default>NVBUS</default>
+        <default>NV</default>
     </attribute>
     <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
 </targetType>
