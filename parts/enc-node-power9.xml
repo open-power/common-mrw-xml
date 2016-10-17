@@ -72,10 +72,7 @@
       <default>POWER9</default>
     </attribute>
     <attribute>
-      <id>TPM_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>TPM_PRIMARY_INFO</id>
+      <id>TPM_INFO</id>
     </attribute>
     <attribute>
       <id>TYPE</id>

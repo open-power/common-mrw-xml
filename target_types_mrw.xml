@@ -1695,6 +1695,10 @@
             <id>MRW_TYPE</id>
             <default>TMP</default>
         </attribute>
+        <attribute>
+        	<id>COOLING_ZONE_MASK</id>
+        	<default></default>
+        </attribute>
      </targetType>
 	
 	<targetType>

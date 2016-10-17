@@ -505,7 +505,7 @@
       <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
     </attribute>
     <attribute>
-      <id>FREQ_A</id>
+      <id>FREQ_A_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_MAX</id>
@@ -517,13 +517,13 @@
     	<id>FREQ_NEST_HFT</id>
     </attribute>
     <attribute>
-      <id>FREQ_PB</id>
+      <id>FREQ_PB_MHZ</id>
     </attribute>
     <attribute>
     	<id>FREQ_PB_HFT</id>
     </attribute>
     <attribute>
-      <id>FREQ_PCIE</id>
+      <id>FREQ_PCIE_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK</id>
@@ -532,7 +532,7 @@
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
-      <id>FREQ_X</id>
+      <id>FREQ_X_MHZ</id>
     </attribute>
     <attribute>
     	<id>FREQ_X_HFT</id>
@@ -676,10 +676,10 @@
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
+      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
     </attribute>
     <attribute>
-      <id>MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
+      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
     </attribute>
     <attribute>
     	<id>MRW_DDR3_VDDR_MAX_LIMIT</id>
@@ -688,13 +688,10 @@
     	<id>MRW_DDR4_VDDR_MAX_LIMIT</id>
     </attribute>
     <attribute>
-      <id>MRW_ENHANCED_GROUPING_NO_MIRRORING</id>
+      <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
     </attribute>
     <attribute>
-      <id>MRW_MAX_DRAM_DATABUS_UTIL</id>
-    </attribute>
-    <attribute>
-      <id>MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
+      <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     </attribute>
     <attribute>
       <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
@@ -715,7 +712,7 @@
       <id>MRW_NEST_CAPABLE_FREQUENCIES_SYS</id>
     </attribute>
     <attribute>
-      <id>MRW_POWER_CONTROL_REQUESTED</id>
+      <id>MSS_MRW_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
       <id>MRW_SAFEMODE_MEM_THROTTLE_NUMERATOR_PER_CHIP</id>
@@ -727,7 +724,7 @@
       <id>MRW_STRICT_MBA_PLUG_RULE_CHECKING</id>
     </attribute>
     <attribute>
-      <id>MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+      <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
       <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
@@ -736,7 +733,7 @@
     	<id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
     </attribute>
     <attribute>
-      <id>MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
     	<id>MSS_CLEANER_ENABLE</id>
@@ -751,13 +748,10 @@
       <id>MSS_MBA_CACHELINE_INTERLEAVE_MODE</id>
     </attribute>
     <attribute>
-    	<id>MSS_MCA_HASH_MODE</id>
-    </attribute>
-    <attribute>
     	<id>MSS_PREFETCH_ENABLE</id>
     </attribute>
     <attribute>
-    	<id>MSS_VOLT_VDDR_OFFSET_DISABLE</id>
+    	<id>MSS_MRW_VDDR_OFFSET_DISABLE</id>
     </attribute>
     <attribute>
     	<id>MSS_VOLT_DDR3_VDDR_SLOPE</id>
