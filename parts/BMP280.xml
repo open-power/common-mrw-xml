@@ -41,7 +41,7 @@
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
-		<default>NA</default>
+		<default>TMP</default>
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
@@ -53,7 +53,11 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default>TMP</default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+		<default>bosch,bmp280</default>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -82,14 +86,6 @@
 	<attribute>
 		<id>I2C_ADDRESS</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_ENGINE</id>
-		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>I2C_PORT</id>
-		<default>0x00</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>

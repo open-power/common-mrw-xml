@@ -1307,7 +1307,39 @@
 		<attribute>
 			<id>PIN_NAME</id>
 		</attribute>
+		<attribute>
+			<id>NCSI_MODE</id>
+            <default>0</default>
+		</attribute>
+		<attribute>
+			<id>USE_HW_CHECKSUM</id>
+            <default>0</default>
+		</attribute>
 	</targetType>
+    <targetType>
+		<id>unit-ethernet-slave</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>ETHERNET</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+		<attribute>
+			<id>PIN_NAME</id>
+		</attribute>
+		<attribute>
+			<id>CHIP_UNIT</id>
+			<default>0</default>
+		</attribute>
+	</targetType>
+
 	<targetType>
 		<id>unit-spi-master</id>
 		<parent>unit</parent>
@@ -1370,6 +1402,22 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
+		</attribute>			
+	</targetType>
+    <targetType>
+		<id>unit-uart-master</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>U750</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>OUT</default>
 		</attribute>			
 	</targetType>
 	<targetType>
@@ -2188,6 +2236,13 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>ETHERNET</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>
+	<targetType>
 		<id>LPC</id>
 		<attribute>
 			<id>CLASS</id>
@@ -2369,6 +2424,9 @@
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX_GROUP</default>
+		</attribute>
+	    <attribute>
+		    <id>IO_CONFIG_NUM</id>
 		</attribute>
 	</targetType>		
 	<targetType>
@@ -2861,6 +2919,10 @@
 		<attribute>
 			<id>BLINK_RATE</id>
 			<default></default>
+		</attribute>
+		<attribute>
+			<id>ON_STATE</id>
+			<default>0</default>
 		</attribute>
 	</targetType>
 	<targetType>

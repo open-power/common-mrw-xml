@@ -69,7 +69,11 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default>GPIO_EXPANDER</default>
+	</attribute>
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+		<default>nxp,pca955x</default>
 	</attribute>
 </targetPart>
 <targetPart>
