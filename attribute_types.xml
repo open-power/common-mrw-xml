@@ -20282,7 +20282,6 @@ Measured in GB</description>
     <writeable/>
 </attribute>
 
-<!--
 <enumerationType>
     <id>FAPI_POS</id>
     <description>Enumeration defining special FAPI_POS values</description>
@@ -20292,7 +20291,6 @@ Measured in GB</description>
     </enumerator>
     <default>NA</default>
 </enumerationType>
--->
 
 <attribute>
     <id>FAPI_POS</id>
