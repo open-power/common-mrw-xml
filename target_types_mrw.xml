@@ -4,42 +4,14 @@
 	<targetType>
 		<id>base</id>
 		<attribute>
-			<id>CLASS</id>
-		</attribute>
-		<attribute>
-			<id>TYPE</id>
-		</attribute>
-		<attribute>
 			<id>MRW_TYPE</id>
 			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-		</attribute>
-		<attribute>
-			<id>RESOURCE_IS_CRITICAL</id>
-			<default>0</default>
 		</attribute>
 	</targetType>
 	<targetType>
 		<id>chip</id>
-		<parent>base</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
-		<attribute>
-			<id>CLASS</id>
-			<default>CHIP</default>
-		</attribute>
-		<attribute>
-			<id>POSITION</id>
-		</attribute>
-		<attribute>
-			<id>CHIP_ID</id>
-		</attribute>
-		<attribute>
-			<id>MRU_ID</id>
-			<default>0</default>
-		</attribute>
 		<attribute>
 			<id>TYPE</id>
 		</attribute>
@@ -49,11 +21,6 @@
 	</targetType>
 	<targetType>
 		<id>card</id>
-		<parent>base</parent>
-		<attribute>
-			<id>CLASS</id>
-			<default>CARD</default>
-		</attribute>
 		<attribute>
 			<id>LOCATION_CODE</id>
 		</attribute>
@@ -79,7 +46,6 @@
 	</targetType>
 	<targetType>
 		<id>connector</id>
-		<parent>base</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -103,15 +69,6 @@
 	</targetType>
 	<targetType>
 		<id>unit</id>
-		<parent>base</parent>
-		<attribute>
-			<id>CLASS</id>
-			<default>UNIT</default>
-		</attribute>
-		<attribute>
-			<id>CHIP_UNIT</id>
-			<default>0</default>
-		</attribute>
 		<attribute>
 			<id>BUS_TYPE</id>
 			<default>NA</default>
@@ -125,7 +82,6 @@
 			<default>EX</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-venice</id>
 		<parent>unit-ex-power8</parent>
@@ -134,7 +90,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-murano</id>
 		<parent>unit-ex-power8</parent>
@@ -143,7 +98,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-naples</id>
 		<parent>unit-ex-power8</parent>
@@ -152,8 +106,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-core-power8</id>
 		<parent>unit</parent>
@@ -168,7 +120,6 @@
 			<id>FRU_NAME</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-venice</id>
 		<parent>unit-core-power8</parent>
@@ -177,7 +128,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-murano</id>
 		<parent>unit-core-power8</parent>
@@ -186,7 +136,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-naples</id>
 		<parent>unit-core-power8</parent>
@@ -195,8 +144,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-pci-power8</id>
 		<parent>unit</parent>
@@ -215,9 +162,7 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
-
 	<targetType>
 		<id>unit-pci-venice</id>
 		<parent>unit-pci-power8</parent>
@@ -250,7 +195,6 @@
 			<default>1</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-pci-power9</id>
 		<parent>unit</parent>
@@ -270,6 +214,7 @@
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
 	</targetType>
+<<<<<<< Upstream, based on github/master
 	
         <targetType>
                 <id>unit-pci-cumulus</id>
@@ -336,6 +281,40 @@
                 </attribute>
         </targetType>
         
+=======
+    <targetType>
+        <id>unit-pci-cumulus</id>
+        <parent>unit-pci-power9</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_NUM_LANES</id>
+            <default>16</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_MASK</id>
+            <default></default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SET</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>PHB_NUM</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>ENABLE_CAPI</id>
+            <default>1</default>
+        </attribute>
+        <attribute>
+            <id>IOP_NUM</id>
+            <default>1</default>
+        </attribute>
+    </targetType>        
+>>>>>>> d1238ed New branch created for xml merging work. 
 	<targetType>
 		<id>unit-pci-naples</id>
 		<parent>unit-pci-power8</parent>
@@ -368,8 +347,6 @@
 			<default>1</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-pci-murano</id>
 		<parent>unit-pci-power8</parent>
@@ -378,7 +355,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-power8</id>
 		<parent>unit</parent>
@@ -398,7 +374,6 @@
 			<id>CHIP_UNIT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-venice</id>
 		<parent>unit-abus-power8</parent>
@@ -407,7 +382,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-murano</id>
 		<parent>unit-abus-power8</parent>
@@ -416,8 +390,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-xbus-power8</id>
 		<parent>unit</parent>
@@ -437,7 +409,6 @@
 			<id>CHIP_UNIT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-venice</id>
 		<parent>unit-xbus-power8</parent>
@@ -446,7 +417,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-murano</id>
 		<parent>unit-xbus-power8</parent>
@@ -455,7 +425,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-naples</id>
 		<parent>unit-xbus-power8</parent>
@@ -475,7 +444,6 @@
 			<default>L4</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-power8</id>
 		<parent>unit</parent>
@@ -488,7 +456,6 @@
 			<default>0</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-power8</id>
 		<parent>unit</parent>
@@ -517,7 +484,6 @@
 			</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-venice</id>
 		<parent>unit-mcs-power8</parent>
@@ -526,7 +492,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-murano</id>
 		<parent>unit-mcs-power8</parent>
@@ -535,7 +500,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-naples</id>
 		<parent>unit-mcs-power8</parent>
@@ -555,7 +519,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-murano</id>
 		<parent>unit-mba-venice</parent>
@@ -564,7 +527,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-naples</id>
 		<parent>unit-mba-venice</parent>
@@ -583,35 +545,10 @@
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
-			<id>TYPE</id>
-			<default>MEMBUF</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-			<default>CENTAUR</default>
-		</attribute>
-		<attribute>
-			<id>MSS_FREQ_OVERRIDE</id>
-		</attribute>
-		<attribute>
-			<id>MSS_VOLT_OVERRIDE</id>
-		</attribute>
-		<attribute>
-			<id>I2C_BUS_SPEED_ARRAY</id>
-			<default>400,400,0,0,0,0</default>
-		</attribute>
-		<attribute>
 			<id>IPMI_INSTANCE</id>
 		</attribute>
 		<attribute>
 			<id>FRU_NAME</id>
-		</attribute>
-		<attribute>
-			<id>FRU_ID</id>
-		</attribute>
-		<attribute>
-			<id>CENTAUR_ECID_FRU_ID</id>
-			<default>0xFF</default>
 		</attribute>
 	</targetType>
 
@@ -632,7 +569,6 @@
 		<id>unit-mba-centaur</id>
 		<parent>unit-mba-power8</parent>
 	</targetType>
-
 	<targetType>
 		<id>unit-dimm_port-power8</id>
 		<parent>unit</parent>
@@ -657,7 +593,6 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-dimm_port-power9</id>
@@ -679,30 +614,18 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
 
-
 	<!-- DIMMs -->
+
 	<targetType>
 		<id>lcard-dimm</id>
 		<parent>card</parent>
-		<attribute>
-			<id>TYPE</id>
-			<default>DIMM</default>
-		</attribute>
-		<attribute>
-			<id>POSITION</id>
-		</attribute>
 		<attribute>
 			<id>IPMI_INSTANCE</id>
 		</attribute>
 		<attribute>
 			<id>FRU_NAME</id>
-		</attribute>
-		<attribute>
-			<id>FRU_ID</id>
-			<default></default>
 		</attribute>
 	</targetType>
 
@@ -720,12 +643,7 @@
 		<id>lcard-dimm-jedec</id>
 		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
-		<attribute>
-			<id>MODEL</id>
-			<default>JEDEC</default>
-		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ddr3-jedec</id>
 		<parent>unit</parent>
@@ -774,31 +692,6 @@
 			<default>IN</default>
 		</attribute>
 	</targetType>	
-	<targetType>
-		<id>unit-ddr4-jedec</id>
-		<parent>unit</parent>
-		<attribute>
-			<id>MODEL</id>
-			<default>JEDEC</default>
-		</attribute>
-		<attribute>
-			<id>TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>MRW_TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>BUS_TYPE</id>
-			<default>DDR4</default>
-		</attribute>
-		<attribute>
-			<id>DIRECTION</id>
-			<default>IN</default>
-		</attribute>
-	</targetType>
-	
 	<targetType>
 		<id>connector-cdimm-cdimm</id>
 		<parent>connector</parent>
@@ -852,7 +745,6 @@
 			<default>CDIMM</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-power8</id>
 		<parent>unit</parent>
@@ -865,24 +757,10 @@
 		<id>occ</id>
 		<parent>unit</parent>
 		<attribute>
-			<id>TYPE</id>
-			<default>OCC</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-			<default>POWER8</default>
-		</attribute>
-		<attribute>
 			<id>FRU_NAME</id>
 		</attribute>
 		<attribute>
-			<id>FRU_ID</id>
-		</attribute>
-		<attribute>
 			<id>IPMI_INSTANCE</id>
-		</attribute>
-		<attribute>
-			<id>OCC_MASTER_CAPABLE</id>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -893,7 +771,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-murano</id>
 		<parent>unit-nx-power8</parent>
@@ -902,7 +779,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-naples</id>
 		<parent>unit-nx-power8</parent>
@@ -911,7 +787,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-power8</id>
 		<parent>unit</parent>
@@ -920,7 +795,6 @@
 			<default>PORE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-venice</id>
 		<parent>unit-pore-power8</parent>
@@ -929,7 +803,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-murano</id>
 		<parent>unit-pore-power8</parent>
@@ -938,7 +811,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-naples</id>
 		<parent>unit-pore-power8</parent>
@@ -947,7 +819,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-power8</id>
 		<parent>unit</parent>
@@ -956,7 +827,6 @@
 			<default>CAPP</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-venice</id>
 		<parent>unit-capp-power8</parent>
@@ -965,7 +835,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-murano</id>
 		<parent>unit-capp-power8</parent>
@@ -974,7 +843,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-naples</id>
 		<parent>unit-capp-power8</parent>
@@ -1038,7 +906,6 @@
 			<id>DIRECTION</id>
 			<default>OUT</default>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-fsi-proc</id>
@@ -1120,7 +987,6 @@
 			<default>OUT</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-fsi-slave</id>
 		<parent>unit</parent>
@@ -1489,7 +1355,6 @@
 			<id>PIN_NUM</id>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>i2c-device</id>
 		<parent>base</parent>
@@ -1498,7 +1363,6 @@
 			<default>CHIP</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>smartchip-generic</id>
 		<parent>chip</parent>
@@ -1513,7 +1377,6 @@
 			<default>SMARTCHIP</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>chip-gpioexp-generic</id>
 		<parent>chip</parent>
@@ -1779,8 +1642,7 @@
         	<id>COOLING_ZONE_MASK</id>
         	<default></default>
         </attribute>
-     </targetType>
-	
+    </targetType>
 	<targetType>
 		<id>chip-vpd-device</id>
 		<parent>chip</parent>
@@ -1893,7 +1755,6 @@
 			<default>0x50</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pcie-endpoint</id>
 		<parent>unit</parent>
@@ -1983,7 +1844,6 @@
 		<parent>card-pciecard</parent>
 		<parent_type>slot-pcieslot-generic</parent_type>
 	</targetType>
-
 	<targetType>
 		<id>unit-pciconfig0-venice</id>
 		<parent>unit</parent>
@@ -2006,8 +1866,8 @@
 			<id>PCIE_LANE_SWAP_TABLE</id>
 			<default></default>
 		</attribute>
-
 	</targetType>
+<<<<<<< Upstream, based on github/master
         <targetType>
                 <id>unit-pciconfig0-cumulus</id>
                 <parent>unit</parent>
@@ -2081,6 +1941,31 @@
 
         </targetType>   
         
+=======
+    <targetType>
+        <id>unit-pciconfig0-cumulus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x00</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>
+>>>>>>> d1238ed New branch created for xml merging work. 
 	<targetType>
 		<id>unit-pciconfig1-venice</id>
 		<parent>unit</parent>
@@ -2104,8 +1989,8 @@
 			<default></default>
 		</attribute>
 	</targetType>
-        <targetType>
-                <id>unit-pciconfig1-cumulus</id>
+    <targetType>
+        <id>unit-pciconfig1-cumulus</id>
                 <parent>unit</parent>
                 <attribute>
                         <id>MODEL</id>
@@ -2180,6 +2065,7 @@
                         <id>IO_CONFIG_SELECT</id>
                 </attribute>
         </targetType>
+<<<<<<< Upstream, based on github/master
         <targetType>
                 <id>unit-pciconfigs-nimbus</id>
                 <parent>unit</parent>
@@ -2195,6 +2081,8 @@
                         <id>IO_CONFIG_SELECT</id>
                 </attribute>
         </targetType>
+=======
+>>>>>>> d1238ed New branch created for xml merging work. 
 	<targetType>
 		<id>unit-pciconfig0-naples</id>
 		<parent>unit</parent>
@@ -2217,7 +2105,6 @@
 			<id>PCIE_LANE_SWAP_TABLE</id>
 			<default></default>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-pciconfig1-naples</id>
@@ -2532,7 +2419,6 @@
 			<id>IO_CONFIG_SELECT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-iomux_config-fsp2</id>
 		<parent>unit</parent>
@@ -2791,7 +2677,6 @@
 			<default>IOMUX</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-iomux_config0-cfams</id>
 		<parent>unit-iomux_config-cfams</parent>
@@ -3150,7 +3035,6 @@
 			<default>OUT</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-pwm-generic</id>
 		<parent>unit</parent>
@@ -3279,7 +3163,6 @@
 			<default></default>
 		</attribute>							
 	</targetType>
-
 	<targetType>
 		<id>unit-ipmi-sensor</id>
 		<parent>unit</parent>
@@ -3368,6 +3251,7 @@
 			<default>PROC</default>
 		</attribute>
 	</targetType>	
+<<<<<<< Upstream, based on github/master
 <targetType>
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
@@ -3990,6 +3874,81 @@
 
 <!-- End p9 sub-units -->
 <!-- DPSS sub-units -->
+=======
+	<targetType>
+    	<id>chip-processor-nimbus</id>
+    	<parent>chip-processor-power9</parent>
+    	<attribute>
+        	<id>PROC_PCIE_NUM_PHB</id>
+        	<default>3</default>
+    	</attribute>
+    	<attribute>
+        	<id>PROC_PCIE_NUM_IOP</id>
+        	<default>2</default>
+    	</attribute>
+    	<attribute>
+        	<id>PROC_PCIE_NUM_LANES</id>
+        	<default>24</default>
+    	</attribute>
+    	<attribute>
+        	<id>PROC_PCIE_REFCLOCK_ENABLE</id>
+        	<default>0xE0</default>
+    	</attribute>
+	</targetType>
+	<!-- p9 sub-units -->
+	<!-- MCA
+	     Nimbus : 2 MCAs under each MCS (total of 8 per chip)
+	     Cumulus: No MCA
+	     Tied 1-1 to a DDR port -->
+	<targetType>
+	    <id>unit-mca-power9</id>
+	    <parent>unit</parent>
+	    <attribute><id>EFF_DIMM_SIZE</id></attribute>
+	</targetType>
+	<!-- DMI
+	     Nimbus : None
+	     Cumulus: 2 per MI (total of 8 per chip) -->
+	<targetType>
+	    <id>unit-dmi-power9</id>
+	    <parent>unit</parent>
+	    <attribute>
+	        <id>BUS_TYPE</id>
+	        <default>DMI</default>
+	    </attribute>    
+	    <attribute>
+			<id>DIRECTION</id>
+			<default>OUT</default>
+		</attribute>
+	</targetType>
+	<!-- PEC corresponds to IOP. Use same PEC target for Nimbus and Cumulus
+	     Nimbus : 3 per chip
+	     Cumulus: 3 per chip  -->
+	<targetType>
+	    <id>unit-pec-power9</id>
+	    <parent>unit</parent>
+	    <attribute>
+	        <id>PROC_PCIE_REFCLOCK_ENABLE</id>
+	        <default>0xE0</default>
+	    </attribute>
+	</targetType>
+	<!-- XBUS
+	     Nimbus : 1 per chip
+	     Cumulus: 7  -->
+	<targetType>
+	    <id>unit-xbus-power9</id>
+	    <parent>unit</parent>
+	    <attribute>
+	        <id>BUS_TYPE</id>
+	        <default>XBUS</default>
+	    </attribute>
+	    <attribute>
+	        <id>DIRECTION</id>
+	        <default>INOUT</default>
+	    </attribute>
+	</targetType>
+	<!-- End p9 sub-units -->
+	<!-- DPSS sub-units -->
+>>>>>>> d1238ed New branch created for xml merging work. 
 	<targetType>
 		<id>dpss.unit-config-generic</id>
 		<parent>unit</parent>
