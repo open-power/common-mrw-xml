@@ -7218,6 +7218,28 @@ firmware notes: Used as override attribute for pstate procedure
 </attribute>
 
 <attribute>
+    <id>EFF_DRAM_MFG_ID</id>
+    <description>
+        DRAM Manufacturer ID Code
+        Decodes SPD Byte 350 and 351
+        creator: mss_eff_cnfg
+        consumer: power_thermal::decoder
+    </description>
+    <simpleType>
+        <uint16_t>
+        </uint16_t>
+        <array>2,2</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EFF_DRAM_MFG_ID</id>
+      <macro>DIRECT</macro>
+  </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
     <id>EFF_DRAM_WIDTH</id>
     <description>
       DRAM Device Width: X4, X8, X16, X32.
@@ -10678,7 +10700,7 @@ firmware notes: Used as override attribute for pstate procedure
 
 <!--TOOD RTC: 151938 Make sure that these are set up by parseMRW script-->
 <attribute>
-    <id>MEMVPD_FREQS_MHZ</id>
+    <id>MSS_MRW_SUPPORTED_FREQ</id>
     <description>
     List of memory frequencies supported by the current system.
     </description>
@@ -10691,7 +10713,7 @@ firmware notes: Used as override attribute for pstate procedure
     <persistency>non-volatile</persistency>
     <readable/>
     <hwpfToHbAttrMap>
-        <id>ATTR_MEMVPD_FREQS_MHZ</id>
+        <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
@@ -12654,19 +12676,17 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
+    <id>PROC_PCIE_REFCLOCK_ENABLE</id><!-- @deprecated -->
     <description>PCIE refclock enable valid mask
+      PCIE refclock enable valid mask
       creator: platform
-      consumer: proc_pcie_scominit
-      firmware notes:
-        Bit mask defining state of refclock drive enables
-        bit0=PCI0, bit1=PCI1, bit2=PCI2, bit3=PCI3
+      consumer: p9_pcie_scominit
     </description>
     <simpleType>
        <uint8_t>
        </uint8_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <hwpfToHbAttrMap>
         <id>ATTR_PROC_PCIE_REFCLOCK_ENABLE</id>
@@ -15731,7 +15751,7 @@ Measured in GB</description>
 <attribute>
     <id>REDUNDANT_CLOCKS</id>
     <description>
-        1 = System has redundant clock oscillators
+        1 = System has redundant clock oscillators
         0 = System does not have redundant clock oscillators
         From the Machine Readable Workbook
     </description>
@@ -16959,7 +16979,7 @@ Measured in GB</description>
     <readable/>
 </attribute>
 
-<attribute>
+<attribute><!-- Deprecated : @todo-Remove with RTC:160417 -->
     <id>PROC_PCIE_LANE_EQUALIZATION</id>
     <description>PCIE Lane Equalization values for each PHB
         Creator: MRW
@@ -16988,7 +17008,7 @@ Measured in GB</description>
         <array>4,32</array>
     </simpleType>
     <persistency>non-volatile</persistency>
-    <readable/>
+    <readable/>    
 </attribute>
 
 <attribute>
@@ -17088,16 +17108,16 @@ Measured in GB</description>
         Creator: MRW
         Purpose: Used by FW to know the fastest possible bus speed that all of
             the devices on a given bus are able to use.
-        Data Format: 4x3 array of uint16_t values.  The first two values
-            indicate the engine number of the bus.  The next 3 values indicate
-            the port number of the bus.  The value in the array is the I2C bus
-            speed used for that engine/port combination in KHz.
+        Data Format: 4x4 array of uint16_t values.  The first index indicates
+            the engine number of the bus.  The second index indicates the port
+            number of the bus.  The value in the array is the I2C bus speed
+            used for that engine/port combination in KHz.
     </description>
     <simpleType>
         <uint16_t>
-            <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+            <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
         </uint16_t>
-        <array>4,3</array>
+        <array>4,4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -17638,24 +17658,6 @@ Measured in GB</description>
     <readable/>
     <hwpfToHbAttrMap>
         <id>ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
-    <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
-    <description>Machine Readable Workbook VMEM regulator power limit per CDIMM
-    assuming a full configuration. Units in cW.
-    </description>
-    <simpleType>
-        <uint32_t>
-            <default>0</default>
-        </uint32_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
@@ -19152,17 +19154,23 @@ Measured in GB</description>
     <id>MAX_ALLOWED_DIMM_FREQ</id>
     <description>
       Maximum frequency (in MHz) that this system can run the DIMMs at.
-      There are 4 possible values determined by the dimm configuration.
+      There are 5 possible values determined by the dimm configuration.
+      For configurations which have mixed rank configurations, the lowest
+      frequency based on ranks of either DIMM is chosen. For example if
+      there was a 1R and a 2R DIMM installed, and 1R dual drop was a lower
+      max freq than 2R dual drop, then the 1R max freq would be the max allowed.
       [0]=One rank, single drop
       [1]=Two rank, single drop
-      [2]=One rank, dual drop
-      [3]=Two rank, dual drop
+      [2]=Four rank, single drop
+      [3]=One rank, dual drop
+      [4]=Two rank, dual drop
       A value of zero would indicate an unsupported configuration.
     </description>
     <simpleType>
         <uint32_t>
+            <default>2400,2400,2400,2400,2400</default>
         </uint32_t>
-        <array>4</array>
+        <array>5</array>
     </simpleType>
     <hwpfToHbAttrMap>
         <id>ATTR_MAX_ALLOWED_DIMM_FREQ</id>
@@ -20399,7 +20407,7 @@ Measured in GB</description>
       <uint8_t>
       </uint8_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <writeable/>
   <readable/>
   <hwpfToHbAttrMap>
@@ -20415,7 +20423,7 @@ Measured in GB</description>
       <uint8_t>
       </uint8_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <writeable/>
   <readable/>
   <hwpfToHbAttrMap>
@@ -22355,7 +22363,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_G3_PLL_CONTROL0</id>
+  <id>PROC_PCIE_IOP_G3_PLL_CONTROL0</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22366,7 +22374,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_G3_PLL_CONTROL0</id>
@@ -22375,7 +22383,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_G2_PLL_CONTROL0</id>
+  <id>PROC_PCIE_IOP_G2_PLL_CONTROL0</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22386,7 +22394,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_G2_PLL_CONTROL0</id>
@@ -22395,7 +22403,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL0</id>
+  <id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL0</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22406,7 +22414,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_PLL_GLOBAL_CONTROL0</id>
@@ -22415,7 +22423,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL1</id>
+  <id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL1</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22426,7 +22434,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_PLL_GLOBAL_CONTROL1</id>
@@ -22435,7 +22443,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_PCS_CONTROL0</id>
+  <id>PROC_PCIE_IOP_PCS_CONTROL0</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22447,7 +22455,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_PCS_CONTROL0</id>
@@ -22456,7 +22464,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_PCS_CONTROL1</id>
+  <id>PROC_PCIE_IOP_PCS_CONTROL1</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22468,7 +22476,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_PCS_CONTROL1</id>
@@ -22477,7 +22485,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_TX_FIFO_OFFSET</id>
+  <id>PROC_PCIE_IOP_TX_FIFO_OFFSET</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22490,7 +22498,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_TX_FIFO_OFFSET</id>
@@ -22499,7 +22507,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_TX_RCVRDETCNTL</id>
+  <id>PROC_PCIE_IOP_TX_RCVRDETCNTL</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22512,7 +22520,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_TX_RCVRDETCNTL</id>
@@ -22521,7 +22529,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_TX_BWLOSS1</id>
+  <id>PROC_PCIE_IOP_TX_BWLOSS1</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22534,7 +22542,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_TX_BWLOSS1</id>
@@ -22543,7 +22551,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_RX_VGA_CONTROL2</id>
+  <id>PROC_PCIE_IOP_RX_VGA_CONTROL2</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22556,7 +22564,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_RX_VGA_CONTROL2</id>
@@ -22565,7 +22573,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_RX_PEAK</id>
+  <id>PROC_PCIE_IOP_RX_PEAK</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22578,7 +22586,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_RX_PEAK</id>
@@ -22587,7 +22595,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_RX_SDL</id>
+  <id>PROC_PCIE_IOP_RX_SDL</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22600,7 +22608,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_RX_SDL</id>
@@ -22609,7 +22617,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_ZCAL_CONTROL</id>
+  <id>PROC_PCIE_IOP_ZCAL_CONTROL</id><!-- @deprecated -->
   <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22620,7 +22628,7 @@ Measured in GB</description>
   <simpleType>
       <uint32_t></uint32_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_ZCAL_CONTROL</id>
@@ -22629,7 +22637,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_TX_FFE_GEN1</id>
+  <id>PROC_PCIE_IOP_TX_FFE_GEN1</id><!-- @deprecated -->
     <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22641,7 +22649,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_TX_FFE_GEN1</id>
@@ -22650,7 +22658,7 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-  <id>PROC_PCIE_IOP_TX_FFE_GEN2</id>
+  <id>PROC_PCIE_IOP_TX_FFE_GEN2</id><!-- @deprecated -->
     <description>
       creator: platform (MRW)
       consumer: p9_pcie_scominit
@@ -22662,7 +22670,7 @@ Measured in GB</description>
       <uint32_t></uint32_t>
       <array>16</array>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_TX_FFE_GEN2</id>
@@ -28029,11 +28037,12 @@ Measured in GB</description>
     <id>PFET_OFF_CONTROLS</id>
     <description>
         To disable force pfet off control from fuse status
+        Override attribute
     </description>
     <simpleType>
         <uint32_t></uint32_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <hwpfToHbAttrMap>
         <id>ATTR_PFET_OFF_CONTROLS</id>
@@ -28049,7 +28058,7 @@ Measured in GB</description>
     <simpleType>
         <uint64_t></uint64_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
@@ -28066,7 +28075,7 @@ Measured in GB</description>
     <simpleType>
         <uint64_t></uint64_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
@@ -28083,7 +28092,7 @@ Measured in GB</description>
     <simpleType>
         <uint64_t></uint64_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
@@ -29362,13 +29371,13 @@ Measured in GB</description>
   <id>CP_FILTER_BYPASS</id>
   <description>
     To skip the locking sequence and check for lock of CP PLL
+    Override attribute
   </description>
   <simpleType>
     <uint8_t>
-    <default>0</default>
     </uint8_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <writeable/>
   <hwpfToHbAttrMap>
@@ -29381,13 +29390,13 @@ Measured in GB</description>
   <id>SS_FILTER_BYPASS</id>
   <description>
     To skip the locking sequence and check for lock of SS PLL
+    Override attribute
   </description>
   <simpleType>
     <uint8_t>
-    <default>0</default>
     </uint8_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <writeable/>
   <hwpfToHbAttrMap>
@@ -29400,13 +29409,13 @@ Measured in GB</description>
   <id>IO_FILTER_BYPASS</id>
   <description>
     To skip the locking sequence and check for lock of IO PLL
+    Override attribute
   </description>
   <simpleType>
     <uint8_t>
-    <default>0</default>
     </uint8_t>
   </simpleType>
-  <persistency>non-volatile</persistency>
+  <persistency>volatile-zeroed</persistency>
   <readable/>
   <writeable/>
   <hwpfToHbAttrMap>
@@ -29419,13 +29428,13 @@ Measured in GB</description>
     <id>DPLL_BYPASS</id>
     <description>
         Skip locking sequence and check for lock of DPLL
+        Override attribute
     </description>
     <simpleType>
         <uint8_t>
-            <default>0</default>
         </uint8_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
@@ -29438,13 +29447,13 @@ Measured in GB</description>
     <id>NEST_MEM_X_O_PCI_BYPASS</id>
     <description>
         Skip the locking sequence and check for lock of NEST/MEM/XBUS/OBUS/PCI PLLs
+        Override attr
     </description>
     <simpleType>
         <uint8_t>
-            <default>0</default>
         </uint8_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
@@ -31514,6 +31523,25 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
+  <id>MSS_IGNORE_PLUG_RULES</id>
+  <description>
+    Set to IGNORE if you want to ignore the plug rules. Sometimes
+    this is needed in a partial-good configuration
+  </description>
+  <simpleType>
+    <uint8_t>
+    </uint8_t>
+  </simpleType>
+  <persistency>volatile-zeroed</persistency>
+  <readable/>
+  <writeable/>
+  <hwpfToHbAttrMap>
+      <id>ATTR_MSS_IGNORE_PLUG_RULES</id>
+      <macro>DIRECT</macro>
+  </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
     <id>TOD_CPU_DATA</id>
     <description>TOD CHIP DATA for each CHIP
         The size of the TOD CHIP DATA must be equal to the sizeof(TodChipData)
@@ -31555,6 +31583,78 @@ Measured in GB</description>
   </simpleType>
   <persistency>non-volatile</persistency>
   <readable/>
+</attribute>
+
+<attribute>
+    <id>REL_POS</id>
+    <description>
+        Logical position of this unit/dimm relative to its immediate parent
+    </description>
+    <simpleType>
+        <uint8_t>
+            <default>0xFF</default>
+        </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_REL_POS</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
+    <description>PCIE Lane Equalization values for each PHB
+        Creator: MRW
+        Purpose: Holds settings which are loaded into the HW to optimize the
+            PCIE lane signal eye between the chips + PCIE Gen3 endpoints
+        Data Format: 16 entries of 16 bytes of EQ data per PHB.  Each PHB has an EQ
+            value for each of its 16 lanes.  Each value is a uint16 formatted as
+            follows:
+                Bit 0:3   - up_rx_hint (bit 0 reserved)
+                Bit 4:7   - up_tx_preset
+                Bit 8:11  - dn_rx_hint (bit 0 reserved)
+                Bit 12:15 - dn_tx_preset
+    </description>
+    <simpleType>
+        <uint16_t><default>
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777
+        </default></uint16_t>
+        <array>16</array><!-- Lane -->
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+    <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    <description>PCIE Lane Equalization values for each PHB
+        Creator: MRW
+        Purpose: Holds settings which are loaded into the HW to optimize the
+            PCIE lane signal eye between the chips + PCIE Gen4 endpoints
+        Data Format: 16 entries of 16 bytes of EQ data per PHB.  Each PHB has an EQ
+            value for each of its 16 lanes.  Each value is a uint16 formatted as
+            follows:
+                Bit 0:3   - up_rx_hint (bit 0 reserved)
+                Bit 4:7   - up_tx_preset
+                Bit 8:11  - dn_rx_hint (bit 0 reserved)
+                Bit 12:15 - dn_tx_preset
+    </description>
+    <simpleType>
+        <uint16_t><default>
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777,
+            0x7777,0x7777,0x7777,0x7777
+        </default></uint16_t>
+        <array>16</array><!-- Lane -->
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
 </attribute>
 
 </attributes>

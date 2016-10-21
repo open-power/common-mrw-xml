@@ -303,6 +303,38 @@
                         <default>1</default>
                 </attribute>
         </targetType>
+        <targetType>
+                <id>unit-pci-nimbus</id>
+                <parent>unit-pci-power9</parent>
+                <attribute>
+                        <id>MODEL</id>
+                        <default>CUMULUS</default>
+                </attribute>
+                <attribute>
+                        <id>PCIE_NUM_LANES</id>
+                        <default>16</default>
+                </attribute>
+                <attribute>
+                        <id>PCIE_LANE_MASK</id>
+                        <default></default>
+                </attribute>
+                <attribute>
+                        <id>PCIE_LANE_SET</id>
+                        <default>0</default>
+                </attribute>
+                <attribute>
+                        <id>PHB_NUM</id>
+                        <default>0</default>
+                </attribute>
+                <attribute>
+                        <id>ENABLE_CAPI</id>
+                        <default>1</default>
+                </attribute>
+                <attribute>
+                        <id>IOP_NUM</id>
+                        <default>1</default>
+                </attribute>
+        </targetType>
         
 	<targetType>
 		<id>unit-pci-naples</id>
@@ -2000,6 +2032,7 @@
                 </attribute>
 
         </targetType>
+        
 	<targetType>
 		<id>unit-pciconfig1-venice</id>
 		<parent>unit</parent>
@@ -2100,7 +2133,7 @@
                 </attribute>
         </targetType>
         <targetType>
-                <id>unit-pciconfigs-cumulus</id>
+                <id>unit-pciconfigs-nimbus</id>
                 <parent>unit</parent>
                 <attribute>
                         <id>MODEL</id>
