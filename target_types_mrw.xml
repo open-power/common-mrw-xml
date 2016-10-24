@@ -2032,6 +2032,54 @@
                 </attribute>
 
         </targetType>
+        <targetType>
+                <id>unit-pciconfig0-nimbus</id>
+                <parent>unit</parent>
+                <attribute>
+                        <id>MODEL</id>
+                        <default>CUMULUS</default>
+                </attribute>
+                <attribute>
+                        <id>MRW_TYPE</id>
+                        <default>PCI_CONFIG</default>
+                </attribute>
+                <attribute>
+                        <id>PCIE_CONFIG_NUM</id>
+                        <default>0x00</default>
+                </attribute>
+                <attribute>
+                        <id>IO_CONFIG_NUM</id>
+                </attribute>
+                <attribute>
+                        <id>PCIE_LANE_SWAP_TABLE</id>
+                        <default></default>
+                </attribute>
+
+        </targetType>      
+               <targetType>
+                <id>unit-pciconfig1-nimbus</id>
+                <parent>unit</parent>
+                <attribute>
+                        <id>MODEL</id>
+                        <default>CUMULUS</default>
+                </attribute>
+                <attribute>
+                        <id>MRW_TYPE</id>
+                        <default>PCI_CONFIG</default>
+                </attribute>
+                <attribute>
+                        <id>PCIE_CONFIG_NUM</id>
+                        <default>0x00</default>
+                </attribute>
+                <attribute>
+                        <id>IO_CONFIG_NUM</id>
+                </attribute>
+                <attribute>
+                        <id>PCIE_LANE_SWAP_TABLE</id>
+                        <default></default>
+                </attribute>
+
+        </targetType>   
         
 	<targetType>
 		<id>unit-pciconfig1-venice</id>
