@@ -10,6 +10,7 @@
 	</targetType>
 	<targetType>
 		<id>chip</id>
+		<parent>base</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -21,6 +22,7 @@
 	</targetType>
 	<targetType>
 		<id>card</id>
+		<parent>base</parent>
 		<attribute>
 			<id>LOCATION_CODE</id>
 		</attribute>
@@ -46,6 +48,7 @@
 	</targetType>
 	<targetType>
 		<id>connector</id>
+	    <parent>base</parent>	
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -69,6 +72,7 @@
 	</targetType>
 	<targetType>
 		<id>unit</id>
+		<parent>base</parent>
 		<attribute>
 			<id>BUS_TYPE</id>
 			<default>NA</default>
@@ -219,7 +223,7 @@
         <parent>unit-pci-power9</parent>
         <attribute>
             <id>MODEL</id>
-            <default>CUMULUS</default>
+            <default>NIMBUS</default>
         </attribute>
         <attribute>
             <id>PCIE_NUM_LANES</id>
@@ -504,6 +508,7 @@
 	<!-- Centaur chip/DMI -->
 	<targetType>
 		<id>chip-membuf-centaur</id>
+		<parent>chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -578,6 +583,7 @@
 
 	<targetType>
 		<id>lcard-dimm</id>
+		<parent>card</parent>
 		<attribute>
 			<id>IPMI_INSTANCE</id>
 		</attribute>
@@ -598,6 +604,7 @@
 	</targetType>
 	<targetType>
 		<id>lcard-dimm-jedec</id>
+		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
 	</targetType>
 	<targetType>
@@ -1849,7 +1856,7 @@
         <parent>unit</parent>
         <attribute>
             <id>MODEL</id>
-            <default>CUMULUS</default>
+            <default>NIMBUS</default>
         </attribute>
         <attribute>
             <id>MRW_TYPE</id>
@@ -1872,7 +1879,7 @@
         <parent>unit</parent>
         <attribute>
             <id>MODEL</id>
-            <default>CUMULUS</default>
+            <default>NIMBUS</default>
         </attribute>
         <attribute>
             <id>MRW_TYPE</id>
@@ -1994,7 +2001,7 @@
         <parent>unit</parent>
         <attribute>
             <id>MODEL</id>
-            <default>VENICE</default>
+            <default>NIMBUS</default>
         </attribute>
         <attribute>
             <id>MRW_TYPE</id>
@@ -3174,6 +3181,7 @@
 	</targetType>	
 <targetType>
     <id>chip-processor-nimbus</id>
+    <parent>chip-processor-power9</parent>
     <attribute>
         <id>PROC_PCIE_NUM_PHB</id>
         <default>3</default>
@@ -3192,12 +3200,18 @@
     </attribute>
 </targetType>
 
+<targetType>
+    <id>chip-processor-power9</id>
+    <parent>chip-processor</parent>
+</targetType>    
+
 <!-- MCA
      Nimbus : 2 MCAs under each MCS (total of 8 per chip)
      Cumulus: No MCA
      Tied 1-1 to a DDR port -->
 <targetType>
     <id>unit-mca-power9</id>
+    <parent>unit</parent>
     <attribute><id>EFF_DIMM_SIZE</id></attribute>
 </targetType>
 
@@ -3206,6 +3220,7 @@
      Cumulus: 2 per MI (total of 8 per chip) -->
 <targetType>
     <id>unit-dmi-power9</id>
+    <parent>unit</parent>
     <attribute>
         <id>BUS_TYPE</id>
         <default>DMI</default>
@@ -3221,6 +3236,7 @@
      Cumulus: 3 per chip  -->
 <targetType>
     <id>unit-pec-power9</id>
+    <parent>unit</parent>
     <attribute>
         <id>PROC_PCIE_REFCLOCK_ENABLE</id>
         <default>0xE0</default>
@@ -3232,6 +3248,7 @@
      Cumulus: 7  -->
 <targetType>
     <id>unit-xbus-power9</id>
+    <parent>unit</parent>
     <attribute>
          <id>BUS_TYPE</id>
          <default>XBUS</default>
