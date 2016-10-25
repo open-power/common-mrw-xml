@@ -727,7 +727,7 @@
       <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
-      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
+      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
     </attribute>
     <attribute>
     	<id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
