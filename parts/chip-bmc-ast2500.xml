@@ -11532,10 +11532,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>INTERNAL_BUS</id>
-		<default>ahb</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -11584,10 +11580,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>INTERNAL_BUS</id>
-		<default>ahb</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -11634,10 +11626,6 @@
 	<attribute>
 		<id>DIRECTION</id>
 		<default>OUT</default>
-	</attribute>
-	<attribute>
-		<id>INTERNAL_BUS</id>
-		<default>ahb</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
