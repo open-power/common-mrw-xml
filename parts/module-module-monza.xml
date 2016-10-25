@@ -2911,9 +2911,9 @@
     </attribute>
     <instance_name>nvbus0</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>nvbus1</id>
@@ -2927,9 +2927,9 @@
     </attribute>
     <instance_name>nvbus1</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>nvbus2</id>
@@ -2943,9 +2943,9 @@
     </attribute>
     <instance_name>nvbus2</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>nvbus3</id>
@@ -2959,9 +2959,9 @@
     </attribute>
     <instance_name>nvbus3</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>nvbus4</id>
@@ -2975,9 +2975,9 @@
     </attribute>
     <instance_name>nvbus4</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>nvbus5</id>
@@ -2991,9 +2991,9 @@
     </attribute>
     <instance_name>nvbus5</instance_name>
     <is_root>false</is_root>
-    <parent>unit-nvbus-power9</parent>
+    <parent>unit-nv-power9</parent>
     <position>-1</position>
-    <type>unit-nvbus-cumulus</type>
+    <type>unit-nv-cumulus</type>
   </targetPart>
   <targetPart>
     <id>obus0</id>
