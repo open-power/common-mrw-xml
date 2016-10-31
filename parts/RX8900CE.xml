@@ -49,7 +49,7 @@
 	</attribute>
 	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
-		<default>epson,rx8900ce</default>
+		<default>epson,rx8900</default>
 	</attribute>
 </targetPart>
 <targetPart>
