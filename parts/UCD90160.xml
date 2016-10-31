@@ -49,7 +49,7 @@
 	</attribute>
 	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
-		<default>ti,ucd9000</default>
+		<default>ti,ucd90160</default>
 	</attribute>
 </targetPart>
 <targetPart>
