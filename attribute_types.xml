@@ -20317,9 +20317,9 @@ Measured in GB</description>
          values)
     </description>
     <simpleType>
-        <uint32_t>
-           <default>0xFFFFFFFF</default>
-        </uint32_t>
+        <enumeration>
+           <default>NA</default>
+        </enumeration>
     </simpleType>
     <hwpfToHbAttrMap>
         <id>ATTR_FAPI_POS</id>

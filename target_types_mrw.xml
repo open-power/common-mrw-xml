@@ -4,21 +4,8 @@
 	<targetType>
 		<id>base</id>
 		<attribute>
-			<id>CLASS</id>
-		</attribute>
-		<attribute>
-			<id>TYPE</id>
-		</attribute>
-		<attribute>
 			<id>MRW_TYPE</id>
 			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-		</attribute>
-		<attribute>
-			<id>RESOURCE_IS_CRITICAL</id>
-			<default>0</default>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -26,20 +13,6 @@
 		<parent>base</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
-		<attribute>
-			<id>CLASS</id>
-			<default>CHIP</default>
-		</attribute>
-		<attribute>
-			<id>POSITION</id>
-		</attribute>
-		<attribute>
-			<id>CHIP_ID</id>
-		</attribute>
-		<attribute>
-			<id>MRU_ID</id>
-			<default>0</default>
-		</attribute>
 		<attribute>
 			<id>TYPE</id>
 		</attribute>
@@ -50,10 +23,6 @@
 	<targetType>
 		<id>card</id>
 		<parent>base</parent>
-		<attribute>
-			<id>CLASS</id>
-			<default>CARD</default>
-		</attribute>
 		<attribute>
 			<id>LOCATION_CODE</id>
 		</attribute>
@@ -79,7 +48,7 @@
 	</targetType>
 	<targetType>
 		<id>connector</id>
-		<parent>base</parent>
+	    <parent>base</parent>	
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -105,14 +74,6 @@
 		<id>unit</id>
 		<parent>base</parent>
 		<attribute>
-			<id>CLASS</id>
-			<default>UNIT</default>
-		</attribute>
-		<attribute>
-			<id>CHIP_UNIT</id>
-			<default>0</default>
-		</attribute>
-		<attribute>
 			<id>BUS_TYPE</id>
 			<default>NA</default>
 		</attribute>
@@ -125,7 +86,6 @@
 			<default>EX</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-venice</id>
 		<parent>unit-ex-power8</parent>
@@ -134,7 +94,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-murano</id>
 		<parent>unit-ex-power8</parent>
@@ -143,7 +102,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ex-naples</id>
 		<parent>unit-ex-power8</parent>
@@ -152,8 +110,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-core-power8</id>
 		<parent>unit</parent>
@@ -168,7 +124,6 @@
 			<id>FRU_NAME</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-venice</id>
 		<parent>unit-core-power8</parent>
@@ -177,7 +132,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-murano</id>
 		<parent>unit-core-power8</parent>
@@ -186,7 +140,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-core-naples</id>
 		<parent>unit-core-power8</parent>
@@ -195,8 +148,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-pci-power8</id>
 		<parent>unit</parent>
@@ -215,9 +166,7 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
-
 	<targetType>
 		<id>unit-pci-venice</id>
 		<parent>unit-pci-power8</parent>
@@ -250,7 +199,6 @@
 			<default>1</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-pci-power9</id>
 		<parent>unit</parent>
@@ -270,72 +218,70 @@
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
 	</targetType>
-	
-        <targetType>
-                <id>unit-pci-cumulus</id>
-                <parent>unit-pci-power9</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_NUM_LANES</id>
-                        <default>16</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_MASK</id>
-                        <default></default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SET</id>
-                        <default>0</default>
-                </attribute>
-                <attribute>
-                        <id>PHB_NUM</id>
-                        <default>0</default>
-                </attribute>
-                <attribute>
-                        <id>ENABLE_CAPI</id>
-                        <default>1</default>
-                </attribute>
-                <attribute>
-                        <id>IOP_NUM</id>
-                        <default>1</default>
-                </attribute>
-        </targetType>
-        <targetType>
-                <id>unit-pci-nimbus</id>
-                <parent>unit-pci-power9</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_NUM_LANES</id>
-                        <default>16</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_MASK</id>
-                        <default></default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SET</id>
-                        <default>0</default>
-                </attribute>
-                <attribute>
-                        <id>PHB_NUM</id>
-                        <default>0</default>
-                </attribute>
-                <attribute>
-                        <id>ENABLE_CAPI</id>
-                        <default>1</default>
-                </attribute>
-                <attribute>
-                        <id>IOP_NUM</id>
-                        <default>1</default>
-                </attribute>
-        </targetType>
-        
+     <targetType>
+        <id>unit-pci-nimbus</id>
+        <parent>unit-pci-power9</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>NIMBUS</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_NUM_LANES</id>
+            <default>16</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_MASK</id>
+            <default></default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SET</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>PHB_NUM</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>ENABLE_CAPI</id>
+            <default>1</default>
+        </attribute>
+        <attribute>
+            <id>IOP_NUM</id>
+            <default>1</default>
+        </attribute>
+    </targetType>
+    <targetType>
+        <id>unit-pci-cumulus</id>
+        <parent>unit-pci-power9</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_NUM_LANES</id>
+            <default>16</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_MASK</id>
+            <default></default>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SET</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>PHB_NUM</id>
+            <default>0</default>
+        </attribute>
+        <attribute>
+            <id>ENABLE_CAPI</id>
+            <default>1</default>
+        </attribute>
+        <attribute>
+            <id>IOP_NUM</id>
+            <default>1</default>
+        </attribute>
+    </targetType>         
 	<targetType>
 		<id>unit-pci-naples</id>
 		<parent>unit-pci-power8</parent>
@@ -368,8 +314,6 @@
 			<default>1</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-pci-murano</id>
 		<parent>unit-pci-power8</parent>
@@ -378,7 +322,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-power8</id>
 		<parent>unit</parent>
@@ -398,7 +341,6 @@
 			<id>CHIP_UNIT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-venice</id>
 		<parent>unit-abus-power8</parent>
@@ -407,7 +349,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-abus-murano</id>
 		<parent>unit-abus-power8</parent>
@@ -416,8 +357,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
-
 	<targetType>
 		<id>unit-xbus-power8</id>
 		<parent>unit</parent>
@@ -437,7 +376,6 @@
 			<id>CHIP_UNIT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-venice</id>
 		<parent>unit-xbus-power8</parent>
@@ -446,7 +384,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-murano</id>
 		<parent>unit-xbus-power8</parent>
@@ -455,7 +392,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-xbus-naples</id>
 		<parent>unit-xbus-power8</parent>
@@ -475,7 +411,6 @@
 			<default>L4</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-power8</id>
 		<parent>unit</parent>
@@ -488,7 +423,6 @@
 			<default>0</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-power8</id>
 		<parent>unit</parent>
@@ -517,7 +451,6 @@
 			</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-venice</id>
 		<parent>unit-mcs-power8</parent>
@@ -526,7 +459,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-murano</id>
 		<parent>unit-mcs-power8</parent>
@@ -535,7 +467,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mcs-naples</id>
 		<parent>unit-mcs-power8</parent>
@@ -555,7 +486,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-murano</id>
 		<parent>unit-mba-venice</parent>
@@ -564,7 +494,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-mba-naples</id>
 		<parent>unit-mba-venice</parent>
@@ -583,35 +512,10 @@
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
-			<id>TYPE</id>
-			<default>MEMBUF</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-			<default>CENTAUR</default>
-		</attribute>
-		<attribute>
-			<id>MSS_FREQ_OVERRIDE</id>
-		</attribute>
-		<attribute>
-			<id>MSS_VOLT_OVERRIDE</id>
-		</attribute>
-		<attribute>
-			<id>I2C_BUS_SPEED_ARRAY</id>
-			<default>400,400,0,0,0,0</default>
-		</attribute>
-		<attribute>
 			<id>IPMI_INSTANCE</id>
 		</attribute>
 		<attribute>
 			<id>FRU_NAME</id>
-		</attribute>
-		<attribute>
-			<id>FRU_ID</id>
-		</attribute>
-		<attribute>
-			<id>CENTAUR_ECID_FRU_ID</id>
-			<default>0xFF</default>
 		</attribute>
 	</targetType>
 
@@ -620,10 +524,6 @@
 	<targetType>
 		<id>unit-l4-centaur</id>
 		<parent>unit-l4-power8</parent>
-		<attribute>
-			<id>MODEL</id>
-			<default>CENTAUR</default>
-		</attribute>
 	</targetType>
 
 	<!-- Centaur MBA -->
@@ -632,7 +532,6 @@
 		<id>unit-mba-centaur</id>
 		<parent>unit-mba-power8</parent>
 	</targetType>
-
 	<targetType>
 		<id>unit-dimm_port-power8</id>
 		<parent>unit</parent>
@@ -657,7 +556,6 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-dimm_port-power9</id>
@@ -679,30 +577,18 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-
 	</targetType>
 
-
 	<!-- DIMMs -->
+
 	<targetType>
 		<id>lcard-dimm</id>
 		<parent>card</parent>
-		<attribute>
-			<id>TYPE</id>
-			<default>DIMM</default>
-		</attribute>
-		<attribute>
-			<id>POSITION</id>
-		</attribute>
 		<attribute>
 			<id>IPMI_INSTANCE</id>
 		</attribute>
 		<attribute>
 			<id>FRU_NAME</id>
-		</attribute>
-		<attribute>
-			<id>FRU_ID</id>
-			<default></default>
 		</attribute>
 	</targetType>
 
@@ -720,12 +606,7 @@
 		<id>lcard-dimm-jedec</id>
 		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
-		<attribute>
-			<id>MODEL</id>
-			<default>JEDEC</default>
-		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-ddr3-jedec</id>
 		<parent>unit</parent>
@@ -774,31 +655,6 @@
 			<default>IN</default>
 		</attribute>
 	</targetType>	
-	<targetType>
-		<id>unit-ddr4-jedec</id>
-		<parent>unit</parent>
-		<attribute>
-			<id>MODEL</id>
-			<default>JEDEC</default>
-		</attribute>
-		<attribute>
-			<id>TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>MRW_TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>BUS_TYPE</id>
-			<default>DDR4</default>
-		</attribute>
-		<attribute>
-			<id>DIRECTION</id>
-			<default>IN</default>
-		</attribute>
-	</targetType>
-	
 	<targetType>
 		<id>connector-cdimm-cdimm</id>
 		<parent>connector</parent>
@@ -852,7 +708,6 @@
 			<default>CDIMM</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-power8</id>
 		<parent>unit</parent>
@@ -863,26 +718,11 @@
 	</targetType>
 	<targetType>
 		<id>occ</id>
-		<parent>unit</parent>
-		<attribute>
-			<id>TYPE</id>
-			<default>OCC</default>
-		</attribute>
-		<attribute>
-			<id>MODEL</id>
-			<default>POWER8</default>
-		</attribute>
 		<attribute>
 			<id>FRU_NAME</id>
 		</attribute>
 		<attribute>
-			<id>FRU_ID</id>
-		</attribute>
-		<attribute>
 			<id>IPMI_INSTANCE</id>
-		</attribute>
-		<attribute>
-			<id>OCC_MASTER_CAPABLE</id>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -893,7 +733,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-murano</id>
 		<parent>unit-nx-power8</parent>
@@ -902,7 +741,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-nx-naples</id>
 		<parent>unit-nx-power8</parent>
@@ -911,7 +749,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-power8</id>
 		<parent>unit</parent>
@@ -920,7 +757,6 @@
 			<default>PORE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-venice</id>
 		<parent>unit-pore-power8</parent>
@@ -929,7 +765,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-murano</id>
 		<parent>unit-pore-power8</parent>
@@ -938,7 +773,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pore-naples</id>
 		<parent>unit-pore-power8</parent>
@@ -947,7 +781,6 @@
 			<default>NAPLES</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-power8</id>
 		<parent>unit</parent>
@@ -956,7 +789,6 @@
 			<default>CAPP</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-venice</id>
 		<parent>unit-capp-power8</parent>
@@ -965,7 +797,6 @@
 			<default>VENICE</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-murano</id>
 		<parent>unit-capp-power8</parent>
@@ -974,7 +805,6 @@
 			<default>MURANO</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-capp-naples</id>
 		<parent>unit-capp-power8</parent>
@@ -1038,7 +868,6 @@
 			<id>DIRECTION</id>
 			<default>OUT</default>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-fsi-proc</id>
@@ -1120,7 +949,6 @@
 			<default>OUT</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-fsi-slave</id>
 		<parent>unit</parent>
@@ -1371,7 +1199,6 @@
 			<default>0</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-spi-master</id>
 		<parent>unit</parent>
@@ -1489,7 +1316,6 @@
 			<id>PIN_NUM</id>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>i2c-device</id>
 		<parent>base</parent>
@@ -1498,7 +1324,6 @@
 			<default>CHIP</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>smartchip-generic</id>
 		<parent>chip</parent>
@@ -1513,7 +1338,6 @@
 			<default>SMARTCHIP</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>chip-gpioexp-generic</id>
 		<parent>chip</parent>
@@ -1779,8 +1603,7 @@
         	<id>COOLING_ZONE_MASK</id>
         	<default></default>
         </attribute>
-     </targetType>
-	
+    </targetType>
 	<targetType>
 		<id>chip-vpd-device</id>
 		<parent>chip</parent>
@@ -1893,7 +1716,6 @@
 			<default>0x50</default>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-pcie-endpoint</id>
 		<parent>unit</parent>
@@ -1983,7 +1805,6 @@
 		<parent>card-pciecard</parent>
 		<parent_type>slot-pcieslot-generic</parent_type>
 	</targetType>
-
 	<targetType>
 		<id>unit-pciconfig0-venice</id>
 		<parent>unit</parent>
@@ -2006,81 +1827,76 @@
 			<id>PCIE_LANE_SWAP_TABLE</id>
 			<default></default>
 		</attribute>
-
 	</targetType>
-        <targetType>
-                <id>unit-pciconfig0-cumulus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIG</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_CONFIG_NUM</id>
-                        <default>0x00</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_NUM</id>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SWAP_TABLE</id>
-                        <default></default>
-                </attribute>
-
-        </targetType>
-        <targetType>
-                <id>unit-pciconfig0-nimbus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIG</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_CONFIG_NUM</id>
-                        <default>0x00</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_NUM</id>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SWAP_TABLE</id>
-                        <default></default>
-                </attribute>
-
-        </targetType>      
-               <targetType>
-                <id>unit-pciconfig1-nimbus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIG</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_CONFIG_NUM</id>
-                        <default>0x00</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_NUM</id>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SWAP_TABLE</id>
-                        <default></default>
-                </attribute>
-
-        </targetType>   
-        
+    <targetType>
+        <id>unit-pciconfig0-cumulus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x00</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>
+    <targetType>
+        <id>unit-pciconfig0-nimbus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>NIMBUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x00</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>      
+    <targetType>
+        <id>unit-pciconfig1-nimbus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>NIMBUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x00</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>   
 	<targetType>
 		<id>unit-pciconfig1-venice</id>
 		<parent>unit</parent>
@@ -2104,52 +1920,52 @@
 			<default></default>
 		</attribute>
 	</targetType>
-        <targetType>
-                <id>unit-pciconfig1-cumulus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIG</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_CONFIG_NUM</id>
-                        <default>0x01</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_NUM</id>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SWAP_TABLE</id>
-                        <default></default>
-                </attribute>
-        </targetType>
-        <targetType>
-                <id>unit-pciconfig2-cumulus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIG</default>
-                </attribute>
-                <attribute>
-                        <id>PCIE_CONFIG_NUM</id>
-                        <default>0x02</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_NUM</id>
-                </attribute>
-                <attribute>
-                        <id>PCIE_LANE_SWAP_TABLE</id>
-                        <default></default>
-                </attribute>
-        </targetType>
+    <targetType>
+        <id>unit-pciconfig1-cumulus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x01</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>
+    <targetType>
+        <id>unit-pciconfig2-cumulus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIG</default>
+        </attribute>
+        <attribute>
+            <id>PCIE_CONFIG_NUM</id>
+            <default>0x02</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_NUM</id>
+        </attribute>
+        <attribute>
+            <id>PCIE_LANE_SWAP_TABLE</id>
+            <default></default>
+        </attribute>
+    </targetType>
 	<targetType>
 		<id>unit-pciconfigs-venice</id>
 		<parent>unit</parent>
@@ -2165,36 +1981,36 @@
 			<id>IO_CONFIG_SELECT</id>
 		</attribute>
 	</targetType>
-        <targetType>
-                <id>unit-pciconfigs-cumulus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>CUMULUS</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIGS</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_SELECT</id>
-                </attribute>
-        </targetType>
-        <targetType>
-                <id>unit-pciconfigs-nimbus</id>
-                <parent>unit</parent>
-                <attribute>
-                        <id>MODEL</id>
-                        <default>VENICE</default>
-                </attribute>
-                <attribute>
-                        <id>MRW_TYPE</id>
-                        <default>PCI_CONFIGS</default>
-                </attribute>
-                <attribute>
-                        <id>IO_CONFIG_SELECT</id>
-                </attribute>
-        </targetType>
+    <targetType>
+        <id>unit-pciconfigs-cumulus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>CUMULUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIGS</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_SELECT</id>
+        </attribute>
+    </targetType>
+    <targetType>
+        <id>unit-pciconfigs-nimbus</id>
+        <parent>unit</parent>
+        <attribute>
+            <id>MODEL</id>
+            <default>NIMBUS</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>PCI_CONFIGS</default>
+        </attribute>
+        <attribute>
+            <id>IO_CONFIG_SELECT</id>
+        </attribute>
+    </targetType>
 	<targetType>
 		<id>unit-pciconfig0-naples</id>
 		<parent>unit</parent>
@@ -2217,7 +2033,6 @@
 			<id>PCIE_LANE_SWAP_TABLE</id>
 			<default></default>
 		</attribute>
-
 	</targetType>
 	<targetType>
 		<id>unit-pciconfig1-naples</id>
@@ -2532,7 +2347,6 @@
 			<id>IO_CONFIG_SELECT</id>
 		</attribute>
 	</targetType>
-
 	<targetType>
 		<id>unit-iomux_config-fsp2</id>
 		<parent>unit</parent>
@@ -2791,7 +2605,6 @@
 			<default>IOMUX</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-iomux_config0-cfams</id>
 		<parent>unit-iomux_config-cfams</parent>
@@ -3150,7 +2963,6 @@
 			<default>OUT</default>
 		</attribute>
 	</targetType>
-	
 	<targetType>
 		<id>unit-pwm-generic</id>
 		<parent>unit</parent>
@@ -3279,7 +3091,6 @@
 			<default></default>
 		</attribute>							
 	</targetType>
-
 	<targetType>
 		<id>unit-ipmi-sensor</id>
 		<parent>unit</parent>
@@ -3372,10 +3183,6 @@
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
     <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-    <attribute>
         <id>PROC_PCIE_NUM_PHB</id>
         <default>3</default>
     </attribute>
@@ -3396,145 +3203,7 @@
 <targetType>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
-    <attribute><id>DUMMY_RW</id></attribute>
-    <attribute><id>DUMMY_HEAP_ZERO_DEFAULT</id></attribute>
-    <attribute><id>MSS_MEM_MC_IN_GROUP</id></attribute>
-    <attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute>
-    <attribute><id>EEPROM_VPD_BACKUP_INFO</id></attribute>
-    <attribute><id>EEPROM_SBE_PRIMARY_INFO</id></attribute>
-    <attribute><id>EEPROM_SBE_BACKUP_INFO</id></attribute>
-    <attribute>
-        <id>I2C_BUS_SPEED_ARRAY</id>
-        <default>1000,1000,0,0,0,0</default>
-    </attribute>
-
-    <!-- From PHYP Memory Map -->
-    <attribute><id>PROC_NPU_MMIO_BAR_ENABLE</id></attribute>
-    <attribute><id>NPU_MMIO_BAR_BASE_ADDR</id></attribute>
-    <attribute><id>NPU_MMIO_BAR_SIZE</id></attribute>
-    <attribute><id>FSP_BASE_ADDR</id></attribute>
-    <attribute><id>FSP_BAR_SIZE</id></attribute>
-    <attribute><id>PROC_FSP_MMIO_MASK_SIZE</id></attribute>
-    <attribute><id>PSI_BRIDGE_BASE_ADDR</id></attribute>
-    <attribute><id>INTP_BASE_ADDR</id></attribute>
-    <attribute><id>PHB_BASE_ADDRS</id></attribute>
-    <attribute><id>PCI_BASE_ADDRS_64</id></attribute>
-    <attribute><id>PCI_BASE_ADDRS_32</id></attribute>
-    <attribute><id>MEM_BASE</id></attribute>
-    <attribute><id>MIRROR_BASE</id></attribute>
-    <attribute><id>RNG_BAR_SIZE</id></attribute>
-    <attribute><id>IMT_BASE_ADDR</id></attribute>
-    <attribute><id>IMT_BAR_SIZE</id></attribute>
-    <attribute><id>PHB_MMIO_ADDRS_64</id></attribute>
-    <attribute><id>PHB_MMIO_ADDRS_32</id></attribute>
-    <attribute><id>PHB_XIVE_ESB_ADDRS</id></attribute>
-    <attribute><id>PHB_REG_ADDRS</id></attribute>
-    <attribute><id>XIVE_ROUTING_ESB_ADDR</id></attribute>
-    <attribute><id>XIVE_ROUTING_END_ADDR</id></attribute>
-    <attribute><id>XIVE_PRESENTATION_NVT_ADDR</id></attribute>
-    <attribute><id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id></attribute>
-    <attribute><id>VAS_USER_WINDOW_CONTEXT_ADDR</id></attribute>
-    <attribute><id>LPC_BUS_ADDR</id></attribute>
-    <attribute><id>NVIDIA_NPU_PRIVILEGED_ADDR</id></attribute>
-    <attribute><id>NVIDIA_NPU_USER_REG_ADDR</id></attribute>
-    <attribute><id>NVIDIA_PHY0_REG_ADDR</id></attribute>
-    <attribute><id>NVIDIA_PHY1_REG_ADDR</id></attribute>
-    <attribute><id>XIVE_CONTROLLER_BAR_ADDR</id></attribute>
-    <attribute><id>XIVE_PRESENTATION_BAR_ADDR</id></attribute>
-    <attribute><id>PSI_HB_ESB_ADDR</id></attribute>
-    <attribute><id>NX_RNG_ADDR</id></attribute>
-    <!-- end Memory Map -->
-
-    <attribute><id>ECID</id></attribute>
-    <attribute><id>I2C_SLAVE_ADDRESS</id></attribute>
-    <attribute><id>PROC_PCIE_NUM_PHB</id></attribute>
-    <attribute><id>PROC_PCIE_NUM_IOP</id></attribute>
-    <attribute><id>PROC_PCIE_NUM_LANES</id></attribute>
-    <attribute><id>PROC_DCM_INSTALLED</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_G2_PLL_CONTROL0</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_G3_PLL_CONTROL0</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_PCS_CONTROL0</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_PCS_CONTROL1</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL0</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_PLL_GLOBAL_CONTROL1</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_RX_PEAK</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_RX_SDL</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_RX_VGA_CONTROL2</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_TX_BWLOSS1</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_TX_FIFO_OFFSET</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_TX_RCVRDETCNTL</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_ZCAL_CONTROL</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_TX_FFE_GEN1</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_TX_FFE_GEN2</id></attribute>
-    <attribute><id>PROC_PCIE_IOP_CONFIG</id></attribute>
-    <attribute><id>PROC_PCIE_PHB_ACTIVE</id></attribute>
-    <attribute><id>PROC_HTM_BAR_SIZE</id></attribute>
-    <attribute><id>XSCOM_BASE_ADDRESS</id></attribute>
-</targetType>
-<!-- p9 sub-units -->
-
-<!-- EQ chiplet: Use same EQ target for Nimbus and Cumulus
-     6 EQs on Nimbus
-     Quad: 2 ex's and one ep -->
-<targetType>
-    <id>unit-eq-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>EQ</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<!-- EX: Use same EX target for both Nimbus and Cumulus
-     2 EXs per EQ
-     EX (L2/L3, 2x Core) -->
-<targetType>
-    <id>unit-ex-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>EX</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>0</default></attribute>
-</targetType>
-
-<!-- CORE: Use same CORE target for both Nimbus and Cumulus
-     A collection of 4 threads -->
-<targetType>
-    <id>unit-core-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>CORE</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>0</default></attribute>
-</targetType>
-
-<!-- MCS
-     Nimbus : 4 MCS under each chip
-              (MCUnit left has two, MCUnit right has two)
-     Cumulus: None  -->
-<targetType>
-    <id>unit-mcs-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>MCS</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-    <attribute><id>IBSCOM_MCS_BASE_ADDR</id></attribute>
-    <attribute><id>EI_BUS_TX_MSBSWAP</id></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-mcs-nimbus</id>
-    <parent>unit-mcs-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
+</targetType>    
 
 <!-- MCA
      Nimbus : 2 MCAs under each MCS (total of 8 per chip)
@@ -3543,66 +3212,7 @@
 <targetType>
     <id>unit-mca-power9</id>
     <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>MCA</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
     <attribute><id>EFF_DIMM_SIZE</id></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-mca-nimbus</id>
-    <parent>unit-mca-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<!-- MCBIST
-     Nimbus : 1 per MCU (total of 2 per chip)
-     Cumulus: None  -->
-<targetType>
-    <id>unit-mcbist-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>MCBIST</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-    <attribute><id>MSS_FREQ</id></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-mcbist-nimbus</id>
-    <parent>unit-mcbist-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<!-- MI
-     Nimbus : None
-     Cumulus: total of 4 per chip -->
-<targetType>
-    <id>unit-mi-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>MI</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-mi-cumulus</id>
-    <parent>unit-mi-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
 </targetType>
 
 <!-- DMI
@@ -3611,11 +3221,6 @@
 <targetType>
     <id>unit-dmi-power9</id>
     <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>DMI</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
     <attribute>
         <id>BUS_TYPE</id>
         <default>DMI</default>
@@ -3626,15 +3231,6 @@
 	</attribute>
 </targetType>
 
-<targetType>
-    <id>unit-dmi-cumulus</id>
-    <parent>unit-dmi-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
 <!-- PEC corresponds to IOP. Use same PEC target for Nimbus and Cumulus
      Nimbus : 3 per chip
      Cumulus: 3 per chip  -->
@@ -3642,173 +3238,8 @@
     <id>unit-pec-power9</id>
     <parent>unit</parent>
     <attribute>
-        <id>TYPE</id>
-        <default>PEC</default>
-    </attribute>
-    <attribute>
         <id>PROC_PCIE_REFCLOCK_ENABLE</id>
         <default>0xE0</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<!-- PHB
-     Nimbus : 6 per PEC (total of 18 per chip)
-     Cumulus: 6 per PEC -->
-<targetType>
-    <id>unit-phb-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>PHB</default>
-    </attribute>
-    <attribute>
-        <id>PROC_PCIE_NUM_LANES</id>
-        <default>32</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-phb-nimbus</id>
-    <parent>unit-phb-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-phb-cumulus</id>
-    <parent>unit-phb-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- OBUS
-     Nimbus : 2 per chip (OB0 and OB3)
-     Cumulus: 4 per chip (OB0, OB1, OB2, and OB3)  -->
-<targetType>
-    <id>unit-obus-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>OBUS</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-obus-nimbus</id>
-    <parent>unit-obus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-obus-cumulus</id>
-    <parent>unit-obus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- NVBUS
-     Nimbus : 2 per chip
-     Cumulus: 2  -->
-<targetType>
-    <id>unit-nvbus-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>NV</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-nvbus-nimbus</id>
-    <parent>unit-nvbus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-nvbus-cumulus</id>
-    <parent>unit-nvbus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- PPE
-     Nimbus : 21, including the SBE (1 SBE, 1 Powerbus/Fabric PPE,
-              4 GPEs, 12 CMEs, and 3 IO PPEs.
-     Cumulus: 23 (2 additional IO-PPE instances) -->
-<targetType>
-    <id>unit-ppe-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>PPE</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>0</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-ppe-nimbus</id>
-    <parent>unit-ppe-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-ppe-cumulus</id>
-    <parent>unit-ppe-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- PERV
-     Nimbus : 43 (1 per chiplet)
-     Cumulus: 1 per chiplet -->
-<targetType>
-    <id>unit-perv-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>PERV</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>0</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-perv-nimbus</id>
-    <parent>unit-perv-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-perv-cumulus</id>
-    <parent>unit-perv-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
     </attribute>
 </targetType>
 
@@ -3819,177 +3250,18 @@
     <id>unit-xbus-power9</id>
     <parent>unit</parent>
     <attribute>
-        <id>TYPE</id>
-        <default>XBUS</default>
+         <id>BUS_TYPE</id>
+         <default>XBUS</default>
     </attribute>
     <attribute>
-                        <id>BUS_TYPE</id>
-                        <default>XBUS</default>
-                </attribute>
-                <attribute>
-                        <id>DIRECTION</id>
-                        <default>INOUT</default>
-                </attribute>
-                <attribute>
-                        <id>CHIP_UNIT</id>
-                </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-    <attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-        <default>0x00000001</default> <!--GARD -->
-    </attribute>
-    <attribute><id>CHIP_UNIT</id></attribute>
-    <attribute><id>PEER_TARGET</id></attribute>
-    <attribute><id>CDM_DOMAIN</id><default>FABRIC</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-xbus-nimbus</id>
-    <parent>unit-xbus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-xbus-cumulus</id>
-    <parent>unit-xbus-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- CAPP
-     Nimbus : 2 per chip
-     Cumulus: 2  -->
-<targetType>
-    <id>unit-capp-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>CAPP</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-    <attribute>
-        <id>PRIMARY_CAPABILITIES</id>
-        <default>
-            <field><id>supportsFsiScom</id><value>0</value></field>
-            <field><id>supportsXscom</id><value>0</value></field>
-            <field><id>supportsInbandScom</id><value>0</value></field>
-            <field><id>reserved</id><value>0</value></field>
-        </default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-capp-nimbus</id>
-    <parent>unit-capp-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-capp-cumulus</id>
-    <parent>unit-capp-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- SBE
-     Nimbus : 1 per chip
-     Cumulus: 1 -->
-<targetType>
-    <id>unit-sbe-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>SBE</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>0</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-sbe-nimbus</id>
-    <parent>unit-sbe-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-sbe-cumulus</id>
-    <parent>unit-sbe-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- OCC
-     Nimbus : 1 per chip
-     Cumulus: 1  -->
-<targetType>
-    <id>unit-occ-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>OCC</default>
-    </attribute>
-    <attribute>
-        <id>MODEL</id>
-        <default>POWER9</default>
-    </attribute>
-    <attribute>
-        <id>OCC_MASTER_CAPABLE</id>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-occ-nimbus</id>
-    <parent>unit-occ-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>NIMBUS</default>
-    </attribute>
-</targetType>
-
-<targetType>
-    <id>unit-occ-cumulus</id>
-    <parent>unit-occ-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CUMULUS</default>
-    </attribute>
-</targetType>
-
-<!-- L4 (Centaur) -->
-<targetType>
-    <id>unit-l4-power9</id>
-    <parent>unit</parent>
-    <attribute>
-        <id>TYPE</id>
-        <default>L4</default>
-    </attribute>
-    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
-</targetType>
-
-<targetType>
-    <id>unit-l4-centaur</id>
-    <parent>unit-l4-power9</parent>
-    <attribute>
-        <id>MODEL</id>
-        <default>CENTAUR</default>
+         <id>DIRECTION</id>
+         <default>INOUT</default>
     </attribute>
 </targetType>
 
 <!-- End p9 sub-units -->
 <!-- DPSS sub-units -->
+
 	<targetType>
 		<id>dpss.unit-config-generic</id>
 		<parent>unit</parent>

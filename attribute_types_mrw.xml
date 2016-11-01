@@ -299,7 +299,7 @@
 			<value>2</value>
 		</enumerator>
 		<enumerator>
-			<name>CLOCK_INTERFACE</name>
+			<name>CLOCK-INTERFACE</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
@@ -323,11 +323,11 @@
 			<value>8</value>
 		</enumerator>
 		<enumerator>
-			<name>FAN_INTERFACE</name>
+			<name>FAN-INTERFACE</name>
 			<value>9</value>
 		</enumerator>
 		<enumerator>
-			<name>FSI_INTERFACE</name>
+			<name>FSI-INTERFACE</name>
 			<value>10</value>
 		</enumerator>
 		<enumerator>
@@ -347,7 +347,7 @@
 			<value>14</value>
 		</enumerator>	
 		<enumerator>
-			<name>OP_PANEL</name>
+			<name>OP-PANEL</name>
 			<value>15</value>
 		</enumerator>
 		<enumerator>
@@ -355,7 +355,7 @@
 			<value>16</value>
 		</enumerator>	
 		<enumerator>
-			<name>PCIE_RISER</name>
+			<name>PCIE-RISER</name>
 			<value>17</value>
 		</enumerator>	
 		<enumerator>
@@ -363,11 +363,11 @@
 			<value>18</value>
 		</enumerator>	
 		<enumerator>
-			<name>POWER_DIST</name>
+			<name>POWER-DIST</name>
 			<value>19</value>
 		</enumerator>	
 		<enumerator>
-			<name>POWER_INTERFACE</name>
+			<name>POWER-INTERFACE</name>
 			<value>20</value>
 		</enumerator>	
 		<enumerator>
@@ -379,7 +379,7 @@
 			<value>22</value>
 		</enumerator>	
 		<enumerator>
-			<name>RISER</name>
+			<name>MEM-RISER</name>
 			<value>23</value>
 		</enumerator>	
 		<enumerator>
@@ -453,19 +453,19 @@
 		<id>LED_TYPE</id>
 		<description>Type of led</description>
 		<enumerator>
-			<name>ENC_ATTENTION</name>
+			<name>ENC-ATTENTION</name>
 			<value>0</value>
 		</enumerator>
 		<enumerator>
-			<name>ENC_IDENTIFY</name>
+			<name>ENC-IDENTIFY</name>
 			<value>1</value>
 		</enumerator>
 		<enumerator>
-			<name>ENC_FAULT</name>
+			<name>ENC-FAULT</name>
 			<value>2</value>
 		</enumerator>
 		<enumerator>
-			<name>SYS_POWER</name>
+			<name>SYS-POWER</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
@@ -481,7 +481,7 @@
 			<value>6</value>
 		</enumerator>	
 		<enumerator>
-			<name>STANDBY_GOOD</name>
+			<name>STANDBY-GOOD</name>
 			<value>7</value>
 		</enumerator>						
 		<default>NA</default>		
