@@ -447,6 +447,10 @@
 			<name>BLUELINK</name>
 			<value>12</value>
 		</enumerator>
+		<enumerator>
+			<name>SAS</name>
+			<value>13</value>
+		</enumerator>		
 		<default>NA</default>
 	</enumerationType>	
 	<enumerationType>
@@ -548,7 +552,7 @@
 			<value>4</value>
 		</enumerator>
 		<enumerator>
-			<name>SPD</name>
+			<name>SVPD</name>
 			<value>5</value>
 		</enumerator>
 		<enumerator>
@@ -567,6 +571,23 @@
 			<name>DVPD</name>
 			<value>9</value>
 		</enumerator>		
+		<default>NA</default>
+	</enumerationType>
+		<enumerationType>
+		<id>ENC_TYPE</id>
+		<description>Type of node or enclosure</description>
+		<enumerator>
+			<name>CEC</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>CONTROL</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>NA</name>
+			<value>2</value>
+		</enumerator>				
 		<default>NA</default>
 	</enumerationType>
 	<enumerationType>
@@ -985,8 +1006,7 @@
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_SELECT</id>
-		<description>configuration select
-		</description>
+		<description>configuration select</description>
 		<simpleType>
 			<uint8_t>
 				<id>0</id>
@@ -999,8 +1019,7 @@
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_NUM</id>
-		<description>configuration select
-		</description>
+		<description>configuration select</description>
 		<simpleType>
 			<uint8_t>
 				<id>0</id>
@@ -1012,8 +1031,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<description>Bus Direction
-		</description>
+		<description>Bus Direction</description>
 		<simpleType>
 			<enumeration>
 				<id>DIRECTION</id>
@@ -1025,8 +1043,7 @@
 	</attribute>
 	<attribute>
 		<id>MRU_PREFIX</id>
-		<description>Prefix to generate MRU_ID's with
-		</description>
+		<description>Prefix to generate MRU_ID's with</description>
 		<simpleType>
 			<enumeration>
 				<id>MRU_PREFIX</id>
@@ -1037,8 +1054,7 @@
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
-		<description>Attribute indicating the target's special MRW type
-		</description>
+		<description>Attribute indicating the target's special MRW type</description>
 		<simpleType>
 			<enumeration>
 				<id>MRW_TYPE</id>
@@ -1257,8 +1273,7 @@
 	</attribute>
 	<attribute>
 		<id>STANDBY_PLUGGABLE</id>
-		<description>Is a given card pluggable at FSP standby
-		</description>
+		<description>Is a given card pluggable at FSP standby</description>
 		<simpleType>
 			<enumeration>
 				<id>STANDBY_PLUGGABLE</id>
@@ -1271,8 +1286,7 @@
 	</attribute>	
 	<attribute>
 		<id>CARD_TYPE</id>
-		<description>Type of card
-		</description>
+		<description>Type of card</description>
 		<simpleType>
 			<enumeration>
 				<id>CARD_TYPE</id>
@@ -1285,8 +1299,7 @@
 	</attribute>
 	<attribute>
 		<id>CONNECTOR_TYPE</id>
-		<description>Type of connector
-		</description>
+		<description>Type of connector</description>
 		<simpleType>
 			<enumeration>
 				<id>CONNECTOR_TYPE</id>
@@ -1300,8 +1313,7 @@
 	</attribute>
 	<attribute>
 		<id>LED_TYPE</id>
-		<description>Type of LED
-		</description>
+		<description>Type of LED</description>
 		<simpleType>
 			<enumeration>
 				<id>LED_TYPE</id>
@@ -1326,6 +1338,18 @@
 		<writeable />
 	</attribute>
 	<attribute>
+		<id>ENC_TYPE</id>
+		<description>Control or CEC</description>
+		<simpleType>
+			<enumeration>
+				<id>ENC_TYPE</id>
+			</enumeration>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
 		<id>SYSTEM_NAME</id>
 		<description>System Name</description>
 		<simpleType>
@@ -1337,14 +1361,7 @@
 	</attribute>
 	<attribute>
 		<id>PROC_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1356,14 +1373,7 @@
 	</attribute>
 	<attribute>
 		<id>MEMBUF_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1375,14 +1385,7 @@
 	</attribute>
 	<attribute>
 		<id>SOURCE_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1394,14 +1397,7 @@
 	</attribute>
 	<attribute>
 		<id>DEST_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1693,8 +1689,7 @@
 	</attribute>
 	<attribute>
 		<id>RAIL_NAME</id>
-		<description>Name of power supply rail
-		</description>
+		<description>Name of power supply rail</description>
 		<simpleType>
 			<enumeration>
 				<id>RAIL_NAME</id>
@@ -1708,8 +1703,7 @@
 	</attribute>
 	<attribute>
 		<id>GPIO_TYPE</id>
-		<description>Type of GPIO
-		</description>
+		<description>Type of GPIO</description>
 		<simpleType>
 			<enumeration>
 				<id>GPIO_TYPE</id>
@@ -1723,8 +1717,7 @@
 	</attribute>
 	<attribute>
 		<id>IOP_NUM</id>
-		<description># of IOP
-		</description>
+		<description>Number of IOP</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1734,8 +1727,7 @@
 	</attribute>
 	<attribute>
 		<id>PHB_NUM</id>
-		<description># of PHB
-		</description>
+		<description>Number of PHB</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1745,8 +1737,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_NUM_LANES</id>
-		<description># of PCIE lanes enabled for this interface
-		</description>
+		<description>Number of PCIE lanes enabled for this interface</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1756,8 +1747,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_LANE_MASK</id>
-		<description>Lane mask for this config
-		</description>
+		<description>Lane mask for this config</description>
 		<simpleType>
 			<uint16_t></uint16_t>
 		</simpleType>
@@ -1767,8 +1757,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_LANE_SET</id>
-		<description>Lane set for this config
-		</description>
+		<description>Lane set for this config</description>
 		<simpleType>
 			<uint16_t></uint16_t>
 		</simpleType>
@@ -1779,8 +1768,7 @@
 
 	<attribute>
 		<id>ENABLE_CAPI</id>
-		<description>enables CAPI function (0=no,1=yes)
-		</description>
+		<description>enables CAPI function (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1792,10 +1780,7 @@
 
 	<attribute>
 		<id>PCIE_LANE_SWAP_TABLE</id>
-		<description>Lane Swap Lookup Table
-			CK not swap = none,ck0,ck0,both
-			CK swapped = none,ck0,ck1,both
-		</description>
+		<description>Lane Swap Lookup Table CK not swap = none,ck0,ck0,both CK swapped = none,ck0,ck1,both</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 			<array>4,2</array>
@@ -1806,8 +1791,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_SWAP_CLKS</id>
-		<description>Swap CK0 and CK1 (0=no,1=yes)
-		</description>
+		<description>Swap CK0 and CK1 (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1817,8 +1801,7 @@
 	</attribute>
 	<attribute>
 		<id>LANE_REVERSAL</id>
-		<description>Lane Reversal (0=no,1=yes)
-		</description>
+		<description>Lane Reversal (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1828,8 +1811,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_CLK_NUM</id>
-		<description>Interface MSB CLK number (0 = CLK0, 1 = CLK1)
-		</description>
+		<description>Interface MSB CLK number (0 = CLK0, 1 = CLK1)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1839,8 +1821,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_CONFIG_NUM</id>
-		<description>PCIe config id
-		</description>
+		<description>PCIe config id</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1851,8 +1832,7 @@
 
 	<attribute>
 		<id>PCIE_CONFIG_SELECTED</id>
-		<description>Specifies if this config is selected
-		</description>
+		<description>Specifies if this config is selected</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1861,8 +1841,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<description>Schematic name
-		</description>
+		<description>Schematic name</description>
 		<simpleType>
 			<string></string>
 		</simpleType>
@@ -1881,8 +1860,7 @@
 	</attribute>	
 	<attribute>
 		<id>ASSOCIATION_TYPE</id>
-		<description>Associates 2 parts together
-		</description>
+		<description>Associates 2 parts together</description>
 		<simpleType>
 			<enumeration>
 				<id>ASSOCIATION_TYPE</id>
