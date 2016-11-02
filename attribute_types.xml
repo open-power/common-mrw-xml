@@ -1081,6 +1081,7 @@
     </nativeType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1091,6 +1092,7 @@
     </nativeType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1145,6 +1147,7 @@
         </complexType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1422,6 +1425,7 @@
     <persistency>volatile</persistency>
     <readable/>
     <writeable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1440,6 +1444,7 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <writeable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1458,6 +1463,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <enumerationType>
@@ -2639,6 +2645,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 <attribute>
     <id>SP_FUNCTIONS</id>
@@ -2892,6 +2899,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 
@@ -19035,6 +19043,7 @@ Measured in GB</description>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -20327,6 +20336,7 @@ Measured in GB</description>
     </hwpfToHbAttrMap>
     <persistency>non-volatile</persistency>
     <readable/>
+    <serverwizHide/>
 </attribute>
 
 <attribute>
