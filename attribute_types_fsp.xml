@@ -4,11 +4,296 @@
 <attributes>
 
 <attribute>
+	<id>FAN_NUMBER</id>
+	<description>A unique number assigned to a fan within a particular MTM</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAN_CONTROLLER_TYPE</id>
+	<description>The component as defined in the MRW that controls the fan</description>
+    <simpleType>
+        <string>
+        	<default>DPSS</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>LOCATION_ENFORCED</id>
+	<description>Location enforced</description>
+    <simpleType>
+        <string>
+        	<default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAN_ID</id>
+	<description>ID used to retrieve information from the Fan Controller Type</description>
+    <simpleType>
+        <string>
+        	<default>TACHA0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>DRAWER</id>
+	<description>Number of the drawer or enclosure where this fan is located</description>
+    <simpleType>
+        <string>
+        	<default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAN_TYPE_SELECT</id>
+	<description>0 = If only one type of physical fan is used</description>
+    <simpleType>
+        <string>
+        	<default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>RPM_FACTOR</id>
+	<description>Factor applied to the fan speed returned by the controller to calculate the true fan speed</description>
+    <simpleType>
+        <string>
+        	<default>2700000</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>MIN_FAN_PWM</id>
+	<description>Minimum PWM value for the fan</description>
+    <simpleType>
+        <string>
+        	<default>51</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>MAX_FAN_PWM</id>
+	<description>Maximum PWM value for the fan</description>
+    <simpleType>
+        <string>
+        	<default>255</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>MIN_FAN_RPM</id>
+	<description>Minimum RPM value for the fan</description>
+    <simpleType>
+        <string>
+        	<default>2880</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>MAX_FAN_RPM</id>
+	<description>Maximum RPM value for the fan</description>
+    <simpleType>
+        <string>
+        	<default>10700</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>COOLING_ZONE</id>
+	<description>A unique number assigned to a cooling zone within a given MTM</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAILS_BEFORE_CALLOUT</id>
+	<description>Used to indicate the number of fan failures before calling out the error</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAILS_BEFORE_PARTNER_HIGH_SPEED</id>
+	<description>Number of fan fails/missing before setting partner fan to high speed</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAILS_BEFORE_ENABLE_RPM_CAP_FOR_OTHERS</id>
+	<description>Number of fails before setting all remaining good fans to the defined RPM cap</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAILS_BEFORE_HIGH_SPEED</id>
+	<description>Number of fan fails before checking Zone Management table to set appropriate zones to high speed</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>FAILS_BEFORE_SHUTDOWN</id>
+	<description>Number of fan fails/missing before shutting down the system</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>DELAY_ENV_WINDOW</id>
+	<description>Time to wait before requesting orderly shutdown upon the number of Fails Before Shutdown is reached</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>DELAY_SHUTDOWN</id>
+	<description>Time to wait before requesting orderly shutdown upon the number of Fails Before Shutdown is reached</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>DELAY_HARD_SHUTDOWN</id>
+	<description>Time to wait after requesting shutdown before initiating a FSP shutdown</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>RPM_DROP_INTERVAL</id>
+	<description>Number of seconds to wait before dropping fan speeds</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>RPM_DROP</id>
+	<description>Amount to drop each fan speed by within this zone at the given interval</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>RPM_INCREASE_INTERVAL</id>
+	<description>Number of seconds to wait before increasing fan speeds</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+	<id>RPM_INCREASE</id>
+	<description>Amount to increase each fan speed by within this zone at the given interval</description>
+    <simpleType>
+        <string>
+        	<default>1</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
 	<id>IM_ID</id>
-	<description>
-		Used to indicate a certain target is valid only
-		for a certain IM ID.
-	</description>
+	<description>Used to indicate a certain target is valid only for a certain IM ID</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -18,9 +303,7 @@
 
 <attribute>
 	<id>IM_VALUE</id>
-	<description>
-		Used to indicate the IM keyword value
-	</description>
+	<description>Used to indicate the IM keyword value</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -30,9 +313,7 @@
 
 <attribute>
 	<id>PART_NUMBER</id>
-	<description>
-		Used to indicate the part number information
-	</description>
+	<description>Used to indicate the part number information</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -64,9 +345,7 @@
 
 <attribute>
 	<id>SYS_POLICY_NAME</id>
-	<description>
-		The name of the system policy
-	</description>
+	<description>The name of the system policy</description>
     <simpleType>
         <enumeration>
             <id>SYS_POLICY_NAME</id>
@@ -79,9 +358,7 @@
 
 <attribute>
 	<id>SYS_POLICY_VALUE</id>
-	<description>
-		The value of the system policy
-	</description>
+	<description>The value of the system policy</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -105,9 +382,7 @@
 
 <attribute>
     <id>CARD_USE</id>
-    <description>
-        Where is the card used? field/lab-only
-    </description>
+    <description>Where is the card used? field/lab-only</description>
     <simpleType>
         <enumeration>
             <id>CARD_USE</id>
@@ -141,9 +416,7 @@
 
 <attribute>
     <id>RU_TYPE</id>
-    <description>
-        Where can the card replaced? field/client/manufacturing
-    </description>
+    <description>Where can the card replaced? field/client/manufacturing</description>
     <simpleType>
         <enumeration>
             <id>RU_TYPE</id>
@@ -169,9 +442,7 @@
 
 <attribute>
     <id>SUPPORTED_MTMS</id>
-    <description>
-        MTMs where this CCIN will be supported. A comma separated list of MTMs.
-    </description>
+    <description>MTMs where this CCIN will be supported. A comma separated list of MTMs</description>
     <simpleType>
         <enumeration>
             <id>SUPPORTED_MTMS</id>
@@ -183,9 +454,7 @@
 
 <attribute>
     <id>CORES</id>
-    <description>
-        The number of cores - for modules only
-    </description>
+    <description>The number of cores - for modules only</description>
     <simpleType>
         <uint8_t/>
     </simpleType>
@@ -195,9 +464,7 @@
 
 <attribute>
     <id>FREQUENCY</id>
-    <description>
-        The core frequency - for modules only
-    </description>
+    <description>The core frequency - for modules only</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -207,21 +474,7 @@
 
 <attribute>
     <id>MTM_NAME</id>
-    <description>
-        System MTM
-    </description>
-    <simpleType>
-        <string></string>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-</attribute>
-
-<attribute>
-    <id>IM_ID</id>
-    <description>
-        IM Keyword
-    </description>
+    <description>System MTM</description>
     <simpleType>
         <string></string>
     </simpleType>
@@ -231,11 +484,7 @@
 
 <attribute>
     <id>REDUNDANT_FSPS</id>
-    <description>
-        1 = System has redundant FSPs
-        0 = System does not have redundant FSPs
-        From the Machine Readable Workbook
-    </description>
+    <description>1 = System has redundant FSPs or 0 = System does not have redundant FSPs</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -250,9 +499,7 @@
 
 <attribute>
     <id>AVERAGE_IPL_TIME</id>
-    <description>
-        The average amount of time it may take for this enclosure to IPL in minutes.
-    </description>
+    <description>The average amount of time it may take for this enclosure to IPL in minutes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -263,9 +510,7 @@
 
 <attribute>
     <id>LED_STRATEGY</id>
-    <description>
-        The LED service strategy.
-    </description>
+    <description>The LED service strategy</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <string>
@@ -319,11 +564,7 @@
 
 <attribute>
     <id>MRW_MEM_MIRRORING_ALLOWED</id>
-    <description>
-        Is memory mirroring allowed on this platform?
-        0 - No
-        1 - Yes
-    </description>
+    <description>Is memory mirroring allowed on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t><default></default></uint8_t>
@@ -334,11 +575,7 @@
 
 <attribute>
     <id>MRW_MEM_MIRRORING_ENABLE_DEFAULT</id>
-    <description>
-        By default, is memory mirroring enabled on this platform?
-        0 - No
-        1 - Yes
-    </description>
+    <description>By default, is memory mirroring enabled on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t><default></default></uint8_t>
@@ -349,14 +586,7 @@
 
 <attribute>
     <id>MRW_MEM_POWER_CONTROL_USAGE</id>
-    <description>
-        Determines if any power controls should be used by memory on this
-        platform.  This is a system-wide policy setting that is used when
-        configuring the memory.  Note that individual DIMMs will also know if
-        they are capable of doing any of this so the eventual answer is
-        combination of the requested value specified here and the capable
-        value from the VPD.
-    </description>
+    <description>Determines if any power controls should be used by memory on this platform. This is a system-wide policy setting that is used when configuring the memory. Note that individual DIMMs will also know if they are capable of doing any of this so the eventual answer is combination of the requested value specified here and the capable value from the VPD</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t>
@@ -373,9 +603,7 @@
 
 <attribute>
     <id>OCC_LOAD_TIMEOUT</id>
-    <description>
-        The maximum amount of time it should take for all OCCs in the system to be loaded and started in seconds.
-    </description>
+    <description>The maximum amount of time it should take for all OCCs in the system to be loaded and started in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -386,9 +614,7 @@
 
 <attribute>
     <id>OCC_RESET_TIMEOUT</id>
-    <description>
-        The maximum amount of time it should take for all OCCs to be reset in seconds.
-    </description>
+    <description>The maximum amount of time it should take for all OCCs to be reset in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -399,11 +625,7 @@
 
 <attribute>
     <id>FREQ_PB_HFT</id>
-    <description>
-        System attribute.
-        The frequency of a processor's PB chiplet in MHz.
-        Provided by the MRW.
-    </description>
+    <description>The frequency of a processor's PB chiplet in MHz</description>
     <group>SYS_POLICIES</group>
     <simpleType><uint32_t></uint32_t></simpleType>
     <persistency>non-volatile</persistency>
@@ -417,11 +639,7 @@
 
 <attribute>
     <id>FREQ_X_HFT</id>
-    <description>
-        System attribute.
-        The frequency of a processor's X bus in MHz.
-        Provided by the MRW.
-    </description>
+    <description>The frequency of a processor's X bus in MHz</description>
     <group>SYS_POLICIES</group>
     <simpleType><uint32_t></uint32_t></simpleType>
     <persistency>non-volatile</persistency>
@@ -435,11 +653,7 @@
 
 <attribute>
     <id>FREQ_NEST_HFT</id>
-    <description>
-        System attribute.
-        The frequency of a processor's Nest chiplet in MHz.
-        Provided by the MRW.
-    </description>
+    <description>The frequency of a processor's Nest chiplet in MHz</description>
     <group>SYS_POLICIES</group>
     <simpleType><uint32_t></uint32_t></simpleType>
     <persistency>non-volatile</persistency>
@@ -453,9 +667,7 @@
 
 <attribute>
     <id>PCIE_DEFAULT_HDDW_SLOT_COUNT</id>
-    <description>
-        The default HDDW slot count.
-    </description>
+    <description>The default HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -466,9 +678,7 @@
 
 <attribute>
     <id>PCIE_MIN_HDDW_SLOT_COUNT</id>
-    <description>
-        The minimum HDDW slot count.
-    </description>
+    <description>The minimum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -479,9 +689,7 @@
 
 <attribute>
     <id>PCIE_MAX_HDDW_SLOT_COUNT</id>
-    <description>
-        The maximum HDDW slot count.
-    </description>
+    <description>The maximum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
         <uint8_t></uint8_t>
@@ -503,9 +711,6 @@
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
-
-
-
 
 <!-- Types of Location code -->
 <!--  RELATIVE : Location code attached to parent card location code  -->
