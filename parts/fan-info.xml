@@ -1,0 +1,82 @@
+<partInstance>
+<version>2.2</version>
+<targetInstances>
+<targetPart>
+	<id>fan-info</id>
+	<type>fan-info</type>
+	<is_root>true</is_root>
+	<instance_name>fan-info</instance_name>
+	<position>-1</position>
+        <parent>base</parent>
+        <parent_type>enc-node-power9</parent_type>
+			<attribute>
+				<id>MRW_ID</id>
+				<default>ZEPPELIN</default>
+			</attribute>
+			<attribute>
+				<id>MTM_NAME</id>
+				<default>9040-MR9</default>
+			</attribute>
+			<attribute>
+				<id>IM_ID</id>
+				<default>IM-ZEPPELIN</default>
+			</attribute>
+			<attribute>
+				<id>IM_VALUE</id>
+				<default></default>
+			</attribute>
+			<attribute>
+				<id>FAN_NUMBER</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAN_CONTROLLER_TYPE</id>
+				<default>DPSS</default>
+			</attribute>
+			<attribute>
+				<id>FAN_ID</id>
+				<default>TACHA0</default>
+			</attribute>
+			<attribute>
+				<id>LOCATION_ENFORCED</id>
+				<default>0</default>
+			</attribute>
+			<attribute>
+				<id>LOCATION_CODE</id>
+				<default>A1</default>
+			</attribute>												
+			<attribute>
+				<id>COOLING_ZONE</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>DRAWER</id>
+				<default>0</default>
+			</attribute>
+			<attribute>
+				<id>FAN_TYPE_SELECT</id>
+				<default>0</default>
+			</attribute>
+			<attribute>
+				<id>RPM_FACTOR</id>
+				<default>2700000</default>
+			</attribute>
+			<attribute>
+				<id>MIN_FAN_PWM</id>
+				<default>51</default>
+			</attribute>
+			<attribute>
+				<id>MAX_FAN_PWM</id>
+				<default>255</default>
+			</attribute>
+			<attribute>
+				<id>MIN_FAN_RPM</id>
+				<default>2880</default>
+			</attribute>
+			<attribute>
+				<id>MAX_FAN_RPM</id>
+				<default>10700</default>
+			</attribute>
+</targetPart>
+</targetInstances>
+</partInstance>
