@@ -1,0 +1,82 @@
+<partInstance>
+<version>2.2</version>
+<targetInstances>
+<targetPart>
+	<id>cooling-zone</id>
+	<type>cooling-zone</type>
+	<is_root>true</is_root>
+	<instance_name>cooling-zone</instance_name>
+	<position>-1</position>
+        <parent>base</parent>
+        <parent_type>enc-node-power9</parent_type>
+			<attribute>
+				<id>MRW_ID</id>
+				<default>ZEPPELIN</default>
+			</attribute>
+			<attribute>
+				<id>MTM_NAME</id>
+				<default>9040-MR9</default>
+			</attribute>
+			<attribute>
+				<id>IM_ID</id>
+				<default>IM-ZEPPELIN</default>
+			</attribute>
+			<attribute>
+				<id>IM_VALUE</id>
+				<default></default>
+			</attribute>
+			<attribute>
+				<id>COOLING_ZONE</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAILS_BEFORE_CALLOUT</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAILS_BEFORE_PARTNER_HIGH_SPEED</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAILS_BEFORE_ENABLE_RPM_CAP_FOR_OTHERS</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAILS_BEFORE_HIGH_SPEED</id>
+				<default>1</default>
+			</attribute>
+			<attribute>
+				<id>FAILS_BEFORE_SHUTDOWN</id>
+				<default>3</default>
+			</attribute>
+			<attribute>
+				<id>DELAY_ENV_WINDOW</id>
+				<default>300</default>
+			</attribute>
+			<attribute>
+				<id>DELAY_SHUTDOWN</id>
+				<default>300</default>
+			</attribute>
+			<attribute>
+				<id>DELAY_HARD_SHUTDOWN</id>
+				<default>300</default>
+			</attribute>
+			<attribute>
+				<id>RPM_DROP_INTERVAL</id>
+				<default>30</default>
+			</attribute>
+			<attribute>
+				<id>RPM_DROP</id>
+				<default>50</default>
+			</attribute>
+			<attribute>
+				<id>RPM_INCREASE_INTERVAL</id>
+				<default>30</default>
+			</attribute>
+			<attribute>
+				<id>RPM_INCREASE</id>
+				<default>255</default>
+			</attribute>
+</targetPart>
+</targetInstances>
+</partInstance>
