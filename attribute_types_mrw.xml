@@ -858,7 +858,22 @@
 		</enumerator>
 		<default>NO</default>
 	</enumerationType>
-
+	<enumerationType>
+		<id>SPI_FUNCTION</id>
+		<enumerator>
+			<name>BMC_CODE</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>PNOR</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>NOT_DEFINED</name>
+			<value>1</value>
+		</enumerator>
+		<default>NOT_DEFINED</default>
+	</enumerationType>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<description>Bus Type
@@ -5345,6 +5360,17 @@
 		<description>Name of checking script to run when Run Checks button is clicked</description>
 		<simpleType>
 			<string></string>
+		</simpleType>
+		<readable />
+	</attribute>
+	<attribute>
+		<id>SPI_FUNCTION</id>
+		<description>SPI master unit function, if applicable
+		</description>
+		<simpleType>
+			<enumeration>
+				<id>SPI_FUNCTION</id>
+			</enumeration>
 		</simpleType>
 		<readable />
 	</attribute>

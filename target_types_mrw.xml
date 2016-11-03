@@ -1222,6 +1222,10 @@
 			<id>SPI_PORT</id>
 			<default>0x00</default>
 		</attribute>
+		<attribute>
+			<id>SPI_FUNCTION</id>
+			<default>NOT_DEFINED</default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-spi-slave</id>
