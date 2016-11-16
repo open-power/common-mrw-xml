@@ -5,7 +5,7 @@
 <!--                                                                        -->
 <!-- OpenPOWER HostBoot Project                                             -->
 <!--                                                                        -->
-<!-- Contributors Listed Below - COPYRIGHT 2012,2015                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2012,2016                        -->
 <!-- [+] Google Inc.                                                        -->
 <!-- [+] International Business Machines Corp.                              -->
 <!--                                                                        -->
@@ -31,6 +31,22 @@
      Contains the definition of hostboot attributes which should not be
      synced to/from FSP
      ================================================================= -->
+<attribute>
+    <id>OP_TRACE_LITE</id>
+    <description>
+        Enable Trace lite on openpower.
+    </description>
+    <simpleType>
+        <uint8_t>
+            <default></default>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
 <attribute>
     <id>HIDDEN_ERRLOGS_ENABLE</id>
     <description>
@@ -115,6 +131,25 @@
     <hbOnly/>
 </attribute>
 
+<attribute>
+    <id>EEPROM_PAGE_ARRAY</id>
+    <description>
+        Used to keep track of which EEPROM page the current I2C master bus is set to
+        0 = PAGE_ZERO
+        1 = PAGE_ONE
+        2 = UNKNOWN_PAGE
+    </description>
+    <simpleType>
+        <uint8_t>
+            <default>2,2,2,2,2,2</default>
+        </uint8_t>
+        <array>2,3</array>
+    </simpleType>
+    <persistency>volatile</persistency>
+    <readable/>
+    <writeable/>
+</attribute>
+
 <!-- For POD Testing -->
 <attribute>
     <id>HB_MUTEX_TEST_LOCK</id>
@@ -122,6 +157,62 @@
     <simpleType>
         <hbmutex>
         </hbmutex>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
+<attribute>
+    <id>I2C_PAGE_MUTEX_0</id>
+    <description>
+        Mutex to protect page select operations for I2C Master engine 0
+    </description>
+    <simpleType>
+        <hbmutex></hbmutex>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
+<attribute>
+    <id>I2C_PAGE_MUTEX_1</id>
+    <description>
+        Mutex to protect page select operations for I2C Master engine 1
+    </description>
+    <simpleType>
+        <hbmutex></hbmutex>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
+<attribute>
+    <id>I2C_PAGE_MUTEX_2</id>
+    <description>
+        Mutex to protect page select operations for I2C Master engine 2
+    </description>
+    <simpleType>
+        <hbmutex></hbmutex>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
+<attribute>
+    <id>I2C_PAGE_MUTEX_3</id>
+    <description>
+        Mutex to protect page select operations for I2C Master engine 3
+    </description>
+    <simpleType>
+        <hbmutex></hbmutex>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
     <readable/>
@@ -169,6 +260,19 @@
 </attribute>
 
 <attribute>
+    <id>I2C_ENGINE_MUTEX_3</id>
+    <description>Mutex for I2C Master engine 3</description>
+    <simpleType>
+        <hbmutex>
+        </hbmutex>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
+<attribute>
     <id>FSI_SCOM_MUTEX</id>
     <description>Mutex for FSI-based SCOM Operations</description>
     <simpleType>
@@ -201,36 +305,6 @@
         <hbmutex>
             <default>0</default>
         </hbmutex>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hbOnly/>
-</attribute>
-
-<attribute>
-    <id>SLW_IMAGE_ADDR</id>
-    <description>
-        Location of runtime winkle image for this processor chip.
-        Written by host_build_winkle (istep 15.1)
-    </description>
-    <simpleType>
-        <uint64_t></uint64_t>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hbOnly/>
-</attribute>
-
-<attribute>
-    <id>SLW_IMAGE_SIZE</id>
-    <description>
-        Size of runtime winkle image for this processor chip.
-        Written by host_build_winkle (istep 15.1)
-    </description>
-    <simpleType>
-        <uint64_t></uint64_t>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
     <readable/>
@@ -289,22 +363,6 @@
     <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
-    <hbOnly/>
-</attribute>
-
-<attribute>
-    <id>HB_PM_SPWUP_OHA_FLAG</id>
-    <description>Flag storage to break the recursive calling loop for when accessing the OHA address space from the Special Wakeup procedure.</description>
-    <simpleType>
-        <uint8_t></uint8_t>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_PM_SPWUP_OHA_FLAG</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
     <hbOnly/>
 </attribute>
 
@@ -403,6 +461,10 @@
     <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_HOMER_PHYS_ADDR</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
     <hbOnly/>
 </attribute>
 
@@ -745,6 +807,20 @@
 </attribute>
 
 <attribute>
+    <id>HTMGT_INTERNAL_FLAGS</id>
+    <description>HTMGT internal flags
+    </description>
+    <simpleType>
+        <uint32_t>
+            <default>0</default>
+        </uint32_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+</attribute>
+
+<attribute>
     <id>OT_MIN_N_PER_MBA</id>
     <description>
         Lowest per MBA numerator ever allowed when OCC is
@@ -920,6 +996,24 @@
     <writeable/>
     <hbOnly/>
 </attribute>
+
+<attribute>
+    <id>SPCWKUP_COUNT</id>
+    <description>
+        Keep track of the calls to Special Wakeup. Increment for each
+        call to enable, decrement for each call to disable. Not
+        thread-safe, used at runtime which is single-threaded.
+    </description>
+    <simpleType>
+        <uint32_t>
+        </uint32_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
+</attribute>
+
 <attribute>
     <id>IPMI_INSTANCE</id>
     <description>Holds the IPMI instance number for this entity.</description>
@@ -1112,6 +1206,10 @@
     <enumerator>
         <name>REDUNDANT_PS_POLICY</name>
         <value>0xCA22</value>
+    </enumerator>
+    <enumerator>
+        <name>TPM_REQUIRED</name>
+        <value>0xFFFF</value>
     </enumerator>
 </enumerationType>
 
@@ -1384,23 +1482,6 @@ ID for the sensor number returned with the elog. -->
 </attribute>
 
 <attribute>
-    <id>SBE_MASTER_INTR_SERVICE_ENABLED</id>
-    <description>
-       Indicator whether the SBE interupt service is anabled.
-       0=Not Enabled
-       1=Enabled
-    </description>
-    <simpleType>
-        <uint8_t>
-        </uint8_t>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hbOnly/>
-</attribute>
-
-<attribute>
     <id>CLEAR_DIMM_SPD_ENABLE</id>
     <description>
       Used to enable clearing of SPD on all present DIMMs. This attribute is
@@ -1572,6 +1653,26 @@ ID for the sensor number returned with the elog. -->
   <hbOnly/>
 </attribute>
 
+<!-- TODO RTC 122856 When support for HB only volatile attributes with non-zero
+     default is implemented, update default value to match the description,
+     Until that happens, code must set the appropriate default if needed. -->
+<attribute>
+  <id>HBRT_HYP_ID</id>
+  <description>
+      Effective ID used by the hypervisor to specify a given target. A value
+      of 0xFFFFFFFFFFFFFFFF means invalid/unknown.
+  </description>
+  <simpleType>
+      <uint64_t>
+          <default>0</default>
+      </uint64_t>
+  </simpleType>
+  <persistency>volatile-zeroed</persistency>
+  <readable/>
+  <writeable/>
+  <hbOnly/>
+</attribute>
+
 <attribute>
   <id>WOF_REGULATOR_EFFICIENCIES</id>
   <description>
@@ -1596,6 +1697,37 @@ ID for the sensor number returned with the elog. -->
       <id>ATTR_WOF_REGULATOR_EFFICIENCIES</id>
       <macro>DIRECT</macro>
   </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>ATTN_CHK_ALL_PROCS</id>
+    <description>
+      Used to tell ATTN code whether to chk MASTER(0) OR all PROCs(1)
+      when the checkForIplAttns routine is called.
+    </description>
+    <simpleType>
+        <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+</attribute>
+
+<attribute>
+    <id>MASTER_MBOX_SCRATCH</id>
+    <description>
+      Value of the master mailbox scratch regs
+      at the beginning of the boot.  Need to save these
+      away since HB uses some of them for communication purposes.
+    </description>
+    <simpleType>
+     <uint32_t></uint32_t>
+     <array>8</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hbOnly/>
 </attribute>
 
 </attributes>
