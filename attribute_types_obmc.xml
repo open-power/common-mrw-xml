@@ -63,4 +63,22 @@
         <readable/>
     </attribute>
 
+    <attribute>
+        <id>BMC_DT_PINCTRL_FUNCS</id>
+        <description>Holds the pin control functions associated with the pingroup, 
+                     which allows Linux to know which function to enable for a
+                     multi-function pin or set of pins.
+                     (https://www.kernel.org/doc/Documentation/pinctrl.txt)
+        </description>
+        <simpleType>
+            <string>
+                <default>
+                NA,NA,NA,NA,NA,NA,NA,NA
+                </default>
+            </string>
+        <array>8,1</array>
+        </simpleType>
+        <readable/>
+    </attribute>
+
 </attributes>
