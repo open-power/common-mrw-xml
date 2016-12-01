@@ -4680,6 +4680,10 @@
 			<id>DIRECTION</id>
 			<default>IN</default>
 		</attribute>
+        <attribute>
+			<id>BUS_TYPE</id>
+			<default>U750</default>
+		</attribute>
 	</targetType>
 <!-- End APSS units -->
 
