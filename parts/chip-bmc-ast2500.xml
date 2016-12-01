@@ -36826,7 +36826,7 @@
 	</attribute>
 	<attribute>
 		<id>BMC_DT_PINCTRL_FUNCS</id>
-		<default>NA,NA,NA,NA,NA,NA,NA,NA</default>
+		<default>txd1,rxd1,nrts1,ndtr1,ndsr1,ncts1,ndcd1,nri1</default>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -38349,7 +38349,7 @@
 	</attribute>
 	<attribute>
 		<id>BMC_DT_PINCTRL_FUNCS</id>
-		<default>NA,NA,NA,NA,NA,NA,NA,NA</default>
+		<default>txd2,rxd2,NA,NA,NA,NA,NA,NA</default>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
