@@ -6,12 +6,44 @@
       <default>GREEN</default>
     </attribute>
     <attribute>
+      <id>LED_TYPE</id>
+	  <default>NA</default>
+	</attribute>
+    <attribute>
       <id>MRW_TYPE</id>
       <default>LED</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
       <default>NA</default>
+    </attribute>
+    <attribute>
+        <id>BLINK_ROLLUP</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>VIEW_REAR</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>VIEW_FRONT</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>VIEW_INTERNAL</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>FUNCTION</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>BLINK_RATE</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>ON_STATE</id>
+        <default>0</default>
     </attribute>
     <child_id>led_enable</child_id>
     <child_id>generic-logic-assoc</child_id>

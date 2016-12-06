@@ -2828,56 +2828,6 @@
 		</attribute>
 	</targetType>
 	<targetType>
-		<id>led-led-generic</id>
-		<parent>base</parent>
-		<parent_type>card-motherboard</parent_type>
-		<parent_type>card-daughtercard</parent_type>
-		<attribute>
-			<id>TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>MRW_TYPE</id>
-			<default>LED</default>
-		</attribute>
-		<attribute>
-			<id>LED_TYPE</id>
-			<default>NA</default>
-		</attribute>
-		<attribute>
-			<id>LED_COLOR</id>
-			<default>GREEN</default>
-		</attribute>
-		<attribute>
-			<id>BLINK_ROLLUP</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>VIEW_REAR</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>VIEW_FRONT</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>VIEW_INTERNAL</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>FUNCTION</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>BLINK_RATE</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>ON_STATE</id>
-			<default>0</default>
-		</attribute>
-	</targetType>
-	<targetType>
 		<id>unit-spcn-master</id>
 		<parent>unit</parent>
 		<attribute>
