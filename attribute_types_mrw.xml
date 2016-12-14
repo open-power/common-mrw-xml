@@ -234,7 +234,15 @@
 		<enumerator>
 			<name>5.0V</name>
 			<value>19</value>
-		</enumerator>																										
+		</enumerator>	
+		<enumerator>
+			<name>12V</name>
+			<value>20</value>
+		</enumerator>	
+		<enumerator>
+			<name>12VCS</name>
+			<value>21</value>
+		</enumerator>																											
 		<default>UNKNOWN</default>
 	</enumerationType>
 	<enumerationType>
@@ -5196,6 +5204,22 @@
 		</complexType>
 		<readable />
 	</attribute>
+	<attribute>
+		<id>VMEM_PER_VPP</id>
+		<complexType>
+		<field>
+			<name>Register</name>
+			<type>uint8_t</type>
+			<bits>8</bits>
+		</field>
+		<field>
+			<name>Value</name>
+			<type>uint8_t</type>
+			<bits>8</bits>
+		</field>
+		</complexType>
+		<readable />
+	</attribute>	
 	<attribute>
 		<id>VOLTAGE</id>
 		<complexType>
