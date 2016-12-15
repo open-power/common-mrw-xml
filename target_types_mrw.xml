@@ -972,10 +972,6 @@
 			<default>0x00</default>
 		</attribute>
 		<attribute>
-			<id>FSI_LINK</id>
-			<default>0x00</default>
-		</attribute>
-		<attribute>
 			<id>BUS_TYPE</id>
 			<default>FSIM</default>
 		</attribute>
@@ -1326,6 +1322,9 @@
 		<attribute>
 			<id>PIN_NUM</id>
 		</attribute>
+		<attribute>	
+			<id>ENGINE</id>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>i2c-device</id>
@@ -2791,7 +2790,7 @@
 			<default>OUT</default>
 		</attribute>
 		<attribute>
-			<id>SP_ENGINE_NUM</id>
+			<id>PSI_ENGINE</id>
 			<default></default>
 		</attribute>
 	</targetType>
@@ -4099,6 +4098,12 @@
 				<field><id>Register</id><value></value></field>
 			</default>
 		</attribute>
+		<attribute>
+			<id>VMEM_PER_VPP</id>
+			<default>
+				<field><id>Register</id><value></value></field>
+			</default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>dpss.unit-presence-generic</id>
