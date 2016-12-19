@@ -769,7 +769,7 @@
       <id>MULTI_SCOM_BUFFER_MAX_SIZE</id>
     </attribute>
     <attribute>
-      <id>NEST_FREQ_MHZ</id>
+      <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
     <attribute>
       <id>NOMINAL_FREQ_MHZ</id>
@@ -818,10 +818,10 @@
       <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
     </attribute>
     <attribute>
-      <id>PM_EXTERNAL_VRM_STEPDELAY</id>
+      <id>PM_EXTERNAL_VRM_STEPDELAY_VALUE</id>
     </attribute>
     <attribute>
-      <id>PM_EXTERNAL_VRM_STEPSIZE</id>
+      <id>PM_EXTERNAL_VRM_STEPDELAY_RANGE</id>
     </attribute>
     <attribute>
       <id>PM_RESONANT_CLOCK_FULL_CLOCK_SECTOR_BUFFER_FREQUENCY</id>
@@ -842,13 +842,13 @@
       <id>PM_SAFE_FREQUENCY</id>
     </attribute>
     <attribute>
-      <id>PM_SPIPSS_FREQUENCY</id>
+      <id>SPIPSS_FREQUENCY</id>
     </attribute>
     <attribute>
       <id>PM_SPIVID_FREQUENCY</id>
     </attribute>
     <attribute>
-      <id>PM_SYSTEM_IVRMS_ENABLED</id>
+      <id>SYSTEM_IVRMS_ENABLED</id>
     </attribute>
     <attribute>
       <id>PM_SYSTEM_IVRM_VPD_MIN_LEVEL</id>
