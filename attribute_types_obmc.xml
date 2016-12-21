@@ -81,4 +81,18 @@
         <readable/>
     </attribute>
 
+    <attribute>
+        <id>CONTROL_GROUPS</id>
+        <description>Contains information about which control groups an LED
+                     belongs to. A row in the array specifies the group name
+                     and properties for this LED in that group.
+                     GroupName, BlinkFreqHz(0 = on solid), DutyCycle(0-100)
+        </description>
+        <simpleType>
+            <string>
+            </string>
+        <array>16,3</array>
+        </simpleType>
+    </attribute>
+
 </attributes>

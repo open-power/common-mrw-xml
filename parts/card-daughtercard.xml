@@ -20,7 +20,36 @@
     <parent_type>connector-usb-generic</parent_type>
     <parent_type>connector-hmc-generic</parent_type>
     <parent_type>connector-uart-generic</parent_type>
+    <child_id>led_assoc_child</child_id>
     <position>-1</position>
     <type>card-daughtercard</type>
+  </targetPart>
+  <targetPart>
+    <id>led_assoc_child</id>
+    <attribute>
+      <id>ASSOCIATION_TYPE</id>
+      <default>LED</default>
+    </attribute>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>LOGICAL_ASSOCIATION</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>led_assoc_child</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-logic_assoc-generic</type>
   </targetPart>
 </partInstance>
