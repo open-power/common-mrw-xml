@@ -1255,6 +1255,38 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>unit-avs-master</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>AVS</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>OUT</default>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>unit-avs-slave</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>AVS</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+	</targetType>			
+	<targetType>
 		<id>unit-uart-slave</id>
 		<parent>unit</parent>
 		<attribute>
@@ -2310,6 +2342,17 @@
 	</targetType>
 	<targetType>
 		<id>SPI</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+		<attribute>
+			<id>BUS_WIDTH</id>
+			<default>2</default>
+		</attribute>		
+	</targetType>	
+	<targetType>
+		<id>AVS</id>
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
