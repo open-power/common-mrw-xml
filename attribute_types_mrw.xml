@@ -713,6 +713,10 @@
 			<name>ETHERNET</name>
 			<value>25</value>
 		</enumerator>
+		<enumerator>
+			<name>AVS</name>
+			<value>26</value>
+		</enumerator>
 	</enumerationType>
 	<enumerationType>
 		<id>MRW_TYPE</id>
