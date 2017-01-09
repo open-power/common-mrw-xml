@@ -5,7 +5,7 @@
 <!--                                                                        -->
 <!-- OpenPOWER HostBoot Project                                             -->
 <!--                                                                        -->
-<!-- Contributors Listed Below - COPYRIGHT 2012,2016                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2012,2017                        -->
 <!-- [+] Google Inc.                                                        -->
 <!-- [+] International Business Machines Corp.                              -->
 <!--                                                                        -->
@@ -269,7 +269,6 @@
             <field><id>reserved</id><value>0</value></field>
         </default>
     </attribute>
-    <attribute><id>PROC_PCIE_LANE_EQUALIZATION</id></attribute>
     <attribute><id>CDM_DOMAIN</id><default>FABRIC</default></attribute>
     <attribute><id>HOT_PLUG_POWER_CONTROLLER_INFO</id></attribute>
     <attribute><id>PROC_R_LOADLINE_VDD_UOHM</id></attribute>
@@ -485,7 +484,6 @@
     </attribute>
 
     <attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute>
-    <attribute><id>TEMP_SENSOR_I2C_CONFIG</id></attribute>
 
     <attribute><id>VPD_REC_NUM</id></attribute>
     <attribute><id>MSS_EFF_VPD_VERSION</id></attribute>
@@ -872,6 +870,7 @@
     <attribute><id>SYSTEM_TYPE</id></attribute>
     <attribute><id>MSS_CAL_ABORT_ON_ERROR</id></attribute>
     <attribute><id>SBE_IMAGE_MINIMUM_VALID_ECS</id></attribute>
+    <attribute><id>MAX_SBE_SEEPROM_SIZE</id></attribute>
     <attribute><id>SBE_SYS_CONFIG</id></attribute>
     <attribute><id>CP_REFCLOCK_RCVR_TERM</id></attribute>
     <attribute><id>IO_REFCLOCK_RCVR_TERM</id></attribute>
@@ -884,10 +883,10 @@
     <attribute><id>IVRM_STABILIZATION_DELAY_NS</id></attribute>
     <attribute><id>SYSTEM_RESCLK_ENABLE</id></attribute>
     <attribute><id>MSS_MRW_REFRESH_RATE_REQUEST</id></attribute>
-    <attribute><id>MSS_VREF_DAC_NIBBLE</id></attribute>
     <attribute><id>MSS_VCCD_OVERRIDE</id></attribute>
     <attribute><id>RAW_MTM</id></attribute>
     <attribute><id>MSS_MEM_PORT_POS_OF_FAIL_THROTTLE</id></attribute>
+    <attribute><id>SYSTEM_RING_DBG_MODE</id></attribute>
 </targetType>
 
 <!-- enc-node-power9 -->
@@ -913,6 +912,7 @@
     </attribute>
     <attribute><id>CDM_DOMAIN</id><default>NODE</default></attribute>
     <attribute><id>FRU_ID</id></attribute>
+    <attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute>
     <attribute><id>MSS_VOLT_VPP_SLOPE_EFF_CONFIG</id></attribute>
     <attribute><id>MSS_VOLT_VPP_INTERCEPT_EFF_CONFIG</id></attribute>
     <attribute><id>MSS_VOLT_DDR3_VDDR_SLOPE_EFF_CONFIG</id></attribute>
@@ -997,15 +997,19 @@
     <attribute><id>I2C_SLAVE_ADDRESS</id></attribute>
     <attribute>
         <id>PROC_PCIE_NUM_PHB</id>
-        <default>3</default>
+        <default>6</default>
     </attribute>
     <attribute>
         <id>PROC_PCIE_NUM_IOP</id>
-        <default>2</default>
+        <default>3</default>
+    </attribute>
+    <attribute>
+        <id>PROC_PCIE_NUM_PEC</id>
+        <default>3</default>
     </attribute>
     <attribute>
         <id>PROC_PCIE_NUM_LANES</id>
-        <default>24</default>
+        <default>48</default>
     </attribute>
     <attribute><id>PROC_PCIE_PHB_ACTIVE</id></attribute>
     <attribute><id>PROC_DCM_INSTALLED</id></attribute>
@@ -1122,11 +1126,6 @@
     <attribute><id>IO_FILTER_BYPASS</id></attribute>
     <attribute><id>DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id></attribute>
     <attribute><id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id></attribute>
-<!-- TODO: RTC 156244 - To be removed -->
-    <attribute><id>PROC_HTM_BAR_SIZE</id></attribute>
-    <attribute><id>PROC_HTM_BAR_BASE_ADDR</id></attribute>
-    <attribute><id>PROC_HTM_BAR_SIZES</id></attribute>
-<!-- End TODO: RTC 156244 -->
 
     <!-- Processor characteristics for HDAT -->
     <attribute>
@@ -1277,6 +1276,12 @@
     <attribute><id>TOD_CPU_DATA</id></attribute>
     <attribute><id>PM_SPWUP_IGNORE_XSTOP_FLAG</id></attribute>
     <attribute><id>SECUREBOOT_PROTECT_DECONFIGURED_TPM</id></attribute>
+    <!-- START memory workaround for DD1.02 -->
+    <attribute><id>DO_MSS_WR_VREF</id></attribute>
+    <attribute><id>DO_MSS_VREF_DAC</id></attribute>
+    <attribute><id>DO_MSS_TRAINING_BAD_BITS</id></attribute>
+    <!-- END memory workaround for DD1.02 -->
+
 </targetType><!-- chip-processor-power9 -->
 
 <!-- chip-processor-nimbus -->
@@ -1749,7 +1754,6 @@
     <attribute><id>MSS_VPD_MT_MC_DQ_ACBOOST_WR_UP</id></attribute>
     <attribute><id>MSS_VPD_MT_MC_DQ_CTLE_CAP</id></attribute>
     <attribute><id>MSS_VPD_MT_MC_DQ_CTLE_RES</id></attribute>
-    <attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute>
     <attribute><id>VPD_REC_NUM</id></attribute>
     <attribute><id>EFF_DRAM_GEN</id></attribute>
     <attribute><id>EFF_DIMM_TYPE</id></attribute>
@@ -1809,6 +1813,11 @@
     <attribute><id>MSS_DIMM_THERMAL_LIMIT</id></attribute>
     <attribute><id>MSS_VREF_CAL_ENABLE</id></attribute>
     <attribute><id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id></attribute>
+    <attribute><id>EFF_DRAM_RTT_NOM</id></attribute>
+    <attribute><id>EFF_DRAM_RTT_WR</id></attribute>
+    <attribute><id>EFF_DRAM_RTT_PARK</id></attribute>
+    <attribute><id>MSS_VREF_DAC_NIBBLE</id></attribute>
+    <attribute><id>MSS_MVPD_FWMS</id></attribute>
 </targetType>
 
 <targetType>
@@ -1970,28 +1979,44 @@
 
     <attribute><id>PROC_PCIE_IOVALID_ENABLE</id></attribute>
     <attribute><id>PROC_PCIE_PCS_RX_CDR_GAIN</id></attribute>
-    <attribute><id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id></attribute>
-    <attribute><id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_PK_INIT</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_INIT_GAIN</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_SIGDET_LVL</id></attribute>
     <attribute><id>PROC_PCIE_PCS_RX_ROT_CDR_LOOKAHEAD</id></attribute>
     <attribute><id>PROC_PCIE_PCS_RX_ROT_CDR_SSC</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_ROT_EXTEL</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_ROT_RST_FW</id></attribute>
     <attribute><id>PROC_PCIE_PCS_PCLCK_CNTL_PLLA</id></attribute>
     <attribute><id>PROC_PCIE_PCS_PCLCK_CNTL_PLLB</id></attribute>
     <attribute><id>PROC_PCIE_PCS_TX_DCLCK_ROT</id></attribute>
-    <attribute><id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id></attribute>
     <attribute><id>PROC_PCIE_PCS_TX_PCIE_RECV_DETECT_CNTL_REG1</id></attribute>
     <attribute><id>PROC_PCIE_PCS_TX_PCIE_RECV_DETECT_CNTL_REG2</id></attribute>
     <attribute><id>PROC_PCIE_PCS_TX_POWER_SEQ_ENABLE</id></attribute>
-    <attribute><id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id></attribute>
     <attribute><id>PROC_PCIE_PCS_RX_VGA_CNTL_REG1</id></attribute>
     <attribute><id>PROC_PCIE_PCS_RX_VGA_CNTL_REG2</id></attribute>
-    <attribute><id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id></attribute>
+    <attribute><id>PROC_PCIE_PCS_RX_DFE_FDDC</id></attribute>
     <attribute><id>PROC_PCIE_PCS_SYSTEM_CNTL</id></attribute>
     <attribute><id>PROC_PCIE_PCS_M_CNTL</id></attribute>
     <attribute><id>PROC_PCIE_IOP_SWAP</id></attribute>
+
     <attribute><id>PROC_PCIE_REFCLOCK_ENABLE</id></attribute>
     <attribute><id>PROC_PCIE_IOP_CONFIG</id></attribute>
 
     <attribute><id>CDM_DOMAIN</id><default>IO</default></attribute>
+    <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
+    <attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+        <default>0x00000001</default> <!-- GARD -->
+    </attribute>
+
+    <attribute><id>PROC_PCIE_LANE_MASK</id></attribute>
+    <attribute><id>PEC_PCIE_LANE_MASK_NON_BIFURCATED</id></attribute>
+    <attribute><id>PEC_PCIE_LANE_MASK_BIFURCATED</id></attribute>
+    <attribute><id>PEC_PCIE_IOP_SWAP_NON_BIFURCATED</id></attribute>
+    <attribute><id>PEC_PCIE_IOP_SWAP_BIFURCATED</id></attribute>
+    <attribute><id>PEC_PCIE_IOP_REVERSAL</id></attribute>
+    <attribute><id>PEC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id></attribute>
+    <attribute><id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id></attribute>
+
 </targetType><!-- unit-pec-power9 -->
 
 <!-- PHB
@@ -2006,7 +2031,7 @@
     </attribute>
     <attribute>
         <id>PROC_PCIE_NUM_LANES</id>
-        <default>32</default>
+        <default>48</default>
     </attribute>
     <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
     <attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
@@ -2240,6 +2265,9 @@
         <default>CAPP</default>
     </attribute>
     <attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute>
+    <attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+        <default>0x00000001</default> <!-- GARD -->
+    </attribute>
     <attribute>
         <id>PRIMARY_CAPABILITIES</id>
         <default>

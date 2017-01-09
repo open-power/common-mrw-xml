@@ -5,7 +5,7 @@
 <!--                                                                        -->
 <!-- OpenPOWER HostBoot Project                                             -->
 <!--                                                                        -->
-<!-- Contributors Listed Below - COPYRIGHT 2012,2016                        -->
+<!-- Contributors Listed Below - COPYRIGHT 2012,2017                        -->
 <!-- [+] International Business Machines Corp.                              -->
 <!--                                                                        -->
 <!--                                                                        -->
@@ -313,46 +313,14 @@
         <name>PANEL</name>
         <value>57</value>
     </enumerator>
-    <enumerator>
-        <name>BMC</name>
-        <value>58</value>
-    </enumerator>
-    <enumerator>
-        <name>FLASH</name>
-        <value>59</value>
-    </enumerator>
-    <enumerator>
-        <name>SEEPROM</name>
-        <value>60</value>
-    </enumerator>
-    <enumerator>
-        <name>TMP</name>
-        <value>61</value>
-    </enumerator>
-    <enumerator>
-        <name>GPIO_EXPANDER</name>
-        <value>62</value>
-    </enumerator>
-    <enumerator>
-        <name>POWER_SEQUENCER</name>
-        <value>63</value>
-    </enumerator>
-    <enumerator>
-        <name>RTC</name>
-        <value>64</value>
-    </enumerator>
-    <enumerator>
-        <name>FANCTLR</name>
-        <value>65</value>
-    </enumerator>
     <!-- add any new types here, and increment TEST_FAIL and LAST_IN_RANGE -->
     <enumerator>
         <name>TEST_FAIL</name>
-        <value>66</value>
+        <value>58</value>
     </enumerator>
     <enumerator>
         <name>LAST_IN_RANGE</name>
-        <value>67</value>
+        <value>59</value>
     </enumerator>
     <default>NA</default>
 </enumerationType>
@@ -1088,7 +1056,6 @@
     </nativeType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1099,7 +1066,6 @@
     </nativeType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1154,7 +1120,6 @@
         </complexType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1443,7 +1408,6 @@
     <persistency>volatile</persistency>
     <readable/>
     <writeable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1462,7 +1426,6 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <writeable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -1481,7 +1444,6 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 <enumerationType>
@@ -1691,7 +1653,7 @@
                          on the completion of a write command to update its
                          internal memory.</description>
             <type>uint64_t</type>
-            <default>0x0</default>
+            <default>0xA</default>
         </field>
     </complexType>
     <persistency>non-volatile</persistency>
@@ -1767,7 +1729,7 @@
                          on the completion of a write command to update its
                          internal memory.</description>
             <type>uint64_t</type>
-            <default>0x0</default>
+            <default>0xA</default>
         </field>
     </complexType>
     <persistency>non-volatile</persistency>
@@ -2663,7 +2625,6 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 <attribute>
     <id>SP_FUNCTIONS</id>
@@ -2917,7 +2878,6 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 
@@ -7595,46 +7555,6 @@ firmware notes: Used as override attribute for pstate procedure
 </attribute>
 
 <attribute>
-    <id>EFF_DRAM_RTT_NOM</id>
-    <description>D
-      DRAM Rtt_Nom.
-      Used in various locations and comes from the MT keyword of the VPD
-    </description>
-    <simpleType>
-        <uint8_t>
-        </uint8_t>
-        <array>2,2,4</array>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_EFF_DRAM_RTT_NOM</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
-    <id>EFF_DRAM_RTT_WR</id>
-    <description>
-      DRAM Rtt_WR.
-      Used in various locations and comes from the MT keyword of the VPD
-    </description>
-    <simpleType>
-        <uint8_t>
-        </uint8_t>
-        <array>2,2,4</array>
-    </simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_EFF_DRAM_RTT_WR</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
     <id>EFF_DRAM_WR_VREF</id>
     <description>
       DRAM Write Vref.
@@ -10680,15 +10600,16 @@ firmware notes: Used as override attribute for pstate procedure
     </hwpfToHbAttrMap>
 </attribute>
 
-<!--TOOD RTC: 151938 Make sure that these are set up by parseMRW script-->
 <attribute>
     <id>MEMVPD_POS</id>
     <description>
-    The position of the MCA target's VPD selector data, relative to the EEPROM
-    that contains its data. For systems with a single EEPROM for all chips,
-    this should be equivalent to ATTR_FAPI_POS (the logical MCA position).
-    For systems with an EEPROM per chip, this value should be equivalent to
-    ATTR_CHIP_UNIT_POS.
+      The position of the MCS target's VPD selector data, relative to the EEPROM
+      that contains its data.  The VPD defition supports up to 16 values per
+      EEPROM.
+      For systems with an EEPROM per chip, this value should be equivalent to
+      ATTR_CHIP_UNIT_POS.
+      For systems with a single EEPROM for all chips, the value should follow
+      the physical position in such a way to fit within the 16 available slots.
     </description>
     <simpleType>
         <uint8_t>
@@ -12650,6 +12571,7 @@ Measured in GB</description>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
     <readable/>
+    <writeable/>
     <hwpfToHbAttrMap>
         <id>ATTR_PROC_PCIE_REFCLOCK_ENABLE</id>
         <macro>DIRECT</macro>
@@ -16670,22 +16592,22 @@ Measured in GB</description>
     <id>PROC_PCIE_LANE_MASK</id>
     <description>Effective PCIE Lane Mask
         Creator: Firmware
-        Purpose: Holds the effective PCIE lane mask after taking into account
-            any IOP bifurcations.  If no IOP bifurcations present, this is just
-            the value of the PROC_PCIE_LANE_MASK_NON_BIFURCATED attribute
-        Data Format: 2x2 array of uint16_t values.  The first two uint16_t
-            values are lane set 0/1 masks for IOP0, the remaining two uint16_t
-            values are lane set 0/1 masks for IOP1.  A lane set mask indicates
-            which groups of lanes are assigned to an IOP.  For instance, lane
-            set 0 value of 0xFFFF and lane set 1 value of 0x0000 for IOP0 means
-            IOP0 is a x16. Lane set 0 value of 0xFF00 and lane set 1 value of
-            0x00FF for IOP0, means the IOP is bifurcated into two x8s.
-            Each index in the array that is non-0 will require a dedicated PHB.
+        Purpose: Holds the effective PCIE lane mask of each PEC after taking
+            into account any IOP bifurcations. If no IOP bifurcations present,
+            this is just the value of the PEC_PCIE_LANE_MASK_NON_BIFURCATED
+            attribute
+        Data Format: x4 array of uint16_t values.  The uint16_t value is a
+            mask for lane 0, the next for lane 1 and so on until lane 3.
+            A lane set mask indicates which groups of lanes are assigned to an
+            IOP.  For instance, lane set 0 value of 0xFFFF and lane set 1 value
+            of 0x0000 for PEC0 means PEC0 is a x16. Lane set 0 value of 0xFF00
+            and lane set 1 value of 0x00FF for PEC0, means the IOP is bifurcated
+            into two x8s.
     </description>
     <simpleType>
         <uint16_t>
         </uint16_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -16693,43 +16615,22 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_DSMP_CAPABLE</id>
-    <description>Whether DSMP is enabled for a lane set or not
-        Creator: MRW
-        Purpose: Indicates whether a given IOP / lane set is dedicated to dSMP
-            traffic or not
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are fpr lane sets 0/1 of IOP1.  If the value at a given
-            array index is 1, that IOP/lane set routes dSMP traffic.
-    </description>
-    <simpleType>
-        <uint8_t>
-        </uint8_t>
-        <array>3,2</array>
-        </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-</attribute>
-
-<attribute>
-    <id>PROC_PCIE_IOP_REVERSAL</id>
+    <id>PEC_PCIE_IOP_REVERSAL</id>
     <description>Effective PCIE IOP reversal configuration
         Creator: Firmware
         Purpose: Holds the effective PCIE IOP reversal value after taking into
             account any IOP bifurcations.  If no IOP bifurcations present, this
             is just the value of the PROC_PCIE_IOP_REVERSAL_NON_BIFURCATED
             attribute.
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are for lane sets 0/1 of IOP1.  The given index in the array
-            is a mask which specifies which bit to invert in the lane swap
-            settings for the given IOP/lane set.
+        Data Format: x4 array of uint8_t values. The first uint8_t value is
+            for lane set 0, the second for lane set 1 and so on. The given
+            index in the array is a mask which specifies which bit to invert
+            in the lane swap settings for the given PEC/lane set.
     </description>
     <simpleType>
         <uint8_t>
         </uint8_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -16737,164 +16638,118 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id>
+    <id>PEC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id>
     <description>Base PCIE IOP reversal configuration
         Creator: Firmware
         Purpose: Holds the base PCIE IOP reversal value without considering IOP
             bifurcation.
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are for lane sets 0/1 of IOP1.  The given index in the array
-            is a mask which specifies which bit to invert in the lane swap
-            settings for the given IOP/lane set
+        Data Format: x4 array of uint8_t values. The first uint8_t value is
+            for lane set 0, the second for lane set 1 and so on. The given
+            index in the array is a mask which specifies which bit to invert
+            in the lane swap settings for the given lane set.
     </description>
     <simpleType>
         <uint8_t>
         </uint8_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_IOP_SWAP_NON_BIFURCATED</id>
+    <id>PEC_PCIE_IOP_SWAP_NON_BIFURCATED</id>
     <description>Base PCIE IOP swap configuration value
         Creator: MRW
         Purpose: Holds the base IOP swap configuration value without considering
             IOP bifurcation.  The swap value controls how PCIE lanes are
             recordered when the leave the IOP, to provide lane routing
             flexibility.
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are for lane sets 0/1 of IOP1.  The given index in the array
-            is a value for the hardware which specifies how to swap the PCIE
-            lanes for the given IOP/lane set.
+        Data Format: A uint8_t value. The value specifices for the hardware how
+            to swap the PCIE lanes for the given PEC.
     </description>
     <simpleType>
         <uint8_t></uint8_t>
-        <array>3,2</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_LANE_MASK_NON_BIFURCATED</id>
+    <id>PEC_PCIE_LANE_MASK_NON_BIFURCATED</id>
     <description>PCIE Lane Mask base configuration
         Creator: MRW
         Purpose: Holds the base PCIE lane mask assuming no dynamic IOP
             bifurcations.
-        Data Format: 2x2 array of uint16_t values.  The first two uint16_t
-            values are for lane set 0/1 masks of IOP0, the remaining two
-            values are for lane set 0/1 masks of IOP1.  A lane set mask
+        Data Format: x4 array of uint16_t values. The first uint8_t value is
+            lane set 0, the second for lane set 2 and so on. A lane set mask
             indicates which groups of lanes are assigned to an IOP.  For
             instance, lane set 0 value of 0xFFFF and lane set 1 value of 0x0000
-            for IOP0 means IOP0 is a x16. Lane set 0 value of 0xFF00 and lane
-            set 1 value of 0x00FF for IOP0, means the IOP is split into two x8s.
-            Each array index with non-0 value implies a dedicated PHB.
+            means the PEC is a x16. Lane set 0 value of 0xFF00 and lane
+            set 1 value of 0x00FF, means the PEC is split into two x8s.
     </description>
     <simpleType>
         <uint16_t>
         </uint16_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_IOP_REVERSAL_BIFURCATED</id>
+    <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
     <description>Base PCIE IOP reversal configuration
         Creator: Firmware
         Purpose: Holds the PCIE IOP reversal value for cases where the IOP
             is bifurcated
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are for lane sets 0/1 of IOP1.  The given index in the array
-            is a mask which specifies which bit to invert in the lane swap
-            settings for the given IOP / lane set
+        Data Format: x4 array of uint8_t values. The first uint8_t value is
+            lane set 0, the second for lane set 2 and so on. The given index in
+            the array is a mask which specifies which bit to invert in the lane
+            swap settings for the given lane set
     </description>
     <simpleType>
         <uint8_t>
         </uint8_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_IOP_SWAP_BIFURCATED</id>
+    <id>PEC_PCIE_IOP_SWAP_BIFURCATED</id>
     <description>Bifurcated PCIE IOP swap configuration value
         Creator: MRW
         Purpose: Holds the base IOP swap configuration value for the IOPs in the
             case where they are bifurcated.  The swap value controls how PCIE
             lanes are recordered when the leave the IOP, to provide lane routing
             flexibility.
-        Data Format: 2x2 array of uint8_t values.  The first two uint8_t
-            values are for lane sets 0/1 of IOP0, the remaining two uint8_t
-            values are for lane sets 0/1 pf IOP1.  The given index in the array
-            is a value for the hardware which specifies how to swap the PCIE
-            lanes for the given IOP/lane set.
+        Data Format: A uint8_t value. The value specifices for the hardware how
+            to swap the PCIE lanes for the given PEC.
     </description>
     <simpleType>
         <uint8_t></uint8_t>
-        <array>3,2</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_LANE_MASK_BIFURCATED</id>
+    <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
     <description>PCIE Lane Mask bifurcated configuration
         Creator: MRW
         Purpose: Holds the PCIE lane mask assuming IOPs are bifurcated.
-        Data Format: 2x2 array of uint16_t values.  The first two uint16_t
-            values are for lane set 0/1 masks of IOP0, the remaining two
-            values are for lane set 0/1 masks of IOP1.  A lane set mask
-            indicates which groups of lanes are assigned to an IOP.  For
+        Data Format: x4 array of uint16_t values. The first uint8_t value is
+            lane set 0, the second for lane set 2 and so on. A lane set mask
+            indicates which groups of lanes are assigned to an IOP. For
             instance, lane set 0 value of 0xFF00 and lane set 1 value of 0x00FF
-            for IOP0, means the IOP is bifurcated into two x8s.
-            Each non-0 array value implies a dedicated PHB.
+             means the IOP is bifurcated into two x8s.
     </description>
     <simpleType>
         <uint16_t>
         </uint16_t>
-        <array>3,2</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-</attribute>
-
-<attribute><!-- Deprecated : @todo-Remove with RTC:160417 -->
-    <id>PROC_PCIE_LANE_EQUALIZATION</id>
-    <description>PCIE Lane Equalization values for each PHB
-        Creator: MRW
-        Purpose: Holds settings which are loaded into the HW to optimize the
-            PCIE lane signal eye between the chips + PCIE endpoints
-        Data Format: 4 PHBs x 32 bytes of EQ data per PHB.  Each PHB has an EQ
-            value for each of its 16 lanes.  Each value is a uint16 formatted as
-            follows:
-                Bit 0:3   - up_rx_hint (bit 0 reserved)
-                Bit 4:7   - up_tx_preset
-                Bit 8:11  - dn_rx_hint (bit 0 reserved)
-                Bit 12:15 - dn_tx_preset
-    </description>
-    <simpleType>
-        <uint8_t><default>0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,
-            0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,
-            0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,
-            0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x0,
-            0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x77,
-            0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,0x77,
-            0x77,0x77,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
-            0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
-            0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
-            0x0,0x0</default>
-        </uint8_t>
-        <array>4,32</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -16908,16 +16763,16 @@ Measured in GB</description>
             pluggable slot or not.  If this is the case, and the platform
             supports bifurcation, the card's VPD should be interrogated to
             determine whether to bifurcate the IOP or not.
-        Data Format: 2x2 array of uint8_t values.  The first two values indicate
-            whether lane set 0/1 of IOP0 terminates at a pluggable slot.  The
-            next two values indicate the same for IOP1.  A value of 1 at a given
-            array index indicates the lanes terminate at a pluggable slot, 0
-            otherwise.
+        Data Format: x4 array of uint8_t values.  The first value indicates
+            whether lane set 0 terminates at a pluggable slot.  The
+            next three values indicate the same for lane sets 1-3. A value of
+            1 at a given array index indicates the lanes terminate at a
+            pluggable slot, 0 otherwise.
     </description>
     <simpleType>
         <uint8_t>
         </uint8_t>
-        <array>3,2</array>
+        <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -17170,6 +17025,7 @@ Measured in GB</description>
         Number of PCIe IOP units present on target
         Murano/Venice: 2
         Naples: 3
+        Nimbus: 3
   </description>
   <simpleType>
       <uint8_t></uint8_t>
@@ -17183,6 +17039,24 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
+  <id>PROC_PCIE_NUM_PEC</id>
+  <description>
+      creator: platform
+        Number of PCIe PEC units present on target
+        Nimbus: 3
+  </description>
+  <simpleType>
+      <uint8_t></uint8_t>
+  </simpleType>
+  <persistency>non-volatile</persistency>
+  <readable/>
+  <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_NUM_PEC</id>
+      <macro>DIRECT</macro>
+  </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
   <id>PROC_PCIE_NUM_LANES</id>
   <description>
       creator: platform
@@ -17190,6 +17064,7 @@ Measured in GB</description>
         Murano: 24
         Venice: 32
         Naples: 40
+        Nimbus: 48
   </description>
   <simpleType>
       <uint8_t></uint8_t>
@@ -18906,19 +18781,6 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>ORDINAL_ID</id>
-    <description>Ordinal ID of a target</description>
-    <simpleType>
-        <uint32_t>
-            <default>0xFFFFFFFF</default>
-        </uint32_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizHide/>
-</attribute>
-
-<attribute>
     <id>PFET_POWERUP_DELAY_NS</id>
     <description>
         Time (in nanoseconds) between PFET controller steps (7 of them) when turning
@@ -19801,8 +19663,7 @@ Measured in GB</description>
     </description>
     <simpleType>
       <enumeration>
-          <id>SYSTEM_WOF_ENABLED</id>
-          <default>OFF</default>
+        <id>SYSTEM_WOF_ENABLED</id>
       </enumeration>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -20138,9 +19999,9 @@ Measured in GB</description>
          values)
     </description>
     <simpleType>
-        <enumeration>
-           <default>NA</default>
-        </enumeration>
+        <uint32_t>
+           <default>0xFFFFFFFF</default>
+        </uint32_t>
     </simpleType>
     <hwpfToHbAttrMap>
         <id>ATTR_FAPI_POS</id>
@@ -20148,7 +20009,6 @@ Measured in GB</description>
     </hwpfToHbAttrMap>
     <persistency>non-volatile</persistency>
     <readable/>
-    <serverwizHide/>
 </attribute>
 
 <attribute>
@@ -21582,12 +21442,13 @@ Measured in GB</description>
     <simpleType>
         <uint8_t></uint8_t>
     </simpleType>
-    <persistency>non-volatile</persistency>
+    <persistency>volatile-zeroed</persistency>
     <hwpfToHbAttrMap>
         <id>ATTR_PROC_PCIE_IOVALID_ENABLE</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <readable/>
+    <writeable/>
 </attribute>
 <attribute>
     <id>PROC_PCIE_BAR_ENABLE</id>
@@ -21855,31 +21716,32 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
+    <id>PROC_PCIE_PCS_RX_PK_INIT</id>
     <!-- TARGET_TYPE_PEC -->
     <description>
-        PCS rx loff control
+        PCS rx vga peak init value
         creator: platform
         consumer: p9_pcie_scominit
         firmware notes:
-        The value of rx loff control for PCS.
-        Array index: Configuration number
-        index 0~3 for CONFIG0~3
+          The value of rx vga peak init for PCS.
+          Array index: Configuration number
+          index 0~3 for CONFIG0~3
+          lane 0~15 for each PCIE Lane
     </description>
     <simpleType>
-        <uint16_t></uint16_t>
-        <array>4</array>
+        <uint8_t></uint8_t>
+        <array>4,16</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <hwpfToHbAttrMap>
-        <id>ATTR_PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
+        <id>ATTR_PROC_PCIE_PCS_RX_PK_INIT</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
+    <id>PROC_PCIE_PCS_RX_INIT_GAIN</id>
     <!-- TARGET_TYPE_PEC -->
     <description>
         PCS rx vga control register3
@@ -21891,17 +21753,39 @@ Measured in GB</description>
         index 0~3 for CONFIG0~3
     </description>
     <simpleType>
-        <uint16_t></uint16_t>
+        <uint8_t></uint8_t>
+        <array>4,16</array>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_PROC_PCIE_PCS_RX_INIT_GAIN</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+<attribute>
+    <id>PROC_PCIE_PCS_RX_SIGDET_LVL</id>
+    <!-- TARGET_TYPE_PEC -->
+    <description>
+      PCS rx sigdet lvl value
+      creator: platform
+      consumer: p9_pcie_scominit
+      firmware notes:
+        The value of rx sigdet lvl for PCS.
+        Array index: Configuration number
+        index 0~3 for CONFIG0~3
+    </description>
+    <simpleType>
+        <uint8_t></uint8_t>
         <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <hwpfToHbAttrMap>
-        <id>ATTR_PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
+        <id>ATTR_PROC_PCIE_PCS_RX_SIGDET_LVL</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
-
 <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_LOOKAHEAD</id>
     <!-- TARGET_TYPE_PEC -->
@@ -21922,7 +21806,6 @@ Measured in GB</description>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
-
 <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_SSC</id>
     <!-- TARGET_TYPE_PEC -->
@@ -21940,6 +21823,48 @@ Measured in GB</description>
     <readable/>
     <hwpfToHbAttrMap>
         <id>ATTR_PROC_PCIE_PCS_RX_ROT_CDR_SSC</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+<attribute>
+    <id>PROC_PCIE_PCS_RX_ROT_EXTEL</id>
+    <!-- TARGET_TYPE_PEC -->
+    <description>
+      Value of PCS RX ROT extel latch
+       creator: platform
+       consumer: p9_pcie_scominit
+       firmware notes:
+        0 for internal (default)
+        1 for external (freezes phase rotators)
+    </description>
+    <simpleType>
+        <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_PROC_PCIE_PCS_RX_ROT_EXTEL</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+<attribute>
+    <id>PROC_PCIE_PCS_RX_ROT_RST_FW</id>
+    <!-- TARGET_TYPE_PEC -->
+    <description>
+     Value of PCS RX ROT rstfw latch
+      creator: platform
+      consumer: p9_pcie_scominit
+      firmware notes:
+        0 normal, flywheel is enabled (default)
+        1 assert reset to the phase rotator flywheel (disable the flywheel)
+    </description>
+    <simpleType>
+        <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_PROC_PCIE_PCS_RX_ROT_RST_FW</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
@@ -22002,25 +21927,6 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
-    <!-- TARGET_TYPE_PEC -->
-    <description>
-        Value of PCS tx fifo config offset
-        creator: platform
-        consumer: p9_pcie_scominit
-    </description>
-    <simpleType>
-        <uint8_t></uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
     <id>PROC_PCIE_PCS_TX_PCIE_RECV_DETECT_CNTL_REG1</id>
     <!-- TARGET_TYPE_PEC -->
     <description>
@@ -22078,25 +21984,6 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-    <!-- TARGET_TYPE_PEC -->
-    <description>
-        Value of PCS rx phase rotator control
-        creator: platform
-        consumer: p9_pcie_scominit
-    </description>
-    <simpleType>
-        <uint16_t></uint16_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
     <id>PROC_PCIE_PCS_RX_VGA_CNTL_REG1</id>
     <!-- TARGET_TYPE_PEC -->
     <description>
@@ -22135,20 +22022,20 @@ Measured in GB</description>
 </attribute>
 
 <attribute>
-    <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
+    <id>PROC_PCIE_PCS_RX_DFE_FDDC</id>
     <!-- TARGET_TYPE_PEC -->
     <description>
-        Value of PCS rx sigdet control
+        Value of PCS rx dfe func fddc control latch
         creator: platform
         consumer: p9_pcie_scominit
     </description>
     <simpleType>
-        <uint16_t></uint16_t>
+        <uint8_t></uint8_t>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <hwpfToHbAttrMap>
-        <id>ATTR_PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
+        <id>ATTR_PROC_PCIE_PCS_RX_DFE_FDDC</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
@@ -29074,86 +28961,6 @@ Measured in GB</description>
     </hwpfToHbAttrMap>
 </attribute>
 
-<!-- TODO: RTC 156244 - To be removed -->
-
-<attribute>
-    <id>PROC_HTM_BAR_SIZE</id>
-    <description>Desired HTM trace memory size value
-      creator: platform
-      firmware notes:
-        set by platform to request size of per-chip area reserved
-        for HTM trace memory
-    </description>
-    <simpleType>
-        <uint64_t>
-            <default>0</default>
-        </uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_PROC_HTM_BAR_SIZE</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
-    <id>PROC_HTM_BAR_BASE_ADDR</id>
-    <description>HTM trace memory base address allocated
-    </description>
-    <simpleType><uint64_t></uint64_t></simpleType>
-    <persistency>volatile-zeroed</persistency>
-    <readable/>
-    <writeable/>
-    <hwpfToHbAttrMap>
-        <id>ATTR_PROC_HTM_BAR_BASE_ADDR</id>
-        <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-</attribute>
-
-<attribute>
-  <id>PROC_HTM_BAR_SIZES</id>
-  <!-- <targetType>TARGET_TYPE_PROC_CHIP</targetType> -->
-  <description> The amount of memory a user can reserve to store HTM traces.
-                There are two different HTM trace areas, thus two different
-                sizes (For example, one to store NHTM0 and one for NHTM1).
-                Platform is to initialize this attribute to 0 (default).
-                Set by user via attribute override.
-                Used by p9_mss_eff_grouping.
-                256_GB = 0x0000004000000000,
-                128_GB = 0x0000002000000000,
-                 64_GB = 0x0000001000000000,
-                 32_GB = 0x0000000800000000,
-                 16_GB = 0x0000000400000000,
-                  8_GB = 0x0000000200000000,
-                  4_GB = 0x0000000100000000,
-                  2_GB = 0x0000000080000000,
-                  1_GB = 0x0000000040000000,
-                512_MB = 0x0000000020000000,
-                256_MB = 0x0000000010000000,
-                128_MB = 0x0000000008000000,
-                 64_MB = 0x0000000004000000,
-                 32_MB = 0x0000000002000000,
-                 16_MB = 0x0000000001000000,
-                  ZERO = 0x0000000000000000
-  </description>
-  <simpleType>
-    <uint64_t>
-      <default>0,0</default>
-    </uint64_t>
-    <array>2</array>
-  </simpleType>
-  <writeable/>
-  <persistency>non-volatile</persistency>
-  <readable/>
-  <hwpfToHbAttrMap>
-    <id>ATTR_PROC_HTM_BAR_SIZES</id>
-    <macro>DIRECT</macro>
-  </hwpfToHbAttrMap>
-</attribute>
-
-<!-- End TODO: RTC 156244 -->
-
 <attribute>
   <id>MSS_VPD_MT_MC_DQ_ACBOOST_RD_UP</id>
   <description>
@@ -29664,7 +29471,6 @@ Measured in GB</description>
     <simpleType>
       <enumeration>
         <id>VDM_ENABLE</id>
-        <default>OFF</default>
       </enumeration>
     </simpleType>
     <readable/>
@@ -32305,12 +32111,32 @@ Measured in GB</description>
     <simpleType>
         <uint8_t>
         </uint8_t>
+        <array>2</array>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
     <hwpfToHbAttrMap>
         <id>ATTR_MSS_VREF_DAC_NIBBLE</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>MSS_MVPD_FWMS</id>
+    <description>
+        Mark store records from MPVD Lx keyword
+    </description>
+    <simpleType>
+        <uint32_t>
+        </uint32_t>
+        <array>2,8</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_MSS_MVPD_FWMS</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
@@ -32359,6 +32185,24 @@ Measured in GB</description>
     <persistency>volatile-zeroed</persistency>
     <readable/>
     <writeable/>
+</attribute>
+
+<attribute>
+    <id>SYSTEM_RING_DBG_MODE</id>
+    <description>
+       Debug modes supported for CME/SGPE Scan layout in HOMER
+       SCAN_RING_NO_DEBUG = 0x00, SCAN_RING_TRACE_DEBUG = 0x01
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_SYSTEM_RING_DBG_MODE</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
 </attribute>
 
 <attribute>
@@ -32414,6 +32258,189 @@ Measured in GB</description>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+</attribute>
+
+<attribute>
+    <id>MAX_SBE_SEEPROM_SIZE</id>
+    <description>
+      Defines the maximum Seeprom storage size for the fully-customized SBE image
+      permitted by the platform.
+      For platforms (FSP/HB FW) which require the image to be constrained into a
+      physical storage device (SEEPROM), this should reflect the maximum size of that
+      memory (e.g., 256KB).
+      For platforms (Cronus) which may use a customized image in a virtual
+      envrionment with no physical storage constraints, this size may be
+      larger than the physical SEEPROM size.
+    </description>
+    <simpleType>
+        <uint32_t>
+            <default>0x40000</default>
+        </uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_MAX_SBE_SEEPROM_SIZE</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>DO_MSS_WR_VREF</id>
+    <description>
+        In sub DD1.02 Nimbus in the WR VREF algorithm, certain work-arounds are needed
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_DO_MSS_WR_VREF</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<!-- @fixme RTC:166754 Remove old attribute -->
+<attribute>
+    <id>DO_MSS_VCCD_OVERRIDE</id>
+    <description>
+      Override VREG control information sub DD1.02
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_DO_MSS_VCCD_OVERRIDE</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+
+<attribute>
+    <id>DO_MSS_VREF_DAC</id>
+    <description>
+      VREF DAC work-around for Nimbus sub DD1.02
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_DO_MSS_VREF_DAC</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<!-- @fixme RTC:166754 Remove old attribute -->
+<attribute>
+    <id>DO_MSS_VREG_COARSE</id>
+    <description>
+        VREG Coarse work-around for Nimbus sub DD1.02
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_DO_MSS_VREG_COARSE</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>DO_MSS_TRAINING_BAD_BITS</id>
+    <description>
+      For Nimbus pre DD1.02 we want to pass DDR training if we see 'correctable'
+      errors. This isn't the case for post-DD1.02 where we want to pass/fail
+      training based on the results from the PHY itself
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_DO_MSS_TRAINING_BAD_BITS</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>EFF_DRAM_RTT_NOM</id>
+    <description>
+        RTT_NOM value read to be programmed into MRS02
+        For RDIMMS, this is based off of the VPD
+        For LRDIMMS, this comes from the SPD
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+        <array>2,2,4</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_EFF_DRAM_RTT_NOM</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>EFF_DRAM_RTT_WR</id>
+    <description>
+        RTT_WR value read to be programmed into MRS02
+        For RDIMMS, this is based off of the VPD
+        For LRDIMMS, this comes from the SPD
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+        <array>2,2,4</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_EFF_DRAM_RTT_WR</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+</attribute>
+
+<attribute>
+    <id>EFF_DRAM_RTT_PARK</id>
+    <description>
+        RTT_PARK value read to be programmed into MRS05
+        For RDIMMS, this is based off of the VPD
+        For LRDIMMS, this comes from the SPD
+    </description>
+    <simpleType>
+        <uint8_t>
+        </uint8_t>
+        <array>2,2,4</array>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <hwpfToHbAttrMap>
+        <id>ATTR_EFF_DRAM_RTT_PARK</id>
+        <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
 </attribute>
 
 </attributes>
