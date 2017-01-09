@@ -195,7 +195,7 @@
     </attribute>
     <attribute>
       <id>WRITE_PAGE_SIZE</id>
-      <default>0x50</default>
+      <default>0x08</default>
     </attribute>
     <child_id>i2c-slave</child_id>
     <instance_name>spd</instance_name>
