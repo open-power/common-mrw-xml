@@ -1862,6 +1862,9 @@
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
 		</attribute>
+        <attribute>
+            <id>POSITION</id>
+        </attribute>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
