@@ -45,6 +45,27 @@
         <id>ON_STATE</id>
         <default>0</default>
     </attribute>
+    <attribute>
+        <id>CONTROL_GROUPS</id>
+        <default>
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50,
+        NA,0,50
+        </default>
+    </attribute>
     <child_id>led_enable</child_id>
     <child_id>generic-logic-assoc</child_id>
     <instance_name>led</instance_name>
