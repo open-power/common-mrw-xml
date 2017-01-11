@@ -1407,6 +1407,10 @@
 			<id>MRW_TYPE</id>
 			<default>GPIO_EXPANDER</default>
 		</attribute>
+		<attribute>
+			<id>PRESENCE_DETECT</id>
+			<default></default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>chip-vreg-generic</id>
