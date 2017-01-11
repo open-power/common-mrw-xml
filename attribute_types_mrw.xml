@@ -145,6 +145,19 @@
 		<default>INOUT</default>
 	</enumerationType>
 	<enumerationType>
+		<id>PRESENCE_DETECT</id>
+		<description>Presence defect information</description>
+		<enumerator>
+			<name>'0' means present</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>'1' means present</name>
+			<value>1</value>
+		</enumerator>
+		<default>'0' means present</default>
+	</enumerationType>	
+	<enumerationType>
 		<id>DRIVER_TYPE</id>
 		<description>Driver Type</description>
 		<enumerator><name>NA</name><value>0</value></enumerator>
@@ -1076,6 +1089,19 @@
 		<readable />
 		<global />
 	</attribute>
+	<attribute>
+		<id>PRESENCE_DETECT</id>
+		<description>Presence detect information</description>
+		<simpleType>
+			<enumeration>
+				<id>PRESENCE_DETECT</id>
+			</enumeration>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+		<global />
+	</attribute>	
 	<attribute>
 		<id>MRU_PREFIX</id>
 		<description>Prefix to generate MRU_ID's with</description>
