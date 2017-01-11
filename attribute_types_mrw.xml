@@ -2277,6 +2277,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable />
+		<global />
 	</attribute>
 	<attribute>
 		<id>SP_MUX_GROUP</id>
