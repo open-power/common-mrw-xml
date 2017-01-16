@@ -1269,6 +1269,22 @@
 			<id>DIRECTION</id>
 			<default>OUT</default>
 		</attribute>
+		<attribute>
+			<id>VDD_AVSBUS_BUSNUM</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>VDD_AVSBUS_RAIL</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>VDN_AVSBUS_BUSNUM</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>VDN_AVSBUS_RAIL</id>
+			<default></default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-avs-slave</id>
