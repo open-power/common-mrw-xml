@@ -5430,23 +5430,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_LOOKAHEAD</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_SSC</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
@@ -5458,19 +5446,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_TX_DCLCK_ROT</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
     <default></default>
   </attribute>
   <attribute>
@@ -6021,23 +6001,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_LOOKAHEAD</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_SSC</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
@@ -6049,19 +6017,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_TX_DCLCK_ROT</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
     <default></default>
   </attribute>
   <attribute>
@@ -6892,23 +6852,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_LOOKAHEAD</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_RX_ROT_CDR_SSC</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
@@ -6920,19 +6868,11 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
     <default></default>
   </attribute>
   <attribute>
     <id>PROC_PCIE_PCS_TX_DCLCK_ROT</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
     <default></default>
   </attribute>
   <attribute>
