@@ -9,7 +9,7 @@
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<child_id>EPSON-MOSO.i2c-0</child_id>
 	<child_id>EPSON-MOSO.OUT0-0</child_id>
 	<child_id>EPSON-MOSO.OUT1-1</child_id>
@@ -67,7 +67,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -119,7 +119,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.OUT0</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -163,7 +163,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.OUT1</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -207,7 +207,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.OUT2</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -251,7 +251,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.OUT3</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -295,7 +295,7 @@
 	<is_root>false</is_root>
 	<instance_name>EPSON-MOSO.vin</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>POWER</default>

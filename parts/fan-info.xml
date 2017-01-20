@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>fan-info</instance_name>
 	<position>-1</position>
-        <parent>base</parent>
+        <parent>mrw-base</parent>
         <parent_type>enc-node-power9</parent_type>
 			<attribute>
 				<id>MRW_ID</id>

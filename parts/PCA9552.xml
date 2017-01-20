@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>PCA9552</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>PCA9552.i2c-0</child_id>
@@ -82,7 +82,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -134,7 +134,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -186,7 +186,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -238,7 +238,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -290,7 +290,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -342,7 +342,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>4</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -394,7 +394,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>5</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -446,7 +446,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>6</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -498,7 +498,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>7</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -550,7 +550,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>8</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -602,7 +602,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>9</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -654,7 +654,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>10</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -706,7 +706,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>11</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -758,7 +758,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>12</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -810,7 +810,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>13</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -862,7 +862,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>14</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -914,7 +914,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9552.gpio</instance_name>
 	<position>15</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

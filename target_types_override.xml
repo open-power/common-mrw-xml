@@ -1,7 +1,7 @@
 <targetTypes>
 	<targetType>
 		<id>targetoverride-group</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
 		<attribute>
@@ -15,7 +15,7 @@
 	</targetType>
 	<targetType>
 		<id>targetoverride</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
 		<attribute>

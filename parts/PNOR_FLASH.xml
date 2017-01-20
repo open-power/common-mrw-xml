@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>PNOR_FLASH</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>PNOR_FLASH.spi-slave-0</child_id>
@@ -63,7 +63,7 @@
 	<is_root>false</is_root>
 	<instance_name>PNOR_FLASH.spi-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>SPI</default>
@@ -103,7 +103,7 @@
 	<is_root>false</is_root>
 	<instance_name>PNOR_FLASH.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

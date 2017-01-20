@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>TPS544C25</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>TPS544C25.vout-0</child_id>
@@ -70,7 +70,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.vout</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>POWER</default>
@@ -114,7 +114,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -157,7 +157,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.i2c</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -304,7 +304,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.gpio</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -356,7 +356,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.gpio</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -408,7 +408,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.gpio</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -460,7 +460,7 @@
 	<is_root>false</is_root>
 	<instance_name>TPS544C25.gpio</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

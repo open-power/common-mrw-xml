@@ -62,7 +62,7 @@
     </attribute>
     <instance_name>i2c-slave</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-i2c-slave</type>
   </targetPart>
@@ -90,7 +90,7 @@
     </attribute>
     <instance_name>vpd_assoc_parent</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-logic_assoc-generic</type>
   </targetPart>

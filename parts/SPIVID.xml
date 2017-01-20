@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>SPIVID</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>SPIVID.spi-slave-0</child_id>
@@ -65,7 +65,7 @@
 	<is_root>false</is_root>
 	<instance_name>SPIVID.spi-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>SPI</default>
@@ -113,7 +113,7 @@
 	<is_root>false</is_root>
 	<instance_name>SPIVID.i2c-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -165,7 +165,7 @@
 	<is_root>false</is_root>
 	<instance_name>SPIVID.gpio-master</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -217,7 +217,7 @@
 	<is_root>false</is_root>
 	<instance_name>SPIVID.power</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>POWER</default>
