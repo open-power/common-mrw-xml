@@ -1043,6 +1043,14 @@
 			<id>I2C_CONNECTION_TYPE</id>
 			<default>NA</default>
 		</attribute>		
+		<attribute>
+			<id>REG_BASE_ADDRESS</id>
+			<default></default>
+		</attribute>		
+		<attribute>
+			<id>REG_OFFSET</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>unit-i2cmd-master</id>
@@ -4641,6 +4649,13 @@
 		</attribute>
 	</targetType>
 <!-- End APSS units -->
-
+    <targetType>
+        <id>unit-hwmon-feature</id>
+        <parent>unit</parent>
+        <parent_type>chip</parent_type>
+        <attribute>
+            <id>HWMON_FEATURE</id>
+        </attribute>
+    </targetType>
 		
 </targetTypes>
