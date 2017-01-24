@@ -45,7 +45,7 @@
         <id>BMC_DT_ATTR_NAMES</id>
         <description>
             Specifies which attributes, besides the existing BMC_DT_* attributes,
-            should be included as a property for this device's node in the BMC 
+            should be included as a property for this device's node in the BMC
             device tree.  The first column is the name of the MRW attribute, and
             the second is what the name of the property should be in the device tree.
         </description>
@@ -65,7 +65,7 @@
 
     <attribute>
         <id>BMC_DT_PINCTRL_FUNCS</id>
-        <description>Holds the pin control functions associated with the pingroup, 
+        <description>Holds the pin control functions associated with the pingroup,
                      which allows Linux to know which function to enable for a
                      multi-function pin or set of pins.
                      (https://www.kernel.org/doc/Documentation/pinctrl.txt)
@@ -94,5 +94,69 @@
         <array>16,3</array>
         </simpleType>
     </attribute>
+
+    <attribute>
+        <id>HWMON_FEATURE</id>
+        <description>Contains information about a hwmon feature, where a
+                     feature is an input that the chip measures, like
+                     a temperature or voltage.
+        </description>
+        <complexType>
+        <field>
+            <name>HWMON_NAME</name>
+            <description>The name the hwmon uses, like 'in1'.</description>
+            <type>string</type>
+        </field>
+        <field>
+            <name>DESCRIPTIVE_NAME</name>
+            <description>A useful name for the feature, like 'ambient temp'
+                         or 'VDDR voltage'.</description>
+            <type>string</type>
+        </field>
+        <field>
+            <name>WARN_LOW</name>
+            <description>A low warning threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>WARN_HIGH</name>
+            <description>A high warning threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>CRIT_LOW</name>
+            <description>A low critical threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>CRIT_HIGH</name>
+            <description>A high critical threshold value</description>
+            <type>int32_t</type>
+            </field>
+        </complexType>
+    </attribute>
+
+    <attribute>
+		<id>REG_BASE_ADDRESS</id>
+        <description>The base register address of a function in hex.</description>
+		<simpleType>
+			<uint32_t>
+                <default></default>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>REG_OFFSET</id>
+        <description>The offset, in hex, from the REG_BASE_ADDRESS that the
+                     registers pertaining to this unit start at.</description>
+		<simpleType>
+			<uint32_t>
+                <default></default>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
 
 </attributes>
