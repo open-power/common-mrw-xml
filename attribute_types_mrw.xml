@@ -1816,9 +1816,20 @@
 		<readable />
 		<serverwizReadonly/>
 	</attribute>
+        <attribute>
+                <id>PCIE_LANE_SET</id>
+                <description>Lane set for this config</description>
+                <simpleType>
+                        <uint16_t></uint16_t>
+                </simpleType>
+                <persistency>non-volatile</persistency>
+                <readable />
+                <serverwizReadonly/>
+        </attribute>
+
 	<attribute>
-		<id>PCIE_LANE_SET</id>
-		<description>Lane set for this config</description>
+		<id>PCIE_LANE_GROUP</id>
+		<description>Lane group for this config</description>
 		<simpleType>
 			<uint16_t></uint16_t>
 		</simpleType>
