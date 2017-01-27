@@ -9,6 +9,19 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>mrw-base</id>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>CLASS</id>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+		</attribute>
+	</targetType>
+	<targetType>
     	<id>enc-node-power9</id>
     	<parent>base</parent>
     	<attribute>
@@ -27,6 +40,18 @@
 			<id>RU_TYPE</id>
 		</attribute>
 	</targetType>
+	<targetType>
+		<id>mrw-chip</id>
+		<parent>mrw-base</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+		<attribute>
+			<id>TYPE</id>
+		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
+		</attribute>
+	</targetType>	
 	<targetType>
 		<id>card</id>
 		<parent>base</parent>
@@ -54,8 +79,34 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>mrw-card</id>
+		<parent>mrw-base</parent>
+		<attribute>
+			<id>LOCATION_CODE</id>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE_TYPE</id>
+		</attribute>	
+		<attribute>
+			<id>POSITION</id>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>CARD_TYPE</id>
+		</attribute>
+		<attribute>
+			<id>STANDBY_PLUGGABLE</id>
+		</attribute>
+		<attribute>
+			<id>RU_TYPE</id>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>connector</id>
-	    <parent>base</parent>	
+	    <parent>mrw-base</parent>	
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -85,6 +136,18 @@
 			<default>NA</default>
 		</attribute>
 	</targetType>
+	<targetType>
+		<id>mrw-unit</id>
+		<parent>mrw-base</parent>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>CLASS</id>
+			<default>UNIT</default>
+		</attribute>
+	</targetType>	
 	<targetType>
 		<id>unit-ex-power8</id>
 		<parent>unit</parent>
@@ -1018,7 +1081,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-i2c-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1054,7 +1117,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-i2cmd-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1082,7 +1145,7 @@
 	</targetType>	
 	<targetType>
 		<id>unit-i2c-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1105,7 +1168,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-usb-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1124,7 +1187,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-clk-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1143,7 +1206,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-clk-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1162,7 +1225,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-ethernet-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1189,7 +1252,7 @@
 	</targetType>
     <targetType>
 		<id>unit-ethernet-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1212,7 +1275,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-spi-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1240,7 +1303,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-spi-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1264,7 +1327,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-avs-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1296,7 +1359,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-avs-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1312,7 +1375,7 @@
 	</targetType>			
 	<targetType>
 		<id>unit-uart-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1328,7 +1391,7 @@
 	</targetType>
     <targetType>
 		<id>unit-uart-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1344,7 +1407,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-gpio-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1384,7 +1447,7 @@
 	</targetType>
 	<targetType>
 		<id>i2c-device</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>CHIP</default>
@@ -1392,7 +1455,7 @@
 	</targetType>
 	<targetType>
 		<id>smartchip-generic</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -1406,7 +1469,7 @@
 	</targetType>
 	<targetType>
 		<id>chip-gpioexp-generic</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -1420,7 +1483,7 @@
 	</targetType>
 	<targetType>
 		<id>dummy-presence-generic</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -1438,7 +1501,7 @@
 	</targetType>
 	<targetType>
 		<id>chip-vreg-generic</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -1452,7 +1515,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-vreg_enable-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1472,7 +1535,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-vreg_pgood-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1492,7 +1555,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-vreg_vout-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1572,7 +1635,7 @@
 	</targetType>	
 	<targetType>
 		<id>unit-vin-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1592,7 +1655,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-vout-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1612,7 +1675,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-vreg_avs-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1632,7 +1695,7 @@
 	</targetType>	
 	<targetType>
 		<id>unit-power-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1652,7 +1715,7 @@
 	</targetType>
 	<targetType>
         <id>chip-tmp-device</id>
-        <parent>chip</parent>
+        <parent>mrw-chip</parent>
         <parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
         <attribute>
@@ -1676,7 +1739,7 @@
     </targetType>
     <targetType>
         <id>cooling-zone</id>
-        <parent>base</parent>
+        <parent>mrw-base</parent>
         <parent_type>enc-node-power9</parent_type>
 			<attribute><id>MRW_ID</id></attribute>
 			<attribute><id>MTM_NAME</id></attribute>
@@ -1698,7 +1761,7 @@
     </targetType>
     <targetType>
         <id>fan-info</id>
-        <parent>base</parent>
+        <parent>mrw-base</parent>
         <parent_type>enc-node-power9</parent_type>
 			<attribute><id>MRW_ID</id></attribute>
 			<attribute><id>MTM_NAME</id></attribute>
@@ -1720,7 +1783,7 @@
     </targetType>
 	<targetType>
 		<id>chip-vpd-device</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<attribute>
 			<id>VPD_TYPE</id>
 			<default></default>
@@ -1762,7 +1825,6 @@
 			<id>BYTE_ADDRESS_OFFSET</id>
 			<default>2</default>
 		</attribute>
-
 		<attribute>
 			<id>MEMORY_SIZE_IN_KB</id>
 			<default>0x40</default>
@@ -1832,7 +1894,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-pcie-endpoint</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>BUS_TYPE</id>
 			<default>PCIE</default>
@@ -1844,7 +1906,7 @@
 	</targetType>
 	<targetType>
 		<id>chip-pcie-endpoint</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 	</targetType>
@@ -1885,7 +1947,7 @@
 	<!-- PCIe -->
 	<targetType>
 		<id>slot-pcieslot</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -1906,7 +1968,7 @@
 	</targetType>
 	<targetType>
 		<id>card-pciecard</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>CARD</default>
@@ -2413,7 +2475,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-logic_assoc-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -2458,7 +2520,7 @@
 	</targetType>		
 	<targetType>
 		<id>unit-iomux_group-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX_GROUP</default>
@@ -2469,7 +2531,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_group-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX_GROUP</default>
@@ -2480,7 +2542,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_config-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX_GROUP</default>
@@ -2571,7 +2633,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_config-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX_GROUP</default>
@@ -2662,7 +2724,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-noniomux_config-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>NONIOMUX_GROUP</default>
@@ -2698,7 +2760,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_i2c-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2706,7 +2768,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_gpio-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2714,7 +2776,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_spcn-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2722,7 +2784,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_sc-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2730,7 +2792,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_uart-fsp2</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2770,7 +2832,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_i2c-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2778,7 +2840,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_gpio-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2786,7 +2848,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_spcn-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2794,7 +2856,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_sc-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2802,7 +2864,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-iomux_uart-cfams</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>MRW_TYPE</id>
 			<default>IOMUX</default>
@@ -2820,7 +2882,7 @@
 	</targetType>
 	<targetType>
 		<id>chip-sp-cfams</id>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
@@ -2830,7 +2892,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-psi-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -2850,7 +2912,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-psi-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -2870,7 +2932,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-lpc-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -2886,7 +2948,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-lpc-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -2902,7 +2964,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-spcn-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -2926,7 +2988,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-jtag-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -2950,7 +3012,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-sc-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -2974,7 +3036,7 @@
 	</targetType>
 		<targetType>
 		<id>unit-sc-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -2998,7 +3060,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-u750-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -3022,7 +3084,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-u5-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -3046,7 +3108,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-pwm-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -3090,7 +3152,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-tach-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -3174,7 +3236,7 @@
 	</targetType>
 	<targetType>
 		<id>unit-ipmi-sensor</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -3246,7 +3308,7 @@
 		<id>chip-apss-psoc</id>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<attribute>
 			<id>TYPE</id>
 			<default>APSS</default>
@@ -3345,7 +3407,7 @@
 
 	<targetType>
 		<id>dpss.unit-config-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CONFIG_ID</id>
 			<default>
@@ -3367,7 +3429,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-dio-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>DIRECTION</id>
 		</attribute>
@@ -3377,7 +3439,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-enable-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -3404,7 +3466,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-error-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -3434,7 +3496,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-fan_global_setting-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>FAN_DOMAIN_0</id>
 			<default>
@@ -3696,14 +3758,14 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-fsi-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PIN_NAME</id>
 		</attribute>
 	</targetType>
 	<targetType>
 		<id>dpss.unit-gpio-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -3733,7 +3795,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-gpio_global_params-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PSC0</id>
 			<default>
@@ -3761,7 +3823,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-i2c-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>FIXED_ADDRESS</id>
 		</attribute>
@@ -3787,7 +3849,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-lpc-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PIN_NAME</id>
 		</attribute>
@@ -3798,7 +3860,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-pgood-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -3873,7 +3935,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-power-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CURRENT_MAX</id>
 		</attribute>
@@ -3889,7 +3951,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-power_control_global-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>DEGATE_CPU_0</id>
 			<default>
@@ -4181,7 +4243,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-presence-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4201,7 +4263,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-pseq_lookup-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PSEQ_SLOT0</id>
 			<default>
@@ -4397,7 +4459,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-pwm-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4422,7 +4484,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-sec_pgood-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>BITS</id>
 		</attribute>
@@ -4441,7 +4503,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-sec_pgood_gpio-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4471,7 +4533,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-spi-master</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>ENGINE</id>
 		</attribute>
@@ -4487,7 +4549,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-tach-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4547,7 +4609,7 @@
 	</targetType>
 	<targetType>
 		<id>dpss.unit-wdt-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>END_COUNT</id>
 			<default>
@@ -4572,7 +4634,7 @@
 <!-- APSS units -->
 	<targetType>
 		<id>apss.unit-adc-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4601,7 +4663,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-adc_global-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>ADC_MAX</id>
 		</attribute>
@@ -4615,7 +4677,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-gpio-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>FUNCTION_ID</id>
 		</attribute>
@@ -4641,7 +4703,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-i2c-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PIN-NAME</id>
 		</attribute>
@@ -4656,7 +4718,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-power-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CURRENT_MAX</id>
 		</attribute>
@@ -4676,7 +4738,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-pwm-generic</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>CHANNEL</id>
 		</attribute>
@@ -4690,7 +4752,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-spi-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PIN-NAME</id>
 		</attribute>
@@ -4701,7 +4763,7 @@
 	</targetType>
 	<targetType>
 		<id>apss.unit-uart-slave</id>
-		<parent>unit</parent>
+		<parent>mrw-unit</parent>
 		<attribute>
 			<id>PIN-NAME</id>
 		</attribute>

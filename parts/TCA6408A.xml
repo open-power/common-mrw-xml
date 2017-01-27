@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>TCA6408A</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>TCA6408A.i2c-0</child_id>
@@ -62,7 +62,7 @@
 	<is_root>false</is_root>
 	<instance_name>TCA6408A.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>

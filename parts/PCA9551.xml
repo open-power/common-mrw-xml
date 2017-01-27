@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>PCA9551</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>PCA9551.gpio-0</child_id>
@@ -75,7 +75,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -141,7 +141,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -207,7 +207,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -273,7 +273,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -339,7 +339,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>4</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -405,7 +405,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>5</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -471,7 +471,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>6</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -537,7 +537,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.gpio</instance_name>
 	<position>7</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -603,7 +603,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -651,7 +651,7 @@
 	<is_root>false</is_root>
 	<instance_name>PCA9551.RESET</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

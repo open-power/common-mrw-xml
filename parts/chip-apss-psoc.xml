@@ -1411,7 +1411,7 @@
     <child_id>GPU_Sense</child_id>
     <instance_name>apss</instance_name>
     <is_root>true</is_root>
-    <parent>chip</parent>
+    <parent>mrw-chip</parent>
     <parent_type>sys-sys-power8</parent_type>
     <parent_type>sys-sys-power9</parent_type>
     <position>0</position>

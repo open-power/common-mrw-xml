@@ -28,7 +28,7 @@
     <child_id>io1-7</child_id>
     <instance_name>gpio_expander</instance_name>
     <is_root>true</is_root>
-    <parent>chip</parent>
+    <parent>mrw-chip</parent>
     <parent_type>card-motherboard</parent_type>
     <parent_type>card-daughtercard</parent_type>
     <position>0</position>
@@ -65,7 +65,7 @@
     </attribute>
     <instance_name>i2c-slave</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-i2c-slave</type>
   </targetPart>
@@ -108,7 +108,7 @@
     </attribute>
     <instance_name>io-0</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -151,7 +151,7 @@
     </attribute>
     <instance_name>io-1</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -194,7 +194,7 @@
     </attribute>
     <instance_name>io-2</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -237,7 +237,7 @@
     </attribute>
     <instance_name>io-3</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -280,7 +280,7 @@
     </attribute>
     <instance_name>io-4</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -323,7 +323,7 @@
     </attribute>
     <instance_name>io-5</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -366,7 +366,7 @@
     </attribute>
     <instance_name>io-6</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -409,7 +409,7 @@
     </attribute>
     <instance_name>io-7</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -452,7 +452,7 @@
     </attribute>
     <instance_name>io1-0</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -495,7 +495,7 @@
     </attribute>
     <instance_name>io1-1</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -538,7 +538,7 @@
     </attribute>
     <instance_name>io1-2</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -581,7 +581,7 @@
     </attribute>
     <instance_name>io1-3</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -624,7 +624,7 @@
     </attribute>
     <instance_name>io1-4</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -667,7 +667,7 @@
     </attribute>
     <instance_name>io1-5</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -710,7 +710,7 @@
     </attribute>
     <instance_name>io1-6</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -753,7 +753,7 @@
     </attribute>
     <instance_name>io1-7</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>

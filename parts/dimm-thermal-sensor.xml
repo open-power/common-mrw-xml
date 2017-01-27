@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>dimm-thermal-sensor</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>dimm-thermal-sensor.i2c</child_id>
@@ -149,7 +149,7 @@
 	<is_root>false</is_root>
 	<instance_name>dimm-thermal-sensor.i2c</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>

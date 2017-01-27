@@ -15,7 +15,7 @@
     </attribute>
     <instance_name>card</instance_name>
     <is_root>true</is_root>
-    <parent>card</parent>
+    <parent>mrw-card</parent>
     <parent_type>connector-card-generic</parent_type>
     <parent_type>connector-usb-generic</parent_type>
     <parent_type>connector-hmc-generic</parent_type>
