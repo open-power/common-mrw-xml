@@ -1235,6 +1235,10 @@
 			<default>ETHERNET</default>
 		</attribute>
 		<attribute>
+			<id>CHIP_UNIT</id>
+			<default>0</default>
+		</attribute>
+		<attribute>
 			<id>DIRECTION</id>
 			<default>OUT</default>
 		</attribute>
@@ -1276,6 +1280,10 @@
 	<targetType>
 		<id>unit-spi-master</id>
 		<parent>mrw-unit</parent>
+		<attribute>
+			<id>CHIP_UNIT</id>
+			<default>0</default>
+		</attribute>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -1399,6 +1407,10 @@
 		<attribute>
 			<id>BUS_TYPE</id>
 			<default>U750</default>
+		</attribute>
+		<attribute>
+			<id>CHIP_UNIT</id>
+			<default>0</default>
 		</attribute>
 		<attribute>
 			<id>DIRECTION</id>
