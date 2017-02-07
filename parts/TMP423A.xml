@@ -106,7 +106,7 @@
 	<is_root>false</is_root>
 	<instance_name>TMP423A.temp1</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -222,7 +222,7 @@
 	<is_root>false</is_root>
 	<instance_name>TMP423A.temp2</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -339,7 +339,7 @@
 	<is_root>false</is_root>
 	<instance_name>TMP423A.temp3</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -455,7 +455,7 @@
 	<is_root>false</is_root>
 	<instance_name>TMP423A.temp4</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
