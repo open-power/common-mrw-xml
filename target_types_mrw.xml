@@ -51,6 +51,9 @@
 		<attribute>
 			<id>RU_TYPE</id>
 		</attribute>
+		<attribute>
+        	<id>POSITION</id>
+    	</attribute>
 	</targetType>	
 	<targetType>
 		<id>card</id>
