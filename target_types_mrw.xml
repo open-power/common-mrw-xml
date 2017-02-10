@@ -2002,6 +2002,15 @@
 			<id>TYPE</id>
 			<default>NA</default>
 		</attribute>
+		<attribute>
+			<id>LOCATION_CODE</id>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE_TYPE</id>
+		</attribute>
+		<attribute>
+			<id>CONNECTOR_TYPE</id>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>slot-pcieslot-generic</id>
