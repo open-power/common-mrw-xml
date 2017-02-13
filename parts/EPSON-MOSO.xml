@@ -10,7 +10,6 @@
 	<parent_type>card-daughtercard</parent_type>
 	<position>-1</position>
 	<parent>mrw-chip</parent>
-	<child_id>EPSON-MOSO.i2c-0</child_id>
 	<child_id>EPSON-MOSO.OUT0-0</child_id>
 	<child_id>EPSON-MOSO.OUT1-1</child_id>
 	<child_id>EPSON-MOSO.OUT2-2</child_id>
@@ -59,58 +58,6 @@
 	<attribute>
 		<id>TYPE</id>
 		<default></default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>EPSON-MOSO.i2c-0</id>
-	<type>unit-i2c-slave</type>
-	<is_root>false</is_root>
-	<instance_name>EPSON-MOSO.i2c</instance_name>
-	<position>0</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>I2C</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>IN</default>
-	</attribute>
-	<attribute>
-		<id>I2C_ADDRESS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_ENGINE</id>
-		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>I2C_PORT</id>
-		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
 	</attribute>
 </targetPart>
 <targetPart>

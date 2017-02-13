@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>MAX31785</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>MAX31785.i2c</child_id>
@@ -76,7 +76,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.i2c</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -124,7 +124,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm0</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -184,7 +184,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm1</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -244,7 +244,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm2</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -304,7 +304,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm3</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -364,7 +364,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm4</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -424,7 +424,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.pwm5</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -484,7 +484,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach0</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -584,7 +584,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach1</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -684,7 +684,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach2</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -784,7 +784,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach3</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -884,7 +884,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach4</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -984,7 +984,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.tach5</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -1084,7 +1084,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon1</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1200,7 +1200,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon2</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1316,7 +1316,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon3</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1432,7 +1432,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon4</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1548,7 +1548,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon5</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1664,7 +1664,7 @@
 	<is_root>false</is_root>
 	<instance_name>MAX31785.hwmon6</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>

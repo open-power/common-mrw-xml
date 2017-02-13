@@ -51,6 +51,9 @@
 		<attribute>
 			<id>RU_TYPE</id>
 		</attribute>
+		<attribute>
+        	<id>POSITION</id>
+    	</attribute>
 	</targetType>	
 	<targetType>
 		<id>card</id>
@@ -147,6 +150,10 @@
 			<id>CLASS</id>
 			<default>UNIT</default>
 		</attribute>
+		<attribute>
+        	<id>CHIP_UNIT</id>
+        	<default>0</default>
+    	</attribute>
 	</targetType>	
 	<targetType>
 		<id>unit-ex-power8</id>
@@ -1618,7 +1625,7 @@
 		</attribute>
 		<attribute>
 			<id>DIRECTION</id>
-			<default>IN</default>
+			<default>OUT</default>
 		</attribute>
 		<attribute>
 			<id>GPIO_TYPE</id>
@@ -1922,6 +1929,30 @@
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
 	</targetType>
+	<targetType>
+		<id>unit-pcie-bridge</id>
+		<parent>mrw-unit</parent>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>PCIE</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>INOUT</default>
+		</attribute>
+		<attribute>
+			<id>STATION</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>PORT</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>WIDTH</id>
+			<default></default>
+		</attribute>				
+	</targetType>		
 
 	<!-- SXM2 -->
 	<targetType>
@@ -1970,6 +2001,15 @@
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE</id>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE_TYPE</id>
+		</attribute>
+		<attribute>
+			<id>CONNECTOR_TYPE</id>
 		</attribute>
 	</targetType>
 	<targetType>

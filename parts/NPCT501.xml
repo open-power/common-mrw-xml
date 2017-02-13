@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>NPCT501</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>NPCT501.i2c-0</child_id>
@@ -65,7 +65,7 @@
 	<is_root>false</is_root>
 	<instance_name>NPCT501.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -117,7 +117,7 @@
 	<is_root>false</is_root>
 	<instance_name>NPCT501.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -169,7 +169,7 @@
 	<is_root>false</is_root>
 	<instance_name>NPCT501.gpio-master</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -221,7 +221,7 @@
 	<is_root>false</is_root>
 	<instance_name>NPCT501.gpio-master</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

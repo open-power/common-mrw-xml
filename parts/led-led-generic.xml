@@ -70,7 +70,7 @@
     <child_id>generic-logic-assoc</child_id>
     <instance_name>led</instance_name>
     <is_root>true</is_root>
-    <parent>base</parent>
+    <parent>mrw-base</parent>
     <parent_type>card-motherboard</parent_type>
     <parent_type>card-daughtercard</parent_type>
     <position>0</position>
@@ -100,7 +100,7 @@
     </attribute>
     <instance_name>generic-logic-assoc</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-logic_assoc-generic</type>
   </targetPart>
@@ -138,7 +138,7 @@
     </attribute>
     <instance_name>led_enable</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
