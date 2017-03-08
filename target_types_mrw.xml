@@ -680,6 +680,17 @@
 		</attribute>
 	</targetType>
 	<targetType>
+                <id>connector-dimmconn-dd4</id>
+                <parent>connector</parent>
+                <parent_type>card-motherboard</parent_type>
+                <parent_type>card-daughtercard</parent_type>
+                <attribute>
+                        <id>VDDR_ID</id>
+                        <default></default>
+                </attribute>
+        </targetType>
+
+	<targetType>
 		<id>lcard-dimm-jedec</id>
 		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
