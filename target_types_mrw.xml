@@ -3495,6 +3495,18 @@
     </attribute>
 </targetType>
 
+<!-- NV
+     Nimbus : 
+     Cumulus:  -->
+<targetType>
+    <id>unit-nv-power9</id>
+    <parent>unit</parent>
+    <attribute>
+        <id>TYPE</id>
+        <default>NV</default>
+    </attribute>
+</targetType>
+
 <!-- End p9 sub-units -->
 <!-- DPSS sub-units -->
 
