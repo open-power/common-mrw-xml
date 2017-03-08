@@ -81,6 +81,10 @@
     <default></default>
   </attribute>
   <attribute>
+	<id>VDDR_ID</id>
+	<default></default>
+  </attribute>
+  <attribute>
     <id>HUID</id>
     <default></default>
   </attribute>
@@ -1097,3 +1101,4 @@
 </targetPart>
 </targetInstances>
 </partInstance>
+
