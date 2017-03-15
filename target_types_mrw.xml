@@ -680,6 +680,17 @@
 		</attribute>
 	</targetType>
 	<targetType>
+                <id>connector-dimmconn-dd4</id>
+                <parent>connector</parent>
+                <parent_type>card-motherboard</parent_type>
+                <parent_type>card-daughtercard</parent_type>
+                <attribute>
+                        <id>VDDR_ID</id>
+                        <default></default>
+                </attribute>
+        </targetType>
+
+	<targetType>
 		<id>lcard-dimm-jedec</id>
 		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
@@ -2363,6 +2374,13 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>OBUS</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>
+	<targetType>
 		<id>ETHERNET</id>
 		<attribute>
 			<id>CLASS</id>
@@ -3451,6 +3469,70 @@
     <attribute>
          <id>DIRECTION</id>
          <default>INOUT</default>
+    </attribute>
+</targetType>
+
+<!-- OBUS
+     Nimbus : 2 per chip (OB0 and OB3)
+     Cumulus: 4 per chip (OB0, OB1, OB2, and OB3)  -->
+<targetType>
+    <id>unit-obus-power9</id>
+    <parent>unit</parent>
+    <attribute>
+        <id>BUS_TYPE</id>
+        <default>OBUS</default>
+    </attribute>
+    <attribute>
+         <id>DIRECTION</id>
+         <default>INOUT</default>
+    </attribute>
+</targetType>
+    		
+<targetType>
+    <id>unit-obus-nimbus</id>
+    <parent>unit-obus-power9</parent>
+    <attribute>
+        <id>MODEL</id>
+        <default>NIMBUS</default>
+    </attribute>
+</targetType>
+
+<targetType>
+    <id>unit-obus-cumulus</id>
+    <parent>unit-obus-power9</parent>
+    <attribute>
+        <id>MODEL</id>
+        <default>CUMULUS</default>
+    </attribute>
+</targetType>
+
+<!-- NV
+     Nimbus : 6 per chip
+     Cumulus: 12 per chip  -->
+<targetType>
+    <id>unit-nv-power9</id>
+    <parent>unit</parent>
+    <attribute>
+        <id>TYPE</id>
+        <default>NV</default>
+    </attribute>
+</targetType>
+
+<targetType>
+    <id>unit-nv-nimbus</id>
+    <parent>unit</parent>
+    <attribute>
+        <id>TYPE</id>
+        <default>NV</default>
+    </attribute>
+</targetType>
+
+<targetType>
+    <id>unit-nv-cumulus</id>
+    <parent>unit</parent>
+    <attribute>
+        <id>TYPE</id>
+        <default>NV</default>
     </attribute>
 </targetType>
 
