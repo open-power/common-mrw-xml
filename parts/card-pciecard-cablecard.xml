@@ -5,47 +5,14 @@
     <child_id>i2c-slave</child_id>
     <child_id>pgood</child_id>
 	<child_id>enable</child_id>
+	<child_id>cablecard-PCA9551</child_id>
+	<child_id>cablecard-TMP275A</child_id>
     <instance_name>pciecablecard</instance_name>
     <is_root>true</is_root>
     <parent>card-pciecard</parent>
     <parent_type>slot-pcieslot-generic</parent_type>
     <position>0</position>
     <type>card-pciecard-cablecard</type>
-  </targetPart>
-  <targetPart>
-    <id>i2c-slave</id>
-    <attribute>
-      <id>BUS_TYPE</id>
-      <default>I2C</default>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-      <default>0</default>
-    </attribute>
-    <attribute>
-      <id>DIRECTION</id>
-      <default>IN</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ADDRESS</id>
-    </attribute>
-    <attribute>
-      <id>I2C_ENGINE</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
-      <id>I2C_PORT</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
-      <id>TYPE</id>
-      <default>NA</default>
-    </attribute>
-    <instance_name>i2c-slave</instance_name>
-    <is_root>false</is_root>
-    <parent>unit</parent>
-    <position>-1</position>
-    <type>unit-i2c-slave</type>
   </targetPart>
   <targetPart>
     <id>pciep</id>
@@ -122,5 +89,58 @@
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-enable-generic</type>
-  </targetPart>      
+  </targetPart>     
+  <targetPart>
+    <id>cablecard-PCA9551</id>
+	<child_id>PCA9551.gpio-0</child_id>
+	<child_id>PCA9551.gpio-1</child_id>
+	<child_id>PCA9551.gpio-2</child_id>
+	<child_id>PCA9551.gpio-3</child_id>
+	<child_id>PCA9551.gpio-4</child_id>
+	<child_id>PCA9551.gpio-5</child_id>
+	<child_id>PCA9551.gpio-6</child_id>
+	<child_id>PCA9551.gpio-7</child_id>
+	<child_id>PCA9551.i2c-0</child_id>
+	<child_id>PCA9551.RESET</child_id>
+    <instance_name>cablecard-PCA9551</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>chip-PCA9551</type>
+  </targetPart>
+  <targetPart>
+    <id>cablecard-TMP275A</id>
+    <child_id>TMP275A-i2c</child_id>
+    <instance_name>cablecard-TMP275A</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>chip-tmp-device</type>
+  </targetPart>
+  <targetPart>
+    <id>TMP275A-i2c</id>
+ 	<attribute>
+		<id>BUS_TYPE</id>
+		<default>I2C</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+    <instance_name>TMP275A-i2c</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-i2c-slave</type>
+  </targetPart>         
 </partInstance>
