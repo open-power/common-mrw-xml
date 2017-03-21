@@ -3223,6 +3223,7 @@
 	<targetType>
 		<id>unit-tach-generic</id>
 		<parent>mrw-unit</parent>
+        <child_id>unit-hwmon-feature</child_id>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
@@ -4915,6 +4916,7 @@
         <id>unit-hwmon-feature</id>
         <parent>unit</parent>
         <parent_type>chip</parent_type>
+        <parent_type>unit-tach-generic</parent_type>
         <attribute>
             <id>HWMON_FEATURE</id>
         </attribute>
