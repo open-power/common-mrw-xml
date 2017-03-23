@@ -20,6 +20,7 @@
     <parent_type>connector-usb-generic</parent_type>
     <parent_type>connector-hmc-generic</parent_type>
     <parent_type>connector-uart-generic</parent_type>
+		<parent_type>connector-smp-generic</parent_type>   
     <child_id>led_assoc_child</child_id>
     <position>-1</position>
     <type>card-daughtercard</type>
