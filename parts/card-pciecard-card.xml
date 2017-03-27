@@ -2,6 +2,8 @@
   <targetPart>
     <id>card-pciecard-card</id>
     <child_id>pciep</child_id>
+    <child_id>pgood</child_id>
+	<child_id>enable</child_id>
     <instance_name>pciecard</instance_name>
     <is_root>true</is_root>
     <parent>card-pciecard</parent>
@@ -29,4 +31,60 @@
     <position>-1</position>
     <type>unit-pcie-endpoint</type>
   </targetPart>
+  <targetPart>
+    <id>pgood</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PGOOD</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>pgood</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-pgood-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>enable</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>ENABLE</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>enable</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-enable-generic</type>
+  </targetPart>  
 </partInstance>
