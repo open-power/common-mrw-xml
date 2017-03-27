@@ -2,16 +2,20 @@
 <version>2.2</version>
 <targetInstances>
 <targetPart>
-	<id>TPS25200</id>
-	<type>chip-TPS25200</type>
+	<id>TUSB7340</id>
+	<type>chip-TUSB7340</type>
 	<is_root>true</is_root>
-	<instance_name>TPS25200</instance_name>
+	<instance_name>TUSB7340</instance_name>
 	<position>-1</position>
 	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
-	<child_id>TPS25200.enable</child_id>
-	<child_id>TPS25200.fault</child_id>
+	<child_id>TUSB7340.USB0</child_id>
+	<child_id>TUSB7340.USB1</child_id>
+	<child_id>TUSB7340.USB2</child_id>
+	<child_id>TUSB7340.USB3</child_id>
+	<child_id>TUSB7340.RESET</child_id>
+	<child_id>TUSB7340.PCIE-X1</child_id>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
@@ -149,12 +153,164 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>TPS25200.enable</id>
-	<type>unit-enable-generic</type>
+	<id>TUSB7340.USB0</id>
+	<type>unit-usb-master</type>
 	<is_root>false</is_root>
-	<instance_name>TPS25200.enable</instance_name>
+	<instance_name>TUSB7340.USB0</instance_name>
 	<position>-1</position>
-	<parent>unit-gpio-generic</parent>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>USB</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>TUSB7340.USB1</id>
+	<type>unit-usb-master</type>
+	<is_root>false</is_root>
+	<instance_name>TUSB7340.USB1</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>USB</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>TUSB7340.USB2</id>
+	<type>unit-usb-master</type>
+	<is_root>false</is_root>
+	<instance_name>TUSB7340.USB2</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>USB</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>TUSB7340.USB3</id>
+	<type>unit-usb-master</type>
+	<is_root>false</is_root>
+	<instance_name>TUSB7340.USB3</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>USB</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>TUSB7340.RESET</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>TUSB7340.RESET</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -183,7 +339,7 @@
 	</attribute>
 	<attribute>
 		<id>GPIO_TYPE</id>
-		<default>ENABLE</default>
+		<default>GENERIC_INPUT</default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -213,15 +369,15 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>TPS25200.fault</id>
-	<type>unit-gpio-generic</type>
+	<id>TUSB7340.PCIE-X1</id>
+	<type>unit-pcie-endpoint</type>
 	<is_root>false</is_root>
-	<instance_name>TPS25200.fault</instance_name>
+	<instance_name>TUSB7340.PCIE-X1</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>GPIO</default>
+		<default>PCIE</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -233,47 +389,15 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>INOUT</default>
-	</attribute>
-	<attribute>
-		<id>DRIVER_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ENGINE</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
 	</attribute>
 	<attribute>
-		<id>PIN_NAME</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>POR_VALUE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>TYPE</id>
-		<default>NA</default>
+		<default></default>
 	</attribute>
 </targetPart>
 </targetInstances>

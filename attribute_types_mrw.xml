@@ -1102,6 +1102,105 @@
 		<global />
 	</attribute>
 	<attribute>
+		<id>SLOT_NAME</id>
+		<description>PCIe slot name definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>SLOT_INDEX</id>
+		<description>PCIe slot index definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>SLOT_TYPE</id>
+		<description>Defines if the PCIe slot is coming from a switch or directly from the CPU PHB</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>32BIT_MMIO_SIZE</id>
+		<description>PCIe slot 32bit MMIO size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>64BIT_MMIO_SIZE</id>
+		<description>PCIe slot 64bit MMIO size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>32BIT_DMA_SIZE</id>
+		<description>PCIe slot 32bit DMA size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>64BIT_DMA_SIZE</id>
+		<description>PCIe slot 64bit DMA size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>				
+	<attribute>
+		<id>HDDW_ORDER</id>
+		<description>PCIe slot HDDW order definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>		
+	<attribute>
+		<id>SWITCH_MODEL</id>
+		<description>PCIe switch model definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
 		<id>STATION</id>
 		<description>PCIe switch station definition</description>
 		<simpleType>
@@ -1873,6 +1972,17 @@
 	</attribute>
 
 	<attribute>
+		<id>MGC_LOAD_SOURCE</id>
+		<description>defines MGC load source</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+
+	<attribute>
 		<id>ENABLE_CAPI</id>
 		<description>enables CAPI function (0=no,1=yes)</description>
 		<simpleType>
@@ -1881,8 +1991,74 @@
 		<persistency>non-volatile</persistency>
 		<readable />
 		<writeable />
-		<serverwizReadonly/>
 	</attribute>
+
+	<attribute>
+		<id>ENABLE_LSI</id>
+		<description>enables LSI function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	
+	<attribute>
+		<id>ENABLE_HOTPLUG</id>
+		<description>enables hotplug function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+
+	<attribute>
+		<id>ENABLE_CABLECARD</id>
+		<description>enables Cable Card function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>			
+
+	<attribute>
+		<id>ENABLE_SRIOV</id>
+		<description>enables SRIOV function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+
+	<attribute>
+		<id>ENABLE_ELLOCO</id>
+		<description>enables El Loco function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	
+	<attribute>
+		<id>ENABLE_NVLINK</id>
+		<description>enables NVLINK function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+		<serverwizReadonly/>
+	</attribute>	
 
 	<attribute>
 		<id>PCIE_LANE_SWAP_TABLE</id>

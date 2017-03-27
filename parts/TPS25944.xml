@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>TPS25944</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>TPS25944.enable</child_id>

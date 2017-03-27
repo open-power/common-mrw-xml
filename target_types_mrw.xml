@@ -323,8 +323,36 @@
             <default>1</default>
         </attribute>
         <attribute>
+            <id>ENABLE_LSI</id>
+            <default></default>
+        </attribute>     
+        <attribute>
+            <id>ENABLE_HOTPLUG</id>
+            <default></default>
+        </attribute>             
+        <attribute>
+            <id>ENABLE_CABLECARD</id>
+            <default></default>
+        </attribute> 
+        <attribute>
+            <id>ENABLE_SRIOV</id>
+            <default></default>
+        </attribute>   
+        <attribute>
+            <id>ENABLE_ELLOCO</id>
+            <default></default>
+        </attribute>     
+        <attribute>
+            <id>ENABLE_NVLINK</id>
+            <default></default>
+        </attribute>                               
+        <attribute>
             <id>IOP_NUM</id>
             <default>1</default>
+        </attribute>
+        <attribute>
+        	<id>MGC_LOAD_SOURCE</id>
+        	<default></default>
         </attribute>
     </targetType>
     <targetType>
@@ -355,9 +383,37 @@
             <default>1</default>
         </attribute>
         <attribute>
+            <id>ENABLE_LSI</id>
+            <default></default>
+        </attribute>     
+        <attribute>
+            <id>ENABLE_HOTPLUG</id>
+            <default></default>
+        </attribute>             
+        <attribute>
+            <id>ENABLE_CABLECARD</id>
+            <default></default>
+        </attribute> 
+        <attribute>
+            <id>ENABLE_SRIOV</id>
+            <default></default>
+        </attribute>   
+        <attribute>
+            <id>ENABLE_ELLOCO</id>
+            <default></default>
+        </attribute>     
+        <attribute>
+            <id>ENABLE_NVLINK</id>
+            <default></default>
+        </attribute>        
+        <attribute>
             <id>IOP_NUM</id>
             <default>1</default>
         </attribute>
+        <attribute>
+        	<id>MGC_LOAD_SOURCE</id>
+        	<default></default>
+        </attribute>        
     </targetType>         
 	<targetType>
 		<id>unit-pci-naples</id>
@@ -1952,6 +2008,10 @@
 			<default>INOUT</default>
 		</attribute>
 		<attribute>
+			<id>SWITCH_MODEL</id>
+			<default></default>
+		</attribute>
+		<attribute>
 			<id>STATION</id>
 			<default></default>
 		</attribute>
@@ -2028,6 +2088,38 @@
 		<parent>slot-pcieslot</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>
+		<attribute>
+			<id>SLOT_NAME</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SLOT_INDEX</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SLOT_TYPE</id>
+			<default></default>
+		</attribute>				
+		<attribute>
+			<id>HDDW_ORDER</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>32BIT_MMIO_SIZE</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>64BIT_MMIO_SIZE</id>
+			<default></default>
+		</attribute>	
+		<attribute>
+			<id>32BIT_DMA_SIZE</id>
+			<default></default>
+		</attribute>	
+		<attribute>
+			<id>64BIT_DMA_SIZE</id>
+			<default></default>
+		</attribute>						
 	</targetType>
 	<targetType>
 		<id>card-pciecard</id>
@@ -2532,6 +2624,13 @@
 			<default>BUS</default>
 		</attribute>
 	</targetType>
+	<targetType>
+		<id>USB</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>	
 	<targetType>
 		<id>LOGICAL_ASSOCIATION</id>
 		<attribute>
@@ -3222,8 +3321,8 @@
 	</targetType>
 	<targetType>
 		<id>unit-tach-generic</id>
-		<parent>mrw-unit</parent>
-        <child_id>unit-hwmon-feature</child_id>
+    <parent>mrw-unit</parent>
+    <child_id>unit-hwmon-feature</child_id>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
