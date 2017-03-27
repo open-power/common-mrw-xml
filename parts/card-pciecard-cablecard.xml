@@ -5,6 +5,7 @@
     <child_id>i2c-slave</child_id>
     <child_id>pgood</child_id>
 	<child_id>enable</child_id>
+	<child_id>presence</child_id>
 	<child_id>cablecard-PCA9551</child_id>
 	<child_id>cablecard-TMP275A</child_id>
     <instance_name>pciecablecard</instance_name>
@@ -78,7 +79,7 @@
     </attribute>
 	<attribute>
 	  <id>GPIO_TYPE</id>
-	  <default>ENALE</default>
+	  <default>ENABLE</default>
 	</attribute>    
     <attribute>
       <id>TYPE</id>
@@ -89,7 +90,35 @@
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-enable-generic</type>
-  </targetPart>     
+  </targetPart>
+  <targetPart>
+    <id>presence</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PRESENCE</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>presence</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-gpio-generic</type>
+  </targetPart>       
   <targetPart>
     <id>cablecard-PCA9551</id>
 	<child_id>PCA9551.gpio-0</child_id>
