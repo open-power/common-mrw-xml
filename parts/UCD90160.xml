@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>UCD90160</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>UCD90160.i2c</child_id>
@@ -169,7 +169,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.i2c</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
@@ -285,7 +285,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in1</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -401,7 +401,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in2</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -517,7 +517,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in3</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -633,7 +633,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in4</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -750,7 +750,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in5</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -866,7 +866,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in6</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -982,7 +982,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in7</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1098,7 +1098,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in8</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1214,7 +1214,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in9</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1330,7 +1330,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in10</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1446,7 +1446,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in11</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1562,7 +1562,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in12</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1678,7 +1678,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in13</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1794,7 +1794,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in14</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -1910,7 +1910,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in15</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
@@ -2026,7 +2026,7 @@
 	<is_root>false</is_root>
 	<instance_name>UCD90160.in16</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
