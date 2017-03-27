@@ -3321,8 +3321,8 @@
 	</targetType>
 	<targetType>
 		<id>unit-tach-generic</id>
-		<parent>mrw-unit</parent>
-		 <child_id>unit-hwmon-feature</child_id>
+    <parent>mrw-unit</parent>
+    <child_id>unit-hwmon-feature</child_id>
 		<attribute>
 			<id>CLASS</id>
 			<default>UNIT</default>
