@@ -772,9 +772,6 @@
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
     <attribute>
-      <id>NOMINAL_FREQ_MHZ</id>
-    </attribute>
-    <attribute>
       <id>NUMERIC_POD_TYPE_TEST</id>
     </attribute>
     <attribute>

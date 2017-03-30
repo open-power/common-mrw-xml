@@ -3507,10 +3507,6 @@
         <id>PROC_PCIE_NUM_LANES</id>
         <default>24</default>
     </attribute>
-    <attribute>
-        <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-        <default>0xE0</default>
-    </attribute>
 </targetType>
 
 <targetType>
@@ -3525,7 +3521,6 @@
 <targetType>
     <id>unit-mca-power9</id>
     <parent>unit</parent>
-    <attribute><id>EFF_DIMM_SIZE</id></attribute>
 </targetType>
 
 <!-- DMI
@@ -3550,10 +3545,6 @@
 <targetType>
     <id>unit-pec-power9</id>
     <parent>unit</parent>
-    <attribute>
-        <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-        <default>0xE0</default>
-    </attribute>
 </targetType>
 
 <!-- XBUS

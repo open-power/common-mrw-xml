@@ -36,7 +36,6 @@
 		<parent>targetoverride</parent>
 		<parent_type>targetoverride</parent_type>
 		<attribute><id>TARGET_NAME</id></attribute>
-		<attribute><id>NOMINAL_FREQ_MHZ</id></attribute>
 		<attribute><id>CORES</id></attribute>
 		<attribute><id>CARD_USE</id></attribute>
 		<attribute><id>PART_NUMBER</id></attribute>

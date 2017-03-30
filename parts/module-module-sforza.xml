@@ -1755,10 +1755,6 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-    <default>0xE0</default>
-  </attribute>
-  <attribute>
     <id>PROC_PERV_BNDY_PLL_DATA</id>
     <default>0</default>
   </attribute>
@@ -10716,10 +10712,6 @@
     <default>0xFF</default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-    <default>0xE0</default>
-  </attribute>
-  <attribute>
     <id>REL_POS</id>
     <default>0xFF</default>
   </attribute>
@@ -11491,10 +11483,6 @@
   <attribute>
     <id>PROC_PCIE_PCS_TX_POWER_SEQ_ENABLE</id>
     <default>0xFF</default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-    <default>0xE0</default>
   </attribute>
   <attribute>
     <id>REL_POS</id>
@@ -12630,10 +12618,6 @@
   <attribute>
     <id>PROC_PCIE_PCS_TX_POWER_SEQ_ENABLE</id>
     <default>0xFF</default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-    <default>0xE0</default>
   </attribute>
   <attribute>
     <id>REL_POS</id>
@@ -26727,10 +26711,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>EFF_DIMM_SPARE</id>
     <default>0</default>
   </attribute>
@@ -28187,10 +28167,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>FAPI_NAME</id>
     <default>unknown</default>
   </attribute>
@@ -28654,10 +28630,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
@@ -29522,10 +29494,6 @@
   </attribute>
   <attribute>
     <id>EFF_DIMM_RCD_MIRROR_MODE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -30985,10 +30953,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>FAPI_NAME</id>
     <default>unknown</default>
   </attribute>
@@ -31452,10 +31416,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
@@ -32551,10 +32511,6 @@
   </attribute>
   <attribute>
     <id>EFF_DIMM_RCD_MIRROR_MODE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -34014,10 +33970,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>FAPI_NAME</id>
     <default>unknown</default>
   </attribute>
@@ -34481,10 +34433,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
@@ -35349,10 +35297,6 @@
   </attribute>
   <attribute>
     <id>EFF_DIMM_RCD_MIRROR_MODE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -36812,10 +36756,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>FAPI_NAME</id>
     <default>unknown</default>
   </attribute>
@@ -37279,10 +37219,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>EFF_DIMM_SIZE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
