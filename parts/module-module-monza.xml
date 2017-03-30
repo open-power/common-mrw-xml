@@ -470,10 +470,6 @@
     <default>3</default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-    <default>0xE0</default>
-  </attribute>
-  <attribute>
     <id>PSI_BRIDGE_BASE_ADDR</id>
     <default>0,0x0006070203000000</default>
   </attribute>
@@ -5322,10 +5318,6 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-      <default>0xE0</default>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>PEC</default>
     </attribute>
@@ -5347,10 +5339,6 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-      <default>0xE0</default>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>PEC</default>
     </attribute>
@@ -5370,10 +5358,6 @@
     <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_REFCLOCK_ENABLE</id>
-      <default>0xE0</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
