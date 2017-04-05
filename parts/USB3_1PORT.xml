@@ -54,7 +54,7 @@
 </targetPart>
 <targetPart>
 	<id>USB3_1PORT.usb-0</id>
-	<type>unit-usb-master</type>
+	<type>unit-usb-slave</type>
 	<is_root>false</is_root>
 	<instance_name>USB3_1PORT.usb</instance_name>
 	<position>0</position>
@@ -73,7 +73,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>OUT</default>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
