@@ -863,286 +863,7 @@ ID for the sensor number returned with the elog. -->
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
-  <enumerationType>
-    <id>CHIP_VER</id>
-    <description>Enumeration indicating the chip version</description>
-    <enumerator>
-      <name>DD10</name>
-      <value>0x10</value>
-    </enumerator>
-    <enumerator>
-      <name>DD11</name>
-      <value>0x11</value>
-    </enumerator>
-    <enumerator>
-      <name>DD20</name>
-      <value>0x20</value>
-    </enumerator>
-    <enumerator>
-      <name>DD21</name>
-      <value>0x21</value>
-    </enumerator>
-    <default>DD10</default>
-  </enumerationType>
-  <enumerationType>
-    <id>HW_VER</id>
-    <description>Enumeration indicating the chip HW version</description>
-    <enumerator>
-      <name>FSP_HW_VER</name>
-      <value>0x2</value>
-    </enumerator>
-    <enumerator>
-      <name>BMC_HW_VER</name>
-      <value>0x3</value>
-    </enumerator>
-    <default>BMC_HW_VER</default>
-  </enumerationType>
-  <enumerationType>
-    <id>SW_VER</id>
-    <description>Enumeration indicating the SW version</description>
-    <enumerator>
-      <name>FSP_SW_VER</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>BMC_SW_VER</name>
-      <value>0x2</value>
-    </enumerator>
-    <default>BMC_SW_VER</default>
-  </enumerationType>
-  <enumerationType>
-    <id>ROLE</id>
-    <description>Enumeration indicating the master's FSI type</description>
-    <enumerator>
-      <name>PRIMARY</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>BACKUP</name>
-      <value>0</value>
-    </enumerator>
-    <default>PRIMARY</default>
-  </enumerationType>
-  <attribute>
-    <id>PROC_HW_TOPOLOGY</id>
-    <description>Hardware topology for HDAT
-        creator:MRW
-        consumer:HDAT
-        firmware notes:
-        Hardware Topology 2 Bytes
-        Byte 1:
-            bit 0-3: Node Id
-            bit 4-7: Socket id inside the node
-            bit 8-11: Proc id inside socket
-            bit 12-15:Hub Id inside proc
-    </description>
-    <simpleType>
-      <uint16_t>
-        </uint16_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>CHIP_VER</id>
-    <description>Attribute indicating the target's chip version</description>
-    <simpleType>
-      <enumeration>
-        <id>CHIP_VER</id>
-      </enumeration>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hasStringConversion/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>HW_VER</id>
-    <description>Attribute indicating the target's hw version</description>
-    <simpleType>
-      <enumeration>
-        <id>HW_VER</id>
-      </enumeration>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hasStringConversion/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>SW_VER</id>
-    <description>Attribute indicating the target's software version</description>
-    <simpleType>
-      <enumeration>
-        <id>SW_VER</id>
-      </enumeration>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hasStringConversion/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>ROLE</id>
-    <description>Attribute indicating the target's role</description>
-    <simpleType>
-      <enumeration>
-        <id>ROLE</id>
-      </enumeration>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hasStringConversion/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>PHYP_SYSTEM_TYPE</id>
-    <description>PHYP system type value for habanero
-            and barreleye (0x3015 and 0x3016 respectively).
-            The value is updated in the system xml.
-    </description>
-    <simpleType>
-      <uint32_t>
-        </uint32_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <writeable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>ASCII_VPD_LX_KEYWORD</id>
-    <description>LX keyword VPD data for HDAT module
-    </description>
-    <simpleType>
-      <uint64_t>
-        </uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <writeable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>OPEN_POWER_PM_MODE</id>
-    <description>
-      Power management mode the system should use.
-      Valid values: 1 = Nominal (default),
-      5 = Static Power Save (percentage below nominal whose value
-      is defined in OPEN_POWER_PM_MODE_FREQ_PERCENT),
-      6 = Dynamic Power Save - Favor Energy (DPS-FE),
-      10 = Dynamic Power Save - Favor Performance (DPS-FP),
-      11 = Fixed Frequency Override - (percentage above nominal whose
-      value is defined in OPEN_POWER_PM_MODE_FREQ_PERCENT)
-    </description>
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-        <!-- Nominal -->
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
-    <description>
-        Percentage from nominal that the processors should run at when
-        OPEN_POWER_PM_MODE is set to Static Power Save or
-        Fixed Frequency Override (ignored on all other modes).
-        Unit is in tenths of a percent (150 = 15.0%).
-        Static Power Save (5): percentage to decrease frequency,
-        Fixed Frequency Override (11): percentage to increase frequency
-    </description>
-    <simpleType>
-      <uint16_t/>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>IPS_ENABLE</id>
-    <description>
-        Indicates if Idle Power Save is enabled.  This is independent of
-        the OPEN_POWER_PM_MODE (DPS and IPS can be enabled at the same time).
-        Valid Values: 0 = Disabled (default), 1 = Enabled.
-        See IPS_ENTER / IPS_EXIT attributes for IPS configuration.
-    </description>
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-        <!-- disabled -->
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>IPS_ENTER_TIME_SECONDS</id>
-    <description>
-        When IPS is enabled, this defines the delay time in seconds
-        (between 10 and 600) to enter Idle Power Save.
-    </description>
-    <simpleType>
-      <uint16_t>
-        <default>240</default>
-      </uint16_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>IPS_ENTER_UTILIZATION_PERCENT</id>
-    <description>
-        When IPS is enabled, this defines the utilization threshold as a
-        percent (between 0 and 100) to enter Idle Power Save.  This value
-        should be less than IPS_EXIT_UTILIZATION_PERCENT.
-    </description>
-    <simpleType>
-      <uint8_t>
-        <default>8</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>IPS_EXIT_TIME_SECONDS</id>
-    <description>
-        When IPS is enabled, this defines the delay time in seconds
-        (between 10 and 600) to exit Idle Power Save.
-    </description>
-    <simpleType>
-      <uint16_t>
-        <default>10</default>
-      </uint16_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>IPS_EXIT_UTILIZATION_PERCENT</id>
-    <description>
-        When IPS is enabled, this defines the utilization threshold as a
-        percent (between 0 and 100) to exit Idle Power Save.  This value
-        should be greater than IPS_ENTER_UTILIZATION_PERCENT.
-    </description>
-    <simpleType>
-      <uint8_t>
-        <default>12</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <serverwizShow>oppowervm</serverwizShow>
-  </attribute>
+  <!-- TPM Attributes -->
   <enumerationType>
     <id>CLASS</id>
     <description>Enumeration indicating the target's class</description>
@@ -3129,12 +2850,28 @@ ID for the sensor number returned with the elog. -->
         <default>0xAE</default>
       </field>
       <field>
+        <name>devAddrLocality1</name>
+        <description>Device address on the I2C bus for Locality 1.
+                         This is a 7-bit value, but then shifted 1
+                         bit left.</description>
+        <type>uint8_t</type>
+        <default>0xA8</default>
+      </field>
+      <field>
         <name>devAddrLocality2</name>
         <description>Device address on the I2C bus for Locality 2.
                          This is a 7-bit value, but then shifted 1
                          bit left.</description>
         <type>uint8_t</type>
         <default>0xAA</default>
+      </field>
+      <field>
+        <name>devAddrLocality3</name>
+        <description>Device address on the I2C bus for Locality 3.
+                         This is a 7-bit value, but then shifted 1
+                         bit left.</description>
+        <type>uint8_t</type>
+        <default>0xA4</default>
       </field>
       <field>
         <name>devAddrLocality4</name>
@@ -10833,135 +10570,6 @@ Selects which voltage level to place the Core and ECO domain PFETs upon Winkle e
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
-    <id>SYSTEM_RESCLK_FREQ_REGIONS</id>
-    <description>
-
-    Frequency discontinuity region points that defines the lower edge of a
-    Resonant Region and where F[i] LT F[i+1] and 0 LE i LE 7.
-    This yields:
-       ATTR_RESCLK_FREQ_REGIONS[0] LE Region 0 LT ATTR_RESCLK_FREQ_REGIONS[1]
-       ATTR_RESCLK_FREQ_REGIONS[1] LE Region 1 LT ATTR_RESCLK_FREQ_REGIONS[2]
-       ATTR_RESCLK_FREQ_REGIONS[2] LE Region 2 LT ATTR_RESCLK_FREQ_REGIONS[3]
-       etc.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>8</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_FREQ_REGIONS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-    <description>
-
-    Defines the index into ATTR_RESCLK_VALUE[] to use for the frequency region.
-
-    The frequency associated with the region is defined by
-    ATTR_RESCLK_FREQ_REGIONS[i] and ATTR_RESCLK_FREQ_REGIONS[i+1] for
-    0 LE i LE 7.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>8</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_VALUE</id>
-    <description>
-
-    Array of Clock strength values that will we written in QACCR by CME Hcode
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint16_t/>
-      <array>64</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_L3_VALUE</id>
-    <description>
-
-    Array of L3 Clock strength values to be used going between "High and Normal
-    Voltage" and "Low Voltage" mode.   Low Voltage mode is define by
-    ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV.
-
-    Entry 0 = "High and Normal Voltage" setting
-    Entry 3 = "High and Normal Voltage" setting
-
-    Entry 1 = transitional setting defined by the clock team
-    Entry 2 = transitional setting defined by the clock team
-
-    Contents of each entry will be written directly into L3 control bits in the
-    QACCR(16:23) a RMW operations.  If the circuits demand a grey code whereby
-    only 1 bit of this field can change at a time, the entries must be deal with
-    such encoding.  The Hcode that these values does not perform that function;
-    it merely steps from 0-&gt;3 when going below the voltage defined by
-    ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV and then steps 3-&gt;0 when going at or
-    above the voltage defined by ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>4</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_L3_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
-    <description>
-
-    Voltage value (in millivolts) whereby voltage below this value will have
-    the L3 clock strength moved to "Low" mode while values at or above this
-    value will have the L3 clock strength moved to "High" mode.  The L3 clock
-    strength values put in the hardware for this mode transtion are defined by
-    ATTR_RESCLK_L3_VALUE.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint16_t/>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
     <id>PM_SAFE_FREQUENCY_MHZ</id>
     <description>
 
@@ -11688,5 +11296,285 @@ Selects which voltage level to place the Core and ECO domain PFETs upon Winkle e
     <readable/>
     <writeable/>
     <serverwizShow>openpower</serverwizShow>
+  </attribute>
+  <enumerationType>
+    <id>CHIP_VER</id>
+    <description>Enumeration indicating the chip version</description>
+    <enumerator>
+      <name>DD10</name>
+      <value>0x10</value>
+    </enumerator>
+    <enumerator>
+      <name>DD11</name>
+      <value>0x11</value>
+    </enumerator>
+    <enumerator>
+      <name>DD20</name>
+      <value>0x20</value>
+    </enumerator>
+    <enumerator>
+      <name>DD21</name>
+      <value>0x21</value>
+    </enumerator>
+    <default>DD10</default>
+  </enumerationType>
+  <enumerationType>
+    <id>HW_VER</id>
+    <description>Enumeration indicating the chip HW version</description>
+    <enumerator>
+      <name>FSP_HW_VER</name>
+      <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <name>BMC_HW_VER</name>
+      <value>0x3</value>
+    </enumerator>
+    <default>BMC_HW_VER</default>
+  </enumerationType>
+  <enumerationType>
+    <id>SW_VER</id>
+    <description>Enumeration indicating the SW version</description>
+    <enumerator>
+      <name>FSP_SW_VER</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>BMC_SW_VER</name>
+      <value>0x2</value>
+    </enumerator>
+    <default>BMC_SW_VER</default>
+  </enumerationType>
+  <enumerationType>
+    <id>ROLE</id>
+    <description>Enumeration indicating the master's FSI type</description>
+    <enumerator>
+      <name>PRIMARY</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>BACKUP</name>
+      <value>0</value>
+    </enumerator>
+    <default>PRIMARY</default>
+  </enumerationType>
+  <attribute>
+    <id>PROC_HW_TOPOLOGY</id>
+    <description>Hardware topology for HDAT
+        creator:MRW
+        consumer:HDAT
+        firmware notes:
+        Hardware Topology 2 Bytes
+        Byte 1:
+            bit 0-3: Node Id
+            bit 4-7: Socket id inside the node
+            bit 8-11: Proc id inside socket
+            bit 12-15:Hub Id inside proc
+    </description>
+    <simpleType>
+      <uint16_t>
+        </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>CHIP_VER</id>
+    <description>Attribute indicating the target's chip version</description>
+    <simpleType>
+      <enumeration>
+        <id>CHIP_VER</id>
+      </enumeration>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hasStringConversion/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>HW_VER</id>
+    <description>Attribute indicating the target's hw version</description>
+    <simpleType>
+      <enumeration>
+        <id>HW_VER</id>
+      </enumeration>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hasStringConversion/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>SW_VER</id>
+    <description>Attribute indicating the target's software version</description>
+    <simpleType>
+      <enumeration>
+        <id>SW_VER</id>
+      </enumeration>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hasStringConversion/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>ROLE</id>
+    <description>Attribute indicating the target's role</description>
+    <simpleType>
+      <enumeration>
+        <id>ROLE</id>
+      </enumeration>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hasStringConversion/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>PHYP_SYSTEM_TYPE</id>
+    <description>PHYP system type value for habanero
+            and barreleye (0x3015 and 0x3016 respectively).
+            The value is updated in the system xml.
+    </description>
+    <simpleType>
+      <uint32_t>
+        </uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <writeable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>ASCII_VPD_LX_KEYWORD</id>
+    <description>LX keyword VPD data for HDAT module
+    </description>
+    <simpleType>
+      <uint64_t>
+        </uint64_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <writeable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>OPEN_POWER_PM_MODE</id>
+    <description>
+      Power management mode the system should use.
+      Valid values: 1 = Nominal (default),
+      5 = Static Power Save (percentage below nominal whose value
+      is defined in OPEN_POWER_PM_MODE_FREQ_PERCENT),
+      6 = Dynamic Power Save - Favor Energy (DPS-FE),
+      10 = Dynamic Power Save - Favor Performance (DPS-FP),
+      11 = Fixed Frequency Override - (percentage above nominal whose
+      value is defined in OPEN_POWER_PM_MODE_FREQ_PERCENT)
+    </description>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+        <!-- Nominal -->
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
+    <description>
+        Percentage from nominal that the processors should run at when
+        OPEN_POWER_PM_MODE is set to Static Power Save or
+        Fixed Frequency Override (ignored on all other modes).
+        Unit is in tenths of a percent (150 = 15.0%).
+        Static Power Save (5): percentage to decrease frequency,
+        Fixed Frequency Override (11): percentage to increase frequency
+    </description>
+    <simpleType>
+      <uint16_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>IPS_ENABLE</id>
+    <description>
+        Indicates if Idle Power Save is enabled.  This is independent of
+        the OPEN_POWER_PM_MODE (DPS and IPS can be enabled at the same time).
+        Valid Values: 0 = Disabled (default), 1 = Enabled.
+        See IPS_ENTER / IPS_EXIT attributes for IPS configuration.
+    </description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+        <!-- disabled -->
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>IPS_ENTER_TIME_SECONDS</id>
+    <description>
+        When IPS is enabled, this defines the delay time in seconds
+        (between 10 and 600) to enter Idle Power Save.
+    </description>
+    <simpleType>
+      <uint16_t>
+        <default>240</default>
+      </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>IPS_ENTER_UTILIZATION_PERCENT</id>
+    <description>
+        When IPS is enabled, this defines the utilization threshold as a
+        percent (between 0 and 100) to enter Idle Power Save.  This value
+        should be less than IPS_EXIT_UTILIZATION_PERCENT.
+    </description>
+    <simpleType>
+      <uint8_t>
+        <default>8</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>IPS_EXIT_TIME_SECONDS</id>
+    <description>
+        When IPS is enabled, this defines the delay time in seconds
+        (between 10 and 600) to exit Idle Power Save.
+    </description>
+    <simpleType>
+      <uint16_t>
+        <default>10</default>
+      </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>IPS_EXIT_UTILIZATION_PERCENT</id>
+    <description>
+        When IPS is enabled, this defines the utilization threshold as a
+        percent (between 0 and 100) to exit Idle Power Save.  This value
+        should be greater than IPS_ENTER_UTILIZATION_PERCENT.
+    </description>
+    <simpleType>
+      <uint8_t>
+        <default>12</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <serverwizShow>oppowervm</serverwizShow>
   </attribute>
 </attributes>
