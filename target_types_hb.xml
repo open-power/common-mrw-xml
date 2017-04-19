@@ -1,148 +1,9 @@
 <?xml version="1.0"?>
 <attributes>
   <!-- =====================================================================
-     Contains the target definition of attributes that are only available
-     on openpower systems.  This file is only compiled when
-     CONFIG_XML_INCLUDE_OPENPOWER is set to true and is always false on
-     FSP based systems.
-     =====================================================================
- -->
-  <targetTypeExtension>
-    <id>base</id>
-    <attribute>
-      <id>HDAT_I2C_ENGINE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_MASTER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVTYPE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_SLAVE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_BUS_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEV_PURPOSE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ELEMENTS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>base</id>
-    <attribute>
-      <id>ORDINAL_ID</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sys-sys-power9</id>
-    <attribute>
-      <id>PHYP_SYSTEM_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>ASCII_VPD_LX_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_UTILIZATION_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_UTILIZATION_PERCENT</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-processor</id>
-    <attribute>
-      <id>PROC_HW_TOPOLOGY</id>
-      <default>0x00000000</default>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sp</id>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>bmc</id>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>lcard-dimm</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-pci-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>enc-node-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-membuf-centaur</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>uart</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sp</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>power-supply</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>fan</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>vrm</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>usb</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>eth</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>panel</id>
-  </targetTypeExtension>
+     HOST BOOT TARGETS
+     Contains the definition of the different types of targets
+     ================================================================= -->
   <targetType>
     <id>base</id>
     <attribute>
@@ -528,6 +389,8 @@
       <id>REL_POS</id>
     </attribute>
   </targetType>
+  <!-- Memory Buffer Target Types -->
+  <!-- Centaur chip/DMI -->
   <targetType>
     <id>chip-membuf-centaur</id>
     <parent>chip</parent>
@@ -630,6 +493,7 @@
       <id>FRU_ID</id>
     </attribute>
   </targetType>
+  <!--Dummy card to use as a DIMM for initial I2C/EEPROM testing -->
   <targetType>
     <id>card</id>
     <parent>base</parent>
@@ -728,6 +592,11 @@
       <id>FRU_ID</id>
     </attribute>
   </targetType>
+  <!-- ****************************************** -->
+  <!--             P9 targets                     -->
+  <!-- ****************************************** -->
+  <!-- TODO: RTC 129517 Need to update attributes for each target -->
+  <!-- sys-sys-power9 -->
   <targetType>
     <id>sys-sys-power9</id>
     <parent>base</parent>
@@ -1148,9 +1017,6 @@
     <attribute>
       <id>PROC_FABRIC_CAPI_MODE</id>
     </attribute>
-    <attribute>
-      <id>PROC_FABRIC_ADDR_BAR_MODE</id>
-    </attribute>
     <!-- HDAT Hostboot Runtime Data Info -->
     <attribute>
       <id>MSS_MRW_PREFETCH_ENABLE</id>
@@ -1432,6 +1298,7 @@
       <id>PGPE_HCODE_FUNCTION_ENABLE</id>
     </attribute>
   </targetType>
+  <!-- enc-node-power9 -->
   <targetType>
     <id>enc-node-power9</id>
     <parent>base</parent>
@@ -1473,6 +1340,7 @@
       <id>VPD_REC_NUM</id>
     </attribute>
   </targetType>
+  <!-- chip-tpm-cectpm -->
   <targetType>
     <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
@@ -1488,6 +1356,7 @@
       <id>TPM_INFO</id>
     </attribute>
   </targetType>
+  <!-- chip-processor-power9 -->
   <targetType>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
@@ -1791,21 +1660,6 @@
     <attribute>
       <id>TDP_RDP_CURRENT_FACTOR</id>
     </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_FREQ_REGIONS</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_VALUE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_L3_VALUE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
-    </attribute>
     <!-- Process Voltage Rail Ids -->
     <attribute>
       <id>NEST_VDD_ID</id>
@@ -1837,6 +1691,8 @@
     <!-- START memory workaround for DD1.02 -->
     <!-- END memory workaround for DD1.02 -->
   </targetType>
+  <!-- chip-processor-power9 -->
+  <!-- chip-processor-nimbus -->
   <targetType>
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
@@ -1845,6 +1701,8 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- chip-processor-nimbus -->
+  <!-- chip-processor-cumulus -->
   <targetType>
     <id>chip-processor-cumulus</id>
     <parent>chip-processor-power9</parent>
@@ -1853,6 +1711,10 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- p9 sub-units -->
+  <!-- EQ chiplet: Use same EQ target for Nimbus and Cumulus
+     6 EQs on Nimbus
+     Quad: 2 ex's and one ep -->
   <targetType>
     <id>unit-eq-power9</id>
     <parent>unit</parent>
@@ -1877,6 +1739,9 @@
       <default>CPU</default>
     </attribute>
   </targetType>
+  <!-- EX: Use same EX target for both Nimbus and Cumulus
+     2 EXs per EQ
+     EX (L2/L3, 2x Core) -->
   <targetType>
     <id>unit-ex-power9</id>
     <parent>unit</parent>
@@ -1898,6 +1763,8 @@
       <default>CPU</default>
     </attribute>
   </targetType>
+  <!-- CORE: Use same CORE target for both Nimbus and Cumulus
+     A collection of 4 threads -->
   <targetType>
     <id>unit-core-power9</id>
     <parent>unit</parent>
@@ -1922,400 +1789,58 @@
       <default>CPU</default>
     </attribute>
   </targetType>
-  <targetType><id>unit-mcs-power9</id><parent>unit</parent><attribute><id>TYPE</id><default>MCS</default></attribute><attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute><attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id><default>0x00000003</default><!-- GARD | MEMDIAG --></attribute><attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute><attribute><id>IBSCOM_MCS_BASE_ADDR</id></attribute><attribute><id>EI_BUS_TX_MSBSWAP</id></attribute><attribute><id>PARENT_PERVASIVE</id></attribute><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this-->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>VPD_REC_NUM</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>CDM_DOMAIN</id><default>MEM</default></attribute>
-    <attribute><id>MEMVPD_POS</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>DMI_REFCLOCK_SWIZZLE</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</targetType>
+  <!-- MCS
+     Nimbus : 4 MCS under each chip
+              (MCUnit left has two, MCUnit right has two)
+     Cumulus: None  -->
+  <targetType>
+    <id>unit-mcs-power9</id>
+    <parent>unit</parent>
+    <attribute>
+      <id>TYPE</id>
+      <default>MCS</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000003</default>
+      <!-- GARD | MEMDIAG -->
+    </attribute>
+    <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>IBSCOM_MCS_BASE_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>EI_BUS_TX_MSBSWAP</id>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>MEM</default>
+    </attribute>
+    <attribute>
+      <id>MEMVPD_POS</id>
+    </attribute>
+    <attribute>
+      <id>DMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+  </targetType>
   <targetType>
     <id>unit-mcs-nimbus</id>
     <parent>unit-mcs-power9</parent>
@@ -2324,6 +1849,10 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MCA
+     Nimbus : 2 MCAs under each MCS (total of 8 per chip)
+     Cumulus: No MCA
+     Tied 1-1 to a DDR port -->
   <targetType>
     <id>unit-mca-power9</id>
     <parent>unit</parent>
@@ -2356,6 +1885,9 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MCBIST
+     Nimbus : 1 per MCU (total of 2 per chip)
+     Cumulus: None  -->
   <targetType>
     <id>unit-mcbist-power9</id>
     <parent>unit</parent>
@@ -2407,6 +1939,9 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MI
+     Nimbus : None
+     Cumulus: total of 4 per chip -->
   <targetType>
     <id>unit-mi-power9</id>
     <parent>unit</parent>
@@ -2430,6 +1965,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- DMI
+     Nimbus : None
+     Cumulus: 2 per MI (total of 8 per chip) -->
   <targetType>
     <id>unit-dmi-power9</id>
     <parent>unit</parent>
@@ -2456,6 +1994,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PEC corresponds to IOP. Use same PEC target for Nimbus and Cumulus
+     Nimbus : 3 per chip
+     Cumulus: 3 per chip  -->
   <targetType>
     <id>unit-pec-power9</id>
     <parent>unit</parent>
@@ -2580,6 +2121,10 @@
       <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
     </attribute>
   </targetType>
+  <!-- unit-pec-power9 -->
+  <!-- PHB
+     Nimbus : 6 per PEC (total of 18 per chip)
+     Cumulus: 6 per PEC -->
   <targetType>
     <id>unit-phb-power9</id>
     <parent>unit</parent>
@@ -2623,6 +2168,7 @@
       <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
     </attribute>
   </targetType>
+  <!-- unit-phb-power9 -->
   <targetType>
     <id>unit-phb-nimbus</id>
     <parent>unit-phb-power9</parent>
@@ -2639,6 +2185,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- OBUS
+     Nimbus : 2 per chip (OB0 and OB3)
+     Cumulus: 4 per chip (OB0, OB1, OB2, and OB3)  -->
   <targetType>
     <id>unit-obus-power9</id>
     <parent>unit</parent>
@@ -2685,6 +2234,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- NV
+     Nimbus : 1 per chip
+     Cumulus: 1 per chip -->
   <targetType>
     <id>unit-nv-power9</id>
     <parent>unit</parent>
@@ -2725,6 +2277,10 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PPE
+     Nimbus : 21, including the SBE (1 SBE, 1 Powerbus/Fabric PPE,
+              4 GPEs, 12 CMEs, and 3 IO PPEs.
+     Cumulus: 23 (2 additional IO-PPE instances) -->
   <targetType>
     <id>unit-ppe-power9</id>
     <parent>unit</parent>
@@ -2753,6 +2309,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PERV
+     Nimbus : 43 (1 per chiplet)
+     Cumulus: 1 per chiplet -->
   <targetType>
     <id>unit-perv-power9</id>
     <parent>unit</parent>
@@ -2781,6 +2340,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- XBUS
+     Nimbus : 1 per chip
+     Cumulus: 7  -->
   <targetType>
     <id>unit-xbus-power9</id>
     <parent>unit</parent>
@@ -2836,6 +2398,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- CAPP
+     Nimbus : 2 per chip
+     Cumulus: 2  -->
   <targetType>
     <id>unit-capp-power9</id>
     <parent>unit</parent>
@@ -2897,6 +2462,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- SBE
+     Nimbus : 1 per chip
+     Cumulus: 1 -->
   <targetType>
     <id>unit-sbe-power9</id>
     <parent>unit</parent>
@@ -2925,6 +2493,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- OCC
+     Nimbus : 1 per chip
+     Cumulus: 1  -->
   <targetType>
     <id>unit-occ-power9</id>
     <parent>unit</parent>
@@ -2956,6 +2527,7 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- L4 (Centaur) -->
   <targetType>
     <id>unit-l4-power9</id>
     <parent>unit</parent>
@@ -3122,6 +2694,7 @@
       <default>PANEL</default>
     </attribute>
   </targetType>
+  <!-- End p9 sub-units -->
   <targetTypeExtension>
     <id>base</id>
     <attribute>
@@ -3275,5 +2848,144 @@
     <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-tpm-cectpm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>base</id>
+    <attribute>
+      <id>HDAT_I2C_ENGINE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_MASTER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVTYPE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_SLAVE_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_BUS_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEV_PURPOSE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ELEMENTS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>base</id>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sys-sys-power9</id>
+    <attribute>
+      <id>PHYP_SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>ASCII_VPD_LX_KEYWORD</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PM_MODE</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENTER_TIME_SECONDS</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENTER_UTILIZATION_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>IPS_EXIT_TIME_SECONDS</id>
+    </attribute>
+    <attribute>
+      <id>IPS_EXIT_UTILIZATION_PERCENT</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-processor</id>
+    <attribute>
+      <id>PROC_HW_TOPOLOGY</id>
+      <default>0x00000000</default>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sp</id>
+    <attribute>
+      <id>CHIP_VER</id>
+    </attribute>
+    <attribute>
+      <id>HW_VER</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <attribute>
+      <id>ROLE</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>bmc</id>
+    <attribute>
+      <id>CHIP_VER</id>
+    </attribute>
+    <attribute>
+      <id>HW_VER</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <attribute>
+      <id>ROLE</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>lcard-dimm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-pci-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>enc-node-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-membuf-centaur</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>uart</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sp</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>power-supply</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>fan</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>vrm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>usb</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>eth</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>panel</id>
   </targetTypeExtension>
 </attributes>
