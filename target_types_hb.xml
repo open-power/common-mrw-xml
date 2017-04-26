@@ -33,11 +33,12 @@
     <attribute>
       <id>HDAT_I2C_ELEMENTS</id>
     </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>base</id>
     <attribute>
       <id>ORDINAL_ID</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_INSTANCE</id>
+      <default>0xFF</default>
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
@@ -68,6 +69,93 @@
     </attribute>
     <attribute>
       <id>IPS_EXIT_UTILIZATION_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_FUNC_IDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GNDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GAINS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_OFFSETS</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_MODES</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_PINS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_QUAD_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
+    </attribute>
+    <attribute>
+      <id>OPAL_MODEL</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
@@ -109,15 +197,30 @@
   </targetTypeExtension>
   <targetTypeExtension>
     <id>lcard-dimm</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>unit-pci-power9</id>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>enc-node-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>chip-membuf-centaur</id>
+    <attribute>
+      <id>GPIO_INFO</id>
+    </attribute>
+    <attribute>
+      <id>ISDIMM_MBVPD_INDEX</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>uart</id>
@@ -1148,9 +1251,6 @@
     <attribute>
       <id>PROC_FABRIC_CAPI_MODE</id>
     </attribute>
-    <attribute>
-      <id>PROC_FABRIC_ADDR_BAR_MODE</id>
-    </attribute>
     <!-- HDAT Hostboot Runtime Data Info -->
     <attribute>
       <id>MSS_MRW_PREFETCH_ENABLE</id>
@@ -1367,6 +1467,9 @@
     </attribute>
     <attribute>
       <id>WOF_POWER_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
     </attribute>
     <attribute>
       <id>VDM_ENABLE</id>
@@ -1791,21 +1894,6 @@
     <attribute>
       <id>TDP_RDP_CURRENT_FACTOR</id>
     </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_FREQ_REGIONS</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_VALUE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_L3_VALUE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
-    </attribute>
     <!-- Process Voltage Rail Ids -->
     <attribute>
       <id>NEST_VDD_ID</id>
@@ -1922,400 +2010,54 @@
       <default>CPU</default>
     </attribute>
   </targetType>
-  <targetType><id>unit-mcs-power9</id><parent>unit</parent><attribute><id>TYPE</id><default>MCS</default></attribute><attribute><id>DECONFIG_GARDABLE</id><default>1</default></attribute><attribute><id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id><default>0x00000003</default><!-- GARD | MEMDIAG --></attribute><attribute><id>EEPROM_VPD_PRIMARY_INFO</id></attribute><attribute><id>IBSCOM_MCS_BASE_ADDR</id></attribute><attribute><id>EI_BUS_TX_MSBSWAP</id></attribute><attribute><id>PARENT_PERVASIVE</id></attribute><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this--><!--HWSV needs to update names so we can remove this-->
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>VPD_REC_NUM</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>CDM_DOMAIN</id><default>MEM</default></attribute>
-    <attribute><id>MEMVPD_POS</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    <attribute><id>DMI_REFCLOCK_SWIZZLE</id></attribute>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-</targetType>
+  <targetType>
+    <id>unit-mcs-power9</id>
+    <parent>unit</parent>
+    <attribute>
+      <id>TYPE</id>
+      <default>MCS</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000003</default>
+      <!-- GARD | MEMDIAG -->
+    </attribute>
+    <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>IBSCOM_MCS_BASE_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>EI_BUS_TX_MSBSWAP</id>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <!--HWSV needs to update names so we can remove this-->
+    <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>MEM</default>
+    </attribute>
+    <attribute>
+      <id>MEMVPD_POS</id>
+    </attribute>
+    <attribute>
+      <id>DMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+  </targetType>
   <targetType>
     <id>unit-mcs-nimbus</id>
     <parent>unit-mcs-power9</parent>
@@ -3123,125 +2865,7 @@
     </attribute>
   </targetType>
   <targetTypeExtension>
-    <id>base</id>
-    <attribute>
-      <id>IPMI_INSTANCE</id>
-      <default>0xFF</default>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sys-sys-power9</id>
-    <attribute>
-      <id>ADC_CHANNEL_FUNC_IDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GNDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GAINS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_OFFSETS</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_MODES</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_PINS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_QUAD_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>OPAL_MODEL</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>enc-node-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-processor</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
     <id>chip-processor-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-membuf-centaur</id>
-    <attribute>
-      <id>GPIO_INFO</id>
-    </attribute>
-    <attribute>
-      <id>ISDIMM_MBVPD_INDEX</id>
-    </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
@@ -3259,12 +2883,6 @@
     <id>unit-eq-power9</id>
   </targetTypeExtension>
   <targetTypeExtension>
-    <id>lcard-dimm</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
     <id>unit-mcs-nimbus</id>
   </targetTypeExtension>
   <targetTypeExtension>
@@ -3275,5 +2893,8 @@
     <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-tpm-cectpm</id>
   </targetTypeExtension>
 </attributes>

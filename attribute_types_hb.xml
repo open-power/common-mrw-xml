@@ -863,6 +863,7 @@ ID for the sensor number returned with the elog. -->
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
+  <!-- TPM Attributes -->
   <enumerationType>
     <id>CHIP_VER</id>
     <description>Enumeration indicating the chip version</description>
@@ -1183,8 +1184,12 @@ ID for the sensor number returned with the elog. -->
       <value>8</value>
     </enumerator>
     <enumerator>
-      <name>MAX</name>
+      <name>LED</name>
       <value>9</value>
+    </enumerator>
+    <enumerator>
+      <name>MAX</name>
+      <value>10</value>
     </enumerator>
     <default>NA</default>
   </enumerationType>
@@ -2184,17 +2189,6 @@ ID for the sensor number returned with the elog. -->
     </enumerator>
   </enumerationType>
   <enumerationType>
-    <id>PROC_FABRIC_ADDR_BAR_MODE</id>
-    <description>
-        Enumeration indicating the PROC_FABRIC_ADDR_BAR_MODE
-    </description>
-    <!--  Note: Values must match numbers from nest_attributes.xml -->
-    <enumerator>
-      <name>LARGE_SYSTEM</name>
-      <value>0x0</value>
-    </enumerator>
-  </enumerationType>
-  <enumerationType>
     <id>VDM_ENABLE</id>
     <description>Enumeration for Voltage Drop Monitor enable</description>
     <enumerator>
@@ -3129,12 +3123,28 @@ ID for the sensor number returned with the elog. -->
         <default>0xAE</default>
       </field>
       <field>
+        <name>devAddrLocality1</name>
+        <description>Device address on the I2C bus for Locality 1.
+                         This is a 7-bit value, but then shifted 1
+                         bit left.</description>
+        <type>uint8_t</type>
+        <default>0xA8</default>
+      </field>
+      <field>
         <name>devAddrLocality2</name>
         <description>Device address on the I2C bus for Locality 2.
                          This is a 7-bit value, but then shifted 1
                          bit left.</description>
         <type>uint8_t</type>
         <default>0xAA</default>
+      </field>
+      <field>
+        <name>devAddrLocality3</name>
+        <description>Device address on the I2C bus for Locality 3.
+                         This is a 7-bit value, but then shifted 1
+                         bit left.</description>
+        <type>uint8_t</type>
+        <default>0xA4</default>
       </field>
       <field>
         <name>devAddrLocality4</name>
@@ -8625,6 +8635,29 @@ Selects which voltage level to place the Core and ECO domain PFETs upon Winkle e
     <writeable/>
   </attribute>
   <attribute>
+    <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
+    <description>
+     Enables pstate parameter block code to use the static system vfrt data
+     Consumer: p9_pstate_parameter_block.C
+     0 = OFF, 1 = ON
+     Platform default:  OFF
+     <!--
+        @todo RTC 169662 at some point in the program, this default may be switched to
+         the opposite setting.  However, coordination needs to occur with all CIs
+         as this will enable functions that may not be modeled across the board.
+     -->
+     </description>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYS_VFRT_STATIC_DATA_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
     <id>SYSTEM_RESCLK_STEP_DELAY</id>
     <description>
       Minimum delay (in nanoseconds) between resonant clock transition steps
@@ -9095,26 +9128,6 @@ Selects which voltage level to place the Core and ECO domain PFETs upon Winkle e
     <readable/>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_FABRIC_CAPI_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>PROC_FABRIC_ADDR_BAR_MODE</id>
-    <!-- <targetType>TARGET_TYPE_SYSTEM</targetType> -->
-    <description>
-    Processor memory map configuration.
-    0 = large system address map (default)
-    Provided by the MRW.
-  </description>
-    <simpleType>
-      <uint8_t>
-        <default>LARGE_SYSTEM</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_ADDR_BAR_MODE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -10829,135 +10842,6 @@ Selects which voltage level to place the Core and ECO domain PFETs upon Winkle e
     <readable/>
     <hwpfToHbAttrMap>
       <id>ATTR_TDP_RDP_CURRENT_FACTOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_FREQ_REGIONS</id>
-    <description>
-
-    Frequency discontinuity region points that defines the lower edge of a
-    Resonant Region and where F[i] LT F[i+1] and 0 LE i LE 7.
-    This yields:
-       ATTR_RESCLK_FREQ_REGIONS[0] LE Region 0 LT ATTR_RESCLK_FREQ_REGIONS[1]
-       ATTR_RESCLK_FREQ_REGIONS[1] LE Region 1 LT ATTR_RESCLK_FREQ_REGIONS[2]
-       ATTR_RESCLK_FREQ_REGIONS[2] LE Region 2 LT ATTR_RESCLK_FREQ_REGIONS[3]
-       etc.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>8</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_FREQ_REGIONS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-    <description>
-
-    Defines the index into ATTR_RESCLK_VALUE[] to use for the frequency region.
-
-    The frequency associated with the region is defined by
-    ATTR_RESCLK_FREQ_REGIONS[i] and ATTR_RESCLK_FREQ_REGIONS[i+1] for
-    0 LE i LE 7.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>8</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_FREQ_REGION_INDEX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_VALUE</id>
-    <description>
-
-    Array of Clock strength values that will we written in QACCR by CME Hcode
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint16_t/>
-      <array>64</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_L3_VALUE</id>
-    <description>
-
-    Array of L3 Clock strength values to be used going between "High and Normal
-    Voltage" and "Low Voltage" mode.   Low Voltage mode is define by
-    ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV.
-
-    Entry 0 = "High and Normal Voltage" setting
-    Entry 3 = "High and Normal Voltage" setting
-
-    Entry 1 = transitional setting defined by the clock team
-    Entry 2 = transitional setting defined by the clock team
-
-    Contents of each entry will be written directly into L3 control bits in the
-    QACCR(16:23) a RMW operations.  If the circuits demand a grey code whereby
-    only 1 bit of this field can change at a time, the entries must be deal with
-    such encoding.  The Hcode that these values does not perform that function;
-    it merely steps from 0-&gt;3 when going below the voltage defined by
-    ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV and then steps 3-&gt;0 when going at or
-    above the voltage defined by ATTR_RESCLK_L3_VOLTAGE_THRESHOLD_MV.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint8_t/>
-      <array>4</array>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_L3_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
-    <description>
-
-    Voltage value (in millivolts) whereby voltage below this value will have
-    the L3 clock strength moved to "Low" mode while values at or above this
-    value will have the L3 clock strength moved to "High" mode.  The L3 clock
-    strength values put in the hardware for this mode transtion are defined by
-    ATTR_RESCLK_L3_VALUE.
-
-    Consumers: p9_pstate_parameter_block
-
-    </description>
-    <simpleType>
-      <uint16_t/>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_L3_VOLTAGE_THRESHOLD_MV</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
