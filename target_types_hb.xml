@@ -246,6 +246,39 @@
   <targetTypeExtension>
     <id>panel</id>
   </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-processor-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-core-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-ex-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-eq-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-mcs-nimbus</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-xbus-nimbus</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>occ</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-tpm-cectpm</id>
+  </targetTypeExtension>
   <targetType>
     <id>base</id>
     <attribute>
@@ -368,10 +401,6 @@
       <id>FSI_GP_REG_SCOM_ACCESS</id>
       <default>1</default>
     </attribute>
-    <attribute>
-      <id>FABRIC_NODE_ID</id>
-    </attribute>
-    <!-- DEPRECATED -->
     <attribute>
       <id>FABRIC_GROUP_ID</id>
     </attribute>
@@ -2864,37 +2893,4 @@
       <default>PANEL</default>
     </attribute>
   </targetType>
-  <targetTypeExtension>
-    <id>chip-processor-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-core-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-ex-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-eq-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-mcs-nimbus</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-xbus-nimbus</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>occ</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-tpm-cectpm</id>
-  </targetTypeExtension>
 </attributes>
