@@ -1,284 +1,9 @@
 <?xml version="1.0"?>
 <attributes>
   <!-- =====================================================================
-     Contains the target definition of attributes that are only available
-     on openpower systems.  This file is only compiled when
-     CONFIG_XML_INCLUDE_OPENPOWER is set to true and is always false on
-     FSP based systems.
-     =====================================================================
- -->
-  <targetTypeExtension>
-    <id>base</id>
-    <attribute>
-      <id>HDAT_I2C_ENGINE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_MASTER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVTYPE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_SLAVE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_BUS_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEV_PURPOSE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ELEMENTS</id>
-    </attribute>
-    <attribute>
-      <id>ORDINAL_ID</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_INSTANCE</id>
-      <default>0xFF</default>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sys-sys-power9</id>
-    <attribute>
-      <id>PHYP_SYSTEM_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>ASCII_VPD_LX_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_UTILIZATION_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_UTILIZATION_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_FUNC_IDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GNDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GAINS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_OFFSETS</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_MODES</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_PINS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_QUAD_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>OPAL_MODEL</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-processor</id>
-    <attribute>
-      <id>PROC_HW_TOPOLOGY</id>
-      <default>0x00000000</default>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sp</id>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>bmc</id>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>lcard-dimm</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-pci-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>enc-node-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-membuf-centaur</id>
-    <attribute>
-      <id>GPIO_INFO</id>
-    </attribute>
-    <attribute>
-      <id>ISDIMM_MBVPD_INDEX</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>uart</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sp</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>power-supply</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>fan</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>vrm</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>usb</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>eth</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>panel</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-processor-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-core-power9</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-ex-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-eq-power9</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-mcs-nimbus</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>unit-xbus-nimbus</id>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>occ</id>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>chip-tpm-cectpm</id>
-  </targetTypeExtension>
+     HOST BOOT TARGETS
+     Contains the definition of the different types of targets
+     ================================================================= -->
   <targetType>
     <id>base</id>
     <attribute>
@@ -660,6 +385,8 @@
       <id>REL_POS</id>
     </attribute>
   </targetType>
+  <!-- Memory Buffer Target Types -->
+  <!-- Centaur chip/DMI -->
   <targetType>
     <id>chip-membuf-centaur</id>
     <parent>chip</parent>
@@ -762,6 +489,7 @@
       <id>FRU_ID</id>
     </attribute>
   </targetType>
+  <!--Dummy card to use as a DIMM for initial I2C/EEPROM testing -->
   <targetType>
     <id>card</id>
     <parent>base</parent>
@@ -860,6 +588,11 @@
       <id>FRU_ID</id>
     </attribute>
   </targetType>
+  <!-- ****************************************** -->
+  <!--             P9 targets                     -->
+  <!-- ****************************************** -->
+  <!-- TODO: RTC 129517 Need to update attributes for each target -->
+  <!-- sys-sys-power9 -->
   <targetType>
     <id>sys-sys-power9</id>
     <parent>base</parent>
@@ -1564,6 +1297,7 @@
       <id>PGPE_HCODE_FUNCTION_ENABLE</id>
     </attribute>
   </targetType>
+  <!-- enc-node-power9 -->
   <targetType>
     <id>enc-node-power9</id>
     <parent>base</parent>
@@ -1605,6 +1339,7 @@
       <id>VPD_REC_NUM</id>
     </attribute>
   </targetType>
+  <!-- chip-tpm-cectpm -->
   <targetType>
     <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
@@ -1620,6 +1355,7 @@
       <id>TPM_INFO</id>
     </attribute>
   </targetType>
+  <!-- chip-processor-power9 -->
   <targetType>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
@@ -1954,6 +1690,8 @@
     <!-- START memory workaround for DD1.02 -->
     <!-- END memory workaround for DD1.02 -->
   </targetType>
+  <!-- chip-processor-power9 -->
+  <!-- chip-processor-nimbus -->
   <targetType>
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
@@ -1962,6 +1700,8 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- chip-processor-nimbus -->
+  <!-- chip-processor-cumulus -->
   <targetType>
     <id>chip-processor-cumulus</id>
     <parent>chip-processor-power9</parent>
@@ -1970,6 +1710,10 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- p9 sub-units -->
+  <!-- EQ chiplet: Use same EQ target for Nimbus and Cumulus
+     6 EQs on Nimbus
+     Quad: 2 ex's and one ep -->
   <targetType>
     <id>unit-eq-power9</id>
     <parent>unit</parent>
@@ -1994,6 +1738,9 @@
       <default>CPU</default>
     </attribute>
   </targetType>
+  <!-- EX: Use same EX target for both Nimbus and Cumulus
+     2 EXs per EQ
+     EX (L2/L3, 2x Core) -->
   <targetType>
     <id>unit-ex-power9</id>
     <parent>unit</parent>
@@ -2015,6 +1762,8 @@
       <default>CPU</default>
     </attribute>
   </targetType>
+  <!-- CORE: Use same CORE target for both Nimbus and Cumulus
+     A collection of 4 threads -->
   <targetType>
     <id>unit-core-power9</id>
     <parent>unit</parent>
@@ -2039,6 +1788,10 @@
       <default>CPU</default>
     </attribute>
   </targetType>
+  <!-- MCS
+     Nimbus : 4 MCS under each chip
+              (MCUnit left has two, MCUnit right has two)
+     Cumulus: None  -->
   <targetType>
     <id>unit-mcs-power9</id>
     <parent>unit</parent>
@@ -2095,6 +1848,10 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MCA
+     Nimbus : 2 MCAs under each MCS (total of 8 per chip)
+     Cumulus: No MCA
+     Tied 1-1 to a DDR port -->
   <targetType>
     <id>unit-mca-power9</id>
     <parent>unit</parent>
@@ -2127,6 +1884,9 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MCBIST
+     Nimbus : 1 per MCU (total of 2 per chip)
+     Cumulus: None  -->
   <targetType>
     <id>unit-mcbist-power9</id>
     <parent>unit</parent>
@@ -2178,6 +1938,9 @@
       <default>NIMBUS</default>
     </attribute>
   </targetType>
+  <!-- MI
+     Nimbus : None
+     Cumulus: total of 4 per chip -->
   <targetType>
     <id>unit-mi-power9</id>
     <parent>unit</parent>
@@ -2201,6 +1964,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- DMI
+     Nimbus : None
+     Cumulus: 2 per MI (total of 8 per chip) -->
   <targetType>
     <id>unit-dmi-power9</id>
     <parent>unit</parent>
@@ -2227,6 +1993,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PEC corresponds to IOP. Use same PEC target for Nimbus and Cumulus
+     Nimbus : 3 per chip
+     Cumulus: 3 per chip  -->
   <targetType>
     <id>unit-pec-power9</id>
     <parent>unit</parent>
@@ -2351,6 +2120,10 @@
       <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
     </attribute>
   </targetType>
+  <!-- unit-pec-power9 -->
+  <!-- PHB
+     Nimbus : 6 per PEC (total of 18 per chip)
+     Cumulus: 6 per PEC -->
   <targetType>
     <id>unit-phb-power9</id>
     <parent>unit</parent>
@@ -2394,6 +2167,7 @@
       <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
     </attribute>
   </targetType>
+  <!-- unit-phb-power9 -->
   <targetType>
     <id>unit-phb-nimbus</id>
     <parent>unit-phb-power9</parent>
@@ -2410,6 +2184,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- OBUS
+     Nimbus : 2 per chip (OB0 and OB3)
+     Cumulus: 4 per chip (OB0, OB1, OB2, and OB3)  -->
   <targetType>
     <id>unit-obus-power9</id>
     <parent>unit</parent>
@@ -2456,6 +2233,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- NV
+     Nimbus : 1 per chip
+     Cumulus: 1 per chip -->
   <targetType>
     <id>unit-nv-power9</id>
     <parent>unit</parent>
@@ -2496,6 +2276,10 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PPE
+     Nimbus : 21, including the SBE (1 SBE, 1 Powerbus/Fabric PPE,
+              4 GPEs, 12 CMEs, and 3 IO PPEs.
+     Cumulus: 23 (2 additional IO-PPE instances) -->
   <targetType>
     <id>unit-ppe-power9</id>
     <parent>unit</parent>
@@ -2524,6 +2308,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- PERV
+     Nimbus : 43 (1 per chiplet)
+     Cumulus: 1 per chiplet -->
   <targetType>
     <id>unit-perv-power9</id>
     <parent>unit</parent>
@@ -2552,6 +2339,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- XBUS
+     Nimbus : 1 per chip
+     Cumulus: 7  -->
   <targetType>
     <id>unit-xbus-power9</id>
     <parent>unit</parent>
@@ -2607,6 +2397,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- CAPP
+     Nimbus : 2 per chip
+     Cumulus: 2  -->
   <targetType>
     <id>unit-capp-power9</id>
     <parent>unit</parent>
@@ -2668,6 +2461,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- SBE
+     Nimbus : 1 per chip
+     Cumulus: 1 -->
   <targetType>
     <id>unit-sbe-power9</id>
     <parent>unit</parent>
@@ -2696,6 +2492,9 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- OCC
+     Nimbus : 1 per chip
+     Cumulus: 1  -->
   <targetType>
     <id>unit-occ-power9</id>
     <parent>unit</parent>
@@ -2727,6 +2526,7 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
+  <!-- L4 (Centaur) -->
   <targetType>
     <id>unit-l4-power9</id>
     <parent>unit</parent>
@@ -2893,4 +2693,277 @@
       <default>PANEL</default>
     </attribute>
   </targetType>
+  <!-- End p9 sub-units -->
+  <targetTypeExtension>
+    <id>base</id>
+    <attribute>
+      <id>IPMI_INSTANCE</id>
+      <default>0xFF</default>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ENGINE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_MASTER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVTYPE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_SLAVE_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_BUS_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEV_PURPOSE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ELEMENTS</id>
+    </attribute>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sys-sys-power9</id>
+    <attribute>
+      <id>ADC_CHANNEL_FUNC_IDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GNDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GAINS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_OFFSETS</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_MODES</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_PINS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_QUAD_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
+    </attribute>
+    <attribute>
+      <id>OPAL_MODEL</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>PHYP_SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>ASCII_VPD_LX_KEYWORD</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PM_MODE</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENTER_TIME_SECONDS</id>
+    </attribute>
+    <attribute>
+      <id>IPS_ENTER_UTILIZATION_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>IPS_EXIT_TIME_SECONDS</id>
+    </attribute>
+    <attribute>
+      <id>IPS_EXIT_UTILIZATION_PERCENT</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>enc-node-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-processor</id>
+    <attribute>
+      <id>PROC_HW_TOPOLOGY</id>
+      <default>0x00000000</default>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-processor-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-membuf-centaur</id>
+    <attribute>
+      <id>GPIO_INFO</id>
+    </attribute>
+    <attribute>
+      <id>ISDIMM_MBVPD_INDEX</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-core-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-ex-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-eq-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>lcard-dimm</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-mcs-nimbus</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-xbus-nimbus</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>occ</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>chip-tpm-cectpm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sp</id>
+    <attribute>
+      <id>CHIP_VER</id>
+    </attribute>
+    <attribute>
+      <id>HW_VER</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <attribute>
+      <id>ROLE</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>bmc</id>
+    <attribute>
+      <id>CHIP_VER</id>
+    </attribute>
+    <attribute>
+      <id>HW_VER</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <attribute>
+      <id>ROLE</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-pci-power9</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>uart</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sp</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>power-supply</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>fan</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>vrm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>usb</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>eth</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>panel</id>
+  </targetTypeExtension>
 </attributes>
