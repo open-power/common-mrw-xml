@@ -1232,6 +1232,9 @@
       <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
     </attribute>
     <attribute>
+      <id>WOF_TABLE_LID_NUMBER</id>
+    </attribute>
+    <attribute>
       <id>VDM_ENABLE</id>
     </attribute>
     <attribute>
@@ -2693,40 +2696,6 @@
   </targetType>
   <!-- End p9 sub-units -->
   <targetTypeExtension>
-    <id>base</id>
-    <attribute>
-      <id>IPMI_INSTANCE</id>
-      <default>0xFF</default>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ENGINE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_MASTER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVTYPE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_SLAVE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_BUS_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEV_PURPOSE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ELEMENTS</id>
-    </attribute>
-    <attribute>
-      <id>ORDINAL_ID</id>
-    </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
     <id>sys-sys-power9</id>
     <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
@@ -2748,6 +2717,9 @@
     </attribute>
     <attribute>
       <id>APSS_GPIO_PORT_PINS</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
@@ -2811,9 +2783,6 @@
     </attribute>
     <attribute>
       <id>OPAL_MODEL</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
       <id>PHYP_SYSTEM_TYPE</id>
@@ -2906,6 +2875,40 @@
   </targetTypeExtension>
   <targetTypeExtension>
     <id>chip-tpm-cectpm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>base</id>
+    <attribute>
+      <id>HDAT_I2C_ENGINE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_MASTER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVTYPE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_SLAVE_PORT</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_BUS_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEV_PURPOSE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ELEMENTS</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_INSTANCE</id>
+      <default>0xFF</default>
+    </attribute>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>sp</id>
