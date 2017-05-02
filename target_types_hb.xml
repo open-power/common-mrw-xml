@@ -1,4 +1,3 @@
-<?xml version="1.0"?>
 <attributes>
   <!-- =====================================================================
      HOST BOOT TARGETS
@@ -794,7 +793,8 @@
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -1051,7 +1051,8 @@
       <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -1089,9 +1090,6 @@
     </attribute>
     <attribute>
       <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_MODE</id>
     </attribute>
     <!-- proc_fbc_eff_config -->
     <!-- End proc_fbc_eff_config -->
