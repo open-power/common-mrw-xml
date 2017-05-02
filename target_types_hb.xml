@@ -793,8 +793,7 @@
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>
-      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>

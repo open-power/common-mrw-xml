@@ -5945,8 +5945,7 @@
   <persistency>non-volatile</persistency>
   <readable />
   <hwpfToHbAttrMap>
-    <id>
-    ATTR_MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+    <id>ATTR_MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     <macro>DIRECT</macro>
   </hwpfToHbAttrMap>
 </attribute>
@@ -5963,8 +5962,7 @@
   <persistency>non-volatile</persistency>
   <readable />
   <hwpfToHbAttrMap>
-    <id>
-    ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
+    <id>ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     <macro>DIRECT</macro>
   </hwpfToHbAttrMap>
 </attribute>
