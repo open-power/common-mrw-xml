@@ -138,6 +138,18 @@
       <id>PROC_EFF_FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
+      <id>PM_PBAX_NODEID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_GROUPID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_CHIPID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_BRDCST_ID_VECTOR</id>
+    </attribute>
+    <attribute>
       <!-- Processor chips have an SBE -->
       <id>CHIP_HAS_SBE</id>
       <default>1</default>
@@ -170,18 +182,6 @@
     </attribute>
     <attribute>
       <id>PM_APSS_CHIP_SELECT</id>
-    </attribute>
-    <attribute>
-      <id>PM_PBAX_NODEID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_GROUPID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_CHIPID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_BRDCST_ID_VECTOR</id>
     </attribute>
     <attribute>
       <id>PM_SLEEP_ENTRY</id>
