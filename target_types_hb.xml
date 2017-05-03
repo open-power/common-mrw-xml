@@ -138,18 +138,6 @@
       <id>PROC_EFF_FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
-      <id>PM_PBAX_NODEID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_GROUPID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_CHIPID</id>
-    </attribute>
-    <attribute>
-      <id>PBAX_BRDCST_ID_VECTOR</id>
-    </attribute>
-    <attribute>
       <!-- Processor chips have an SBE -->
       <id>CHIP_HAS_SBE</id>
       <default>1</default>
@@ -182,6 +170,18 @@
     </attribute>
     <attribute>
       <id>PM_APSS_CHIP_SELECT</id>
+    </attribute>
+    <attribute>
+      <id>PM_PBAX_NODEID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_GROUPID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_CHIPID</id>
+    </attribute>
+    <attribute>
+      <id>PBAX_BRDCST_ID_VECTOR</id>
     </attribute>
     <attribute>
       <id>PM_SLEEP_ENTRY</id>
@@ -793,7 +793,8 @@
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -1048,6 +1049,13 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
+    </attribute>
+    <attribute>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_AVDD_OFFSET_DISABLE</id>
