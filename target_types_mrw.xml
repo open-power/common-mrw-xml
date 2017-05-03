@@ -2406,6 +2406,66 @@
 			<id>IO_CONFIG_SELECT</id>
 		</attribute>
 	</targetType>
+
+	<!-- OBus -->
+	<targetType>
+		<id>slot-obusslot</id>
+		<parent>mrw-base</parent>
+		<attribute>
+			<id>CLASS</id>
+			<default>CONNECTOR</default>
+		</attribute>
+        <attribute>
+            <id>POSITION</id>
+        </attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>CONNECTOR_TYPE</id>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>slot-obusslot-generic</id>
+		<parent>slot-obusslot</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+		<attribute>
+			<id>SLOT_NAME</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SLOT_INDEX</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SLOT_TYPE</id>
+			<default></default>
+		</attribute>				
+		<attribute>
+			<id>HDDW_ORDER</id>
+			<default></default>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>card-obuscard</id>
+		<parent>mrw-base</parent>
+		<attribute>
+			<id>CLASS</id>
+			<default>CARD</default>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>card-obuscard-cablecard</id>
+		<parent>card-obuscard</parent>
+		<parent_type>slot-obusslot-generic</parent_type>
+	</targetType>
+	<targetType>
+		<id>card-gv100card-card</id>
+		<parent>card-obuscard</parent>
+		<parent_type>slot-obusslot-generic</parent_type>
+	</targetType>
 	<!-- Bus targets -->
 	<targetType>
 		<id>I2C</id>

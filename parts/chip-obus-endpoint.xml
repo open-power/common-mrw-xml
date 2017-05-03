@@ -1,0 +1,33 @@
+<partInstance>
+  <targetPart>
+    <id>chip-obus-endpoint</id>
+    <child_id>obus</child_id>
+    <instance_name>obus_endpoint</instance_name>
+    <is_root>true</is_root>
+    <parent>chip</parent>
+    <parent_type>card-motherboard</parent_type>
+    <parent_type>card-daughtercard</parent_type>
+    <position>0</position>
+    <type>chip-obus-endpoint</type>
+  </targetPart>
+  <targetPart>
+    <id>obus</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <instance_name>obus</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-obus-endpoint</type>
+  </targetPart>
+</partInstance>
