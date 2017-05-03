@@ -581,12 +581,6 @@
   <child_id>pec2</child_id>
   <child_id>obus0</child_id>
   <child_id>obus3</child_id>
-  <child_id>nvbus0</child_id>
-  <child_id>nvbus1</child_id>
-  <child_id>nvbus2</child_id>
-  <child_id>nvbus3</child_id>
-  <child_id>nvbus4</child_id>
-  <child_id>nvbus5</child_id>
   <child_id>ppe0</child_id>
   <child_id>ppe10</child_id>
   <child_id>ppe11</child_id>
@@ -6048,8 +6042,132 @@
   <instance_name>obus0</instance_name>
   <is_root>false</is_root>
   <position>-1</position>
+  <child_id>obus-brick0</child_id>
+  <child_id>obus-brick1</child_id>
+  <child_id>obus-brick2</child_id>
   <type>unit-obus-nimbus</type>
 </targetPart>
+<targetPart>
+	<id>obus-brick0</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick0</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+<targetPart>
+	<id>obus-brick1</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick1</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+<targetPart>
+	<id>obus-brick2</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick2</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+
 <targetPart>
   <id>obus3</id>
   <attribute>
@@ -6145,8 +6263,133 @@
   <instance_name>obus3</instance_name>
   <is_root>false</is_root>
   <position>-1</position>
+  <child_id>obus-brick9</child_id>
+  <child_id>obus-brick10</child_id>
+  <child_id>obus-brick11</child_id>
   <type>unit-obus-nimbus</type>
 </targetPart>
+
+<targetPart>
+	<id>obus-brick9</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick9</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+<targetPart>
+	<id>obus-brick10</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick10</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+<targetPart>
+	<id>obus-brick11</id>
+	<type>unit-obus-brick-nimbus</type>
+	<is_root>false</is_root>
+	<instance_name>obus-brick11</instance_name>
+	<position>-1</position>
+	<attribute>
+    <id>BUS_TYPE</id>
+    <default>OBUS</default>
+  </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0x00000001</default>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+</targetPart>
+
 <targetPart>
   <id>nvbus0</id>
   <attribute>

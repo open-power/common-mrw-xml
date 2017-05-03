@@ -2230,27 +2230,65 @@
      Nimbus : 1 per chip
      Cumulus: 1 per chip -->
   <targetType>
-    <id>unit-nv-power9</id>
-    <parent>unit</parent>
+    <id>unit-obus-brick-power9</id>
+    <parent>unit-obus-power9</parent>
     <attribute>
       <id>TYPE</id>
-      <default>NV</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
+      <default>OBUS_BRICK</default>
     </attribute>
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>PARENT_PERVASIVE</id>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
     </attribute>
     <attribute>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0x00000001</default>
       <!-- GARD -->
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-obus-brick-nimbus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>NIMBUS</default>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-obus-brick-cumulus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>CUMULUS</default>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-nv-power9</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+      <id>TYPE</id>
+      <default>NV</default>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>NVLINK</default>
     </attribute>
   </targetType>
   <targetType>

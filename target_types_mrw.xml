@@ -3569,16 +3569,8 @@
 <targetType>
     <id>unit-obus-power9</id>
     <parent>unit</parent>
-    <attribute>
-        <id>BUS_TYPE</id>
-        <default>OBUS</default>
-    </attribute>
-    <attribute>
-         <id>DIRECTION</id>
-         <default>INOUT</default>
-    </attribute>
 </targetType>
-    		
+
 <targetType>
     <id>unit-obus-nimbus</id>
     <parent>unit-obus-power9</parent>
@@ -3597,12 +3589,47 @@
     </attribute>
 </targetType>
 
+
+<!-- OBUS Brick
+     Nimbus : 3 per OBUS
+     Cumulus: 3 per OBUS -->
+<targetType>
+    <id>unit-obus-brick-power9</id>
+    <parent>unit-obus-power9</parent>
+    <attribute>
+        <id>BUS_TYPE</id>
+        <default>OBUS</default>
+    </attribute>
+    <attribute>
+         <id>DIRECTION</id>
+         <default>INOUT</default>
+    </attribute>
+</targetType>
+    		
+<targetType>
+    <id>unit-obus-brick-nimbus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+        <id>MODEL</id>
+        <default>NIMBUS</default>
+    </attribute>
+</targetType>
+
+<targetType>
+    <id>unit-obus-brick-cumulus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+        <id>MODEL</id>
+        <default>CUMULUS</default>
+    </attribute>
+</targetType>
+
 <!-- NV
      Nimbus : 6 per chip
      Cumulus: 12 per chip  -->
 <targetType>
     <id>unit-nv-power9</id>
-    <parent>unit</parent>
+    <parent>unit-obus-brick-power9</parent>
     <attribute>
         <id>TYPE</id>
         <default>NV</default>
