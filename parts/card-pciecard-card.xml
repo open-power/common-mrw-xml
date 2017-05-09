@@ -4,6 +4,7 @@
     <child_id>pciep</child_id>
     <child_id>pgood</child_id>
 	<child_id>enable</child_id>
+	<child_id>clk-in</child_id>
     <instance_name>pciecard</instance_name>
     <is_root>true</is_root>
     <parent>card-pciecard</parent>
@@ -86,5 +87,43 @@
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-enable-generic</type>
-  </targetPart>  
+  </targetPart>
+  <targetPart>
+    <id>clk-in</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+    <instance_name>clk-in</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-unit</parent>
+    <position>-1</position>
+    <type>unit-clk-slave</type>
+  </targetPart>    
 </partInstance>

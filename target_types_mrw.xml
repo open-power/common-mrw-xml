@@ -1260,6 +1260,25 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>unit-usb-slave</id>
+		<parent>mrw-unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>USB</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+		<attribute>
+			<id>PIN_NAME</id>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>unit-clk-master</id>
 		<parent>mrw-unit</parent>
 		<attribute>
@@ -2133,11 +2152,19 @@
 		<id>card-pciecard-cablecard</id>
 		<parent>card-pciecard</parent>
 		<parent_type>slot-pcieslot-generic</parent_type>
+		<attribute>
+			<id>RU_TYPE</id>
+			<default></default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>card-pciecard-card</id>
 		<parent>card-pciecard</parent>
 		<parent_type>slot-pcieslot-generic</parent_type>
+				<attribute>
+			<id>RU_TYPE</id>
+			<default></default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-pciconfig0-venice</id>
