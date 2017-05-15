@@ -3572,6 +3572,16 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>chip-apss-power9</id>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+		<parent>mrw-chip</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>APSS</default>
+		</attribute>
+	</targetType>
+	<targetType>
 		<id>chip-processor</id>
 		<parent>chip</parent>
 		<attribute>
@@ -4975,22 +4985,19 @@
 		<id>apss.unit-adc-generic</id>
 		<parent>mrw-unit</parent>
 		<attribute>
-			<id>CHANNEL</id>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
 		</attribute>
 		<attribute>
-			<id>FUNCTION_ID</id>
+			<id>ADC_CHANNEL_ID</id>
 		</attribute>
 		<attribute>
-			<id>FUNCTION_NAME</id>
+			<id>ADC_CHANNEL_GAIN</id>
 		</attribute>
 		<attribute>
-			<id>GAIN</id>
+			<id>ADC_CHANNEL_GROUND</id>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
-			<id>OFFSET</id>
+			<id>ADC_CHANNEL_OFFSET</id>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -4998,7 +5005,22 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
+           <attribute>
+                <id>IPMI_SENSOR_NAME_SUFFIX</id>
+           </attribute>
+           <attribute>
+                <id>IPMI_ENTITY_ID</id>
+                <default>0xD7</default>
+           </attribute>
+           <attribute>
+                <id>IPMI_SENSOR_READING_TYPE</id>
+                <default>0x01</default>
+           </attribute>
+           <attribute>
+                <id>IPMI_SENSOR_TYPE</id>
+                <default>0xC2</default>
+           </attribute>		
 	</targetType>
 	<targetType>
 		<id>apss.unit-adc_global-generic</id>
