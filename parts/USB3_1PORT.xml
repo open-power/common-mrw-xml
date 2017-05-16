@@ -12,10 +12,6 @@
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>USB3_1PORT.usb-0</child_id>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>

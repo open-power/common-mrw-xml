@@ -15,10 +15,6 @@
 	<child_id>BCM5719.port2</child_id>
 	<child_id>BCM5719.port3</child_id>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>

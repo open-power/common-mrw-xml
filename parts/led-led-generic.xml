@@ -2,6 +2,10 @@
   <targetPart>
     <id>led-led-generic</id>
     <attribute>
+      <id>CLASS</id>
+      <default>LED</default>
+    </attribute>
+    <attribute>
       <id>LED_COLOR</id>
       <default>GREEN</default>
     </attribute>

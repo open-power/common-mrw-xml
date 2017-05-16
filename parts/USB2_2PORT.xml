@@ -13,10 +13,6 @@
 	<child_id>USB2_2PORT.usb-0</child_id>
 	<child_id>USB2_2PORT.usb-1</child_id>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>
