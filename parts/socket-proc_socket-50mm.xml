@@ -6,6 +6,10 @@
       <default>0</default>
     </attribute>
     <attribute>
+    	<id>FABRIC_GROUP_ID</id>
+    	<default></default>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_IOP_CONFIG</id>
       <default>1</default>
     </attribute>
