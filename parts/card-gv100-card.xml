@@ -1,12 +1,12 @@
 <partInstance>
   <targetPart>
     <id>card-gv100-card</id>
-    <child_id>nvlink-0</child_id>
-    <child_id>nvlink-1</child_id>
-    <child_id>nvlink-2</child_id>
-    <child_id>nvlink-3</child_id>
-    <child_id>nvlink-4</child_id>
-    <child_id>nvlink-5</child_id>
+    <child_id>brick-0</child_id>
+    <child_id>brick-1</child_id>
+    <child_id>brick-2</child_id>
+    <child_id>brick-3</child_id>
+    <child_id>brick-4</child_id>
+    <child_id>brick-5</child_id>
     <child_id>gv100.i2c-0</child_id>
     <instance_name>gv100card</instance_name>
     <is_root>true</is_root>
@@ -16,7 +16,7 @@
     <type>card-gv100card-card</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-0</id>
+    <id>brick-0</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -29,14 +29,14 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-0</instance_name>
+    <instance_name>brick-0</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-obus-endpoint</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-1</id>
+    <id>brick-1</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -49,14 +49,14 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-1</instance_name>
+    <instance_name>brick-1</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-obus-endpoint</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-2</id>
+    <id>brick-2</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -69,14 +69,14 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-2</instance_name>
+    <instance_name>brick-2</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-obus-endpoint</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-3</id>
+    <id>brick-3</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -89,14 +89,14 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-3</instance_name>
+    <instance_name>brick-3</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-obus-endpoint</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-4</id>
+    <id>brick-4</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -109,14 +109,14 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-4</instance_name>
+    <instance_name>brick-4</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-obus-endpoint</type>
   </targetPart>
   <targetPart>
-    <id>nvlink-5</id>
+    <id>brick-5</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
@@ -129,7 +129,7 @@
       <id>DIRECTION</id>
       <default>INOUT</default>
     </attribute>
-    <instance_name>nvlink-5</instance_name>
+    <instance_name>brick-5</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
