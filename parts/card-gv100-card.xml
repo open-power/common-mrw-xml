@@ -8,6 +8,7 @@
     <child_id>brick-4</child_id>
     <child_id>brick-5</child_id>
     <child_id>gv100.i2c-0</child_id>
+    <child_id>pciep</child_id>
     <instance_name>gv100card</instance_name>
     <is_root>true</is_root>
     <parent>card-obuscard</parent>
@@ -183,4 +184,24 @@
 		<default>NA</default>
 	</attribute>
 </targetPart>
+  <targetPart>
+    <id>pciep</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>PCIE</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <instance_name>pciep</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-pcie-endpoint</type>
+  </targetPart>
 </partInstance>
