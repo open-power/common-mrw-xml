@@ -704,9 +704,6 @@
       <id>FREQ_PCIE_MHZ</id>
     </attribute>
     <attribute>
-      <id>FREQ_X_MHZ</id>
-    </attribute>
-    <attribute>
       <id>MSS_MBA_ADDR_INTERLEAVE_BIT</id>
     </attribute>
     <attribute>
@@ -984,6 +981,9 @@
       <id>PAYLOAD_IN_MIRROR_MEM</id>
     </attribute>
     <!-- AVP override for fused cores or normal cores -->
+    <attribute>
+      <id>FUSED_CORE_MODE</id>
+    </attribute>
     <attribute>
       <id>MIRROR_BASE_ADDRESS</id>
     </attribute>
@@ -1445,27 +1445,6 @@
       <id>IMT_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>PHB_MMIO_ADDRS_64</id>
-    </attribute>
-    <attribute>
-      <id>PHB_MMIO_ADDRS_32</id>
-    </attribute>
-    <attribute>
-      <id>PHB_XIVE_ESB_ADDRS</id>
-    </attribute>
-    <attribute>
-      <id>PHB_REG_ADDRS</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_ROUTING_ESB_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_ROUTING_END_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_PRESENTATION_NVT_ADDR</id>
-    </attribute>
-    <attribute>
       <id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id>
     </attribute>
     <attribute>
@@ -1488,9 +1467,6 @@
     </attribute>
     <attribute>
       <id>XIVE_CONTROLLER_BAR_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_PRESENTATION_BAR_ADDR</id>
     </attribute>
     <attribute>
       <id>PSI_HB_ESB_ADDR</id>
@@ -2262,31 +2238,88 @@
       <default>CUMULUS</default>
     </attribute>
   </targetType>
-  <!-- NV
-     Nimbus : 1 per chip
-     Cumulus: 1 per chip -->
+  <!-- OBUS Brick
+     Nimbus : 3 per OBUS
+     Cumulus: 3 per OBUS -->
   <targetType>
-    <id>unit-nv-power9</id>
-    <parent>unit</parent>
+    <id>unit-obus-brick-power9</id>
+    <parent>unit-obus-power9</parent>
     <attribute>
       <id>TYPE</id>
-      <default>NV</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
+      <default>OBUS_BRICK</default>
     </attribute>
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
     </attribute>
     <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+      <default>0</default>
+      <!-- GARD -->
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+    </attribute>
+    <attribute>
       <id>PARENT_PERVASIVE</id>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-obus-brick-nimbus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>NIMBUS</default>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-obus-brick-cumulus</id>
+    <parent>unit-obus-brick-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>CUMULUS</default>
+    </attribute>
+  </targetType>
+  <!-- @TODO RTC:173529 - Remove NV once it is not used anywhere -->
+  <targetType>
+    <id>unit-nv-power9</id>
+    <parent>unit-obus-power9</parent>
+    <attribute>
+      <id>TYPE</id>
+      <default>NV</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
     </attribute>
     <attribute>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0x00000001</default>
       <!-- GARD -->
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+      <default>SMP</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -2300,6 +2333,41 @@
   <targetType>
     <id>unit-nv-cumulus</id>
     <parent>unit-nv-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>CUMULUS</default>
+    </attribute>
+  </targetType>
+  <!-- One NPU per proc -->
+  <targetType>
+    <id>unit-npu-power9</id>
+    <parent>unit</parent>
+    <attribute>
+      <id>TYPE</id>
+      <default>NPU</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-npu-nimbus</id>
+    <parent>unit-npu-power9</parent>
+    <attribute>
+      <id>MODEL</id>
+      <default>NIMBUS</default>
+    </attribute>
+  </targetType>
+  <targetType>
+    <id>unit-npu-cumulus</id>
+    <parent>unit-npu-power9</parent>
     <attribute>
       <id>MODEL</id>
       <default>CUMULUS</default>
@@ -2931,6 +2999,12 @@
   </targetTypeExtension>
   <targetTypeExtension>
     <id>chip-tpm-cectpm</id>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>unit-occ-power9</id>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>base</id>
