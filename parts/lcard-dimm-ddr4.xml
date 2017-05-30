@@ -527,14 +527,22 @@
     <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     <default>0x0</default>
   </attribute>
-  <attribute>
-    <id>I2C_ADDRESS</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>I2C_SPEED</id>
-    <default></default>
-  </attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>I2C_SPEED</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>I2C_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>I2C_PURPOSE</id>
+		<default></default>
+	</attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
     <default>0xFF</default>
