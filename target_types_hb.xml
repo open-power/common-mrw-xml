@@ -126,10 +126,6 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>FABRIC_NODE_ID</id>
-    </attribute>
-    <!-- DEPRECATED -->
-    <attribute>
       <id>FABRIC_GROUP_ID</id>
     </attribute>
     <attribute>
@@ -806,7 +802,8 @@
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -1066,7 +1063,8 @@
       <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -2264,6 +2262,9 @@
     </attribute>
     <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>OBUS_SLOT_INDEX</id>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
