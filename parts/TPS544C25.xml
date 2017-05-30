@@ -152,6 +152,10 @@
 		<default></default>
 	</attribute>
 	<attribute>
+		<id>I2C_SPEED</id>
+		<default></default>
+	</attribute>
+	<attribute>
 		<id>I2C_TYPE</id>
 		<default></default>
 	</attribute>
@@ -201,6 +205,10 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>I2C_SPEED</id>
 		<default></default>
 	</attribute>
 	<attribute>

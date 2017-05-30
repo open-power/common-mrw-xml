@@ -80,6 +80,10 @@
 		<default>0x64</default>
 	</attribute>
 	<attribute>
+		<id>I2C_SPEED</id>
+		<default></default>
+	</attribute>
+	<attribute>
 		<id>I2C_TYPE</id>
 		<default></default>
 	</attribute>
