@@ -1240,9 +1240,6 @@
 			<id>I2C_ADDRESS</id>
 		</attribute>
 		<attribute>
-			<id>I2C_SPEED</id>
-		</attribute>
-		<attribute>
 			<id>I2C_TYPE</id>
 		</attribute>
 		<attribute>
@@ -1834,9 +1831,6 @@
 		<parent_type>card-daughtercard</parent_type>
         <attribute>
             <id>I2C_ADDRESS</id>
-        </attribute>
-        <attribute>
-            <id>I2C_SPEED</id>
         </attribute>
         <attribute>
             <id>I2C_TYPE</id>
@@ -5093,10 +5087,6 @@
 		</attribute>
 		<attribute>
 			<id>I2C_ADDRESS</id>
-			<default></default>
-		</attribute>
-		<attribute>
-			<id>I2C_SPEED</id>
 			<default></default>
 		</attribute>
 		<attribute>
