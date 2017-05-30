@@ -1418,7 +1418,6 @@
 		<persistency>non-volatile</persistency>
 		<readable />
 		<writeable />
-		<global />
 	</attribute>
 	<attribute>
 		<id>VPD_SIZE</id>
@@ -1453,6 +1452,28 @@
 		<simpleType>
 			<uint16_t>
 			</uint16_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>I2C_TYPE</id>
+		<description>I2C Type for HDAT_I2C_DEVICE_TYPE</description>
+		<simpleType>
+			<string>
+			</string>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>I2C_PURPOSE</id>
+		<description>I2C Purpose for HDAT_I2C_DEVICE_PURPOSE</description>
+		<simpleType>
+			<string>
+			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable />
