@@ -234,18 +234,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>I2C_SPEED</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_PURPOSE</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>

@@ -95,21 +95,8 @@
 		<id>TYPE</id>
 		<default>NA</default>
 	</attribute>
-	<attribute>
-		<id>I2C_ADDRESS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_SPEED</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>I2C_PURPOSE</id>
-		<default></default>
+			<attribute>
+			<id>I2C_ADDRESS</id>
 	</attribute>
 </targetPart>
 </targetInstances>

@@ -1458,26 +1458,6 @@
 		<readable />
 		<writeable />
 	</attribute>
-	<attribute>
-		<id>I2C_TYPE</id>
-		<description>I2C Bus Type for HDAT_I2C_DEVICE_TYPE</description>
-		<simpleType>
-			<string>
-			</string>
-		</simpleType>
-		<persistency>non-volatile</persistency>
-		<readable />
-	</attribute>
-	<attribute>
-		<id>I2C_PURPOSE</id>
-		<description>I2C Bus Purpose for HDAT_I2C_DEVICE_PURPOSE</description>
-		<simpleType>
-			<string>
-			</string>
-		</simpleType>
-		<persistency>non-volatile</persistency>
-		<readable />
-	</attribute>
 		<attribute>
 		<id>COOLING_ZONE_MASK</id>
 		<description>Cooling zone mask for temperature sensors</description>
