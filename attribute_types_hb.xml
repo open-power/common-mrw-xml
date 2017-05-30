@@ -1528,23 +1528,6 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
-    <id>FABRIC_NODE_ID</id>
-    <description>DEPRECATED!!!! Chip attribute. Logical fabric node
-    the chip belongs to. Provided by the Machine Readable Workbook.
-    Can vary across drawers.</description>
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_FABRIC_NODE_ID</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
     <id>FABRIC_GROUP_ID</id>
     <description>Chip attribute. Logical fabric group the chip
     belongs to. Provided by the Machine Readable Workbook. Can vary
@@ -7548,6 +7531,23 @@
     <readable />
     <hwpfToHbAttrMap>
       <id>ATTR_OBUS_BRICK_LANE_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OBUS_SLOT_INDEX</id>
+    <description>Position of the obus slot that the Obus brick is
+    connected to (represented in decimal). There is only one slot
+    that a given brick connects to and there are only 6 slots per
+    proc, so, we just need a single uint8_t representing the
+    position of the slot. Provided by the MRW.</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_OBUS_SLOT_INDEX</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
