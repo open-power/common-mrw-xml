@@ -1,4 +1,22 @@
 <attributes>
+	<enumerationType>
+		<id>COOLING_PROFILE</id>
+		<description>Enumerates the different cooling profiles</description>
+		<enumerator>
+			<name>ALL</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>AIR</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>WATER</name>
+			<value>2</value>
+		</enumerator>
+		<default>ALL</default>
+	</enumerationType>
+
 	<attribute>
 		<id>MANUFACTURER</id>
         <description>The manufacturer</description>
@@ -159,4 +177,16 @@
 		<readable/>
 	</attribute>
 
+	<attribute>
+		<id>COOLING_ZONE_PROFILE</id>
+		<description>Which cooling zone profile the part participates in.
+                     For example, maybe in a zone only when air cooled. </description>
+		<simpleType>
+			<enumeration>
+				<id>COOLING_PROFILE</id>
+			</enumeration>
+		</simpleType>
+		<readable/>
+        <global/>
+	</attribute>
 </attributes>

@@ -18,6 +18,14 @@
 		<default></default>
 	</attribute>
 	<attribute>
+		<id>COOLING_ZONE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>COOLING_ZONE_PROFILE</id>
+		<default>ALL</default>
+	</attribute>
+	<attribute>
 		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
