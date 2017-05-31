@@ -14,10 +14,6 @@
 	<child_id>ORGATE.gpio-slave-1</child_id>
 	<child_id>ORGATE.gpio-slave-2</child_id>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>

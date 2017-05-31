@@ -371,6 +371,10 @@
             <default></default>
         </attribute>
         <attribute>
+            <id>PCIE_LANE_GROUP</id>
+            <default>0</default>
+        </attribute>        
+        <attribute>
             <id>PCIE_LANE_SET</id>
             <default>0</default>
         </attribute>

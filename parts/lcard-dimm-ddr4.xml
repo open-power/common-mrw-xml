@@ -85,35 +85,6 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
     <default>0x0</default>
   </attribute>
@@ -152,10 +123,6 @@
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>MSS_EFF_VPD_VERSION</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>ORDINAL_ID</id>
@@ -207,26 +174,6 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>SERIAL_NUMBER</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>SLCA_INDEX</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>SLCA_RID</id>
-    <default></default>
-  </attribute>
-  <attribute>
-    <id>SPD_OVERRIDE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SPD_OVERRIDE_ENABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>STANDBY_PLUGGABLE</id>
     <default></default>
   </attribute>
@@ -237,27 +184,6 @@
   <attribute>
     <id>VPD_REC_NUM</id>
     <default>0xFFFF</default>
-  </attribute>
-  <attribute>
-    <id>VPD_SWITCHES</id>
-    <default>
-      <field>
-        <id>pnorCacheValid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>pnorCacheValidRT</id>
-        <value></value>
-      </field>
-      <field>
-        <id>disableWriteToPnorRT</id>
-        <value></value>
-      </field>
-      <field>
-        <id>reserved</id>
-        <value></value>
-      </field>
-    </default>
   </attribute>
   <child_id>ddr4</child_id>
   <child_id>spd</child_id>
@@ -311,35 +237,6 @@
   <attribute>
     <id>HUID</id>
     <default></default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -430,19 +327,11 @@
     <default>0x01</default>
   </attribute>
   <attribute>
-    <id>CHIP_ID</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>CLASS</id>
     <default>CHIP</default>
   </attribute>
   <attribute>
     <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>EC</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -489,35 +378,6 @@
   <attribute>
     <id>HUID</id>
     <default></default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -661,35 +521,6 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
     <default>0x0</default>
   </attribute>
@@ -782,20 +613,12 @@
     <default></default>
   </attribute>
   <attribute>
-    <id>CHIP_ID</id>
-    <default></default>
-  </attribute>
-  <attribute>
     <id>CLASS</id>
     <default>CHIP</default>
   </attribute>
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>EC</id>
-    <default></default>
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
@@ -841,35 +664,6 @@
   <attribute>
     <id>HUID</id>
     <default></default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -987,35 +781,6 @@
   <attribute>
     <id>HUID</id>
     <default></default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value></value>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value></value>
-      </field>
-      <field>
-        <id>present</id>
-        <value></value>
-      </field>
-      <field>
-        <id>functional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value></value>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value></value>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
