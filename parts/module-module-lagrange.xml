@@ -2,7 +2,7 @@
 <version>2.1</version>
 <targetInstances>
 <targetPart>
-  <id>module-0</id>
+  <id>module-module-lagrange</id>
   <attribute>
     <id>AFFINITY_PATH</id>
     <default></default>
@@ -139,7 +139,9 @@
   </attribute>
   <child_id>p9_proc_l</child_id>
   <instance_name>module</instance_name>
-  <is_root>false</is_root>
+  <is_root>true</is_root>
+  <parent>card</parent>
+  <parent_type>socket-proc_socket-68mm</parent_type>
   <position>0</position>
   <type>module-module-lagrange</type>
 </targetPart>
