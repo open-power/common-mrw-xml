@@ -36,13 +36,25 @@
 	<child_id>PEX8725.gpio-10</child_id>
 	<child_id>PEX8725.gpio-11</child_id>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>
+	<attribute>
+		<id>VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>DEVICE_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_DEVICE_ID</id>
+		<default></default>
+	</attribute>	
 	<attribute>
 		<id>MODEL</id>
 		<default></default>
