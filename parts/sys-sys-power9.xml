@@ -520,9 +520,6 @@
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
-      <id>FREQ_X_MHZ</id>
-    </attribute>
-    <attribute>
     	<id>FREQ_X_HFT</id>
     </attribute>
     <attribute>
