@@ -9,6 +9,10 @@
 	<child_id>cablecard-PCA9551</child_id>
 	<child_id>cablecard-TMP275A</child_id>
 	<child_id>clk-in</child_id>
+	<attribute>
+		<id>CARD_TYPE</id>
+		<default>PCIE</default>
+	</attribute>
     <instance_name>pciecablecard</instance_name>
     <is_root>true</is_root>
     <parent>card-pciecard</parent>

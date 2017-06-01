@@ -5,6 +5,10 @@
     <child_id>pgood</child_id>
 	<child_id>enable</child_id>
 	<child_id>clk-in</child_id>
+	<attribute>
+		<id>CARD_TYPE</id>
+		<default>GENERIC_PCIE</default>
+	</attribute>	
     <instance_name>pciecard</instance_name>
     <is_root>true</is_root>
     <parent>card-pciecard</parent>
