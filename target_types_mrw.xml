@@ -1262,6 +1262,22 @@
 		<attribute>
 			<id>PIN_NAME</id>
 		</attribute>
+		<attribute>
+			<id>VENDOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>DEVICE_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SUBSYSTEM_VENDOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>SUBSYSTEM_DEVICE_ID</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>unit-usb-slave</id>
@@ -2142,7 +2158,11 @@
 		<attribute>
 			<id>64BIT_DMA_SIZE</id>
 			<default></default>
-		</attribute>						
+		</attribute>
+		<attribute>
+			<id>MAX_POWER</id>
+			<default></default>
+		</attribute>								
 	</targetType>
 	<targetType>
 		<id>card-pciecard</id>
@@ -3656,6 +3676,48 @@
     <id>unit-pec-power9</id>
     <parent>unit</parent>
 </targetType>
+
+  <!-- unit-phb-power9 -->
+  <targetType>
+    <id>unit-phb-nimbus</id>
+    <parent>unit-phb-power9</parent>
+	<attribute>
+		<id>VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>DEVICE_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_DEVICE_ID</id>
+		<default></default>
+	</attribute>
+  </targetType>
+  <targetType>
+    <id>unit-phb-cumulus</id>
+    <parent>unit-phb-power9</parent>
+	<attribute>
+		<id>VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>DEVICE_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_DEVICE_ID</id>
+		<default></default>
+	</attribute>
+  </targetType>
 
 <!-- XBUS
      Nimbus : 1 per chip
