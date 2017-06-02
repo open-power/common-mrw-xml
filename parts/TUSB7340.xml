@@ -38,6 +38,22 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>DEVICE_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_VENDOR_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_DEVICE_ID</id>
+		<default></default>
+	</attribute>	
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
