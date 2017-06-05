@@ -623,9 +623,6 @@
       <default>affinity:sys-0</default>
     </attribute>
     <attribute>
-      <id>XSCOM_BASE_ADDRESS</id>
-    </attribute>
-    <attribute>
       <id>IS_SIMULATION</id>
       <default>0</default>
     </attribute>
@@ -800,6 +797,13 @@
     </attribute>
     <attribute>
       <id>MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
@@ -1056,7 +1060,8 @@
       <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+      <id>
+      MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
@@ -1409,12 +1414,6 @@
       <id>FSP_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>PSI_BRIDGE_BASE_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>INTP_BASE_ADDR</id>
-    </attribute>
-    <attribute>
       <id>PHB_BASE_ADDRS</id>
     </attribute>
     <attribute>
@@ -1439,9 +1438,6 @@
       <id>VAS_USER_WINDOW_CONTEXT_ADDR</id>
     </attribute>
     <attribute>
-      <id>LPC_BUS_ADDR</id>
-    </attribute>
-    <attribute>
       <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
     </attribute>
     <attribute>
@@ -1454,13 +1450,7 @@
       <id>NVIDIA_PHY1_REG_ADDR</id>
     </attribute>
     <attribute>
-      <id>XIVE_CONTROLLER_BAR_ADDR</id>
-    </attribute>
-    <attribute>
       <id>PSI_HB_ESB_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_THREAD_MGMT1_BAR_ADDR</id>
     </attribute>
     <attribute>
       <id>NX_RNG_ADDR</id>
@@ -1492,7 +1482,7 @@
       <id>PROC_DCM_INSTALLED</id>
     </attribute>
     <attribute>
-      <id>XSCOM_BASE_ADDRESS</id>
+      <id>PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>I2C_BUS_DIV_REF</id>
@@ -1626,9 +1616,6 @@
       <default>8</default>
     </attribute>
     <!-- End processor characteristics for HDAT -->
-    <attribute>
-      <id>LPC_BASE_ADDR</id>
-    </attribute>
     <!-- p9_setup_bars - Begin -->
     <attribute>
       <id>PROC_NPU_PHY0_BAR_ENABLE</id>
