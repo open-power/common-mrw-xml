@@ -1938,15 +1938,6 @@
      ===== ===== ===== ===== ===== ===== ===== ===== ===== ===== -->
   <!-- ===== System Attributes ===== -->
   <attribute>
-    <id>XSCOM_BASE_ADDRESS</id>
-    <description>System XSCOM base address</description>
-    <simpleType>
-      <uint64_t></uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-  </attribute>
-  <attribute>
     <id>IBSCOM_MCS_BASE_ADDR</id>
     <description>MCS Inband Scom base address</description>
     <simpleType>
@@ -2099,40 +2090,6 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
-  </attribute>
-  <attribute>
-    <id>PSI_BRIDGE_BASE_ADDR</id>
-    <description>Base Address of PSI Bridge Logic</description>
-    <simpleType>
-      <uint64_t>
-        <!-- Starts at 1024TB - 6GB, 1MB per link -->
-        <!-- 0x0003FFFE80000000 + 0x100000*procnum -->
-        <default>0xFFFFFFFFFFFFFFFF</default>
-      </uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PSI_BRIDGE_BAR_BASE_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>INTP_BASE_ADDR</id>
-    <description>Base Address of Interrupt Presenter</description>
-    <simpleType>
-      <uint64_t>
-        <!-- Starts at 1024TB - 2GB, 1MB per proc -->
-        <!-- 0x0003FFFF80000000 + 0x100000*procnum -->
-        <default>0xFFFFFFFFFFFFFFFF</default>
-      </uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INTP_BAR_BASE_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
   </attribute>
   <attribute>
     <id>PHB_BASE_ADDRS</id>
@@ -6142,16 +6099,6 @@
     <readable />
   </attribute>
   <attribute>
-    <id>LPC_BUS_ADDR</id>
-    <description>LPC Bus address - MMIO consumed by
-    PHYP</description>
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-  </attribute>
-  <attribute>
     <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
     <description>Nvidia Link - NPU Privileged Regs address MMIO
     consumed by PHYP</description>
@@ -6192,26 +6139,6 @@
     <readable />
   </attribute>
   <attribute>
-    <id>XIVE_CONTROLLER_BAR_ADDR</id>
-    <description>XIVE - Controller Bar address MMIO consumed by
-    PHYP</description>
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-  </attribute>
-  <attribute>
-    <id>XIVE_THREAD_MGMT1_BAR_ADDR</id>
-    <description>XIVE - Thread Management Bar address register 1
-    MMIO consumed by HB/PHYP</description>
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-  </attribute>
-  <attribute>
     <id>PSI_HB_ESB_ADDR</id>
     <description>PSIHB - ESB space address - MMIO consumed by
     PHYP</description>
@@ -6220,6 +6147,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
+    <writeable />
   </attribute>
   <attribute>
     <id>NX_RNG_ADDR</id>
@@ -8464,20 +8392,6 @@
     <readable />
   </attribute>
   <attribute>
-    <id>LPC_BASE_ADDR</id>
-    <description>Defines LPC base address on each processor
-    level.</description>
-    <simpleType>
-      <uint64_t></uint64_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_LPC_BASE_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
     <id>PROC_FSP_BAR_ENABLE</id>
     <description>FSP BAR enable DISABLE = 0x0, ENABLE =
     0x1</description>
@@ -8626,6 +8540,7 @@
       <id>ATTR_PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
+    <writeable />
   </attribute>
   <attribute>
     <id>PROC_FSP_BAR_SIZE</id>
