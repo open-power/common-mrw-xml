@@ -288,8 +288,7 @@
     <default>0x00000001</default>
   </attribute>
   <attribute>
-    <id>I2C_BUS_SPEED_ARRAY</id>
-    <default>400,400,400,400,400,400</default>
+    <id>I2C_BUS_SPEED_ARRAY</id><default>400,400,0,0,0,0,0,0,0,0,0,0,0,400,400,400,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
   </attribute>
   <attribute>
     <id>I2C_SWITCHES</id>
@@ -677,6 +676,7 @@
   <child_id>i2c-master-dpss</child_id>
   <child_id>i2c-master-op0a</child_id>
   <child_id>i2c-master-op0b</child_id>
+  <child_id>i2c-master-op3a</child_id>
   <child_id>i2c-master-dimm0123</child_id>
   <child_id>i2c-master-dimm4567</child_id>
   <child_id>lpc-master</child_id>
@@ -16911,7 +16911,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x00</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17012,7 +17012,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x01</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17214,7 +17214,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x03</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17917,11 +17917,11 @@
   </attribute>
   <attribute>
     <id>I2C_ENGINE</id>
-    <default>0x01</default>
+    <default>0x02</default>
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x00</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18018,7 +18018,7 @@
   </attribute>
   <attribute>
     <id>I2C_ENGINE</id>
-    <default>0x01</default>
+    <default>0x02</default>
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
@@ -18119,11 +18119,11 @@
   </attribute>
   <attribute>
     <id>I2C_ENGINE</id>
-    <default>0x01</default>
+    <default>0x02</default>
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x00</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18224,7 +18224,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x0c</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18325,7 +18325,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x04</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18426,7 +18426,7 @@
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x05</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18462,6 +18462,107 @@
     <default>NA</default>
   </attribute>
   <instance_name>i2c-master-op0b</instance_name>
+  <is_root>false</is_root>
+  <position>-1</position>
+  <type>unit-i2c-master</type>
+</targetPart>
+<targetPart>
+  <id>i2c-master-op3a</id>
+  <attribute>
+    <id>BUS_TYPE</id>
+    <default>I2C</default>
+  </attribute>
+  <attribute>
+    <id>CHIP_UNIT</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>CLASS</id>
+    <default>UNIT</default>
+  </attribute>
+  <attribute>
+    <id>DECONFIG_GARDABLE</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>DIRECTION</id>
+    <default>OUT</default>
+  </attribute>
+  <attribute>
+    <id>HWAS_STATE</id>
+    <default>
+      <field>
+        <id>deconfiguredByEid</id>
+        <value></value>
+      </field>
+      <field>
+        <id>poweredOn</id>
+        <value></value>
+      </field>
+      <field>
+        <id>present</id>
+        <value></value>
+      </field>
+      <field>
+        <id>functional</id>
+        <value></value>
+      </field>
+      <field>
+        <id>dumpfunctional</id>
+        <value></value>
+      </field>
+      <field>
+        <id>specdeconfig</id>
+        <value></value>
+      </field>
+    </default>
+  </attribute>
+  <attribute>
+    <id>I2C_CONNECTION_TYPE</id>
+    <default>NA</default>
+  </attribute>
+  <attribute>
+    <id>I2C_ENGINE</id>
+    <default>0x01</default>
+  </attribute>
+  <attribute>
+    <id>I2C_PORT</id>
+    <default>0x0a</default>
+  </attribute>
+  <attribute>
+    <id>MRW_TYPE</id>
+    <default>NA</default>
+  </attribute>
+  <attribute>
+    <id>PRIMARY_CAPABILITIES</id>
+    <default>
+      <field>
+        <id>supportsFsiScom</id>
+        <value>1</value>
+      </field>
+      <field>
+        <id>supportsXscom</id>
+        <value>1</value>
+      </field>
+      <field>
+        <id>supportsInbandScom</id>
+        <value>0</value>
+      </field>
+      <field>
+        <id>reserved</id>
+        <value>0</value>
+      </field>
+    </default>
+  </attribute>
+  <attribute>
+    <id>RESOURCE_IS_CRITICAL</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>TYPE</id>
+    <default>NA</default>
+  </attribute>
+  <instance_name>i2c-master-op3a</instance_name>
   <is_root>false</is_root>
   <position>-1</position>
   <type>unit-i2c-master</type>
@@ -18523,11 +18624,11 @@
   </attribute>
   <attribute>
     <id>I2C_ENGINE</id>
-    <default>0x01</default>
+    <default>0x03</default>
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x00</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -18624,11 +18725,11 @@
   </attribute>
   <attribute>
     <id>I2C_ENGINE</id>
-    <default>0x01</default>
+    <default>0x03</default>
   </attribute>
   <attribute>
     <id>I2C_PORT</id>
-    <default>0x02</default>
+    <default>0x01</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
