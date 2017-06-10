@@ -18,6 +18,26 @@
 	<child_id>TUSB7340.PCIE-X1</child_id>
 	<child_id>TUSB7340.clk-in</child_id>
 	<attribute>
+		<id>32BIT_MMIO_SIZE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>64BIT_MMIO_SIZE</id>
+		<default></default>
+	</attribute>	
+	<attribute>
+		<id>32BIT_DMA_SIZE</id>
+		<default></default>
+	</attribute>	
+	<attribute>
+		<id>64BIT_DMA_SIZE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MSI</id>
+		<default></default>
+	</attribute>	
+	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
 	</attribute>
