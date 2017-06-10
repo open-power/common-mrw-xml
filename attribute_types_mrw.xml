@@ -750,6 +750,10 @@
 			<name>AVS</name>
 			<value>26</value>
 		</enumerator>
+		<enumerator>
+			<name>OBUS</name>
+			<value>27</value>
+		</enumerator>		
 	</enumerationType>
 	<enumerationType>
 		<id>MRW_TYPE</id>
@@ -1196,7 +1200,18 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable />
 		<writeable />
-	</attribute>						
+	</attribute>
+	<attribute>
+		<id>MSI</id>
+		<description>PCIe slot MSI definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>							
 	<attribute>
 		<id>32BIT_MMIO_SIZE</id>
 		<description>PCIe slot 32bit MMIO size definition</description>
@@ -1477,6 +1492,7 @@
 		<persistency>non-volatile</persistency>
 		<readable />
 		<writeable />
+		<global />
 	</attribute>
 	<attribute>
 		<id>VPD_SIZE</id>
