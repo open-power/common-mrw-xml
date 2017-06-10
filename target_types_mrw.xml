@@ -2160,6 +2160,10 @@
 			<default></default>
 		</attribute>
 		<attribute>
+			<id>MSI</id>
+			<default></default>
+		</attribute>
+		<attribute>
 			<id>MAX_POWER</id>
 			<default></default>
 		</attribute>								
@@ -2523,9 +2527,6 @@
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
-		</attribute>
-		<attribute>
-			<id>I2C_ADDRESS</id>
 		</attribute>
 		<attribute>
 			<id>I2C_SPEED</id>
@@ -3750,6 +3751,30 @@
         <id>MODEL</id>
         <default>NIMBUS</default>
     </attribute>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>    
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>CLASS</id>
+      <default>UNIT</default>
+    </attribute>
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>NA</default>
+    </attribute>   
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS</default>
+    </attribute>           
 </targetType>
 
 <targetType>
@@ -3759,6 +3784,30 @@
         <id>MODEL</id>
         <default>CUMULUS</default>
     </attribute>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>    
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>CLASS</id>
+      <default>UNIT</default>
+    </attribute>
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>NA</default>
+    </attribute>   
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS</default>
+    </attribute>             
 </targetType>
 
 
@@ -3776,6 +3825,18 @@
          <id>DIRECTION</id>
          <default>INOUT</default>
     </attribute>
+    <attribute>
+         <id>CLASS</id>
+         <default>UNIT</default>
+    </attribute>
+    <attribute>
+         <id>MRW_TYPE</id>
+         <default>NA</default>
+    </attribute>
+    <attribute>
+         <id>CHIP_UNIT</id>
+         <default></default>
+    </attribute>            
 </targetType>
     		
 <targetType>
@@ -3785,6 +3846,30 @@
         <id>MODEL</id>
         <default>NIMBUS</default>
     </attribute>
+	<attribute>
+      <id>BUS_TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+    	<id>CLASS</id>
+    	<default>UNIT</default>
+    </attribute>
+    <attribute>
+    	<id>MRW_TYPE</id>
+    	<default>NA</default>
+    </attribute>    
 </targetType>
 
 <targetType>
@@ -3794,6 +3879,30 @@
         <id>MODEL</id>
         <default>CUMULUS</default>
     </attribute>
+	<attribute>
+      <id>BUS_TYPE</id>
+      <default>OBUS</default>
+    </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OBUS_BRICK</default>
+    </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>FABRIC</default>
+    </attribute>
+    <attribute>
+      <id>DECONFIG_GARDABLE</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+    	<id>CLASS</id>
+    	<default>UNIT</default>
+    </attribute>
+    <attribute>
+    	<id>MRW_TYPE</id>
+    	<default>NA</default>
+    </attribute>    
 </targetType>
 
 <!-- NV
@@ -5059,6 +5168,21 @@
 	<targetType>
 		<id>apss.unit-adc-generic</id>
 		<parent>mrw-unit</parent>
+		<attribute>
+			<id>CHANNEL</id>
+		</attribute>
+		<attribute>
+			<id>FUNCTION_ID</id>
+		</attribute>
+		<attribute>
+			<id>FUNCTION_NAME</id>
+		</attribute>
+		<attribute>
+			<id>GAIN</id>
+		</attribute>
+		<attribute>
+			<id>OFFSET</id>
+		</attribute>								
 		<attribute>
 			<id>ADC_CHANNEL_ASSIGNMENT</id>
 		</attribute>
