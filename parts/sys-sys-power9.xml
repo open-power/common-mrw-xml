@@ -828,9 +828,6 @@
       <default>SYS</default>
     </attribute>
     <attribute>
-      <id>XSCOM_BASE_ADDRESS</id>
-    </attribute>
-    <attribute>
       <id>X_EREPAIR_THRESHOLD_FIELD</id>
     </attribute>
     <attribute>
