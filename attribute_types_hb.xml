@@ -5549,16 +5549,18 @@
     <description>Designates the speed at which a given I2C bus
     should run. Creator: MRW Purpose: Used by FW to know the
     fastest possible bus speed that all of the devices on a given
-    bus are able to use. Data Format: 4x4 array of uint16_t values.
-    The first index indicates the engine number of the bus. The
-    second index indicates the port number of the bus. The value in
-    the array is the I2C bus speed used for that engine/port
-    combination in KHz.</description>
+    bus are able to use. Data Format: 4x13 array of uint16_t
+    values. The first index indicates the engine number of the bus.
+    The second index indicates the port number of the bus. The
+    value in the array is the I2C bus speed used for that
+    engine/port combination in KHz.</description>
     <simpleType>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,
+        0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
-      <array>4,4</array>
+      <array>4,13</array>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
@@ -6049,24 +6051,6 @@
     <hwpfToHbAttrMap>
       <id>
       ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>WOF_ENABLED</id>
-    <description>Defines if the Workload Optimization Frequency
-    (WOF) system feature where OCC algorithms will change
-    (typically boost) the operational frequency based on measured
-    power available and any currently idling cores.</description>
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOF_ENABLED</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -8392,6 +8376,20 @@
     <readable />
   </attribute>
   <attribute>
+    <id>LPC_BASE_ADDR</id>
+    <description>Defines LPC base address on each processor
+    level.</description>
+    <simpleType>
+      <uint64_t></uint64_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_LPC_BASE_ADDR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
     <id>PROC_FSP_BAR_ENABLE</id>
     <description>FSP BAR enable DISABLE = 0x0, ENABLE =
     0x1</description>
@@ -8536,11 +8534,11 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
+    <writeable />
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <writeable />
   </attribute>
   <attribute>
     <id>PROC_FSP_BAR_SIZE</id>
@@ -9554,6 +9552,107 @@
       <value>FF</value>
     </enumerator>
   </enumerationType>
+  <attribute>
+    <id>SLOT_NAME</id>
+    <description>PCIe slot name definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>SLOT_INDEX</id>
+    <description>PCIe slot index definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_32BIT_MMIO_SIZE</id>
+    <description>PCIe slot 32bit MMIO size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_64BIT_MMIO_SIZE</id>
+    <description>PCIe slot 64bit MMIO size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_32BIT_DMA_SIZE</id>
+    <description>PCIe slot 32bit DMA size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_64BIT_DMA_SIZE</id>
+    <description>PCIe slot 64bit DMA size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>HDDW_ORDER</id>
+    <description>PCIe slot HDDW order definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MGC_LOAD_SOURCE</id>
+    <description>defines MGC load source</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_CAPABILITES</id>
+    <description>Denotes the capabilites of this pcie
+    slot</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>VENDOR_ID</id>
+    <description>PCIe vendor ID definition</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MAX_POWER</id>
+    <description>Defines the maximum power consumption for a PCIe
+    slot</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
   <enumerationType>
     <id>IPMI_SENSOR_ARRAY</id>
     <description>Enumeration defining the offsets into the
