@@ -1614,6 +1614,9 @@
       <default>8</default>
     </attribute>
     <!-- End processor characteristics for HDAT -->
+    <attribute>
+      <id>LPC_BASE_ADDR</id>
+    </attribute>
     <!-- p9_setup_bars - Begin -->
     <attribute>
       <id>PROC_NPU_PHY0_BAR_ENABLE</id>
@@ -2144,6 +2147,50 @@
     <attribute>
       <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
     </attribute>
+    <attribute>
+      <id>PCIE_CAPABILITES</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>MGC_LOAD_SOURCE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>SLOT_NAME</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>SLOT_INDEX</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>HDDW_ORDER</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_32BIT_MMIO_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_64BIT_MMIO_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_32BIT_DMA_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_64BIT_DMA_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>MAX_POWER</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>VENDOR_ID</id>
+      <default />
+    </attribute>
   </targetType>
   <!-- unit-phb-power9 -->
   <targetType>
@@ -2292,7 +2339,7 @@
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
-      <default>SMP</default>
+      <default>NVLINK</default>
     </attribute>
     <attribute>
       <id>PARENT_PERVASIVE</id>
