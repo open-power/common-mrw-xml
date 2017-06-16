@@ -3030,13 +3030,16 @@
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
-    <id>base</id>
+    <id>bmc</id>
     <attribute>
-      <id>ORDINAL_ID</id>
+      <id>BMC_MANUFACTURER</id>
     </attribute>
-  </targetTypeExtension>
-  <targetTypeExtension>
-    <id>sp</id>
+    <attribute>
+      <id>BMC_HW_CHIP_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>BMC_SW_TYPE</id>
+    </attribute>
     <attribute>
       <id>CHIP_VER</id>
     </attribute>
@@ -3051,7 +3054,13 @@
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
-    <id>bmc</id>
+    <id>base</id>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>sp</id>
     <attribute>
       <id>CHIP_VER</id>
     </attribute>
