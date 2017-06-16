@@ -8977,6 +8977,45 @@
     <readable />
     <serverwizShow>openpower</serverwizShow>
   </attribute>
+  <attribute>
+    <id>BMC_MANUFACTURER</id>
+    <description>The manufacturer of the BMC</description>
+    <simpleType>
+      <string>
+        <default>ibm</default>
+        <sizeInclNull>32</sizeInclNull>
+      </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <serverwizShow>openpower</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>BMC_HW_CHIP_TYPE</id>
+    <description>The type of hardware of the BMC</description>
+    <simpleType>
+      <string>
+        <default>ast2500</default>
+        <sizeInclNull>32</sizeInclNull>
+      </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <serverwizShow>openpower</serverwizShow>
+  </attribute>
+  <attribute>
+    <id>BMC_SW_TYPE</id>
+    <description>The software type of the BMC</description>
+    <simpleType>
+      <string>
+        <default>openbmc</default>
+        <sizeInclNull>32</sizeInclNull>
+      </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <serverwizShow>openpower</serverwizShow>
+  </attribute>
   <enumerationType>
     <id>CHIP_VER</id>
     <description>Enumeration indicating the chip version</description>
