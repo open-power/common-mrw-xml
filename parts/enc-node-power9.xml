@@ -72,9 +72,6 @@
       <default>POWER9</default>
     </attribute>
     <attribute>
-      <id>TPM_INFO</id>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>NODE</default>
     </attribute>
