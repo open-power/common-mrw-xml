@@ -539,24 +539,28 @@
 			<value>0</value>
 		</enumerator>
 		<enumerator>
-			<name>24c16</name>
+			<name>24c04</name>
 			<value>1</value>
 		</enumerator>		
 		<enumerator>
-			<name>24c32</name>
+			<name>24c16</name>
 			<value>2</value>
-		</enumerator>
+		</enumerator>		
 		<enumerator>
-			<name>24c64</name>
+			<name>24c32</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
-			<name>24c128</name>
+			<name>24c64</name>
 			<value>4</value>
+		</enumerator>
+		<enumerator>
+			<name>24c128</name>
+			<value>5</value>
 		</enumerator>		
 		<enumerator>
 			<name>24c512</name>
-			<value>5</value>
+			<value>6</value>
 		</enumerator>				
 		<default>NA</default>
 	</enumerationType>
