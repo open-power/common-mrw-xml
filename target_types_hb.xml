@@ -1523,6 +1523,21 @@
       <id>OBUS_RATIO_VALUE</id>
     </attribute>
     <attribute>
+      <id>OB0_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>OB1_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>OB2_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>OB3_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_O_MHZ</id>
+    </attribute>
+    <attribute>
       <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
