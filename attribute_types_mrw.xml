@@ -539,24 +539,28 @@
 			<value>0</value>
 		</enumerator>
 		<enumerator>
-			<name>24c16</name>
+			<name>24c04</name>
 			<value>1</value>
 		</enumerator>		
 		<enumerator>
-			<name>24c32</name>
+			<name>24c16</name>
 			<value>2</value>
-		</enumerator>
+		</enumerator>		
 		<enumerator>
-			<name>24c64</name>
+			<name>24c32</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
-			<name>24c128</name>
+			<name>24c64</name>
 			<value>4</value>
+		</enumerator>
+		<enumerator>
+			<name>24c128</name>
+			<value>5</value>
 		</enumerator>		
 		<enumerator>
 			<name>24c512</name>
-			<value>5</value>
+			<value>6</value>
 		</enumerator>				
 		<default>NA</default>
 	</enumerationType>
@@ -750,6 +754,10 @@
 			<name>AVS</name>
 			<value>26</value>
 		</enumerator>
+		<enumerator>
+			<name>OBUS</name>
+			<value>27</value>
+		</enumerator>		
 	</enumerationType>
 	<enumerationType>
 		<id>MRW_TYPE</id>
@@ -1196,7 +1204,18 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable />
 		<writeable />
-	</attribute>						
+	</attribute>
+	<attribute>
+		<id>MSI</id>
+		<description>PCIe slot MSI definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>							
 	<attribute>
 		<id>32BIT_MMIO_SIZE</id>
 		<description>PCIe slot 32bit MMIO size definition</description>
@@ -1477,6 +1496,7 @@
 		<persistency>non-volatile</persistency>
 		<readable />
 		<writeable />
+		<global />
 	</attribute>
 	<attribute>
 		<id>VPD_SIZE</id>
