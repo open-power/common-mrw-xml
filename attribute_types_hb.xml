@@ -330,14 +330,18 @@
       <name>NPU</name>
       <value>67</value>
     </enumerator>
+    <enumerator>
+      <name>MC</name>
+      <value>68</value>
+    </enumerator>
     <!-- add any new types here, and increment TEST_FAIL and LAST_IN_RANGE -->
     <enumerator>
       <name>TEST_FAIL</name>
-      <value>68</value>
+      <value>69</value>
     </enumerator>
     <enumerator>
       <name>LAST_IN_RANGE</name>
-      <value>69</value>
+      <value>70</value>
     </enumerator>
     <default>NA</default>
   </enumerationType>
@@ -590,6 +594,21 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
+  </attribute>
+  <attribute>
+    <id>ISDIMM_MBVPD_INDEX</id>
+    <description>Multiple centaurs can sometimes have their VPD located in one physical SEEPROM. This is the index into the memory buffer VPD for this centaur.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_ISDIMM_MBVPD_INDEX</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
   </attribute>
   <attribute>
     <id>FSI_MASTER_CHIP</id>
@@ -1528,8 +1547,96 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_A_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>FREQ_O_MHZ</id>
+    <description>The frequency of a processor's Obus mesh clocks, in MHz. Provided by the MRW.</description>
+    <simpleType>
+      <uint32_t>
+        <default>1611</default>
+      </uint32_t>
+      <array>4</array>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_O_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OB0_PLL_BUCKET</id>
+    <description>Select OBUS0 pll setting from one of the supported frequencies</description>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
+    <hwpfToHbAttrMap>
+      <id>ATTR_OB0_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OB1_PLL_BUCKET</id>
+    <description>Select OBUS1 pll setting from one of the supported frequencies</description>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
+    <hwpfToHbAttrMap>
+      <id>ATTR_OB1_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OB2_PLL_BUCKET</id>
+    <description>Select OBUS2 pll setting from one of the supported frequencies</description>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
+    <hwpfToHbAttrMap>
+      <id>ATTR_OB2_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OB3_PLL_BUCKET</id>
+    <description>Select OBUS3 pll setting from one of the supported frequencies</description>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <!-- Only because SBE needs it -->
+    <hwpfToHbAttrMap>
+      <id>ATTR_OB3_PLL_BUCKET</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -3160,6 +3267,17 @@
     <simpleType>
       <uint8_t>
         <default>4</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MAX_DMI_PER_PROC</id>
+    <description>System attribute. The max DMI units per proc available in the system.</description>
+    <simpleType>
+      <uint8_t>
+        <default>8</default>
       </uint8_t>
     </simpleType>
     <persistency>non-volatile</persistency>
@@ -8063,8 +8181,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
-  <!-- @fixme RTC:166754 Remove old attribute -->
-  <!-- @fixme RTC:166754 Remove old attribute -->
   <attribute>
     <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
     <description>Used to tell I2C code whether to run I2C Engine 2 Port 0 in diag mode or not 0 = Use Diag Mode 1 = Disable Diag Mode</description>
@@ -8758,22 +8874,6 @@
     <persistency>non-volatile</persistency>
     <readable />
     <writeable />
-    <serverwizShow>openpower</serverwizShow>
-  </attribute>
-  <attribute>
-    <id>ISDIMM_MBVPD_INDEX</id>
-    <description>Multiple centaurs can sometimes have their VPD located in one physical SEEPROM. This is the index into the memory buffer VPD for this centaur.</description>
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_ISDIMM_MBVPD_INDEX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
     <serverwizShow>openpower</serverwizShow>
   </attribute>
   <attribute>
