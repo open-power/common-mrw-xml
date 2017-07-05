@@ -8224,31 +8224,31 @@
     <description>Pulled from the MRW, this describes the device type to the HDAT. This is for I2C devices only.</description>
     <enumerator>
       <name>955X</name>
-      <value>1</value>
+      <value>0x1</value>
     </enumerator>
     <enumerator>
       <name>SEEPROM</name>
-      <value>2</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>NUVOTON_TPM</name>
-      <value>3</value>
+      <value>0x3</value>
     </enumerator>
     <enumerator>
       <name>MEX_FPGA</name>
-      <value>4</value>
+      <value>0x4</value>
     </enumerator>
     <enumerator>
       <name>UCX90XX</name>
-      <value>5</value>
+      <value>0x5</value>
     </enumerator>
     <enumerator>
       <name>NVLINK</name>
-      <value>6</value>
+      <value>0x6</value>
     </enumerator>
     <enumerator>
       <name>UNKNOWN</name>
-      <value>FF</value>
+      <value>0xFF</value>
     </enumerator>
   </enumerationType>
   <enumerationType>
@@ -8256,47 +8256,47 @@
     <description>Pulled from the MRW, this describes the device purpose to the HDAT. This is for I2C devices only.</description>
     <enumerator>
       <name>CABLE_CARD_PRES</name>
-      <value>1</value>
+      <value>0x1</value>
     </enumerator>
     <enumerator>
       <name>CABLE_CARD_POWER_SENSE</name>
-      <value>2</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>CABLE_CARD_POWER_CONTROL</name>
-      <value>3</value>
+      <value>0x3</value>
     </enumerator>
     <enumerator>
       <name>TPM</name>
-      <value>4</value>
+      <value>0x4</value>
     </enumerator>
     <enumerator>
       <name>MODULE_VPD</name>
-      <value>5</value>
+      <value>0x5</value>
     </enumerator>
     <enumerator>
       <name>DIMM_SPD</name>
-      <value>6</value>
+      <value>0x6</value>
     </enumerator>
     <enumerator>
       <name>PROC_MODULE_VPD</name>
-      <value>7</value>
+      <value>0x7</value>
     </enumerator>
     <enumerator>
       <name>SBE_SEEPROM</name>
-      <value>8</value>
+      <value>0x8</value>
     </enumerator>
     <enumerator>
       <name>PLANAR_VPD</name>
-      <value>9</value>
+      <value>0x9</value>
     </enumerator>
     <enumerator>
       <name>PCI_HOTPLUG</name>
-      <value>A</value>
+      <value>0xA</value>
     </enumerator>
     <enumerator>
       <name>NVLINK</name>
-      <value>B</value>
+      <value>0xB</value>
     </enumerator>
     <enumerator>
       <name>WINDOW_OPEN</name>
@@ -8308,7 +8308,7 @@
     </enumerator>
     <enumerator>
       <name>UNKNOWN</name>
-      <value>FF</value>
+      <value>0xFF</value>
     </enumerator>
   </enumerationType>
   <attribute>
@@ -8804,7 +8804,7 @@
     <serverwizShow>openpower</serverwizShow>
   </attribute>
   <attribute>
-    <id>HDAT_I2C_DEVTYPE</id>
+    <id>HDAT_I2C_DEVICE_TYPE</id>
     <description>This attribute holds the values of the I2C device type from the i2c device connections as defined in the MRW. It is parsed into a struct in i2c.C</description>
     <simpleType>
       <uint8_t />
@@ -8852,7 +8852,7 @@
     <serverwizShow>openpower</serverwizShow>
   </attribute>
   <attribute>
-    <id>HDAT_I2C_DEV_PURPOSE</id>
+    <id>HDAT_I2C_DEVICE_PURPOSE</id>
     <description>This attribute holds the values of the I2C device purpose from the i2c device connections as defined in the MRW. It is parsed into a struct in i2c.C</description>
     <simpleType>
       <uint8_t />
