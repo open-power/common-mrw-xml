@@ -159,4 +159,28 @@
 		<readable/>
 	</attribute>
 
+    <enumerationType>
+        <id>LED_PRIORITY</id>
+        <enumerator>
+            <name>BLINK</name>
+            <value>0</value>
+        </enumerator>
+        <enumerator>
+            <name>ON</name>
+            <value>1</value>
+        </enumerator>
+    </enumerationType>
+
+    <attribute>
+        <id>LED_PRIORITY</id>
+        <description>If the LED is asserted with more than one action at the
+                     same time, this attribute defines which action takes priority.
+        </description>
+        <simpleType>
+            <enumeration>
+                <id>LED_PRIORITY</id>
+            </enumeration>
+        </simpleType>
+    </attribute>
+
 </attributes>
