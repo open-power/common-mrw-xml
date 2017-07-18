@@ -10,6 +10,7 @@
     <child_id>gv100.i2c-0</child_id>
     <child_id>pciep</child_id>
     <hidden_child_id>gpu_temp_sensor</hidden_child_id>
+    <hidden_child_id>memory_temp_sensor</hidden_child_id>
     <hidden_child_id>gpu_func_sensor</hidden_child_id>
     <instance_name>gv100card</instance_name>
     <is_root>true</is_root>
@@ -289,6 +290,50 @@
       <default>NA</default>
     </attribute>
     <instance_name>gpu_temp_sensor</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-ipmi-sensor</type>
+  </targetPart>
+  <targetPart>
+    <id>memory_temp_sensor</id>
+    <attribute>
+      <id>CLASS</id>
+      <default>UNIT</default>
+    </attribute>
+    <attribute>
+      <id>IPMI_ENTITY_ID</id>
+      <default>0xD8</default>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSOR_ID</id>
+      <default></default>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSOR_NAME_SUFFIX</id>
+      <default>Memory_Temp</default>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSOR_OFFSETS</id>
+      <default></default>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSOR_READING_TYPE</id>
+      <default>0x01</default>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSOR_TYPE</id>
+      <default>0x01</default>
+    </attribute>
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>IPMI_SENSOR</default>
+    </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>memory_temp_sensor</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
