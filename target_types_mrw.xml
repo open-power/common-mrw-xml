@@ -1719,6 +1719,26 @@
 		</attribute>
 	</targetType>	
 	<targetType>
+		<id>unit-perst-generic</id>
+		<parent>unit-gpio-generic</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>GPIO</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>OUT</default>
+		</attribute>
+		<attribute>
+			<id>GPIO_TYPE</id>
+			<default>PERST</default>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>unit-pgood-generic</id>
 		<parent>unit-gpio-generic</parent>
 		<attribute>

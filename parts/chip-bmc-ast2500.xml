@@ -136,6 +136,7 @@
 	<child_id>chip-bmc-ast2500.pin_G21_espi_lpc_gpioac0ac7</child_id>
 	<child_id>chip-bmc-ast2500.pin_B4_rgmii1_rmii1_gpiou4t5</child_id>
 	<child_id>chip-bmc-ast2500.pin_C2_rgmii2_rmii2_gpiov2u3</child_id>
+	<child_id>chip-bmc-ast2500.pin_L20_perst</child_id>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
@@ -57183,6 +57184,34 @@
 		<id>TYPE</id>
 		<default>NA</default>
 	</attribute>
+</targetPart>
+<targetPart>
+    <id>chip-bmc-ast2500.pin_L20_perst</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PERST</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>chip-bmc-ast2500.pin_L20_perst</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-perst-generic</type>
 </targetPart>
 </targetInstances>
 </partInstance>

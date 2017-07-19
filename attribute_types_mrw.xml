@@ -301,6 +301,10 @@
 			<name>GPIO_EXP</name>
 			<value>6</value>
 		</enumerator>
+		<enumerator>
+			<name>PERST</name>
+			<value>7</value>
+		</enumerator>
 		<default>GENERIC_OUTPUT</default>
 	</enumerationType>
 	<enumerationType>

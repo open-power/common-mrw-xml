@@ -4,6 +4,10 @@
     <child_id>pciep</child_id>
     <child_id>pgood</child_id>
 	<child_id>enable</child_id>
+	<child_id>perst</child_id>
+	<child_id>perst2</child_id>
+	<child_id>presence</child_id>
+	<child_id>presence2</child_id>
 	<child_id>clk-in</child_id>
 	<attribute>
 		<id>CARD_TYPE</id>
@@ -91,6 +95,118 @@
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-enable-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>presence</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PRESENCE</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>presence</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-presence-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>presence2</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PRESENCE</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>presence2</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-presence-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>perst</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PERST</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>perst</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-perst-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>perst2</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>GPIO</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+	<attribute>
+	  <id>GPIO_TYPE</id>
+	  <default>PERST</default>
+	</attribute>    
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>perst2</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-perst-generic</type>
   </targetPart>
   <targetPart>
     <id>clk-in</id>
