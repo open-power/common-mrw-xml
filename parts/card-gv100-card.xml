@@ -12,6 +12,22 @@
     <hidden_child_id>gpu_temp_sensor</hidden_child_id>
     <hidden_child_id>memory_temp_sensor</hidden_child_id>
     <hidden_child_id>gpu_func_sensor</hidden_child_id>
+    <attribute>
+    	<id>VENDOR_ID</id>
+     <default></default>
+    </attribute>
+    <attribute>
+    	<id>DEVICE_ID</id>
+     <default></default>
+    </attribute>
+    <attribute>
+     <id>SUBSYSTEM_VENDOR_ID</id>
+     <default></default>
+    </attribute>
+    <attribute>
+     <id>SUBSYSTEM_DEVICE_ID</id>
+     <default></default>
+    </attribute>
     <instance_name>gv100card</instance_name>
     <is_root>true</is_root>
     <parent>card-obuscard</parent>
