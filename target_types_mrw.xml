@@ -2612,6 +2612,9 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>OBUS_CONFIG</id>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>ETHERNET</id>

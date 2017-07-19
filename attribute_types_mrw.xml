@@ -1562,6 +1562,17 @@
 		<readable />
 		<writeable />
 	</attribute>
+	<attribute>
+		<id>OBUS_CONFIG</id>
+		<description>OBUS Configuration Selector</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
 		<attribute>
 		<id>COOLING_ZONE_MASK</id>
 		<description>Cooling zone mask for temperature sensors</description>
