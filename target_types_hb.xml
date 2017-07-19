@@ -2767,10 +2767,10 @@
   </targetType>
   <targetType>
     <id>sp</id>
-    <parent>chip</parent>
+    <parent>base</parent>
     <attribute>
       <id>CLASS</id>
-      <default>CHIP</default>
+      <default>SP</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
@@ -2778,11 +2778,11 @@
     </attribute>
   </targetType>
   <targetType>
-    <id>bmc</id>
+    <id>chip-bmc-ast2500</id>
     <parent>sp</parent>
     <attribute>
       <id>TYPE</id>
-      <default>SP</default>
+      <default>BMC</default>
     </attribute>
     <attribute>
       <id>MODEL</id>
@@ -3083,7 +3083,7 @@
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
-    <id>bmc</id>
+    <id>chip-bmc-ast2500</id>
     <attribute>
       <id>BMC_MANUFACTURER</id>
     </attribute>
@@ -3094,16 +3094,7 @@
       <id>BMC_SW_TYPE</id>
     </attribute>
     <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
+      <id>FRU_ID</id>
     </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
@@ -3120,6 +3111,21 @@
   </targetTypeExtension>
   <targetTypeExtension>
     <id>sp</id>
+    <attribute>
+      <id>CHIP_VER</id>
+    </attribute>
+    <attribute>
+      <id>HW_VER</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <attribute>
+      <id>ROLE</id>
+    </attribute>
+  </targetTypeExtension>
+  <targetTypeExtension>
+    <id>bmc</id>
     <attribute>
       <id>CHIP_VER</id>
     </attribute>

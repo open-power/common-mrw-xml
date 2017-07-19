@@ -48,8 +48,12 @@
       <value>9</value>
     </enumerator>
     <enumerator>
-      <name>MAX</name>
+      <name>SP</name>
       <value>10</value>
+    </enumerator>
+    <enumerator>
+      <name>MAX</name>
+      <value>11</value>
     </enumerator>
     <default>NA</default>
   </enumerationType>
@@ -8843,7 +8847,7 @@
     <id>HDAT_I2C_BUS_FREQ</id>
     <description>This attribute holds the values of the I2C bus frequency in Hz from the i2c device connections as defined in the MRW. It is parsed into a struct in i2c.C</description>
     <simpleType>
-      <uint8_t />
+      <uint32_t />
       <array>32</array>
     </simpleType>
     <persistency>non-volatile</persistency>
