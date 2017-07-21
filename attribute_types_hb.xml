@@ -48,8 +48,12 @@
       <value>9</value>
     </enumerator>
     <enumerator>
-      <name>MAX</name>
+      <name>SP</name>
       <value>10</value>
+    </enumerator>
+    <enumerator>
+      <name>MAX</name>
+      <value>11</value>
     </enumerator>
     <default>NA</default>
   </enumerationType>
@@ -1519,6 +1523,10 @@
         <default>0</default>
       </int32_t>
     </simpleType>
+    <range>
+      <min>-100</min>
+      <max>0</max>
+    </range>
     <persistency>non-volatile</persistency>
     <readable />
     <writeable />
@@ -5812,48 +5820,6 @@
     <readable />
   </attribute>
   <attribute>
-    <id>SYSTEM_IVRMS_ENABLED</id>
-    <description>System control to allow (if all other attribute tests yield true values) or categorically disallow IVRM enablement Producer: MRWB Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
-    <simpleType>
-      <uint8_t></uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_IVRMS_ENABLED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <writeable />
-  </attribute>
-  <attribute>
-    <id>SYSTEM_WOF_ENABLED</id>
-    <description>System control to allow Work Load Optimized Frequency (WOF) algorithms to modify frequency based on active core count and other inputs. Producer: MRWB Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC Platform default: FALSE</description>
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOF_ENABLED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <writeable />
-  </attribute>
-  <enumerationType>
-    <id>SYSTEM_WOF_ENABLED</id>
-    <description>Enumeration for Work Load Optimized Frequency</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-  </enumerationType>
-  <attribute>
     <id>SYSTEM_WOF_DISABLE</id>
     <description>Disables Work Load Optimized Frequency (WOF) algoritms to modify frequency based on active core count and other inputs. OFF: Will enable WOF given all validity checks pass. If validity checks fail, WOF will be disabled for the present IPL. ON: Will disable WOF. OFF_SKIP_DD: Same as OFF but skips any validity checking of the chip design level (lab use only). Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
     <simpleType>
@@ -7394,31 +7360,6 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
-    <id>VDM_ENABLE</id>
-    <description>Controls the enablement of Voltage Droop Monitors (VDM) in the system. OFF = 0x00, ON = 0x01 Producer: Machine Readable Workbook Consumers: p9_pstate_parameter_block to set flag for CME QuadManager Hcode reaction p9_hcd_cache procedures to power on VDMs before CME booting</description>
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <readable />
-    <persistency>non-volatile</persistency>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <enumerationType>
-    <id>VDM_ENABLE</id>
-    <description>Enumeration for Voltage Drop Monitor enable</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-  </enumerationType>
-  <attribute>
     <id>DPLL_VDM_RESPONSE</id>
     <description>Indicates the response of the DPLL frequency upon VDM events. This control will only apply if ATTR_DPLL_VDM_JUMP_ENABLE is ON; Hardware WOF = DROOP_PROTECT_OVERVOLT (slew to Fmax if margin exists) Producer: MRWB.</description>
     <simpleType>
@@ -8097,19 +8038,6 @@
     <readable />
     <hwpfToHbAttrMap>
       <id>ATTR_IVRM_STABILIZATION_DELAY_NS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-  <attribute>
-    <id>SYSTEM_RESCLK_ENABLE</id>
-    <description>Controls the enablement of resonant clocking in the system. Producer: Machine Readable Workbook Consumers: p9_pstate_parameter_block to set flag for CME QuadManager Hcode reaction</description>
-    <simpleType>
-      <uint8_t></uint8_t>
-    </simpleType>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -8843,7 +8771,7 @@
     <id>HDAT_I2C_BUS_FREQ</id>
     <description>This attribute holds the values of the I2C bus frequency in Hz from the i2c device connections as defined in the MRW. It is parsed into a struct in i2c.C</description>
     <simpleType>
-      <uint8_t />
+      <uint32_t />
       <array>32</array>
     </simpleType>
     <persistency>non-volatile</persistency>
