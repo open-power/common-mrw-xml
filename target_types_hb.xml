@@ -2792,7 +2792,7 @@
     </attribute>
     <attribute>
       <id>MODEL</id>
-      <default>BMC</default>
+      <default>AST2500</default>
     </attribute>
   </targetType>
   <targetType>
