@@ -303,12 +303,6 @@
       <default>CENTAUR</default>
     </attribute>
     <attribute>
-      <id>MSS_FREQ_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VOLT_OVERRIDE</id>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>MEMBUF</default>
     </attribute>

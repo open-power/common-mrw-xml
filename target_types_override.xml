@@ -1,7 +1,7 @@
 <targetTypes>
 	<targetType>
 		<id>targetoverride-group</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
 		<attribute>
@@ -15,7 +15,7 @@
 	</targetType>
 	<targetType>
 		<id>targetoverride</id>
-		<parent>base</parent>
+		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
 		<attribute>
@@ -36,7 +36,6 @@
 		<parent>targetoverride</parent>
 		<parent_type>targetoverride</parent_type>
 		<attribute><id>TARGET_NAME</id></attribute>
-		<attribute><id>NOMINAL_FREQ_MHZ</id></attribute>
 		<attribute><id>CORES</id></attribute>
 		<attribute><id>CARD_USE</id></attribute>
 		<attribute><id>PART_NUMBER</id></attribute>

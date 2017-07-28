@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>89LPC932</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>89LPC932.i2c-0</child_id>
@@ -22,10 +22,6 @@
 	<child_id>89LPC932.gpio-master-8</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -71,7 +67,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -123,7 +119,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -175,7 +171,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -227,7 +223,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -279,7 +275,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -331,7 +327,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>4</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -383,7 +379,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>5</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -435,7 +431,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>6</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -487,7 +483,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-slave</instance_name>
 	<position>7</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -539,7 +535,7 @@
 	<is_root>false</is_root>
 	<instance_name>89LPC932.gpio-master</instance_name>
 	<position>8</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

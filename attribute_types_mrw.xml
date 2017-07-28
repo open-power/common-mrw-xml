@@ -145,6 +145,19 @@
 		<default>INOUT</default>
 	</enumerationType>
 	<enumerationType>
+		<id>PRESENCE_DETECT</id>
+		<description>Presence defect information</description>
+		<enumerator>
+			<name>'0' means present</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>'1' means present</name>
+			<value>1</value>
+		</enumerator>
+		<default>'0' means present</default>
+	</enumerationType>	
+	<enumerationType>
 		<id>DRIVER_TYPE</id>
 		<description>Driver Type</description>
 		<enumerator><name>NA</name><value>0</value></enumerator>
@@ -204,37 +217,57 @@
 			<value>11</value>
 		</enumerator>	
 		<enumerator>
-			<name>3.3VCS</name>
+			<name>VTT</name>
 			<value>12</value>
-		</enumerator>
+		</enumerator>		
 		<enumerator>
-			<name>1.2VCS</name>
+			<name>3.3VCS</name>
 			<value>13</value>
 		</enumerator>
 		<enumerator>
-			<name>1.1VCS</name>
+			<name>1.2VCS</name>
 			<value>14</value>
+		</enumerator>
+		<enumerator>
+			<name>1.1VCS</name>
+			<value>15</value>
 		</enumerator>				
 		<enumerator>
 			<name>1.8V</name>
-			<value>15</value>
-		</enumerator>
-		<enumerator>
-			<name>1.05V</name>
 			<value>16</value>
 		</enumerator>
 		<enumerator>
-			<name>0.9V</name>
+			<name>1.05V</name>
 			<value>17</value>
+		</enumerator>
+		<enumerator>
+			<name>0.9V</name>
+			<value>18</value>
 		</enumerator>	
 		<enumerator>
 			<name>3.3V</name>
-			<value>18</value>
+			<value>19</value>
 		</enumerator>
 		<enumerator>
 			<name>5.0V</name>
-			<value>19</value>
-		</enumerator>																										
+			<value>20</value>
+		</enumerator>	
+		<enumerator>
+			<name>12V</name>
+			<value>21</value>
+		</enumerator>	
+		<enumerator>
+			<name>12VCS</name>
+			<value>22</value>
+		</enumerator>
+		<enumerator>
+			<name>2.5VCS</name>
+			<value>23</value>
+		</enumerator>
+		<enumerator>
+			<name>1.5V</name>
+			<value>24</value>
+		</enumerator>																													
 		<default>UNKNOWN</default>
 	</enumerationType>
 	<enumerationType>
@@ -268,6 +301,10 @@
 			<name>GPIO_EXP</name>
 			<value>6</value>
 		</enumerator>
+		<enumerator>
+			<name>PERST</name>
+			<value>7</value>
+		</enumerator>
 		<default>GENERIC_OUTPUT</default>
 	</enumerationType>
 	<enumerationType>
@@ -299,7 +336,7 @@
 			<value>2</value>
 		</enumerator>
 		<enumerator>
-			<name>CLOCK_INTERFACE</name>
+			<name>CLOCK-INTERFACE</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
@@ -323,11 +360,11 @@
 			<value>8</value>
 		</enumerator>
 		<enumerator>
-			<name>FAN_INTERFACE</name>
+			<name>FAN-INTERFACE</name>
 			<value>9</value>
 		</enumerator>
 		<enumerator>
-			<name>FSI_INTERFACE</name>
+			<name>FSI-INTERFACE</name>
 			<value>10</value>
 		</enumerator>
 		<enumerator>
@@ -345,50 +382,58 @@
 		<enumerator>
 			<name>MEZZANINE</name>
 			<value>14</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
-			<name>OP_PANEL</name>
+			<name>NVME</name>
 			<value>15</value>
+		</enumerator>			
+		<enumerator>
+			<name>OP-PANEL</name>
+			<value>16</value>
 		</enumerator>
 		<enumerator>
 			<name>PCIE</name>
-			<value>16</value>
-		</enumerator>	
-		<enumerator>
-			<name>PCIE_RISER</name>
 			<value>17</value>
 		</enumerator>	
 		<enumerator>
-			<name>PLANAR</name>
+			<name>PCIE-RISER</name>
 			<value>18</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
-			<name>POWER_DIST</name>
+			<name>GENERIC_PCIE</name>
 			<value>19</value>
-		</enumerator>	
+		</enumerator>			
 		<enumerator>
-			<name>POWER_INTERFACE</name>
+			<name>PLANAR</name>
 			<value>20</value>
 		</enumerator>	
 		<enumerator>
-			<name>POWERSUPPLY</name>
+			<name>POWER-DIST</name>
 			<value>21</value>
 		</enumerator>	
 		<enumerator>
-			<name>RAID</name>
+			<name>POWER-INTERFACE</name>
 			<value>22</value>
 		</enumerator>	
 		<enumerator>
-			<name>RISER</name>
+			<name>POWERSUPPLY</name>
 			<value>23</value>
 		</enumerator>	
 		<enumerator>
-			<name>TPM</name>
+			<name>RAID</name>
 			<value>24</value>
 		</enumerator>	
 		<enumerator>
-			<name>VRM</name>
+			<name>MEM-RISER</name>
 			<value>25</value>
+		</enumerator>	
+		<enumerator>
+			<name>TPM</name>
+			<value>26</value>
+		</enumerator>	
+		<enumerator>
+			<name>VRM</name>
+			<value>27</value>
 		</enumerator>																																						
 		<default>NA</default>
 	</enumerationType>	
@@ -447,25 +492,29 @@
 			<name>BLUELINK</name>
 			<value>12</value>
 		</enumerator>
+		<enumerator>
+			<name>SAS</name>
+			<value>13</value>
+		</enumerator>		
 		<default>NA</default>
 	</enumerationType>	
 	<enumerationType>
 		<id>LED_TYPE</id>
 		<description>Type of led</description>
 		<enumerator>
-			<name>ENC_ATTENTION</name>
+			<name>ENC-ATTENTION</name>
 			<value>0</value>
 		</enumerator>
 		<enumerator>
-			<name>ENC_IDENTIFY</name>
+			<name>ENC-IDENTIFY</name>
 			<value>1</value>
 		</enumerator>
 		<enumerator>
-			<name>ENC_FAULT</name>
+			<name>ENC-FAULT</name>
 			<value>2</value>
 		</enumerator>
 		<enumerator>
-			<name>SYS_POWER</name>
+			<name>SYS-POWER</name>
 			<value>3</value>
 		</enumerator>
 		<enumerator>
@@ -481,7 +530,7 @@
 			<value>6</value>
 		</enumerator>	
 		<enumerator>
-			<name>STANDBY_GOOD</name>
+			<name>STANDBY-GOOD</name>
 			<value>7</value>
 		</enumerator>						
 		<default>NA</default>		
@@ -494,16 +543,28 @@
 			<value>0</value>
 		</enumerator>
 		<enumerator>
-			<name>24c32</name>
+			<name>24c04</name>
 			<value>1</value>
+		</enumerator>		
+		<enumerator>
+			<name>24c16</name>
+			<value>2</value>
+		</enumerator>		
+		<enumerator>
+			<name>24c32</name>
+			<value>3</value>
 		</enumerator>
 		<enumerator>
 			<name>24c64</name>
-			<value>2</value>
+			<value>4</value>
 		</enumerator>
 		<enumerator>
+			<name>24c128</name>
+			<value>5</value>
+		</enumerator>		
+		<enumerator>
 			<name>24c512</name>
-			<value>3</value>
+			<value>6</value>
 		</enumerator>				
 		<default>NA</default>
 	</enumerationType>
@@ -548,7 +609,7 @@
 			<value>4</value>
 		</enumerator>
 		<enumerator>
-			<name>SPD</name>
+			<name>SVPD</name>
 			<value>5</value>
 		</enumerator>
 		<enumerator>
@@ -567,6 +628,23 @@
 			<name>DVPD</name>
 			<value>9</value>
 		</enumerator>		
+		<default>NA</default>
+	</enumerationType>
+		<enumerationType>
+		<id>ENC_TYPE</id>
+		<description>Type of node or enclosure</description>
+		<enumerator>
+			<name>CEC</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>CONTROL</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>NA</name>
+			<value>2</value>
+		</enumerator>				
 		<default>NA</default>
 	</enumerationType>
 	<enumerationType>
@@ -676,6 +754,14 @@
 			<name>ETHERNET</name>
 			<value>25</value>
 		</enumerator>
+		<enumerator>
+			<name>AVS</name>
+			<value>26</value>
+		</enumerator>
+		<enumerator>
+			<name>OBUS</name>
+			<value>27</value>
+		</enumerator>		
 	</enumerationType>
 	<enumerationType>
 		<id>MRW_TYPE</id>
@@ -858,7 +944,22 @@
 		</enumerator>
 		<default>NO</default>
 	</enumerationType>
-
+	<enumerationType>
+		<id>SPI_FUNCTION</id>
+		<enumerator>
+			<name>BMC_CODE</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>PNOR</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>NOT_DEFINED</name>
+			<value>1</value>
+		</enumerator>
+		<default>NOT_DEFINED</default>
+	</enumerationType>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<description>Bus Type
@@ -985,8 +1086,7 @@
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_SELECT</id>
-		<description>configuration select
-		</description>
+		<description>configuration select</description>
 		<simpleType>
 			<uint8_t>
 				<id>0</id>
@@ -999,8 +1099,7 @@
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_NUM</id>
-		<description>configuration select
-		</description>
+		<description>configuration select</description>
 		<simpleType>
 			<uint8_t>
 				<id>0</id>
@@ -1012,8 +1111,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<description>Bus Direction
-		</description>
+		<description>Bus Direction</description>
 		<simpleType>
 			<enumeration>
 				<id>DIRECTION</id>
@@ -1024,9 +1122,208 @@
 		<global />
 	</attribute>
 	<attribute>
+		<id>SLOT_NAME</id>
+		<description>PCIe slot name definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>SLOT_INDEX</id>
+		<description>PCIe slot index definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>SLOT_TYPE</id>
+		<description>Defines if the PCIe slot is coming from a switch or directly from the CPU PHB</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>VENDOR_ID</id>
+		<description>PCIe vendor ID definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>DEVICE_ID</id>
+		<description>PCIe device ID definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_VENDOR_ID</id>
+		<description>PCIe subsystem vendor ID definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>SUBSYSTEM_DEVICE_ID</id>
+		<description>PCIe subsystem device ID definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>MAX_POWER</id>
+		<description>Defines the maximum power consumption for a PCIe slot</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>MSI</id>
+		<description>PCIe slot MSI definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>							
+	<attribute>
+		<id>32BIT_MMIO_SIZE</id>
+		<description>PCIe slot 32bit MMIO size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>64BIT_MMIO_SIZE</id>
+		<description>PCIe slot 64bit MMIO size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>32BIT_DMA_SIZE</id>
+		<description>PCIe slot 32bit DMA size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>64BIT_DMA_SIZE</id>
+		<description>PCIe slot 64bit DMA size definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>				
+	<attribute>
+		<id>HDDW_ORDER</id>
+		<description>PCIe slot HDDW order definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>		
+	<attribute>
+		<id>SWITCH_MODEL</id>
+		<description>PCIe switch model definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>STATION</id>
+		<description>PCIe switch station definition</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>WIDTH</id>
+		<description>Number of PCIE lanes</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
+		<id>PRESENCE_DETECT</id>
+		<description>Presence detect information</description>
+		<simpleType>
+			<enumeration>
+				<id>PRESENCE_DETECT</id>
+			</enumeration>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+		<global />
+	</attribute>	
+	<attribute>
 		<id>MRU_PREFIX</id>
-		<description>Prefix to generate MRU_ID's with
-		</description>
+		<description>Prefix to generate MRU_ID's with</description>
 		<simpleType>
 			<enumeration>
 				<id>MRU_PREFIX</id>
@@ -1037,8 +1334,7 @@
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
-		<description>Attribute indicating the target's special MRW type
-		</description>
+		<description>Attribute indicating the target's special MRW type</description>
 		<simpleType>
 			<enumeration>
 				<id>MRW_TYPE</id>
@@ -1244,6 +1540,28 @@
 		<readable />
 		<writeable />
 	</attribute>
+	<attribute>
+		<id>I2C_TYPE</id>
+		<description>I2C Type for HDAT_I2C_DEVICE_TYPE</description>
+		<simpleType>
+			<string>
+			</string>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>I2C_PURPOSE</id>
+		<description>I2C Purpose for HDAT_I2C_DEVICE_PURPOSE</description>
+		<simpleType>
+			<string>
+			</string>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
 		<attribute>
 		<id>COOLING_ZONE_MASK</id>
 		<description>Cooling zone mask for temperature sensors</description>
@@ -1257,8 +1575,7 @@
 	</attribute>
 	<attribute>
 		<id>STANDBY_PLUGGABLE</id>
-		<description>Is a given card pluggable at FSP standby
-		</description>
+		<description>Is a given card pluggable at FSP standby</description>
 		<simpleType>
 			<enumeration>
 				<id>STANDBY_PLUGGABLE</id>
@@ -1271,8 +1588,7 @@
 	</attribute>	
 	<attribute>
 		<id>CARD_TYPE</id>
-		<description>Type of card
-		</description>
+		<description>Type of card</description>
 		<simpleType>
 			<enumeration>
 				<id>CARD_TYPE</id>
@@ -1285,8 +1601,7 @@
 	</attribute>
 	<attribute>
 		<id>CONNECTOR_TYPE</id>
-		<description>Type of connector
-		</description>
+		<description>Type of connector</description>
 		<simpleType>
 			<enumeration>
 				<id>CONNECTOR_TYPE</id>
@@ -1300,8 +1615,7 @@
 	</attribute>
 	<attribute>
 		<id>LED_TYPE</id>
-		<description>Type of LED
-		</description>
+		<description>Type of LED</description>
 		<simpleType>
 			<enumeration>
 				<id>LED_TYPE</id>
@@ -1326,6 +1640,18 @@
 		<writeable />
 	</attribute>
 	<attribute>
+		<id>ENC_TYPE</id>
+		<description>Control or CEC</description>
+		<simpleType>
+			<enumeration>
+				<id>ENC_TYPE</id>
+			</enumeration>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
 		<id>SYSTEM_NAME</id>
 		<description>System Name</description>
 		<simpleType>
@@ -1337,14 +1663,7 @@
 	</attribute>
 	<attribute>
 		<id>PROC_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1356,14 +1675,7 @@
 	</attribute>
 	<attribute>
 		<id>MEMBUF_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1375,14 +1687,7 @@
 	</attribute>
 	<attribute>
 		<id>SOURCE_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1394,14 +1699,7 @@
 	</attribute>
 	<attribute>
 		<id>DEST_TX_LANE_INVERT</id>
-		<description>
-			This attribute represents the polarity of a differential
-			wire pair on the
-			DMI and A buses.
-			creator: platform (generated based on
-			MRW data)
-			See defintion in common_attributes.xml for more information.
-		</description>
+		<description>This attribute represents the polarity of a differential wire pair on the DMI and A buses</description>
 		<simpleType>
 			<uint32_t>
 				<default>0</default>
@@ -1693,8 +1991,7 @@
 	</attribute>
 	<attribute>
 		<id>RAIL_NAME</id>
-		<description>Name of power supply rail
-		</description>
+		<description>Name of power supply rail</description>
 		<simpleType>
 			<enumeration>
 				<id>RAIL_NAME</id>
@@ -1708,8 +2005,7 @@
 	</attribute>
 	<attribute>
 		<id>GPIO_TYPE</id>
-		<description>Type of GPIO
-		</description>
+		<description>Type of GPIO</description>
 		<simpleType>
 			<enumeration>
 				<id>GPIO_TYPE</id>
@@ -1723,8 +2019,7 @@
 	</attribute>
 	<attribute>
 		<id>IOP_NUM</id>
-		<description># of IOP
-		</description>
+		<description>Number of IOP</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1734,8 +2029,7 @@
 	</attribute>
 	<attribute>
 		<id>PHB_NUM</id>
-		<description># of PHB
-		</description>
+		<description>Number of PHB</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1745,8 +2039,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_NUM_LANES</id>
-		<description># of PCIE lanes enabled for this interface
-		</description>
+		<description>Number of PCIE lanes enabled for this interface</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1756,8 +2049,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_LANE_MASK</id>
-		<description>Lane mask for this config
-		</description>
+		<description>Lane mask for this config</description>
 		<simpleType>
 			<uint16_t></uint16_t>
 		</simpleType>
@@ -1765,10 +2057,20 @@
 		<readable />
 		<serverwizReadonly/>
 	</attribute>
+        <attribute>
+                <id>PCIE_LANE_SET</id>
+                <description>Lane set for this config</description>
+                <simpleType>
+                        <uint16_t></uint16_t>
+                </simpleType>
+                <persistency>non-volatile</persistency>
+                <readable />
+                <serverwizReadonly/>
+        </attribute>
+
 	<attribute>
-		<id>PCIE_LANE_SET</id>
-		<description>Lane set for this config
-		</description>
+		<id>PCIE_LANE_GROUP</id>
+		<description>Lane group for this config</description>
 		<simpleType>
 			<uint16_t></uint16_t>
 		</simpleType>
@@ -1778,9 +2080,85 @@
 	</attribute>
 
 	<attribute>
+		<id>MGC_LOAD_SOURCE</id>
+		<description>defines MGC load source</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+
+	<attribute>
 		<id>ENABLE_CAPI</id>
-		<description>enables CAPI function (0=no,1=yes)
-		</description>
+		<description>enables CAPI function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+
+	<attribute>
+		<id>ENABLE_LSI</id>
+		<description>enables LSI function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	
+	<attribute>
+		<id>ENABLE_HOTPLUG</id>
+		<description>enables hotplug function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+
+	<attribute>
+		<id>ENABLE_CABLECARD</id>
+		<description>enables Cable Card function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>			
+
+	<attribute>
+		<id>ENABLE_SRIOV</id>
+		<description>enables SRIOV function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+
+	<attribute>
+		<id>ENABLE_ELLOCO</id>
+		<description>enables El Loco function (0=no,1=yes)</description>
+		<simpleType>
+			<uint8_t></uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	
+	<attribute>
+		<id>ENABLE_NVLINK</id>
+		<description>enables NVLINK function (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1788,14 +2166,11 @@
 		<readable />
 		<writeable />
 		<serverwizReadonly/>
-	</attribute>
+	</attribute>	
 
 	<attribute>
 		<id>PCIE_LANE_SWAP_TABLE</id>
-		<description>Lane Swap Lookup Table
-			CK not swap = none,ck0,ck0,both
-			CK swapped = none,ck0,ck1,both
-		</description>
+		<description>Lane Swap Lookup Table CK not swap = none,ck0,ck0,both CK swapped = none,ck0,ck1,both</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 			<array>4,2</array>
@@ -1806,8 +2181,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_SWAP_CLKS</id>
-		<description>Swap CK0 and CK1 (0=no,1=yes)
-		</description>
+		<description>Swap CK0 and CK1 (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1817,8 +2191,7 @@
 	</attribute>
 	<attribute>
 		<id>LANE_REVERSAL</id>
-		<description>Lane Reversal (0=no,1=yes)
-		</description>
+		<description>Lane Reversal (0=no,1=yes)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1828,8 +2201,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_CLK_NUM</id>
-		<description>Interface MSB CLK number (0 = CLK0, 1 = CLK1)
-		</description>
+		<description>Interface MSB CLK number (0 = CLK0, 1 = CLK1)</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1839,8 +2211,7 @@
 	</attribute>
 	<attribute>
 		<id>PCIE_CONFIG_NUM</id>
-		<description>PCIe config id
-		</description>
+		<description>PCIe config id</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1851,8 +2222,7 @@
 
 	<attribute>
 		<id>PCIE_CONFIG_SELECTED</id>
-		<description>Specifies if this config is selected
-		</description>
+		<description>Specifies if this config is selected</description>
 		<simpleType>
 			<uint8_t></uint8_t>
 		</simpleType>
@@ -1861,8 +2231,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<description>Schematic name
-		</description>
+		<description>Schematic name</description>
 		<simpleType>
 			<string></string>
 		</simpleType>
@@ -1881,8 +2250,7 @@
 	</attribute>	
 	<attribute>
 		<id>ASSOCIATION_TYPE</id>
-		<description>Associates 2 parts together
-		</description>
+		<description>Associates 2 parts together</description>
 		<simpleType>
 			<enumeration>
 				<id>ASSOCIATION_TYPE</id>
@@ -2238,6 +2606,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable />
+		<global />
 	</attribute>
 	<attribute>
 		<id>SP_MUX_GROUP</id>
@@ -4305,6 +4674,7 @@
 		</field>
 		</complexType>
 		<readable />
+		<global />
 	</attribute>
 	<attribute>
 		<id>PORT</id>
@@ -5204,6 +5574,22 @@
 		<readable />
 	</attribute>
 	<attribute>
+		<id>VMEM_PER_VPP</id>
+		<complexType>
+		<field>
+			<name>Register</name>
+			<type>uint8_t</type>
+			<bits>8</bits>
+		</field>
+		<field>
+			<name>Value</name>
+			<type>uint8_t</type>
+			<bits>8</bits>
+		</field>
+		</complexType>
+		<readable />
+	</attribute>	
+	<attribute>
 		<id>VOLTAGE</id>
 		<complexType>
 		<field>
@@ -5345,6 +5731,17 @@
 		<description>Name of checking script to run when Run Checks button is clicked</description>
 		<simpleType>
 			<string></string>
+		</simpleType>
+		<readable />
+	</attribute>
+	<attribute>
+		<id>SPI_FUNCTION</id>
+		<description>SPI master unit function, if applicable
+		</description>
+		<simpleType>
+			<enumeration>
+				<id>SPI_FUNCTION</id>
+			</enumeration>
 		</simpleType>
 		<readable />
 	</attribute>

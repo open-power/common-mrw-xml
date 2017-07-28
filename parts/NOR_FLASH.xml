@@ -7,17 +7,13 @@
 	<is_root>true</is_root>
 	<instance_name>NOR_FLASH</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>NOR_FLASH.spi-slave-0</child_id>
 	<child_id>NOR_FLASH.gpio-slave-0</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -63,7 +59,7 @@
 	<is_root>false</is_root>
 	<instance_name>NOR_FLASH.spi-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>SPI</default>
@@ -111,7 +107,7 @@
 	<is_root>false</is_root>
 	<instance_name>NOR_FLASH.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>

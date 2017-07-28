@@ -7,14 +7,10 @@
 	<is_root>true</is_root>
 	<instance_name>RX8900CE</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>RX8900CE.i2c</child_id>
-	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
 	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
@@ -49,7 +45,7 @@
 	</attribute>
 	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
-		<default>epson,rx8900ce</default>
+		<default>epson,rx8900</default>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -58,7 +54,7 @@
 	<is_root>false</is_root>
 	<instance_name>RX8900CE.i2c</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>

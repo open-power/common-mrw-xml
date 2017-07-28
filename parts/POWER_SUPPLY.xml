@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>POWER_SUPPLY</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>POWER_SUPPLY.i2c-0</child_id>
@@ -23,10 +23,6 @@
 	<child_id>POWER_SUPPLY.gpio-master-5</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -72,7 +68,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.i2c</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -124,7 +120,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.vout</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>POWER</default>
@@ -168,7 +164,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.vout</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>POWER</default>
@@ -316,7 +312,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -347,7 +343,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>fss</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -368,7 +364,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-slave</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -399,7 +395,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>reset</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -420,7 +416,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-slave</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -451,7 +447,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>ps-kill</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -472,7 +468,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-slave</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -503,7 +499,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>fan-full-speed</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -524,7 +520,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-master</instance_name>
 	<position>4</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -555,7 +551,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>throttle</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -576,7 +572,7 @@
 	<is_root>false</is_root>
 	<instance_name>POWER_SUPPLY.gpio-master</instance_name>
 	<position>5</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -607,7 +603,7 @@
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
-		<default></default>
+		<default>alert</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>

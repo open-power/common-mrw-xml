@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>SI5335</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>SI5335.gpio-slave-0</child_id>
@@ -18,10 +18,6 @@
 	<child_id>SI5335.clk-3</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -67,7 +63,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.gpio-slave</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -119,7 +115,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.gpio-slave</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>GPIO</default>
@@ -171,7 +167,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.clk</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -215,7 +211,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.clk</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -259,7 +255,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.clk</instance_name>
 	<position>2</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>
@@ -303,7 +299,7 @@
 	<is_root>false</is_root>
 	<instance_name>SI5335.clk</instance_name>
 	<position>3</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>CLK</default>

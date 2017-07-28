@@ -7,14 +7,10 @@
 	<is_root>true</is_root>
 	<instance_name>USB2_1PORT</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>USB2_1PORT.usb-0</child_id>
-	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
 	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
@@ -46,11 +42,11 @@
 </targetPart>
 <targetPart>
 	<id>USB2_1PORT.usb-0</id>
-	<type>unit-usb-master</type>
+	<type>unit-usb-slave</type>
 	<is_root>false</is_root>
 	<instance_name>USB2_1PORT.usb</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>USB</default>
@@ -65,7 +61,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>OUT</default>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>

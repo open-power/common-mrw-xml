@@ -7,7 +7,7 @@
 	<is_root>true</is_root>
 	<instance_name>FAN_COUNTER_ROTATING</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>FAN_COUNTER_ROTATING.pwm-0</child_id>
@@ -15,10 +15,6 @@
 	<child_id>FAN_COUNTER_ROTATING.tach-1</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CHIP_ID</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -64,7 +60,7 @@
 	<is_root>false</is_root>
 	<instance_name>FAN_COUNTER_ROTATING.pwm</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>PWM</default>
@@ -124,7 +120,7 @@
 	<is_root>false</is_root>
 	<instance_name>FAN_COUNTER_ROTATING.tach</instance_name>
 	<position>0</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>
@@ -224,7 +220,7 @@
 	<is_root>false</is_root>
 	<instance_name>FAN_COUNTER_ROTATING.tach</instance_name>
 	<position>1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>TACH</default>

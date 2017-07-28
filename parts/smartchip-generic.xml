@@ -38,7 +38,7 @@
     </attribute>
     <instance_name>io-0</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
   </targetPart>
@@ -55,7 +55,7 @@
     <child_id>io-0</child_id>
     <instance_name>anchor</instance_name>
     <is_root>true</is_root>
-    <parent>chip</parent>
+    <parent>mrw-chip</parent>
     <parent_type>card-motherboard</parent_type>
     <parent_type>card-daughtercard</parent_type>
     <position>0</position>

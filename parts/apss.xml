@@ -8,7 +8,7 @@
 		<is_root>true</is_root>
 		<instance_name>apss</instance_name>
 		<position>-1</position>
-		<parent>chip</parent>
+		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>
 		<parent_type>card-daughtercard</parent_type>		
 		<child_id>apss.ADCCH0</child_id>
@@ -91,11 +91,47 @@
 			<default>20.04</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>0</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>1</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_MEMORY_PROC_0</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>20.04</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -123,11 +159,47 @@
 			<default>6.5</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>1</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>2</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_MEMORY_PROC_1</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>6.5</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -155,11 +227,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>10</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>11</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VCS_VIO_VPCIE_PROC_2</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -187,11 +295,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>11</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>12</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VCS_VIO_VPCIE_PROC_3</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -219,11 +363,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>12</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>20</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_12V_SENSE</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -251,11 +431,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>13</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>22</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_TOTAL_SYS_CURRENT</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -283,11 +499,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>14</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>23</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_MEM_CACHE</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -315,11 +567,47 @@
 			<default>20.04</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>15</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>13</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_IO_A</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>20.04</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -347,11 +635,47 @@
 			<default>20.04</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>2</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>3</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_MEMORY_PROC_2</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>20.04</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -379,11 +703,47 @@
 			<default>20.04</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>3</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>4</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_MEMORY_PROC_3</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>20.04</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -411,11 +771,47 @@
 			<default>10</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>4</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>5</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VDD_PROC_0</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>10</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -443,11 +839,47 @@
 			<default>10</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>5</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>6</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VDD_PROC_1</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>10</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -475,11 +907,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>6</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VDD_PROC_2</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -507,11 +975,47 @@
 			<default>9.117</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>7</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>8</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VDD_PROC_3</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>9.117</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -539,11 +1043,47 @@
 			<default>1</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>8</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>9</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VCS_VIO_VPCIE_PROC_0</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>1</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
@@ -571,11 +1111,47 @@
 			<default>6.494</default>
 		</attribute>
 		<attribute>
-			<id>GND</id>
-		</attribute>
-		<attribute>
 			<id>OFFSET</id>
 			<default>0.005</default>
+		</attribute>				
+		<attribute>
+			<id>ADC_CHANNEL_ASSIGNMENT</id>
+			<default>9</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_ID</id>
+			<default>10</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_NAME_SUFFIX</id>
+			<default>ADC_VCS_VIO_VPCIE_PROC_1</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GAIN</id>
+			<default>6.494</default>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_GROUND</id>
+		</attribute>
+		<attribute>
+			<id>ADC_CHANNEL_OFFSET</id>
+			<default>0.005</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_ENTITY_ID</id>
+			<default>0xD7</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_ID</id>
+			<default></default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_READING_TYPE</id>
+			<default>0x01</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_SENSOR_TYPE</id>
+			<default>0xC2</default>
 		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>

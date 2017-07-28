@@ -38,7 +38,7 @@
     <child_id>i2c-slave</child_id>
     <instance_name>vpdchip</instance_name>
     <is_root>true</is_root>
-    <parent>chip</parent>
+    <parent>mrw-chip</parent>
     <position>0</position>
     <type>chip-vpd-device</type>
   </targetPart>
@@ -73,7 +73,7 @@
     </attribute>
     <instance_name>i2c-slave</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-i2c-slave</type>
   </targetPart>
