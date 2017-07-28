@@ -5202,7 +5202,7 @@
   </attribute>
   <attribute>
     <id>CHIP_UNIT</id>
-    <default>0</default>
+    <default>1</default>
   </attribute>
   <attribute>
     <id>CLASS</id>
