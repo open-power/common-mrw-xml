@@ -59,11 +59,11 @@
 	</attribute>
 	<attribute>
 		<id>VENDOR_ID</id>
-		<default></default>
+		<default>0x104C</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
-		<default></default>
+		<default>0x8241</default>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_VENDOR_ID</id>
