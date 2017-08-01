@@ -15,11 +15,11 @@
     <hidden_child_id>gpu_func_sensor</hidden_child_id>
     <attribute>
     	<id>VENDOR_ID</id>
-     <default></default>
+     <default>0x10DE</default>
     </attribute>
     <attribute>
     	<id>DEVICE_ID</id>
-     <default></default>
+     <default>0x1DB1</default>
     </attribute>
     <attribute>
      <id>SUBSYSTEM_VENDOR_ID</id>
