@@ -1,0 +1,65 @@
+<partInstance>
+<targetInstances>
+  <targetPart>
+    <id>Virtual-Switch</id>
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <attribute>
+      <id>Upstream_Port</id>
+      <default></default>
+    </attribute>
+    <instance_name>Virtual-Switch</instance_name>
+    <is_root>true</is_root>
+    <parent>mrw-chip</parent>
+    <parent_type>chip-PEX8725</parent_type>
+    <child_id>Virtual_Switch_Perst</child_id>
+    <position>-1</position>
+    <type>Virtual-Switch</type>
+  </targetPart>
+<targetPart>
+ <id>Virtual_Switch_Perst</id>
+  <attribute>
+    <id>BUS_TYPE</id>
+    <default>GPIO</default>
+  </attribute>
+  <attribute>
+    <id>CHIP_UNIT</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>CLASS</id>
+    <default>UNIT</default>
+  </attribute>
+  <attribute>
+    <id>DECONFIG_GARDABLE</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>DIRECTION</id>
+    <default>IN</default>
+  </attribute>
+  <attribute>
+    <id>MRW_TYPE</id>
+    <default>NA</default>
+  </attribute>
+  <attribute>
+    <id>RESOURCE_IS_CRITICAL</id>
+    <default>0</default>
+  </attribute>
+  <attribute>
+    <id>TYPE</id>
+    <default>NA</default>
+  </attribute>
+  <attribute>
+	<id>GPIO_TYPE</id>
+	<default>PERST</default>
+  </attribute>
+  <instance_name>Virtual_Switch_Perst</instance_name>
+  <is_root>false</is_root>
+  <position>-1</position>
+  <type>unit-perst-generic</type>
+</targetPart>
+</targetInstances>
+</partInstance>

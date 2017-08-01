@@ -1,0 +1,21 @@
+<partInstance>
+<targetInstances>
+  <targetPart>
+    <id>Virtual-Port</id>
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <attribute>
+      <id>Downstream_Port</id>
+      <default></default>
+    </attribute>
+    <instance_name>Virtual-Port</instance_name>
+    <is_root>true</is_root>
+    <parent>mrw-chip</parent>
+    <parent_type>Virtual-Switch</parent_type>
+    <position>-1</position>
+    <type>Virtual-Port</type>
+  </targetPart>
+</targetInstances>
+</partInstance>
