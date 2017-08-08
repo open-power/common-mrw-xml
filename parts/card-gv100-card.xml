@@ -22,6 +22,10 @@
      <default>0x1DB1</default>
     </attribute>
     <attribute>
+     <id>RU_TYPE</id>
+     <default>FRU</default>
+    </attribute>
+    <attribute>
      <id>SUBSYSTEM_VENDOR_ID</id>
      <default></default>
     </attribute>
