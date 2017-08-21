@@ -1199,6 +1199,28 @@
 		<writeable />
 	</attribute>
 	<attribute>
+		<id>Upstream_Port</id>
+		<description>Defines the upstream port associated with a virtual switch</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
+		<id>Downstream_Port</id>
+		<description>Defines a downstream port associated with a virtual switch</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable />
+		<writeable />
+	</attribute>
+	<attribute>
 		<id>MAX_POWER</id>
 		<description>Defines the maximum power consumption for a PCIe slot</description>
 		<simpleType>
