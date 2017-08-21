@@ -15,6 +15,15 @@
       <id>MODEL</id>
     </attribute>
     <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>PHYS_PATH</id>
+    </attribute>
+    <attribute>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
@@ -31,6 +40,15 @@
       <id>RESOURCE_IS_CRITICAL</id>
       <default>0</default>
     </attribute>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_NAME</id>
+    </attribute>
   </targetType>
   <targetType>
     <id>chip</id>
@@ -38,6 +56,31 @@
     <attribute>
       <id>CLASS</id>
       <default>CHIP</default>
+    </attribute>
+    <attribute>
+      <id>POSITION</id>
+    </attribute>
+    <attribute>
+      <id>FSI_MASTER_CHIP</id>
+    </attribute>
+    <attribute>
+      <id>ALTFSI_MASTER_CHIP</id>
+    </attribute>
+    <attribute>
+      <id>FSI_MASTER_TYPE</id>
+      <default>NO_MASTER</default>
+    </attribute>
+    <attribute>
+      <id>MRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>FSI_MASTER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>ALTFSI_MASTER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>FSI_SLAVE_CASCADE</id>
     </attribute>
     <attribute>
       <id>FSI_OPTION_FLAGS</id>
@@ -52,6 +95,9 @@
     <attribute>
       <id>TYPE</id>
       <default>PROC</default>
+    </attribute>
+    <attribute>
+      <id>PROC_MASTER_TYPE</id>
     </attribute>
     <attribute>
       <id>PRIMARY_CAPABILITIES</id>
@@ -80,6 +126,18 @@
       <default>1</default>
     </attribute>
     <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_EFF_FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_EFF_FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
       <!-- Processor chips have an SBE -->
       <id>CHIP_HAS_SBE</id>
       <default>1</default>
@@ -92,6 +150,9 @@
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0x00000001</default>
       <!-- GARD -->
+    </attribute>
+    <attribute>
+      <id>VPD_REC_NUM</id>
     </attribute>
     <!-- New attributes for mss/proc_setup_bars -->
     <!--    proc_setup_bars_memory_attributes.xml   -->
@@ -289,6 +350,9 @@
       <default>UNIT</default>
     </attribute>
     <attribute>
+      <id>MRU_ID</id>
+    </attribute>
+    <attribute>
       <id>PRIMARY_CAPABILITIES</id>
       <default>
         <field>
@@ -315,6 +379,9 @@
     </attribute>
     <attribute>
       <id>CHIPLET_ID</id>
+    </attribute>
+    <attribute>
+      <id>REL_POS</id>
     </attribute>
   </targetType>
   <!-- Memory Buffer Target Types -->
@@ -361,8 +428,18 @@
       <!--GARD | MEMDIAG -->
     </attribute>
     <attribute>
+      <id>ISDIMM_MBVPD_INDEX</id>
+    </attribute>
+    <attribute>
+      <id>I2C_BUS_SPEED_ARRAY</id>
+      <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
+    </attribute>
+    <attribute>
       <id>CENTAUR_ECID_FRU_ID</id>
       <default>0xFF</default>
+    </attribute>
+    <attribute>
+      <id>MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
     </attribute>
     <attribute>
       <!-- Centaur memory buffer chips do not have SCOM accessible FSI GP regs -->
@@ -374,6 +451,9 @@
       <id>CHIP_HAS_SBE</id>
       <default>0</default>
     </attribute>
+    <attribute>
+      <id>EI_BUS_TX_LANE_INVERT</id>
+    </attribute>
     <!-- Begin poreve_memory_attributes.xml -->
     <attribute>
       <id>SBE_SEEPROM_I2C_ADDRESS_BYTES</id>
@@ -382,6 +462,9 @@
       <id>PNOR_I2C_ADDRESS_BYTES</id>
     </attribute>
     <!-- End poreve_memory_attributes.xml -->
+    <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
     </attribute>
@@ -426,6 +509,15 @@
       <default>LOGICAL_CARD</default>
     </attribute>
     <attribute>
+      <id>POSITION</id>
+    </attribute>
+    <attribute>
+      <id>MBA_PORT</id>
+    </attribute>
+    <attribute>
+      <id>MBA_DIMM</id>
+    </attribute>
+    <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
     </attribute>
@@ -438,11 +530,17 @@
       <id>TEMP_SENSOR_I2C_CONFIG</id>
     </attribute>
     <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>DIMM</default>
     </attribute>
     <attribute>
       <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>REL_POS</id>
     </attribute>
   </targetType>
   <targetType>
@@ -480,6 +578,9 @@
       <default>POWER9</default>
     </attribute>
     <attribute>
+      <id>OCC_MASTER_CAPABLE</id>
+    </attribute>
+    <attribute>
       <id>FRU_ID</id>
     </attribute>
   </targetType>
@@ -504,7 +605,19 @@
       <default>POWER9</default>
     </attribute>
     <attribute>
+      <id>HUID</id>
+      <default>0x00010000</default>
+    </attribute>
+    <attribute>
       <id>EXECUTION_PLATFORM</id>
+    </attribute>
+    <attribute>
+      <id>PHYS_PATH</id>
+      <default>physical:sys-0</default>
+    </attribute>
+    <attribute>
+      <id>AFFINITY_PATH</id>
+      <default>affinity:sys-0</default>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -518,12 +631,18 @@
     </attribute>
     <!-- Max/min config attributes -->
     <attribute>
+      <id>MAX_PROC_CHIPS_PER_NODE</id>
+    </attribute>
+    <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
     </attribute>
     <attribute>
       <id>MAX_CHIPLETS_PER_PROC</id>
       <!-- This number is from latest P9 chiplet list and ID diagram -->
       <default>43</default>
+    </attribute>
+    <attribute>
+      <id>MAX_MCS_PER_SYSTEM</id>
     </attribute>
     <attribute>
       <id>MAX_DMI_PER_PROC</id>
@@ -786,6 +905,9 @@
     </attribute>
     <attribute>
       <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
+    </attribute>
+    <attribute>
+      <id>MAX_PROC_CHIPS_PER_NODE</id>
     </attribute>
     <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
@@ -1221,6 +1343,9 @@
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
+    <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
   </targetType>
   <!-- chip-tpm-cectpm -->
   <targetType>
@@ -1256,6 +1381,10 @@
     </attribute>
     <attribute>
       <id>EEPROM_SBE_BACKUP_INFO</id>
+    </attribute>
+    <attribute>
+      <id>I2C_BUS_SPEED_ARRAY</id>
+      <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
     </attribute>
     <!-- From PHYP Memory Map -->
     <attribute>
@@ -1586,6 +1715,9 @@
       <!-- GARD -->
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>CPU</default>
     </attribute>
@@ -1633,6 +1765,9 @@
       <!-- GARD -->
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>CPU</default>
     </attribute>
@@ -1666,6 +1801,9 @@
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
     </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
     <!--HWSV needs to update names so we can remove this-->
     <!--HWSV needs to update names so we can remove this-->
     <!--HWSV needs to update names so we can remove this-->
@@ -1673,8 +1811,17 @@
     <!--HWSV needs to update names so we can remove this-->
     <!--HWSV needs to update names so we can remove this-->
     <attribute>
+      <id>VPD_REC_NUM</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>MEM</default>
+    </attribute>
+    <attribute>
+      <id>MEMVPD_POS</id>
+    </attribute>
+    <attribute>
+      <id>DMI_REFCLOCK_SWIZZLE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -1704,6 +1851,9 @@
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0x00000003</default>
       <!-- GARD | MEMDIAG -->
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
     <attribute>
       <id>CDM_DOMAIN</id>
@@ -1741,6 +1891,9 @@
       <!-- GARD | MEMDIAG -->
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>MEM</default>
     </attribute>
@@ -1750,6 +1903,9 @@
     <!-- Unique domain id -->
     <attribute>
       <id>VPP_ID</id>
+    </attribute>
+    <attribute>
+      <id>VDDR_ID</id>
     </attribute>
     <attribute>
       <id>VCS_ID</id>
@@ -1783,6 +1939,9 @@
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
     </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
   </targetType>
   <targetType>
     <id>unit-mc-cumulus</id>
@@ -1806,6 +1965,9 @@
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
     </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
   </targetType>
   <targetType>
     <id>unit-mi-cumulus</id>
@@ -1828,6 +1990,9 @@
     <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
@@ -1854,6 +2019,9 @@
     <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_PCS_RX_CDR_GAIN</id>
@@ -1922,6 +2090,9 @@
       <id>PROC_PCIE_PCS_M_CNTL</id>
     </attribute>
     <attribute>
+      <id>PROC_PCIE_IOP_SWAP</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_IOP_CONFIG</id>
     </attribute>
     <attribute>
@@ -1938,7 +2109,16 @@
       <!-- GARD -->
     </attribute>
     <attribute>
+      <id>PROC_PCIE_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_LANE_MASK_NON_BIFURCATED</id>
+    </attribute>
+    <attribute>
       <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_IOP_SWAP_NON_BIFURCATED</id>
     </attribute>
     <attribute>
       <id>PEC_PCIE_IOP_SWAP_BIFURCATED</id>
@@ -1978,6 +2158,9 @@
       <!-- GARD -->
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_BAR_ENABLE</id>
     </attribute>
     <attribute>
@@ -1995,6 +2178,50 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    </attribute>
+    <attribute>
+      <id>PCIE_CAPABILITES</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>MGC_LOAD_SOURCE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>SLOT_NAME</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>SLOT_INDEX</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>HDDW_ORDER</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_32BIT_MMIO_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_64BIT_MMIO_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_32BIT_DMA_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>PCIE_64BIT_DMA_SIZE</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>MAX_POWER</id>
+      <default />
+    </attribute>
+    <attribute>
+      <id>VENDOR_ID</id>
+      <default />
     </attribute>
   </targetType>
   <!-- unit-phb-power9 -->
@@ -2027,6 +2254,9 @@
     <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
@@ -2079,6 +2309,9 @@
       <default>0</default>
     </attribute>
     <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0</default>
       <!-- GARD -->
@@ -2087,7 +2320,13 @@
       <id>OBUS_BRICK_LANE_MASK</id>
     </attribute>
     <attribute>
+      <id>OBUS_SLOT_INDEX</id>
+    </attribute>
+    <attribute>
       <id>OPTICS_CONFIG_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -2123,6 +2362,9 @@
       <default>1</default>
     </attribute>
     <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
       <default>0x00000001</default>
       <!-- GARD -->
@@ -2130,6 +2372,9 @@
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>NVLINK</default>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -2159,6 +2404,12 @@
     <attribute>
       <id>DECONFIG_GARDABLE</id>
       <default>1</default>
+    </attribute>
+    <attribute>
+      <id>HUID</id>
+    </attribute>
+    <attribute>
+      <id>PARENT_PERVASIVE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -2270,6 +2521,9 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>IO_XBUS_TX_MARGIN_RATIO</id>
     </attribute>
     <attribute>
@@ -2336,6 +2590,9 @@
       </default>
     </attribute>
     <attribute>
+      <id>PARENT_PERVASIVE</id>
+    </attribute>
+    <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
     </attribute>
@@ -2400,6 +2657,9 @@
     <attribute>
       <id>MODEL</id>
       <default>POWER9</default>
+    </attribute>
+    <attribute>
+      <id>OCC_MASTER_CAPABLE</id>
     </attribute>
   </targetType>
   <targetType>
@@ -2851,6 +3111,9 @@
   </targetTypeExtension>
   <targetTypeExtension>
     <id>base</id>
+    <attribute>
+      <id>ORDINAL_ID</id>
+    </attribute>
   </targetTypeExtension>
   <targetTypeExtension>
     <id>sp</id>

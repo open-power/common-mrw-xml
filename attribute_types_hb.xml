@@ -344,12 +344,8 @@
       <value>69</value>
     </enumerator>
     <enumerator>
-      <name>MFREFCLK</name>
-      <value>70</value>
-    </enumerator>
-    <enumerator>
       <name>LAST_IN_RANGE</name>
-      <value>71</value>
+      <value>70</value>
     </enumerator>
     <default>NA</default>
   </enumerationType>
@@ -428,6 +424,23 @@
       <value>2</value>
     </enumerator>
     <default>NA</default>
+  </enumerationType>
+  <enumerationType>
+    <id>FSI_MASTER_TYPE</id>
+    <description>Enumeration indicating the master's FSI type</description>
+    <enumerator>
+      <name>MFSI</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>CMFSI</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>NO_MASTER</name>
+      <value>2</value>
+    </enumerator>
+    <default>NO_MASTER</default>
   </enumerationType>
   <attribute>
     <id>CLASS</id>
@@ -517,6 +530,24 @@
     <readable />
   </attribute>
   <attribute>
+    <id>PHYS_PATH</id>
+    <description>Physical hierarchical path to the target</description>
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>AFFINITY_PATH</id>
+    <description>Hierarchical path to the target with respect to logical affinity</description>
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>POWER_PATH</id>
     <description>Hierarchical path to the target with respect to power</description>
     <nativeType>
@@ -572,6 +603,76 @@
     <readable />
   </attribute>
   <attribute>
+    <id>ISDIMM_MBVPD_INDEX</id>
+    <description>Multiple centaurs can sometimes have their VPD located in one physical SEEPROM. This is the index into the memory buffer VPD for this centaur.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_ISDIMM_MBVPD_INDEX</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>FSI_MASTER_CHIP</id>
+    <description>Chip which contains the FSI master logic that drives this slave when booting from the default master processor</description>
+    <nativeType>
+      <name>EntityPath</name>
+      <default>physical:sys-0</default>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>ALTFSI_MASTER_CHIP</id>
+    <description>Chip which contains the FSI master logic that drives this slave when booting from the alternate master processor</description>
+    <nativeType>
+      <name>EntityPath</name>
+      <default>physical:sys-0</default>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>FSI_MASTER_TYPE</id>
+    <description>Type of Master FSI connection to this slave (MFSI or cMFSI)</description>
+    <simpleType>
+      <enumeration>
+        <id>FSI_MASTER_TYPE</id>
+        <default>NO_MASTER</default>
+      </enumeration>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <hasStringConversion />
+    <readable />
+  </attribute>
+  <attribute>
+    <id>FSI_MASTER_PORT</id>
+    <description>Which port is this chip hanging off of when booting from the default master processor</description>
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>ALTFSI_MASTER_PORT</id>
+    <description>Which port is this chip hanging off of when booting from the alternate master processor</description>
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>I2C_SLAVE_ADDRESS</id>
     <description>I2C Slave Address</description>
     <simpleType>
@@ -585,6 +686,17 @@
       <id>ATTR_I2C_SLAVE_ADDRESS</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>FSI_SLAVE_CASCADE</id>
+    <description>Slave cascade position</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
   </attribute>
   <attribute>
     <id>FSI_OPTION_FLAGS</id>
@@ -1167,6 +1279,47 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>POSITION</id>
+    <description>Position of target relative to node</description>
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
+      </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MBA_PORT</id>
+    <description>MBA port this DIMM is connected to</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_MBA_PORT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>MBA_DIMM</id>
+    <description>MBA port DIMM number of this DIMM</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_MBA_DIMM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
     <id>CEN_DQ_TO_DIMM_CONN_DQ</id>
     <description>Centaur DQ to DIMM connector DQ mapping for a JEDEC DIMM. Uint8 value for each Centaur DQ (0-79). The value is the corresponding DIMM Connector DQ.</description>
     <simpleType>
@@ -1246,6 +1399,70 @@
     <writeable />
     <hwpfToHbAttrMap>
       <id>ATTR_ALL_MCS_IN_INTERLEAVING_GROUP</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>FABRIC_GROUP_ID</id>
+    <description>Chip attribute. Logical fabric group the chip belongs to. Provided by the Machine Readable Workbook. Can vary across drawers.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_GROUP_ID</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>PROC_EFF_FABRIC_GROUP_ID</id>
+    <description>Effective fabric group ID associated with this chip. Directly drives programming of chip memory map layout. Compared with ATTR_PROC_FABRIC_GROUP_ID to configure FBC XOR masking.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_EFF_FABRIC_GROUP_ID</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>FABRIC_CHIP_ID</id>
+    <description>Chip attribute. Logical fabric chip id for this chip (position within the fabric). Provided by the Machine Readable Workbook. Can vary across drawers.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_CHIP_ID</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>PROC_EFF_FABRIC_CHIP_ID</id>
+    <description>Effective fabric chip ID associated with this chip. Directly drives programming of chip memory map layout. Compared with ATTR_PROC_FABRIC_CHIP_ID to configure FBC XOR masking.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_EFF_FABRIC_CHIP_ID</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -1435,6 +1652,16 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>HUID</id>
+    <description>Hardware Unit ID SSSSNNNNTTTTTTTTiiiiiiiiiiiiiiii S=System N=Node Number T=Target Type (matches TYPE attribute) i=Instance/Sequence number of target, relative to node</description>
+    <simpleType>
+      <uint32_t />
+      <default>0xFFFFFFFF</default>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>SP_FUNCTIONS</id>
     <description>Attribute which describes what the SP is or is not doing in this system</description>
     <complexType>
@@ -1532,6 +1759,29 @@
   </attribute>
   <!-- Begin attributes (4) to test string support -->
   <!-- End attributes (4) to test string support -->
+  <attribute>
+    <id>FAPI_NAME</id>
+    <description>Common name across FAPI environments chip target -&gt; pu:k0:n0:s0:p00 DIMM target -&gt; dimm:k0:n0:s0:p00 chip unit target -&gt; pu.core:k0:n0:s0:p00:c0 cage/system target -&gt; k0 (chip type).(unit type):k(cage,always zero for us):n(node/drawer) :s(slot,always zero for us):p(chip position):c(core/unit position) pu = generic processor</description>
+    <simpleType>
+      <string>
+        <default>unknown</default>
+        <sizeInclNull>64</sizeInclNull>
+      </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>VPD_REC_NUM</id>
+    <description>Record offset for this target's VPD</description>
+    <simpleType>
+      <uint16_t>
+        <default>0xFFFF</default>
+      </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
   <attribute>
     <id>PEER_TARGET</id>
     <description>Peer target's address of a A/X-bus connection. NULL means address 0 for no peer target. If a target instance overrides the default with the peer target's PHYS_PATH. The target compiler will convert the valid PHYS_PATH string into the runtime virtual address of the peer target instance.</description>
@@ -2459,6 +2709,17 @@
     <readable />
   </attribute>
   <attribute>
+    <id>VDDR_ID</id>
+    <description>Voltage Memory Rail Manager ID. Currently HB only needs to configured the Vddr voltage rail manager during the IPL. The ID is an arbitary value and needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl.</description>
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
+      </uint16_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>NEST_VDDR_ID</id>
     <description>Nest VDDR Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
     <simpleType>
@@ -2856,6 +3117,21 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>MEMVPD_POS</id>
+    <description>The position of the MCS target's VPD selector data, relative to the EEPROM that contains its data. The VPD defition supports up to 16 values per EEPROM. For systems with an EEPROM per chip, this value should be equivalent to ATTR_CHIP_UNIT_POS. For systems with a single EEPROM for all chips, the value should follow the physical position in such a way to fit within the 16 available slots.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_MEMVPD_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
     <id>MSS_ALLOW_SINGLE_PORT</id>
     <description>When this value is true, then mss_eff config will allow a single port to have one dimm and will allow ports to have different sizes. Used in eff_config</description>
     <simpleType>
@@ -2892,6 +3168,21 @@
     </hwpfToHbAttrMap>
   </attribute>
   <!-- ===== End Attributes supporting memory_attributes.xml HWPF Attributes ===== -->
+  <attribute>
+    <id>EI_BUS_TX_LANE_INVERT</id>
+    <description>This attribute represents the polarity of a differential wire pair on the DMI and A buses. creator: platform (generated based on MRW data) See defintion in common_attributes.xml for more information.</description>
+    <simpleType>
+      <uint32_t>
+        <default>0</default>
+      </uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_EI_BUS_TX_LANE_INVERT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
   <!-- ===== Supporting poreve_memory_attributes.xml ===== -->
   <attribute>
     <id>SBE_SEEPROM_I2C_ADDRESS_BYTES</id>
@@ -2927,6 +3218,15 @@
   <!-- Support for sync_attributes.xml -->
   <!-- End support for sync_attributes.xml -->
   <!--    Support for proc_select_boot_master -->
+  <attribute>
+    <id>MAX_PROC_CHIPS_PER_NODE</id>
+    <description>System attribute. The max proc chips per node available in the system.</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
   <attribute>
     <id>MAX_EXS_PER_PROC_CHIP</id>
     <description>System attribute. The max EX units per proc chip available in the system.</description>
@@ -2973,6 +3273,17 @@
     <readable />
   </attribute>
   <attribute>
+    <id>MAX_MCS_PER_SYSTEM</id>
+    <description>System attribute. The max MCS units available in the system.</description>
+    <simpleType>
+      <uint8_t>
+        <default>4</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>MAX_DMI_PER_PROC</id>
     <description>System attribute. The max DMI units per proc available in the system.</description>
     <simpleType>
@@ -2996,6 +3307,21 @@
     <readable />
   </attribute>
   <!-- Note: This attribute is only used by FSP -->
+  <attribute>
+    <id>DMI_REFCLOCK_SWIZZLE</id>
+    <description>Defines Murano/Venice/Naples FSI GP8 refclock enable field bit offset (0:7) associated with this MCS chip unit.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
   <attribute>
     <id>EI_BUS_TX_MSBSWAP</id>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and A buses This attribute represents whether or not a single clock group bus such as DMI and A bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
@@ -3222,6 +3548,15 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>PEER_PATH</id>
+    <description>Entity path of the peer target of an Abus</description>
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>MEM_MIRROR_PLACEMENT_POLICY</id>
     <description>Define placement policy/scheme for non-mirrored/mirrored memory layout creator: platform consumer: opt_memmap firmware notes: NORMAL = non-mirrored start: 0, mirrored start: 512TB FLIPPED = mirrored start: 0, non-mirrored start: 512TB SELECTIVE = non-mirrored/mirrored start (interleaved): 0 DRAWER = non-mirrored start: 1TB*drawer, mirrored start: 512TB+(1TB*drawer/2)</description>
     <simpleType>
@@ -3282,6 +3617,19 @@
     <readable />
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_AS_MMIO_BAR_SIZE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
+    <description>Machine Readable Workbook value detailing the wiring of the 8 dimm temperature sensors for non custom dimms, in DIMM A0, A1,B0,B1,C0,C1,D0,D1 order. One nibble per sensor where bit0 (MSB) is the i2c bus the sensor is attached to (0 for master, 1 for spare) and bits 1:3 are for A2,A1,A0 of the sensor i2c address (where A2 is MSB)</description>
+    <simpleType>
+      <uint32_t></uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -3667,6 +4015,36 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
+  <enumerationType>
+    <id>PROC_MASTER_TYPE</id>
+    <description>Enumeration indicating the role of proc as master/alt_master/not_master</description>
+    <enumerator>
+      <name>ACTING_MASTER</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>MASTER_CANDIDATE</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>NOT_MASTER</name>
+      <value>2</value>
+    </enumerator>
+    <default>NOT_MASTER</default>
+  </enumerationType>
+  <attribute>
+    <id>PROC_MASTER_TYPE</id>
+    <description>Type of Master, ACTING_MASTER or MASTER_CANDIDATE or NOT_MASTER</description>
+    <simpleType>
+      <uint8_t>
+        <default>NOT_MASTER</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <hasStringConversion />
+    <readable />
+    <writeable />
+  </attribute>
   <attribute>
     <id>EFFECTIVE_EC</id>
     <description>Holds the effective EC of the system. Effective EC is the lowest EC among all the functional procs in the system. Some cards may "downbin" the effective ECs of their contained processors, which could lower the effective EC of the system beyond what would occur when considering processor ECs alone</description>
@@ -3678,6 +4056,17 @@
     <persistency>non-volatile</persistency>
     <readable />
     <writeable />
+  </attribute>
+  <attribute>
+    <id>MRU_ID</id>
+    <description>MRU ID attribute for chip/unit class</description>
+    <simpleType>
+      <uint32_t>
+        <default>0x00</default>
+      </uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
   </attribute>
   <attribute>
     <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
@@ -4290,6 +4679,18 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>OCC_MASTER_CAPABLE</id>
+    <description>This attribute is to determine whether an occ is master capable. An OCC is master capable if it's parent processor is wired to the APSS.</description>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+        <!-- false -->
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <id>MSS_DRAMINIT_RESET_DISABLE</id>
     <description>A disable switch for resetting the phy delay values at the beginning of calling mss_draminit_training.</description>
     <simpleType>
@@ -4321,6 +4722,17 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>PROC_PCIE_LANE_MASK</id>
+    <description>Effective PCIE Lane Mask Creator: Firmware Purpose: Holds the effective PCIE lane mask of each PEC after taking into account any IOP bifurcations. If no IOP bifurcations present, this is just the value of the PEC_PCIE_LANE_MASK_NON_BIFURCATED attribute Data Format: x4 array of uint16_t values. The uint16_t value is a mask for lane 0, the next for lane 1 and so on until lane 3. A lane set mask indicates which groups of lanes are assigned to an IOP. For instance, lane set 0 value of 0xFFFF and lane set 1 value of 0x0000 for PEC0 means PEC0 is a x16. Lane set 0 value of 0xFF00 and lane set 1 value of 0x00FF for PEC0, means the IOP is bifurcated into two x8s.</description>
+    <simpleType>
+      <uint16_t></uint16_t>
+      <array>4</array>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+  </attribute>
+  <attribute>
     <id>PEC_PCIE_IOP_REVERSAL</id>
     <description>Effective PCIE IOP reversal configuration Creator: Firmware Purpose: Holds the effective PCIE IOP reversal value after taking into account any IOP bifurcations. If no IOP bifurcations present, this is just the value of the PROC_PCIE_IOP_REVERSAL_NON_BIFURCATED attribute. Data Format: x4 array of uint8_t values. The first uint8_t value is for lane set 0, the second for lane set 1 and so on. The given index in the array is a mask which specifies which bit to invert in the lane swap settings for the given PEC/lane set.</description>
     <simpleType>
@@ -4336,6 +4748,25 @@
     <description>Base PCIE IOP reversal configuration Creator: Firmware Purpose: Holds the base PCIE IOP reversal value without considering IOP bifurcation. Data Format: x4 array of uint8_t values. The first uint8_t value is for lane set 0, the second for lane set 1 and so on. The given index in the array is a mask which specifies which bit to invert in the lane swap settings for the given lane set.</description>
     <simpleType>
       <uint8_t></uint8_t>
+      <array>4</array>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PEC_PCIE_IOP_SWAP_NON_BIFURCATED</id>
+    <description>Base PCIE IOP swap configuration value Creator: MRW Purpose: Holds the base IOP swap configuration value without considering IOP bifurcation. The swap value controls how PCIE lanes are recordered when the leave the IOP, to provide lane routing flexibility. Data Format: A uint8_t value. The value specifices for the hardware how to swap the PCIE lanes for the given PEC.</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PEC_PCIE_LANE_MASK_NON_BIFURCATED</id>
+    <description>PCIE Lane Mask base configuration Creator: MRW Purpose: Holds the base PCIE lane mask assuming no dynamic IOP bifurcations. Data Format: x4 array of uint16_t values. The first uint8_t value is lane set 0, the second for lane set 2 and so on. A lane set mask indicates which groups of lanes are assigned to an IOP. For instance, lane set 0 value of 0xFFFF and lane set 1 value of 0x0000 means the PEC is a x16. Lane set 0 value of 0xFF00 and lane set 1 value of 0x00FF, means the PEC is split into two x8s.</description>
+    <simpleType>
+      <uint16_t></uint16_t>
       <array>4</array>
     </simpleType>
     <persistency>non-volatile</persistency>
@@ -4440,6 +4871,18 @@
     <persistency>non-volatile</persistency>
     <readable />
     <hasStringConversion />
+  </attribute>
+  <attribute>
+    <id>I2C_BUS_SPEED_ARRAY</id>
+    <description>Designates the speed at which a given I2C bus should run. Creator: MRW Purpose: Used by FW to know the fastest possible bus speed that all of the devices on a given bus are able to use. Data Format: 4x13 array of uint16_t values. The first index indicates the engine number of the bus. The second index indicates the port number of the bus. The value in the array is the I2C bus speed used for that engine/port combination in KHz.</description>
+    <simpleType>
+      <uint16_t>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0</default>
+      </uint16_t>
+      <array>4,13</array>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
   </attribute>
   <enumerationType>
     <id>SUPPORTED_HOT_PLUG</id>
@@ -5730,6 +6173,30 @@
     <persistency>non-volatile</persistency>
     <readable />
   </attribute>
+  <enumerationType>
+    <id>FAPI_POS</id>
+    <description>Enumeration defining special FAPI_POS values</description>
+    <enumerator>
+      <name>NA</name>
+      <value>0xFFFFFFFF</value>
+    </enumerator>
+    <default>NA</default>
+  </enumerationType>
+  <attribute>
+    <id>FAPI_POS</id>
+    <description>Logical position of target within a system. This is derived from the SMP location of each processor and each target's relationship to a proc. - PROC = based on SMP groupid+chipid - MEMBUF = PROC:FAPI_POS * [max membuf per proc] - 1st level child unit = [parent chip]:FAPI_POS * [max children of this type per chip] - 2nd+ level child unit = [immediate parent unit]:FAPI_POS * [max units below parent] Note: This should not be used algorithmically by HWPs directly. Note: Value ignores physical drawer boundaries, the value is unique across the entire system. This data is derived from the MRW. Default of NA is 0xFFFFFFFF (to avoid confusion with legitimate 0 values)</description>
+    <simpleType>
+      <uint32_t>
+        <default>0xFFFFFFFF</default>
+      </uint32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FAPI_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
   <attribute>
     <id>I2C_BUS_DIV_REF</id>
     <description>Ref clock I2C bus divider consumed by code running out of OTPROM</description>
@@ -5931,6 +6398,16 @@
     <readable />
     <writeable />
   </attribute>
+  <attribute>
+    <id>PARENT_PERVASIVE</id>
+    <description>Physical entity path of the target's associated pervasive target</description>
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <virtual />
+  </attribute>
   <!-- ********************************************************************** -->
   <enumerationType>
     <id>PROC_FABRIC_A_BUS_WIDTH</id>
@@ -6047,6 +6524,19 @@
     <readable />
     <hwpfToHbAttrMap>
       <id>ATTR_OBUS_BRICK_LANE_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>OBUS_SLOT_INDEX</id>
+    <description>Position of the obus slot that the Obus brick is connected to (represented in decimal). There is only one slot that a given brick connects to and there are only 6 slots per proc, so, we just need a single uint8_t representing the position of the slot. Provided by the MRW.</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_OBUS_SLOT_INDEX</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -6554,6 +7044,20 @@
      These attributes need to be removed and test cases need to use
      (TBD) attributes that specify the DIMM sizes used to calculate the
      result of getDimmSize() function called in p9_mss_eff_grouping -->
+  <attribute>
+    <id>PROC_PCIE_IOP_SWAP</id>
+    <description>PCIE IOP swap configuration creator: platform consumer: p9_pcie_scominit firmware notes: Encoded PCIE IOP swap configuration</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_IOP_SWAP</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
   <attribute>
     <id>IO_XBUS_TX_MARGIN_RATIO</id>
     <!-- <targetType>TARGET_TYPE_XBUS</targetType> -->
@@ -7359,6 +7863,21 @@
     </hwpfToHbAttrMap>
   </attribute>
   <attribute>
+    <id>REL_POS</id>
+    <description>Logical position of this unit/dimm relative to its immediate parent</description>
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <hwpfToHbAttrMap>
+      <id>ATTR_REL_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
     <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
     <description>PCIE Lane Equalization values for each PHB Creator: MRW Purpose: Holds settings which are loaded into the HW to optimize the PCIE lane signal eye between the chips + PCIE Gen3 endpoints Data Format: 16 entries of 16 bytes of EQ data per PHB. Each PHB has an EQ value for each of its 16 lanes. Each value is a uint16 formatted as follows: Bit 0:3 - up_rx_hint (bit 0 reserved) Bit 4:7 - up_tx_preset Bit 8:11 - dn_rx_hint (bit 0 reserved) Bit 12:15 - dn_tx_preset</description>
     <simpleType>
@@ -7524,6 +8043,18 @@
       <id>ATTR_IVRM_STABILIZATION_DELAY_NS</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
+  </attribute>
+  <attribute>
+    <id>ORDINAL_ID</id>
+    <description>Ordinal ID of a target</description>
+    <simpleType>
+      <uint32_t>
+        <default>0xFFFFFFFF</default>
+      </uint32_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <writeable />
   </attribute>
   <attribute>
     <id>POUND_W_STATIC_DATA_ENABLE</id>
@@ -7711,6 +8242,105 @@
       <value>0xFF</value>
     </enumerator>
   </enumerationType>
+  <attribute>
+    <id>SLOT_NAME</id>
+    <description>PCIe slot name definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>SLOT_INDEX</id>
+    <description>PCIe slot index definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_32BIT_MMIO_SIZE</id>
+    <description>PCIe slot 32bit MMIO size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_64BIT_MMIO_SIZE</id>
+    <description>PCIe slot 64bit MMIO size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_32BIT_DMA_SIZE</id>
+    <description>PCIe slot 32bit DMA size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_64BIT_DMA_SIZE</id>
+    <description>PCIe slot 64bit DMA size definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>HDDW_ORDER</id>
+    <description>PCIe slot HDDW order definition</description>
+    <simpleType>
+      <uint8_t></uint8_t>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MGC_LOAD_SOURCE</id>
+    <description>defines MGC load source</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>PCIE_CAPABILITES</id>
+    <description>Denotes the capabilites of this pcie slot</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>VENDOR_ID</id>
+    <description>PCIe vendor ID definition</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
+    <id>MAX_POWER</id>
+    <description>Defines the maximum power consumption for a PCIe slot</description>
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
   <enumerationType>
     <id>IPMI_SENSOR_ARRAY</id>
     <description>Enumeration defining the offsets into the IPMI_SENSORS array.</description>
