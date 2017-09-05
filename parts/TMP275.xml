@@ -30,7 +30,7 @@
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -38,7 +38,7 @@
 	</attribute>
 	<attribute>
 		<id>RU_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -74,11 +74,11 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -103,7 +103,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -111,7 +111,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -127,42 +127,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>temp1</value></field>
-				<field><id>DESCRIPTIVE_NAME</id><value></value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>DESCRIPTIVE_NAME</id><value/></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -170,11 +170,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -187,7 +187,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -195,7 +195,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 </targetInstances>

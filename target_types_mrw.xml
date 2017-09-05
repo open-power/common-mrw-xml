@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <targetTypes>
 
 	<targetType>
@@ -257,7 +256,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_MASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SET</id>
@@ -308,7 +307,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_MASK</id>
-            <default></default>
+            <default/>
         </attribute>
         <attribute>
             <id>PCIE_LANE_GROUP</id>
@@ -324,27 +323,27 @@
         </attribute>
         <attribute>
             <id>ENABLE_LSI</id>
-            <default></default>
+            <default/>
         </attribute>     
         <attribute>
             <id>ENABLE_HOTPLUG</id>
-            <default></default>
+            <default/>
         </attribute>             
         <attribute>
             <id>ENABLE_CABLECARD</id>
-            <default></default>
+            <default/>
         </attribute> 
         <attribute>
             <id>ENABLE_SRIOV</id>
-            <default></default>
+            <default/>
         </attribute>   
         <attribute>
             <id>ENABLE_ELLOCO</id>
-            <default></default>
+            <default/>
         </attribute>     
         <attribute>
             <id>ENABLE_NVLINK</id>
-            <default></default>
+            <default/>
         </attribute>                               
         <attribute>
             <id>IOP_NUM</id>
@@ -352,7 +351,7 @@
         </attribute>
         <attribute>
         	<id>MGC_LOAD_SOURCE</id>
-        	<default></default>
+        	<default/>
         </attribute>
     </targetType>
     <targetType>
@@ -368,7 +367,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_MASK</id>
-            <default></default>
+            <default/>
         </attribute>
         <attribute>
             <id>PCIE_LANE_GROUP</id>
@@ -388,27 +387,27 @@
         </attribute>
         <attribute>
             <id>ENABLE_LSI</id>
-            <default></default>
+            <default/>
         </attribute>     
         <attribute>
             <id>ENABLE_HOTPLUG</id>
-            <default></default>
+            <default/>
         </attribute>             
         <attribute>
             <id>ENABLE_CABLECARD</id>
-            <default></default>
+            <default/>
         </attribute> 
         <attribute>
             <id>ENABLE_SRIOV</id>
-            <default></default>
+            <default/>
         </attribute>   
         <attribute>
             <id>ENABLE_ELLOCO</id>
-            <default></default>
+            <default/>
         </attribute>     
         <attribute>
             <id>ENABLE_NVLINK</id>
-            <default></default>
+            <default/>
         </attribute>        
         <attribute>
             <id>IOP_NUM</id>
@@ -416,7 +415,7 @@
         </attribute>
         <attribute>
         	<id>MGC_LOAD_SOURCE</id>
-        	<default></default>
+        	<default/>
         </attribute>        
     </targetType>         
 	<targetType>
@@ -432,7 +431,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_MASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SET</id>
@@ -578,10 +577,7 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-		<attribute>
-			<id>DMI_REFCLOCK_SWIZZLE</id>
-			<default></default>
-		</attribute>
+		
 		<attribute>
 			<id>IBSCOM_MCS_BASE_ADDR</id>
 			<default>0x0003E00000000000,0x40000000000,0x10000000000,0x2000000000
@@ -744,10 +740,7 @@
                 <parent>connector</parent>
                 <parent_type>card-motherboard</parent_type>
                 <parent_type>card-daughtercard</parent_type>
-                <attribute>
-                        <id>VDDR_ID</id>
-                        <default></default>
-                </attribute>
+                
         </targetType>
 
 	<targetType>
@@ -1186,11 +1179,11 @@
 		</attribute>		
 		<attribute>
 			<id>REG_BASE_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>		
 		<attribute>
 			<id>REG_OFFSET</id>
-			<default></default>
+			<default/>
 		</attribute>		
 	</targetType>
 	<targetType>
@@ -1264,19 +1257,19 @@
 		</attribute>
 		<attribute>
 			<id>VENDOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>DEVICE_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SUBSYSTEM_VENDOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SUBSYSTEM_DEVICE_ID</id>
-			<default></default>
+			<default/>
 		</attribute>		
 	</targetType>
 	<targetType>
@@ -1463,19 +1456,19 @@
 		</attribute>
 		<attribute>
 			<id>VDD_AVSBUS_BUSNUM</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>VDD_AVSBUS_RAIL</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>VDN_AVSBUS_BUSNUM</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>VDN_AVSBUS_RAIL</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -1621,7 +1614,7 @@
 		</attribute>
 		<attribute>
 			<id>PRESENCE_DETECT</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -1879,7 +1872,7 @@
         </attribute>
         <attribute>
         	<id>COOLING_ZONE_MASK</id>
-        	<default></default>
+        	<default/>
         </attribute>
     </targetType>
     <targetType>
@@ -1931,7 +1924,7 @@
 		<parent>mrw-chip</parent>
 		<attribute>
 			<id>VPD_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>TYPE</id>
@@ -1947,15 +1940,15 @@
 		</attribute>
 		<attribute>
 			<id>MEMORY_SIZE_IN_KB</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>WRITE_CYCLE_TIME</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>WRITE_PAGE_SIZE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2068,19 +2061,19 @@
 		</attribute>
 		<attribute>
 			<id>SWITCH_MODEL</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>STATION</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>PORT</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>WIDTH</id>
-			<default></default>
+			<default/>
 		</attribute>				
 	</targetType>		
 
@@ -2149,43 +2142,43 @@
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
 			<id>SLOT_NAME</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SLOT_INDEX</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SLOT_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>				
 		<attribute>
 			<id>HDDW_ORDER</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>32BIT_MMIO_SIZE</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>64BIT_MMIO_SIZE</id>
-			<default></default>
+			<default/>
 		</attribute>	
 		<attribute>
 			<id>32BIT_DMA_SIZE</id>
-			<default></default>
+			<default/>
 		</attribute>	
 		<attribute>
 			<id>64BIT_DMA_SIZE</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>MSI</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>MAX_POWER</id>
-			<default></default>
+			<default/>
 		</attribute>								
 	</targetType>
 	<targetType>
@@ -2202,7 +2195,7 @@
 		<parent_type>slot-pcieslot-generic</parent_type>
 		<attribute>
 			<id>RU_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2211,7 +2204,7 @@
 		<parent_type>slot-pcieslot-generic</parent_type>
 				<attribute>
 			<id>RU_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2234,7 +2227,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SWAP_TABLE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
     <targetType>
@@ -2257,7 +2250,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_SWAP_TABLE</id>
-            <default></default>
+            <default/>
         </attribute>
     </targetType>
     <targetType>
@@ -2280,7 +2273,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_SWAP_TABLE</id>
-            <default></default>
+            <default/>
         </attribute>
     </targetType>      
     <targetType>
@@ -2303,7 +2296,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_SWAP_TABLE</id>
-            <default></default>
+            <default/>
         </attribute>
     </targetType>   
 	<targetType>
@@ -2326,7 +2319,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SWAP_TABLE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
     <targetType>
@@ -2349,7 +2342,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_SWAP_TABLE</id>
-            <default></default>
+            <default/>
         </attribute>
     </targetType>
     <targetType>
@@ -2372,7 +2365,7 @@
         </attribute>
         <attribute>
             <id>PCIE_LANE_SWAP_TABLE</id>
-            <default></default>
+            <default/>
         </attribute>
     </targetType>
 	<targetType>
@@ -2440,7 +2433,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SWAP_TABLE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2463,7 +2456,7 @@
 		</attribute>
 		<attribute>
 			<id>PCIE_LANE_SWAP_TABLE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2508,19 +2501,19 @@
 		<parent_type>card-daughtercard</parent_type>
 		<attribute>
 			<id>SLOT_NAME</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SLOT_INDEX</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>SLOT_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>				
 		<attribute>
 			<id>HDDW_ORDER</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2673,10 +2666,7 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
-		<attribute>
-			<id>DMI_REFCLOCK_SWIZZLE</id>
-			<default></default>
-		</attribute>
+		
 		<attribute>
 			<id>PROC_TX_MSBSWAP</id>
 			<default>0</default>
@@ -2781,10 +2771,7 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
-		<attribute>
-			<id>ISDIMM_MBVPD_INDEX</id>
-			<default>0</default>
-		</attribute>
+		
 	</targetType>
 	<targetType>
 		<id>unit-logic_assoc-generic</id>
@@ -3220,7 +3207,7 @@
 		</attribute>
 		<attribute>
 			<id>PSI_ENGINE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -3240,7 +3227,7 @@
 		</attribute>
 		<attribute>
 			<id>PSI_ENGINE</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -3444,23 +3431,23 @@
 		</attribute>
 		<attribute>
 			<id>PWM_CHANNEL_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_PWM_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_PWM_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>PWM_DUTY_CYCLE_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>PWM_DUTY_CYCLE_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -3489,63 +3476,63 @@
 		</attribute>
 		<attribute>
 			<id>TACH_CHANNEL_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_DOMAIN_REG_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_DOMAIN_REG_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_MASK_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_MASK_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_REG_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_REG_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_PARTNER_HS_REG_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_PARTNER_HS_REG_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_HIGH_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_HIGH_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_LOW_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_LOW_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>	
 		<attribute>
 			<id>FAN_TYPE_SEL_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>FAN_TYPE_SEL_BITMASK</id>
-			<default></default>
+			<default/>
 		</attribute>							
 	</targetType>
 	<targetType>
@@ -3565,27 +3552,27 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_ENTITY_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_NAME_SUFFIX</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_OFFSETS</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -3649,18 +3636,9 @@
 <targetType>
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
-    <attribute>
-        <id>PROC_PCIE_NUM_PHB</id>
-        <default>3</default>
-    </attribute>
-    <attribute>
-        <id>PROC_PCIE_NUM_IOP</id>
-        <default>2</default>
-    </attribute>
-    <attribute>
-        <id>PROC_PCIE_NUM_LANES</id>
-        <default>24</default>
-    </attribute>
+    
+    
+    
 </targetType>
 
 <targetType>
@@ -3707,19 +3685,19 @@
     <parent>unit-phb-power9</parent>
 	<attribute>
 		<id>VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
   </targetType>
   <targetType>
@@ -3727,19 +3705,19 @@
     <parent>unit-phb-power9</parent>
 	<attribute>
 		<id>VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
   </targetType>
 
@@ -3858,7 +3836,7 @@
     </attribute>
     <attribute>
          <id>CHIP_UNIT</id>
-         <default></default>
+         <default/>
     </attribute>            
 </targetType>
     		
@@ -3967,19 +3945,19 @@
 		<attribute>
 			<id>CONFIG_ID</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>RESERV_REV_CODE</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>REV_CODE</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -4005,15 +3983,15 @@
 		<attribute>
 			<id>ENABLE_HOLD</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>MAN_ENABLE</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4035,15 +4013,15 @@
 		<attribute>
 			<id>GPIO_IN</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>LS_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4056,259 +4034,259 @@
 		<attribute>
 			<id>FAN_DOMAIN_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_DOMAIN_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_DOMAIN_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_DOMAIN_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERRORS_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERRORS_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERRORS_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERRORS_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_MASK_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_MASK_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_FFS_CH_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_FFS_CH_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_HYST_HIGH0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_HYST_HIGH1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_HYST_LOW0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_HYST_LOW1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_MAN_MODE</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_MODE</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_PPR0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_PPR1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_PRESENCE_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_PRESENCE_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_TYPE_SEL0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_TYPE_SEL1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FFS_MIN_TACH_HIGH0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FFS_MIN_TACH_HIGH1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FFS_MIN_TACH_LOW0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FFS_MIN_TACH_LOW1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>I2C_FFS</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>MAX_FAN_PWM0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>MAX_FAN_PWM1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>MIN_FAN_PWM0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>MIN_FAN_PWM1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PWM_DELAY</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PWM_STEP</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_H0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_H1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_H2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_H3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_L0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_L1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_L2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>TACH_SET_L3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -4334,15 +4312,15 @@
 		<attribute>
 			<id>GPIO_IN</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>LS_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4355,25 +4333,25 @@
 		<attribute>
 			<id>PSC0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSC1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PWM0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PWM1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -4386,13 +4364,13 @@
 		<attribute>
 			<id>I2C_INT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>I2C_INT_MASK</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4426,22 +4404,22 @@
 		<attribute>
 			<id>DEGATE_CPU</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_INT</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_IO</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4450,8 +4428,8 @@
 		<attribute>
 			<id>EN_OD</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4460,29 +4438,29 @@
 		<attribute>
 			<id>PGOOD_INVERT</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_LATCHED</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_MASK</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_PORT</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4511,235 +4489,235 @@
 		<attribute>
 			<id>DEGATE_CPU_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_CPU_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_CPU_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_CPU_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_INT_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_INT_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_INT_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_INT_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_IO_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_IO_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_IO_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DEGATE_IO_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DELAY_CPU</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>DELAY_IO</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>EN_OD_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>EN_OD_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>EN_OD_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>EN_OD_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAULT_DELAY</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>INVERT_RESETS</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>NUM_PS</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD INVERT_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD INVERT_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD INVERT_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD INVERT_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_LATCHED_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_LATCHED_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_LATCHED_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_LATCHED_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_MASK_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_MASK_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_MASK_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_MASK_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_PORT_0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_PORT_1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_PORT_2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PGOOD_PORT_3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PRIMARY_DELAY</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_CTRL</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -4751,49 +4729,49 @@
 		<attribute>
 			<id>REBOOT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>RESETS_OUT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>SECONDARY_DELAY</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>SEC_SEQ</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>SEQUENCE_CNT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>SLIDING_INDEX</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>SOFT_PGOOD</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>VMEM_PER_VPP</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>		
 	</targetType>
@@ -4812,8 +4790,8 @@
 		<attribute>
 			<id>PRSNT_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -4823,193 +4801,193 @@
 		<attribute>
 			<id>PSEQ_SLOT0</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT1</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT10</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT11</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT12</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT13</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT14</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT15</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT16</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT17</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT18</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT19</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT2</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT20</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT21</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT22</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT23</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT24</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT25</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT26</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT27</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT28</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT29</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT3</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT30</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT31</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT4</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT5</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT6</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT7</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT8</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>PSEQ_SLOT9</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -5025,7 +5003,7 @@
 		<attribute>
 			<id>FAN_PWM_MANUAL</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -5034,7 +5012,7 @@
 		<attribute>
 			<id>PWM_DUTY_CYCLE</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -5072,15 +5050,15 @@
 		<attribute>
 			<id>GPIO_IN</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>LS_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -5115,48 +5093,48 @@
 		<attribute>
 			<id>FAN_DOMAIN_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_MASK</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_ERROR_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_PARTNER_HS_REG</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_HIGH</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_SPD_REG_LOW</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_TYPE_SEL</id>
 			<default>
-				<field><id>Bit-mask</id><value></value></field>
-				<field><id>Register</id><value></value></field>
+				<field><id>Bit-mask</id><value/></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
@@ -5169,19 +5147,19 @@
 		<attribute>
 			<id>END_COUNT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>FAN_WARNING_CNT</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 		<attribute>
 			<id>WDT_RESET</id>
 			<default>
-				<field><id>Register</id><value></value></field>
+				<field><id>Register</id><value/></field>
 			</default>
 		</attribute>
 	</targetType>
@@ -5230,7 +5208,7 @@
 		</attribute>
 		<attribute>
 		       <id>IPMI_SENSOR_ID</id>
-		       <default></default>
+		       <default/>
 		</attribute>
                 <attribute>
                         <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -5300,7 +5278,7 @@
 		</attribute>
 		<attribute>
 			<id>I2C_ADDRESS</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>

@@ -1,6 +1,3 @@
-
-<!-- attribute defining the required system policy for a fsp based system -->
-
 <attributes>
 
 <attribute>
@@ -295,7 +292,7 @@
 	<id>IM_ID</id>
 	<description>Used to indicate a certain target is valid only for a certain IM ID</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -305,7 +302,7 @@
 	<id>IM_VALUE</id>
 	<description>Used to indicate the IM keyword value</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -315,7 +312,7 @@
 	<id>PART_NUMBER</id>
 	<description>Used to indicate the part number information</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -340,7 +337,7 @@
         <name>powr-vrm-xml-filenames</name>
         <value>3</value>
     </enumerator>
-    <default></default>
+    <default/>
 </enumerationType>
 
 <attribute>
@@ -360,7 +357,7 @@
 	<id>SYS_POLICY_VALUE</id>
 	<description>The value of the system policy</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -466,7 +463,7 @@
     <id>FREQUENCY</id>
     <description>The core frequency - for modules only</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -476,7 +473,7 @@
     <id>MTM_NAME</id>
     <description>System MTM</description>
     <simpleType>
-        <string></string>
+        <string/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -487,7 +484,7 @@
     <description>1 = System has redundant FSPs or 0 = System does not have redundant FSPs</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -502,7 +499,7 @@
     <description>The average amount of time it may take for this enclosure to IPL in minutes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -527,7 +524,7 @@
 	<group>SYS_POLICIES</group>
 	<simpleType>
 		<string>
-			<default></default>
+			<default/>
 		</string>
 	</simpleType>
 	<persistency>non-volatile</persistency>
@@ -540,7 +537,7 @@
 	<group>SYS_POLICIES</group>
 	<simpleType>
 		<string>
-			<default></default>
+			<default/>
 		</string>
 	</simpleType>
 	<persistency>non-volatile</persistency>
@@ -556,7 +553,7 @@
     </description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t><default></default></uint8_t>
+        <uint8_t><default/></uint8_t>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -567,7 +564,7 @@
     <description>Is memory mirroring allowed on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t><default></default></uint8_t>
+        <uint8_t><default/></uint8_t>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -578,7 +575,7 @@
     <description>By default, is memory mirroring enabled on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t><default></default></uint8_t>
+        <uint8_t><default/></uint8_t>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -606,7 +603,7 @@
     <description>The maximum amount of time it should take for all OCCs in the system to be loaded and started in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -617,7 +614,7 @@
     <description>The maximum amount of time it should take for all OCCs to be reset in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -627,7 +624,7 @@
     <id>FREQ_PB_HFT</id>
     <description>The frequency of a processor's PB chiplet in MHz</description>
     <group>SYS_POLICIES</group>
-    <simpleType><uint32_t></uint32_t></simpleType>
+    <simpleType><uint32_t/></simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <writeable/>
@@ -641,7 +638,7 @@
     <id>FREQ_X_HFT</id>
     <description>The frequency of a processor's X bus in MHz</description>
     <group>SYS_POLICIES</group>
-    <simpleType><uint32_t></uint32_t></simpleType>
+    <simpleType><uint32_t/></simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <writeable/>
@@ -655,7 +652,7 @@
     <id>FREQ_NEST_HFT</id>
     <description>The frequency of a processor's Nest chiplet in MHz</description>
     <group>SYS_POLICIES</group>
-    <simpleType><uint32_t></uint32_t></simpleType>
+    <simpleType><uint32_t/></simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
     <writeable/>
@@ -670,7 +667,7 @@
     <description>The default HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -681,7 +678,7 @@
     <description>The minimum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -692,7 +689,7 @@
     <description>The maximum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -706,7 +703,7 @@
                 the device and pin to use.
     </description>
     <simpleType>
-        <uint8_t></uint8_t>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -744,7 +741,7 @@
         </enumeration>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
-    <readable />
+    <readable/>
     <writeable/>
     <fspOnly/>
 </attribute>

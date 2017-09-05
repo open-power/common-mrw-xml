@@ -233,7 +233,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>

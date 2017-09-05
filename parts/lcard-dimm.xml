@@ -3,7 +3,7 @@
     <id>lcard-dimm</id>
     <attribute>
       <id>FRU_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>FRU_NAME</id>

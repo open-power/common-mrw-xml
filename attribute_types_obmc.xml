@@ -3,7 +3,7 @@
 		<id>MANUFACTURER</id>
         <description>The manufacturer</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<readable/>
 	</attribute>
@@ -13,7 +13,7 @@
         <description>The 'compatible' field for the part in the BMC device tree</description>
 		<simpleType>
 			<string>
-                <default></default>
+                <default/>
             </string>
 		</simpleType>
 		<readable/>
@@ -141,7 +141,7 @@
         <description>The base register address of a function in hex.</description>
 		<simpleType>
 			<uint32_t>
-                <default></default>
+                <default/>
             </uint32_t>
 		</simpleType>
 		<readable/>
@@ -153,7 +153,7 @@
                      registers pertaining to this unit start at.</description>
 		<simpleType>
 			<uint32_t>
-                <default></default>
+                <default/>
             </uint32_t>
 		</simpleType>
 		<readable/>

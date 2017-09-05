@@ -22,7 +22,7 @@
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
@@ -34,7 +34,7 @@
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -42,7 +42,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -70,7 +70,7 @@
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -79,7 +79,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -120,7 +120,7 @@
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -129,7 +129,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -170,7 +170,7 @@
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -179,7 +179,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -220,7 +220,7 @@
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -229,7 +229,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>

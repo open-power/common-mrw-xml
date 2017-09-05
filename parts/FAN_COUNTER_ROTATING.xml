@@ -15,7 +15,7 @@
 	<child_id>FAN_COUNTER_ROTATING.tach-1</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -23,15 +23,15 @@
 	</attribute>
 	<attribute>
 		<id>LOCATION_CODE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>LOCATION_CODE_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
@@ -43,7 +43,7 @@
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -51,7 +51,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -79,15 +79,15 @@
 	</attribute>
 	<attribute>
 		<id>FAN_PWM_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_PWM_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -95,15 +95,15 @@
 	</attribute>
 	<attribute>
 		<id>PWM_CHANNEL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PWM_DUTY_CYCLE_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PWM_DUTY_CYCLE_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -139,63 +139,63 @@
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -207,7 +207,7 @@
 	</attribute>
 	<attribute>
 		<id>TACH_CHANNEL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -239,63 +239,63 @@
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_BITMASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -307,7 +307,7 @@
 	</attribute>
 	<attribute>
 		<id>TACH_CHANNEL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>

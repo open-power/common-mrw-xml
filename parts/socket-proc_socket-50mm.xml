@@ -7,7 +7,7 @@
     </attribute>
     <attribute>
     	<id>FABRIC_GROUP_ID</id>
-    	<default></default>
+    	<default/>
     </attribute>
     <attribute>
       <id>PROC_PCIE_IOP_CONFIG</id>

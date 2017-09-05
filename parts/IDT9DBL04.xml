@@ -19,7 +19,7 @@
 	<child_id>IDT9DBL04.clk-in</child_id>
 	<attribute>
 		<id>CCIN</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -27,15 +27,15 @@
 	</attribute>
 	<attribute>
 		<id>LOCATION_CODE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>LOCATION_CODE_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
@@ -47,7 +47,7 @@
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -55,11 +55,11 @@
 	</attribute>
 	<attribute>
 		<id>RU_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -87,7 +87,7 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -132,7 +132,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -170,7 +170,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -208,7 +208,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -246,7 +246,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -320,7 +320,7 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>

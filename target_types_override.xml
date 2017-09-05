@@ -28,7 +28,7 @@
 		</attribute>
 		<attribute>
 			<id>GROUP_KEY</id>
-			<default></default>
+			<default/>
 		</attribute>
 	</targetType>
 	<targetType>

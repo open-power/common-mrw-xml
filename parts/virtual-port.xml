@@ -8,7 +8,7 @@
     </attribute>
     <attribute>
       <id>Downstream_Port</id>
-      <default></default>
+      <default/>
     </attribute>
     <instance_name>Virtual-Port</instance_name>
     <is_root>true</is_root>

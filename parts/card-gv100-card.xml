@@ -27,11 +27,11 @@
     </attribute>
     <attribute>
      <id>SUBSYSTEM_VENDOR_ID</id>
-     <default></default>
+     <default/>
     </attribute>
     <attribute>
      <id>SUBSYSTEM_DEVICE_ID</id>
-     <default></default>
+     <default/>
     </attribute>
     <instance_name>gv100card</instance_name>
     <is_root>true</is_root>
@@ -185,11 +185,11 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -240,7 +240,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -284,7 +284,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -292,7 +292,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -328,7 +328,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -336,7 +336,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
