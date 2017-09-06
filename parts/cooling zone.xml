@@ -23,7 +23,7 @@
 			</attribute>
 			<attribute>
 				<id>IM_VALUE</id>
-				<default></default>
+				<default/>
 			</attribute>
 			<attribute>
 				<id>COOLING_ZONE</id>

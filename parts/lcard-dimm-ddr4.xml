@@ -5,11 +5,11 @@
   <id>dimm-0</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>CARD_TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>CDM_DOMAIN</id>
@@ -28,39 +28,39 @@
     <default>
       <field>
         <id>i2cMasterPath</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>port</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>devAddr</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>engine</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>byteAddrOffset</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>maxMemorySizeKB</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>chipCount</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>writePageSize</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>writeCycleTime</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -78,11 +78,11 @@
   </attribute>
   <attribute>
     <id>FRU_NAME</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -94,19 +94,19 @@
   </attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>IPMI_SENSORS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>LOCATION_CODE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>LOCATION_CODE_TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -130,11 +130,11 @@
   </attribute>
   <attribute>
     <id>PART_NUMBER</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>POSITION</id>
@@ -145,19 +145,19 @@
     <default>
       <field>
         <id>supportsFsiScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsXscom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsInbandScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -171,11 +171,11 @@
   </attribute>
   <attribute>
     <id>RU_TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>STANDBY_PLUGGABLE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -201,7 +201,7 @@
   <id>ddr4</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>BUS_TYPE</id> <default>DDR4</default>
@@ -236,7 +236,7 @@
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -268,7 +268,7 @@
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -312,7 +312,7 @@
   <id>spd</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>ALTFSI_MASTER_CHIP</id>
@@ -363,11 +363,11 @@
     <default>
       <field>
         <id>flipPort</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -377,7 +377,7 @@
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -389,11 +389,11 @@
   </attribute>
   <attribute>
     <id>I2C_ADDRESS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>I2C_SPEED</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
@@ -405,7 +405,7 @@
   </attribute>
   <attribute>
     <id>MODEL</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRU_ID</id>
@@ -421,7 +421,7 @@
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>POSITION</id>
@@ -432,19 +432,19 @@
     <default>
       <field>
         <id>supportsFsiScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsXscom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsInbandScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -454,7 +454,7 @@
   </attribute>
   <attribute>
     <id>RU_TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -482,7 +482,7 @@
   <id>i2c-slave</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>BUS_TYPE</id>
@@ -518,7 +518,7 @@
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
@@ -530,7 +530,7 @@
   </attribute>
   <attribute>
     <id>I2C_ADDRESS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
@@ -538,7 +538,7 @@
   </attribute>
   <attribute>
     <id>MODEL</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRU_ID</id>
@@ -554,7 +554,7 @@
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -602,15 +602,15 @@
   <id>dimm-thermal-sensor</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>ALTFSI_MASTER_CHIP</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>ALTFSI_MASTER_PORT</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>CLASS</id>
@@ -622,23 +622,23 @@
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FAPI_POS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FRU_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FSI_MASTER_CHIP</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FSI_MASTER_PORT</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FSI_MASTER_TYPE</id>
@@ -649,29 +649,29 @@
     <default>
       <field>
         <id>flipPort</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
   <attribute>
     <id>FSI_SLAVE_CASCADE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
@@ -679,11 +679,11 @@
   </attribute>
   <attribute>
     <id>MODEL</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRU_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -691,34 +691,34 @@
   </attribute>
   <attribute>
     <id>ORDINAL_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>POSITION</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
     <default>
       <field>
         <id>supportsFsiScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsXscom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>supportsInbandScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -728,11 +728,11 @@
   </attribute>
   <attribute>
     <id>RU_TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <child_id>dimm-thermal-sensor.i2c</child_id>
   <instance_name>dimm-thermal-sensor</instance_name>
@@ -744,7 +744,7 @@
   <id>dimm-thermal-sensor.i2c</id>
   <attribute>
     <id>AFFINITY_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>BUS_TYPE</id>
@@ -752,7 +752,7 @@
   </attribute>
   <attribute>
     <id>CHIPLET_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>CHIP_UNIT</id>
@@ -772,27 +772,27 @@
   </attribute>
   <attribute>
     <id>FAPI_NAME</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>FAPI_POS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HUID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>I2C_ADDRESS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>IPMI_INSTANCE</id>
@@ -800,11 +800,11 @@
   </attribute>
   <attribute>
     <id>MODEL</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRU_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -812,11 +812,11 @@
   </attribute>
   <attribute>
     <id>ORDINAL_ID</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PHYS_PATH</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -841,7 +841,7 @@
   </attribute>
   <attribute>
     <id>REL_POS</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>

@@ -242,11 +242,11 @@
     <default>
       <field>
         <id>flipPort</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -259,27 +259,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -349,7 +349,7 @@
   </attribute>
   <attribute>
     <id>LPC_BUS_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -373,23 +373,23 @@
   </attribute>
   <attribute>
     <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>NVIDIA_NPU_USER_REG_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>NVIDIA_PHY0_REG_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>NVIDIA_PHY1_REG_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>NX_RNG_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>PCI_BASE_ADDRS_32</id>
@@ -485,23 +485,23 @@
     <default>
       <field>
         <id>useFsiScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>useXscom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>useInbandScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>useSbeScom</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>reserved</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -535,11 +535,11 @@
   </attribute>
   <attribute>
     <id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>VAS_USER_WINDOW_CONTEXT_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>XIVE_CONTROLLER_BAR_ADDR</id>
@@ -547,19 +547,19 @@
   </attribute>
   <attribute>
     <id>XIVE_PRESENTATION_BAR_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>XIVE_PRESENTATION_NVT_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>XIVE_ROUTING_END_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>XIVE_ROUTING_ESB_ADDR</id>
-    <default></default>
+    <default/>
   </attribute>
   <attribute>
     <id>XIVE_THREAD_MGMT1_BAR_ADDR</id>
@@ -706,7 +706,7 @@
   <hidden_child_id>cpu_func_sensor</hidden_child_id>
   <instance_name>p9_proc_m</instance_name>
   <is_root>false</is_root>
-  <position></position>
+  <position/>
   <type>chip-processor-nimbus</type>
 </targetPart>
 <targetPart>
@@ -736,27 +736,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -843,27 +843,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -942,27 +942,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1042,27 +1042,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1142,27 +1142,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1241,27 +1241,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1341,27 +1341,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1441,27 +1441,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1548,27 +1548,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1647,27 +1647,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1747,27 +1747,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1847,27 +1847,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -1946,27 +1946,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2046,27 +2046,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2146,27 +2146,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2253,27 +2253,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2352,27 +2352,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2452,27 +2452,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2552,27 +2552,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2651,27 +2651,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2751,27 +2751,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2851,27 +2851,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -2958,27 +2958,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3057,27 +3057,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3157,27 +3157,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3257,27 +3257,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3356,27 +3356,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3456,27 +3456,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3556,27 +3556,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3663,27 +3663,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3762,27 +3762,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3862,27 +3862,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -3962,27 +3962,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4061,27 +4061,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4161,27 +4161,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4261,27 +4261,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4368,27 +4368,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4467,27 +4467,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4567,27 +4567,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4667,27 +4667,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4766,27 +4766,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4866,27 +4866,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -4962,27 +4962,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -5120,27 +5120,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -5217,27 +5217,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -5310,27 +5310,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -5714,7 +5714,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5750,7 +5750,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5786,7 +5786,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5822,7 +5822,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5858,7 +5858,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5894,7 +5894,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5930,7 +5930,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -5966,7 +5966,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -6002,7 +6002,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -6612,27 +6612,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -6833,27 +6833,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7050,27 +7050,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7143,27 +7143,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7236,27 +7236,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7329,27 +7329,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7422,27 +7422,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7515,27 +7515,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7608,27 +7608,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7701,27 +7701,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7794,27 +7794,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7887,27 +7887,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -7980,27 +7980,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8073,27 +8073,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8166,27 +8166,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8259,27 +8259,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8352,27 +8352,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8445,27 +8445,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8538,27 +8538,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8631,27 +8631,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8724,27 +8724,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8817,27 +8817,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -8910,27 +8910,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9003,27 +9003,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9096,27 +9096,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9189,27 +9189,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9286,27 +9286,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9383,27 +9383,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9480,27 +9480,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9577,27 +9577,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9674,27 +9674,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9771,27 +9771,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9868,27 +9868,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -9965,27 +9965,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10062,27 +10062,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10159,27 +10159,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10256,27 +10256,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10353,27 +10353,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10450,27 +10450,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10547,27 +10547,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10644,27 +10644,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10741,27 +10741,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10838,27 +10838,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -10935,27 +10935,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11032,27 +11032,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11129,27 +11129,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11226,27 +11226,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11323,27 +11323,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11420,27 +11420,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11517,27 +11517,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11614,27 +11614,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11711,27 +11711,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11808,27 +11808,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -11905,27 +11905,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12002,27 +12002,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12099,27 +12099,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12196,27 +12196,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12293,27 +12293,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12390,27 +12390,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12487,27 +12487,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12584,27 +12584,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12681,27 +12681,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12778,27 +12778,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12875,27 +12875,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -12972,27 +12972,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13069,27 +13069,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13166,27 +13166,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13263,27 +13263,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13368,27 +13368,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13473,27 +13473,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13572,27 +13572,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13671,27 +13671,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13774,27 +13774,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13837,7 +13837,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch0:cs0</instance_name>
   <is_root>false</is_root>
@@ -13871,27 +13871,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -13934,7 +13934,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch0:cs1</instance_name>
   <is_root>false</is_root>
@@ -13964,27 +13964,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14067,27 +14067,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14130,7 +14130,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch1:cs0</instance_name>
   <is_root>false</is_root>
@@ -14164,27 +14164,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14227,7 +14227,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch1:cs1</instance_name>
   <is_root>false</is_root>
@@ -14257,27 +14257,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14356,27 +14356,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14459,27 +14459,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14522,7 +14522,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch2:cs0</instance_name>
   <is_root>false</is_root>
@@ -14556,27 +14556,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14619,7 +14619,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch2:cs1</instance_name>
   <is_root>false</is_root>
@@ -14649,27 +14649,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14752,27 +14752,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14815,7 +14815,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch3:cs0</instance_name>
   <is_root>false</is_root>
@@ -14849,27 +14849,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -14912,7 +14912,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch3:cs1</instance_name>
   <is_root>false</is_root>
@@ -14946,27 +14946,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15045,27 +15045,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15144,27 +15144,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15247,27 +15247,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15310,7 +15310,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch4:cs0</instance_name>
   <is_root>false</is_root>
@@ -15344,27 +15344,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15407,7 +15407,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch4:cs1</instance_name>
   <is_root>false</is_root>
@@ -15437,27 +15437,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15540,27 +15540,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15603,7 +15603,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch5:cs0</instance_name>
   <is_root>false</is_root>
@@ -15637,27 +15637,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15700,7 +15700,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch5:cs1</instance_name>
   <is_root>false</is_root>
@@ -15730,27 +15730,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15829,27 +15829,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15932,27 +15932,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -15995,7 +15995,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch6:cs0</instance_name>
   <is_root>false</is_root>
@@ -16029,27 +16029,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16092,7 +16092,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch6:cs1</instance_name>
   <is_root>false</is_root>
@@ -16122,27 +16122,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16225,27 +16225,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16288,7 +16288,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch7:cs0</instance_name>
   <is_root>false</is_root>
@@ -16322,27 +16322,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16385,7 +16385,7 @@
   </attribute>
   <attribute>
     <id>TYPE</id>
-    <default></default>
+    <default/>
   </attribute>
   <instance_name>ddr_ch7:cs1</instance_name>
   <is_root>false</is_root>
@@ -16431,27 +16431,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16532,27 +16532,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16637,27 +16637,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16742,27 +16742,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16847,27 +16847,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -16952,27 +16952,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17057,27 +17057,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17162,27 +17162,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17267,27 +17267,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17356,27 +17356,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17449,27 +17449,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17550,27 +17550,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17651,27 +17651,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17752,27 +17752,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17853,27 +17853,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -17954,27 +17954,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18055,27 +18055,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18156,27 +18156,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18257,27 +18257,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18358,27 +18358,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18459,27 +18459,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18560,27 +18560,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18661,27 +18661,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18762,27 +18762,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18863,27 +18863,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -18964,27 +18964,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19065,27 +19065,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19166,27 +19166,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19267,27 +19267,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19368,27 +19368,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19457,27 +19457,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19546,27 +19546,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19647,27 +19647,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>
@@ -19736,27 +19736,27 @@
     <default>
       <field>
         <id>deconfiguredByEid</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>poweredOn</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>present</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>functional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>dumpfunctional</id>
-        <value></value>
+        <value/>
       </field>
       <field>
         <id>specdeconfig</id>
-        <value></value>
+        <value/>
       </field>
     </default>
   </attribute>

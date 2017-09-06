@@ -321,7 +321,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -365,7 +365,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -373,7 +373,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -409,7 +409,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -417,7 +417,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -453,7 +453,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -497,7 +497,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -505,7 +505,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -957,7 +957,7 @@
     </attribute>
     <attribute>
       <id>MODEL</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>MRW_TYPE</id>
@@ -1483,7 +1483,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -1535,7 +1535,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -1575,7 +1575,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -1615,7 +1615,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -1655,7 +1655,7 @@
     </attribute>
     <attribute>
       <id>PCIE_LANE_MASK</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCIE_LANE_SET</id>
@@ -1836,7 +1836,7 @@
     </attribute>
     <attribute>
       <id>FRU_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>FRU_NAME</id>
@@ -1866,7 +1866,7 @@
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PCI_BASE_ADDRS_32</id>
@@ -1944,27 +1944,27 @@
     </attribute>
     <attribute>
       <id>PROC_R_DISTLOSS_VCS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PROC_R_DISTLOSS_VDD</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PROC_R_LOADLINE_VCS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PROC_R_LOADLINE_VDD</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PROC_VRM_VOFFSET_VCS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PROC_VRM_VOFFSET_VDD</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>PSI_BRIDGE_BASE_ADDR</id>

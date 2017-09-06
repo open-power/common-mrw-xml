@@ -42,23 +42,23 @@
 	</attribute>
 	<attribute>
 		<id>VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_VENDOR_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_DEVICE_ID</id>
-		<default></default>
+		<default/>
 	</attribute>	
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
@@ -70,7 +70,7 @@
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -78,11 +78,11 @@
 	</attribute>
 	<attribute>
 		<id>RU_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -102,7 +102,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -114,7 +114,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -134,7 +134,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -146,7 +146,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -166,7 +166,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -178,7 +178,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -198,7 +198,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -210,7 +210,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -230,7 +230,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -242,7 +242,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -262,7 +262,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -274,7 +274,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -294,7 +294,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -306,7 +306,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -326,7 +326,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -338,7 +338,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -358,7 +358,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -370,7 +370,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -390,7 +390,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -402,7 +402,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart><targetPart>
     	<id>PEX8725.port13</id>
@@ -421,7 +421,7 @@
 	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>STATION</id>
@@ -433,7 +433,7 @@
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -461,7 +461,7 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -501,7 +501,7 @@
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -546,7 +546,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -560,12 +560,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -573,7 +573,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -610,7 +610,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -624,12 +624,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -637,7 +637,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -674,7 +674,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -688,12 +688,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -701,7 +701,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -738,7 +738,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -752,12 +752,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -765,7 +765,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -802,7 +802,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -816,12 +816,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -829,7 +829,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -866,7 +866,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -880,12 +880,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -893,7 +893,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -930,7 +930,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -944,12 +944,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -957,7 +957,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -994,7 +994,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -1008,12 +1008,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -1021,7 +1021,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1058,7 +1058,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -1072,12 +1072,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -1085,7 +1085,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1122,7 +1122,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -1136,12 +1136,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -1149,7 +1149,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1186,7 +1186,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -1200,12 +1200,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -1213,7 +1213,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1250,7 +1250,7 @@
 	<attribute>
 		<id>ENGINE</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -1264,12 +1264,12 @@
 	<attribute>
 		<id>PIN_NAME</id>
 		<default>
-				<field><id>Value</id><value></value></field>
+				<field><id>Value</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
@@ -1277,7 +1277,7 @@
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>

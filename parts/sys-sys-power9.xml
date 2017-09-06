@@ -39,7 +39,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -47,7 +47,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -83,7 +83,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -91,7 +91,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -127,7 +127,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -171,7 +171,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -179,7 +179,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -215,7 +215,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -223,7 +223,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -259,7 +259,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -303,7 +303,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -311,7 +311,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -347,7 +347,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -391,7 +391,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -399,7 +399,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_OFFSETS</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_READING_TYPE</id>
@@ -431,7 +431,7 @@
     </attribute>
     <attribute>
       <id>ALL_MCS_IN_INTERLEAVING_GROUP</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>AVERAGE_IPL_TIME</id>
@@ -602,9 +602,7 @@
     <attribute>
       <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
     </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
-    </attribute>
+    
     <attribute>
       <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
     </attribute>
@@ -868,7 +866,7 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_ID</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>IPMI_SENSOR_NAME_SUFFIX</id>

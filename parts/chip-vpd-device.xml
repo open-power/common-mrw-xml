@@ -13,7 +13,7 @@
     </attribute>
     <attribute>
       <id>MEMORY_SIZE_IN_KB</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>MRW_TYPE</id>
@@ -25,15 +25,15 @@
     </attribute>
     <attribute>
       <id>VPD_TYPE</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>WRITE_CYCLE_TIME</id>
-      <default></default>
+      <default/>
     </attribute>
     <attribute>
       <id>WRITE_PAGE_SIZE</id>
-      <default></default>
+      <default/>
     </attribute>
     <child_id>i2c-slave</child_id>
     <instance_name>vpdchip</instance_name>

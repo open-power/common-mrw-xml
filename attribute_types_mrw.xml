@@ -970,22 +970,22 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>BUS_WIDTH</id>
 		<description>Bus Width</description>
-		<simpleType><uint32_t></uint32_t></simpleType>
+		<simpleType><uint32_t/></simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>REGISTER_OFFSET</id>
 		<description>Register offset</description>
-		<simpleType><uint8_t></uint8_t></simpleType>
+		<simpleType><uint8_t/></simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
+		<readable/>
 	</attribute>		
 	<attribute>
 		<id>GROUP_NAME</id>
@@ -995,8 +995,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
+		<writeable/>
+		<readable/>
 	</attribute>
 
 	<attribute>
@@ -1007,8 +1007,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
+		<writeable/>
+		<readable/>
 	</attribute>
 
 	<attribute>
@@ -1021,8 +1021,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>BLINK_ROLLUP</id>
@@ -1033,8 +1033,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 		<attribute>
 		<id>VIEW_REAR</id>
@@ -1045,8 +1045,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>VIEW_FRONT</id>
@@ -1057,8 +1057,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>VIEW_INTERNAL</id>
@@ -1069,8 +1069,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
     <attribute>
 		<id>ON_STATE</id>
@@ -1081,8 +1081,8 @@
 			</boolean>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_SELECT</id>
@@ -1093,9 +1093,9 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>IO_CONFIG_NUM</id>
@@ -1106,8 +1106,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -1118,8 +1118,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<global />
+		<readable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>SLOT_NAME</id>
@@ -1129,8 +1129,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>SLOT_INDEX</id>
@@ -1140,8 +1140,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>SLOT_TYPE</id>
@@ -1151,8 +1151,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>VENDOR_ID</id>
@@ -1162,8 +1162,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -1173,8 +1173,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_VENDOR_ID</id>
@@ -1184,8 +1184,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>SUBSYSTEM_DEVICE_ID</id>
@@ -1195,8 +1195,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>Upstream_Port</id>
@@ -1206,8 +1206,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>Downstream_Port</id>
@@ -1217,8 +1217,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>MAX_POWER</id>
@@ -1228,8 +1228,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>MSI</id>
@@ -1239,8 +1239,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>							
 	<attribute>
 		<id>32BIT_MMIO_SIZE</id>
@@ -1250,8 +1250,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>64BIT_MMIO_SIZE</id>
@@ -1261,8 +1261,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>32BIT_DMA_SIZE</id>
@@ -1272,8 +1272,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>64BIT_DMA_SIZE</id>
@@ -1283,8 +1283,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>				
 	<attribute>
 		<id>HDDW_ORDER</id>
@@ -1294,8 +1294,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>		
 	<attribute>
 		<id>SWITCH_MODEL</id>
@@ -1305,8 +1305,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>STATION</id>
@@ -1316,8 +1316,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>WIDTH</id>
@@ -1327,8 +1327,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>PRESENCE_DETECT</id>
@@ -1339,9 +1339,9 @@
 			</enumeration>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>	
 	<attribute>
 		<id>MRU_PREFIX</id>
@@ -1373,9 +1373,9 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
-		<global />
+		<writeable/>
+		<readable/>
+		<global/>
 	</attribute>
 		<attribute>
 		<id>BLINK_RATE</id>
@@ -1385,9 +1385,9 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
-		<global />
+		<writeable/>
+		<readable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>LOCATION_CODE</id>
@@ -1397,8 +1397,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
+		<writeable/>
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
@@ -1408,8 +1408,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
+		<writeable/>
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSI_ENGINE</id>
@@ -1419,9 +1419,9 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
-		<global />
+		<writeable/>
+		<readable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>FSI_ENGINE</id>
@@ -1431,7 +1431,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1442,7 +1442,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1453,9 +1453,9 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>CMFSI</id>
@@ -1465,7 +1465,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1476,7 +1476,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1487,7 +1487,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1498,7 +1498,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1509,7 +1509,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -1520,9 +1520,9 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>VPD_SIZE</id>
@@ -1534,9 +1534,9 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>I2C_CONNECTION_TYPE</id>
@@ -1548,8 +1548,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>		
 	<attribute>
 		<id>I2C_SPEED</id>
@@ -1559,8 +1559,8 @@
 			</uint16_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>I2C_TYPE</id>
@@ -1570,8 +1570,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>I2C_PURPOSE</id>
@@ -1581,8 +1581,8 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>OBUS_CONFIG</id>
@@ -1592,8 +1592,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 		<attribute>
 		<id>COOLING_ZONE_MASK</id>
@@ -1603,8 +1603,8 @@
 			</uint16_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>STANDBY_PLUGGABLE</id>
@@ -1616,8 +1616,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>CARD_TYPE</id>
@@ -1629,8 +1629,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>CONNECTOR_TYPE</id>
@@ -1642,9 +1642,9 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>LED_TYPE</id>
@@ -1656,9 +1656,9 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>		
 	<attribute>
 		<id>VPD_TYPE</id>
@@ -1669,8 +1669,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>ENC_TYPE</id>
@@ -1681,18 +1681,18 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 	<attribute>
 		<id>SYSTEM_NAME</id>
 		<description>System Name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>PROC_TX_LANE_INVERT</id>
@@ -1703,8 +1703,8 @@
 			</uint32_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>MEMBUF_TX_LANE_INVERT</id>
@@ -1715,8 +1715,8 @@
 			</uint32_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>SOURCE_TX_LANE_INVERT</id>
@@ -1727,8 +1727,8 @@
 			</uint32_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>DEST_TX_LANE_INVERT</id>
@@ -1739,8 +1739,8 @@
 			</uint32_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>PROC_TX_MSBSWAP</id>
@@ -1809,8 +1809,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>MEMBUF_TX_MSBSWAP</id>
@@ -1879,8 +1879,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>DEST_TX_MSBSWAP</id>
@@ -1949,8 +1949,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>SOURCE_TX_MSBSWAP</id>
@@ -2019,8 +2019,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>RAIL_NAME</id>
@@ -2032,9 +2032,9 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>GPIO_TYPE</id>
@@ -2046,58 +2046,58 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>IOP_NUM</id>
 		<description>Number of IOP</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PHB_NUM</id>
 		<description>Number of PHB</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PCIE_NUM_LANES</id>
 		<description>Number of PCIE lanes enabled for this interface</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PCIE_LANE_MASK</id>
 		<description>Lane mask for this config</description>
 		<simpleType>
-			<uint16_t></uint16_t>
+			<uint16_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
         <attribute>
                 <id>PCIE_LANE_SET</id>
                 <description>Lane set for this config</description>
                 <simpleType>
-                        <uint16_t></uint16_t>
+                        <uint16_t/>
                 </simpleType>
                 <persistency>non-volatile</persistency>
-                <readable />
+                <readable/>
                 <serverwizReadonly/>
         </attribute>
 
@@ -2105,10 +2105,10 @@
 		<id>PCIE_LANE_GROUP</id>
 		<description>Lane group for this config</description>
 		<simpleType>
-			<uint16_t></uint16_t>
+			<uint16_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 
@@ -2116,88 +2116,88 @@
 		<id>MGC_LOAD_SOURCE</id>
 		<description>defines MGC load source</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 
 	<attribute>
 		<id>ENABLE_CAPI</id>
 		<description>enables CAPI function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 
 	<attribute>
 		<id>ENABLE_LSI</id>
 		<description>enables LSI function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	
 	<attribute>
 		<id>ENABLE_HOTPLUG</id>
 		<description>enables hotplug function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 
 	<attribute>
 		<id>ENABLE_CABLECARD</id>
 		<description>enables Cable Card function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>			
 
 	<attribute>
 		<id>ENABLE_SRIOV</id>
 		<description>enables SRIOV function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>	
 
 	<attribute>
 		<id>ENABLE_ELLOCO</id>
 		<description>enables El Loco function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	
 	<attribute>
 		<id>ENABLE_NVLINK</id>
 		<description>enables NVLINK function (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 		<serverwizReadonly/>
 	</attribute>	
 
@@ -2205,51 +2205,51 @@
 		<id>PCIE_LANE_SWAP_TABLE</id>
 		<description>Lane Swap Lookup Table CK not swap = none,ck0,ck0,both CK swapped = none,ck0,ck1,both</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 			<array>4,2</array>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PCIE_SWAP_CLKS</id>
 		<description>Swap CK0 and CK1 (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>LANE_REVERSAL</id>
 		<description>Lane Reversal (0=no,1=yes)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>PCIE_CLK_NUM</id>
 		<description>Interface MSB CLK number (0 = CLK0, 1 = CLK1)</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PCIE_CONFIG_NUM</id>
 		<description>PCIe config id</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 
@@ -2257,29 +2257,29 @@
 		<id>PCIE_CONFIG_SELECTED</id>
 		<description>Specifies if this config is selected</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SCHEMATIC_INTERFACE</id>
 		<description>Schematic name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>GROUP_KEY</id>
 		<description>Key</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>ASSOCIATION_TYPE</id>
@@ -2291,18 +2291,18 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>MEMORY_SIZE_IN_KB</id>
 		<description>Size of a SEEPROM in KB</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2310,30 +2310,30 @@
 		<description>write cycle time of seeprom</description>
 		<group>SYS_POLICY</group>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>WRITE_PAGE_SIZE</id>
 		<description>Page Size of a SEEPROM in KB</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>BYTE_ADDRESS_OFFSET</id>
 		<description>address offset of seeprom</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2378,19 +2378,19 @@
 			<default>0</default>
 		</complexType>
 		<persistency>non-volatile</persistency>
-		<writeable />
-		<readable />
-		<bitmask />
+		<writeable/>
+		<readable/>
+		<bitmask/>
 	</attribute>
 
 	<attribute>
 		<id>BYTE_ADDRESS_OFFSET</id>
 		<description>address offset of seeprom</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	
@@ -2399,80 +2399,80 @@
 		<id>PIN_NAME[0]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NAME[1]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NAME[2]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NAME[3]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM[0]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM[1]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM[2]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>PIN_NUM[3]</id>
 		<description>pin name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 
@@ -2480,40 +2480,40 @@
 		<id>SP_IO_NAME[0]</id>
 		<description>dio name for offset 1</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_IO_NAME[1]</id>
 		<description>dio name for offset 2</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_IO_NAME[2]</id>
 		<description>dio name for offset 3</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_IO_NAME[3]</id>
 		<description>dio name for offset 4</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2526,7 +2526,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2539,7 +2539,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2551,7 +2551,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2563,7 +2563,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2576,8 +2576,8 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<global />
+		<readable/>
+		<global/>
 	</attribute>	
 	<attribute>
 		<id>SP_DRIVER_TYPE[0]</id>
@@ -2589,7 +2589,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2602,7 +2602,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2615,7 +2615,7 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2628,144 +2628,144 @@
 			</enumeration>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>POR_VALUE</id>
 		<description>gpio power on reset value</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<global />
+		<readable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>SP_MUX_GROUP</id>
 		<description>IOMUX mux group</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_MUX_SELECT</id>
 		<description>IOMUX mux select</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>DIO_START</id>
 		<description>DIO starting index</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>	
 	<attribute>
 		<id>SP_DIO_NUM</id>
 		<description>IOMUX DIO number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_ENGINE_NUM</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_ENGINE_NUM[0]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>	
 	<attribute>
 		<id>SP_ENGINE_NUM[1]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>	
 	<attribute>
 		<id>SP_ENGINE_NUM[2]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>	
 	<attribute>
 		<id>SP_ENGINE_NUM[3]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
 		<id>SP_MODE_CONTROL[0]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>SP_MODE_CONTROL[1]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>SP_MODE_CONTROL[2]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>SP_MODE_CONTROL[3]</id>
 		<description>IOMUX Engine number</description>
 		<simpleType>
-			<uint8_t></uint8_t>
+			<uint8_t/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	
 
@@ -2778,7 +2778,7 @@
 			<array>16</array>
 		</simpleType>
 		<persistency>volatile-zeroed</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2790,7 +2790,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
@@ -2802,20 +2802,20 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>FRU_NAME</id>
 		<description>Maps to IPMI Sensor name</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
-		<global />
+		<readable/>
+		<writeable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>PCIE_LANE_EQUALIZATION</id>
@@ -2830,8 +2830,8 @@
 			<array>16,3</array>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<writeable />
+		<readable/>
+		<writeable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -2841,7 +2841,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSOR_TYPE</id>
@@ -2851,7 +2851,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSOR_NAME_SUFFIX</id>
@@ -2861,7 +2861,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSOR_READING_TYPE</id>
@@ -2871,7 +2871,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSOR_OFFSETS</id>
@@ -2882,7 +2882,7 @@
 			<array>16</array>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSOR_ID</id>
@@ -2892,8 +2892,8 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
-		<global />
+		<readable/>
+		<global/>
 	</attribute>
 		<attribute>
 		<id>IPMI_ALTERNATE_ATTRIBUTE</id>
@@ -2903,7 +2903,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 		<attribute>
 		<id>ADC_CHANNEL_ID</id>
@@ -2913,7 +2913,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ADC_CHANNEL_ASSIGNMENT</id>
@@ -2923,7 +2923,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ADC_CHANNEL_GAIN</id>
@@ -2933,7 +2933,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ADC_CHANNEL_GROUND</id>
@@ -2943,7 +2943,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ADC_CHANNEL_OFFSET</id>
@@ -2953,7 +2953,7 @@
 			</string>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM_CHANNEL_ID</id>
@@ -2963,7 +2963,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PWM_ADDRESS</id>
@@ -2973,7 +2973,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PWM_BITMASK</id>
@@ -2983,7 +2983,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM_DUTY_CYCLE_ADDRESS</id>
@@ -2993,7 +2993,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 		<attribute>
 		<id>PWM_DUTY_CYCLE_BITMASK</id>
@@ -3003,7 +3003,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_CHANNEL_ID</id>
@@ -3013,7 +3013,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
@@ -3023,7 +3023,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 		<attribute>
 		<id>FAN_DOMAIN_REG_BITMASK</id>
@@ -3033,7 +3033,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_ADDRESS</id>
@@ -3043,7 +3043,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_BITMASK</id>
@@ -3053,7 +3053,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_ADDRESS</id>
@@ -3063,7 +3063,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_ERROR_REG_BITMASK</id>
@@ -3073,7 +3073,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_ADDRESS</id>
@@ -3083,7 +3083,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_BITMASK</id>
@@ -3093,7 +3093,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_ADDRESS</id>
@@ -3103,7 +3103,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_BITMASK</id>
@@ -3113,7 +3113,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_ADDRESS</id>
@@ -3123,7 +3123,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_SPD_REG_LOW_BITMASK</id>
@@ -3133,7 +3133,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_ADDRESS</id>
@@ -3143,7 +3143,7 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>FAN_TYPE_SEL_BITMASK</id>
@@ -3153,22 +3153,22 @@
 			</uint8_t>
 		</simpleType>
 		<persistency>non-volatile</persistency>
-		<readable />
+		<readable/>
 	</attribute>
 	<!-- Start DPSS attributes -->	
 	<attribute>
 		<id>PIN_NUM</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>BITS</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CHANNEL</id>
@@ -3179,7 +3179,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CHECK_STAGE</id>
@@ -3190,7 +3190,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CONFIG_ID</id>
@@ -3206,7 +3206,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CURRENT_MAX</id>
@@ -3217,7 +3217,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CURRENT_NOM</id>
@@ -3228,7 +3228,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEFAULT_VALUE</id>
@@ -3239,7 +3239,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_CPU</id>
@@ -3260,7 +3260,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_CPU_0</id>
@@ -3276,7 +3276,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_CPU_1</id>
@@ -3292,7 +3292,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_CPU_2</id>
@@ -3308,7 +3308,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_CPU_3</id>
@@ -3324,7 +3324,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_INT</id>
@@ -3345,7 +3345,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_INT_0</id>
@@ -3361,7 +3361,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_INT_1</id>
@@ -3377,7 +3377,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_INT_2</id>
@@ -3393,7 +3393,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_INT_3</id>
@@ -3409,7 +3409,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_IO</id>
@@ -3430,7 +3430,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_IO_0</id>
@@ -3446,7 +3446,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_IO_1</id>
@@ -3462,7 +3462,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_IO_2</id>
@@ -3478,7 +3478,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DEGATE_IO_3</id>
@@ -3494,7 +3494,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DELAY_CPU</id>
@@ -3510,7 +3510,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>DELAY_IO</id>
@@ -3526,7 +3526,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ENABLE_HOLD</id>
@@ -3542,7 +3542,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>END_COUNT</id>
@@ -3558,7 +3558,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ENGINE</id>
@@ -3569,7 +3569,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>EN_OD</id>
@@ -3590,7 +3590,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>EN_OD_0</id>
@@ -3606,7 +3606,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>EN_OD_1</id>
@@ -3622,7 +3622,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>EN_OD_2</id>
@@ -3638,7 +3638,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>EN_OD_3</id>
@@ -3654,7 +3654,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_0</id>
@@ -3665,7 +3665,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_1</id>
@@ -3676,7 +3676,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_2</id>
@@ -3687,7 +3687,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_3</id>
@@ -3698,7 +3698,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG</id>
@@ -3714,7 +3714,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERRORS_0</id>
@@ -3725,7 +3725,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERRORS_1</id>
@@ -3736,7 +3736,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERRORS_2</id>
@@ -3747,7 +3747,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERRORS_3</id>
@@ -3758,7 +3758,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK</id>
@@ -3774,7 +3774,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_0</id>
@@ -3790,7 +3790,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_MASK_1</id>
@@ -3806,7 +3806,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG</id>
@@ -3822,7 +3822,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_FFS_CH_0</id>
@@ -3833,7 +3833,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_FFS_CH_1</id>
@@ -3844,7 +3844,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_HYST_HIGH0</id>
@@ -3860,7 +3860,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_HYST_HIGH1</id>
@@ -3876,7 +3876,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_HYST_LOW0</id>
@@ -3892,7 +3892,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_HYST_LOW1</id>
@@ -3908,7 +3908,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_MAN_MODE</id>
@@ -3924,7 +3924,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_MODE</id>
@@ -3935,7 +3935,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG</id>
@@ -3951,7 +3951,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PPR0</id>
@@ -3967,7 +3967,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PPR1</id>
@@ -3983,7 +3983,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PRESENCE_0</id>
@@ -3994,7 +3994,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PRESENCE_1</id>
@@ -4005,7 +4005,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_PWM_MANUAL</id>
@@ -4016,7 +4016,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH</id>
@@ -4027,7 +4027,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW</id>
@@ -4038,7 +4038,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL</id>
@@ -4059,7 +4059,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL0</id>
@@ -4075,7 +4075,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL1</id>
@@ -4091,7 +4091,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAN_WARNING_CNT</id>
@@ -4107,7 +4107,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAULT_ACTION</id>
@@ -4118,7 +4118,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FAULT_DELAY</id>
@@ -4134,7 +4134,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FFS_MIN_TACH_HIGH0</id>
@@ -4150,7 +4150,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FFS_MIN_TACH_HIGH1</id>
@@ -4166,7 +4166,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FFS_MIN_TACH_LOW0</id>
@@ -4182,7 +4182,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FFS_MIN_TACH_LOW1</id>
@@ -4198,7 +4198,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FIXED_ADDRESS</id>
@@ -4209,7 +4209,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>GPIO_IN</id>
@@ -4225,7 +4225,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>I2C_FFS</id>
@@ -4236,7 +4236,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>I2C_INT</id>
@@ -4247,7 +4247,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>I2C_INT_MASK</id>
@@ -4258,14 +4258,14 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>INSTANCE_ID</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>INVERT_RESETS</id>
@@ -4281,7 +4281,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>LS_REG</id>
@@ -4302,7 +4302,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MAN_ENABLE</id>
@@ -4318,7 +4318,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MAX_FAN_PWM0</id>
@@ -4334,7 +4334,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MAX_FAN_PWM1</id>
@@ -4350,7 +4350,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MIN_FAN_PWM0</id>
@@ -4366,7 +4366,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MIN_FAN_PWM1</id>
@@ -4382,7 +4382,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>NUM_PS</id>
@@ -4398,7 +4398,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD INVERT_0</id>
@@ -4414,7 +4414,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD INVERT_1</id>
@@ -4430,7 +4430,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD INVERT_2</id>
@@ -4446,7 +4446,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD INVERT_3</id>
@@ -4462,7 +4462,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_INVERT</id>
@@ -4483,7 +4483,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_LATCHED</id>
@@ -4499,7 +4499,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_LATCHED_0</id>
@@ -4510,7 +4510,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_LATCHED_1</id>
@@ -4521,7 +4521,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_LATCHED_2</id>
@@ -4532,7 +4532,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_LATCHED_3</id>
@@ -4543,7 +4543,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_MASK</id>
@@ -4564,7 +4564,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_MASK_0</id>
@@ -4580,7 +4580,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_MASK_1</id>
@@ -4596,7 +4596,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_MASK_2</id>
@@ -4612,7 +4612,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_MASK_3</id>
@@ -4628,7 +4628,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_PORT</id>
@@ -4644,7 +4644,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_PORT_0</id>
@@ -4655,7 +4655,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_PORT_1</id>
@@ -4666,7 +4666,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_PORT_2</id>
@@ -4677,7 +4677,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_PORT_3</id>
@@ -4688,14 +4688,14 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PGOOD_SLOT</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PIN_NAME</id>
@@ -4706,8 +4706,8 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
-		<global />
+		<readable/>
+		<global/>
 	</attribute>
 	<attribute>
 		<id>PORT</id>
@@ -4718,7 +4718,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_DELAY</id>
@@ -4734,7 +4734,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PRSNT_REG</id>
@@ -4750,7 +4750,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSC0</id>
@@ -4766,7 +4766,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSC1</id>
@@ -4782,7 +4782,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_CTRL</id>
@@ -4793,7 +4793,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_OVERRIDE</id>
@@ -4804,7 +4804,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT0</id>
@@ -4820,7 +4820,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT1</id>
@@ -4836,7 +4836,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT10</id>
@@ -4852,7 +4852,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT11</id>
@@ -4868,7 +4868,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT12</id>
@@ -4884,7 +4884,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT13</id>
@@ -4900,7 +4900,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT14</id>
@@ -4916,7 +4916,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT15</id>
@@ -4932,7 +4932,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT16</id>
@@ -4948,7 +4948,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT17</id>
@@ -4964,7 +4964,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT18</id>
@@ -4980,7 +4980,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT19</id>
@@ -4996,7 +4996,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT2</id>
@@ -5012,7 +5012,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT20</id>
@@ -5028,7 +5028,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT21</id>
@@ -5044,7 +5044,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT22</id>
@@ -5060,7 +5060,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT23</id>
@@ -5076,7 +5076,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT24</id>
@@ -5092,7 +5092,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT25</id>
@@ -5108,7 +5108,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT26</id>
@@ -5124,7 +5124,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT27</id>
@@ -5140,7 +5140,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT28</id>
@@ -5156,7 +5156,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT29</id>
@@ -5172,7 +5172,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT3</id>
@@ -5188,7 +5188,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT30</id>
@@ -5204,7 +5204,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT31</id>
@@ -5220,7 +5220,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT4</id>
@@ -5236,7 +5236,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT5</id>
@@ -5252,7 +5252,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT6</id>
@@ -5268,7 +5268,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT7</id>
@@ -5284,7 +5284,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT8</id>
@@ -5300,7 +5300,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT9</id>
@@ -5316,7 +5316,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PSEQ_SLOT_CNT</id>
@@ -5327,7 +5327,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM0</id>
@@ -5343,7 +5343,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM1</id>
@@ -5359,7 +5359,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM_DELAY</id>
@@ -5375,7 +5375,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM_DUTY_CYCLE</id>
@@ -5386,7 +5386,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PWM_STEP</id>
@@ -5402,7 +5402,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>REBOOT</id>
@@ -5413,7 +5413,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>RESERV_REV_CODE</id>
@@ -5424,7 +5424,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>RESETS_OUT</id>
@@ -5435,7 +5435,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>REV_CODE</id>
@@ -5446,7 +5446,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SECONDARY_DELAY</id>
@@ -5462,7 +5462,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SEC_SEQ</id>
@@ -5478,7 +5478,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SEQUENCE_CNT</id>
@@ -5489,7 +5489,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SLIDING_INDEX</id>
@@ -5505,7 +5505,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SOFT_PGOOD</id>
@@ -5516,7 +5516,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_H0</id>
@@ -5527,7 +5527,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_H1</id>
@@ -5538,7 +5538,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_H2</id>
@@ -5549,7 +5549,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_H3</id>
@@ -5560,7 +5560,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_L0</id>
@@ -5571,7 +5571,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_L1</id>
@@ -5582,7 +5582,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_L2</id>
@@ -5593,7 +5593,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>TACH_SET_L3</id>
@@ -5604,7 +5604,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>VMEM_PER_VPP</id>
@@ -5620,7 +5620,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>	
 	<attribute>
 		<id>VOLTAGE</id>
@@ -5631,7 +5631,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>WDT_RESET</id>
@@ -5642,7 +5642,7 @@
 			<bits>8</bits>
 		</field>
 		</complexType>
-		<readable />
+		<readable/>
 	</attribute>
 	<!-- End DPSS attributes -->
 	<!-- APSS attributes -->
@@ -5650,122 +5650,122 @@
 		<id>ADC_MAX</id>
 		<description>12 bit max value</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>ADC_VREF</id>
 		<description>V</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CHANNEL</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FUNCTION_ID</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>FUNCTION_NAME</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>GAIN</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>GND</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>GPIO_P0_MODE</id>
-		<description>1 = output, 0 = input � use GPIO modes tab to fill these out</description>
+		<description>1 = output, 0 = input  use GPIO modes tab to fill these out</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>GPIO_P1_MODE</id>
-		<description>1 = output, 0 = input � use GPIO modes tab to fill these out</description>
+		<description>1 = output, 0 = input  use GPIO modes tab to fill these out</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>OFFSET</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PIN-NAME</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>PORT</id>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>VOLTAGE</id>
 		<description>volts</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<!-- end APSS attributes -->
 	<attribute>
 		<id>TARGET_NAME</id>
 		<description>Name of target</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>MRW_ID</id>
 		<description>Name identifying a given system MRW</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>CHECK_SCRIPT</id>
 		<description>Name of checking script to run when Run Checks button is clicked</description>
 		<simpleType>
-			<string></string>
+			<string/>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 	<attribute>
 		<id>SPI_FUNCTION</id>
@@ -5776,6 +5776,6 @@
 				<id>SPI_FUNCTION</id>
 			</enumeration>
 		</simpleType>
-		<readable />
+		<readable/>
 	</attribute>
 </attributes>

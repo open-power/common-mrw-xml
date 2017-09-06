@@ -123,7 +123,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -191,7 +191,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -259,7 +259,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -327,7 +327,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -395,7 +395,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -463,7 +463,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -531,7 +531,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -599,7 +599,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -667,7 +667,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -735,7 +735,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -803,7 +803,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -871,7 +871,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -939,7 +939,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -1007,7 +1007,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -1075,7 +1075,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>
@@ -1143,7 +1143,7 @@
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_ID</id>
-			<default></default>
+			<default/>
 		</attribute>
 		<attribute>
 			<id>IPMI_SENSOR_READING_TYPE</id>

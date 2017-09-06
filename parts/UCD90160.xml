@@ -29,15 +29,15 @@
 	<child_id>UCD90160.in16</child_id>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>ALTFSI_MASTER_CHIP</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>ALTFSI_MASTER_PORT</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
@@ -53,23 +53,23 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FSI_MASTER_CHIP</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FSI_MASTER_PORT</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FSI_MASTER_TYPE</id>
@@ -78,29 +78,29 @@
 	<attribute>
 		<id>FSI_OPTION_FLAGS</id>
 		<default>
-				<field><id>flipPort</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
+				<field><id>flipPort</id><value/></field>
+				<field><id>reserved</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>FSI_SLAVE_CASCADE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
@@ -112,23 +112,23 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>POSITION</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
 		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
+				<field><id>supportsFsiScom</id><value/></field>
+				<field><id>supportsXscom</id><value/></field>
+				<field><id>supportsInbandScom</id><value/></field>
+				<field><id>reserved</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -137,7 +137,7 @@
 	</attribute>
 	<attribute>
 		<id>RU_TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -153,7 +153,7 @@
 	<parent>mrw-unit</parent>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -161,7 +161,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -181,35 +181,35 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>I2C_ADDRESS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -217,11 +217,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -234,7 +234,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -259,7 +259,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -267,7 +267,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -283,42 +283,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in1</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_1_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -326,11 +326,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -343,7 +343,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -351,7 +351,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -364,7 +364,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -372,7 +372,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -388,42 +388,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in2</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_2_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -431,11 +431,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -448,7 +448,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -456,7 +456,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -469,7 +469,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -477,7 +477,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -493,42 +493,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in3</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_3_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -536,11 +536,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -553,7 +553,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -561,7 +561,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -574,7 +574,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -582,7 +582,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -598,42 +598,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in4</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_4_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -641,11 +641,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -658,7 +658,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -666,7 +666,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 </targetInstances>
@@ -680,7 +680,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -688,7 +688,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -704,42 +704,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in5</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_5_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -747,11 +747,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -764,7 +764,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -772,7 +772,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -785,7 +785,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -793,7 +793,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -809,42 +809,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in6</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_6_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -852,11 +852,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -869,7 +869,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -877,7 +877,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -890,7 +890,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -898,7 +898,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -914,42 +914,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in7</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_7_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -957,11 +957,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -974,7 +974,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -982,7 +982,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -995,7 +995,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1003,7 +1003,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1019,42 +1019,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in8</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_8_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1062,11 +1062,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1079,7 +1079,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1087,7 +1087,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1100,7 +1100,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1108,7 +1108,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1124,42 +1124,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in9</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_9_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1167,11 +1167,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1184,7 +1184,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1192,7 +1192,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1205,7 +1205,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1213,7 +1213,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1229,42 +1229,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in10</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_10_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1272,11 +1272,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1289,7 +1289,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1297,7 +1297,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1310,7 +1310,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1318,7 +1318,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1334,42 +1334,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in11</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_11_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1377,11 +1377,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1394,7 +1394,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1402,7 +1402,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1415,7 +1415,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1423,7 +1423,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1439,42 +1439,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in12</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_12_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1482,11 +1482,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1499,7 +1499,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1507,7 +1507,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1520,7 +1520,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1528,7 +1528,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1544,42 +1544,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in13</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_13_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1587,11 +1587,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1604,7 +1604,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1612,7 +1612,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1625,7 +1625,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1633,7 +1633,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1649,42 +1649,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in14</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_14_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1692,11 +1692,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1709,7 +1709,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1717,7 +1717,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1730,7 +1730,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1738,7 +1738,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1754,42 +1754,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in15</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_15_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1797,11 +1797,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1814,7 +1814,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1822,7 +1822,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -1835,7 +1835,7 @@
 	<parent_type>chip</parent_type>
 	<attribute>
 		<id>AFFINITY_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>BUS_TYPE</id>
@@ -1843,7 +1843,7 @@
 	</attribute>
 	<attribute>
 		<id>CHIPLET_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1859,42 +1859,42 @@
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>FAPI_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HUID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>in16</value></field>
 				<field><id>DESCRIPTIVE_NAME</id><value>rail_16_voltage</value></field>
-				<field><id>WARN_LOW</id><value></value></field>
-				<field><id>WARN_HIGH</id><value></value></field>
-				<field><id>CRIT_LOW</id><value></value></field>
-				<field><id>CRIT_HIGH</id><value></value></field>
+				<field><id>WARN_LOW</id><value/></field>
+				<field><id>WARN_HIGH</id><value/></field>
+				<field><id>CRIT_LOW</id><value/></field>
+				<field><id>CRIT_HIGH</id><value/></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRU_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
@@ -1902,11 +1902,11 @@
 	</attribute>
 	<attribute>
 		<id>ORDINAL_ID</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>PRIMARY_CAPABILITIES</id>
@@ -1919,7 +1919,7 @@
 	</attribute>
 	<attribute>
 		<id>REL_POS</id>
-		<default></default>
+		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1927,7 +1927,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default/>
 	</attribute>
 </targetPart>
 </partInstance>

@@ -8,7 +8,7 @@
     </attribute>
     <attribute>
       <id>Upstream_Port</id>
-      <default></default>
+      <default/>
     </attribute>
     <instance_name>Virtual-Switch</instance_name>
     <is_root>true</is_root>

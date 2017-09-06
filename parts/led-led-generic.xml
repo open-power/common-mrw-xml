@@ -23,27 +23,27 @@
     </attribute>
     <attribute>
         <id>BLINK_ROLLUP</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>VIEW_REAR</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>VIEW_FRONT</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>VIEW_INTERNAL</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>FUNCTION</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>BLINK_RATE</id>
-        <default></default>
+        <default/>
     </attribute>
     <attribute>
         <id>ON_STATE</id>
