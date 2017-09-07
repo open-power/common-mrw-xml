@@ -192,41 +192,6 @@
       <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
     </attribute>
     <attribute>
-      <default>0x00000000</default>
-      <id>PROC_HW_TOPOLOGY</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ENGINE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_MASTER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVICE_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_SLAVE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_BUS_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVICE_PURPOSE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVICE_LABEL</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ELEMENTS</id>
-    </attribute>
-    <attribute>
-      <default>0xFF</default>
-      <id>IPMI_INSTANCE</id>
-    </attribute>
-    <attribute>
       <id>FREQ_O_MHZ</id>
     </attribute>
     <attribute>
@@ -624,15 +589,6 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>GPIO_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
     </attribute>
     <attribute>
@@ -755,12 +711,6 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -815,9 +765,6 @@
     </attribute>
     <attribute>
       <id>FRU_ID</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
     </attribute>
     <id>occ</id>
     <parent>unit</parent>
@@ -885,7 +832,9 @@
     <attribute>
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
-    
+    <attribute>
+      <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
+    </attribute>
     <attribute>
       <id>MNFG_TH_P8EX_L2_DIR_CES</id>
     </attribute>
@@ -1167,126 +1116,6 @@
     </attribute>
     <attribute>
       <id>BOOT_FREQ_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PHYP_SYSTEM_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>ASCII_VPD_LX_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_ENTER_UTILIZATION_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_TIME_SECONDS</id>
-    </attribute>
-    <attribute>
-      <id>IPS_EXIT_UTILIZATION_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_FUNC_IDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GNDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GAINS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_OFFSETS</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_MODES</id>
-    </attribute>
-    <attribute>
-      <id>APSS_GPIO_PORT_PINS</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_QUAD_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_POWER_CAP</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_VRM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>OPAL_MODEL</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
@@ -1598,6 +1427,9 @@
       <id>STOP11_DISABLE</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
+    </attribute>
+    <attribute>
       <id>SYSTEM_WOF_DISABLE</id>
     </attribute>
     <attribute>
@@ -1817,9 +1649,6 @@
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
     <id>enc-node-power9</id>
     <parent>base</parent>
   </targetType>
@@ -2004,9 +1833,6 @@
     <attribute>
       <id>PROC_PCIE_PHB_ACTIVE</id>
     </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
   </targetType>
@@ -2100,9 +1926,6 @@
     <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2873,9 +2696,6 @@
       <default>POWER9</default>
       <id>MODEL</id>
     </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
     <id>unit-occ-power9</id>
     <parent>unit</parent>
   </targetType>
@@ -3269,18 +3089,6 @@
       <default>SP</default>
       <id>TYPE</id>
     </attribute>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
     <id>sp</id>
     <parent>base</parent>
   </targetType>
@@ -3296,18 +3104,6 @@
     <attribute>
       <default>physical:sys-0/node-0/bmc-0</default>
       <id>PHYS_PATH</id>
-    </attribute>
-    <attribute>
-      <id>BMC_MANUFACTURER</id>
-    </attribute>
-    <attribute>
-      <id>BMC_HW_CHIP_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>BMC_SW_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>FRU_ID</id>
     </attribute>
     <id>chip-bmc-ast2500</id>
     <parent>sp</parent>
