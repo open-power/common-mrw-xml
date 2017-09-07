@@ -3088,6 +3088,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Disable the Core Periodic Quiesce Hang Buster function Producer: Lab tools Consumer: p9_hcode_image_build.C -&gt; SGPE Hcode -&gt; CME Hcode Platform default: OFF</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Disables Work Load Optimized Frequency (WOF) algorithms to modify frequency based on active core count and other inputs. OFF: Will enable WOF given all validity check pass. If validity checks fail, WOF will be disabled for the present IPL. ON: Will disable WOF OFF_SKIP_DD: Same as OFF but skips any validity checking of the chip design level (lab use only). Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYSTEM_WOF_DISABLE</id>
@@ -7635,7 +7650,17 @@
     </simpleType>
     <writeable/>
   </attribute>
-  
+  <attribute>
+    <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
+    <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
   <attribute>
     <description>This attribute represents the Maximum number of L2 Directory CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
     <id>MNFG_TH_P8EX_L2_DIR_CES</id>
@@ -8298,7 +8323,6 @@
     </simpleType>
     <writeable/>
   </attribute>
-  
   <attribute>
     <description>Value of PCS system control creator: platform consumer: p9_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. There are four groups of four lanes: 0-3 (A-D), 4-7 (E-H), 8-11(I-L), and 12-15(M-P). Each lane group can be assigned to a MAC interface. The supported configurations are as follows: 1. MAC #1 = x16, MAC #2 = N/A, MAC #3 = N/A, MAC #4 = N/A : PCS_SYSTEM_CONTROL_REG = 0x0000. 2. MAC #1 = x8, MAC #2 = x8, MAC #3 = N/A, MAC #4 = N/A : PCS_SYSTEM_CONTROL_REG = 0x0050. 3. MAC #1 = x8, MAC #2 = x4, MAC #3 = x4, MAC #4 = N/A : PCS_SYSTEM_CONTROL_REG = 0x0090. All other configurations are not supported.</description>
     <hwpfToHbAttrMap>
@@ -9386,6 +9410,15 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Power used by components other than CPU, memory, or GPUs in Watts</description>
+    <id>MISC_SYSTEM_COMPONENTS_MAX_POWER_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t/>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Memory controller read timeout in seconds</description>
     <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
     <persistency>non-volatile</persistency>
@@ -9509,6 +9542,42 @@
   <attribute>
     <description>If this system supports Turbo frequency mode. 0x00 = no 0x01 = yes</description>
     <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>GPU core temperature read timeout in seconds</description>
+    <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>GPU core temperature error threshold in degrees C</description>
+    <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>GPU memory temperature read timeout in seconds</description>
+    <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>GPU memory temperature error threshold in degrees C</description>
+    <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
@@ -10657,6 +10726,18 @@
     <id>STOP11_DISABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>Disable the Core Periodic Quiesce Hang Buster function Producer: Lab tools Consumer: p9_hcode_image_build.C -&gt; SGPE Hcode -&gt; CME Hcode Platform default: OFF</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>1</value>
+    </enumerator>
+    <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Disables Work Load Optimized Frequency (WOF) algorithms to modify frequency based on active core count and other inputs. OFF: Will enable WOF given all validity check pass. If validity checks fail, WOF will be disabled for the present IPL. ON: Will disable WOF OFF_SKIP_DD: Same as OFF but skips any validity checking of the chip design level (lab use only). Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
     <enumerator>
       <name>OFF</name>
@@ -11097,6 +11178,10 @@
     <enumerator>
       <name>CUMULUS</name>
       <value>0x6</value>
+    </enumerator>
+    <enumerator>
+      <name>AXONE</name>
+      <value>0x7</value>
     </enumerator>
     <id>NAME</id>
   </enumerationType>

@@ -885,7 +885,9 @@
     <attribute>
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
-    
+    <attribute>
+      <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
+    </attribute>
     <attribute>
       <id>MNFG_TH_P8EX_L2_DIR_CES</id>
     </attribute>
@@ -1247,6 +1249,9 @@
       <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
     </attribute>
     <attribute>
+      <id>MISC_SYSTEM_COMPONENTS_MAX_POWER_WATTS</id>
+    </attribute>
+    <attribute>
       <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
@@ -1284,6 +1289,18 @@
     </attribute>
     <attribute>
       <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
       <id>OPAL_MODEL</id>
@@ -1596,6 +1613,9 @@
     </attribute>
     <attribute>
       <id>STOP11_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
     </attribute>
     <attribute>
       <id>SYSTEM_WOF_DISABLE</id>
