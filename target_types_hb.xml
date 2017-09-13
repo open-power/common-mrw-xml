@@ -1417,6 +1417,9 @@
       <id>FREQ_PB_MHZ</id>
     </attribute>
     <attribute>
+      <id>FREQ_MCA_MHZ</id>
+    </attribute>
+    <attribute>
       <id>FREQ_A_MHZ</id>
     </attribute>
     <attribute>
