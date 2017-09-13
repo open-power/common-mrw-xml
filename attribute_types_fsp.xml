@@ -10,6 +10,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <global/>
 </attribute>
 
 <attribute>
@@ -58,6 +59,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <global/>
 </attribute>
 
 <attribute>
@@ -142,6 +144,7 @@
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
+    <global/>
 </attribute>
 
 <attribute>
