@@ -755,6 +755,12 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
+      <id>MBA_PORT</id>
+    </attribute>
+    <attribute>
+      <id>MBA_DIMM</id>
+    </attribute>
+    <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
@@ -1415,6 +1421,9 @@
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_MCA_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_A_MHZ</id>
