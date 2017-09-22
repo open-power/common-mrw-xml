@@ -755,6 +755,12 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
+      <id>MBA_PORT</id>
+    </attribute>
+    <attribute>
+      <id>MBA_DIMM</id>
+    </attribute>
+    <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
@@ -1417,6 +1423,9 @@
       <id>FREQ_PB_MHZ</id>
     </attribute>
     <attribute>
+      <id>FREQ_MCA_MHZ</id>
+    </attribute>
+    <attribute>
       <id>FREQ_A_MHZ</id>
     </attribute>
     <attribute>
@@ -2026,6 +2035,9 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>NO_APSS_PROC_POWER_VCS_VIO_WATTS</id>
     </attribute>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
