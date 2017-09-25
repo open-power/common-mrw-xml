@@ -555,6 +555,20 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>The frequency of the memory controller channel. In synchronous mode, this is equivalent to ATTR_FREQ_PB_MHZ. This may be independently set per pair of memory channels if operating in asynchronous mode, but this configuration is not anticipated. This clock drives the MCU queues, and all the associated logic that drives the inputs to the DMI and reads its outputs.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_MCA_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_MCA_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of a processor's Obus mesh clocks, in MHz. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_O_MHZ</id>
@@ -3277,6 +3291,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_VDM_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_VDM_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Voltage Droop Monitor (VDM) Small Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a small droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
     <hwpfToHbAttrMap>
       <id>ATTR_VDM_DROOP_SMALL_OVERRIDE</id>
@@ -4098,7 +4127,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>OHM34_FFE0,OHM34_FFE0</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4113,7 +4144,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x28,0x28</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4128,7 +4161,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x28,0x28</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4143,7 +4178,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x28,0x28</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4158,7 +4195,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x28,0x28</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4188,7 +4227,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x03,0x03</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4203,7 +4244,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x03,0x03</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4218,7 +4261,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x03,0x03</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4233,7 +4278,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x03,0x03</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -4248,7 +4295,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>0x03,0x03</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -5383,7 +5432,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t />
+      <uint8_t>
+        <default>0x3</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -5412,7 +5463,9 @@
     <readable />
     <simpleType>
       <array>2</array>
-      <uint8_t />
+      <uint8_t>
+        <default>OHM34_FFE0,OHM34_FFE0</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -7007,7 +7060,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>VDDR memory programming type 0 = POWERON - domain is programmed as part of regular power on sequence, 1 = STATIC - domain needs to be programmed, no special computation needed, 2 = DYNAMIC - domain needs to be programmed, uses dynamic vid logic</description>
+    <description>VDDR memory programming type 0 = POWERON - domain is programmed as part of regular power on sequence, 1 = STATIC - domain needs to be programmed, no special computation needed, 2 = DYNAMIC - domain needs to be programmed, uses dynamic vid logic, 3 = DEFAULT - domain needs to be programmed, pgm values in sys xml file</description>
     <hasStringConversion />
     <id>MSS_VDDR_PROGRAM</id>
     <persistency>non-volatile</persistency>
@@ -8205,7 +8258,7 @@
     <readable />
     <simpleType>
       <uint32_t>
-        <default>0x80000000</default>
+        <default>0xEC100000</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -9633,6 +9686,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>A constant power (in watts) that the OCC is to add onto Vdd and Vdn power to represent any processor part that is not measured(i.e.Vcs,Vio) This is used by the OCC to calculate a total processor socket power.</description>
+    <id>NO_APSS_PROC_POWER_VCS_VIO_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_chip</description>
     <id>MRW_SAFEMODE_MEM_THROTTLE_NUMERATOR_PER_CHIP</id>
     <persistency>non-volatile</persistency>
@@ -9892,6 +9956,18 @@
       <value>2400</value>
     </enumerator>
     <id>FREQ_PB_MHZ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of the memory controller channel. In synchronous mode, this is equivalent to ATTR_FREQ_PB_MHZ. This may be independently set per pair of memory channels if operating in asynchronous mode, but this configuration is not anticipated. This clock drives the MCU queues, and all the associated logic that drives the inputs to the DMI and reads its outputs.</description>
+    <enumerator>
+      <name>2000</name>
+      <value>2000</value>
+    </enumerator>
+    <enumerator>
+      <name>2400</name>
+      <value>2400</value>
+    </enumerator>
+    <id>FREQ_MCA_MHZ</id>
   </enumerationType>
   <enumerationType>
     <description>MRW control to permit Normal (100 MHz) or Slow (94 MHz) operation of PCIE reference clock. On Nimbus DD1 HW, Slow operation is required to achieve Gen4 operation. Provided by the MRW.</description>
@@ -10784,7 +10860,7 @@
       <value>0</value>
     </enumerator>
     <enumerator>
-      <name>STEPPED</name>
+      <name>CALCULATED</name>
       <value>1</value>
     </enumerator>
     <id>WOF_ENABLE_VRATIO</id>
@@ -10800,6 +10876,18 @@
       <value>1</value>
     </enumerator>
     <id>WOF_VRATIO_SELECT</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>SYSTEM_VDM_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Voltage Droop Monitor (VDM) Small Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a small droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
