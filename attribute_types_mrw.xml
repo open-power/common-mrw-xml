@@ -1585,6 +1585,17 @@
 		<writeable/>
 	</attribute>
 	<attribute>
+		<id>FRU_PATH</id>
+		<description>Describes the entire FRU path</description>
+		<simpleType>
+			<string>
+			</string>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable />
+		<writeable />
+	</attribute>	
+	<attribute>
 		<id>OBUS_CONFIG</id>
 		<description>OBUS Configuration Selector</description>
 		<simpleType>

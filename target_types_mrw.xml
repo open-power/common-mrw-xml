@@ -2554,6 +2554,10 @@
 			<id>BUS_WIDTH</id>
 			<default>2</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>			
 	</targetType>
 	<targetType>
 		<id>FSICM</id>
@@ -2564,6 +2568,10 @@
 		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>2</default>
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
 		</attribute>		
 	</targetType>
 	<targetType>
@@ -2575,7 +2583,11 @@
 		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>2</default>
-		</attribute>		
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>					
 	</targetType>
 	<targetType>
 		<id>ABUS</id>
@@ -2648,6 +2660,10 @@
 			<id>PCIE_LANE_EQUALIZATION</id>
 			<default>all,0x33,0x33</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>			
 	</targetType>
 	<targetType>
 		<id>GPIO</id>
@@ -2659,6 +2675,10 @@
 			<id>BUS_WIDTH</id>
 			<default>1</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>			
 	</targetType>
 	<targetType>
 		<id>DMI</id>
@@ -2713,7 +2733,11 @@
 		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>4</default>
-		</attribute>		
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>				
 	</targetType>
 	<targetType>
 		<id>SC</id>
@@ -2756,6 +2780,10 @@
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
 		</attribute>
 	</targetType>
 	<targetType>
