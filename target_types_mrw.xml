@@ -3888,10 +3888,6 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
     	<id>CLASS</id>
     	<default>UNIT</default>
     </attribute>
@@ -3919,10 +3915,6 @@
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
     </attribute>
     <attribute>
     	<id>CLASS</id>
