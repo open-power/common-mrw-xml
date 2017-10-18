@@ -666,9 +666,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x01</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
     <writeable />
   </attribute>
@@ -917,11 +915,90 @@
   </attribute>
   <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_EI_BUS_TX_MSBSWAP</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>EI_BUS_TX_MSBSWAP</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of X Bus for Field usage This value must be initialized by platforms by reading the value from System Model - x_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_X_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>X_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of X Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - x_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_X_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>X_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of O Bus for Field usage This value must be initialized by platforms by reading the value from System Model - a_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_O_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>O_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of O Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - a_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_O_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>O_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of Memory Bus for Field usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of Memory Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -2881,188 +2958,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>UltraTurbo Frequency Bias - % of bias (signed twos complement in 0.5 percent steps) used in calculating the frequency associated with a Pstate - both Global and Local. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_BIAS_ULTRATURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_BIAS_ULTRATURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Turbo Frequency Bias - % of bias (signed twos complement in 0.5 percent steps) used in calculating the frequency associated with a Pstate - both Global and Local. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_BIAS_TURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_BIAS_TURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nominal Frequency Bias - % of bias (signed twos complement in 0.5 percent steps) used in calculating the frequency associated with a Pstate - both Global and Local. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_BIAS_NOMINAL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_BIAS_NOMINAL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PowerSave Frequency Bias - % of bias (signed twos complement in 0.5 percent steps) used in calculating the frequency associated with a Pstate - both Global and Local. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_BIAS_POWERSAVE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_BIAS_POWERSAVE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>UltraTurbo VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the UltraTurbo VPD point used in calculating the Global Pstate values. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VDD_BIAS_ULTRATURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VDD_BIAS_ULTRATURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Turbo VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the UltraTurbo VPD point used in calculating the Global Pstate values. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VDD_BIAS_TURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VDD_BIAS_TURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nominal VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the UltraTurbo VPD point used in calculating the Global Pstate values. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VDD_BIAS_NOMINAL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VDD_BIAS_NOMINAL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PowerSave VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the UltraTurbo VPD point used in calculating the Global Pstate values. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VDD_BIAS_POWERSAVE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VDD_BIAS_POWERSAVE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>VCS Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the VCS value stored in the UltraTurbo VPD point for setting the VCS rail. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VCS_BIAS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VCS_BIAS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>VDN Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the VDN value stored in the VPD for setting the VDN rail. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_EXT_VDN_BIAS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_EXT_VDN_BIAS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TODO (RTC 136996) NEED TO LOOK AT PERCENTAGE IMPLEMENTATION IN CME CODE AS WELL AS THE IVRM VOLTAGE CALCULATION PROCESS UltraTurbo Internal VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the voltage computed (Vout) as part of the Local Pstate. Note: the Vin Effective that models the Vin to the PFETs (i.e accounting for system parameter losses) may include biassing based on ATTR_VOLTAGE_VDD_BIAS_ULTRATURBO. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_INT_VDD_BIAS_ULTRATURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_INT_VDD_BIAS_ULTRATURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TODO (RTC 136996) NEED TO LOOK AT PERCENTAGE IMPLEMENTATION IN CME CODE AS WELL AS THE IVRM VOLTAGE CALCULATION PROCESS TURBO Internal VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the voltage computed (Vout) as part of the Local Pstate. Note: the Vin Effective that models the Vin to the PFETs (i.e accounting for system parameter losses) may include biassing based on ATTR_VOLTAGE_VDD_BIAS_TURBO. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_INT_VDD_BIAS_TURBO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_INT_VDD_BIAS_TURBO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TODO (RTC 136996) NEED TO LOOK AT PERCENTAGE IMPLEMENTATION IN CME CODE AS WELL AS THE IVRM VOLTAGE CALCULATION PROCESS Nominal Internal VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the voltage computed (Vout) as part of the Local Pstate. Note: the Vin Effective that models the Vin to the PFETs (i.e accounting for system parameter losses) may include biassing based on ATTR_VOLTAGE_VDD_BIAS_NOMINAL. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_INT_VDD_BIAS_NOMINAL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_INT_VDD_BIAS_NOMINAL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TODO (RTC 136996) NEED TO LOOK AT PERCENTAGE IMPLEMENTATION IN CME CODE AS WELL AS THE IVRM VOLTAGE CALCULATION PROCESS PowerSave Internal VDD Voltage Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the voltage computed (Vout) as part of the Local Pstate. Note: the Vin Effective that models the Vin to the PFETs (i.e accounting for system parameter losses) may include biassing based on ATTR_VOLTAGE_VDD_BIAS_POWERSAVE. Producer: Attribute Overrides by Lab/Mfg Characterization Team Consumer: p9_pstate_parameter_block Platform default: 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VOLTAGE_INT_VDD_BIAS_POWERSAVE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VOLTAGE_INT_VDD_BIAS_POWERSAVE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Control CME response to execution of PowerPC STOP instruction if OFF, treat STOP4 as STOP4 if ON, treat STOP4 as STOP2 Producer: Work-around tools Consumer: p9_hcode_image_build.C Platform default: OFF</description>
     <hwpfToHbAttrMap>
       <id>ATTR_STOP4_DISABLE</id>
@@ -3099,21 +2994,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disable the Core Periodic Quiesce Hang Buster function Producer: Lab tools Consumer: p9_hcode_image_build.C -&gt; SGPE Hcode -&gt; CME Hcode Platform default: OFF</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3218,49 +3098,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Receive PBAX Broadcast Group. Vector that is indexed when decoded PMISC pbax_type=broadcast with the decoded PMISC pbax_chipid value. If the bit in this vector at the decoded bit location is a 1, then this receive engine will participate in the broadcast operation. Override attribute. Platform value of 0 indiates the OCC firmware will perform this function.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PBAX_BRDCST_ID_VECTOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PBAX_BRDCST_ID_VECTOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>1 if override of poundv bucket num is available. 0 if override is unavailable.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_POUNDV_BUCKET_NUM_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Attribute in place to allow override of which POUNDV bucket to use to set power management data. 1 = Bucket A 2 = Bucket B 3 = Bucket C 4 = Bucket D 5 = Bucket E 6 = Bucket F</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_POUNDV_BUCKET_NUM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>POUNDV_BUCKET_NUM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>if set to 1, FAPI_ERR records are suppressed from being produced by p9_dump_stop_info.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
@@ -3291,7 +3128,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
+    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: MRW Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYSTEM_VDM_DISABLE</id>
       <macro>DIRECT</macro>
@@ -3303,118 +3140,6 @@
       <uint8_t>
         <default>0x00</default>
       </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage Droop Monitor (VDM) Small Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a small droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_DROOP_SMALL_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_DROOP_SMALL_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage Droop Monitor (VDM) Large Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a large droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_DROOP_LARGE_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_DROOP_LARGE_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage Droop Monitor (VDM) Extreme Threshold Select Value per VPD point. The enum indicates a negative value below the VDM setting that will trigger an extreme droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_DROOP_EXTREME_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_DROOP_EXTREME_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage Droop Monitor (VDM) OverVoltage Threshold Select Value per VPD point. The enum indicates a positive value above the VDM setting that will indicate an overvolt droop condition. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_OVERVOLT_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_OVERVOLT_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DPLL response override of the respective #W VPD content for a Voltage Droop Monitor (VDM) Small Frequency Drop (eg Normal to Small). Values are in 1/32ths with legal values being of N being less than or equal to 8. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_SMALL_FREQ_DROP_N_S_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_SMALL_FREQ_DROP_N_S_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DPLL response override of the respective #W VPD content for a Voltage Droop Monitor (VDM) Large Frequency Drop (eg Normal to Large). Values are in 1/32ths with legal values being of N being less than or equal to 8. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_LARGE_FREQ_DROP_N_L_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_LARGE_FREQ_DROP_N_L_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DPLL response override of the respective #W VPD content for returning from a Large Frequency Droop value to the Small value. Values are in 1/32ths with legal values being of N being less than or equal to 8. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_FREQ_RETURN_L_S_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_FREQ_RETURN_L_S_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DPLL response override of the respective #W VPD content for returning from a Small Frequency Droop value to the Normal value. Values are in 1/32ths with legal values being of N being less than or equal to 8. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_FREQ_RETURN_S_N_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_FREQ_RETURN_S_N_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3431,62 +3156,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_FMAX_OVERRIDE_KHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_FMAX_OVERRIDE_KHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_FMIN_OVERRIDE_KHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_FMIN_OVERRIDE_KHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage Droop Monitor (VDM) Voltage Compare Voltage to expect when no droop is present (binary in mV). A default value of 0 indicates no override Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_VID_COMPARE_OVERRIDE_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_VID_COMPARE_OVERRIDE_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>VDM Voltage Compare Bias - % of bias (signed twos complement in 0.5 percent steps) that is applied to the #W VDM VID Compare before placement in the respective Pstate Paramter Blocks that will be consumed by Hcode. Array of 4 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo Producer: Override</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VDM_VID_COMPARE_BIAS_0P5PCT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VDM_VID_COMPARE_BIAS_0P5PCT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicates the response of the DPLL frequency upon VDM events if ATTR_SYSTEM_VDM_DISABLE is not ON. NONE -&gt; DPLL Mode 2 DROOP_PROTECT -&gt; DPLL Mode 3 DROOP_PROTECT_OVERVOLT -&gt; DPLL Mode 3.5 DYNAMIC -&gt; DPLL Mode 4 DYNAMIC_PROTECT -&gt; DPLL Mode 5 Producer: MRWB.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DPLL_VDM_RESPONSE</id>
@@ -3497,73 +3166,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override value for the value of the deadzone where the iVRM cannot regulate (binary in millivolts). The deadzone is the difference between the voltage from the external VRM after load line and other losses are removed and the request regulation voltage. If this difference is smaller than the value of this attribute, the iVRM is forced in to bypass to use the external voltage. Producer: Override Consumer: p9_pstate_parameter_block -&gt; CME pstate parameter block PGPE pstate parameter block Handling: p9_pstate_parameter_block reads this attribute. If zero, the value of 50 (0x32) is used. If non-zero, this value is used.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IVRM_DEADZONE_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IVRM_DEADZONE_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override Lookup table used to as part of determining the PFET width to use based on the voltage across the PFET header. Producer: Override Consumer: p9_pstate_parameter_block -&gt; CME pstate parameter block PGPE pstate parameter block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IVRM_STRENGTH_LOOKUP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IVRM_STRENGTH_LOOKUP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>64</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Overide the hardcoded multiplier table used with the strength lookup to determine the IVRM PFET width. Producer: Override Consumer: p9_pstate_parameter_block -&gt; CME pstate parameter block PGPE pstate parameter block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IVRM_VIN_MULTIPLIER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IVRM_VIN_MULTIPLIER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>64</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override voltage maximum that is used for the IVRM PFET width calculation. Setting to 0 will use the default 1100mV. Setting this to a non-zero value will cause this value to be used instead. Producer: Override Consumer: p9_pstate_parameter_block -&gt; CME pstate parameter block PGPE pstate parameter block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IVRM_VIN_MAX_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IVRM_VIN_MAX_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override time (in nanoseconds) to wait between IVRM steps that are part of a larger transition to the ultimate destination voltage. Producer: Override Consumer: p9_pstate_parameter_block -&gt; CME pstate parameter block PGPE pstate parameter block</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IVRM_STEP_DELAY_NS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IVRM_STEP_DELAY_NS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3590,21 +3192,6 @@
     <readable />
     <simpleType>
       <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables the enablement of resonant clocking in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear the flag for CME QuadManager Hcode reaction</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RESCLK_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_RESCLK_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3769,47 +3356,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Controls the mode of Pstate Protocol for testing. ON: Boots the PGPE in "OCC Pstate Mode" but does NOT start the Pstate protocol OFF: Does NOT boot the PGPE AUTO: Boots the PGPE and automatically starts the Pstate protocol. PMCR operations to move Pstates are honored Producer: Override Consumers: p9_pstate_parameter_block and p9_pm_pstate_gpe_init</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_PSTATES_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_PSTATES_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The number of PGPE Fixed Timer Interrupts (see Hcode documentation for durations) to assert a core throttle when OCC Scratch 2[Core Throttle Continuous Change Enable] is set. A value of 0 when Continuous Change Enable is set will deassert throttle. Producer: Override/Lab Consumers: p9_hcode_image_build.c -&gt; PGPE Header field</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CORE_THROTTLE_ASSERT_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CORE_THROTTLE_ASSERT_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The number of PGPE Fixed Timer Interrupts (see Hcode documentation for machine dependent durations) to deassert core throttle when OCC Scratch 2[Core Throttle Continuous Change Enable] is set. A value of 0 when Continuous Change Enable is set and ATTR_CORE_THROTTLE_ASSERT_COUNT is non-0, throttling is always on. Producer: Override/Lab Consumers: p9_hcode_image_build.c -&gt; PGPE Header field</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CORE_THROTTLE_DEASSERT_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CORE_THROTTLE_DEASSERT_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>env: 1 = Awan/HWSimulator. 0 = Simics/RealHW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IS_SIMULATION</id>
@@ -3964,7 +3510,6 @@
         <default>0x01,0x00,0x01,0x00</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>The VPD Version of this DIMM. The version number can be an indication of when different DIMM keywords are valid and is loaded from the platform. The version represented here represents one of three distinct vintages of parts : unknown/error, early build CDIMMs with VZ less than 10, everything else. In other words, this attribute does NOT equate to the VZ keyword.</description>
@@ -3978,7 +3523,6 @@
     <simpleType>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>The C-DIMM ranks that have address mirroring. This data is in the Record:VSPD, Keyword:AM field in C-DIMM VPD. This attribute is only valid for C-DIMMs, an error should be returned if queried from IS-DIMMs. Note: Muliple ranks can be mirrored.</description>
@@ -4008,7 +3552,6 @@
       <array>2,2,4</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Write ODT. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT)/ mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none</description>
@@ -4023,7 +3566,6 @@
       <array>2,2,4</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Ron. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. OHM48 is for DDR4. creator: VPD(MT)/mss_eff_cnfg_termination consumer: various.C files (no initfile) firmware notes: none This Attribute is to be interpreted as an Integer</description>
@@ -4038,7 +3580,6 @@
       <array>2,2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Rtt_Nom. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
@@ -4053,7 +3594,6 @@
       <array>2,2,4</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Rtt_WR. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT), mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
@@ -4068,7 +3608,6 @@
       <array>2,2,4</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Rtt_PARK. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. RTT_Park value. This is for DDR4 MRS5.Each memory channel will have a value. Creator: VPD(MT), mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
@@ -4083,7 +3622,6 @@
       <array>2,2,4</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none This is the nominal value This is for DDR3 This Attribute is to be interpreted as an Integer</description>
@@ -4098,7 +3636,6 @@
       <array>2</array>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various firmware notes: none This is the nominal value This is for DDR4 The value is a decode that is passed into ATTR_CEN_EFF_VREF_DQ_TRAIN_RANGE and ATTR_CEN_EFF_VREF_DQ_TRAIN_VALUE: Decode: (R for Range V for Value, blank for unused) WRDDR4_VREF Bits 01234567 Attr Name RVVVVVV Attr Bits 0543210</description>
@@ -4113,7 +3650,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur DQ and DQS Drive Impedance Used in various locations and comes from the MT Keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)/mss_eff_cnfg_termination consumer: initfile,various.C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4130,7 +3666,6 @@
         <default>OHM34_FFE0,OHM34_FFE0</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Address Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: mss_eff_cnfg_termination consumer: initfile and various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4147,7 +3682,6 @@
         <default>0x28,0x28</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Control Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)/mss_eff_cnfg_termination consumer: initfile,various .C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4164,7 +3698,6 @@
         <default>0x28,0x28</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Clock Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: initfiles,various firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4181,7 +3714,6 @@
         <default>0x28,0x28</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Spare Clock Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) , mss_eff_cnfg_termination consumer: initfiles, various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4198,7 +3730,6 @@
         <default>0x28,0x28</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur DQ and DQS Receiver Impedance Used in various locations and it comes from the VPD MT keyword for custom DIMMs or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD, mss_eff_cnfg_termination Consumer: initfile + C code firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4213,7 +3744,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur DQ and DQS Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT), mss_eff_cnfg_termination consumer: initfiles,various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except MAX</description>
@@ -4230,7 +3760,6 @@
         <default>0x03,0x03</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Address Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: initfile,various .C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except Max</description>
@@ -4247,7 +3776,6 @@
         <default>0x03,0x03</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Clock Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)mss_eff_cnfg_termination consumer: initfile,various.C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except max</description>
@@ -4264,7 +3792,6 @@
         <default>0x03,0x03</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Spare Clock Slew Rate Used in various locations and comes from the MT keyword or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: initfile,various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except max</description>
@@ -4281,7 +3808,6 @@
         <default>0x03,0x03</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Control Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer:initfile, various .C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except for max</description>
@@ -4298,7 +3824,6 @@
         <default>0x03,0x03</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Centaur Read Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfiles firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
@@ -4313,7 +3838,6 @@
       <array>2</array>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CLK_P0</description>
@@ -4328,7 +3852,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CLK_P1</description>
@@ -4343,7 +3866,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CLK_P0</description>
@@ -4358,7 +3880,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CLK_P1</description>
@@ -4373,7 +3894,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A0</description>
@@ -4388,7 +3908,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A1</description>
@@ -4403,7 +3922,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A2</description>
@@ -4418,7 +3936,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A3</description>
@@ -4433,7 +3950,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A4</description>
@@ -4448,7 +3964,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A5</description>
@@ -4463,7 +3978,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A6</description>
@@ -4478,7 +3992,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A7</description>
@@ -4493,7 +4006,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A8</description>
@@ -4508,7 +4020,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A9</description>
@@ -4523,7 +4034,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A10</description>
@@ -4538,7 +4048,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A11</description>
@@ -4553,7 +4062,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A12</description>
@@ -4568,7 +4076,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A13</description>
@@ -4583,7 +4090,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A14</description>
@@ -4598,7 +4104,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A15</description>
@@ -4613,7 +4118,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA0</description>
@@ -4628,7 +4132,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA1</description>
@@ -4643,7 +4146,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA2</description>
@@ -4658,7 +4160,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_CASN</description>
@@ -4673,7 +4174,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_RASN</description>
@@ -4688,7 +4188,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_WEN</description>
@@ -4703,7 +4202,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_PAR</description>
@@ -4718,7 +4216,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_ACTN</description>
@@ -4733,7 +4230,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE0</description>
@@ -4748,7 +4244,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE1</description>
@@ -4763,7 +4258,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE2</description>
@@ -4778,7 +4272,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE3</description>
@@ -4793,7 +4286,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN0</description>
@@ -4808,7 +4300,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN1</description>
@@ -4823,7 +4314,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN2</description>
@@ -4838,7 +4328,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN3</description>
@@ -4853,7 +4342,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_ODT0</description>
@@ -4868,7 +4356,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_ODT1</description>
@@ -4883,7 +4370,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE0</description>
@@ -4898,7 +4384,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE1</description>
@@ -4913,7 +4398,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE2</description>
@@ -4928,7 +4412,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE3</description>
@@ -4943,7 +4426,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN0</description>
@@ -4958,7 +4440,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN1</description>
@@ -4973,7 +4454,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN2</description>
@@ -4988,7 +4468,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN3</description>
@@ -5003,7 +4482,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_ODT0</description>
@@ -5018,7 +4496,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_ODT1</description>
@@ -5033,7 +4510,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Settings for periodic CAL - zcal 1, syscal 1, centering 0, rdclk 1, dqs align 1, rdclk_update_dis 0, dutycycle 0, and power dis (dqs) 1. Second byte has repeat as 000, mpr mode as 0, mba as 11, and the spares as 00</description>
@@ -5048,7 +4524,6 @@
       <array>2</array>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD keyword MT bytes 54 and 55 MT(54:55) for the Logical DIMM associated with port A. Bytes 118:119 for port B, 182:183 for port C and 246:247 for port D. In the end, the AB and CD portions form a 32 bit word for each mba to write into the corresponding ddrphy register</description>
@@ -5063,7 +4538,6 @@
       <array>2</array>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD keyword MT bytes 56 to 59 MT(56:59) for the Logical DIMM associated with port A. Bytes 120:123 for port B, 184:187 for port C and 248:251 for port D. The values for Port A concatenated with port B forms the value for one MBA. C concat D forms the value for the other MBA</description>
@@ -5077,7 +4551,6 @@
     <simpleType>
       <uint64_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD keyword MT bytes 61 MT(61) for the Logical DIMM associated with port A. Bytes 125 for port B, 189 for port C and 253 for port D</description>
@@ -5092,7 +4565,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD keyword MT byte 60 bits 4:7 for the Logical DIMM associated with port A. Byte 124 bits 4:7 for port B, 188 bits 4:7 for port C and 252 bits 4:7 for port D</description>
@@ -5107,7 +4579,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD keyword MT byte 60 bits 0:3 for the Logical DIMM associated with port A. Byte 124 bits 0:3 for port B, 188 bits 0:3 for port C and 252 bits 0:3 for port D</description>
@@ -5122,7 +4593,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD MR keyword byte 49 for ports A and B and byte 177 for port C and D. This means that all ADR blocks use this value on an mba level</description>
@@ -5137,7 +4607,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>This value comes from the VPD MR keyword byte 113 for ports A and B and byte 241 for port C and D. This means all DP18 blocks use this value on a mba level</description>
@@ -5152,7 +4621,6 @@
       <array>2</array>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Custom DIMM Sensor Map for Primary I2C Port (1 byte of data): 0x00 No sensors attached 0x01 DIMM sensor 0 attached 0x02 DIMM sensor 1 attached 0x04 DIMM sensor 2 attached 0x08 DIMM sensor 3 attached 0x10 DIMM sensor 4 attached 0x20 DIMM sensor 5 attached 0x40 DIMM sensor 6 attached 0x80 DIMM sensor 7 attached Comes from the VPD MW Keyword</description>
@@ -5166,7 +4634,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Custom DIMM Sensor Map for Secondary I2C Port (1 byte of data): 0x00 No sensors attached 0x01 DIMM sensor 0 attached 0x02 DIMM sensor 1 attached 0x04 DIMM sensor 2 attached 0x08 DIMM sensor 3 attached 0x10 DIMM sensor 4 attached 0x20 DIMM sensor 5 attached 0x40 DIMM sensor 6 attached 0x80 DIMM sensor 7 attached Comes from the VPD MW Keyword</description>
@@ -5180,7 +4647,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Describes if this MBA is in 2N address mode. The DIMM attributes associated with this MBA describes if this mode is needed for SI. Come from the VPD and consumed in the mba_def.initfile.</description>
@@ -5194,7 +4660,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Master Power Slope that comes from the VPD MW Keyword</description>
@@ -5253,6 +4718,20 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>L4 Bank Delete settings in VPD. Denotes what banks have been deleted from the L4. Data will be pulled from CDIMM VPD if CDIMM present. Data will be pulled from backplane VPD if IS DIMMs present.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_L4_BANK_DELETE_VPD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_L4_BANK_DELETE_VPD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Describes the Version of MT Keyword</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_VPD_MT_VERSION_BYTE</id>
@@ -5264,7 +4743,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Describes the Version of MR Keyword</description>
@@ -5278,7 +4756,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Describes the DATA control byte from MR</description>
@@ -5292,7 +4769,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Describes the DATA control byte from MT</description>
@@ -5306,7 +4782,45 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
+  </attribute>
+  <attribute>
+    <description>Fetches the VM Keyword</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_VPD_VM_KEYWORD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_VPD_VM_KEYWORD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Fetch the VD keyword</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_VPD_VD_KEYWORD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_VPD_VD_KEYWORD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Describes Centaur Voltage from DW keyword</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_VPD_DW_KEYWORD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_VPD_DW_KEYWORD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
   </attribute>
   <attribute>
     <description>Capable power control settings.</description>
@@ -5320,7 +4834,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Derived from calibration/characterization of read centering. Number of windage offset in units of pico-seconds[ps] with sign bit0 (0b0=positive, 0b1=negative) and value in bits1..31, so 0x80000023 for example would mean "-35ps". Can be overwritten by ODM vendors if done from VPD. Each port will have a value. creator: VPD consumer: mss_draminit_training_adv firmware notes: none</description>
@@ -5335,7 +4848,6 @@
       <array>2</array>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>VPD index for associated chip's memory buffer VPD</description>
@@ -8650,60 +8162,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>This attribute represents the eRepair threshold value of X-Bus used in the field. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>X_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the eRepair threshold value of A-Bus used in the field. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>A_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the eRepair threshold value of DMI-Bus used in the field. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the eRepair threshold value of X-Bus used by Manufacturing. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>X_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the eRepair threshold value of A-Bus used by Manufacturing. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>A_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the eRepair threshold value of DMI-Bus used by Manufacturing. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
-    <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>sets the Centaur address bits used to interleave addresses between MBA01 and MBA23. valid values are 23 through 32.</description>
     <id>MSS_MBA_ADDR_INTERLEAVE_BIT</id>
     <persistency>non-volatile</persistency>
@@ -9681,6 +9139,28 @@
     <simpleType>
       <uint16_t>
         <default>0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The maximum power a single procesor socket can support (in watts) This is used to populate CALCULATED_MAX_SYS_POWER_EXCLUDING_GPUS</description>
+    <id>PROC_SOCKET_POWER_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>250</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Frequency (in MHz) for 1 Watt of processor power change. Used by the power capping algorithm to determine how much to change the frequency based on power available. This is used in populating CALCULATED_MAX_SYS_POWER_EXCLUDING_GPUS</description>
+    <id>PROC_MHZ_PER_WATT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>28</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -10790,18 +10270,6 @@
     <id>STOP11_DISABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Disable the Core Periodic Quiesce Hang Buster function Producer: Lab tools Consumer: p9_hcode_image_build.C -&gt; SGPE Hcode -&gt; CME Hcode Platform default: OFF</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Disables Work Load Optimized Frequency (WOF) algorithms to modify frequency based on active core count and other inputs. OFF: Will enable WOF given all validity check pass. If validity checks fail, WOF will be disabled for the present IPL. ON: Will disable WOF OFF_SKIP_DD: Same as OFF but skips any validity checking of the chip design level (lab use only). Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
     <enumerator>
       <name>OFF</name>
@@ -10866,7 +10334,7 @@
     <id>WOF_VRATIO_SELECT</id>
   </enumerationType>
   <enumerationType>
-    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
+    <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: MRW Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
     <enumerator>
       <name>OFF</name>
       <value>0x00</value>
@@ -10876,226 +10344,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SYSTEM_VDM_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Voltage Droop Monitor (VDM) Small Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a small droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>8mV</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>16mV</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>24mV</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>32mV</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>40mV</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>48mV</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>56mV</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>64mV</name>
-      <value>0x08</value>
-    </enumerator>
-    <enumerator>
-      <name>72mV</name>
-      <value>0x09</value>
-    </enumerator>
-    <enumerator>
-      <name>80mV</name>
-      <value>0x0A</value>
-    </enumerator>
-    <enumerator>
-      <name>88mV</name>
-      <value>0x0B</value>
-    </enumerator>
-    <enumerator>
-      <name>92mV</name>
-      <value>0x0C</value>
-    </enumerator>
-    <enumerator>
-      <name>96mV</name>
-      <value>0x0D</value>
-    </enumerator>
-    <id>VDM_DROOP_SMALL_OVERRIDE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Voltage Droop Monitor (VDM) Large Threshold Select Value per VPD point The enum indicates a negative value below the VDM setting that will trigger a large droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>8mV</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>16mV</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>24mV</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>32mV</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>40mV</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>48mV</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>56mV</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>64mV</name>
-      <value>0x08</value>
-    </enumerator>
-    <enumerator>
-      <name>72mV</name>
-      <value>0x09</value>
-    </enumerator>
-    <enumerator>
-      <name>80mV</name>
-      <value>0x0A</value>
-    </enumerator>
-    <enumerator>
-      <name>88mV</name>
-      <value>0x0B</value>
-    </enumerator>
-    <enumerator>
-      <name>92mV</name>
-      <value>0x0C</value>
-    </enumerator>
-    <enumerator>
-      <name>96mV</name>
-      <value>0x0D</value>
-    </enumerator>
-    <id>VDM_DROOP_LARGE_OVERRIDE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Voltage Droop Monitor (VDM) Extreme Threshold Select Value per VPD point. The enum indicates a negative value below the VDM setting that will trigger an extreme droop event. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>8mV</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>16mV</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>24mV</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>32mV</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>40mV</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>48mV</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>56mV</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>64mV</name>
-      <value>0x08</value>
-    </enumerator>
-    <enumerator>
-      <name>72mV</name>
-      <value>0x09</value>
-    </enumerator>
-    <enumerator>
-      <name>80mV</name>
-      <value>0x0A</value>
-    </enumerator>
-    <enumerator>
-      <name>88mV</name>
-      <value>0x0B</value>
-    </enumerator>
-    <enumerator>
-      <name>92mV</name>
-      <value>0x0C</value>
-    </enumerator>
-    <enumerator>
-      <name>96mV</name>
-      <value>0x0D</value>
-    </enumerator>
-    <id>VDM_DROOP_EXTREME_OVERRIDE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Voltage Droop Monitor (VDM) OverVoltage Threshold Select Value per VPD point. The enum indicates a positive value above the VDM setting that will indicate an overvolt droop condition. Array of 5 entries: 0 = PowerSave, 1 = Nominal; 2 = Turbo; 3 = UltraTurbo; 4 = Enable If index 4 is non-zero, the other entries are considered valid. Producer: Override</description>
-    <enumerator>
-      <name>FORCE</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>8mV</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>16mV</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>24mV</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>32mV</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>40mV</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>48mV</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>56mV</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>64mV</name>
-      <value>0x08</value>
-    </enumerator>
-    <id>VDM_OVERVOLT_OVERRIDE</id>
   </enumerationType>
   <enumerationType>
     <description>Controls the enablement of Voltage Droop Monitors (VDM) to throttle the core upon an extreme droop event. Producer: Machine Readable Workbook Consumers: p9_hcode_image_build to set flag for CME QuadManager Hcode reaction</description>
@@ -11132,18 +10380,6 @@
       <value>0x04</value>
     </enumerator>
     <id>DPLL_VDM_RESPONSE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables the enablement of resonant clocking in the system. Producer: Override Consumers: p9_pstate_parameter_block to clear the flag for CME QuadManager Hcode reaction</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>SYSTEM_RESCLK_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Debug modes supported for CME/SGPE Scan layout in HOMER.</description>
@@ -11222,22 +10458,6 @@
     <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Controls the mode of Pstate Protocol for testing. ON: Boots the PGPE in "OCC Pstate Mode" but does NOT start the Pstate protocol OFF: Does NOT boot the PGPE AUTO: Boots the PGPE and automatically starts the Pstate protocol. PMCR operations to move Pstates are honored Producer: Override Consumers: p9_pstate_parameter_block and p9_pm_pstate_gpe_init</description>
-    <enumerator>
-      <name>ON</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>AUTO</name>
-      <value>0x02</value>
-    </enumerator>
-    <id>SYSTEM_PSTATES_MODE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Product name of a chip target. Provided by the MRW.</description>
     <enumerator>
       <name>NONE</name>
@@ -11306,6 +10526,22 @@
     <enumerator>
       <name>MNFG_ENABLE_STANDARD_PATTERN_TEST</name>
       <value>0x0000000000000200</value>
+    </enumerator>
+    <enumerator>
+      <name>MNFG_DISABLE_FABRIC_eREPAIR</name>
+      <value>0x0000000000000800</value>
+    </enumerator>
+    <enumerator>
+      <name>MNFG_DISABLE_MEMORY_eREPAIR</name>
+      <value>0x0000000000001000</value>
+    </enumerator>
+    <enumerator>
+      <name>MNFG_FABRIC_DEPLOY_LANE_SPARES</name>
+      <value>0x0000000000002000</value>
+    </enumerator>
+    <enumerator>
+      <name>MNFG_DMI_DEPLOY_LANE_SPARES</name>
+      <value>0x0000000000004000</value>
     </enumerator>
     <id>MNFG_FLAGS</id>
   </enumerationType>
