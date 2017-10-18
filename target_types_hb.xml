@@ -444,64 +444,16 @@
       <id>PROC_VRM_VOFFSET_VCS_UV</id>
     </attribute>
     <attribute>
-      <id>FREQ_BIAS_ULTRATURBO</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_BIAS_TURBO</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_BIAS_NOMINAL</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_BIAS_POWERSAVE</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VDD_BIAS_ULTRATURBO</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VDD_BIAS_TURBO</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VDD_BIAS_NOMINAL</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VDD_BIAS_POWERSAVE</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VCS_BIAS</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_EXT_VDN_BIAS</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_INT_VDD_BIAS_ULTRATURBO</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_INT_VDD_BIAS_TURBO</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_INT_VDD_BIAS_NOMINAL</id>
-    </attribute>
-    <attribute>
-      <id>VOLTAGE_INT_VDD_BIAS_POWERSAVE</id>
-    </attribute>
-    <attribute>
       <id>PBAX_GROUPID</id>
     </attribute>
     <attribute>
       <id>PBAX_CHIPID</id>
     </attribute>
     <attribute>
-      <id>PBAX_BRDCST_ID_VECTOR</id>
-    </attribute>
-    <attribute>
       <id>DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
     </attribute>
     <attribute>
       <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
-    </attribute>
-    <attribute>
-      <id>VDM_VID_COMPARE_BIAS_0P5PCT</id>
     </attribute>
     <attribute>
       <id>TDP_RDP_CURRENT_FACTOR</id>
@@ -514,12 +466,6 @@
     </attribute>
     <attribute>
       <id>CME_CHTM_TRACE_MEMORY_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>CORE_THROTTLE_ASSERT_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>CORE_THROTTLE_DEASSERT_COUNT</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -645,6 +591,9 @@
       <id>CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
     </attribute>
     <attribute>
+      <id>CEN_L4_BANK_DELETE_VPD</id>
+    </attribute>
+    <attribute>
       <id>CEN_VPD_MT_VERSION_BYTE</id>
     </attribute>
     <attribute>
@@ -655,6 +604,15 @@
     </attribute>
     <attribute>
       <id>CEN_VPD_MT_DATA_CONTROL_BYTE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_VPD_VM_KEYWORD</id>
+    </attribute>
+    <attribute>
+      <id>CEN_VPD_VD_KEYWORD</id>
+    </attribute>
+    <attribute>
+      <id>CEN_VPD_DW_KEYWORD</id>
     </attribute>
     <attribute>
       <id>CEN_VPD_POWER_CONTROL_CAPABLE</id>
@@ -1083,7 +1041,7 @@
       <id>X_EREPAIR_THRESHOLD_FIELD</id>
     </attribute>
     <attribute>
-      <id>A_EREPAIR_THRESHOLD_FIELD</id>
+      <id>O_EREPAIR_THRESHOLD_FIELD</id>
     </attribute>
     <attribute>
       <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
@@ -1092,7 +1050,7 @@
       <id>X_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
-      <id>A_EREPAIR_THRESHOLD_MNFG</id>
+      <id>O_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
       <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
@@ -1294,6 +1252,12 @@
     </attribute>
     <attribute>
       <id>OPAL_MODEL</id>
+    </attribute>
+    <attribute>
+      <id>PROC_SOCKET_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>PROC_MHZ_PER_WATT</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
@@ -1608,9 +1572,6 @@
       <id>STOP11_DISABLE</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_CORE_PERIODIC_QUIESCE_DISABLE</id>
-    </attribute>
-    <attribute>
       <id>SYSTEM_WOF_DISABLE</id>
     </attribute>
     <attribute>
@@ -1629,64 +1590,13 @@
       <id>SYSTEM_VDM_DISABLE</id>
     </attribute>
     <attribute>
-      <id>VDM_DROOP_SMALL_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_DROOP_LARGE_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_DROOP_EXTREME_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_OVERVOLT_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_SMALL_FREQ_DROP_N_S_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_LARGE_FREQ_DROP_N_L_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_FREQ_RETURN_L_S_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_FREQ_RETURN_S_N_OVERRIDE</id>
-    </attribute>
-    <attribute>
       <id>VDM_EXTREME_THOTTLE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_FMAX_OVERRIDE_KHZ</id>
-    </attribute>
-    <attribute>
-      <id>VDM_FMIN_OVERRIDE_KHZ</id>
-    </attribute>
-    <attribute>
-      <id>VDM_VID_COMPARE_OVERRIDE_MV</id>
     </attribute>
     <attribute>
       <id>DPLL_VDM_RESPONSE</id>
     </attribute>
     <attribute>
-      <id>IVRM_DEADZONE_MV</id>
-    </attribute>
-    <attribute>
-      <id>IVRM_STRENGTH_LOOKUP</id>
-    </attribute>
-    <attribute>
-      <id>IVRM_VIN_MULTIPLIER</id>
-    </attribute>
-    <attribute>
-      <id>IVRM_VIN_MAX_MV</id>
-    </attribute>
-    <attribute>
-      <id>IVRM_STEP_DELAY_NS</id>
-    </attribute>
-    <attribute>
       <id>IVRM_STABILIZATION_DELAY_NS</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_DISABLE</id>
     </attribute>
     <attribute>
       <id>SYSTEM_RESCLK_STEP_DELAY</id>
@@ -1711,9 +1621,6 @@
     </attribute>
     <attribute>
       <id>NEST_LEAKAGE_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_PSTATES_MODE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2053,12 +1960,6 @@
     <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>POUNDV_BUCKET_NUM</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2548,8 +2449,14 @@
     <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
     </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
     <id>unit-obus-brick-power9</id>
-    <parent>unit-obus-power9</parent>
+    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
