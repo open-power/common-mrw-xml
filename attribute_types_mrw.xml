@@ -1221,6 +1221,17 @@
 		<writeable/>
 	</attribute>
 	<attribute>
+		<id>DEFAULT_PCIE_COOLING_TYPE</id>
+		<description>Defines the type of cooling for a given PCIe slot</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable/>
+		<writeable/>
+	</attribute>	
+	<attribute>
 		<id>MAX_POWER</id>
 		<description>Defines the maximum power consumption for a PCIe slot</description>
 		<simpleType>
