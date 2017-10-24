@@ -54,10 +54,6 @@
       <default>ENC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>FIELD_CORE_OVERRIDE</id>
     </attribute>
     <attribute>

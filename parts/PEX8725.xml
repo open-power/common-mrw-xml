@@ -61,10 +61,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1297,10 +1293,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
