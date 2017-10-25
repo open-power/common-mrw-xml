@@ -97,7 +97,15 @@
     <type>unit-enable-generic</type>
   </targetPart>
   <targetPart>
-    <id>presence</id>
+  	<id>presence</id>
+  	<child_id>io-0</child_id>
+  	<instance_name>presence</instance_name>
+  	<is_root>false</is_root>
+  	<position>-1</position>
+  	<type>dummy-presence-generic</type>
+  </targetPart>
+<!--   <targetPart>
+    <id>io</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>GPIO</default>
@@ -118,12 +126,12 @@
       <id>TYPE</id>
       <default>NA</default>
     </attribute>
-    <instance_name>presence</instance_name>
+    <instance_name>io</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-gpio-generic</type>
-  </targetPart>       
+  </targetPart>   -->    
   <targetPart>
     <id>cablecard-PCA9551</id>
 	<child_id>PCA9551.gpio-0</child_id>
