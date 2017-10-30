@@ -803,6 +803,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_REFCLOCK_SWIZZLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xD</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>XSCOM BAR base address offset creator: platform consumer: p9_sbe_scominit firmware notes: Defines 16GB range (size implied) mapped for XSCOM usage Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:29 (excludes system/memory select/group/chip fields)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_XSCOM_BAR_BASE_ADDR_OFFSET</id>
@@ -13212,6 +13227,10 @@
     <enumerator>
       <name>REDUNDANT_PS_POLICY</name>
       <value>0xCA22</value>
+    </enumerator>
+    <enumerator>
+      <name>TURBO_ALLOWED</name>
+      <value>0xCB03</value>
     </enumerator>
     <enumerator>
       <name>TPM_REQUIRED</name>
