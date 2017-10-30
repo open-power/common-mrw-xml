@@ -22,10 +22,6 @@
       <default>0</default>
     </attribute>
     <attribute>
-      <id>PBAX_BRDCST_ID_VECTOR</id>
-      <default>0</default>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_IOP_CONFIG</id>
       <default>1</default>
     </attribute>

@@ -41,7 +41,7 @@
 	<description>ID used to retrieve information from the Fan Controller Type</description>
     <simpleType>
         <string>
-        	<default>TACHA0</default>
+        	<default></default>
         </string>
     </simpleType>
     <persistency>non-volatile</persistency>

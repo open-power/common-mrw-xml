@@ -20,10 +20,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>VPD</default>
 	</attribute>

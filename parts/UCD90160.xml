@@ -28,18 +28,6 @@
 	<child_id>UCD90160.in15</child_id>
 	<child_id>UCD90160.in16</child_id>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>ALTFSI_MASTER_CHIP</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>ALTFSI_MASTER_PORT</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BMC_DT_COMPATIBLE</id>
 		<default>ti,ucd90160</default>
 	</attribute>
@@ -48,32 +36,8 @@
 		<default>CHIP</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>FRU_ID</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_CHIP</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_PORT</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_TYPE</id>
-		<default>NO_MASTER</default>
 	</attribute>
 	<attribute>
 		<id>FSI_OPTION_FLAGS</id>
@@ -81,14 +45,6 @@
 				<field><id>flipPort</id><value/></field>
 				<field><id>reserved</id><value/></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>FSI_SLAVE_CASCADE</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -103,16 +59,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -152,10 +100,6 @@
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
 	</attribute>
@@ -172,24 +116,8 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>IN</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -208,16 +136,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -231,10 +151,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -258,10 +174,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -276,22 +188,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -317,16 +213,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -340,10 +228,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -363,10 +247,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -381,22 +261,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -422,16 +286,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -445,10 +301,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -468,10 +320,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -486,22 +334,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -527,16 +359,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -550,10 +374,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -573,10 +393,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -591,22 +407,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -632,16 +432,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -655,10 +447,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -679,10 +467,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -697,22 +481,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -738,16 +506,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -761,10 +521,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -784,10 +540,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -802,22 +554,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -843,16 +579,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -866,10 +594,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -889,10 +613,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -907,22 +627,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -948,16 +652,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -971,10 +667,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -994,10 +686,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1012,22 +700,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1053,16 +725,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1076,10 +740,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1099,10 +759,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1117,22 +773,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1158,16 +798,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1181,10 +813,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1204,10 +832,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1222,22 +846,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1263,16 +871,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1286,10 +886,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1309,10 +905,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1327,22 +919,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1368,16 +944,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1391,10 +959,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1414,10 +978,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1432,22 +992,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1473,16 +1017,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1496,10 +1032,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1519,10 +1051,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1537,22 +1065,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1578,16 +1090,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1601,10 +1105,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1624,10 +1124,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1642,22 +1138,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1683,16 +1163,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1706,10 +1178,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1729,10 +1197,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1747,22 +1211,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1788,16 +1236,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1811,10 +1251,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1834,10 +1270,6 @@
 	<parent>mrw-unit</parent>
 	<parent_type>chip</parent_type>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
 	</attribute>
@@ -1852,22 +1284,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1893,16 +1309,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
@@ -1916,10 +1324,6 @@
 				<field><id>supportsInbandScom</id><value>0</value></field>
 				<field><id>reserved</id><value>0</value></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>REL_POS</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>

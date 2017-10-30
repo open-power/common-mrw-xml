@@ -1704,7 +1704,7 @@
 		</attribute>
 		<attribute>
 			<id>DIRECTION</id>
-			<default>IN</default>
+			<default>OUT</default>
 		</attribute>
 		<attribute>
 			<id>GPIO_TYPE</id>
@@ -2179,7 +2179,11 @@
 		<attribute>
 			<id>MAX_POWER</id>
 			<default/>
-		</attribute>								
+		</attribute>
+		<attribute>
+			<id>DEFAULT_PCIE_COOLING_TYPE</id>
+			<default/>
+		</attribute>											
 	</targetType>
 	<targetType>
 		<id>card-pciecard</id>
@@ -2603,6 +2607,10 @@
 			<id>DEST_TX_MSBSWAP</id>
 			<default>0</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>XBUS</id>
@@ -2610,6 +2618,10 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>OBUS</id>
@@ -2641,6 +2653,10 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>PCIE</id>
@@ -2686,7 +2702,6 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
-		
 		<attribute>
 			<id>PROC_TX_MSBSWAP</id>
 			<default>0</default>
@@ -2695,6 +2710,10 @@
 			<id>MEMBUF_TX_MSBSWAP</id>
 			<default>0</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>DDR3</id>
@@ -2745,6 +2764,10 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>TACH</id>

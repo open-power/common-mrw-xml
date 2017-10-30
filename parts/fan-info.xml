@@ -35,7 +35,7 @@
 			</attribute>
 			<attribute>
 				<id>FAN_ID</id>
-				<default>TACHA0</default>
+				<default></default>
 			</attribute>
 			<attribute>
 				<id>LOCATION_ENFORCED</id>

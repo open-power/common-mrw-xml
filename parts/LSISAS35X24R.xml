@@ -24,48 +24,12 @@
 	<child_id>LSISAS35X24R.gpio-master-10</child_id>
 	<child_id>LSISAS35X24R.gpio-slave-0</child_id>
 	<attribute>
-		<id>AFFINITY_PATH</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>ALTFSI_MASTER_CHIP</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>ALTFSI_MASTER_PORT</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>FAPI_NAME</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FAPI_POS</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>FRU_ID</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_CHIP</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_PORT</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>FSI_MASTER_TYPE</id>
-		<default>NO_MASTER</default>
 	</attribute>
 	<attribute>
 		<id>FSI_OPTION_FLAGS</id>
@@ -73,14 +37,6 @@
 				<field><id>flipPort</id><value/></field>
 				<field><id>reserved</id><value/></field>
 		</default>
-	</attribute>
-	<attribute>
-		<id>FSI_SLAVE_CASCADE</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -99,16 +55,8 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>MRU_ID</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ORDINAL_ID</id>
-		<default/>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>

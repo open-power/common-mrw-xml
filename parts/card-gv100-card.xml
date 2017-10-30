@@ -375,10 +375,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
