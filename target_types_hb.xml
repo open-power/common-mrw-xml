@@ -2184,6 +2184,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>DMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
       <id>DMI_INBAND_BAR_ENABLE</id>
     </attribute>
     <attribute>
