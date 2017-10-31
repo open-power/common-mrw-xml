@@ -23,6 +23,10 @@
     </attribute>
     <attribute>
       <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
       <id>RESOURCE_IS_CRITICAL</id>
     </attribute>
     <id>base</id>
@@ -75,6 +79,10 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -363,12 +371,6 @@
       <id>WAIT_N3</id>
     </attribute>
     <attribute>
-      <id>MASTER_CORE</id>
-    </attribute>
-    <attribute>
-      <id>MASTER_EX</id>
-    </attribute>
-    <attribute>
       <id>PFET_OFF_CONTROLS</id>
     </attribute>
     <attribute>
@@ -539,6 +541,10 @@
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000003</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -681,6 +687,10 @@
     </attribute>
     <attribute>
       <id>POSITION</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -1512,15 +1522,6 @@
       <id>SECURITY_ENABLE</id>
     </attribute>
     <attribute>
-      <id>PIBMEM_REPAIR0</id>
-    </attribute>
-    <attribute>
-      <id>PIBMEM_REPAIR1</id>
-    </attribute>
-    <attribute>
-      <id>PIBMEM_REPAIR2</id>
-    </attribute>
-    <attribute>
       <id>SBE_SYS_CONFIG</id>
     </attribute>
     <attribute>
@@ -1721,6 +1722,10 @@
     </attribute>
     <attribute>
       <id>FIELD_CORE_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000009</default>
@@ -1954,6 +1959,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -1976,6 +1985,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -1996,6 +2009,10 @@
     <attribute>
       <default>CORE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2021,6 +2038,10 @@
     <attribute>
       <default>MCS</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -2065,6 +2086,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000003</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2096,6 +2121,10 @@
     <attribute>
       <default>MCBIST</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -2140,6 +2169,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2160,6 +2193,10 @@
     <attribute>
       <default>MI</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2184,7 +2221,8 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DMI_REFCLOCK_SWIZZLE</id>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DMI_INBAND_BAR_ENABLE</id>
@@ -2227,6 +2265,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
     </attribute>
     <attribute>
@@ -2247,6 +2289,10 @@
     <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2333,6 +2379,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2378,6 +2428,10 @@
     <attribute>
       <default>OBUS</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>PEER_TARGET</id>
@@ -2447,6 +2501,10 @@
     </attribute>
     <attribute>
       <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
@@ -2482,6 +2540,10 @@
       <default>NPU</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
     <id>unit-npu-power9</id>
     <parent>unit</parent>
   </targetType>
@@ -2505,6 +2567,10 @@
     <attribute>
       <default>PPE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2537,6 +2603,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2565,6 +2635,10 @@
     <attribute>
       <default>XBUS</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2626,6 +2700,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2683,6 +2761,10 @@
     <attribute>
       <default>SBE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2746,6 +2828,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2766,6 +2852,10 @@
     <attribute>
       <default>MBA</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -3048,6 +3138,10 @@
     <attribute>
       <default>NX</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
