@@ -5,7 +5,7 @@
     <instance_name>ps_redundancy_state_sensor</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
-    <position>-1</position> 	
+    <position>-1</position>
  	<attribute>
  		<id>IPMI_SENSOR_NAME_SUFFIX</id>
  		<default>Ps_Redundancy</default>
@@ -579,7 +579,7 @@
     <attribute>
       <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
     </attribute>
-    
+
     <attribute>
       <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
     </attribute>
@@ -630,13 +630,13 @@
       <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
     </attribute>
     <attribute>
-    	<id>MRW_MEM_MIRRORING_ALLOWED</id>
+    	<id>MEM_MIRRORING_ALLOWED</id>
     </attribute>
     <attribute>
-    	<id>MRW_MEM_MIRRORING_ENABLE_DEFAULT</id>
+    	<id>MEM_MIRRORING_ENABLE_DEFAULT</id>
     </attribute>
     <attribute>
-		<id>MRW_MEM_POWER_CONTROL_USAGE</id>
+		<id>MEM_POWER_CONTROL_USAGE</id>
     </attribute>
     <attribute>
       <id>MRW_MEM_THROTTLE_DENOMINATOR</id>
