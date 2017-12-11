@@ -23,6 +23,10 @@
     </attribute>
     <attribute>
       <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
       <id>RESOURCE_IS_CRITICAL</id>
     </attribute>
     <id>base</id>
@@ -75,6 +79,10 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -297,18 +305,6 @@
       <id>SBE_INTERNAL_FFDC_ENABLE</id>
     </attribute>
     <attribute>
-      <id>OB0_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>OB1_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>OB2_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>OB3_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
       <id>BOOT_FREQ_MULT</id>
     </attribute>
     <attribute>
@@ -361,12 +357,6 @@
     </attribute>
     <attribute>
       <id>WAIT_N3</id>
-    </attribute>
-    <attribute>
-      <id>MASTER_CORE</id>
-    </attribute>
-    <attribute>
-      <id>MASTER_EX</id>
     </attribute>
     <attribute>
       <id>PFET_OFF_CONTROLS</id>
@@ -539,6 +529,10 @@
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000003</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -594,30 +588,6 @@
       <id>CEN_L4_BANK_DELETE_VPD</id>
     </attribute>
     <attribute>
-      <id>CEN_VPD_MT_VERSION_BYTE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_MR_VERSION_BYTE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_MR_DATA_CONTROL_BYTE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_MT_DATA_CONTROL_BYTE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_VM_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_VD_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DW_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_POWER_CONTROL_CAPABLE</id>
-    </attribute>
-    <attribute>
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
     </attribute>
     <attribute>
@@ -643,12 +613,6 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_VOLT_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_ISDIMMTOC4DQ</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_ISDIMMTOC4DQS</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
@@ -681,6 +645,10 @@
     </attribute>
     <attribute>
       <id>POSITION</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -722,9 +690,6 @@
     </attribute>
     <attribute>
       <id>CEN_BAD_DQ_BITMAP</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_VERSION</id>
     </attribute>
     <id>lcard-dimm</id>
     <parent>card</parent>
@@ -1116,6 +1081,9 @@
       <id>MAX_DMI_PER_PROC</id>
     </attribute>
     <attribute>
+      <id>USE_TCES_FOR_DMAS</id>
+    </attribute>
+    <attribute>
       <id>BOOT_FREQ_MHZ</id>
     </attribute>
     <attribute>
@@ -1218,6 +1186,15 @@
       <id>OPEN_POWER_VRM_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
+      <id>OPEN_POWER_VRM_VDD_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_VRM_VDD_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_VRM_VDD_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
       <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
@@ -1258,6 +1235,9 @@
     </attribute>
     <attribute>
       <id>PROC_MHZ_PER_WATT</id>
+    </attribute>
+    <attribute>
+      <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
@@ -1431,6 +1411,9 @@
       <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -1510,15 +1493,6 @@
     </attribute>
     <attribute>
       <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PIBMEM_REPAIR0</id>
-    </attribute>
-    <attribute>
-      <id>PIBMEM_REPAIR1</id>
-    </attribute>
-    <attribute>
-      <id>PIBMEM_REPAIR2</id>
     </attribute>
     <attribute>
       <id>SBE_SYS_CONFIG</id>
@@ -1721,6 +1695,10 @@
     </attribute>
     <attribute>
       <id>FIELD_CORE_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000009</default>
@@ -1954,6 +1932,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -1976,6 +1958,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -1996,6 +1982,10 @@
     <attribute>
       <default>CORE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2021,6 +2011,10 @@
     <attribute>
       <default>MCS</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -2065,6 +2059,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000003</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2096,6 +2094,10 @@
     <attribute>
       <default>MCBIST</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000003</default>
@@ -2140,6 +2142,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2160,6 +2166,10 @@
     <attribute>
       <default>MI</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2184,7 +2194,8 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DMI_REFCLOCK_SWIZZLE</id>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DMI_INBAND_BAR_ENABLE</id>
@@ -2227,6 +2238,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
     </attribute>
     <attribute>
@@ -2247,6 +2262,10 @@
     <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2333,6 +2352,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2380,6 +2403,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>PEER_TARGET</id>
     </attribute>
     <attribute>
@@ -2392,6 +2419,9 @@
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
+    </attribute>
+    <attribute>
+      <id>LINK_TRAIN</id>
     </attribute>
     <attribute>
       <id>IO_O_DEBUG</id>
@@ -2447,6 +2477,10 @@
     </attribute>
     <attribute>
       <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
@@ -2482,6 +2516,10 @@
       <default>NPU</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
     <id>unit-npu-power9</id>
     <parent>unit</parent>
   </targetType>
@@ -2505,6 +2543,10 @@
     <attribute>
       <default>PPE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2537,6 +2579,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2567,6 +2613,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2576,6 +2626,9 @@
     <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>LINK_TRAIN</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
@@ -2624,6 +2677,10 @@
     <attribute>
       <default>CAPP</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
@@ -2683,6 +2740,10 @@
     <attribute>
       <default>SBE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2746,6 +2807,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2768,6 +2833,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
       <default>0x00000001</default>
       <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
@@ -2778,247 +2847,7 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>CEN_VPD_DIMM_SPARE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DIMM_RCD_OUTPUT_TIMING</id>
-    </attribute>
-    <attribute>
       <id>CEN_VPD_DRAM_ADDRESS_MIRRORING</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_ODT_RD</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_ODT_WR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_RON</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_RTT_NOM</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_RTT_WR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_RTT_PARK</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_WR_VREF</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_WRDDR4_VREF</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRV_IMP_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRV_IMP_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRV_IMP_CNTL</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRV_IMP_CLK</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRV_IMP_SPCKE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_RCV_IMP_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_SLEW_RATE_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_SLEW_RATE_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_SLEW_RATE_CLK</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_SLEW_RATE_SPCKE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_SLEW_RATE_CNTL</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_RD_VREF</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CLK_P0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CLK_P1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CLK_P0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CLK_P1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A3</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A4</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A5</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A6</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A7</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A8</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A9</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A10</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A11</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A12</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A13</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A14</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_A15</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_BA0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_BA1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_BA2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_CASN</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_RASN</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_CMD_WEN</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_PAR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M_ACTN</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE3</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN3</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_ODT0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M0_CNTL_ODT1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE3</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN2</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN3</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_ODT0</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PHASE_ROT_M1_CNTL_ODT1</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_CKE_PRI_MAP</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_CKE_PWR_MAP</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_GPO</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_RLO</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_WLO</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_TSYS_ADR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_TSYS_DP18</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_2N_MODE_ENABLED</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_RD_CTR_WINDAGE_OFFSET</id>
     </attribute>
     <attribute>
       <id>CEN_EFF_DRAM_WR_VREF</id>
@@ -3048,6 +2877,10 @@
     <attribute>
       <default>NX</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>0x00000001</default>
