@@ -70,7 +70,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to be at or under the power limit Per DIMM basis KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-9, DIMM_DENSITY = 10-12, DIMM_STACK_TYPE = 13-14, DRAM_MFGID = 15-16, DIMMS_PER_PORT = 17-18, Bits 19-32: Not used VALUE (bits 32-63) in cW: VMEM+VPP thermal power limit per DIMM = 32-63 Consumers: eff_config_thermal and bulk_pwr_throttles</description>
+    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to be at or under the power limit Per DIMM basis KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM+VPP thermal power limit per DIMM = 32-63 Consumers: eff_config_thermal and bulk_pwr_throttles</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
       <macro>DIRECT</macro>
@@ -86,7 +86,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-9, DIMM_DENSITY = 10-12, DIMM_STACK_TYPE = 13-14, DRAM_MFGID = 15-16, DIMMS_PER_PORT = 17-18, Bits 19-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
+    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_PWR_INTERCEPT</id>
       <macro>DIRECT</macro>
@@ -102,7 +102,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-9, DIMM_DENSITY = 10-12, DIMM_STACK_TYPE = 13-14, DRAM_MFGID = 15-16, DIMMS_PER_PORT = 17-18, Bits 19-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
+    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_PWR_SLOPE</id>
       <macro>DIRECT</macro>
@@ -580,7 +580,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>1611</default>
+        <default>1611,1611,1611,1611</default>
       </uint32_t>
     </simpleType>
     <writeable />
@@ -668,7 +668,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Processor SMP A bus width. Provided by the MRW.</description>
@@ -712,7 +711,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Processor SMP topology configuration. 0 = default = 1 or 2 hop topology (PHYP image spans system) Provided by the MRW.</description>
@@ -790,6 +788,20 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates which sublinks should be initialized/trained</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_LINK_TRAIN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>LINK_TRAIN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_EPS_TABLE_TYPE</id>
@@ -803,19 +815,20 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
+    <description>Define context for current phase of system IPL.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <id>ATTR_SYSTEM_IPL_PHASE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>DMI_REFCLOCK_SWIZZLE</id>
+    <id>SYSTEM_IPL_PHASE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0xD</default>
+        <default>HB_IPL</default>
       </uint8_t>
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>XSCOM BAR base address offset creator: platform consumer: p9_sbe_scominit firmware notes: Defines 16GB range (size implied) mapped for XSCOM usage Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:29 (excludes system/memory select/group/chip fields)</description>
@@ -903,6 +916,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Enable early data from Memory. This also enable cp_me from L3.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ENABLE_MEM_EARLY_DATA_SCOM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DMI_INBAND_BAR_ENABLE</id>
@@ -930,7 +956,6 @@
   </attribute>
   <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
-    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_EI_BUS_TX_MSBSWAP</id>
       <macro>DIRECT</macro>
@@ -1930,7 +1955,6 @@
     <simpleType>
       <uint32_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Clock Mux#0 settings</description>
@@ -1959,7 +1983,6 @@
         <default>0x0003</default>
       </uint16_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Capturing EQ Gard value</description>
@@ -2014,7 +2037,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Indicates whether SBE should collect FFDC</description>
@@ -2072,7 +2094,6 @@
         <default>150</default>
       </uint16_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>HWP/Init "risk level" enabled. Used by HB to pass to HB driven HWPs</description>
@@ -2100,7 +2121,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Set with Primary SEEPROM</description>
@@ -2356,35 +2376,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicates the master boot core chiplet selected by p9_sbe_select_ex.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MASTER_CORE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MASTER_CORE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicates the EX targert associated with the master boot core selected by p9_sbe_select_ex.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MASTER_EX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MASTER_EX</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Holds the state of Security Access Bit (SAB)</description>
@@ -2398,7 +2389,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>To disable force pfet off control from fuse status</description>
@@ -2425,49 +2415,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Pibmem repair attribute 0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PIBMEM_REPAIR0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PIBMEM_REPAIR0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Pibmem repair attribute 1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PIBMEM_REPAIR1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PIBMEM_REPAIR1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Pibmem repair attribute 2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PIBMEM_REPAIR2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PIBMEM_REPAIR2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>To skip the locking sequence and check for lock of CP filter PLL</description>
@@ -2481,7 +2428,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>To skip the locking sequence and check for lock of SS filter PLL</description>
@@ -2495,7 +2441,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>To skip the locking sequence and check for lock of IO filter PLL</description>
@@ -2509,7 +2454,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Skip locking sequence and check for lock of DPLL</description>
@@ -2523,7 +2467,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Skip the locking sequence and check for lock of NEST/MEM/XBUS/OBUS/PCI PLLs</description>
@@ -2537,7 +2480,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>System Configurtion information - 1 indicates a chip present</description>
@@ -2553,7 +2495,6 @@
         <default>0x0</default>
       </uint64_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines system specific value of processor refclock receiver termination</description>
@@ -3497,49 +3438,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Spare DRAM availability for all DIMMs connected to the target MBA. For each rank on a DIMM, there are 8 DQ lines to spare DRAMs. - NO_SPARE: No spare DRAMs - LOW_NIBBLE: x4 DRAMs in use, one spare DRAM connected to SP_DQ0-3 - HIGH_NIBBLE: x4 DRAMs in use, one spare DRAM connected to SP_DQ4-7 - FULL_BYTE: Either 1/ x4 DRAMs in use, two spare DRAMs connected to SP_DQ0-7 2/ x8 DRAMs in use, one spare DRAM connected to SP_DQ0-7 For C-DIMMs, this is in a VPD field : Record:VSPD, Keyword:AM</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DIMM_SPARE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DIMM_SPARE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>RCD Timing. Supplied by VPD, used by mss_eff_config.C. Each dimm will have a value. consumer: mss_eff_config</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DIMM_RCD_OUTPUT_TIMING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DIMM_RCD_OUTPUT_TIMING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2</array>
-      <uint8_t>
-        <default>0x01,0x00,0x01,0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The VPD Version of this DIMM. The version number can be an indication of when different DIMM keywords are valid and is loaded from the platform. The version represented here represents one of three distinct vintages of parts : unknown/error, early build CDIMMs with VZ less than 10, everything else. In other words, this attribute does NOT equate to the VZ keyword.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_VERSION</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_VERSION</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>The C-DIMM ranks that have address mirroring. This data is in the Record:VSPD, Keyword:AM field in C-DIMM VPD. This attribute is only valid for C-DIMMs, an error should be returned if queried from IS-DIMMs. Note: Muliple ranks can be mirrored.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_VPD_DRAM_ADDRESS_MIRRORING</id>
@@ -3553,1089 +3451,6 @@
       <uint8_t />
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Read ODT. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: various.C files and initfiles firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_ODT_RD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_ODT_RD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Write ODT. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT)/ mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_ODT_WR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_ODT_WR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Ron. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. OHM48 is for DDR4. creator: VPD(MT)/mss_eff_cnfg_termination consumer: various.C files (no initfile) firmware notes: none This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_RON</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_RON</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Rtt_Nom. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_RTT_NOM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_RTT_NOM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Rtt_WR. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT), mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_RTT_WR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_RTT_WR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Rtt_PARK. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. RTT_Park value. This is for DDR4 MRS5.Each memory channel will have a value. Creator: VPD(MT), mss_eff_cnfg_termination consumer: various.C files (no initfiles) firmware notes: none This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_RTT_PARK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_RTT_PARK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2,4</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none This is the nominal value This is for DDR3 This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_WR_VREF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_WR_VREF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various firmware notes: none This is the nominal value This is for DDR4 The value is a decode that is passed into ATTR_CEN_EFF_VREF_DQ_TRAIN_RANGE and ATTR_CEN_EFF_VREF_DQ_TRAIN_VALUE: Decode: (R for Range V for Value, blank for unused) WRDDR4_VREF Bits 01234567 Attr Name RVVVVVV Attr Bits 0543210</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_WRDDR4_VREF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_WRDDR4_VREF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur DQ and DQS Drive Impedance Used in various locations and comes from the MT Keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)/mss_eff_cnfg_termination consumer: initfile,various.C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRV_IMP_DQ_DQS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRV_IMP_DQ_DQS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>OHM34_FFE0,OHM34_FFE0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Address Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: mss_eff_cnfg_termination consumer: initfile and various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRV_IMP_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRV_IMP_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x28,0x28</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Control Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)/mss_eff_cnfg_termination consumer: initfile,various .C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRV_IMP_CNTL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRV_IMP_CNTL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x28,0x28</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Clock Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: initfiles,various firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRV_IMP_CLK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRV_IMP_CLK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x28,0x28</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Spare Clock Drive Impedance Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) , mss_eff_cnfg_termination consumer: initfiles, various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRV_IMP_SPCKE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRV_IMP_SPCKE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x28,0x28</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur DQ and DQS Receiver Impedance Used in various locations and it comes from the VPD MT keyword for custom DIMMs or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD, mss_eff_cnfg_termination Consumer: initfile + C code firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_RCV_IMP_DQ_DQS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_RCV_IMP_DQ_DQS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur DQ and DQS Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT), mss_eff_cnfg_termination consumer: initfiles,various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except MAX</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_SLEW_RATE_DQ_DQS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_SLEW_RATE_DQ_DQS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x03,0x03</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Address Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer: initfile,various .C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except Max</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_SLEW_RATE_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_SLEW_RATE_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x03,0x03</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Clock Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT)mss_eff_cnfg_termination consumer: initfile,various.C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except max</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_SLEW_RATE_CLK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_SLEW_RATE_CLK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x03,0x03</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Spare Clock Slew Rate Used in various locations and comes from the MT keyword or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: initfile,various.C firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except max</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_SLEW_RATE_SPCKE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_SLEW_RATE_SPCKE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x03,0x03</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Control Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT),mss_eff_cnfg_termination consumer:initfile, various .C files firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer except for max</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_SLEW_RATE_CNTL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_SLEW_RATE_CNTL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t>
-        <default>0x03,0x03</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Centaur Read Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfiles firmware notes: none This is the nominal value This Attribute is to be interpreted as an Integer</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_RD_VREF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_RD_VREF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CLK_P0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CLK_P0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CLK_P0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CLK_P1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CLK_P1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CLK_P1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CLK_P0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CLK_P0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CLK_P0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CLK_P1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CLK_P1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CLK_P1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A3</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A4</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A5</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A5</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A5</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A6</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A6</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A6</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A7</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A7</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A7</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A8</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A8</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A8</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A9</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A9</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A9</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A10</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A10</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A10</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A11</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A11</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A11</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A12</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A12</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A12</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A13</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A13</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A13</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A14</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A14</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A14</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_A15</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_A15</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_A15</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_BA0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_BA0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_BA1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_BA1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_BA2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_BA2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_BA2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_CASN</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_CASN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_CASN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_RASN</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_RASN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_RASN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_CMD_WEN</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_CMD_WEN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_CMD_WEN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_PAR</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_PAR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_PAR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M_ACTN</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M_ACTN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M_ACTN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CKE0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CKE1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CKE2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CKE3</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CKE3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CKE3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CSN0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CSN1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CSN2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_CSN3</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_CSN3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_CSN3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_ODT0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_ODT0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_ODT0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M0_CNTL_ODT1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M0_CNTL_ODT1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M0_CNTL_ODT1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CKE0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CKE1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CKE2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CKE3</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CKE3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CKE3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CSN0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CSN1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN2</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CSN2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_CSN3</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_CSN3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_CSN3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_ODT0</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_ODT0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_ODT0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Phase rotator value that comes from MR keyword on the CDIMM VPD. This controls the IO M1_CNTL_ODT1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PHASE_ROT_M1_CNTL_ODT1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PHASE_ROT_M1_CNTL_ODT1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Settings for periodic CAL - zcal 1, syscal 1, centering 0, rdclk 1, dqs align 1, rdclk_update_dis 0, dutycycle 0, and power dis (dqs) 1. Second byte has repeat as 000, mpr mode as 0, mba as 11, and the spares as 00</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD keyword MT bytes 54 and 55 MT(54:55) for the Logical DIMM associated with port A. Bytes 118:119 for port B, 182:183 for port C and 246:247 for port D. In the end, the AB and CD portions form a 32 bit word for each mba to write into the corresponding ddrphy register</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_CKE_PRI_MAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_CKE_PRI_MAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD keyword MT bytes 56 to 59 MT(56:59) for the Logical DIMM associated with port A. Bytes 120:123 for port B, 184:187 for port C and 248:251 for port D. The values for Port A concatenated with port B forms the value for one MBA. C concat D forms the value for the other MBA</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_CKE_PWR_MAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_CKE_PWR_MAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD keyword MT bytes 61 MT(61) for the Logical DIMM associated with port A. Bytes 125 for port B, 189 for port C and 253 for port D</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_GPO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_GPO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD keyword MT byte 60 bits 4:7 for the Logical DIMM associated with port A. Byte 124 bits 4:7 for port B, 188 bits 4:7 for port C and 252 bits 4:7 for port D</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_RLO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_RLO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD keyword MT byte 60 bits 0:3 for the Logical DIMM associated with port A. Byte 124 bits 0:3 for port B, 188 bits 0:3 for port C and 252 bits 0:3 for port D</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_WLO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_WLO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD MR keyword byte 49 for ports A and B and byte 177 for port C and D. This means that all ADR blocks use this value on an mba level</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_TSYS_ADR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_TSYS_ADR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This value comes from the VPD MR keyword byte 113 for ports A and B and byte 241 for port C and D. This means all DP18 blocks use this value on a mba level</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_TSYS_DP18</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_TSYS_DP18</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
   </attribute>
   <attribute>
     <description>Custom DIMM Sensor Map for Primary I2C Port (1 byte of data): 0x00 No sensors attached 0x01 DIMM sensor 0 attached 0x02 DIMM sensor 1 attached 0x04 DIMM sensor 2 attached 0x08 DIMM sensor 3 attached 0x10 DIMM sensor 4 attached 0x20 DIMM sensor 5 attached 0x40 DIMM sensor 6 attached 0x80 DIMM sensor 7 attached Comes from the VPD MW Keyword</description>
@@ -4657,19 +3472,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>CEN_VPD_CDIMM_SENSOR_MAP_SECONDARY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes if this MBA is in 2N address mode. The DIMM attributes associated with this MBA describes if this mode is needed for SI. Come from the VPD and consumed in the mba_def.initfile.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_2N_MODE_ENABLED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_2N_MODE_ENABLED</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -4745,124 +3547,6 @@
       <uint32_t />
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Describes the Version of MT Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_MT_VERSION_BYTE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_MT_VERSION_BYTE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes the Version of MR Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_MR_VERSION_BYTE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_MR_VERSION_BYTE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes the DATA control byte from MR</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_MR_DATA_CONTROL_BYTE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_MR_DATA_CONTROL_BYTE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes the DATA control byte from MT</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_MT_DATA_CONTROL_BYTE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_MT_DATA_CONTROL_BYTE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Fetches the VM Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_VM_KEYWORD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_VM_KEYWORD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Fetch the VD keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_VD_KEYWORD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_VD_KEYWORD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes Centaur Voltage from DW keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DW_KEYWORD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DW_KEYWORD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Capable power control settings.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_POWER_CONTROL_CAPABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_POWER_CONTROL_CAPABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Derived from calibration/characterization of read centering. Number of windage offset in units of pico-seconds[ps] with sign bit0 (0b0=positive, 0b1=negative) and value in bits1..31, so 0x80000023 for example would mean "-35ps". Can be overwritten by ODM vendors if done from VPD. Each port will have a value. creator: VPD consumer: mss_draminit_training_adv firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_RD_CTR_WINDAGE_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_RD_CTR_WINDAGE_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
   </attribute>
   <attribute>
     <description>VPD index for associated chip's memory buffer VPD</description>
@@ -5327,34 +4011,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>ISDIMM DQ mapping that comes from QX keyword on the CDIMM VPD.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_ISDIMMTOC4DQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_ISDIMMTOC4DQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4,80</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>ISDIMM DQQ mapping that comes from QS keyword on the CDIMM VPD.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_ISDIMMTOC4DQS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_ISDIMMTOC4DQS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4,20</array>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Machine Readable Workbook value detailing the wiring of the 8 dimm temperature sensors for non custom dimms, in DIMM A0,A1,B0,B1,C0,C1,D0,D1 order. One nibble per sensor where bit0 (MSB) is the i2c bus the sensor is attached to (0 for master, 1 for spare) and bits 1:3 are for A2,A1,A0 of the sensor i2c address (where A2 is MSB)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
@@ -5515,22 +4171,6 @@
         <id>ENGINE_TYPE</id>
       </enumeration>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Define context for current phase of system IPL.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_IPL_PHASE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_IPL_PHASE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x01</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Dummy platInit uint8[1][3][5] attribute used for testing.</description>
@@ -5750,6 +4390,17 @@
     <id>NUMERIC_POD_TYPE_TEST</id>
     <persistency>non-volatile</persistency>
     <readable />
+  </attribute>
+  <attribute>
+    <description>If the Target is directly deconfigurable and GARDable; target may still be deconfigured in 'by association' processing.</description>
+    <id>DECONFIG_GARDABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <complexType>
@@ -8177,6 +6828,24 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This attribute represents the eRepair threshold value of A-Bus used in the field. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
+    <id>A_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute represents the eRepair threshold value of A-Bus used by Manufacturing. creator: platform (generated based on MRW data) See defintion in erepair_thresholds.xml for more information.</description>
+    <id>A_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>sets the Centaur address bits used to interleave addresses between MBA01 and MBA23. valid values are 23 through 32.</description>
     <id>MSS_MBA_ADDR_INTERLEAVE_BIT</id>
     <persistency>non-volatile</persistency>
@@ -8406,65 +7075,13 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Select OBUS0 pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OB0_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OB0_PLL_BUCKET</id>
+    <description>Specifies whether or not the FSP is ready for Hostboot to enable TCEs for DMAs for the given IPL. This is a temporary attribute which will be used to phase-in TCE support. If 0, DO NOT use TCEs; If 1, use TCEs</description>
+    <id>USE_TCES_FOR_DMAS</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Select OBUS1 pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OB1_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OB1_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Select OBUS2 pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OB2_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OB2_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Select OBUS3 pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OB3_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OB3_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
     <writeable />
@@ -9158,6 +7775,39 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>VRM Vdd Temperature in degrees C to invoke DVFS (clip max Pstate)</description>
+    <id>OPEN_POWER_VRM_VDD_DVFS_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>VRM Vdd Temperature in degrees C that an overtemp error will be logged</description>
+    <id>OPEN_POWER_VRM_VDD_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new VRM Vdd temperature before DVFS will occur</description>
+    <id>OPEN_POWER_VRM_VDD_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The maximum power a single procesor socket can support (in watts) This is used to populate CALCULATED_MAX_SYS_POWER_EXCLUDING_GPUS</description>
     <id>PROC_SOCKET_POWER_WATTS</id>
     <persistency>non-volatile</persistency>
@@ -9186,6 +7836,17 @@
     <readable />
     <simpleType>
       <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Flag used to allow sending informational call-home errors as ESELS to the BMC</description>
+    <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <enumerationType>
@@ -9493,6 +8154,22 @@
     <id>OPTICS_CONFIG_MODE</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates which sublinks should be initialized/trained</description>
+    <enumerator>
+      <name>BOTH</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>EVEN_ONLY</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>ODD_ONLY</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>LINK_TRAIN</id>
+  </enumerationType>
+  <enumerationType>
     <description>Define context for current phase of system IPL.</description>
     <enumerator>
       <name>HB_IPL</name>
@@ -9591,6 +8268,18 @@
       <value>1</value>
     </enumerator>
     <id>MRW_HW_MIRRORING_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable early data from Memory. This also enable cp_me from L3.</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
   </enumerationType>
   <enumerationType>
     <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
@@ -11361,6 +10050,30 @@
     <id>CEN_VPD_POWER_CONTROL_CAPABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>RCD IBT. Used in mss_dram_init and is computed in mss_eff_cnfg. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Each dimm will have a value. creator: mss_eff_cnfg consumer: mss_dram_init firmware notes: none</description>
+    <enumerator>
+      <name>IBT_OFF</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>IBT_100</name>
+      <value>100</value>
+    </enumerator>
+    <enumerator>
+      <name>IBT_150</name>
+      <value>150</value>
+    </enumerator>
+    <enumerator>
+      <name>IBT_200</name>
+      <value>200</value>
+    </enumerator>
+    <enumerator>
+      <name>IBT_300</name>
+      <value>300</value>
+    </enumerator>
+    <id>CEN_VPD_DIMM_RCD_IBT</id>
+  </enumerationType>
+  <enumerationType>
     <description>FOR LAB USE ONLY: Frequency override of this memory channel in MHz, comprising of up to three DIMMs. Set by config file or an attribute writing program. Consumed by mss_freq. The default of AUTO means mss_freq will find the best frequencies given the DIMMs plugged in and other rules. Otherwise, this is the system frequency. firmware notes: Platforms should initialize this attribute to AUTO (0)</description>
     <enumerator>
       <name>AUTO</name>
@@ -12538,6 +11251,10 @@
       <name>UPDATE_BOTH_SIDES_OF_SBE</name>
       <value>0x00040000</value>
     </enumerator>
+    <enumerator>
+      <name>IMMEDIATE_HALT</name>
+      <value>0x00080000</value>
+    </enumerator>
     <id>MNFG_FLAG</id>
   </enumerationType>
   <enumerationType>
@@ -13141,6 +11858,10 @@
       <value>0x01D9</value>
     </enumerator>
     <enumerator>
+      <name>VRM_VDD_TEMP</name>
+      <value>0x01DA</value>
+    </enumerator>
+    <enumerator>
       <name>GPU_STATE</name>
       <value>0x17D8</value>
     </enumerator>
@@ -13151,6 +11872,10 @@
     <enumerator>
       <name>CORE_STATE</name>
       <value>0x07D0</value>
+    </enumerator>
+    <enumerator>
+      <name>HOST_AUTO_REBOOT_CONTROL</name>
+      <value>0x0921</value>
     </enumerator>
     <enumerator>
       <name>DIMM_STATE</name>
@@ -13219,6 +11944,10 @@
     <enumerator>
       <name>APSS_FAULT</name>
       <value>0xC7D7</value>
+    </enumerator>
+    <enumerator>
+      <name>VRM_VDD_FAULT</name>
+      <value>0xC707</value>
     </enumerator>
     <enumerator>
       <name>DERATING_FACTOR</name>
@@ -13361,6 +12090,10 @@
       <value>0x20</value>
     </enumerator>
     <enumerator>
+      <name>SYS_MGMT_SOFTWARE</name>
+      <value>0x21</value>
+    </enumerator>
+    <enumerator>
       <name>BIOS</name>
       <value>0x22</value>
     </enumerator>
@@ -13419,6 +12152,10 @@
     <enumerator>
       <name>PROCESSOR</name>
       <value>0x07</value>
+    </enumerator>
+    <enumerator>
+      <name>POWER_UNIT</name>
+      <value>0x09</value>
     </enumerator>
     <enumerator>
       <name>MEMORY</name>
