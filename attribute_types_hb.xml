@@ -7728,6 +7728,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>max size of error log that can be sent to BMC</description>
+    <id>BMC_MAX_ERROR_LOG_SIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>2048</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The manufacturer of the BMC</description>
     <id>BMC_MANUFACTURER</id>
     <persistency>non-volatile</persistency>
@@ -9158,6 +9169,10 @@
     <enumerator>
       <name>ON</name>
       <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>VDN_STEP_OFF</name>
+      <value>0x02</value>
     </enumerator>
     <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
   </enumerationType>
