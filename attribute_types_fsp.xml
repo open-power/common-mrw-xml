@@ -563,7 +563,7 @@
 </attribute>
 
 <attribute>
-    <id>MRW_MEM_MIRRORING_ALLOWED</id>
+    <id>MEM_MIRRORING_ALLOWED</id>
     <description>Is memory mirroring allowed on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -574,7 +574,7 @@
 </attribute>
 
 <attribute>
-    <id>MRW_MEM_MIRRORING_ENABLE_DEFAULT</id>
+    <id>MEM_MIRRORING_ENABLE_DEFAULT</id>
     <description>By default, is memory mirroring enabled on this platform? 0 - No and 1 - Yes</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -585,7 +585,7 @@
 </attribute>
 
 <attribute>
-    <id>MRW_MEM_POWER_CONTROL_USAGE</id>
+    <id>MEM_POWER_CONTROL_USAGE</id>
     <description>Determines if any power controls should be used by memory on this platform. This is a system-wide policy setting that is used when configuring the memory. Note that individual DIMMs will also know if they are capable of doing any of this so the eventual answer is combination of the requested value specified here and the capable value from the VPD</description>
     <group>SYS_POLICIES</group>
     <simpleType>
