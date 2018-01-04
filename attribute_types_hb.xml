@@ -929,32 +929,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>DMI inband BAR address offset (relative to chip MMIO origin). Set by platform. Used by p9c_set_inband_addr.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EI_BUS_TX_MSBSWAP</id>
@@ -3312,6 +3286,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The powerbus frequency that should be used to locate a valid #V bucket in the processor Module VPD if the actual ATTR_FREQ_PB_MHZ value isn't present.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_PB_MHZ_POUNDV_FALLBACK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>NO_FALLBACK</default>
+      </uint32_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>env: 1 = Awan/HWSimulator. 0 = Simics/RealHW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IS_SIMULATION</id>
@@ -3535,20 +3525,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>L4 Bank Delete settings in VPD. Denotes what banks have been deleted from the L4. Data will be pulled from CDIMM VPD if CDIMM present. Data will be pulled from backplane VPD if IS DIMMs present.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_L4_BANK_DELETE_VPD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_L4_BANK_DELETE_VPD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>VPD index for associated chip's memory buffer VPD</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_ISDIMM_MBVPD_INDEX</id>
@@ -3755,21 +3731,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Thermal Memory Power Limit</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00000d2f</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>At a system level, this attribute controls if interleaving is required, requested or never. The MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
@@ -3865,66 +3826,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at max utilization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at idle utilization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook throttle value for denominator cfg_nm_m</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_MEM_THROTTLE_DENOMINATOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_MEM_THROTTLE_DENOMINATOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00000200</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_MAX_DRAM_DATABUS_UTIL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_MAX_DRAM_DATABUS_UTIL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x000015f9</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>The MRW for a system should set this to TRUE for systems that must obey plug rules. Lab environments should default this to off and allow the user to override using normal methods to test.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MRW_STRICT_MBA_PLUG_RULE_CHECKING</id>
@@ -3970,6 +3871,36 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Machine Readable Workbook Thermal Memory Power Limit</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x00000d2f</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Capable power control settings. In MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MRW_POWER_CONTROL_REQUESTED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Possible DRAM voltage override.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_VOLT_OVERRIDE</id>
@@ -3993,94 +3924,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Capable power control settings. In MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_POWER_CONTROL_REQUESTED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value detailing the wiring of the 8 dimm temperature sensors for non custom dimms, in DIMM A0,A1,B0,B1,C0,C1,D0,D1 order. One nibble per sensor where bit0 (MSB) is the i2c bus the sensor is attached to (0 for master, 1 for spare) and bits 1:3 are for A2,A1,A0 of the sensor i2c address (where A2 is MSB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value for the maximum possible number of dimms that can be installed under any of the VMEM regulators.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x04</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook DDR3 VMEM regulator power limit per CDIMM assuming a full configuration. Units in cW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00000f29</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook DDR4 VMEM regulator power limit per CDIMM assuming a full configuration. Units in cW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00000d79</default>
-      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -7009,15 +6852,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>At a system level, this attribute controls if interleaving is required, requested or never. The MRW.</description>
-    <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>PCS rx vga control register3 creator: platform consumer: p9_pcie_scominit firmware notes: The value of rx vga control register3. Array index: Configuration number index 0~3 for CONFIG0~3</description>
     <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
     <persistency>non-volatile</persistency>
@@ -7728,6 +7562,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>max size of error log that can be sent to BMC</description>
+    <id>BMC_MAX_ERROR_LOG_SIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>2048</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The manufacturer of the BMC</description>
     <id>BMC_MANUFACTURER</id>
     <persistency>non-volatile</persistency>
@@ -7827,6 +7672,17 @@
       <uint16_t>
         <default>28</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Indicates if OCC should wait to report DVFS due to power/thermal until max frequency has been lowered below nominal. Default OCC will report DVFS when max frequency is lowered below turbo. DVFS is reported in poll response extended status bits and in OPAL shared memory throttle status byte. 1 = OCC report throttling only when max freq. lowered below nominal 0 = OCC report throttling when max freq. lowered below turbo</description>
+    <id>REPORT_THROTTLE_BELOW_NOMINAL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -8280,18 +8136,6 @@
       <value>0x1</value>
     </enumerator>
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>DMI_INBAND_BAR_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
@@ -9159,7 +9003,39 @@
       <name>ON</name>
       <value>0x01</value>
     </enumerator>
+    <enumerator>
+      <name>VDN_STEP_OFF</name>
+      <value>0x02</value>
+    </enumerator>
     <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The powerbus frequency that should be used to locate a valid #V bucket in the processor Module VPD if the actual ATTR_FREQ_PB_MHZ value isn't present.</description>
+    <enumerator>
+      <name>NO_FALLBACK</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>1600</name>
+      <value>1600</value>
+    </enumerator>
+    <enumerator>
+      <name>1866</name>
+      <value>1866</value>
+    </enumerator>
+    <enumerator>
+      <name>2000</name>
+      <value>2000</value>
+    </enumerator>
+    <enumerator>
+      <name>2133</name>
+      <value>2133</value>
+    </enumerator>
+    <enumerator>
+      <name>2400</name>
+      <value>2400</value>
+    </enumerator>
+    <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
   </enumerationType>
   <enumerationType>
     <description>Product name of a chip target. Provided by the MRW.</description>
@@ -10634,6 +10510,22 @@
     <id>CEN_MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>Capable power control settings. In MRW.</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>SLOWEXIT</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>FASTEXIT</name>
+      <value>0x02</value>
+    </enumerator>
+    <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
+  </enumerationType>
+  <enumerationType>
     <description>Possible DRAM voltage override.</description>
     <enumerator>
       <name>NONE</name>
@@ -10660,34 +10552,6 @@
       <value>0x01</value>
     </enumerator>
     <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Capable power control settings. In MRW.</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>SLOWEXIT</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>FASTEXIT</name>
-      <value>0x02</value>
-    </enumerator>
-    <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <id>CEN_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <default>NA</default>
@@ -11880,6 +11744,10 @@
     <enumerator>
       <name>DIMM_STATE</name>
       <value>0x0C20</value>
+    </enumerator>
+    <enumerator>
+      <name>HB_VOLATILE</name>
+      <value>0x0C21</value>
     </enumerator>
     <enumerator>
       <name>MEMBUF_STATE</name>
