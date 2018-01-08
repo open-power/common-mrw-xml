@@ -597,9 +597,6 @@
       <id>CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
     </attribute>
     <attribute>
-      <id>CEN_L4_BANK_DELETE_VPD</id>
-    </attribute>
-    <attribute>
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
     </attribute>
     <attribute>
@@ -625,9 +622,6 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_VOLT_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_MEM_SENSOR_CACHE_ADDR_MAP</id>
     </attribute>
     <attribute>
       <id>IO_DMI_CEN_TX_MARGIN_RATIO</id>
@@ -1087,9 +1081,6 @@
       <id>BRAZOS_RX_FIFO_OVERRIDE</id>
     </attribute>
     <attribute>
-      <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
-    </attribute>
-    <attribute>
       <id>MAX_DMI_PER_PROC</id>
     </attribute>
     <attribute>
@@ -1148,6 +1139,9 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>BMC_MAX_ERROR_LOG_SIZE</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
@@ -1250,6 +1244,9 @@
     </attribute>
     <attribute>
       <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
+    </attribute>
+    <attribute>
+      <id>REPORT_THROTTLE_BELOW_NOMINAL</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
@@ -1609,6 +1606,9 @@
       <id>NEST_LEAKAGE_PERCENT</id>
     </attribute>
     <attribute>
+      <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -1633,9 +1633,6 @@
       <id>CEN_MRW_SAFEMODE_MEM_THROTTLE_NUMERATOR_PER_CHIP</id>
     </attribute>
     <attribute>
-      <id>CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-    </attribute>
-    <attribute>
       <id>CEN_MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
     </attribute>
     <attribute>
@@ -1648,18 +1645,6 @@
       <id>CEN_MSS_DRAMINIT_RESET_DISABLE</id>
     </attribute>
     <attribute>
-      <id>CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_MEM_THROTTLE_DENOMINATOR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_MAX_DRAM_DATABUS_UTIL</id>
-    </attribute>
-    <attribute>
       <id>CEN_MRW_STRICT_MBA_PLUG_RULE_CHECKING</id>
     </attribute>
     <attribute>
@@ -1669,22 +1654,13 @@
       <id>CEN_MRW_CDIMM_SPARE_I2C_TEMP_SENSOR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
+      <id>CEN_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
-      <id>CEN_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
+      <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_WR_VREF_CHECK_VREF_STEP_SIZE</id>
@@ -2208,12 +2184,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <id>DMI_INBAND_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>DMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
