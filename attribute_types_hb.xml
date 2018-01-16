@@ -55,6 +55,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Offsets the WR VREF value from the VPD when creating the eff config WR VREF attributes.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_WR_VREF_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_WR_VREF_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <int8_t>
+        <default>0</default>
+      </int8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port (MCA) basis Also used for emergency mode throttle MBA_FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional Consumer: thermal_init, initfile</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
@@ -773,6 +789,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Bit mask of group IDs which will be present in the fully configured CEC configuration. Bit 0 -&gt; group 0 present Bit 1 -&gt; group 1 present ... Bit 6 -&gt; group 6 present Bit 7 -&gt; group 7 present</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FABRIC_PRESENT_GROUPS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FABRIC_PRESENT_GROUPS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_FABRIC_SYSTEM_ID</id>
@@ -799,7 +828,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
@@ -808,6 +836,19 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>PROC_EPS_TABLE_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_REFCLOCK_SWIZZLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -1149,6 +1190,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates if the Obus channel is a board or a cable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_CHANNEL_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_CHANNEL_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_X_DEBUG</id>
@@ -1216,6 +1272,21 @@
     <simpleType>
       <uint8_t>
         <default>6</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_CHAN_EQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_CHAN_EQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -3469,62 +3540,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Master Power Slope that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Master Power Intercept that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Power Slope that comes from the VPD the MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Power Intercept that comes from MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>VPD index for associated chip's memory buffer VPD</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_ISDIMM_MBVPD_INDEX</id>
@@ -3539,68 +3554,26 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Master Total Power Slope that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_TOTAL_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Master Total Power Intercept that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_TOTAL_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Total Power Slope that comes from the VPD MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Total Power Intercept that comes from the VPD MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>FOR LAB USE ONLY: Frequency override of this memory channel in MHz, comprising of up to three DIMMs. Set by config file or an attribute writing program. Consumed by mss_freq. The default of AUTO means mss_freq will find the best frequencies given the DIMMs plugged in and other rules. Otherwise, this is the system frequency. firmware notes: Platforms should initialize this attribute to AUTO (0)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_FREQ_OVERRIDE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>CEN_MSS_FREQ_OVERRIDE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Percentage to increase/decrease MEM frequency - two's complement number. Measured in 100's. So the value of 100 is one percent increase. This frequency change comes from changing multipliers and dividers to get the desired frequency. The supported frequencies come from Tim Diemoz. Creator: platform set this to 0. Users can set this to a valid value. VALID Values: (TBD % to TBD %) (Tuleta) (TBD % to TBD %) (Glacier) Set by: PLL settings written by Dave Cadigan</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -8206,6 +8179,18 @@
     <id>IO_O_MFG_CHK</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates if the Obus channel is a board or a cable</description>
+    <enumerator>
+      <name>BOARD</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>CABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_O_CHANNEL_TYPE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8228,6 +8213,26 @@
       <value>0x1</value>
     </enumerator>
     <id>IO_X_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <enumerator>
+      <name>DIS_RX_LTE</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DIS_TX_AC_BOOST</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_GAIN_PEAK_INITS</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_VGA_GAIN_TARGET</name>
+      <value>0x08</value>
+    </enumerator>
+    <id>IO_XBUS_CHAN_EQ</id>
   </enumerationType>
   <enumerationType>
     <description>PCIE MMIO BAR enable creator: platform consumer: p9_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
