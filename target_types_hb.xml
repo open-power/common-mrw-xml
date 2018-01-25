@@ -585,31 +585,7 @@
       <id>CEN_VPD_CDIMM_SENSOR_MAP_SECONDARY</id>
     </attribute>
     <attribute>
-      <id>CEN_CDIMM_VPD_MASTER_POWER_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_MASTER_POWER_INTERCEPT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_SUPPLIER_POWER_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
-    </attribute>
-    <attribute>
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_INTERCEPT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_INTERCEPT</id>
     </attribute>
     <attribute>
       <id>CEN_MSS_FREQ_OVERRIDE</id>
@@ -722,6 +698,10 @@
   <targetType>
     <id>lcard-dimm-ddr4</id>
     <parent>lcard-dimm</parent>
+  </targetType>
+  <targetType>
+    <id>chip-fcdimm-ddr4</id>
+    <parent>lcard-dimm-cdimm</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1397,6 +1377,9 @@
     </attribute>
     <attribute>
       <id>PROC_FABRIC_CAPI_MODE</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_PRESENT_GROUPS</id>
     </attribute>
     <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
@@ -2184,6 +2167,9 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <id>DMI_REFCLOCK_SWIZZLE</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>

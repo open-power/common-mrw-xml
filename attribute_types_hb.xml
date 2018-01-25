@@ -773,6 +773,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Bit mask of group IDs which will be present in the fully configured CEC configuration. Bit 0 -&gt; group 0 present Bit 1 -&gt; group 1 present ... Bit 6 -&gt; group 6 present Bit 7 -&gt; group 7 present</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FABRIC_PRESENT_GROUPS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FABRIC_PRESENT_GROUPS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_FABRIC_SYSTEM_ID</id>
@@ -799,7 +812,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
@@ -808,6 +820,19 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>PROC_EPS_TABLE_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_REFCLOCK_SWIZZLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -3469,62 +3494,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Master Power Slope that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Master Power Intercept that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Power Slope that comes from the VPD the MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Power Intercept that comes from MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>VPD index for associated chip's memory buffer VPD</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_ISDIMM_MBVPD_INDEX</id>
@@ -3535,62 +3504,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Master Total Power Slope that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_TOTAL_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Master Total Power Intercept that comes from the VPD MW Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_MASTER_TOTAL_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_MASTER_TOTAL_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Total Power Slope that comes from the VPD MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Supplier Total Power Intercept that comes from the VPD MV Keyword</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_CDIMM_VPD_SUPPLIER_TOTAL_POWER_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
     </simpleType>
     <writeable />
   </attribute>
