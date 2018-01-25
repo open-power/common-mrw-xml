@@ -591,6 +591,9 @@
       <id>CEN_MSS_FREQ_OVERRIDE</id>
     </attribute>
     <attribute>
+      <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+    </attribute>
+    <attribute>
       <id>CEN_MSS_VREF_CAL_CNTL</id>
     </attribute>
     <attribute>
@@ -1745,27 +1748,6 @@
       <id>IMT_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>VAS_USER_WINDOW_CONTEXT_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>NVIDIA_NPU_USER_REG_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>NVIDIA_PHY0_REG_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>NVIDIA_PHY1_REG_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>NX_RNG_ADDR</id>
-    </attribute>
-    <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1862,9 +1844,6 @@
     </attribute>
     <attribute>
       <id>NEST_VDDR_ID</id>
-    </attribute>
-    <attribute>
-      <id>FSP_BASE_ADDR</id>
     </attribute>
     <attribute>
       <id>PROC_DCM_INSTALLED</id>
@@ -2410,6 +2389,9 @@
       <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
     </attribute>
     <attribute>
+      <id>IO_O_CHANNEL_TYPE</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2478,6 +2460,26 @@
     </attribute>
     <id>unit-obus-brick-cumulus</id>
     <parent>unit-obus-brick-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>SMPGROUP</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+    </attribute>
+    <id>unit-obus-smpgroup</id>
+    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2615,6 +2617,9 @@
     </attribute>
     <attribute>
       <id>IO_XBUS_TX_FFE_PRECURSOR</id>
+    </attribute>
+    <attribute>
+      <id>IO_XBUS_CHAN_EQ</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>

@@ -9,7 +9,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t />
+      <uint32_t>
+        <default>133333</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -784,6 +786,7 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
@@ -1174,6 +1177,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates if the Obus channel is a board or a cable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_CHANNEL_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_CHANNEL_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_X_DEBUG</id>
@@ -1241,6 +1259,21 @@
     <simpleType>
       <uint8_t>
         <default>6</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_CHAN_EQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_CHAN_EQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -3522,6 +3555,20 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Percentage to increase/decrease MEM frequency - two's complement number. Measured in 100's. So the value of 100 is one percent increase. This frequency change comes from changing multipliers and dividers to get the desired frequency. The supported frequencies come from Tim Diemoz. Creator: platform set this to 0. Users can set this to a valid value. VALID Values: (TBD % to TBD %) (Tuleta) (TBD % to TBD %) (Glacier) Set by: PLL settings written by Dave Cadigan</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Training Control over IPL - ENUM - 0x00=DISABLE /Skip V-ref Train; 0x01=DRAM - Enable V-Ref Train DRAM Level; 0x02=RANK Level Training; 0x03=PORT Level Training; 0x04=MBA Level; 0x05=CENTAUR level; Default Value = 0x03 for OpenPower platforms = 0x01 for others (TULETA, BRAZOS, ALPINE).</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_VREF_CAL_CNTL</id>
@@ -4777,21 +4824,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Base Address of FSP IO Region</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FSP_BAR_BASE_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FSP_BASE_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0003FFE000000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Size of FSP IO Region</description>
     <id>FSP_BAR_SIZE</id>
     <persistency>non-volatile</persistency>
@@ -5866,69 +5898,6 @@
       <uint8_t>
         <default>0</default>
       </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>VAS - Hypervisor Window Contexts address MMIO consumed by PHYP</description>
-    <id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>VAS - User Window Context address MMIO consumed by PHYP</description>
-    <id>VAS_USER_WINDOW_CONTEXT_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nvidia Link - NPU Privileged Regs address MMIO consumed by PHYP</description>
-    <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nvidia Link - NPU User Regs address MMIO consumed by PHYP</description>
-    <id>NVIDIA_NPU_USER_REG_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nvidia Link - Phy 0 Regs address MMIO consumed by PHYP</description>
-    <id>NVIDIA_PHY0_REG_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Nvidia Link - Phy 1 Regs address MMIO consumed by PHYP</description>
-    <id>NVIDIA_PHY1_REG_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NX - RNG space - MMIO consumed by PHYP</description>
-    <id>NX_RNG_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -8119,6 +8088,18 @@
     <id>IO_O_MFG_CHK</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates if the Obus channel is a board or a cable</description>
+    <enumerator>
+      <name>BOARD</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>CABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_O_CHANNEL_TYPE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8141,6 +8122,26 @@
       <value>0x1</value>
     </enumerator>
     <id>IO_X_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <enumerator>
+      <name>DIS_RX_LTE</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DIS_TX_AC_BOOST</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_GAIN_PEAK_INITS</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_VGA_GAIN_TARGET</name>
+      <value>0x08</value>
+    </enumerator>
+    <id>IO_XBUS_CHAN_EQ</id>
   </enumerationType>
   <enumerationType>
     <description>PCIE MMIO BAR enable creator: platform consumer: p9_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
@@ -10799,8 +10800,12 @@
       <value>70</value>
     </enumerator>
     <enumerator>
-      <name>LAST_IN_RANGE</name>
+      <name>SMPGROUP</name>
       <value>71</value>
+    </enumerator>
+    <enumerator>
+      <name>LAST_IN_RANGE</name>
+      <value>72</value>
     </enumerator>
     <id>TYPE</id>
   </enumerationType>
