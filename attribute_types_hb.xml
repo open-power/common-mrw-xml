@@ -6791,18 +6791,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Specifies whether or not the FSP is ready for Hostboot to enable TCEs for DMAs for the given IPL. This is a temporary attribute which will be used to phase-in TCE support. If 0, DO NOT use TCEs; If 1, use TCEs</description>
-    <id>USE_TCES_FOR_DMAS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Hardware topology for HDAT creator:MRW consumer:HDAT firmware notes: Hardware Topology 2 Bytes Byte 1: bit 0-3: Node Id bit 4-7: Socket id inside the node bit 8-11: Proc id inside socket bit 12-15:Hub Id inside proc</description>
     <id>PROC_HW_TOPOLOGY</id>
     <persistency>non-volatile</persistency>
