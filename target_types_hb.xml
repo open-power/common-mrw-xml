@@ -1067,9 +1067,6 @@
       <id>MAX_DMI_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>USE_TCES_FOR_DMAS</id>
-    </attribute>
-    <attribute>
       <id>BOOT_FREQ_MHZ</id>
     </attribute>
     <attribute>
