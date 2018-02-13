@@ -543,6 +543,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_NVDIMM_PLUG_RULES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t>
+        <default>0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The frequency of a processor's nest mesh clock, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_PB_MHZ</id>
@@ -2126,20 +2141,6 @@
         <default>150</default>
       </uint16_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>HWP/Init "risk level" enabled. Used by HB to pass to HB driven HWPs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RISK_LEVEL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RISK_LEVEL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>BootLoader HWP flag to not place 12K exception vectors. This flag is only applicable when security is disabled.</description>
@@ -4113,17 +4114,6 @@
       </uint64_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>HardWare Availability Service State Changed Mask. Used when a target changes (ie, via HCDB change) to set the HWAS_STATE_CHANGED_FLAG, so that the appropriate services will all handle the change. This is a bit field of flags (see HWAS_CHANGED_BIT enumeration that follows).</description>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0</default>
-      </uint64_t>
-    </simpleType>
   </attribute>
   <attribute>
     <complexType>
@@ -6791,18 +6781,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Specifies whether or not the FSP is ready for Hostboot to enable TCEs for DMAs for the given IPL. This is a temporary attribute which will be used to phase-in TCE support. If 0, DO NOT use TCEs; If 1, use TCEs</description>
-    <id>USE_TCES_FOR_DMAS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Hardware topology for HDAT creator:MRW consumer:HDAT firmware notes: Hardware Topology 2 Bytes Byte 1: bit 0-3: Node Id bit 4-7: Socket id inside the node bit 8-11: Proc id inside socket bit 12-15:Hub Id inside proc</description>
     <id>PROC_HW_TOPOLOGY</id>
     <persistency>non-volatile</persistency>
@@ -7816,6 +7794,18 @@
     <id>MSS_MRW_DRAM_WRITE_CRC</id>
   </enumerationType>
   <enumerationType>
+    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
+    <enumerator>
+      <name>NO_NVDIMM</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>NVDIMM_CAPABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of a processor's nest mesh clock, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
     <enumerator>
       <name>1600</name>
@@ -8618,18 +8608,6 @@
       <value>0x1</value>
     </enumerator>
     <id>SBE_INTERNAL_FFDC_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>HWP/Init "risk level" enabled. Used by HB to pass to HB driven HWPs</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RISK_LEVEL</id>
   </enumerationType>
   <enumerationType>
     <description>BootLoader HWP flag to not place 12K exception vectors. This flag is only applicable when security is disabled.</description>
