@@ -19,9 +19,6 @@
       <id>HWAS_STATE_CHANGED_FLAG</id>
     </attribute>
     <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>0</default>
       <id>DECONFIG_GARDABLE</id>
     </attribute>
@@ -83,10 +80,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <id>HOT_PLUG_POWER_CONTROLLER_INFO</id>
@@ -533,10 +526,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000003</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
@@ -634,10 +623,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000003</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <id>TEMP_SENSOR_I2C_CONFIG</id>
@@ -1067,9 +1052,6 @@
       <id>MAX_DMI_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>USE_TCES_FOR_DMAS</id>
-    </attribute>
-    <attribute>
       <id>BOOT_FREQ_MHZ</id>
     </attribute>
     <attribute>
@@ -1340,6 +1322,9 @@
       <id>MSS_MRW_TEMP_REFRESH_MODE</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+    </attribute>
+    <attribute>
       <id>FREQ_PB_MHZ</id>
     </attribute>
     <attribute>
@@ -1473,9 +1458,6 @@
     </attribute>
     <attribute>
       <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>RISK_LEVEL</id>
     </attribute>
     <attribute>
       <id>DISABLE_HBBL_VECTORS</id>
@@ -1673,10 +1655,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000009</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <default>NODE</default>
@@ -1886,10 +1864,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1912,10 +1886,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1936,10 +1906,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <default>CPU</default>
@@ -1965,10 +1931,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000003</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
@@ -2013,10 +1975,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000003</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -2048,10 +2006,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000003</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <default>MEM</default>
@@ -2215,10 +2169,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
     </attribute>
     <attribute>
@@ -2303,10 +2253,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -2359,10 +2305,6 @@
     <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
@@ -2430,10 +2372,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
     </attribute>
     <attribute>
@@ -2473,10 +2411,6 @@
     <attribute>
       <default>0</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <id>unit-obus-smpgroup</id>
     <parent>unit</parent>
@@ -2587,10 +2521,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <id>PEER_TARGET</id>
     </attribute>
     <attribute>
@@ -2654,10 +2584,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <default>
@@ -2810,10 +2736,6 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    </attribute>
-    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2854,10 +2776,6 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0x00000001</default>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     </attribute>
     <attribute>
       <default>
