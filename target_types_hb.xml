@@ -1322,7 +1322,13 @@
       <id>MSS_MRW_TEMP_REFRESH_MODE</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ</id>
@@ -1488,6 +1494,9 @@
     </attribute>
     <attribute>
       <id>PULSE_MODE_VALUE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_CHIP_MEM_TO_USE</id>
     </attribute>
     <attribute>
       <id>EXTERNAL_VRM_STEPSIZE</id>
@@ -2057,6 +2066,10 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2083,6 +2096,10 @@
       <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2107,6 +2124,10 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <id>DMI_REFCLOCK_SWIZZLE</id>
@@ -2730,6 +2751,10 @@
       <default>CENTAUR</default>
       <id>MODEL</id>
     </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
     <id>unit-l4-centaur</id>
     <parent>unit-l4-power9</parent>
   </targetType>
@@ -2741,6 +2766,10 @@
     <attribute>
       <default>1</default>
       <id>DECONFIG_GARDABLE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
