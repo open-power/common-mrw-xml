@@ -543,6 +543,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_FORCE_BCMODE_OFF</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_NVDIMM_PLUG_RULES</id>
@@ -555,6 +568,21 @@
       <uint64_t>
         <default>0</default>
       </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -2595,6 +2623,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This attribute denotes where our master proc's memory is located. In the case that the master-proc does not have usable memory, we are going to use another proc's memory to boot. The attribute will be set to the chip and group ID of which proc we want to use.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_CHIP_MEM_TO_USE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_CHIP_MEM_TO_USE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Consumer: p9_pstate_parameter_block -&gt; Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
@@ -3062,6 +3103,7 @@
   </attribute>
   <attribute>
     <description>Receive PBAX Groupid. Value that indicates this PBA's PBAX Group affinity. This is matched to pbax_groupid of the PMISC Address phase. Provided by the Machine Readable Workbook. Platform default: Nimbus systems = 0</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_PBAX_GROUPID</id>
       <macro>DIRECT</macro>
@@ -7810,6 +7852,18 @@
     <id>MSS_MRW_DRAM_WRITE_CRC</id>
   </enumerationType>
   <enumerationType>
+    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
+    <enumerator>
+      <name>NO</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>YES</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+  </enumerationType>
+  <enumerationType>
     <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
     <enumerator>
       <name>NO_NVDIMM</name>
@@ -7820,6 +7874,18 @@
       <value>1</value>
     </enumerator>
     <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
   </enumerationType>
   <enumerationType>
     <description>The frequency of a processor's nest mesh clock, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
