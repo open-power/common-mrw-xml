@@ -232,24 +232,6 @@
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
-      <id>PROC_FSP_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY0_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY1_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_MMIO_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PSI_BRIDGE_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NX_RNG_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
     </attribute>
     <attribute>
@@ -1410,30 +1392,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_MMIO_MASK_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY0_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY1_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_MMIO_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PSI_BRIDGE_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NX_RNG_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET</id>
