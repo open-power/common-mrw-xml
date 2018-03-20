@@ -596,13 +596,13 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <hwpfToHbAttrMap>
-        <id>ATTR_MRW_MEM_POWER_CONTROL_USAGE</id>
+        <id>ATTR_MEM_POWER_CONTROL_USAGE</id>
         <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
 </attribute>
 
 <attribute>
-    <id>OCC_LOAD_TIMEOUT</id>
+    <id>OCC-LOAD-TIMEOUT</id>
     <description>The maximum amount of time it should take for all OCCs in the system to be loaded and started in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -613,7 +613,7 @@
 </attribute>
 
 <attribute>
-    <id>OCC_RESET_TIMEOUT</id>
+    <id>OCC-RESET-TIMEOUT</id>
     <description>The maximum amount of time it should take for all OCCs to be reset in seconds</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -741,6 +741,35 @@
     <simpleType>
         <enumeration>
             <id>LOCATION_CODE_TYPE</id>
+        </enumeration>
+    </simpleType>
+    <persistency>volatile-zeroed</persistency>
+    <readable/>
+    <writeable/>
+    <fspOnly/>
+</attribute>
+
+<enumerationType>
+    <id>REDUNDANT_MF_CLOCKS</id>
+    <description>Defines if a system has a multi-functional reference clock</description>
+    <enumerator>
+        <name>FALSE</name>
+        <value>0</value>
+    </enumerator>
+    <enumerator>
+        <name>TRUE</name>
+        <value>1</value>
+    </enumerator>
+    <default>FALSE</default>
+</enumerationType>
+
+<!-- attribute defining if a system has a multi-functional reference clock -->
+<attribute>
+    <id>REDUNDANT_MF_CLOCKS</id>
+    <description>Defines if a system has a multi-functional reference clock</description>
+    <simpleType>
+        <enumeration>
+            <id>REDUNDANT_MF_CLOCKS</id>
         </enumeration>
     </simpleType>
     <persistency>volatile-zeroed</persistency>
