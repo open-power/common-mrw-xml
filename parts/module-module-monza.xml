@@ -26,10 +26,6 @@
     <default>FABRIC</default>
   </attribute>
   <attribute>
-    <id>CHIP_HAS_SBE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>CLASS</id>
     <default>CHIP</default>
   </attribute>
@@ -60,10 +56,6 @@
   <attribute>
     <id>DUMMY_RW</id>
     <default>5</default>
-  </attribute>
-  <attribute>
-    <id>ECID</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>EEPROM_SBE_BACKUP_INFO</id>
@@ -230,14 +222,6 @@
     </default>
   </attribute>
   <attribute>
-    <id>FSI_GP_REG_SCOM_ACCESS</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
-    <id>FSI_MASTER_TYPE</id>
-    <default>NO_MASTER</default>
-  </attribute>
-  <attribute>
     <id>FSI_OPTION_FLAGS</id>
     <default>
       <field>
@@ -251,61 +235,7 @@
     </default>
   </attribute>
   <attribute>
-    <id>FSP_BASE_ADDR</id>
-    <default>0,0x0006030100000000</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>I2C_BUS_SPEED_ARRAY</id><default>400,400,0,0,0,0,0,0,0,0,0,0,0,400,400,400,400,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
-  </attribute>
-  <attribute>
-    <id>I2C_SWITCHES</id>
-    <default>
-      <field>
-        <id>useFsiI2C</id>
-        <value>1</value>
-      </field>
-      <field>
-        <id>useHostI2C</id>
-        <value>0</value>
-      </field>
-      <field>
-        <id>reserved</id>
-        <value>0</value>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>ICACHE_ASSOC_SETS</id>
@@ -322,10 +252,6 @@
   <attribute>
     <id>ICACHE_SIZE</id>
     <default>32</default>
-  </attribute>
-  <attribute>
-    <id>INTP_BASE_ADDR</id>
-    <default>0,0x0003FFFF80300000</default>
   </attribute>
   <attribute>
     <id>L2_CACHE_ASSOC_SETS</id>
@@ -348,48 +274,16 @@
     <default>10240</default>
   </attribute>
   <attribute>
-    <id>LPC_BUS_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
-  </attribute>
-  <attribute>
-    <id>MRU_ID</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
   <attribute>
-    <id>MSS_MEM_MC_IN_GROUP</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>NPU_MMIO_BAR_BASE_ADDR</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>NVIDIA_NPU_PRIVILEGED_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>NVIDIA_NPU_USER_REG_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>NVIDIA_PHY0_REG_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>NVIDIA_PHY1_REG_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>NX_RNG_ADDR</id>
-    <default/>
   </attribute>
   <attribute>
     <id>PCI_BASE_ADDRS_32</id>
@@ -402,38 +296,6 @@
   <attribute>
     <id>PHB_BASE_ADDRS</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>PHB_MMIO_ADDRS_32</id>
-    <default>
-            0x000604C000000000,0x000604C080000000,
-            0x000604C100000000,0x000604C180000000,
-            0x000604C200000000,0x000604C280000000,
-        </default>
-  </attribute>
-  <attribute>
-    <id>PHB_MMIO_ADDRS_64</id>
-    <default>
-            0x0006040000000000,0x0006042000000000,
-            0x0006044000000000,0x0006046000000000,
-            0x0006048000000000,0x000604A000000000,
-        </default>
-  </attribute>
-  <attribute>
-    <id>PHB_REG_ADDRS</id>
-    <default>
-            0x000604C3C0000000,0x000604C3C0100000,
-            0x000604C3C0200000,0x000604C3C0300000,
-            0x000604C3C0400000,0x000604C3C0500000,
-        </default>
-  </attribute>
-  <attribute>
-    <id>PHB_XIVE_ESB_ADDRS</id>
-    <default>
-            0x000604C300000000,0x000604C320000000,
-            0x000604C340000000,0x000604C360000000,
-            0x000604C380000000,0x000604C3A0000000,
-        </default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -457,57 +319,8 @@
     </default>
   </attribute>
   <attribute>
-    <id>PROC_PCIE_NUM_IOP</id>
-    <default>2</default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_NUM_LANES</id>
-    <default>24</default>
-  </attribute>
-  <attribute>
-    <id>PROC_PCIE_NUM_PHB</id>
-    <default>3</default>
-  </attribute>
-  <attribute>
-    <id>PSI_BRIDGE_BASE_ADDR</id>
-    <default>0,0x0006070203000000</default>
-  </attribute>
-  <attribute>
-    <id>PSI_HB_ESB_ADDR</id>
-    <default>0x00060302031C0000</default>
-  </attribute>
-  <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCOM_SWITCHES</id>
-    <default>
-      <field>
-        <id>useFsiScom</id>
-        <value/>
-      </field>
-      <field>
-        <id>useXscom</id>
-        <value/>
-      </field>
-      <field>
-        <id>useInbandScom</id>
-        <value/>
-      </field>
-      <field>
-        <id>useSbeScom</id>
-        <value/>
-      </field>
-      <field>
-        <id>reserved</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TLB_DATA_ASSOC_SETS</id>
@@ -532,38 +345,6 @@
   <attribute>
     <id>TYPE</id>
     <default>PROC</default>
-  </attribute>
-  <attribute>
-    <id>VAS_HYPERVISOR_WINDOW_CONTEXT_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>VAS_USER_WINDOW_CONTEXT_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>XIVE_CONTROLLER_BAR_ADDR</id>
-    <default>0,0x0006030203100000</default>
-  </attribute>
-  <attribute>
-    <id>XIVE_PRESENTATION_BAR_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>XIVE_PRESENTATION_NVT_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>XIVE_ROUTING_END_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>XIVE_ROUTING_ESB_ADDR</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>XIVE_THREAD_MGMT1_BAR_ADDR</id>
-    <default>0x0006020000000000</default>
   </attribute>
   <child_id>eq0</child_id>
   <child_id>eq1</child_id>
@@ -732,49 +513,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -800,10 +540,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -839,39 +575,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -899,10 +602,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -938,39 +637,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -998,10 +664,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1038,39 +700,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1098,10 +727,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1138,39 +763,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1198,10 +790,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1237,39 +825,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1297,10 +852,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1337,39 +888,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1397,10 +915,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1437,49 +951,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -1505,10 +978,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1544,39 +1013,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1604,10 +1040,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1643,39 +1075,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1703,10 +1102,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1743,39 +1138,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1803,10 +1165,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1843,39 +1201,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1903,10 +1228,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -1942,39 +1263,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2002,10 +1290,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2042,39 +1326,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2102,10 +1353,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2142,49 +1389,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -2210,10 +1416,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2249,39 +1451,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2309,10 +1478,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2348,39 +1513,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2408,10 +1540,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2448,39 +1576,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2508,10 +1603,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2548,39 +1639,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2608,10 +1666,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2647,39 +1701,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2707,10 +1728,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2747,39 +1764,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2807,10 +1791,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2847,49 +1827,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -2915,10 +1854,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -2954,39 +1889,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3014,10 +1916,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3053,39 +1951,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3113,10 +1978,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3153,39 +2014,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3213,10 +2041,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3253,39 +2077,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3313,10 +2104,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3352,39 +2139,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3412,10 +2166,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3452,39 +2202,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3512,10 +2229,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3552,49 +2265,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -3620,10 +2292,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3659,39 +2327,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3719,10 +2354,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3758,39 +2389,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3818,10 +2416,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3858,39 +2452,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3918,10 +2479,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -3958,39 +2515,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4018,10 +2542,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4057,39 +2577,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4117,10 +2604,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4157,39 +2640,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4217,10 +2667,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4257,49 +2703,8 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>POUNDV_BUCKET_NUM_OVERRIDE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -4325,10 +2730,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4364,39 +2765,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4424,10 +2792,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4463,39 +2827,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4523,10 +2854,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4563,39 +2890,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4623,10 +2917,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4663,39 +2953,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4723,10 +2980,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4762,39 +3015,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4822,10 +3042,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4862,39 +3078,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -4922,10 +3105,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -4956,35 +3135,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5046,11 +3196,6 @@
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
   </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-      <!--GARD -->
-    </attribute>
     <attribute>
     <id>PRIMARY_CAPABILITIES</id>
     <default>
@@ -5116,35 +3261,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5176,10 +3292,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -5213,35 +3325,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5273,10 +3356,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -5306,35 +3385,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5366,10 +3416,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -6608,35 +4654,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6668,10 +4685,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -6708,22 +4721,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xF1E000</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 <targetPart>
@@ -6749,22 +4752,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xE1870</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 <targetPart>
@@ -6790,22 +4783,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0x78F</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 
@@ -6830,35 +4813,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6892,10 +4846,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -6933,22 +4883,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0x78F</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 <targetPart>
@@ -6974,22 +4914,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xE1870</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 <targetPart>
@@ -7015,22 +4945,12 @@
       <default>1</default>
     </attribute>
     <attribute>
-      <id>HUID</id>
-    </attribute>
-    <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000001</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xF1E000</default>
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
       <default>SMP</default>
-    </attribute>
-    <attribute>
-      <id>PARENT_PERVASIVE</id>
     </attribute>
 </targetPart>
 <targetPart>
@@ -7050,35 +4970,6 @@
   <attribute>
     <id>DECONFIG_GARDABLE</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7112,10 +5003,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7145,35 +5032,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7205,10 +5063,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7238,35 +5092,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7298,10 +5123,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7331,35 +5152,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7391,10 +5183,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7424,35 +5212,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7484,10 +5243,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7517,35 +5272,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7577,10 +5303,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7610,35 +5332,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7670,10 +5363,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7703,35 +5392,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7763,10 +5423,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7796,35 +5452,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7856,10 +5483,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7889,35 +5512,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7949,10 +5543,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -7982,35 +5572,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8042,10 +5603,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8075,35 +5632,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8135,10 +5663,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8168,35 +5692,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8228,10 +5723,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8261,35 +5752,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8321,10 +5783,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8354,35 +5812,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8414,10 +5843,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8447,35 +5872,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8507,10 +5903,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8540,35 +5932,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8600,10 +5963,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8633,35 +5992,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8693,10 +6023,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8726,35 +6052,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8786,10 +6083,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8819,35 +6112,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8879,10 +6143,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -8912,35 +6172,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8972,10 +6203,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9005,35 +6232,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9065,10 +6263,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9098,35 +6292,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9158,10 +6323,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9191,45 +6352,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9255,10 +6383,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9288,45 +6412,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9352,10 +6443,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9385,45 +6472,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9449,10 +6503,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9482,45 +6532,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9546,10 +6563,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9579,45 +6592,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9643,10 +6623,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9676,45 +6652,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9740,10 +6683,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9773,45 +6712,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9837,10 +6743,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9870,45 +6772,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -9934,10 +6803,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -9967,45 +6832,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10031,10 +6863,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10064,45 +6892,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10128,10 +6923,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10161,45 +6952,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10225,10 +6983,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10258,45 +7012,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10322,10 +7043,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10355,45 +7072,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10419,10 +7103,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10452,45 +7132,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10516,10 +7163,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10549,45 +7192,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10613,10 +7223,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10646,45 +7252,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10710,10 +7283,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10743,45 +7312,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10807,10 +7343,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10840,45 +7372,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -10904,10 +7403,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -10937,45 +7432,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11001,10 +7463,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11034,45 +7492,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11098,10 +7523,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11131,45 +7552,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11195,10 +7583,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11228,45 +7612,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11292,10 +7643,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11325,45 +7672,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11389,10 +7703,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11422,45 +7732,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11486,10 +7763,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11519,45 +7792,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11583,10 +7823,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11616,45 +7852,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11680,10 +7883,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11713,45 +7912,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11777,10 +7943,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11810,45 +7972,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11874,10 +8003,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -11907,45 +8032,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -11971,10 +8063,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12004,45 +8092,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12068,10 +8123,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12101,45 +8152,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12165,10 +8183,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12198,45 +8212,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12262,10 +8243,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12295,45 +8272,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12359,10 +8303,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12392,45 +8332,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12456,10 +8363,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12489,45 +8392,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12553,10 +8423,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12586,45 +8452,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12650,10 +8483,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12683,45 +8512,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12747,10 +8543,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12780,45 +8572,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12844,10 +8603,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12877,45 +8632,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -12941,10 +8663,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -12974,45 +8692,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -13038,10 +8723,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13071,45 +8752,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -13135,10 +8783,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13168,45 +8812,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -13232,10 +8843,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13265,45 +8872,12 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
-  </attribute>
-  <attribute>
-    <id>PG</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -13329,10 +8903,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13368,39 +8938,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>INOUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000001</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -13440,10 +8977,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
-  </attribute>
-  <attribute>
     <id>TYPE</id>
     <default>XBUS</default>
   </attribute>
@@ -13475,39 +9008,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -13539,10 +9039,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13574,39 +9070,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -13638,10 +9101,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13673,39 +9132,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -13737,10 +9163,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -13774,35 +9196,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -13873,35 +9266,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -13966,39 +9330,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -14032,10 +9363,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
-  </attribute>
-  <attribute>
     <id>TYPE</id>
     <default>MCA</default>
   </attribute>
@@ -14067,35 +9394,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -14166,35 +9464,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -14259,39 +9528,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -14323,10 +9559,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -14358,39 +9590,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -14422,10 +9621,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -14459,35 +9654,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -14558,35 +9724,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -14651,39 +9788,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -14717,10 +9821,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
-  </attribute>
-  <attribute>
     <id>TYPE</id>
     <default>MCA</default>
   </attribute>
@@ -14752,35 +9852,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -14851,35 +9922,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -14948,39 +9990,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15012,10 +10021,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -15047,39 +10052,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15111,10 +10083,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -15146,39 +10114,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15210,10 +10145,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -15247,35 +10178,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -15346,35 +10248,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -15439,39 +10312,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15505,10 +10345,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
-  </attribute>
-  <attribute>
     <id>TYPE</id>
     <default>MCA</default>
   </attribute>
@@ -15540,35 +10376,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -15639,35 +10446,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -15732,39 +10510,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15796,10 +10541,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -15831,39 +10572,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -15895,10 +10603,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>
@@ -15932,35 +10636,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -16031,35 +10706,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MBA_DIMM</id>
     <default>1</default>
   </attribute>
@@ -16124,39 +10770,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -16190,10 +10803,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
-  </attribute>
-  <attribute>
     <id>TYPE</id>
     <default>MCA</default>
   </attribute>
@@ -16225,35 +10834,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -16322,35 +10902,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MBA_DIMM</id>
@@ -16433,35 +10984,6 @@
     <default>0x00</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -16532,35 +11054,6 @@
   <attribute>
     <id>FSI_PORT</id>
     <default>0x00</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -16639,35 +11132,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>FSICM</default>
   </attribute>
@@ -16742,35 +11206,6 @@
   <attribute>
     <id>FSI_PORT</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -16849,35 +11284,6 @@
     <default>2</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>FSICM</default>
   </attribute>
@@ -16952,35 +11358,6 @@
   <attribute>
     <id>FSI_PORT</id>
     <default>3</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17059,35 +11436,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>FSIM</default>
   </attribute>
@@ -17162,35 +11510,6 @@
   <attribute>
     <id>FSI_PORT</id>
     <default>1</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17269,35 +11588,6 @@
     <default>2</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>FSIM</default>
   </attribute>
@@ -17356,35 +11646,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -17449,35 +11710,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -17552,35 +11784,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -17651,35 +11854,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -17754,35 +11928,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -17853,35 +11998,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -17956,35 +12072,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -18055,35 +12142,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -18158,35 +12216,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -18257,35 +12286,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -18360,35 +12360,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -18459,35 +12430,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -18562,35 +12504,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -18661,35 +12574,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -18764,35 +12648,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -18863,35 +12718,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -18966,35 +12792,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -19065,35 +12862,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -19168,35 +12936,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>I2C_CONNECTION_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -19267,35 +13006,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>I2C_CONNECTION_TYPE</id>
@@ -19370,35 +13080,6 @@
     <default>OUT</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -19459,35 +13140,6 @@
     <default>IN</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -19546,35 +13198,6 @@
   <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -19649,35 +13272,6 @@
     <default>IN</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -19738,39 +13332,6 @@
     <default>1</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE</id>
-    <default>
-      <field>
-        <id>deconfiguredByEid</id>
-        <value/>
-      </field>
-      <field>
-        <id>poweredOn</id>
-        <value/>
-      </field>
-      <field>
-        <id>present</id>
-        <value/>
-      </field>
-      <field>
-        <id>functional</id>
-        <value/>
-      </field>
-      <field>
-        <id>dumpfunctional</id>
-        <value/>
-      </field>
-      <field>
-        <id>specdeconfig</id>
-        <value/>
-      </field>
-    </default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -19802,10 +13363,6 @@
   <attribute>
     <id>RESOURCE_IS_CRITICAL</id>
     <default>0</default>
-  </attribute>
-  <attribute>
-    <id>SCRATCH_UINT8_1</id>
-    <default>5</default>
   </attribute>
   <attribute>
     <id>TYPE</id>

@@ -529,9 +529,6 @@
     	<id>LED_ON_DEFAULT_GPIO_VALUE</id>
     </attribute>
     <attribute>
-    	<id>LED_STRATEGY</id>
-    </attribute>
-    <attribute>
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
@@ -625,9 +622,6 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-    </attribute>
-    <attribute>
-      <id>MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
     </attribute>
     <attribute>
     	<id>MEM_MIRRORING_ALLOWED</id>

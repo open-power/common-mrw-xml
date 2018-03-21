@@ -60,10 +60,6 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-      <default>0x00000009</default>
-    </attribute>
-    <attribute>
       <id>MODEL</id>
       <default>POWER9</default>
     </attribute>
