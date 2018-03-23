@@ -509,7 +509,7 @@
 </attribute>
 
 <attribute>
-    <id>LED_STRATEGY</id>
+    <id>LED-STRATEGY</id>
     <description>The LED service strategy</description>
     <group>SYS_POLICIES</group>
     <simpleType>

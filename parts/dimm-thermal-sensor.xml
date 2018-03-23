@@ -31,10 +31,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default/>
 	</attribute>
@@ -101,10 +97,6 @@
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default/>
 	</attribute>
 	<attribute>

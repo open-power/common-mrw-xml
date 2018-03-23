@@ -1099,10 +1099,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>fan1</value></field>
@@ -1169,10 +1165,6 @@
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default/>
 	</attribute>
 	<attribute>
@@ -1245,10 +1237,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>fan3</value></field>
@@ -1315,10 +1303,6 @@
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default/>
 	</attribute>
 	<attribute>
@@ -1391,10 +1375,6 @@
 		<default/>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>fan5</value></field>
@@ -1461,10 +1441,6 @@
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default/>
 	</attribute>
 	<attribute>

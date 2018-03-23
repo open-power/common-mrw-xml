@@ -69,10 +69,6 @@
     <default>0x0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x00000003</default>
-  </attribute>
-  <attribute>
     <id>IPMI_INSTANCE</id>
     <default/>
   </attribute>
@@ -191,10 +187,6 @@
     <default>0x0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x0</default>
-  </attribute>
-  <attribute>
     <id>IPMI_INSTANCE</id>
     <default>0xFF</default>
   </attribute>
@@ -273,10 +265,6 @@
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
-    <default>0x0</default>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     <default>0x0</default>
   </attribute>
   <attribute>
@@ -389,10 +377,6 @@
     <default>0x0</default>
   </attribute>
   <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default>0x0</default>
-  </attribute>
-  <attribute>
     <id>I2C_ADDRESS</id>
     <default/>
   </attribute>
@@ -478,10 +462,6 @@
     <default/>
   </attribute>
   <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
-    <default/>
-  </attribute>
-  <attribute>
     <id>IPMI_INSTANCE</id>
     <default>0xFF</default>
   </attribute>
@@ -564,10 +544,6 @@
   </attribute>
   <attribute>
     <id>HWAS_STATE_CHANGED_FLAG</id>
-    <default/>
-  </attribute>
-  <attribute>
-    <id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
     <default/>
   </attribute>
   <attribute>
