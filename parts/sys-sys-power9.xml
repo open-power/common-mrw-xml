@@ -529,6 +529,9 @@
     	<id>LED_ON_DEFAULT_GPIO_VALUE</id>
     </attribute>
     <attribute>
+    	<id>LED-STRATEGY</id>
+    </attribute>    
+    <attribute>
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
@@ -681,10 +684,10 @@
       <id>NUMERIC_POD_TYPE_TEST</id>
     </attribute>
     <attribute>
-    	<id>OCC_LOAD_TIMEOUT</id>
+    	<id>OCC-LOAD-TIMEOUT</id>
     </attribute>
     <attribute>
-    	<id>OCC_RESET_TIMEOUT</id>
+    	<id>OCC-RESET-TIMEOUT</id>
     </attribute>
     <attribute>
       <id>PAYLOAD_IN_MIRROR_MEM</id>
@@ -696,13 +699,13 @@
       <id>PCI_REFCLOCK_RCVR_TERM</id>
     </attribute>
     <attribute>
-    	<id>PCIE_DEFAULT_HDDW_SLOT_COUNT</id>
+    	<id>PCIE-DEFAULT-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
-    	<id>PCIE_MAX_HDDW_SLOT_COUNT</id>
+    	<id>PCIE-MAX-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
-    	<id>PCIE_MIN_HDDW_SLOT_COUNT</id>
+    	<id>PCIE-MIN-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
       <id>PHYS_PATH</id>
@@ -753,6 +756,9 @@
     <attribute>
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
+    <attribute>
+      <id>REDUNDANT_MF_CLOCKS</id>
+    </attribute>    
     <attribute>
       <id>REDUNDANT_FSPS</id>
     </attribute>
