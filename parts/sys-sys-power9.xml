@@ -526,6 +526,22 @@
       <default>0</default>
     </attribute>
     <attribute>
+        <id>LED-STRATEGY</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>OCC-LOAD-TIMEOUT</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>OCC-RESET-TIMEOUT</id>
+        <default></default>
+    </attribute>
+    <attribute>
+        <id>REDUNDANT_MF_CLOCKS</id>
+        <default></default>
+    </attribute>
+    <attribute>
     	<id>LED_ON_DEFAULT_GPIO_VALUE</id>
     </attribute>
     <attribute>
