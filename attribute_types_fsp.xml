@@ -666,7 +666,7 @@
 </attribute>
 
 <attribute>
-    <id>PCIE_DEFAULT_HDDW_SLOT_COUNT</id>
+    <id>PCIE-DEFAULT-HDDW-SLOT-COUNT</id>
     <description>The default HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -677,7 +677,7 @@
 </attribute>
 
 <attribute>
-    <id>PCIE_MIN_HDDW_SLOT_COUNT</id>
+    <id>PCIE-MIN-HDDW-SLOT-COUNT</id>
     <description>The minimum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
@@ -688,7 +688,7 @@
 </attribute>
 
 <attribute>
-    <id>PCIE_MAX_HDDW_SLOT_COUNT</id>
+    <id>PCIE-MAX-HDDW-SLOT-COUNT</id>
     <description>The maximum HDDW slot count</description>
     <group>SYS_POLICIES</group>
     <simpleType>
