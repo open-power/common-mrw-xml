@@ -530,6 +530,18 @@
     </attribute>
     <attribute>
     	<id>LED-STRATEGY</id>
+    </attribute>
+    <attribute>
+    	<id>vdd_avsbus_busnum</id>
+    </attribute>
+    <attribute>
+    	<id>vdd_avsbus_rail</id>
+    </attribute>
+    <attribute>
+    	<id>vdn_avsbus_busnum</id>
+    </attribute>
+    <attribute>
+    	<id>vdn_avsbus_rail</id>
     </attribute>    
     <attribute>
       <id>MAX_CHIPLETS_PER_PROC</id>

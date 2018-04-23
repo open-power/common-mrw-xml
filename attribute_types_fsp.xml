@@ -522,6 +522,58 @@
 </attribute>
 
 <attribute>
+    <id>vdd_avsbus_busnum</id>
+    <description>AVS bus settings</description>
+    <group>SYS_POLICIES</group>
+    <simpleType>
+        <string>
+            <default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+    <id>vdd_avsbus_rail</id>
+    <description>AVS bus settings</description>
+    <group>SYS_POLICIES</group>
+    <simpleType>
+        <string>
+            <default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+    <id>vdn_avsbus_busnum</id>
+    <description>AVS bus settings</description>
+    <group>SYS_POLICIES</group>
+    <simpleType>
+        <string>
+            <default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
+    <id>vdn_avsbus_rail</id>
+    <description>AVS bus settings</description>
+    <group>SYS_POLICIES</group>
+    <simpleType>
+        <string>
+            <default>0</default>
+        </string>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
+<attribute>
 	<id>power-def-filenames</id>
 	<description>Names of the system power management def files</description>
 	<group>SYS_POLICIES</group>
