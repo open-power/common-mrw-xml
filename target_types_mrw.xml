@@ -1874,6 +1874,10 @@
         	<id>COOLING_ZONE_MASK</id>
         	<default/>
         </attribute>
+        <attribute>
+        	<id>TARGET-FRU-TYPE</id>
+        	<default/>
+        </attribute>
     </targetType>
     <targetType>
         <id>cooling-zone</id>

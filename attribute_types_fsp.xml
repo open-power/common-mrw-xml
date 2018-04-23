@@ -712,6 +712,18 @@
     <readable/>
 </attribute>
 
+<attribute>
+    <id>TARGET-FRU-TYPE</id>
+    <description>FRU type used for fan control.  String must match name for fan_control_fru section in power_management_[sysName].def </description>
+    <simpleType>
+    <string>
+         <default>planar</default>
+    </string>  
+    </simpleType>  
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+
 <!-- Types of Location code -->
 <!--  RELATIVE : Location code attached to parent card location code  -->
 <!--  ABSOLUTE : Location code attached to system location code (Ufcs) -->
