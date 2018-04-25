@@ -36,6 +36,10 @@
 		<id>RU_TYPE</id>
 		<default/>
 	</attribute>
+        <attribute>
+                <id>TARGET-FRU-TYPE</id>
+                <default/>
+        </attribute>
 	<attribute>
 		<id>TYPE</id>
 		<default>TMP</default>
