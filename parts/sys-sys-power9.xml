@@ -702,10 +702,10 @@
     	<id>PCIE-DEFAULT-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
-    	<id>PCIE-MAX-HDDW-SLOT-COUNT</id>
+    	<id>PCIE-MAXIMUM-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
-    	<id>PCIE-MIN-HDDW-SLOT-COUNT</id>
+    	<id>PCIE-MINIMUM-HDDW-SLOT-COUNT</id>
     </attribute>
     <attribute>
       <id>PHYS_PATH</id>
