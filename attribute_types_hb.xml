@@ -298,10 +298,10 @@
   <attribute>
     <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_AVDD_OFFSET_DISABLE</id>
+      <id>ATTR_MSS_MRW_AVDD_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>MSS_MRW_AVDD_OFFSET_DISABLE</id>
+    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -311,10 +311,10 @@
   <attribute>
     <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VDD_OFFSET_DISABLE</id>
+      <id>ATTR_MSS_MRW_VDD_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>MSS_MRW_VDD_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -324,10 +324,10 @@
   <attribute>
     <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VCS_OFFSET_DISABLE</id>
+      <id>ATTR_MSS_MRW_VCS_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>MSS_MRW_VCS_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -337,10 +337,10 @@
   <attribute>
     <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VPP_OFFSET_DISABLE</id>
+      <id>ATTR_MSS_MRW_VPP_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>MSS_MRW_VPP_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -350,10 +350,10 @@
   <attribute>
     <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VDDR_OFFSET_DISABLE</id>
+      <id>ATTR_MSS_MRW_VDDR_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>MSS_MRW_VDDR_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -592,20 +592,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>FREQ_PB_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The frequency of the memory controller channel. In synchronous mode, this is equivalent to ATTR_FREQ_PB_MHZ. This may be independently set per pair of memory channels if operating in asynchronous mode, but this configuration is not anticipated. This clock drives the MCU queues, and all the associated logic that drives the inputs to the DMI and reads its outputs.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_MCA_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_MCA_MHZ</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -858,6 +844,7 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
@@ -1001,6 +988,7 @@
   </attribute>
   <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_EI_BUS_TX_MSBSWAP</id>
       <macro>DIRECT</macro>
@@ -1609,216 +1597,6 @@
     <simpleType>
       <array>4</array>
       <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FSP BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FSP_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FSP_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FSP BAR creator: platform consumer: p9_setup_bars firmware notes: Defines range mapped for FSP MMIO Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:43</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FSP_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FSP_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000030100000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FSP BAR size value creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FSP_BAR_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FSP_BAR_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0xFFFFFC00FFFFFFFF</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FSP MMIO mask size value creator: platform consumer: p9_setup_bars firmware notes: AND mask applied to RA 32:35 when transmitting address to FSP NOTE: RA 8:31 are always replaced with zero</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FSP_MMIO_MASK_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FSP_MMIO_MASK_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0010000000000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU PHY0 (stack0) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_PHY0_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_PHY0_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU PHY0 (stack0) BAR creator: platform consumer: p9_setup_bars firmware notes: Defines 2MB range (size implied) mapped to PHY0 registers Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:42 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_PHY0_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_PHY0_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000030201200000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU PHY1 (stack1) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_PHY1_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_PHY1_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU PHY1 (stack1) BAR creator: platform consumer: p9_setup_bars firmware notes: Defines 2MB range (size implied) mapped to PHY1 registers Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:42 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_PHY1_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_PHY1_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000030201400000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU MMIO (stack2) BAR creator: platform consumer: p9_setup_bars firmware notes: Defines 16MB range mapped to all NPU registers Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:39 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_MMIO_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_MMIO_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000030200000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NPU MMIO (stack2) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NPU_MMIO_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NPU_MMIO_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PSI Bridge BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PSI_BRIDGE_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PSI_BRIDGE_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PSI Bridge BAR base address offset creator: platform consumer: p9_setup_bars firmware notes: Defines 1MB range (size implied) mapped for PSI host-bridge Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:43 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PSI_BRIDGE_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PSI_BRIDGE_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000030203000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NX RNG BAR enable creator: platform consumer: p9_rng_init_phase2 firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NX_RNG_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NX_RNG_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>NX RNG BAR creator: platform consumer: p9_rng_init_phase2 firmware notes: Defines 8KB range (size implied) mapped for NX RNG function Attributes holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:51 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NX_RNG_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NX_RNG_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x00000302031D0000</default>
-      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -2636,7 +2414,21 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Consumer: p9_pstate_parameter_block -&gt; Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>This attribute denotes where our master proc's memory is located. In the case that the master-proc does not have usable memory, we are going to use another proc's memory to boot. The attribute will be set to the chip and group ID of which proc we want to use.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_MEM_TO_USE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_MEM_TO_USE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Firmware provides a default value of 50mV if this attribute is zero. Consumer: p9_pstate_parameter_block -&gt; p9_setup_evid Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
       <macro>DIRECT</macro>
@@ -2651,7 +2443,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Step delay (binary in microseconds) after a voltage change Consumer: p9_pstate_parameter_block -&gt; Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>This attribute is deprecated and is not consumed. See ATTR_EXTERNAL_VRM_TRANSITION_START_NS, ATTR_EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US, ATTR_EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US, and ATTR_EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPDELAY</id>
       <macro>DIRECT</macro>
@@ -3403,22 +3195,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>The PM_RESET hwp calls special wakeup enable on all EX targets, then will clear auto-special wakeup bit on the core if special wakeup is done. In some cases hostboot does not want these steps of the PM_RESET. This attribute gives the platform the ability to decide if they want to enable special wakeup and clear autowakeup on the cores during PM_RESET</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SKIP_WAKEUP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SKIP_WAKEUP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>env: 1 = Awan/HWSimulator. 0 = Simics/RealHW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IS_SIMULATION</id>
@@ -3540,21 +3316,6 @@
     <readable />
     <simpleType>
       <array>4,10</array>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The C-DIMM ranks that have address mirroring. This data is in the Record:VSPD, Keyword:AM field in C-DIMM VPD. This attribute is only valid for C-DIMMs, an error should be returned if queried from IS-DIMMs. Note: Muliple ranks can be mirrored.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_VPD_DRAM_ADDRESS_MIRRORING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_VPD_DRAM_ADDRESS_MIRRORING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2,2</array>
       <uint8_t />
     </simpleType>
     <writeable />
@@ -3765,19 +3526,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Reflects the functionality of the L4 Cache. Determines if the L4 is enabled or not. See chapter 6 of the Centaur Workbook. On means the full cache is enabled. HALF_A (EVEN) means only A is enabled and HALF_B (ODD) means only B is enabled. For DD1X, the values of UNK_OFF, UNK_ON, UNK_HALF_A and UNK_HALFB were added because early parts did not have the fuses blown correctly, so the cache repairs may not have worked. This value is set by the platform which can get the chips value by running the mss_cen_get_ecid function. Note: Cronus and Firmware plus our initfiles do not really support any of the UNK values. It is the responsibility of the platform to map the UNK values to the appropriate value of OFF/ON/HALF_A/HALF_B</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_CACHE_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_CACHE_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Value of on or off. Determines if prefetching enabled or not. See chapter 7 of the Centaur Workbook.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_PREFETCH_ENABLE</id>
@@ -3920,6 +3668,66 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Slope value used to determine the dynamic VID DDR3 VDDR adjustment for all parts. In uV/Centaur.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_DDR3_VDDR_SLOPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x000000FA</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Intercept value used to determine the dynamic VID DDR3 VDDR adjustment for all parts. In mV.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_DDR3_VDDR_INTERCEPT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_DDR3_VDDR_INTERCEPT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x00000556</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Slope value used to determine the dynamic VID DDR3 VDDR adjustment for all parts. In uV/Centaur.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_DDR4_VDDR_SLOPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_DDR4_VDDR_SLOPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x000000FA</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Intercept value used to determine the dynamic VID DDR3 VDDR adjustment for all parts. In mV.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MSS_DDR4_VDDR_INTERCEPT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MSS_DDR4_VDDR_INTERCEPT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x000004C4</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Possible DRAM voltage override.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_VOLT_OVERRIDE</id>
@@ -3943,6 +3751,49 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Option to control MCS prefetch retry threshold, for performance optimization. This attribute controls the number of retries in the prefetch engine. Retry threshold available ranges from 16 to 30. Note: Values outside those ranges will default to 30. In MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum voltage limit for the dynamic VID DDR3 VDDR voltage setpoint. In mV.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x00000591</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum voltage limit for the dynamic VID DDR4 VDDR voltage setpoint. In mV.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CEN_MRW_DDR4_VDDR_MAX_LIMIT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CEN_MRW_DDR4_VDDR_MAX_LIMIT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x000004f6</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -4826,18 +4677,6 @@
         <default>0x0003E00000000000</default>
       </uint64_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicate that payload should be placed in mirrored memory. Set by the FSP based on the value of the registry key indicating the memory mirroring mode.</description>
-    <id>PAYLOAD_IN_MIRROR_MEM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>NPU MMIO BAR base address values creator: platform consumer: proc_setup_bars firmware notes: 64-bit address representing BAR RA NOTE: BAR register covers RA 14:51 first dimension: unit number (0:3) second dimension: BAR number (0:1)</description>
@@ -6291,21 +6130,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>System Mirrorable base address</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MIRROR_BASE_ADDRESS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MIRROR_BASE_ADDRESS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0000800000000000</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>PCIE PHB valid mask creator: platform consumer: proc_pcie_scominit firmware notes: Bit mask defining set of active/valid PHBs bit0=PHB0, bit1=PHB1, bit2=PHB2, bit3=PHB3</description>
     <id>PROC_PCIE_PHB_ACTIVE</id>
     <persistency>non-volatile</persistency>
@@ -6768,6 +6592,18 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Due to fabric limitations, we can only enable 2 links at a time during wrap testing. This attribute defines which set this ABUS link belong to. This attribute will live on the OBUS target. The value will come from MRW. When the value for this attribute matches MFG_WRAP_TEST_ABUS_LINKS_SET_ENABLE, then we leave the OBUSes configured. Otherwise, we deconfigure them.</description>
+    <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <enumeration>
+        <default>SET_NONE</default>
+        <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
+      </enumeration>
     </simpleType>
   </attribute>
   <attribute>
@@ -7604,6 +7440,28 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Used to enable Vdd current overflow worakaround. To enable this attribute should be set to 1 and MAX_VDD_CURRENT_READING must be populated. Set to 0 to disable.</description>
+    <id>VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x0000</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum theoretical Vdd current reading in 10mA units. Used when VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE is set.</description>
+    <id>MAX_VDD_CURRENT_READING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x0000</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_chip</description>
     <id>MRW_SAFEMODE_MEM_THROTTLE_NUMERATOR_PER_CHIP</id>
     <persistency>non-volatile</persistency>
@@ -7674,62 +7532,62 @@
   <enumerationType>
     <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLE</name>
+      <name>ENABLE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLE</name>
+      <name>DISABLE</name>
       <value>0</value>
     </enumerator>
-    <id>MSS_MRW_AVDD_OFFSET_DISABLE</id>
+    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLE</name>
+      <name>ENABLE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLE</name>
+      <name>DISABLE</name>
       <value>0</value>
     </enumerator>
-    <id>MSS_MRW_VDD_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLE</name>
+      <name>ENABLE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLE</name>
+      <name>DISABLE</name>
       <value>0</value>
     </enumerator>
-    <id>MSS_MRW_VCS_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLE</name>
+      <name>ENABLE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLE</name>
+      <name>DISABLE</name>
       <value>0</value>
     </enumerator>
-    <id>MSS_MRW_VPP_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLE</name>
+      <name>ENABLE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLE</name>
+      <name>DISABLE</name>
       <value>0</value>
     </enumerator>
-    <id>MSS_MRW_VDDR_OFFSET_DISABLE</id>
+    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
@@ -8394,158 +8252,6 @@
       <value>0xFFFFFFFFFFFFFFFF</value>
     </enumerator>
     <id>PROC_PCIE_BAR_SIZE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>FSP BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_FSP_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>FSP BAR size value creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>4_GB</name>
-      <value>0xFFFFFC00FFFFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>2_GB</name>
-      <value>0xFFFFFC007FFFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>1_GB</name>
-      <value>0xFFFFFC003FFFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>512_MB</name>
-      <value>0xFFFFFC001FFFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>256_MB</name>
-      <value>0xFFFFFC000FFFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>128_MB</name>
-      <value>0xFFFFFC0007FFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>64_MB</name>
-      <value>0xFFFFFC0003FFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>32_MB</name>
-      <value>0xFFFFFC0001FFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>16_MB</name>
-      <value>0xFFFFFC0000FFFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>8_MB</name>
-      <value>0xFFFFFC00007FFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>4_MB</name>
-      <value>0xFFFFFC00003FFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>2_MB</name>
-      <value>0xFFFFFC00001FFFFF</value>
-    </enumerator>
-    <enumerator>
-      <name>1_MB</name>
-      <value>0xFFFFFC00000FFFFF</value>
-    </enumerator>
-    <id>PROC_FSP_BAR_SIZE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>FSP MMIO mask size value creator: platform consumer: p9_setup_bars firmware notes: AND mask applied to RA 32:35 when transmitting address to FSP NOTE: RA 8:31 are always replaced with zero</description>
-    <enumerator>
-      <name>4_GB</name>
-      <value>0x00F0000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>2_GB</name>
-      <value>0x0070000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>1_GB</name>
-      <value>0x0030000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>512_MB</name>
-      <value>0x0010000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>256_MB</name>
-      <value>0x0000000000000000</value>
-    </enumerator>
-    <id>PROC_FSP_MMIO_MASK_SIZE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>NPU PHY0 (stack0) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_NPU_PHY0_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>NPU PHY1 (stack1) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_NPU_PHY1_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>NPU MMIO (stack2) BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_NPU_MMIO_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>PSI Bridge BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_PSI_BRIDGE_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>NX RNG BAR enable creator: platform consumer: p9_rng_init_phase2 firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_NX_RNG_BAR_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Enable optional post of interrupt when both NX RNG noise sources have failed creator: platform consumer: p9_rng_init_phase2 firmware notes: none</description>
@@ -10348,42 +10054,6 @@
     <id>CEN_MRW_MBA_CACHELINE_INTERLEAVE_MODE_CONTROL</id>
   </enumerationType>
   <enumerationType>
-    <description>Reflects the functionality of the L4 Cache. Determines if the L4 is enabled or not. See chapter 6 of the Centaur Workbook. On means the full cache is enabled. HALF_A (EVEN) means only A is enabled and HALF_B (ODD) means only B is enabled. For DD1X, the values of UNK_OFF, UNK_ON, UNK_HALF_A and UNK_HALFB were added because early parts did not have the fuses blown correctly, so the cache repairs may not have worked. This value is set by the platform which can get the chips value by running the mss_cen_get_ecid function. Note: Cronus and Firmware plus our initfiles do not really support any of the UNK values. It is the responsibility of the platform to map the UNK values to the appropriate value of OFF/ON/HALF_A/HALF_B</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>HALF_A</name>
-      <value>3</value>
-    </enumerator>
-    <enumerator>
-      <name>HALF_B</name>
-      <value>5</value>
-    </enumerator>
-    <enumerator>
-      <name>UNK_OFF</name>
-      <value>8</value>
-    </enumerator>
-    <enumerator>
-      <name>UNK_ON</name>
-      <value>9</value>
-    </enumerator>
-    <enumerator>
-      <name>UNK_HALF_A</name>
-      <value>0xB</value>
-    </enumerator>
-    <enumerator>
-      <name>UNK_HALF_B</name>
-      <value>0xD</value>
-    </enumerator>
-    <id>CEN_MSS_CACHE_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Value of on or off. Determines if prefetching enabled or not. See chapter 7 of the Centaur Workbook.</description>
     <enumerator>
       <name>OFF</name>
@@ -11656,6 +11326,22 @@
       <value>2</value>
     </enumerator>
     <id>FUSED_CORE_MODE_HB</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enum for MFG_WRAP_TEST_ABUS_LINKS_SET</description>
+    <enumerator>
+      <name>SET_NONE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>SET_1</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>SET_2</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
   </enumerationType>
   <enumerationType>
     <description>Enumeration defining the offsets into the IPMI_SENSORS array.</description>

@@ -232,24 +232,6 @@
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
-      <id>PROC_FSP_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY0_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY1_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_MMIO_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PSI_BRIDGE_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NX_RNG_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
     </attribute>
     <attribute>
@@ -371,6 +353,9 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
+    </attribute>
+    <attribute>
+      <id>PROC_MEM_TO_USE</id>
     </attribute>
     <attribute>
       <id>VDD_AVSBUS_BUSNUM</id>
@@ -586,10 +571,25 @@
       <id>CEN_MSS_VREF_CAL_CNTL</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_CACHE_ENABLE</id>
+      <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR3_VDDR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR4_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR4_VDDR_INTERCEPT</id>
     </attribute>
     <attribute>
       <id>CEN_MSS_VOLT_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MRW_DDR4_VDDR_MAX_LIMIT</id>
     </attribute>
     <attribute>
       <id>IO_DMI_CEN_TX_MARGIN_RATIO</id>
@@ -727,9 +727,6 @@
     </attribute>
     <attribute>
       <id>PCI_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>MIRROR_BASE_ADDRESS</id>
     </attribute>
     <attribute>
       <default>SYS</default>
@@ -876,9 +873,6 @@
     </attribute>
     <attribute>
       <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
-    </attribute>
-    <attribute>
-      <id>PAYLOAD_IN_MIRROR_MEM</id>
     </attribute>
     <attribute>
       <id>EFFECTIVE_EC</id>
@@ -1214,6 +1208,12 @@
       <id>REPORT_THROTTLE_BELOW_NOMINAL</id>
     </attribute>
     <attribute>
+      <id>VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MAX_VDD_CURRENT_READING</id>
+    </attribute>
+    <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
@@ -1274,19 +1274,19 @@
       <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_AVDD_OFFSET_DISABLE</id>
+      <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VDD_OFFSET_DISABLE</id>
+      <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VCS_OFFSET_DISABLE</id>
+      <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VPP_OFFSET_DISABLE</id>
+      <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_VDDR_OFFSET_DISABLE</id>
+      <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_FINE_REFRESH_MODE</id>
@@ -1332,9 +1332,6 @@
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_MCA_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_A_MHZ</id>
@@ -1410,30 +1407,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FSP_MMIO_MASK_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY0_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_PHY1_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NPU_MMIO_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PSI_BRIDGE_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NX_RNG_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET</id>
@@ -1586,9 +1559,6 @@
       <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
     </attribute>
     <attribute>
-      <id>SKIP_WAKEUP</id>
-    </attribute>
-    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -1641,6 +1611,9 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_WR_VREF_CHECK_VREF_STEP_SIZE</id>
@@ -2335,6 +2308,9 @@
       <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
+      <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
+    </attribute>
+    <attribute>
       <id>OPTICS_CONFIG_MODE</id>
     </attribute>
     <attribute>
@@ -2776,9 +2752,6 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_DRAM_ADDRESS_MIRRORING</id>
     </attribute>
     <attribute>
       <id>CEN_EFF_DRAM_WR_VREF</id>
