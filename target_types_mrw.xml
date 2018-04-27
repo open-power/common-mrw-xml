@@ -1618,6 +1618,24 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>dummy-logic-value</id>
+		<parent>mrw-chip</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>GPIO_EXPANDER</default>
+		</attribute>
+		<attribute>
+			<id>LOGIC_VALUE</id>
+			<default/>
+		</attribute>
+	</targetType>
+	<targetType>
 		<id>chip-vreg-generic</id>
 		<parent>mrw-chip</parent>
 		<parent_type>card-motherboard</parent_type>

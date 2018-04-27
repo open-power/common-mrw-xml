@@ -1355,6 +1355,18 @@
 		<global/>
 	</attribute>	
 	<attribute>
+		<id>LOGIC_VALUE</id>
+		<description>Logic value 0 or 1</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>volatile-zeroed</persistency>
+		<readable/>
+		<writeable/>
+		<global/>
+	</attribute>	
+	<attribute>
 		<id>MRU_PREFIX</id>
 		<description>Prefix to generate MRU_ID's with</description>
 		<simpleType>
