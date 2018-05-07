@@ -532,6 +532,10 @@
 		<enumerator>
 			<name>STANDBY-GOOD</name>
 			<value>7</value>
+		</enumerator>
+		<enumerator>
+		        <name>ENC-POWER</name>
+		        <value>8</value>
 		</enumerator>						
 		<default>NA</default>		
 		</enumerationType>
@@ -1916,6 +1920,22 @@
 		<readable/>
 		<writeable/>
 	</attribute>
+        <attribute>
+                <id>CONFIG_APPLY</id>
+                <description>
+                       Specifies in which node configuration this bus is 
+                       applicable to, it is a string value with node numbers 
+                       seperated by comma, further a value of "w" is used 
+                       for wrap test and a value of "d" is used for default 
+                       and specifies all nodes 
+                </description>
+                <simpleType>
+                        <string/>
+                </simpleType>
+                <persistency>non-volatile</persistency>
+                <readable/>
+		<writeable/>
+        </attribute>
 	<attribute>
 		<id>DEST_TX_MSBSWAP</id>
 		<description>
