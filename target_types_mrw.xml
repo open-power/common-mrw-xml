@@ -3982,6 +3982,30 @@
     	<default>NA</default>
     </attribute>    
 </targetType>
+<targetType>
+    <id>unit-obus-smpgroup</id>
+    <parent>unit-obus-power9</parent>
+    <attribute>
+        <id>BUS_TYPE</id>
+        <default>ABUS</default>
+    </attribute>
+    <attribute>
+         <id>DIRECTION</id>
+         <default>INOUT</default>
+    </attribute>
+    <attribute>
+         <id>CLASS</id>
+         <default>UNIT</default>
+    </attribute>
+    <attribute>
+         <id>MRW_TYPE</id>
+         <default>NA</default>
+    </attribute>
+    <attribute>
+         <id>CHIP_UNIT</id>
+         <default/>
+    </attribute>            
+</targetType>
 
 <!-- NV
      Nimbus : 6 per chip
