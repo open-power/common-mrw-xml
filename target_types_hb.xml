@@ -2056,6 +2056,10 @@
       <default>CUMULUS</default>
       <id>MODEL</id>
     </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
+    </attribute>
     <id>unit-mc-cumulus</id>
     <parent>unit-mc-power9</parent>
   </targetType>
@@ -2085,6 +2089,10 @@
     <attribute>
       <default>CUMULUS</default>
       <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <id>unit-mi-cumulus</id>
     <parent>unit-mi-power9</parent>
@@ -2130,6 +2138,10 @@
     <attribute>
       <default>CUMULUS</default>
       <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <id>unit-dmi-cumulus</id>
     <parent>unit-dmi-power9</parent>
@@ -2730,6 +2742,10 @@
     <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>1</default>
+      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <id>unit-l4-centaur</id>
     <parent>unit-l4-power9</parent>

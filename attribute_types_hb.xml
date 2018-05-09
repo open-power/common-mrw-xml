@@ -4498,7 +4498,6 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Logical fabric chip ID associated with this chip. Directly drives programming of pervasive chip ID registers (PIR). Compared with ATTR_PROC_EFF_FABRIC_CHIP_ID to configure FBC XOR masking. Provided by the MRW.</description>
@@ -4514,7 +4513,6 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines a negative percentage value that is applied to the ATTR_NOMINAL_FREQ_MHZ determined from MVPD #V. It is used to explicitly raise the value of MIN_FREQ_MHZ above what is specified by MVPD #V data. On FSP systems this is sourced from the power_management def file. Value must be between 0 and -100. A value of zero indicates no override.</description>
