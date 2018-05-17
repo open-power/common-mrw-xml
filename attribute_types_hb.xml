@@ -1208,6 +1208,34 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This attribute provides a place for Hostboot to save off the IO_OLLFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OLLFIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OLLFIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>This attribute provides a place for Hostboot to save off the PB_IOOFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_PB_IOOFIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_PB_IOOFIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Indicates if the Obus channel is a board or a cable</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_O_CHANNEL_TYPE</id>
@@ -3926,6 +3954,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Location code of the Fru target</description>
+    <id>LOCATION_CODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <sizeInclNull>64</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Physical hierarchical path to the target</description>
     <id>PHYS_PATH</id>
     <nativeType>
@@ -4025,6 +4064,18 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Block speculative deconfig in reconfig loop. Flags when speculative deconfigurations should not be done for predictive gard records on a reconfig loop IPL due to out of hardware condition on prior IPL. 0 = Allow speculative deconfiguration 1 = Block speculative deconfiguration</description>
+    <id>BLOCK_SPEC_DECONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <complexType>
       <description>Numeric POD type test structure</description>
       <field>
@@ -4092,17 +4143,6 @@
     <id>NUMERIC_POD_TYPE_TEST</id>
     <persistency>non-volatile</persistency>
     <readable />
-  </attribute>
-  <attribute>
-    <description>If the Target is directly deconfigurable and GARDable; target may still be deconfigured in 'by association' processing.</description>
-    <id>DECONFIG_GARDABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <complexType>
@@ -4498,7 +4538,6 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Logical fabric chip ID associated with this chip. Directly drives programming of pervasive chip ID registers (PIR). Compared with ATTR_PROC_EFF_FABRIC_CHIP_ID to configure FBC XOR masking. Provided by the MRW.</description>
@@ -4514,7 +4553,6 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines a negative percentage value that is applied to the ATTR_NOMINAL_FREQ_MHZ determined from MVPD #V. It is used to explicitly raise the value of MIN_FREQ_MHZ above what is specified by MVPD #V data. On FSP systems this is sourced from the power_management def file. Value must be between 0 and -100. A value of zero indicates no override.</description>
@@ -10633,6 +10671,10 @@
     <enumerator>
       <name>HOSTSVC_HBEL</name>
       <value>0x00000008</value>
+    </enumerator>
+    <enumerator>
+      <name>RESRC_RECOV</name>
+      <value>0x00000010</value>
     </enumerator>
     <id>HWAS_CHANGED_BIT</id>
   </enumerationType>
