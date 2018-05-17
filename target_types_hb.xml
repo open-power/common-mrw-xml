@@ -20,10 +20,6 @@
     </attribute>
     <attribute>
       <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
       <id>RESOURCE_IS_CRITICAL</id>
     </attribute>
     <id>base</id>
@@ -76,10 +72,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>HOT_PLUG_POWER_CONTROLLER_INFO</id>
@@ -185,6 +177,9 @@
       <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
     </attribute>
     <attribute>
+      <id>LOCATION_CODE</id>
+    </attribute>
+    <attribute>
       <default>0x00000000</default>
       <id>PROC_HW_TOPOLOGY</id>
     </attribute>
@@ -230,6 +225,9 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
       <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
@@ -507,10 +505,6 @@
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
@@ -605,6 +599,9 @@
       <default>CARD</default>
       <id>CLASS</id>
     </attribute>
+    <attribute>
+      <id>LOCATION_CODE</id>
+    </attribute>
     <id>card</id>
     <parent>base</parent>
   </targetType>
@@ -619,10 +616,6 @@
     </attribute>
     <attribute>
       <id>POSITION</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>TEMP_SENSOR_I2C_CONFIG</id>
@@ -828,6 +821,9 @@
     </attribute>
     <attribute>
       <id>RCD_PARITY_RECONFIG_LOOPS_ALLOWED</id>
+    </attribute>
+    <attribute>
+      <id>BLOCK_SPEC_DECONFIG</id>
     </attribute>
     <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
@@ -1638,10 +1634,6 @@
       <id>FIELD_CORE_OVERRIDE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>NODE</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1849,10 +1841,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1871,10 +1859,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1891,10 +1875,6 @@
     <attribute>
       <default>CORE</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>CPU</default>
@@ -1916,10 +1896,6 @@
     <attribute>
       <default>MCS</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
@@ -1960,10 +1936,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -1991,10 +1963,6 @@
     <attribute>
       <default>MCBIST</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>MEM</default>
@@ -2035,10 +2003,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -2065,10 +2029,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -2093,10 +2053,6 @@
     <attribute>
       <default>DMI</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>MEM</default>
@@ -2140,10 +2096,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
     </attribute>
     <attribute>
@@ -2164,10 +2116,6 @@
     <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
@@ -2250,10 +2198,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
     </attribute>
@@ -2297,10 +2241,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <id>PEER_TARGET</id>
     </attribute>
     <attribute>
@@ -2333,6 +2273,9 @@
     </attribute>
     <attribute>
       <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
+    </attribute>
+    <attribute>
+      <id>IO_OLLFIR_MASK</id>
     </attribute>
     <attribute>
       <id>IO_O_CHANNEL_TYPE</id>
@@ -2372,10 +2315,6 @@
       <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
-      <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
     </attribute>
     <attribute>
@@ -2412,10 +2351,6 @@
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
     </attribute>
-    <attribute>
-      <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
     <id>unit-obus-smpgroup</id>
     <parent>unit</parent>
   </targetType>
@@ -2423,10 +2358,6 @@
     <attribute>
       <default>NPU</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <id>unit-npu-power9</id>
     <parent>unit</parent>
@@ -2451,10 +2382,6 @@
     <attribute>
       <default>PPE</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2487,10 +2414,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2519,10 +2442,6 @@
     <attribute>
       <default>XBUS</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>PEER_TARGET</id>
@@ -2586,10 +2505,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <default>
         <field>
           <id>supportsFsiScom</id>
@@ -2643,10 +2558,6 @@
     <attribute>
       <default>SBE</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2710,10 +2621,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
-    </attribute>
-    <attribute>
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
@@ -2738,10 +2645,6 @@
     <attribute>
       <default>MBA</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>MEM</default>
@@ -2781,10 +2684,6 @@
     <attribute>
       <default>NX</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>1</default>
-      <id>DECONFIG_GARDABLE</id>
     </attribute>
     <attribute>
       <default>
