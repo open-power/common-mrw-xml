@@ -1962,6 +1962,19 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>System specific value for Filter PLL bucket, provided by MRW. If non-zero, this value will directly set ATTR_FILTER_PLL_BUCKET (used by SBE to select bucket). If zero, VPD MK content will set ATTR_FILTER_PLL_BUCKET.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_FILTER_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_FILTER_PLL_BUCKET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>EQ boot frequency multiplier The equation for this setting is BOOT_FREQ(MHz)/(REFCLK/DPLL_DIVIDER) where the DPLL DIVIDER is planned for being set to 8. The value needs to be loaded right justified. The value's right most 11 bits (becoming 0:10) is written as bits 17:27 of PPM DPLL freq ctrl register. Bits 0:7 become DPLL.MULT_INTG(0:7) and bits 8:10 are DPLL.MULT_FRAC(0:2). As an example: 3000MHz / (133MHz/8) = 3000 / 16.667 = ~180 =&gt; 0xB4</description>
     <hwpfToHbAttrMap>
       <id>ATTR_BOOT_FREQ_MULT</id>
