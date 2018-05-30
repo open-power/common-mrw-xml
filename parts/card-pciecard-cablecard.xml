@@ -4,11 +4,15 @@
     <child_id>pciep</child_id>
     <child_id>i2c-slave</child_id>
     <child_id>pgood</child_id>
-	<child_id>enable</child_id>
+    <child_id>enable</child_id>
 	<child_id>presence</child_id>
 	<child_id>cablecard-PCA9551</child_id>
 	<child_id>cablecard-TMP275A</child_id>
 	<child_id>clk-in</child_id>
+	<child_id>cablecard-CXP-TOP</child_id>
+	<child_id>cablecard-CXP-BOT</child_id>
+        <child_id>cablecard-LED-CXP-TOP</child_id>
+	<child_id>cablecard-LED-CXP-BOT</child_id>
 	<attribute>
 		<id>CARD_TYPE</id>
 		<default>PCIE</default>
@@ -149,6 +153,28 @@
     <position>-1</position>
     <type>chip-PCA9551</type>
   </targetPart>
+    <targetPart>
+    <id>cablecard-CXP-TOP</id>
+	<child_id>generic-logic-assoc</child_id>
+	<child_id>presence</child_id>
+	<child_id>CXP.i2c</child_id>
+	<child_id>CXP.RESET</child_id>
+    <instance_name>cablecard-CXP-TOP</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>chip-cxp-blackbox</type>
+  </targetPart>
+  <targetPart>
+    <id>cablecard-CXP-BOT</id>
+	 <child_id>generic-logic-assoc</child_id>
+	<child_id>presence</child_id>
+	<child_id>CXP.i2c</child_id>
+	<child_id>CXP.RESET</child_id>
+    <instance_name>cablecard-CXP-BOT</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>chip-cxp-blackbox</type>
+  </targetPart>
   <targetPart>
     <id>cablecard-TMP275A</id>
     <child_id>TMP275A-i2c</child_id>
@@ -156,6 +182,32 @@
     <is_root>false</is_root>
     <position>-1</position>
     <type>chip-tmp-device</type>
+  </targetPart>
+  <targetPart>
+    <id>cablecard-LED-CXP-TOP</id>
+    <child_id>led_enable</child_id>
+    <child_id>generic-logic-assoc</child_id>
+    <instance_name>cablecard-LED-CXP-TOP</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>led-led-generic</type>
+    <attribute>
+      <id>LED_COLOR</id>
+      <default>AMBER</default>
+    </attribute>
+  </targetPart>
+  <targetPart>
+    <id>cablecard-LED-CXP-BOT</id>
+    <child_id>led_enable</child_id>
+    <child_id>generic-logic-assoc</child_id>
+    <instance_name>cablecard-LED-CXP-BOT</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>led-led-generic</type>
+    <attribute>
+      <id>LED_COLOR</id>
+      <default>AMBER</default>
+    </attribute>
   </targetPart>
   <targetPart>
     <id>TMP275A-i2c</id>
