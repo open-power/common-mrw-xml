@@ -1146,6 +1146,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
+        <global/>
 	</attribute>	
 	<attribute>
 		<id>SLOT_TYPE</id>
