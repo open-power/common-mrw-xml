@@ -2063,6 +2063,10 @@
 			<id>DIRECTION</id>
 			<default>IN</default>
 		</attribute>
+		<attribute>
+			<id>SLOT_INDEX</id>
+			<default>-1</default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>chip-pcie-endpoint</id>
