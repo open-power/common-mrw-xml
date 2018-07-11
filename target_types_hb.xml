@@ -377,9 +377,6 @@
       <id>VCS_I2C_BUSNUM</id>
     </attribute>
     <attribute>
-      <id>VCS_I2C_RAIL</id>
-    </attribute>
-    <attribute>
       <id>PM_APSS_CHIP_SELECT</id>
     </attribute>
     <attribute>
@@ -547,12 +544,6 @@
       <id>DUMMY_RW</id>
     </attribute>
     <attribute>
-      <id>CEN_VPD_CDIMM_SENSOR_MAP_PRIMARY</id>
-    </attribute>
-    <attribute>
-      <id>CEN_VPD_CDIMM_SENSOR_MAP_SECONDARY</id>
-    </attribute>
-    <attribute>
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
     </attribute>
     <attribute>
@@ -631,7 +622,13 @@
       <id>MBA_PORT</id>
     </attribute>
     <attribute>
+      <id>MEM_PORT</id>
+    </attribute>
+    <attribute>
       <id>MBA_DIMM</id>
+    </attribute>
+    <attribute>
+      <id>POS_ON_MEM_PORT</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
@@ -650,9 +647,6 @@
     </attribute>
     <attribute>
       <id>CEN_MBA_DIMM</id>
-    </attribute>
-    <attribute>
-      <id>CEN_BAD_DQ_BITMAP</id>
     </attribute>
     <id>lcard-dimm</id>
     <parent>card</parent>
@@ -1051,6 +1045,9 @@
       <id>ASCII_VPD_LX_KEYWORD</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_BRAND_NAME</id>
+    </attribute>
+    <attribute>
       <id>OPEN_POWER_PM_MODE</id>
     </attribute>
     <attribute>
@@ -1192,6 +1189,9 @@
       <id>OPAL_MODEL</id>
     </attribute>
     <attribute>
+      <id>IS_MPIPL_SUPPORTED</id>
+    </attribute>
+    <attribute>
       <id>PROC_SOCKET_POWER_WATTS</id>
     </attribute>
     <attribute>
@@ -1325,6 +1325,9 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ</id>
@@ -1474,9 +1477,6 @@
       <id>EXTERNAL_VRM_STEPSIZE</id>
     </attribute>
     <attribute>
-      <id>EXTERNAL_VRM_STEPDELAY</id>
-    </attribute>
-    <attribute>
       <id>EXTERNAL_VRM_TRANSITION_START_NS</id>
     </attribute>
     <attribute>
@@ -1556,6 +1556,9 @@
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
+    </attribute>
+    <attribute>
+      <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -2257,9 +2260,6 @@
       <id>OPTICS_CONFIG_MODE</id>
     </attribute>
     <attribute>
-      <id>LINK_TRAIN</id>
-    </attribute>
-    <attribute>
       <id>IO_O_DEBUG</id>
     </attribute>
     <attribute>
@@ -2452,9 +2452,6 @@
     <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>LINK_TRAIN</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
