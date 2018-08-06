@@ -559,9 +559,6 @@
       <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_VREF_CAL_CNTL</id>
-    </attribute>
-    <attribute>
       <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
     </attribute>
     <attribute>
