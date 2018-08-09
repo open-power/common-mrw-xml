@@ -1897,6 +1897,34 @@
         	<default/>
         </attribute>
     </targetType>
+	<targetType>
+        <id>chip-lab-tmp-device</id>
+        <parent>mrw-chip</parent>
+        <parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+        <attribute>
+            <id>I2C_ADDRESS</id>
+        </attribute>
+        <attribute>
+            <id>I2C_SPEED</id>
+        </attribute>
+        <attribute>
+            <id>TYPE</id>
+            <default>NA</default>
+        </attribute>
+        <attribute>
+            <id>MRW_TYPE</id>
+            <default>TMP</default>
+        </attribute>
+        <attribute>
+        	<id>COOLING_ZONE_MASK</id>
+        	<default/>
+        </attribute>
+        <attribute>
+        	<id>TARGET-FRU-TYPE</id>
+        	<default/>
+        </attribute>
+    </targetType>
     <targetType>
         <id>cooling-zone</id>
         <parent>mrw-base</parent>
