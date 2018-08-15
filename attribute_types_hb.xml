@@ -3434,21 +3434,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Training Control over IPL - ENUM - 0x00=DISABLE /Skip V-ref Train; 0x01=P8_DRAM - Enable V-Ref Train DRAM Level (P8 algorithm); 0x02=P8_RANK Level Training (P8 algorithm); 0x03=Box shmoo; 0x04=Ternary shmoo Default Value = 0x03 for box shmoo on all platforms</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_VREF_CAL_CNTL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_VREF_CAL_CNTL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x3</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Controls search boundaries for WR_VREF Ternary shmoo. Value is a delta of register ticks from nominal Default Value = 0x08 (taken from characterization values), Max value = 0x19</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_VREF_CAL_DELTA_FROM_NOMINAL</id>
@@ -9775,30 +9760,6 @@
     <id>CEN_MSS_FREQ_OVERRIDE</id>
   </enumerationType>
   <enumerationType>
-    <description>Training Control over IPL - ENUM - 0x00=DISABLE /Skip V-ref Train; 0x01=P8_DRAM - Enable V-Ref Train DRAM Level (P8 algorithm); 0x02=P8_RANK Level Training (P8 algorithm); 0x03=Box shmoo; 0x04=Ternary shmoo Default Value = 0x03 for box shmoo on all platforms</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>P8_DRAM</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>P8_RANK</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>BOX</name>
-      <value>3</value>
-    </enumerator>
-    <enumerator>
-      <name>TERNARY</name>
-      <value>4</value>
-    </enumerator>
-    <id>CEN_MSS_VREF_CAL_CNTL</id>
-  </enumerationType>
-  <enumerationType>
     <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none This is the nominal value This is for DDR3</description>
     <enumerator>
       <name>VDD420</name>
@@ -10695,8 +10656,28 @@
       <value>71</value>
     </enumerator>
     <enumerator>
-      <name>LAST_IN_RANGE</name>
+      <name>OMI</name>
       <value>72</value>
+    </enumerator>
+    <enumerator>
+      <name>MCC</name>
+      <value>73</value>
+    </enumerator>
+    <enumerator>
+      <name>OMIC</name>
+      <value>74</value>
+    </enumerator>
+    <enumerator>
+      <name>OCMB_CHIP</name>
+      <value>75</value>
+    </enumerator>
+    <enumerator>
+      <name>MEM_PORT</name>
+      <value>76</value>
+    </enumerator>
+    <enumerator>
+      <name>LAST_IN_RANGE</name>
+      <value>77</value>
     </enumerator>
     <id>TYPE</id>
   </enumerationType>
@@ -10727,8 +10708,14 @@
       <name>CUMULUS</name>
     </enumerator>
     <enumerator>
+      <name>AXONE</name>
+    </enumerator>
+    <enumerator>
       <name>CENTAUR</name>
       <value>48</value>
+    </enumerator>
+    <enumerator>
+      <name>EXPLORER</name>
     </enumerator>
     <enumerator>
       <name>JEDEC</name>
