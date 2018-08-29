@@ -609,6 +609,18 @@
       <default>POWER9</default>
     </attribute>
     <attribute>
+        <id>MSL_MFG_ALLOW</id>
+    </attribute>
+    <attribute>
+        <id>MSL_FIELD_SUPPORTED</id>
+    </attribute>
+    <attribute>
+        <id>MSL_LAB_ONLY_SUPPORT</id>
+    </attribute>
+    <attribute>
+        <id>ALLOWED_MIXES</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
     </attribute>
     <attribute>
