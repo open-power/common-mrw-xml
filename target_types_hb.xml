@@ -479,6 +479,46 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>OCMB_CHIP</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <id>chip-ocmb</id>
+    <parent>chip</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>EXPLORER</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>chip-ocmb-explorer</id>
+    <parent>chip-ocmb</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM_PORT</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mem_port</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
       <default>MEMBUF</default>
       <id>TYPE</id>
     </attribute>
@@ -557,9 +597,6 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_VREF_CAL_CNTL</id>
     </attribute>
     <attribute>
       <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
@@ -2040,6 +2077,14 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mc-axone</id>
+    <parent>unit-mc-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
       <default>MI</default>
       <id>TYPE</id>
     </attribute>
@@ -2063,6 +2108,66 @@
     </attribute>
     <id>unit-mi-cumulus</id>
     <parent>unit-mi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mi-axone</id>
+    <parent>unit-mi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>OMIC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-omic-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-omic-axone</id>
+    <parent>unit-omic-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MCC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mcc-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mcc-axone</id>
+    <parent>unit-mcc-power9</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2104,6 +2209,32 @@
     </attribute>
     <id>unit-dmi-cumulus</id>
     <parent>unit-dmi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>OMI</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-omi-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-omi-axone</id>
+    <parent>unit-omi-power9</parent>
   </targetType>
   <targetType>
     <attribute>
