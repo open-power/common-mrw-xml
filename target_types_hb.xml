@@ -4,7 +4,7 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>TYPE</id>
+      <id>HWAS_STATE_CHANGED_FLAG</id>
     </attribute>
     <attribute>
       <id>MODEL</id>
@@ -16,13 +16,24 @@
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
-      <id>HWAS_STATE_CHANGED_FLAG</id>
-    </attribute>
-    <attribute>
       <default>0</default>
       <id>RESOURCE_IS_CRITICAL</id>
     </attribute>
+    <attribute>
+      <id>TYPE</id>
+    </attribute>
     <id>base</id>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CARD</default>
+      <id>CLASS</id>
+    </attribute>
+    <attribute>
+      <id>LOCATION_CODE</id>
+    </attribute>
+    <id>card</id>
+    <parent>base</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -30,60 +41,247 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>POSITION</id>
+      <id>FRU_ID</id>
     </attribute>
     <attribute>
       <id>FSI_OPTION_FLAGS</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <id>POSITION</id>
     </attribute>
     <id>chip</id>
     <parent>base</parent>
   </targetType>
   <targetType>
+    <id>chip-NPCT501</id>
+    <parent>chip-tpm-cectpm</parent>
+  </targetType>
+  <targetType>
     <attribute>
-      <default>PROC</default>
+      <default>AST2500</default>
+      <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>physical:sys-0/node-0/bmc-0</default>
+      <id>PHYS_PATH</id>
+    </attribute>
+    <attribute>
+      <default>BMC</default>
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>BMC_HW_CHIP_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>BMC_MANUFACTURER</id>
+    </attribute>
+    <attribute>
+      <id>BMC_SW_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <id>chip-bmc-ast2500</id>
+    <parent>sp</parent>
+  </targetType>
+  <targetType>
+    <id>chip-fcdimm-ddr4</id>
+    <parent>lcard-dimm-cdimm</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>AVDD_ID</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>0xFF</default>
+      <id>CENTAUR_ECID_FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
+      <id>I2C_BUS_SPEED_ARRAY</id>
+    </attribute>
+    <attribute>
+      <default>CENTAUR</default>
+      <id>MODEL</id>
+    </attribute>
+    <attribute>
       <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
         <field>
           <id>supportsFsiScom</id>
           <value>1</value>
         </field>
         <field>
-          <id>supportsXscom</id>
+          <id>supportsInbandScom</id>
           <value>1</value>
         </field>
         <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>reserved</id>
+          <id>supportsXscom</id>
           <value>0</value>
         </field>
       </default>
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
-      <id>FABRIC_GROUP_ID</id>
+      <default>MEMBUF</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>VCS_ID</id>
+    </attribute>
+    <attribute>
+      <id>VDD_ID</id>
+    </attribute>
+    <attribute>
+      <id>VPP_ID</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>GPIO_INFO</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>EI_BUS_TX_MSBSWAP</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CEN_ISDIMM_MBVPD_INDEX</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_FREQ_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR3_VDDR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR4_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DDR4_VDDR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_VOLT_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MRW_DDR4_VDDR_MAX_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>IO_DMI_CEN_TX_MARGIN_RATIO</id>
+    </attribute>
+    <attribute>
+      <id>IO_DMI_CEN_TX_FFE_POSTCURSOR</id>
+    </attribute>
+    <id>chip-membuf-centaur</id>
+    <parent>chip</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <default>OCMB_CHIP</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <id>chip-ocmb</id>
+    <parent>chip</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>EXPLORER</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>chip-ocmb-explorer</id>
+    <parent>chip-ocmb</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>CPU_ATTR</id>
+    </attribute>
+    <attribute>
+      <id>DATA_CACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>DATA_CACHE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>DCACHE_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <id>DCACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
       <id>HOT_PLUG_POWER_CONTROLLER_INFO</id>
     </attribute>
     <attribute>
-      <id>PM_UNDERVOLTING_FRQ_MINIMUM</id>
+      <id>ICACHE_ASSOC_SETS</id>
     </attribute>
     <attribute>
-      <id>PM_UNDERVOLTING_FREQ_MAXIMUM</id>
+      <id>ICACHE_BLOCK_SIZE</id>
     </attribute>
     <attribute>
-      <id>PM_SPIVID_PORT_ENABLE</id>
+      <id>ICACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>ICACHE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>L2_CACHE_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <id>L2_CACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>L2_CACHE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>L3_CACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>L3_CACHE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>LOCATION_CODE</id>
     </attribute>
     <attribute>
       <id>PM_PBAX_NODEID</id>
@@ -98,6 +296,15 @@
       <id>PM_SLEEP_TYPE</id>
     </attribute>
     <attribute>
+      <id>PM_SPIVID_PORT_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PM_UNDERVOLTING_FREQ_MAXIMUM</id>
+    </attribute>
+    <attribute>
+      <id>PM_UNDERVOLTING_FRQ_MINIMUM</id>
+    </attribute>
+    <attribute>
       <id>PM_WINKLE_ENTRY</id>
     </attribute>
     <attribute>
@@ -107,81 +314,72 @@
       <id>PM_WINKLE_TYPE</id>
     </attribute>
     <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>ICACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>ICACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ICACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ICACHE_BLOCK_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>DCACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>DCACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>DATA_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>DATA_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>L2_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>L2_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>L2_CACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>L3_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>L3_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>TLB_DATA_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <id>TLB_INSTR_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <id>TLB_DATA_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>TLB_INSTR_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>TLB_RESERVE_SIZE</id>
+      <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsFsiScom</id>
+          <value>1</value>
+        </field>
+        <field>
+          <id>supportsInbandScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsXscom</id>
+          <value>1</value>
+        </field>
+      </default>
+      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <id>TIME_BASE</id>
     </attribute>
     <attribute>
-      <id>CPU_ATTR</id>
+      <id>TLB_DATA_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <id>TLB_DATA_ENTRIES</id>
+    </attribute>
+    <attribute>
+      <id>TLB_INSTR_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <id>TLB_INSTR_ENTRIES</id>
+    </attribute>
+    <attribute>
+      <id>TLB_RESERVE_SIZE</id>
+    </attribute>
+    <attribute>
+      <default>PROC</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>XIVE_HW_RESET</id>
     </attribute>
     <attribute>
-      <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
-    </attribute>
-    <attribute>
-      <id>LOCATION_CODE</id>
-    </attribute>
-    <attribute>
       <default>0x00000000</default>
       <id>PROC_HW_TOPOLOGY</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_BUS_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVICE_LABEL</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVICE_PURPOSE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_DEVICE_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>HDAT_I2C_ELEMENTS</id>
     </attribute>
     <attribute>
       <id>HDAT_I2C_ENGINE</id>
@@ -190,25 +388,7 @@
       <id>HDAT_I2C_MASTER_PORT</id>
     </attribute>
     <attribute>
-      <id>HDAT_I2C_DEVICE_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ADDR</id>
-    </attribute>
-    <attribute>
       <id>HDAT_I2C_SLAVE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_BUS_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVICE_PURPOSE</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_DEVICE_LABEL</id>
-    </attribute>
-    <attribute>
-      <id>HDAT_I2C_ELEMENTS</id>
     </attribute>
     <attribute>
       <default>0xFF</default>
@@ -252,6 +432,9 @@
     </attribute>
     <attribute>
       <id>PROC_INT_CQ_IC_BAR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
       <id>CLOCK_PLL_MUX</id>
@@ -444,185 +627,256 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>UNIT</default>
-      <id>CLASS</id>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
     </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
-    <attribute>
-      <id>CHIPLET_ID</id>
-    </attribute>
-    <id>unit</id>
-    <parent>base</parent>
+    <id>chip-processor-cumulus</id>
+    <parent>chip-processor-power9</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>MEMBUF</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>CENTAUR</default>
+      <default>NIMBUS</default>
       <id>MODEL</id>
     </attribute>
+    <id>chip-processor-nimbus</id>
+    <parent>chip-processor-power9</parent>
+  </targetType>
+  <targetType>
     <attribute>
-      <default>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
-    <attribute>
-      <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
-      <id>I2C_BUS_SPEED_ARRAY</id>
-    </attribute>
-    <attribute>
-      <default>0xFF</default>
-      <id>CENTAUR_ECID_FRU_ID</id>
-    </attribute>
-    <attribute>
-      <id>VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>AVDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>VPP_ID</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
+      <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <default>0x0000001D</default>
+      <id>CPU_ATTR</id>
     </attribute>
     <attribute>
-      <id>IPMI_SENSORS</id>
+      <default>128</default>
+      <id>DATA_CACHE_LINE_SIZE</id>
     </attribute>
     <attribute>
-      <id>GPIO_INFO</id>
+      <default>32</default>
+      <id>DATA_CACHE_SIZE</id>
+    </attribute>
+    <attribute>
+      <default>8</default>
+      <id>DCACHE_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <default>128</default>
+      <id>DCACHE_LINE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_SBE_BACKUP_INFO</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_SBE_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_VPD_BACKUP_INFO</id>
     </attribute>
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
     <attribute>
-      <id>EI_BUS_TX_MSBSWAP</id>
+      <id>FSP_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
+      <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+      <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
     <attribute>
-      <id>CEN_ISDIMM_MBVPD_INDEX</id>
+      <default>8</default>
+      <id>ICACHE_ASSOC_SETS</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_FREQ_OVERRIDE</id>
+      <default>128</default>
+      <id>ICACHE_BLOCK_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
+      <default>128</default>
+      <id>ICACHE_LINE_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_VREF_CAL_CNTL</id>
+      <default>32</default>
+      <id>ICACHE_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
+      <id>IMT_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_DDR3_VDDR_INTERCEPT</id>
+      <id>IMT_BASE_ADDR</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_DDR4_VDDR_SLOPE</id>
+      <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_DDR4_VDDR_INTERCEPT</id>
+      <default>8</default>
+      <id>L2_CACHE_ASSOC_SETS</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_VOLT_OVERRIDE</id>
+      <default>128</default>
+      <id>L2_CACHE_LINE_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
+      <default>512</default>
+      <id>L2_CACHE_SIZE</id>
     </attribute>
     <attribute>
-      <id>CEN_MRW_DDR4_VDDR_MAX_LIMIT</id>
+      <default>128</default>
+      <id>L3_CACHE_LINE_SIZE</id>
     </attribute>
     <attribute>
-      <id>IO_DMI_CEN_TX_MARGIN_RATIO</id>
+      <default>10240</default>
+      <id>L3_CACHE_SIZE</id>
     </attribute>
     <attribute>
-      <id>IO_DMI_CEN_TX_FFE_POSTCURSOR</id>
+      <id>NEST_VCS_ID</id>
     </attribute>
-    <id>chip-membuf-centaur</id>
+    <attribute>
+      <id>NEST_VDDR_ID</id>
+    </attribute>
+    <attribute>
+      <id>NEST_VDD_ID</id>
+    </attribute>
+    <attribute>
+      <id>NEST_VDN_ID</id>
+    </attribute>
+    <attribute>
+      <id>NEST_VIO_ID</id>
+    </attribute>
+    <attribute>
+      <id>PCI_BASE_ADDRS_32</id>
+    </attribute>
+    <attribute>
+      <id>PCI_BASE_ADDRS_64</id>
+    </attribute>
+    <attribute>
+      <id>PHB_BASE_ADDRS</id>
+    </attribute>
+    <attribute>
+      <id>PROC_DCM_INSTALLED</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_PHB_ACTIVE</id>
+    </attribute>
+    <attribute>
+      <id>RNG_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <default>4</default>
+      <id>TLB_DATA_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <default>1024</default>
+      <id>TLB_DATA_ENTRIES</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>TLB_INSTR_ASSOC_SETS</id>
+    </attribute>
+    <attribute>
+      <default>0</default>
+      <id>TLB_INSTR_ENTRIES</id>
+    </attribute>
+    <attribute>
+      <default>128</default>
+      <id>TLB_RESERVE_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>NO_APSS_PROC_POWER_VCS_VIO_WATTS</id>
+    </attribute>
+    <id>chip-processor-power9</id>
+    <parent>chip-processor</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CECTPM</default>
+      <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <id>TPM_INFO</id>
+    </attribute>
+    <attribute>
+      <default>TPM</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>CARD</default>
+      <default>NODE</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>ENC</default>
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>LOCATION_CODE</id>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
-    <id>card</id>
+    <attribute>
+      <id>FIELD_CORE_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <default>POWER9</default>
+      <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>NODE</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <id>enc-node-power9</id>
     <parent>base</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>DIMM</default>
+      <default>UNIT</default>
+      <id>CLASS</id>
+    </attribute>
+    <attribute>
+      <default>ETH</default>
       <id>TYPE</id>
+    </attribute>
+    <id>eth</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>UNIT</default>
+      <id>CLASS</id>
+    </attribute>
+    <attribute>
+      <default>FAN</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>fan</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>DIMM</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <default>LOGICAL_CARD</default>
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>POSITION</id>
-    </attribute>
-    <attribute>
-      <id>TEMP_SENSOR_I2C_CONFIG</id>
-    </attribute>
-    <attribute>
-      <default>DIMM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
       <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>MBA_DIMM</id>
     </attribute>
     <attribute>
       <id>MBA_PORT</id>
@@ -631,16 +885,23 @@
       <id>MEM_PORT</id>
     </attribute>
     <attribute>
-      <id>MBA_DIMM</id>
+      <id>POSITION</id>
     </attribute>
     <attribute>
       <id>POS_ON_MEM_PORT</id>
     </attribute>
     <attribute>
-      <id>IPMI_SENSORS</id>
+      <id>TEMP_SENSOR_I2C_CONFIG</id>
+    </attribute>
+    <attribute>
+      <default>DIMM</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -659,17 +920,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>JEDEC</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <id>CEN_DQ_TO_DIMM_CONN_DQ</id>
-    </attribute>
-    <id>lcard-dimm-jedec</id>
-    <parent>lcard-dimm</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>CDIMM</default>
       <id>MODEL</id>
     </attribute>
@@ -681,20 +931,27 @@
     <parent>lcard-dimm</parent>
   </targetType>
   <targetType>
-    <id>chip-fcdimm-ddr4</id>
-    <parent>lcard-dimm-cdimm</parent>
+    <attribute>
+      <id>CEN_DQ_TO_DIMM_CONN_DQ</id>
+    </attribute>
+    <attribute>
+      <default>JEDEC</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>lcard-dimm-jedec</id>
+    <parent>lcard-dimm</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>OCC</default>
-      <id>TYPE</id>
+      <id>FRU_ID</id>
     </attribute>
     <attribute>
       <default>POWER9</default>
       <id>MODEL</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <default>OCC</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
@@ -704,126 +961,140 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>FUSED_CORE_MODE_HB</id>
+      <default>PANEL</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>panel</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>UNIT</default>
+      <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>WOF_TABLE_LID_NUMBER</id>
+      <default>PS</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>power-supply</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>SP</default>
+      <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>FREQ_CORE_MAX</id>
+      <default>SP</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>SBE_UPDATE_DISABLE</id>
+      <id>CHIP_VER</id>
     </attribute>
     <attribute>
-      <id>PROC_REFCLOCK_RCVR_TERM</id>
+      <id>HW_VER</id>
     </attribute>
     <attribute>
-      <id>PCI_REFCLOCK_RCVR_TERM</id>
+      <id>ROLE</id>
+    </attribute>
+    <attribute>
+      <id>SW_VER</id>
+    </attribute>
+    <id>sp</id>
+    <parent>base</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>ASYNC_NEST_FREQ_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>BLOCK_SPEC_DECONFIG</id>
+    </attribute>
+    <attribute>
+      <id>BMC_FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>BOOT_FREQ_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>BRAZOS_RX_FIFO_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>CDM_POLICIES</id>
     </attribute>
     <attribute>
       <default>SYS</default>
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <default>SYS</default>
-      <id>TYPE</id>
+      <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
     </attribute>
     <attribute>
-      <default>POWER9</default>
-      <id>MODEL</id>
+      <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
-      <default>physical:sys-0</default>
-      <id>PHYS_PATH</id>
+      <id>DO_ABUS_DECONFIG</id>
     </attribute>
     <attribute>
-      <id>TPM_REQUIRED</id>
+      <id>DPO_MIN_FREQ_PERCENT</id>
     </attribute>
     <attribute>
-      <id>MAX_EXS_PER_PROC_CHIP</id>
+      <id>EFFECTIVE_EC</id>
+    </attribute>
+    <attribute>
+      <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
+    </attribute>
+    <attribute>
+      <id>FIELD_TH_P8EX_L2_LINE_DELETES</id>
+    </attribute>
+    <attribute>
+      <id>FIELD_TH_P8EX_L3_COL_REPAIRS</id>
+    </attribute>
+    <attribute>
+      <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_CORE_MAX</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_PROC_REFCLOCK</id>
+    </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+    </attribute>
+    <attribute>
+      <id>FSP_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>FUSED_CORE_MODE_HB</id>
+    </attribute>
+    <attribute>
+      <id>HB_RSV_MEM_SIZE_MB</id>
+    </attribute>
+    <attribute>
+      <id>HB_SETTINGS</id>
+    </attribute>
+    <attribute>
+      <id>HOSTSVC_PLID</id>
+    </attribute>
+    <attribute>
+      <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
       <default>43</default>
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>TEST_NEGATIVE_FCN</id>
+      <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <id>MAX_DIMMS_PER_MBA_PORT</id>
     </attribute>
     <attribute>
-      <id>BMC_FRU_ID</id>
+      <id>MAX_DMI_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>DPO_MIN_FREQ_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>ASYNC_NEST_FREQ_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_DIR_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_CACHE_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_DIR_CES</id>
-    </attribute>
-    <attribute>
-      <id>FIELD_TH_P8EX_L2_LINE_DELETES</id>
-    </attribute>
-    <attribute>
-      <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
-    </attribute>
-    <attribute>
-      <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>FIELD_TH_P8EX_L3_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_LINE_DELETES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_LINE_DELETES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_IPL_SOFT_CE_TH_ALGO</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_RT_RCE_PER_RANK</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_L4_CACHE_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_RCD_PARITY_ERRORS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_MEMORY_IUES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_MEMORY_IMPES</id>
-    </attribute>
-    <attribute>
-      <id>RCD_PARITY_RECONFIG_LOOPS_ALLOWED</id>
-    </attribute>
-    <attribute>
-      <id>BLOCK_SPEC_DECONFIG</id>
+      <id>MAX_EXS_PER_PROC_CHIP</id>
     </attribute>
     <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
@@ -835,154 +1106,89 @@
       <id>MAX_MBA_PORTS_PER_MBA</id>
     </attribute>
     <attribute>
-      <id>MAX_DIMMS_PER_MBA_PORT</id>
+      <id>MAX_SBE_SEEPROM_SIZE</id>
     </attribute>
     <attribute>
-      <id>MAX_CHIPLETS_PER_PROC</id>
+      <id>MNFG_ABUS_MIN_EYE_HEIGHT</id>
     </attribute>
     <attribute>
-      <id>RUN_MAX_MEM_PATTERNS</id>
+      <id>MNFG_ABUS_MIN_EYE_WIDTH</id>
     </attribute>
     <attribute>
-      <id>SP_FUNCTIONS</id>
+      <id>MNFG_DMI_MIN_EYE_HEIGHT</id>
     </attribute>
     <attribute>
-      <id>HB_SETTINGS</id>
+      <id>MNFG_DMI_MIN_EYE_WIDTH</id>
     </attribute>
     <attribute>
-      <id>PAYLOAD_KIND</id>
+      <id>MNFG_TH_CEN_L4_CACHE_CES</id>
     </attribute>
     <attribute>
-      <id>ISTEP_MODE</id>
+      <id>MNFG_TH_CEN_MBA_IPL_SOFT_CE_TH_ALGO</id>
     </attribute>
     <attribute>
-      <id>CDM_POLICIES</id>
+      <id>MNFG_TH_CEN_MBA_RT_RCE_PER_RANK</id>
     </attribute>
     <attribute>
-      <id>HOSTSVC_PLID</id>
+      <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
     </attribute>
     <attribute>
-      <id>NUMERIC_POD_TYPE_TEST</id>
+      <id>MNFG_TH_MEMORY_IMPES</id>
     </attribute>
     <attribute>
-      <id>DO_ABUS_DECONFIG</id>
+      <id>MNFG_TH_MEMORY_IUES</id>
     </attribute>
     <attribute>
-      <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
+      <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
     </attribute>
     <attribute>
-      <id>EFFECTIVE_EC</id>
+      <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
     </attribute>
     <attribute>
-      <id>HB_RSV_MEM_SIZE_MB</id>
+      <id>MNFG_TH_P8EX_L2_DIR_CES</id>
     </attribute>
     <attribute>
-      <id>THREAD_COUNT</id>
+      <id>MNFG_TH_P8EX_L2_LINE_DELETES</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_IPL_PHASE</id>
+      <id>MNFG_TH_P8EX_L3_CACHE_CES</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_DDR3_VDDR_SLOPE</id>
+      <id>MNFG_TH_P8EX_L3_COL_REPAIRS</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_DDR3_VDDR_INTERCEPT</id>
+      <id>MNFG_TH_P8EX_L3_DIR_CES</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_DDR4_VDDR_SLOPE</id>
+      <id>MNFG_TH_P8EX_L3_LINE_DELETES</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_DDR4_VDDR_INTERCEPT</id>
+      <id>MNFG_TH_RCD_PARITY_ERRORS</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_XBUS_MIN_EYE_WIDTH</id>
+    </attribute>
+    <attribute>
+      <default>POWER9</default>
+      <id>MODEL</id>
     </attribute>
     <attribute>
       <id>MRW_DDR3_VDDR_MAX_LIMIT</id>
     </attribute>
     <attribute>
-      <id>MRW_DDR4_VDDR_MAX_LIMIT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VOLT_DDR3_VDDR_SLOPE_POST_DRAM_INIT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VOLT_DDR3_VDDR_INTERCEPT_POST_DRAM_INIT</id>
-    </attribute>
-    <attribute>
       <id>MRW_DDR3_VDDR_MAX_LIMIT_POST_DRAM_INIT</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_DDR4_VDDR_SLOPE_POST_DRAM_INIT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VOLT_DDR4_VDDR_INTERCEPT_POST_DRAM_INIT</id>
+      <id>MRW_DDR4_VDDR_MAX_LIMIT</id>
     </attribute>
     <attribute>
       <id>MRW_DDR4_VDDR_MAX_LIMIT_POST_DRAM_INIT</id>
     </attribute>
     <attribute>
-      <id>MSS_VOLT_VPP_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VOLT_VPP_INTERCEPT</id>
-    </attribute>
-    <attribute>
-      <id>SUPPORTS_DYNAMIC_MEM_VOLT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VDD_PROGRAM</id>
+      <id>MRW_MEM_THROTTLE_DENOMINATOR</id>
     </attribute>
     <attribute>
       <id>MSS_AVDD_PROGRAM</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VCS_PROGRAM</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VPP_PROGRAM</id>
-    </attribute>
-    <attribute>
-      <id>MSS_VDDR_PROGRAM</id>
-    </attribute>
-    <attribute>
-      <id>FSP_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>WOF_POWER_LIMIT</id>
-    </attribute>
-    <attribute>
-      <id>STOP5_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SUPPORTED_STOP_STATES</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_FAMILY</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>MAX_SBE_SEEPROM_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_PROC_REFCLOCK</id>
-    </attribute>
-    <attribute>
-      <id>X_EREPAIR_THRESHOLD_FIELD</id>
-    </attribute>
-    <attribute>
-      <id>O_EREPAIR_THRESHOLD_FIELD</id>
-    </attribute>
-    <attribute>
-      <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
-    </attribute>
-    <attribute>
-      <id>X_EREPAIR_THRESHOLD_MNFG</id>
-    </attribute>
-    <attribute>
-      <id>O_EREPAIR_THRESHOLD_MNFG</id>
-    </attribute>
-    <attribute>
-      <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
       <id>MSS_MBA_ADDR_INTERLEAVE_BIT</id>
@@ -991,19 +1197,71 @@
       <id>MSS_MBA_CACHELINE_INTERLEAVE_MODE</id>
     </attribute>
     <attribute>
-      <id>PM_SPIVID_FREQUENCY</id>
+      <id>MSS_VCS_PROGRAM</id>
     </attribute>
     <attribute>
-      <id>PM_SAFE_FREQUENCY</id>
+      <id>MSS_VDDR_PROGRAM</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VDD_PROGRAM</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR3_VDDR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR3_VDDR_INTERCEPT_POST_DRAM_INIT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR3_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR3_VDDR_SLOPE_POST_DRAM_INIT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR4_VDDR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR4_VDDR_INTERCEPT_POST_DRAM_INIT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR4_VDDR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_DDR4_VDDR_SLOPE_POST_DRAM_INIT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_VPP_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VOLT_VPP_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_VPP_PROGRAM</id>
+    </attribute>
+    <attribute>
+      <id>NUMERIC_POD_TYPE_TEST</id>
+    </attribute>
+    <attribute>
+      <id>O_EREPAIR_THRESHOLD_FIELD</id>
+    </attribute>
+    <attribute>
+      <id>O_EREPAIR_THRESHOLD_MNFG</id>
+    </attribute>
+    <attribute>
+      <id>PAYLOAD_KIND</id>
+    </attribute>
+    <attribute>
+      <id>PCI_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <default>physical:sys-0</default>
+      <id>PHYS_PATH</id>
+    </attribute>
+    <attribute>
+      <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
     </attribute>
     <attribute>
       <id>PM_RESONANT_CLOCK_FULL_CLOCK_SECTOR_BUFFER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_LOW_BAND_LOWER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_LOW_BAND_UPPER_FREQUENCY</id>
     </attribute>
     <attribute>
       <id>PM_RESONANT_CLOCK_HIGH_BAND_LOWER_FREQUENCY</id>
@@ -1012,52 +1270,83 @@
       <id>PM_RESONANT_CLOCK_HIGH_BAND_UPPER_FREQUENCY</id>
     </attribute>
     <attribute>
-      <id>MRW_MEM_THROTTLE_DENOMINATOR</id>
+      <id>PM_RESONANT_CLOCK_LOW_BAND_LOWER_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>PM_RESONANT_CLOCK_LOW_BAND_UPPER_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>PM_SAFE_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>PM_SPIVID_FREQUENCY</id>
     </attribute>
     <attribute>
       <id>PM_SYSTEM_IVRM_VPD_MIN_LEVEL</id>
     </attribute>
     <attribute>
-      <id>MNFG_DMI_MIN_EYE_WIDTH</id>
+      <id>PROC_REFCLOCK_RCVR_TERM</id>
     </attribute>
     <attribute>
-      <id>MNFG_DMI_MIN_EYE_HEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_ABUS_MIN_EYE_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_ABUS_MIN_EYE_HEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_XBUS_MIN_EYE_WIDTH</id>
+      <id>RCD_PARITY_RECONFIG_LOOPS_ALLOWED</id>
     </attribute>
     <attribute>
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
-      <id>BRAZOS_RX_FIFO_OVERRIDE</id>
+      <id>RUN_MAX_MEM_PATTERNS</id>
     </attribute>
     <attribute>
-      <id>MAX_DMI_PER_PROC</id>
+      <id>SBE_UPDATE_DISABLE</id>
     </attribute>
     <attribute>
-      <id>BOOT_FREQ_MHZ</id>
+      <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
-      <id>PHYP_SYSTEM_TYPE</id>
+      <id>STOP5_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>SUPPORTED_STOP_STATES</id>
+    </attribute>
+    <attribute>
+      <id>SUPPORTS_DYNAMIC_MEM_VOLT</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_FAMILY</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_IPL_PHASE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>TEST_NEGATIVE_FCN</id>
+    </attribute>
+    <attribute>
+      <id>THREAD_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>TPM_REQUIRED</id>
+    </attribute>
+    <attribute>
+      <default>SYS</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>WOF_POWER_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>WOF_TABLE_LID_NUMBER</id>
+    </attribute>
+    <attribute>
+      <id>X_EREPAIR_THRESHOLD_FIELD</id>
+    </attribute>
+    <attribute>
+      <id>X_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
       <id>ASCII_VPD_LX_KEYWORD</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_BRAND_NAME</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
     </attribute>
     <attribute>
       <id>IPS_ENABLE</id>
@@ -1075,19 +1364,34 @@
       <id>IPS_EXIT_UTILIZATION_PERCENT</id>
     </attribute>
     <attribute>
+      <id>OPEN_POWER_PM_MODE</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PM_MODE_FREQ_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>PHYP_SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_BRAND_NAME</id>
+    </attribute>
+    <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
-    </attribute>
-    <attribute>
-      <id>ADC_CHANNEL_GNDS</id>
     </attribute>
     <attribute>
       <id>ADC_CHANNEL_GAINS</id>
     </attribute>
     <attribute>
+      <id>ADC_CHANNEL_GNDS</id>
+    </attribute>
+    <attribute>
       <id>ADC_CHANNEL_OFFSETS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
+    </attribute>
+    <attribute>
+      <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
     </attribute>
     <attribute>
       <id>APSS_GPIO_PORT_MODES</id>
@@ -1096,31 +1400,61 @@
       <id>APSS_GPIO_PORT_PINS</id>
     </attribute>
     <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
       <id>BMC_MAX_ERROR_LOG_SIZE</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>IS_MPIPL_SUPPORTED</id>
+    </attribute>
+    <attribute>
+      <id>MAX_VDD_CURRENT_READING</id>
+    </attribute>
+    <attribute>
+      <id>MISC_SYSTEM_COMPONENTS_MAX_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPAL_MODEL</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_PROC_WEIGHT</id>
+      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_QUAD_WEIGHT</id>
+      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
+      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_MEM_UTILIZATION_POWER_CAP</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
@@ -1129,22 +1463,34 @@
       <id>OPEN_POWER_N_MAX_MEM_POWER_WATTS</id>
     </attribute>
     <attribute>
-      <id>MISC_SYSTEM_COMPONENTS_MAX_POWER_WATTS</id>
+      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
+      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
+      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_POWER_CAP</id>
+      <id>OPEN_POWER_PROC_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_QUAD_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_VRM_READ_TIMEOUT_SEC</id>
@@ -1159,61 +1505,16 @@
       <id>OPEN_POWER_VRM_VDD_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPAL_MODEL</id>
-    </attribute>
-    <attribute>
-      <id>IS_MPIPL_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>PROC_SOCKET_POWER_WATTS</id>
-    </attribute>
-    <attribute>
       <id>PROC_MHZ_PER_WATT</id>
     </attribute>
     <attribute>
-      <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
+      <id>PROC_SOCKET_POWER_WATTS</id>
     </attribute>
     <attribute>
       <id>REPORT_THROTTLE_BELOW_NOMINAL</id>
     </attribute>
     <attribute>
       <id>VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MAX_VDD_CURRENT_READING</id>
     </attribute>
     <attribute>
       <id>FREQ_PROC_REFCLOCK_KHZ</id>
@@ -1634,230 +1935,96 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>ENC</default>
+      <default>UNIT</default>
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <default>NODE</default>
+      <default>UART</default>
       <id>TYPE</id>
     </attribute>
+    <id>uart</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
     <attribute>
-      <default>POWER9</default>
-      <id>MODEL</id>
+      <id>CHIPLET_ID</id>
     </attribute>
     <attribute>
-      <id>FIELD_CORE_OVERRIDE</id>
+      <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <default>NODE</default>
-      <id>CDM_DOMAIN</id>
+      <default>UNIT</default>
+      <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsFsiScom</id>
+          <value>1</value>
+        </field>
+        <field>
+          <id>supportsInbandScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsXscom</id>
+          <value>1</value>
+        </field>
+      </default>
+      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <id>enc-node-power9</id>
+    <id>unit</id>
     <parent>base</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>TPM</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>CECTPM</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <id>TPM_INFO</id>
-    </attribute>
-    <id>chip-tpm-cectpm</id>
-    <parent>chip</parent>
-  </targetType>
-  <targetType>
-    <id>chip-NPCT501</id>
-    <parent>chip-tpm-cectpm</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_SBE_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_SBE_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
-      <id>I2C_BUS_SPEED_ARRAY</id>
-    </attribute>
-    <attribute>
-      <id>FSP_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PHB_BASE_ADDRS</id>
-    </attribute>
-    <attribute>
-      <id>PCI_BASE_ADDRS_64</id>
-    </attribute>
-    <attribute>
-      <id>PCI_BASE_ADDRS_32</id>
-    </attribute>
-    <attribute>
-      <id>RNG_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>IMT_BASE_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>IMT_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>ISTEP_MODE</id>
-    </attribute>
-    <attribute>
-      <default>32</default>
-      <id>DATA_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>10240</default>
-      <id>L3_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>8</default>
-      <id>ICACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>1024</default>
-      <id>TLB_DATA_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>TLB_INSTR_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <default>4</default>
-      <id>TLB_DATA_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>TLB_INSTR_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>TLB_RESERVE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>DATA_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>L3_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>DCACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>8</default>
-      <id>DCACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>ICACHE_BLOCK_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>32</default>
-      <id>ICACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>ICACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>0x0000001D</default>
-      <id>CPU_ATTR</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>L2_CACHE_LINE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>512</default>
-      <id>L2_CACHE_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>8</default>
-      <id>L2_CACHE_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDN_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VIO_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDDR_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_DCM_INSTALLED</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PHB_ACTIVE</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>NO_APSS_PROC_POWER_VCS_VIO_WATTS</id>
-    </attribute>
-    <id>chip-processor-power9</id>
-    <parent>chip-processor</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>chip-processor-nimbus</id>
-    <parent>chip-processor-power9</parent>
   </targetType>
   <targetType>
     <attribute>
       <default>CUMULUS</default>
       <id>MODEL</id>
     </attribute>
-    <id>chip-processor-cumulus</id>
-    <parent>chip-processor-power9</parent>
+    <id>unit-capp-cumulus</id>
+    <parent>unit-capp-power9</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>EQ</default>
-      <id>TYPE</id>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-capp-nimbus</id>
+    <parent>unit-capp-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
-      <default>CPU</default>
-      <id>CDM_DOMAIN</id>
+      <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsFsiScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsInbandScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsXscom</id>
+          <value>0</value>
+        </field>
+      </default>
+      <id>PRIMARY_CAPABILITIES</id>
+    </attribute>
+    <attribute>
+      <default>CAPP</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
@@ -1865,35 +2032,17 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
-    <id>unit-eq-power9</id>
+    <id>unit-capp-power9</id>
     <parent>unit</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <default>EX</default>
-      <id>TYPE</id>
-    </attribute>
     <attribute>
       <default>CPU</default>
       <id>CDM_DOMAIN</id>
     </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-ex-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
     <attribute>
       <default>CORE</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>CPU</default>
-      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
@@ -1909,169 +2058,20 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>MCS</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>IBSCOM_MCS_BASE_ADDR</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>EI_BUS_TX_MSBSWAP</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-mcs-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mcs-nimbus</id>
-    <parent>unit-mcs-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MCA</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-mca-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mca-nimbus</id>
-    <parent>unit-mca-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MCBIST</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>VPP_ID</id>
-    </attribute>
-    <attribute>
-      <id>VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>AVDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-mcbist-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mcbist-nimbus</id>
-    <parent>unit-mcbist-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MC</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-mc-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>CUMULUS</default>
       <id>MODEL</id>
     </attribute>
-    <id>unit-mc-cumulus</id>
-    <parent>unit-mc-power9</parent>
+    <id>unit-dmi-cumulus</id>
+    <parent>unit-dmi-power9</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <default>MI</default>
-      <id>TYPE</id>
-    </attribute>
     <attribute>
       <default>MEM</default>
       <id>CDM_DOMAIN</id>
     </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-mi-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mi-cumulus</id>
-    <parent>unit-mi-power9</parent>
-  </targetType>
-  <targetType>
     <attribute>
       <default>DMI</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <id>DMI_REFCLOCK_SWIZZLE</id>
@@ -2099,16 +2099,606 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
+      <default>CPU</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
-    <id>unit-dmi-cumulus</id>
-    <parent>unit-dmi-power9</parent>
+    <attribute>
+      <default>EQ</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-eq-power9</id>
+    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>PEC</default>
+      <default>CPU</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>EX</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-ex-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>CENTAUR</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-l4-centaur</id>
+    <parent>unit-l4-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>L4</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-l4-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MBA</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_VREF_CAL_DELTA_FROM_NOMINAL</id>
+    </attribute>
+    <attribute>
+      <id>CEN_EFF_DRAM_WR_VREF</id>
+    </attribute>
+    <attribute>
+      <id>CEN_EFF_CEN_DRV_IMP_DQ_DQS</id>
+    </attribute>
+    <attribute>
+      <id>CEN_EFF_CEN_RCV_IMP_DQ_DQS</id>
+    </attribute>
+    <attribute>
+      <id>CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
+    </attribute>
+    <attribute>
+      <id>CEN_EFF_RD_VREF</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_ALLOW_SINGLE_PORT</id>
+    </attribute>
+    <attribute>
+      <id>CEN_MSS_DQS_SWIZZLE_TYPE</id>
+    </attribute>
+    <id>unit-mba-centaur</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mc-axone</id>
+    <parent>unit-mc-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mc-cumulus</id>
+    <parent>unit-mc-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mc-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mca-nimbus</id>
+    <parent>unit-mca-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
+    </attribute>
+    <attribute>
+      <default>MCA</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mca-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mcbist-nimbus</id>
+    <parent>unit-mcbist-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>AVDD_ID</id>
+    </attribute>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MCBIST</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>VCS_ID</id>
+    </attribute>
+    <attribute>
+      <id>VDD_ID</id>
+    </attribute>
+    <attribute>
+      <id>VPP_ID</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mcbist-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mcc-axone</id>
+    <parent>unit-mcc-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MCC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mcc-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mcs-nimbus</id>
+    <parent>unit-mcs-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>EI_BUS_TX_MSBSWAP</id>
+    </attribute>
+    <attribute>
+      <id>IBSCOM_MCS_BASE_ADDR</id>
+    </attribute>
+    <attribute>
+      <default>MCS</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mcs-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MEM_PORT</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mem_port</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mi-axone</id>
+    <parent>unit-mi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-mi-cumulus</id>
+    <parent>unit-mi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>MI</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-mi-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-npu-cumulus</id>
+    <parent>unit-npu-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-npu-nimbus</id>
+    <parent>unit-npu-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NPU</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>unit-npu-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsFsiScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsInbandScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsXscom</id>
+          <value>0</value>
+        </field>
+      </default>
+      <id>PRIMARY_CAPABILITIES</id>
+    </attribute>
+    <attribute>
+      <default>NX</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>unit-nx-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-obus-brick-cumulus</id>
+    <parent>unit-obus-brick-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-obus-brick-nimbus</id>
+    <parent>unit-obus-brick-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>OBUS_BRICK_LANE_MASK</id>
+    </attribute>
+    <attribute>
+      <default>OBUS_BRICK</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-obus-brick-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-obus-cumulus</id>
+    <parent>unit-obus-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-obus-nimbus</id>
+    <parent>unit-obus-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
+    </attribute>
+    <attribute>
+      <id>PEER_TARGET</id>
+    </attribute>
+    <attribute>
+      <default>OBUS</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>OPTICS_CONFIG_MODE</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_DEBUG</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_CHK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_MIN_EYE_WIDTH</id>
+    </attribute>
+    <attribute>
+      <id>IO_OBUS_TX_MARGIN_RATIO</id>
+    </attribute>
+    <attribute>
+      <id>IO_OBUS_TX_FFE_PRECURSOR</id>
+    </attribute>
+    <attribute>
+      <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
+    </attribute>
+    <attribute>
+      <id>IO_OLLFIR_MASK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_CHANNEL_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-obus-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>PEER_TARGET</id>
+    </attribute>
+    <attribute>
+      <default>SMPGROUP</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>unit-obus-smpgroup</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-occ-cumulus</id>
+    <parent>unit-occ-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-occ-nimbus</id>
+    <parent>unit-occ-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>POWER9</default>
+      <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>OCC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
+    <id>unit-occ-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-omi-axone</id>
+    <parent>unit-omi-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>OMI</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-omi-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>AXONE</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-omic-axone</id>
+    <parent>unit-omic-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>MEM</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <default>OMIC</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-omic-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>IO</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_IOP_REVERSAL</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_IOP_SWAP_BIFURCATED</id>
+    </attribute>
+    <attribute>
+      <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_IOP_CONFIG</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
@@ -2120,35 +2710,17 @@
       <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
+      <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_IOP_CONFIG</id>
+      <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
     </attribute>
     <attribute>
-      <default>IO</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_SWAP_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
+      <default>PEC</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_PCS_RX_CDR_GAIN</id>
@@ -2209,219 +2781,19 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>PHB</default>
-      <id>TYPE</id>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
     </attribute>
-    <attribute>
-      <default>IO</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-phb-power9</id>
-    <parent>unit</parent>
+    <id>unit-perv-cumulus</id>
+    <parent>unit-perv-power9</parent>
   </targetType>
   <targetType>
     <attribute>
       <default>NIMBUS</default>
       <id>MODEL</id>
     </attribute>
-    <id>unit-phb-nimbus</id>
-    <parent>unit-phb-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-phb-cumulus</id>
-    <parent>unit-phb-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>OBUS</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
-    </attribute>
-    <attribute>
-      <id>OPTICS_CONFIG_MODE</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_DEBUG</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_CHK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_MIN_EYE_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>IO_OBUS_TX_MARGIN_RATIO</id>
-    </attribute>
-    <attribute>
-      <id>IO_OBUS_TX_FFE_PRECURSOR</id>
-    </attribute>
-    <attribute>
-      <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
-    </attribute>
-    <attribute>
-      <id>IO_OLLFIR_MASK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_CHANNEL_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-obus-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-nimbus</id>
-    <parent>unit-obus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-cumulus</id>
-    <parent>unit-obus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>OBUS_BRICK</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>OBUS_BRICK_LANE_MASK</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-obus-brick-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-brick-nimbus</id>
-    <parent>unit-obus-brick-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-brick-cumulus</id>
-    <parent>unit-obus-brick-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>SMPGROUP</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <id>unit-obus-smpgroup</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NPU</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-npu-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-npu-nimbus</id>
-    <parent>unit-npu-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-npu-cumulus</id>
-    <parent>unit-npu-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>PPE</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-ppe-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-ppe-nimbus</id>
-    <parent>unit-ppe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-ppe-cumulus</id>
-    <parent>unit-ppe-power9</parent>
+    <id>unit-perv-nimbus</id>
+    <parent>unit-perv-power9</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2439,31 +2811,134 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-phb-cumulus</id>
+    <parent>unit-phb-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
       <default>NIMBUS</default>
       <id>MODEL</id>
     </attribute>
-    <id>unit-perv-nimbus</id>
-    <parent>unit-perv-power9</parent>
+    <id>unit-phb-nimbus</id>
+    <parent>unit-phb-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>IO</default>
+      <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    </attribute>
+    <attribute>
+      <default>PHB</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_BAR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-phb-power9</id>
+    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
       <default>CUMULUS</default>
       <id>MODEL</id>
     </attribute>
-    <id>unit-perv-cumulus</id>
-    <parent>unit-perv-power9</parent>
+    <id>unit-ppe-cumulus</id>
+    <parent>unit-ppe-power9</parent>
   </targetType>
   <targetType>
     <attribute>
-      <default>XBUS</default>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-ppe-nimbus</id>
+    <parent>unit-ppe-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>PPE</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-ppe-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-sbe-cumulus</id>
+    <parent>unit-sbe-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-sbe-nimbus</id>
+    <parent>unit-sbe-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>SBE</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>DUMMY_RW</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <id>unit-sbe-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>CUMULUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-xbus-cumulus</id>
+    <parent>unit-xbus-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>NIMBUS</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>unit-xbus-nimbus</id>
+    <parent>unit-xbus-power9</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>FABRIC</default>
+      <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
       <id>PEER_TARGET</id>
     </attribute>
     <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
+      <default>XBUS</default>
+      <id>TYPE</id>
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
@@ -2497,339 +2972,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-xbus-nimbus</id>
-    <parent>unit-xbus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-xbus-cumulus</id>
-    <parent>unit-xbus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CAPP</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-capp-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-capp-nimbus</id>
-    <parent>unit-capp-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-capp-cumulus</id>
-    <parent>unit-capp-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>SBE</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-sbe-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-sbe-nimbus</id>
-    <parent>unit-sbe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-sbe-cumulus</id>
-    <parent>unit-sbe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>OCC</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>POWER9</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <id>unit-occ-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-occ-nimbus</id>
-    <parent>unit-occ-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-occ-cumulus</id>
-    <parent>unit-occ-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>L4</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <id>unit-l4-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CENTAUR</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <id>unit-l4-centaur</id>
-    <parent>unit-l4-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MBA</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>MEM</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_VREF_CAL_DELTA_FROM_NOMINAL</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_DRAM_WR_VREF</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_CEN_DRV_IMP_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_CEN_RCV_IMP_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_RD_VREF</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_ALLOW_SINGLE_PORT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_DQS_SWIZZLE_TYPE</id>
-    </attribute>
-    <id>unit-mba-centaur</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NX</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
-    <attribute>
-      <default>FABRIC</default>
-      <id>CDM_DOMAIN</id>
-    </attribute>
-    <id>unit-nx-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>UNIT</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>UART</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>uart</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>SP</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>SP</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_VER</id>
-    </attribute>
-    <attribute>
-      <id>HW_VER</id>
-    </attribute>
-    <attribute>
-      <id>SW_VER</id>
-    </attribute>
-    <attribute>
-      <id>ROLE</id>
-    </attribute>
-    <id>sp</id>
-    <parent>base</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>BMC</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <default>AST2500</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>physical:sys-0/node-0/bmc-0</default>
-      <id>PHYS_PATH</id>
-    </attribute>
-    <attribute>
-      <id>BMC_MANUFACTURER</id>
-    </attribute>
-    <attribute>
-      <id>BMC_HW_CHIP_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>BMC_SW_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>FRU_ID</id>
-    </attribute>
-    <id>chip-bmc-ast2500</id>
-    <parent>sp</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>UNIT</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>PS</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>power-supply</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>UNIT</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>FAN</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>fan</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>UNIT</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>VRM</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>vrm</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>UNIT</default>
       <id>CLASS</id>
     </attribute>
@@ -2846,18 +2988,10 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <default>ETH</default>
+      <default>VRM</default>
       <id>TYPE</id>
     </attribute>
-    <id>eth</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>PANEL</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>panel</id>
+    <id>vrm</id>
     <parent>unit</parent>
   </targetType>
 </attributes>
