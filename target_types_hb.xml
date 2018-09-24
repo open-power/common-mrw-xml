@@ -215,6 +215,9 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
       <default>EXPLORER</default>
       <id>MODEL</id>
     </attribute>
@@ -871,6 +874,9 @@
     <attribute>
       <default>LOGICAL_CARD</default>
       <id>CLASS</id>
+    </attribute>
+    <attribute>
+      <id>EEPROM_NV_INFO</id>
     </attribute>
     <attribute>
       <id>FRU_ID</id>
