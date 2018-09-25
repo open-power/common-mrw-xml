@@ -4473,6 +4473,69 @@
     <readable />
   </attribute>
   <attribute>
+    <complexType>
+      <description>Structure to define the addressing for NV controller.</description>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the chip that contains the I2C master.</description>
+        <name>i2cMasterPath</name>
+        <type>EntityPath</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>Port from the I2C Master device. This is a 6-bit value, but then shifted 2 bits left.</description>
+        <name>port</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>Device address on the I2C bus. This is a 7-bit value, but then shifted 1 bit left.</description>
+        <name>devAddr</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>I2C master engine. This is a 2-bit value, but then shifted 6 bits left.</description>
+        <name>engine</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x03</default>
+        <description>The number of bytes a device requires to set its internal address/offset. For NV controller it's only one byte addressing with no page select (3) 0 = Zero Byte Addressing 1 = One Byte Addressing with page select 2 = Two Byte Addressing 3 = OneByte Addressing with no page select</description>
+        <name>byteAddrOffset</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x01</default>
+        <description>The number of kilobytes a device can hold. 'Zero' value possible for some devices.</description>
+        <name>maxMemorySizeKB</name>
+        <type>uint64_t</type>
+      </field>
+      <field>
+        <default>0x01</default>
+        <description>The number of chips making up an eeprom device.</description>
+        <name>chipCount</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x01</default>
+        <description>The maximum number of bytes that can be written to a device at one time. 'Zero' value means no maximum value is expected or checked.</description>
+        <name>writePageSize</name>
+        <type>uint64_t</type>
+      </field>
+      <field>
+        <default>0x05</default>
+        <description>The amount of time in milliseconds a device requires on the completion of a write command to update its internal memory.</description>
+        <name>writeCycleTime</name>
+        <type>uint64_t</type>
+      </field>
+    </complexType>
+    <description>Information needed to address the NV controller on the NVDIMM</description>
+    <id>EEPROM_NV_INFO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <description>Holds the effective EC of the system. Effective EC is the lowest EC among all the functional procs in the system. Some cards may "downbin" the effective ECs of their contained processors, which could lower the effective EC of the system beyond what would occur when considering processor ECs alone</description>
     <id>EFFECTIVE_EC</id>
     <persistency>non-volatile</persistency>

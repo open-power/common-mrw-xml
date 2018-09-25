@@ -904,6 +904,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>EEPROM_NV_INFO</id>
+    </attribute>
+    <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
     <attribute>
