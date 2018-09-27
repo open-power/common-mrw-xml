@@ -5960,6 +5960,7 @@
   <attribute>
     <description>Physical hierarchical path to the target</description>
     <id>PHYS_PATH</id>
+    <mrwRequired />
     <nativeType>
       <name>EntityPath</name>
     </nativeType>
