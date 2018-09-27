@@ -50,10 +50,6 @@
     <default>128</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>DUMMY_RW</id>
     <default>5</default>
   </attribute>
@@ -509,10 +505,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -571,10 +563,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -631,10 +619,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -696,10 +680,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -759,10 +739,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -819,10 +795,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -884,10 +856,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -945,10 +913,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1009,10 +973,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1069,10 +1029,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1134,10 +1090,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1197,10 +1149,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1257,10 +1205,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1322,10 +1266,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1383,10 +1323,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1447,10 +1383,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1507,10 +1439,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1572,10 +1500,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1635,10 +1559,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1695,10 +1615,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1760,10 +1676,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1821,10 +1733,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -1885,10 +1793,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -1945,10 +1849,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2010,10 +1910,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2073,10 +1969,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2133,10 +2025,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2198,10 +2086,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2259,10 +2143,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2323,10 +2203,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2383,10 +2259,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2448,10 +2320,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2511,10 +2379,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2571,10 +2435,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2636,10 +2496,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2697,10 +2553,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2761,10 +2613,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2821,10 +2669,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -2886,10 +2730,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -2949,10 +2789,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3009,10 +2845,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MRW_TYPE</id>
@@ -3074,10 +2906,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MRW_TYPE</id>
     <default>NA</default>
   </attribute>
@@ -3131,10 +2959,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -3191,10 +3015,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
     <attribute>
     <id>PRIMARY_CAPABILITIES</id>
@@ -3257,10 +3077,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -3321,10 +3137,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -3381,10 +3193,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -3433,10 +3241,6 @@
       <default>0</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>PEC</default>
     </attribute>
@@ -3451,10 +3255,6 @@
     <id>pec1</id>
     <attribute>
       <id>CHIP_UNIT</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
       <default>1</default>
     </attribute>
     <attribute>
@@ -3473,10 +3273,6 @@
     <attribute>
       <id>CHIP_UNIT</id>
       <default>2</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
@@ -4087,10 +3883,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -4128,10 +3920,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4173,10 +3961,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -4214,10 +3998,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4259,10 +4039,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -4300,10 +4076,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4345,10 +4117,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -4386,10 +4154,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4431,10 +4195,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -4472,10 +4232,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4517,10 +4273,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -4560,10 +4312,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -4601,10 +4349,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -4648,10 +4392,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -4717,10 +4457,6 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xF1E000</default>
     </attribute>
@@ -4746,10 +4482,6 @@
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
     </attribute>
     <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
@@ -4779,10 +4511,6 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0x78F</default>
     </attribute>
@@ -4809,10 +4537,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -4879,10 +4603,6 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0x78F</default>
     </attribute>
@@ -4908,10 +4628,6 @@
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
-    </attribute>
-    <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
     </attribute>
     <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
@@ -4941,10 +4657,6 @@
       <default>FABRIC</default>
     </attribute>
     <attribute>
-      <id>DECONFIG_GARDABLE</id>
-      <default>1</default>
-    </attribute>
-    <attribute>
       <id>OBUS_BRICK_LANE_MASK</id>
 	<default>0xF1E000</default>
     </attribute>
@@ -4966,10 +4678,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5028,10 +4736,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5086,10 +4790,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5148,10 +4848,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5206,10 +4902,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5268,10 +4960,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5326,10 +5014,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5388,10 +5072,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5446,10 +5126,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5508,10 +5184,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5566,10 +5238,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5628,10 +5296,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5686,10 +5350,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5748,10 +5408,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5806,10 +5462,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5868,10 +5520,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -5926,10 +5574,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -5988,10 +5632,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6046,10 +5686,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6108,10 +5744,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6166,10 +5798,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6228,10 +5856,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6286,10 +5910,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6348,10 +5968,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6406,10 +6022,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6468,10 +6080,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6526,10 +6134,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6588,10 +6192,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6646,10 +6246,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6708,10 +6304,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6766,10 +6358,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6828,10 +6416,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -6886,10 +6470,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -6948,10 +6528,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7006,10 +6582,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7068,10 +6640,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7126,10 +6694,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7188,10 +6752,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7246,10 +6806,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7308,10 +6864,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7366,10 +6918,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7428,10 +6976,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7486,10 +7030,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7548,10 +7088,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7606,10 +7142,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7668,10 +7200,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7726,10 +7254,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7788,10 +7312,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7846,10 +7366,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -7908,10 +7424,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -7966,10 +7478,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8028,10 +7536,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8086,10 +7590,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8148,10 +7648,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8206,10 +7702,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8268,10 +7760,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8326,10 +7814,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8388,10 +7872,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8446,10 +7926,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8508,10 +7984,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8566,10 +8038,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8628,10 +8096,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8686,10 +8150,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8748,10 +8208,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8808,10 +8264,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -8866,10 +8318,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -8930,10 +8378,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9004,10 +8448,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9064,10 +8504,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -9128,10 +8564,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9188,10 +8620,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9258,10 +8686,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -9326,10 +8750,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9386,10 +8806,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9456,10 +8872,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -9524,10 +8936,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9586,10 +8994,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9646,10 +9050,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9716,10 +9116,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -9784,10 +9180,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -9844,10 +9236,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9912,10 +9300,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -9986,10 +9370,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10046,10 +9426,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MODEL</id>
@@ -10110,10 +9486,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10170,10 +9542,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -10240,10 +9608,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -10308,10 +9672,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10368,10 +9728,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -10438,10 +9794,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -10506,10 +9858,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10568,10 +9916,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10628,10 +9972,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -10698,10 +10038,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -10766,10 +10102,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
-  </attribute>
-  <attribute>
     <id>MODEL</id>
     <default>NIMBUS</default>
   </attribute>
@@ -10826,10 +10158,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -10894,10 +10222,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -10968,10 +10292,6 @@
     <default>0x00</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -11040,10 +10360,6 @@
     <default>0x00</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -11109,10 +10425,6 @@
   </attribute>
   <attribute>
     <id>CMFSI</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -11188,10 +10500,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11261,10 +10569,6 @@
   </attribute>
   <attribute>
     <id>CMFSI</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
     <default>0</default>
   </attribute>
   <attribute>
@@ -11340,10 +10644,6 @@
     <default>0</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11414,10 +10714,6 @@
   <attribute>
     <id>CMFSI</id>
     <default>0x00</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -11492,10 +10788,6 @@
     <default>0x00</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11568,10 +10860,6 @@
     <default>0x00</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11640,10 +10928,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -11702,10 +10986,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -11776,10 +11056,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11846,10 +11122,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -11920,10 +11192,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -11990,10 +11258,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12064,10 +11328,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12134,10 +11394,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12208,10 +11464,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12278,10 +11530,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12352,10 +11600,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12422,10 +11666,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12496,10 +11736,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12566,10 +11802,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12640,10 +11872,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12710,10 +11938,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12784,10 +12008,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12854,10 +12074,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -12928,10 +12144,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -12998,10 +12210,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -13072,10 +12280,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>OUT</default>
   </attribute>
@@ -13132,10 +12336,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -13190,10 +12390,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
   </attribute>
   <attribute>
     <id>DIRECTION</id>
@@ -13264,10 +12460,6 @@
     <default>UNIT</default>
   </attribute>
   <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>0</default>
-  </attribute>
-  <attribute>
     <id>DIRECTION</id>
     <default>IN</default>
   </attribute>
@@ -13326,10 +12518,6 @@
   <attribute>
     <id>CLASS</id>
     <default>UNIT</default>
-  </attribute>
-  <attribute>
-    <id>DECONFIG_GARDABLE</id>
-    <default>1</default>
   </attribute>
   <attribute>
     <id>MODEL</id>

@@ -19,10 +19,6 @@
 		<default>CARD</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -274,10 +270,6 @@
 	<attribute>
 		<id>DCACHE_LINE_SIZE</id>
 		<default>128</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
@@ -659,10 +651,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>PROC_FSP_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>PROC_HW_TOPOLOGY</id>
 		<default>0x00000000</default>
 	</attribute>
@@ -680,22 +668,6 @@
 	</attribute>
 	<attribute>
 		<id>PROC_INT_CQ_VC_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NPU_MMIO_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NPU_PHY0_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NPU_PHY1_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NX_RNG_BAR_ENABLE</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
@@ -720,10 +692,6 @@
 	</attribute>
 	<attribute>
 		<id>PROC_PERV_BNDY_PLL_DATA</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_PSI_BRIDGE_BAR_ENABLE</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
@@ -847,10 +815,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>VCS_I2C_RAIL</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>VDD_AVSBUS_BUSNUM</id>
 		<default>0</default>
 	</attribute>
@@ -915,10 +879,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -986,10 +946,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -1060,10 +1016,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1127,10 +1079,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1214,10 +1162,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default></default>
 	</attribute>
@@ -1297,10 +1241,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -1391,10 +1331,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1466,10 +1402,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1536,10 +1468,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -1614,10 +1542,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1689,10 +1613,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1758,10 +1678,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -1830,10 +1746,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -1908,10 +1820,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -1983,10 +1891,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2053,10 +1957,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2131,10 +2031,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2206,10 +2102,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2275,10 +2167,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2347,10 +2235,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2425,10 +2309,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2500,10 +2380,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2570,10 +2446,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2648,10 +2520,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2723,10 +2591,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -2792,10 +2656,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2864,10 +2724,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -2942,10 +2798,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3017,10 +2869,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3087,10 +2935,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3165,10 +3009,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3240,10 +3080,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3309,10 +3145,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3381,10 +3213,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3459,10 +3287,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3534,10 +3358,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3604,10 +3424,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3682,10 +3498,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3757,10 +3569,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -3826,10 +3634,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3898,10 +3702,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -3976,10 +3776,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -4051,10 +3847,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -4121,10 +3913,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -4199,10 +3987,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -4266,10 +4050,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -4337,10 +4117,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -4406,10 +4182,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -4469,10 +4241,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -4539,10 +4307,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -4719,10 +4483,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -4787,10 +4547,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -4890,10 +4646,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -5016,10 +4768,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -5197,10 +4945,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -5265,10 +5009,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -5368,10 +5108,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -5496,10 +5232,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DEVICE_ID</id>
 		<default></default>
 	</attribute>
@@ -5597,10 +5329,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -5725,10 +5453,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -5905,10 +5629,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -5973,10 +5693,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -6076,10 +5792,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -6201,10 +5913,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -6269,10 +5977,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -6372,10 +6076,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -6500,10 +6200,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DEVICE_ID</id>
 		<default></default>
 	</attribute>
@@ -6601,10 +6297,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -6727,10 +6419,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -6795,10 +6483,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DEVICE_ID</id>
@@ -6898,10 +6582,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -7026,10 +6706,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DEVICE_ID</id>
 		<default></default>
 	</attribute>
@@ -7127,10 +6803,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -7250,10 +6922,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -7309,10 +6977,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
@@ -7372,10 +7036,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default>0x0</default>
 	</attribute>
@@ -7431,10 +7091,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -7498,10 +7154,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -7561,10 +7213,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -7628,10 +7276,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -7691,10 +7335,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -7758,10 +7398,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -7821,10 +7457,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -7888,10 +7520,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -7951,10 +7579,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8018,10 +7642,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8081,10 +7701,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8148,10 +7764,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8211,10 +7823,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8278,10 +7886,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8341,10 +7945,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8408,10 +8008,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8471,10 +8067,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8538,10 +8130,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8601,10 +8189,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8668,10 +8252,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8731,10 +8311,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8798,10 +8374,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8861,10 +8433,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -8928,10 +8496,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -8991,10 +8555,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9058,10 +8618,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9121,10 +8677,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9188,10 +8740,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9251,10 +8799,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9318,10 +8862,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9381,10 +8921,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9448,10 +8984,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9511,10 +9043,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9578,10 +9106,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9641,10 +9165,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9708,10 +9228,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9771,10 +9287,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9838,10 +9350,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -9901,10 +9409,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -9968,10 +9472,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10031,10 +9531,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10098,10 +9594,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10161,10 +9653,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10228,10 +9716,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10291,10 +9775,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10358,10 +9838,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10421,10 +9897,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10488,10 +9960,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10551,10 +10019,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10618,10 +10082,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10681,10 +10141,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10748,10 +10204,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10811,10 +10263,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -10878,10 +10326,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -10941,10 +10385,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11008,10 +10448,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11071,10 +10507,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11138,10 +10570,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11201,10 +10629,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11268,10 +10692,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11331,10 +10751,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11398,10 +10814,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11461,10 +10873,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11528,10 +10936,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11593,10 +10997,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -11656,10 +11056,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -11727,10 +11123,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>INOUT</default>
 	</attribute>
@@ -11769,10 +11161,6 @@
 	<attribute>
 		<id>IO_X_MFG_MIN_EYE_WIDTH</id>
 		<default>0x0</default>
-	</attribute>
-	<attribute>
-		<id>LINK_TRAIN</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -11836,10 +11224,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>INOUT</default>
 	</attribute>
@@ -11878,10 +11262,6 @@
 	<attribute>
 		<id>IO_X_MFG_MIN_EYE_WIDTH</id>
 		<default>0x0</default>
-	</attribute>
-	<attribute>
-		<id>LINK_TRAIN</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -11949,10 +11329,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -12032,10 +11408,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -12131,10 +11503,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -12198,10 +11566,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12275,10 +11639,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12360,10 +11720,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -12427,10 +11783,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12504,10 +11856,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12587,10 +11935,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -12686,10 +12030,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -12753,10 +12093,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12830,10 +12166,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -12915,10 +12247,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -12982,10 +12310,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13059,10 +12383,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13148,10 +12468,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -13229,10 +12545,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -13328,10 +12640,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -13395,10 +12703,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13472,10 +12776,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13557,10 +12857,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -13624,10 +12920,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13701,10 +12993,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -13784,10 +13072,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
 	</attribute>
 	<attribute>
 		<id>DUMMY_RW</id>
@@ -13883,10 +13167,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -13950,10 +13230,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -14027,10 +13303,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -14112,10 +13384,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>1</default>
-	</attribute>
-	<attribute>
 		<id>DUMMY_RW</id>
 		<default>5</default>
 	</attribute>
@@ -14179,10 +13447,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -14256,10 +13520,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -14339,10 +13599,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>IN</default>
 	</attribute>
@@ -14412,10 +13668,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>IN</default>
 	</attribute>
@@ -14482,10 +13734,6 @@
 	</attribute>
 	<attribute>
 		<id>CMFSI</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
@@ -14566,10 +13814,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>OUT</default>
 	</attribute>
@@ -14644,10 +13888,6 @@
 	</attribute>
 	<attribute>
 		<id>CMFSI</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
@@ -14728,10 +13968,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>OUT</default>
 	</attribute>
@@ -14807,10 +14043,6 @@
 	<attribute>
 		<id>CMFSI</id>
 		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -14890,10 +14122,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>DIRECTION</id>
 		<default>OUT</default>
 	</attribute>
@@ -14969,10 +14197,6 @@
 	<attribute>
 		<id>CMFSI</id>
 		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
@@ -16172,10 +15396,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
 		<default></default>
 	</attribute>
@@ -16255,10 +15475,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>HWAS_STATE_CHANGED_FLAG</id>
