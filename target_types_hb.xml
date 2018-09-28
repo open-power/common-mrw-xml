@@ -164,12 +164,6 @@
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
     </attribute>
     <attribute>
-      <id>CEN_MSS_FREQ_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
-    </attribute>
-    <attribute>
       <id>CEN_MSS_DDR3_VDDR_SLOPE</id>
     </attribute>
     <attribute>
@@ -180,9 +174,6 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_DDR4_VDDR_INTERCEPT</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_VOLT_OVERRIDE</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_DDR3_VDDR_MAX_LIMIT</id>
@@ -419,24 +410,6 @@
       <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
     </attribute>
     <attribute>
-      <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_NX_RNG_FAILED_INT_ADDR</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_PC_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_VC_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_TM1_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_IC_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
@@ -449,31 +422,10 @@
       <id>I2C_BUS_DIV_REF</id>
     </attribute>
     <attribute>
-      <id>EQ_GARD</id>
-    </attribute>
-    <attribute>
-      <id>EC_GARD</id>
-    </attribute>
-    <attribute>
       <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
-      <id>SBE_RUNTIME_MODE</id>
-    </attribute>
-    <attribute>
-      <id>IS_SP_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SBE_FFDC_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>SBE_INTERNAL_FFDC_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>BOOT_FREQ_MULT</id>
-    </attribute>
-    <attribute>
-      <id>BACKUP_SEEPROM_SELECT</id>
     </attribute>
     <attribute>
       <id>BOOT_FREQ_MHZ</id>
@@ -543,9 +495,6 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>PROC_MEM_TO_USE</id>
     </attribute>
     <attribute>
       <id>VDD_AVSBUS_BUSNUM</id>
@@ -1321,9 +1270,6 @@
       <id>SYSTEM_FAMILY</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_IPL_PHASE</id>
-    </attribute>
-    <attribute>
       <id>SYSTEM_TYPE</id>
     </attribute>
     <attribute>
@@ -1685,19 +1631,7 @@
       <id>PROC_FABRIC_CAPI_MODE</id>
     </attribute>
     <attribute>
-      <id>FABRIC_PRESENT_GROUPS</id>
-    </attribute>
-    <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_XSCOM_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>MEM_MIRROR_PLACEMENT_POLICY</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1707,9 +1641,6 @@
     </attribute>
     <attribute>
       <id>MRW_HW_MIRRORING_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
@@ -1727,30 +1658,6 @@
       <id>PROC_PCIE_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET_MASK</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET_MASK</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_TM1_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_TM1_BAR_PAGE_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_IC_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_INT_CQ_IC_BAR_PAGE_SIZE</id>
-    </attribute>
-    <attribute>
       <id>SBE_IMAGE_MINIMUM_VALID_ECS</id>
     </attribute>
     <attribute>
@@ -1760,19 +1667,7 @@
       <id>MRW_FILTER_PLL_BUCKET</id>
     </attribute>
     <attribute>
-      <id>DISABLE_HBBL_VECTORS</id>
-    </attribute>
-    <attribute>
-      <id>BOOT_FLAGS</id>
-    </attribute>
-    <attribute>
-      <id>SYS_FORCE_ALL_CORES</id>
-    </attribute>
-    <attribute>
       <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>SBE_SYS_CONFIG</id>
     </attribute>
     <attribute>
       <id>CP_REFCLOCK_RCVR_TERM</id>
@@ -1908,9 +1803,6 @@
     </attribute>
     <attribute>
       <id>CEN_MSS_CLEANER_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CEN_MSS_DRAMINIT_RESET_DISABLE</id>
     </attribute>
     <attribute>
       <id>CEN_MRW_STRICT_MBA_PLUG_RULE_CHECKING</id>
@@ -2191,12 +2083,6 @@
     </attribute>
     <attribute>
       <id>CEN_EFF_CEN_RCV_IMP_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
-    </attribute>
-    <attribute>
-      <id>CEN_EFF_RD_VREF</id>
     </attribute>
     <attribute>
       <id>CEN_MSS_ALLOW_SINGLE_PORT</id>
@@ -2551,9 +2437,6 @@
     </attribute>
     <attribute>
       <id>OPTICS_CONFIG_MODE</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_DEBUG</id>
     </attribute>
     <attribute>
       <id>IO_O_MFG_CHK</id>
@@ -2948,9 +2831,6 @@
     </attribute>
     <attribute>
       <id>EI_BUS_TX_MSBSWAP</id>
-    </attribute>
-    <attribute>
-      <id>IO_X_DEBUG</id>
     </attribute>
     <attribute>
       <id>IO_X_MFG_CHK</id>
