@@ -550,9 +550,6 @@
       <id>MEM_MIRROR_PLACEMENT_POLICY</id>
     </attribute>
     <attribute>
-      <id>MIRROR_BASE_ADDRESS</id>
-    </attribute>
-    <attribute>
       <id>MNFG_ABUS_MIN_EYE_HEIGHT</id>
     </attribute>
     <attribute>
@@ -675,9 +672,6 @@
       <id>MSS_MBA_CACHELINE_INTERLEAVE_MODE</id>
     </attribute>
     <attribute>
-    	<id>MSS_MRW_VDDR_OFFSET_DISABLE</id>
-    </attribute>
-    <attribute>
     	<id>MSS_VOLT_DDR3_VDDR_SLOPE</id>
     </attribute>
     <attribute>
@@ -700,9 +694,6 @@
     </attribute>
     <attribute>
     	<id>OCC-RESET-TIMEOUT</id>
-    </attribute>
-    <attribute>
-      <id>PAYLOAD_IN_MIRROR_MEM</id>
     </attribute>
     <attribute>
       <id>PAYLOAD_KIND</id>
