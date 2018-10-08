@@ -834,20 +834,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Bit mask of group IDs which will be present in the fully configured CEC configuration. Bit 0 -&gt; group 0 present Bit 1 -&gt; group 1 present ... Bit 6 -&gt; group 6 present Bit 7 -&gt; group 7 present</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FABRIC_PRESENT_GROUPS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FABRIC_PRESENT_GROUPS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_FABRIC_SYSTEM_ID</id>
@@ -889,63 +875,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Define context for current phase of system IPL.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_IPL_PHASE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_IPL_PHASE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>HB_IPL</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>XSCOM BAR base address offset creator: platform consumer: p9_sbe_scominit firmware notes: Defines 16GB range (size implied) mapped for XSCOM usage Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:29 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_XSCOM_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_XSCOM_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>LPC BAR base address offset creator: platform consumer: p9_sbe_scominit firmware notes: Defines 4GB range (size implied) mapped for LPC usage Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 22:31 (excludes system/memory select/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_LPC_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Define placement policy/scheme for non-mirrored/mirrored memory layout NORMAL = non-mirrored start: 0, mirrored start: 1024TB FLIPPED = mirrored start: 0, non-mirrored start: 512TB Set by platform. Used by mss_eff_grouping.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MEM_MIRROR_PLACEMENT_POLICY</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MEM_MIRROR_PLACEMENT_POLICY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then group of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -983,19 +912,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>MRW_HW_MIRRORING_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Controls the enabling and disabling of smf. Used by unit initfiles, p9_mss_eff_grouping.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SMF_CONFIG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SMF_CONFIG</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -1147,21 +1063,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Indicate if debug data should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_DEBUG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_DEBUG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_O_MFG_CHK</id>
@@ -1307,19 +1208,6 @@
       <uint8_t>
         <default>0x00</default>
       </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicate if debug data should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_DEBUG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_DEBUG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -1687,188 +1575,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable optional post of interrupt when both NX RNG noise sources have failed creator: platform consumer: p9_rng_init_phase2 firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NX_RNG_FAILED_INT_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Address used to post interrupt when both NX RNG noise sources have failed creator: platform consumer: p9_rng_init_phase2 firmware notes: 64-bit address representing RA NOTE: register covers RA 8:51</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_NX_RNG_FAILED_INT_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_NX_RNG_FAILED_INT_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ PC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_PC_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_PC_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ PC BAR base address offset creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR (excludes system/memsel/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ PC BAR base address offset mask creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset mask (relative to chip MMIO origin) to program into chip address range field of BAR mask (excludes system/memsel/group/chip fields) Value defines which bits of VC_BAR are used during address compares</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET_MASK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_PC_BAR_BASE_ADDR_OFFSET_MASK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ VC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_VC_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_VC_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ VC BAR base address offset creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR (excludes system/memsel/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ VC BAR base address offset mask creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset mask (relative to chip MMIO origin) to program into chip address range field of BAR mask (excludes system/memsel/group/chip fields) Value defines which bits of VC_BAR are used during address compares</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET_MASK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_VC_BAR_BASE_ADDR_OFFSET_MASK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ TM1 BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_TM1_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_TM1_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ TM1 BAR base address offset creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR (excludes system/memsel/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_TM1_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_TM1_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ TM1 BAR page size creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_TM1_BAR_PAGE_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_TM1_BAR_PAGE_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ IC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_IC_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_IC_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ IC BAR base address offset creator: platform consumer: p9_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR (excludes system/memsel/group/chip fields)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_IC_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_IC_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>INT CQ IC (Interrupt Controller) BAR page size creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_INT_CQ_IC_BAR_PAGE_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_INT_CQ_IC_BAR_PAGE_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>The minimum number of valid ECs that is required to be used when customizing an SBE image. The customization will fail if it cannot create an image with at least this many ECs.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SBE_IMAGE_MINIMUM_VALID_ECS</id>
@@ -1938,86 +1644,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Capturing EQ Gard value</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EQ_GARD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EQ_GARD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Capturing EC Gard Value</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EC_GARD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EC_GARD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicates that SBE should go directly to runtime functionality</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_RUNTIME_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_RUNTIME_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicates whether we are connected to FSP or not</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IS_SP_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IS_SP_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicates whether SBE should collect FFDC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_FFDC_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_FFDC_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicates that the SBE should send back internal FFDC on any chipOp failure response</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_INTERNAL_FFDC_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_INTERNAL_FFDC_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Select Nest I2C and pll setting from one of the supported frequencies</description>
     <hwpfToHbAttrMap>
       <id>ATTR_NEST_PLL_BUCKET</id>
@@ -2062,47 +1688,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>BootLoader HWP flag to not place 12K exception vectors. This flag is only applicable when security is disabled.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DISABLE_HBBL_VECTORS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DISABLE_HBBL_VECTORS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Set with Primary SEEPROM</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BACKUP_SEEPROM_SELECT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>BACKUP_SEEPROM_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Switch to using a flag to indicate SEEPROM side SBE</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BOOT_FLAGS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>BOOT_FLAGS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>EQ boot frequency</description>
     <hwpfToHbAttrMap>
       <id>ATTR_BOOT_FREQ_MHZ</id>
@@ -2116,7 +1701,6 @@
         <default>2400</default>
       </uint32_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>FIXME - NEEDS DESCRIPTION</description>
@@ -2317,19 +1901,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Indicate that p9_sbe_select_ex should force selection to ALL good EX chiplets having good cores even if only a single EX chiplet mode is executed.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYS_FORCE_ALL_CORES</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYS_FORCE_ALL_CORES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Holds the state of Security Access Bit (SAB)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SECURITY_ENABLE</id>
@@ -2434,21 +2005,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>System Configurtion information - 1 indicates a chip present</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_SYS_CONFIG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_SYS_CONFIG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Defines system specific value of processor refclock receiver termination</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CP_REFCLOCK_RCVR_TERM</id>
@@ -2512,20 +2068,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute denotes where our master proc's memory is located. In the case that the master-proc does not have usable memory, we are going to use another proc's memory to boot. The attribute will be set to the chip and group ID of which proc we want to use.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_MEM_TO_USE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_MEM_TO_USE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Firmware provides a default value of 50mV if this attribute is zero. Consumer: p9_pstate_parameter_block -&gt; p9_setup_evid Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
@@ -3419,34 +2961,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>FOR LAB USE ONLY: Frequency override of this memory channel in MHz, comprising of up to three DIMMs. Set by config file or an attribute writing program. Consumed by mss_freq. The default of AUTO means mss_freq will find the best frequencies given the DIMMs plugged in and other rules. Otherwise, this is the system frequency. firmware notes: Platforms should initialize this attribute to AUTO (0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_FREQ_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_FREQ_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Percentage to increase/decrease MEM frequency - two's complement number. Measured in 100's. So the value of 100 is one percent increase. This frequency change comes from changing multipliers and dividers to get the desired frequency. The supported frequencies come from Tim Diemoz. Creator: platform set this to 0. Users can set this to a valid value. VALID Values: (TBD % to TBD %) (Tuleta) (TBD % to TBD %) (Glacier) Set by: PLL settings written by Dave Cadigan</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_FREQ_BIAS_PERCENTAGE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Controls search boundaries for WR_VREF Ternary shmoo. Value is a delta of register ticks from nominal Default Value = 0x08 (taken from characterization values), Max value = 0x19</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MSS_VREF_CAL_DELTA_FROM_NOMINAL</id>
@@ -3509,36 +3023,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Centaur DQ and DQS Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT), mss_eff_cnfg_termination consumer: initfiles,various.C firmware notes: none This is the nominal value</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Centaur Read Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfiles firmware notes: none This is the nominal value</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_EFF_RD_VREF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_EFF_RD_VREF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_mba</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CEN_MRW_SAFEMODE_MEM_THROTTLE_NUMERATOR_PER_MBA</id>
@@ -3593,7 +3077,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t />
+      <uint8_t>
+        <default>ON</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3603,19 +3089,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>CEN_MSS_CLEANER_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>A disable switch for resetting the phy delay values at the beginning of calling mss_draminit_training.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_DRAMINIT_RESET_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_DRAMINIT_RESET_DISABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -3783,19 +3256,6 @@
       <uint32_t>
         <default>0x000004C4</default>
       </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Possible DRAM voltage override.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CEN_MSS_VOLT_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CEN_MSS_VOLT_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -4214,6 +3674,18 @@
         <name>writeCycleTime</name>
         <type>uint64_t</type>
       </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
     </complexType>
     <description>Information needed to address the NV controller on the NVDIMM</description>
     <id>EEPROM_NV_INFO</id>
@@ -4276,6 +3748,18 @@
         <description>The amount of time in milliseconds a device requires on the completion of a write command to update its internal memory.</description>
         <name>writeCycleTime</name>
         <type>uint64_t</type>
+      </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
       </field>
     </complexType>
     <description>Information needed to address the EERPROM slaves</description>
@@ -4340,6 +3824,18 @@
         <name>writeCycleTime</name>
         <type>uint64_t</type>
       </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
     </complexType>
     <description>Information needed to address the EERPROM slaves</description>
     <id>EEPROM_SBE_PRIMARY_INFO</id>
@@ -4403,6 +3899,18 @@
         <name>writeCycleTime</name>
         <type>uint64_t</type>
       </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
     </complexType>
     <description>Information needed to address the EERPROM slaves</description>
     <id>EEPROM_VPD_BACKUP_INFO</id>
@@ -4465,6 +3973,18 @@
         <description>The amount of time in milliseconds a device requires on the completion of a write command to update its internal memory.</description>
         <name>writeCycleTime</name>
         <type>uint64_t</type>
+      </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
       </field>
     </complexType>
     <description>Information needed to address the EEPROM slaves</description>
@@ -4552,6 +4072,18 @@
         <description>Device address on the I2C bus. This is a 7-bit value, but then shifted 1 bit left.</description>
         <name>devAddr</name>
         <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
       </field>
     </complexType>
     <description>Information needed to address an I2C slave device</description>
@@ -4740,7 +4272,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Value of the next PLID that host service should send</description>
+    <description>Value of the next EID that host service should send. (Note - EID is more accurate, PLID being kept to handle legacy code.)</description>
     <id>HOSTSVC_PLID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4786,6 +4318,39 @@
         <default>0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <complexType>
+      <description>Structure to define the addressing for an I2C mux target.</description>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the chip that contains the I2C master.</description>
+        <name>i2cMasterPath</name>
+        <type>EntityPath</type>
+      </field>
+      <field>
+        <default>0x00</default>
+        <description>Port from the I2C Master device. This is a 6-bit value.</description>
+        <name>port</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x00</default>
+        <description>Device address on the I2C bus. This is a 7-bit value, but then shifted 1 bit left.</description>
+        <name>devAddr</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x00</default>
+        <description>I2C master engine. This is a 2-bit value.</description>
+        <name>engine</name>
+        <type>uint8_t</type>
+      </field>
+    </complexType>
+    <description>Information used to control a specific i2c mux device, to select a particular target bus.</description>
+    <id>I2C_MUX_INFO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
   </attribute>
   <attribute>
     <description>MCS Inband Scom base address</description>
@@ -5960,6 +5525,7 @@
   <attribute>
     <description>Physical hierarchical path to the target</description>
     <id>PHYS_PATH</id>
+    <mrwRequired />
     <nativeType>
       <name>EntityPath</name>
     </nativeType>
@@ -5977,172 +5543,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>DEPRECATED!!! Use PBAX_GROUPID instead PROC_CHIP Attribute Receive PBAX Nodeid. Value that indicates this PBA's PBAX Node affinity. This is matched to pbax_nodeid of the PMISC Address phase. Provided by the Machine Readable Workbook.</description>
-    <id>PM_PBAX_NODEID</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Frequency (binary in MHz) for the point at which clock sector buffers should be at full strength. This is to support Vmin operation. Setting cannot overlap the Low or High bands. Provided by the Machine Readable Workbook after system characterization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PM_RESONANT_CLOCK_FULL_CLOCK_SECTOR_BUFFER_FREQUENCY</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PM_RESONANT_CLOCK_FULL_CLOCK_SECTOR_BUFFER_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Frequency (binary in MHz) for the lower end of the High Frequency Resonant band Provided by the Machine Readable Workbook after system characterization.</description>
-    <id>PM_RESONANT_CLOCK_HIGH_BAND_LOWER_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Frequency (binary in MHz)) for the upper end of the High Frequency Resonant band Provided by the Machine Readable Workbook after system characterization.</description>
-    <id>PM_RESONANT_CLOCK_HIGH_BAND_UPPER_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Frequency (binary in MHz)) for the lower end of the Low Frequency Resonant band Provided by the Machine Readable Workbook after system characterization.</description>
-    <id>PM_RESONANT_CLOCK_LOW_BAND_LOWER_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Frequency (binary in MHz) for the upper end of the Low Frequency Resonant band Provided by the Machine Readable Workbook after system characterization.</description>
-    <id>PM_RESONANT_CLOCK_LOW_BAND_UPPER_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Frequency (binary in KHz) indicating the frequency that the cores will be moved to in the event of the loss of the OCC Heartbeat. This value needs to be the maximum of the DpoMin frequency for proper PowerBus operation and the PowerSave value for the present part. Provided by the Machine Readable Workbook after system characterization. The value is translated to the Pstate space. Producer: Machine Readable Workbook Consumers: p8_build_gpstate_table.C DYNAMIC_ATTRIBUTE: ATTR_PM_SAFE_PSTATE</description>
-    <id>PM_SAFE_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PROC_CHIP Attribute Set Assisted if power off serialization is needed and SLEEP_TYPE=Fast; Set to Hardware if the system can handle the unrelated powering off between cores. Hardware setting decreases entry latency Producer: MRWB Consumer: proc_pm_init and proc_pcbs_init</description>
-    <id>PM_SLEEP_ENTRY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PROC_CHIP Attribute Set to Assisted if power on serialization is needed and SLEEP_TYPE=Fast; Set to Hardware if the system can handle the unrelated powering off between cores. Hardware setting decreases entry latency Must be set to Assisted if ATTR_PM_SLEEP_TYPE=Deep as this necessary for restore. Setting to Hardware is a test mode for Fast only. Producer: MRWB Consumer: proc_pm_init and proc_pcbs_init.</description>
-    <id>PM_SLEEP_EXIT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PROC_CHIP Attribute Selects which voltage level to place the Core domain PFETs upon Sleep entry. 0 = Vret (Fast Sleep Mode), 1 = Voff (Deep Sleep Mode) Producer: MRWB Consumer: proc_pm_init and proc_pcbs_init</description>
-    <id>PM_SLEEP_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute SPI Clock Frequency (binary in MHz) Consumer: proc_pm_effective Produces ATTR_PM_SPIVID_CLOCK_DIVIDER Provided by the Machine Readable Workbook.</description>
-    <id>PM_SPIVID_FREQUENCY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PROC_CHIP Attribute Defines the configuration of the SPIVID ports from the target. - NONE means that no VRM is attached. - PORTxNONRED means that the indicated port is used in a non-redundant configuration. - REDUNDANT means that all three are connected and considered redundant. Provided by the Machine Readable Workbook.</description>
-    <id>PM_SPIVID_PORT_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Version level of #M that represents the minimum for IVRM characterized parts. If this value is non-zero and the #M version level is less than this value, IVRMs are disabled. If the #M version is greater than or equal to this value, the IVRMs are allowed to be enable from a level of part perspective. Producer: MRWB Consumer: p8_build_pstate_datablock.C</description>
-    <id>PM_SYSTEM_IVRM_VPD_MIN_LEVEL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override for Maximum frequency for which undervolting is allowed. If value = 0, the value of VPD Turbo data point is passed to OCC FW via Pstate SuperStructure. If value != 0, this value will be passed to OCC FW via Pstate SuperStructure as the ceiling frequency for enabled CPMs. Will be internally rounded to the nearest ATTR_PROC_REFCLK_FREQUENCY / 8 value. Consumer: OCC FW; OCC Lab Tools Provided by the Machine Readable Workbook.</description>
-    <id>PM_UNDERVOLTING_FREQ_MAXIMUM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Override for Minimum frequency for which undervolting is allowed. If value = 0, the value of VPD CPMin data point is passed to OCC FW via Pstate SuperStructure. If value != 0, this value will be passed to OCC FW via Pstate SuperStructure as the floor frequency for enabled CPMs. Will be internally rounded to the nearest ATTR_PROC_REFCLK_FREQUENCY / 8 value. Consumer: OCC FW; OCC Lab Tools Provided by the Machine Readable Workbook.</description>
-    <id>PM_UNDERVOLTING_FRQ_MINIMUM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Setting depends on di/dt charateristics of the system. Set Assisted if power off serialization is needed and WINKLE_TYPE=Fast; Set to Hardware if the system can handle the unrelated powering off between cores. Hardware setting decreases entry latency Producer: MRWB Consumer: p8_poreslw_init.C</description>
-    <id>PM_WINKLE_ENTRY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Setting depends on di/dt charateristics of the system and the setting of ATTR_PM_WINKLE_TYPE. Set to Assisted if power on serialization is needed and WINKLE_TYPE=Fast; Set to Hardware if the system can handle the unrelated powering off between cores. Hardware setting decreases entry latency. Must be set to Assisted if ATTR_PM_WINKLE_TYPE=Deep as this necessary for restore. Setting to Hardware is a test mode for Fast only. Producer: MRWB Consumer: p8_poreslw_init.C</description>
-    <id>PM_WINKLE_EXIT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>PROC_CHIP Attribute Selects which voltage level to place the Core and ECO domain PFETs upon Winkle entry. 0 = Vret (Fast Winkle Mode), 1 = Voff (Deep Winkle Mode)</description>
-    <id>PM_WINKLE_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
   </attribute>
   <attribute>
     <description>Position of target relative to node</description>
@@ -6592,6 +5992,18 @@
         <name>devAddr</name>
         <type>uint8_t</type>
       </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
     </complexType>
     <description>Information needed to address an I2C slave device</description>
     <id>TEMP_SENSOR_I2C_CONFIG</id>
@@ -6739,6 +6151,18 @@
         <description>The number of bytes a device requires to set its internal address/offset.</description>
         <name>byteAddrOffset</name>
         <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
       </field>
     </complexType>
     <description>Information needed to address the TPM slaves</description>
@@ -8037,30 +7461,6 @@
     <id>OPTICS_CONFIG_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Define context for current phase of system IPL.</description>
-    <enumerator>
-      <name>HB_IPL</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>HB_RUNTIME</name>
-      <value>0x2</value>
-    </enumerator>
-    <enumerator>
-      <name>CACHE_CONTAINED</name>
-      <value>0x4</value>
-    </enumerator>
-    <enumerator>
-      <name>CHIP_CONTAINED</name>
-      <value>0x8</value>
-    </enumerator>
-    <enumerator>
-      <name>NONHB_IPL</name>
-      <value>0x10</value>
-    </enumerator>
-    <id>SYSTEM_IPL_PHASE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates if current IPL is memory-preserving</description>
     <enumerator>
       <name>FALSE</name>
@@ -8071,18 +7471,6 @@
       <value>0x1</value>
     </enumerator>
     <id>IS_MPIPL</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Define placement policy/scheme for non-mirrored/mirrored memory layout NORMAL = non-mirrored start: 0, mirrored start: 1024TB FLIPPED = mirrored start: 0, non-mirrored start: 512TB Set by platform. Used by mss_eff_grouping.</description>
-    <enumerator>
-      <name>NORMAL</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>FLIPPED</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>MEM_MIRROR_PLACEMENT_POLICY</id>
   </enumerationType>
   <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
@@ -8141,18 +7529,6 @@
     <id>MRW_HW_MIRRORING_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Controls the enabling and disabling of smf. Used by unit initfiles, p9_mss_eff_grouping.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enable early data from Memory. This also enable cp_me from L3.</description>
     <enumerator>
       <name>OFF</name>
@@ -8209,18 +7585,6 @@
     <id>IO_DMI_PROC_DEBUG</id>
   </enumerationType>
   <enumerationType>
-    <description>Indicate if debug data should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_O_DEBUG</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8243,18 +7607,6 @@
       <value>0x1</value>
     </enumerator>
     <id>IO_O_CHANNEL_TYPE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicate if debug data should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_X_DEBUG</id>
   </enumerationType>
   <enumerationType>
     <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
@@ -8469,90 +7821,6 @@
     <id>PROC_PCIE_BAR_SIZE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable optional post of interrupt when both NX RNG noise sources have failed creator: platform consumer: p9_rng_init_phase2 firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ PC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_PC_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ VC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_VC_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ TM1 BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_TM1_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ TM1 BAR page size creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>4K</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>64K</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_TM1_BAR_PAGE_SIZE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ IC BAR enable creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_IC_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>INT CQ IC (Interrupt Controller) BAR page size creator: platform consumer: p9_setup_bars firmware notes: none</description>
-    <enumerator>
-      <name>4K</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>64K</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_INT_CQ_IC_BAR_PAGE_SIZE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates istep IPL</description>
     <enumerator>
       <name>NON_IPL</name>
@@ -8563,66 +7831,6 @@
       <value>0x1</value>
     </enumerator>
     <id>ISTEP_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates that SBE should go directly to runtime functionality</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>SBE_RUNTIME_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates whether we are connected to FSP or not</description>
-    <enumerator>
-      <name>FSP_LESS</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>FSP</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IS_SP_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates whether SBE should collect FFDC</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>SBE_FFDC_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates that the SBE should send back internal FFDC on any chipOp failure response</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>SBE_INTERNAL_FFDC_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>BootLoader HWP flag to not place 12K exception vectors. This flag is only applicable when security is disabled.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>DISABLE_HBBL_VECTORS</id>
   </enumerationType>
   <enumerationType>
     <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
@@ -8663,6 +7871,22 @@
       <value>3</value>
     </enumerator>
     <id>IO_REFCLOCK_RCVR_TERM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Provided by the Machine Readable Workbook. Consumer: p9_pm_pss_init</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0xFF</value>
+    </enumerator>
+    <enumerator>
+      <name>CS0</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>CS1</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PM_APSS_CHIP_SELECT</id>
   </enumerationType>
   <enumerationType>
     <description>Control CME response to execution of PowerPC STOP instruction if OFF, treat STOP4 as STOP4 if ON, treat STOP4 as STOP2 Producer: Work-around tools Consumer: p9_hcode_image_build.C Platform default: OFF</description>
@@ -9009,6 +8233,10 @@
     <enumerator>
       <name>MNFG_THRESHOLDS</name>
       <value>0x0000000000000001</value>
+    </enumerator>
+    <enumerator>
+      <name>MNFG_TEST_ALL_SPARE_DRAM_ROWS</name>
+      <value>0x0000000000000040</value>
     </enumerator>
     <enumerator>
       <name>MNFG_DISABLE_DRAM_REPAIRS</name>
@@ -9861,14 +9089,6 @@
     <id>CEN_VPD_DIMM_RCD_IBT</id>
   </enumerationType>
   <enumerationType>
-    <description>FOR LAB USE ONLY: Frequency override of this memory channel in MHz, comprising of up to three DIMMs. Set by config file or an attribute writing program. Consumed by mss_freq. The default of AUTO means mss_freq will find the best frequencies given the DIMMs plugged in and other rules. Otherwise, this is the system frequency. firmware notes: Platforms should initialize this attribute to AUTO (0)</description>
-    <enumerator>
-      <name>AUTO</name>
-      <value>0</value>
-    </enumerator>
-    <id>CEN_MSS_FREQ_OVERRIDE</id>
-  </enumerationType>
-  <enumerationType>
     <description>DRAM Write Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfile firmware notes: none This is the nominal value This is for DDR3</description>
     <enumerator>
       <name>VDD420</name>
@@ -10113,162 +9333,6 @@
     <id>CEN_EFF_CEN_RCV_IMP_DQ_DQS</id>
   </enumerationType>
   <enumerationType>
-    <description>Centaur DQ and DQS Slew Rate Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Slowest slew rate is 0, incrementing by one. The lower the number the slower the slew rate the higher the faster. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. creator: VPD(MT), mss_eff_cnfg_termination consumer: initfiles,various.C firmware notes: none This is the nominal value</description>
-    <enumerator>
-      <name>SLEW_3V_NS</name>
-      <value>3</value>
-    </enumerator>
-    <enumerator>
-      <name>SLEW_4V_NS</name>
-      <value>4</value>
-    </enumerator>
-    <enumerator>
-      <name>SLEW_5V_NS</name>
-      <value>5</value>
-    </enumerator>
-    <enumerator>
-      <name>SLEW_6V_NS</name>
-      <value>6</value>
-    </enumerator>
-    <enumerator>
-      <name>SLEW_MAXV_NS</name>
-      <value>7</value>
-    </enumerator>
-    <id>CEN_EFF_CEN_SLEW_RATE_DQ_DQS</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Centaur Read Vref. Used in various locations and comes from the MT keyword of the VPD or is computed in mss_eff_cnfg_termination. Can be overwritten by ODM vendors if done from the PNOR or odm_eff_cnfg. Creator: VPD(MT) or mss_eff_cnfg_termination consumer: various.C and initfiles firmware notes: none This is the nominal value</description>
-    <enumerator>
-      <name>VDD40375</name>
-      <value>40375</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD41750</name>
-      <value>41750</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD43125</name>
-      <value>43125</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD44500</name>
-      <value>44500</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD45875</name>
-      <value>45875</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD47250</name>
-      <value>47250</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD48625</name>
-      <value>48625</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD50000</name>
-      <value>50000</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD51375</name>
-      <value>51375</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD52750</name>
-      <value>52750</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD54125</name>
-      <value>54125</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD55500</name>
-      <value>55500</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD56875</name>
-      <value>56875</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD58250</name>
-      <value>58250</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD59625</name>
-      <value>59625</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD61000</name>
-      <value>61000</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD60375</name>
-      <value>60375</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD61750</name>
-      <value>61750</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD63125</name>
-      <value>63125</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD64500</name>
-      <value>64500</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD65875</name>
-      <value>65875</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD67250</name>
-      <value>67250</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD68625</name>
-      <value>68625</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD70000</name>
-      <value>70000</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD71375</name>
-      <value>71375</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD72750</name>
-      <value>72750</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD74125</name>
-      <value>74125</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD75500</name>
-      <value>75500</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD76875</name>
-      <value>76875</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD78250</name>
-      <value>78250</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD79625</name>
-      <value>79625</value>
-    </enumerator>
-    <enumerator>
-      <name>VDD81000</name>
-      <value>81000</value>
-    </enumerator>
-    <id>CEN_EFF_RD_VREF</id>
-  </enumerationType>
-  <enumerationType>
     <description>At a system level, this attribute controls if interleaving is required, requested or never. The MRW.</description>
     <enumerator>
       <name>NEVER</name>
@@ -10307,18 +9371,6 @@
       <value>1</value>
     </enumerator>
     <id>CEN_MSS_CLEANER_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>A disable switch for resetting the phy delay values at the beginning of calling mss_draminit_training.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>CEN_MSS_DRAMINIT_RESET_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>When this value is true, then mss_eff config will allow a single port to have one dimm and will allow ports to have different sizes. Used in eff_config</description>
@@ -10399,22 +9451,6 @@
       <value>0x02</value>
     </enumerator>
     <id>CEN_MRW_POWER_CONTROL_REQUESTED</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Possible DRAM voltage override.</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>VOLT_135</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>VOLT_120</name>
-      <value>0x02</value>
-    </enumerator>
-    <id>CEN_MSS_VOLT_OVERRIDE</id>
   </enumerationType>
   <enumerationType>
     <description>List of Voltages that are compliant with the system. DIMMs that do not have voltages listed in their SPD as supported are errored out. Procedure defined is currently 1.2V and 1.35V only.</description>
@@ -10905,6 +9941,9 @@
     <enumerator>
       <name>AST2500</name>
     </enumerator>
+    <enumerator>
+      <name>PCA9847</name>
+    </enumerator>
     <id>MODEL</id>
   </enumerationType>
   <enumerationType>
@@ -11137,22 +10176,6 @@
       <value>8</value>
     </enumerator>
     <id>PFET_VDD_VOFF_SEL</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Provided by the Machine Readable Workbook. Consumer: p9_pm_pss_init</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0xFF</value>
-    </enumerator>
-    <enumerator>
-      <name>CS0</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>CS1</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PM_APSS_CHIP_SELECT</id>
   </enumerationType>
   <enumerationType>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
@@ -11579,8 +10602,12 @@
       <value>76</value>
     </enumerator>
     <enumerator>
-      <name>LAST_IN_RANGE</name>
+      <name>I2C_MUX</name>
       <value>77</value>
+    </enumerator>
+    <enumerator>
+      <name>LAST_IN_RANGE</name>
+      <value>78</value>
     </enumerator>
     <id>TYPE</id>
   </enumerationType>
