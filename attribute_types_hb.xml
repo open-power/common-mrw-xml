@@ -57,6 +57,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Hostboot load address, in bytes, for a given node, replicated for each processor within a node. A value of 0xFFFFFFFFFFFFFFFF implies the Hostboot load address is invalid and should be ignored. Hostboot is responsible for updating the load address to a valid value on every boot, and invalidating it just prior to shutdown. Used by p9_query_host_meminfo as a backup in case Hostboot's core scratch register is unavailable.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_HB_HRMOR_BYTES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>HB_HRMOR_BYTES</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t>
+        <default>0xFFFFFFFFFFFFFFFF</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port (MCA) basis Also used for emergency mode throttle MBA_FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional Consumer: thermal_init, initfile</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
