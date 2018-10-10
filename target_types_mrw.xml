@@ -1238,6 +1238,14 @@
 		</attribute>
 	</targetType>
 	<targetType>
+        <id>unit-i2cmux-channel</id>
+        <parent>unit-i2c-master</parent>
+        <attribute>
+            <id>MUX_CHANNEL</id>
+            <default>0xFF</default>
+        </attribute>
+    </targetType>
+	<targetType>
 		<id>unit-usb-master</id>
 		<parent>mrw-unit</parent>
 		<attribute>

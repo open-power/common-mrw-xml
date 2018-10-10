@@ -1,0 +1,141 @@
+<partInstance>
+<version>2.2</version>
+<targetInstances>
+<targetPart>
+	<id>PCA9847</id>
+	<type>chip-PCA9847</type>
+	<is_root>true</is_root>
+	<instance_name>PCA9847</instance_name>
+	<position>-1</position>
+	<parent>mrw-chip</parent>
+	<parent_type>card-motherboard</parent_type>
+	<parent_type>card-daughtercard</parent_type>
+	<child_id>PCA9847.i2cm-0</child_id>
+	<child_id>PCA9847.i2cm-1</child_id>
+	<child_id>PCA9847.i2cm-2</child_id>
+	<child_id>PCA9847.i2cm-3</child_id>
+	<child_id>PCA9847.i2cm-4</child_id>
+	<child_id>PCA9847.i2cm-5</child_id>
+	<child_id>PCA9847.i2cm-6</child_id>
+	<child_id>PCA9847.i2cm-7</child_id>
+	<child_id>PCA9847.i2c-0</child_id>
+	<child_id>PCA9847.RESET</child_id>
+	<attribute>
+		<id>TYPE</id>
+        <default>I2C_MUX</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-0</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>0</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>0</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-1</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>1</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-2</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>2</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>2</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-3</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>3</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>3</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-4</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>4</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>4</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-5</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>5</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>5</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-6</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>6</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>6</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2cm-7</id>
+	<type>unit-i2cmux-channel</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2cm</instance_name>
+	<position>7</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>MUX_CHANNEL</id>
+		<default>7</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>PCA9847.i2c-0</id>
+	<type>unit-i2c-slave</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.i2c</instance_name>
+	<position>0</position>
+	<parent>mrw-unit</parent>
+</targetPart>
+<targetPart>
+	<id>PCA9847.RESET</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>PCA9847.RESET</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+</targetPart>
+</targetInstances>
+</partInstance>
