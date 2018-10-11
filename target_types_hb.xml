@@ -359,6 +359,9 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>HB_HRMOR_BYTES</id>
+    </attribute>
+    <attribute>
       <id>FREQ_O_MHZ</id>
     </attribute>
     <attribute>
