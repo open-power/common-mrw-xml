@@ -1033,16 +1033,10 @@
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
-      <id>MAX_CHIPLETS_PER_PROC</id>
-    </attribute>
-    <attribute>
       <id>MAX_DIMMS_PER_MBA_PORT</id>
     </attribute>
     <attribute>
       <id>MAX_DMI_PER_PROC</id>
-    </attribute>
-    <attribute>
-      <id>MAX_EXS_PER_PROC_CHIP</id>
     </attribute>
     <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
@@ -2539,6 +2533,12 @@
     <attribute>
       <default>OMI</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>DUMMY_RW</id>
