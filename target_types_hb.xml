@@ -4,9 +4,6 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>HWAS_STATE_CHANGED_FLAG</id>
-    </attribute>
-    <attribute>
       <id>MODEL</id>
     </attribute>
     <attribute>
@@ -158,9 +155,6 @@
       <id>EI_BUS_TX_MSBSWAP</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CEN_ISDIMM_MBVPD_INDEX</id>
     </attribute>
     <attribute>
@@ -197,9 +191,6 @@
     <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <id>chip-ocmb</id>
     <parent>chip</parent>
@@ -299,29 +290,8 @@
       <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
-      <id>TIME_BASE</id>
-    </attribute>
-    <attribute>
-      <id>TLB_DATA_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>TLB_DATA_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <id>TLB_INSTR_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <id>TLB_INSTR_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <id>TLB_RESERVE_SIZE</id>
-    </attribute>
-    <attribute>
       <default>PROC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>XIVE_HW_RESET</id>
     </attribute>
     <attribute>
       <default>0x00000000</default>
@@ -390,9 +360,6 @@
     </attribute>
     <attribute>
       <id>I2C_BUS_DIV_REF</id>
-    </attribute>
-    <attribute>
-      <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
       <id>BOOT_FREQ_MULT</id>
@@ -541,9 +508,6 @@
     <attribute>
       <id>CME_CHTM_TRACE_MEMORY_CONFIG</id>
     </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
     <id>chip-processor</id>
     <parent>chip</parent>
   </targetType>
@@ -638,9 +602,6 @@
       <id>IMT_BASE_ADDR</id>
     </attribute>
     <attribute>
-      <id>ISTEP_MODE</id>
-    </attribute>
-    <attribute>
       <default>8</default>
       <id>L2_CACHE_ASSOC_SETS</id>
     </attribute>
@@ -694,26 +655,6 @@
       <id>RNG_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <default>4</default>
-      <id>TLB_DATA_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>1024</default>
-      <id>TLB_DATA_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>TLB_INSTR_ASSOC_SETS</id>
-    </attribute>
-    <attribute>
-      <default>0</default>
-      <id>TLB_INSTR_ENTRIES</id>
-    </attribute>
-    <attribute>
-      <default>128</default>
-      <id>TLB_RESERVE_SIZE</id>
-    </attribute>
-    <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
@@ -748,9 +689,6 @@
     </attribute>
     <attribute>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>FIELD_CORE_OVERRIDE</id>
     </attribute>
     <attribute>
       <id>FRU_ID</id>
@@ -850,9 +788,6 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CEN_DQ_TO_DIMM_CONN_DQ</id>
@@ -956,9 +891,6 @@
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
     <attribute>
-      <id>BLOCK_SPEC_DECONFIG</id>
-    </attribute>
-    <attribute>
       <id>BMC_FRU_ID</id>
     </attribute>
     <attribute>
@@ -987,9 +919,6 @@
       <id>DPO_MIN_FREQ_PERCENT</id>
     </attribute>
     <attribute>
-      <id>EFFECTIVE_EC</id>
-    </attribute>
-    <attribute>
       <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
     </attribute>
     <attribute>
@@ -1002,9 +931,6 @@
       <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
     </attribute>
     <attribute>
-      <id>FREQ_CORE_MAX</id>
-    </attribute>
-    <attribute>
       <id>FREQ_PROC_REFCLOCK</id>
     </attribute>
     <attribute>
@@ -1014,25 +940,10 @@
       <id>FSP_BAR_SIZE</id>
     </attribute>
     <attribute>
-      <id>FUSED_CORE_MODE_HB</id>
-    </attribute>
-    <attribute>
-      <id>HB_RSV_MEM_SIZE_MB</id>
-    </attribute>
-    <attribute>
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
-      <id>HOSTSVC_PLID</id>
-    </attribute>
-    <attribute>
-      <id>ISTEP_MODE</id>
-    </attribute>
-    <attribute>
       <default>43</default>
-      <id>MAX_CHIPLETS_PER_PROC</id>
-    </attribute>
-    <attribute>
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
     <attribute>
@@ -1040,9 +951,6 @@
     </attribute>
     <attribute>
       <id>MAX_DMI_PER_PROC</id>
-    </attribute>
-    <attribute>
-      <id>MAX_EXS_PER_PROC_CHIP</id>
     </attribute>
     <attribute>
       <id>MAX_EXS_PER_PROC_CHIP</id>
@@ -1218,9 +1126,6 @@
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
-      <id>RUN_MAX_MEM_PATTERNS</id>
-    </attribute>
-    <attribute>
       <id>SBE_UPDATE_DISABLE</id>
     </attribute>
     <attribute>
@@ -1240,12 +1145,6 @@
     </attribute>
     <attribute>
       <id>SYSTEM_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>TEST_NEGATIVE_FCN</id>
-    </attribute>
-    <attribute>
-      <id>THREAD_COUNT</id>
     </attribute>
     <attribute>
       <id>TPM_REQUIRED</id>
@@ -1741,9 +1640,6 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>IS_SIMULATION</id>
     </attribute>
     <attribute>
@@ -1902,9 +1798,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-capp-power9</id>
@@ -1921,9 +1814,6 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -1964,9 +1854,6 @@
       <id>IO_DMI_PROC_TX_FFE_PRECURSOR</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-dmi-power9</id>
@@ -1982,9 +1869,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-eq-power9</id>
@@ -1998,9 +1882,6 @@
     <attribute>
       <default>EX</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2026,9 +1907,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-l4-power9</id>
@@ -2042,9 +1920,6 @@
     <attribute>
       <default>MBA</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2096,9 +1971,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-mc-power9</id>
@@ -2118,14 +1990,8 @@
       <id>CDM_DOMAIN</id>
     </attribute>
     <attribute>
-      <id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-    </attribute>
-    <attribute>
       <default>MCA</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2163,9 +2029,6 @@
       <id>VPP_ID</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-mcbist-power9</id>
@@ -2187,9 +2050,6 @@
     <attribute>
       <default>MCC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2227,9 +2087,6 @@
       <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-mcs-power9</id>
@@ -2243,9 +2100,6 @@
     <attribute>
       <default>MEM_PORT</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2277,9 +2131,6 @@
     <attribute>
       <default>MI</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2397,9 +2248,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-obus-brick-power9</id>
@@ -2459,9 +2307,6 @@
     </attribute>
     <attribute>
       <id>IO_O_CHANNEL_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2541,7 +2386,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
+      <id>OMI_INBAND_BAR_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2565,9 +2413,6 @@
     <attribute>
       <default>OMIC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2669,9 +2514,6 @@
       <id>PROC_PCIE_PCS_M_CNTL</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-pec-power9</id>
@@ -2705,9 +2547,6 @@
     <attribute>
       <default>PERV</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2758,9 +2597,6 @@
       <id>PROC_PCIE_BAR_ENABLE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-phb-power9</id>
@@ -2796,9 +2632,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-ppe-power9</id>
@@ -2832,9 +2665,6 @@
     <attribute>
       <default>SBE</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2895,9 +2725,6 @@
     </attribute>
     <attribute>
       <id>IO_XBUS_CHAN_EQ</id>
-    </attribute>
-    <attribute>
-      <id>DUMMY_RW</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
