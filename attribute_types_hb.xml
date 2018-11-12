@@ -932,6 +932,32 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <global />
     <hwpfToHbAttrMap>
@@ -3390,18 +3416,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Block speculative deconfig in reconfig loop. Flags when speculative deconfigurations should not be done for predictive gard records on a reconfig loop IPL due to out of hardware condition on prior IPL. 0 = Allow speculative deconfiguration 1 = Block speculative deconfiguration</description>
-    <id>BLOCK_SPEC_DECONFIG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>BMC FRU ID attribute to report the system firmware levels to the BMC.</description>
     <id>BMC_FRU_ID</id>
     <persistency>non-volatile</persistency>
@@ -3587,35 +3601,6 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Dummy platInit uint8[1][3][5] attribute used for testing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DUMMY_SCRATCH_PLAT_INIT_UINT8</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DUMMY_RW</id>
-    <ignoreEkb />
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>1,3,5</array>
-      <uint8_t>
-        <default>5</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Dummy attribute with write-only permissions</description>
-    <id>DUMMY_WO</id>
-    <persistency>non-volatile</persistency>
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <complexType>
@@ -3993,18 +3978,6 @@
     <readable />
   </attribute>
   <attribute>
-    <description>Holds the effective EC of the system. Effective EC is the lowest EC among all the functional procs in the system. Some cards may "downbin" the effective ECs of their contained processors, which could lower the effective EC of the system beyond what would occur when considering processor ECs alone</description>
-    <id>EFFECTIVE_EC</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x10</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Attribute indicating the target's engine type</description>
     <hasStringConversion />
     <id>ENGINE_TYPE</id>
@@ -4092,18 +4065,6 @@
     <readable />
   </attribute>
   <attribute>
-    <description>Field Core Override (FCO) is the override value for the number of functional cores allowed on the system. FCO is used when customers order a system with N cores but they only want to enable less than N cores to lower software license costs. A field in the anchor VPD is set by manufacturing to specify the maximum number of cores to enable. The number is maintained, even if some cores are garded out due to error. A value of 0 means all cores allowed;</description>
-    <id>FIELD_CORE_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>This attribute represents the Maximum number of L2 Column Repairs allowed in the Field. creator: platform (generated based on MRW data)</description>
     <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
     <persistency>non-volatile</persistency>
@@ -4146,16 +4107,6 @@
         <default>6</default>
       </uint8_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>SYSTEM Attribute Maximum frequency (binary in MHz) that any processor in the system will run. Used to define the top end of the PState range in the frequency space. From this, the ATTR_PROCPM_PSTATE0_FREQUENCY is computed using ATTR_SYSTEM_REFCLK_FREQUENCY to determine the step size. Consumers: proc_build_gpstate_table.C (among others) Data is is provided by MVPD #V and is calculated as the minimum of the turbo frequencies</description>
-    <id>FREQ_CORE_MAX</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>System attribute. The frequency of the processor refclock in MHz. Provided by the MRW.</description>
@@ -4213,27 +4164,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Stores the SMT setting used to determine fused mode. SMT4_DEFAULT: Nimbus_DD1, boot in SMT4 but can change to SMT8 SMT4_ONLY: Nimbus_DD2/Cumulus, set based on PVR info SMT8_ONLY: Nimbus_DD2/Cumulus, set based on PVR info</description>
-    <id>FUSED_CORE_MODE_HB</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The amount of mainstore that PHYP needs to preserve per node during MPIPL.</description>
-    <id>HB_RSV_MEM_SIZE_MB</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>256</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <complexType>
       <description>Structure which defines a system's HB settings. Applicable for System target only.</description>
       <field>
@@ -4272,18 +4202,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Value of the next EID that host service should send. (Note - EID is more accurate, PLID being kept to handle legacy code.)</description>
-    <id>HOSTSVC_PLID</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x89000000</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Hot Plug Controller values for a specific processor. Purpose: Holds information about the hot plug controllers so that a Hardware procedure is able to turn them on and off. Data Format: up to 8 Hot Plug Controllers x 7 variables of information This data is at the processor level. The needed information and their individual sizes are as follows: (1) I2C Master processor engine (uint8_t) (2) I2C Master processor port (uint8_t) (3) Bus Speed (uint16_t value: 2 uint8_t values: MSB, LSB) (4) Slave address (uint8_t) (5) Device type (uint8_t: see SUPPORTED_HOT_PLUG enum) (6) I2C Master processor node (uint8_t) (7) I2C Master processor position (uint8_t) Thus, the information will be 8 bytes.</description>
     <id>HOT_PLUG_POWER_CONTROLLER_INFO</id>
     <persistency>non-volatile</persistency>
@@ -4294,18 +4212,6 @@
         <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint8_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>HardWare Availability Service State Changed Attribute. Keeps track of changedSinceChecked state, indicates if the target has changed since last checked by the appropriate service. This is a bit field of flags (see HWAS_CHANGED_BIT enumeration that follows).</description>
-    <id>HWAS_STATE_CHANGED_FLAG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0</default>
-      </uint64_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Designates the speed at which a given I2C bus should run. Creator: MRW Purpose: Used by FW to know the fastest possible bus speed that all of the devices on a given bus are able to use. Data Format: 4x13 array of uint16_t values. The first index indicates the engine number of the bus. The second index indicates the port number of the bus. The value in the array is the I2C bus speed used for that engine/port combination in KHz.</description>
@@ -4435,23 +4341,6 @@
         <default>0xFFFFFFFFFFFFFFFF</default>
       </uint64_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicates istep IPL</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ISTEP_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ISTEP_MODE</id>
-    <ignoreEkb />
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>L2 Cache Assoc Sets</description>
@@ -5766,18 +5655,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PRD will increment this count and issue a reconfig loop each time an RCD parity error (recovery disabled) is detected during Memory Diagnostics. This value will be cleared at the end of Memory Diagnostics if it is able to complete without the need to issue a reconfig loop.</description>
-    <id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>1 = System has redundant clock oscillators 0 = System does not have redundant clock oscillators From the Machine Readable Workbook</description>
     <id>REDUNDANT_CLOCKS</id>
     <persistency>non-volatile</persistency>
@@ -5822,18 +5699,6 @@
         <default>0xFFFFFFFFFFFFFFFF</default>
       </uint64_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Policy indicating whether to perform the maximum amount of memory pattern testing possible or not. Set to 0x01 to perform the maximum amount of memory pattern testing possible. Set to 0x00 to perform the default amount of memory pattern testing.</description>
-    <id>RUN_MAX_MEM_PATTERNS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Control execution of updateProcessorSbeSeeproms() if 0, enable SBE update of processor SEEPROM if 1, disable SBE update of processor SEEPROM Consumer: sbe_update.C Default: 0</description>
@@ -6011,85 +5876,6 @@
     <readable />
   </attribute>
   <attribute>
-    <description>Attribute to test signed attribute functionality in the system</description>
-    <id>TEST_NEGATIVE_FCN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <int8_t>
-        <default>-6</default>
-      </int8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Thread Count</description>
-    <id>THREAD_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x4</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Time Base frequency in MHZ</description>
-    <id>TIME_BASE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x800000</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TLB Data Associative Sets</description>
-    <id>TLB_DATA_ASSOC_SETS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TLB Data Entries</description>
-    <id>TLB_DATA_ENTRIES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TLB Instruction Associative Sets</description>
-    <id>TLB_INSTR_ASSOC_SETS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>TLB Instruction Entries</description>
-    <id>TLB_INSTR_ENTRIES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Reserve Size in bytes</description>
-    <id>TLB_RESERVE_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <complexType>
       <description>Structure to define the addressing for an I2C TPM.</description>
       <field>
@@ -6254,17 +6040,6 @@
       </uint32_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Used to tell INTRP code whether to use the XIVE HW Reset or a software based reset. 0 = Software based reset 1 = XIVE HW reset</description>
-    <id>XIVE_HW_RESET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>LX keyword VPD data for HDAT module</description>
@@ -7541,6 +7316,18 @@
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
   </enumerationType>
   <enumerationType>
+    <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <enumerator>
       <name>NO_SWAP</name>
@@ -7819,18 +7606,6 @@
       <value>0xFFFFFFFFFFFFFFFF</value>
     </enumerator>
     <id>PROC_PCIE_BAR_SIZE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates istep IPL</description>
-    <enumerator>
-      <name>NON_IPL</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>IPL</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>ISTEP_MODE</id>
   </enumerationType>
   <enumerationType>
     <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
@@ -9598,22 +9373,6 @@
     <id>ENGINE_TYPE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enum for FUSED_CORE_MODE_HB</description>
-    <enumerator>
-      <name>SMT4_DEFAULT</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>SMT4_ONLY</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>SMT8_ONLY</name>
-      <value>2</value>
-    </enumerator>
-    <id>FUSED_CORE_MODE_HB</id>
-  </enumerationType>
-  <enumerationType>
     <description>Pulled from the MRW, this describes the device purpose to the HDAT. This is for I2C devices only.</description>
     <enumerator>
       <name>CABLE_CARD_PRES</name>
@@ -10788,6 +10547,10 @@
     <enumerator>
       <name>TPM_REQUIRED</name>
       <value>0xCC03</value>
+    </enumerator>
+    <enumerator>
+      <name>PCI_BIFURCATED</name>
+      <value>0xCD03</value>
     </enumerator>
     <id>SENSOR_NAME</id>
   </enumerationType>
