@@ -1640,6 +1640,7 @@
     <simpleType>
       <uint32_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Clock Mux#0 settings</description>
