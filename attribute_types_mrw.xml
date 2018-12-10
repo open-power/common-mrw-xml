@@ -5851,21 +5851,5 @@
 			<string/>
 		</simpleType>
 	</attribute>
-	<attribute>
-		<id>MSL_LAB_ONLY_SUPPORT</id>
-        <persistency>non-volatile</persistency>
-        <readable />
-		<simpleType>
-			<string/>
-		</simpleType>
-	</attribute>
-	<attribute>
-		<id>ALLOWED_MIXES</id>
-        <persistency>non-volatile</persistency>
-        <readable />
-		<simpleType>
-			<string/>
-		</simpleType>
-	</attribute>
 	<!-- End MSL attributes -->
 </attributes>
