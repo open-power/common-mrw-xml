@@ -875,6 +875,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p9a_ocmb_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_REFCLOCK_SWIZZLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then group of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -930,6 +943,197 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 0 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_0_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_0_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xF</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 1 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_1_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_1_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 4 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_4_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_4_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 7 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_7_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_7_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template A pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_A_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_A_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI major version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MAJOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x3</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI minor version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MINOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
@@ -1640,6 +1844,7 @@
     <simpleType>
       <uint32_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Clock Mux#0 settings</description>
@@ -2483,6 +2688,45 @@
       <uint8_t>
         <default>0x00</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV undervolting given all validity check pass. If validity checks fail, WOV undervolting will be disabled for the present IPL. ON: Will disable WOV undervolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_WOV_UNDERV_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Overrides VPD_UNDERVOLT_TEST value to 1. The VPD_UNDERVOLT_TEST is set to 1 by mSLT or MFT, and means that undervolting test was run and passed on the part. However, for older parts, the field will be set to 0, so to force enablement of undervolting on older parts, this attribute can be set to override the VPD_UNDERVOLT_TEST. ON: Will override VPD_UNDERVOLT_TEST value to 1. OFF: Will not override VPD_UNDERVOLT_TEST Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOV_UNDERV_FORCE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOV_UNDERV_FORCE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity checks fail, WOV overvolting will be disabled for the present IPL. ON: Will disable WOV overvolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_WOV_OVERV_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_WOV_OVERV_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3379,6 +3623,246 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ENABLE_US_TMPL_1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ENABLE_US_TMPL_1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ENABLE_US_TMPL_5</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ENABLE_US_TMPL_5</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ENABLE_US_TMPL_9</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ENABLE_US_TMPL_9</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ENABLE_US_TMPL_A</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ENABLE_US_TMPL_A</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ENABLE_US_TMPL_B</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ENABLE_US_TMPL_B</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Template 0 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_TMPL_0_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_TMPL_0_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Template 1 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_TMPL_1_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_TMPL_1_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Template 5 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_TMPL_5_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_TMPL_5_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Template 9 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_TMPL_9_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_TMPL_9_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Template B pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_TMPL_B_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_TMPL_B_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Short back-off timer value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_SHRT_BACKOFF_TIMER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_SHRT_BACKOFF_TIMER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable OpenCAPI metadata</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_METADATA_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_METADATA_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The PASID base</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_PASID_BASE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_PASID_BASE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x0</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The desired actag base</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_ACTAG_BASE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_ACTAG_BASE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x0</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The expected number of actags to be supported by the ocmb. Must be 1 for Explorer Validate via OCTRLTAG 10518 OCTRLTAG_AFU_ACTAG_LENGTH_SUPPORTED</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_AFU_ACTAG_LEN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_AFU_ACTAG_LEN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x1</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The expected number of PASIDs to be supported by the ocmb. Number of consecutive PASIDs this AFU supports is 2^pasid_length_supported Validate via OPASID 10100 OPASID_MAX_PASID_WIDTH</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXPLR_PASID_LEN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXPLR_PASID_LEN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -4783,6 +5267,17 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Attribute indicating the default risk level for the system. Applied if scratch registers are not overriden</description>
+    <id>MRW_DEFAULT_RISK_LEVEL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x0</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Machine Readable Workbook throttle value for denominator cfg_nm_m</description>
     <id>MRW_MEM_THROTTLE_DENOMINATOR</id>
     <persistency>non-volatile</persistency>
@@ -5337,6 +5832,18 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute indicates if the PEC can be bifurcated. The value is determined from the workbook. 0 - PEC is not bifurcateable 1 - PEC can be bifurcated Note: Altering the lane map can be done using the HX keyword.</description>
+    <id>PEC_IS_BIFURCATABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Effective PCIE IOP reversal configuration Creator: Firmware Purpose: Holds the effective PCIE IOP reversal value after taking into account any IOP bifurcations. If no IOP bifurcations present, this is just the value of the PROC_PCIE_IOP_REVERSAL_NON_BIFURCATED attribute. Data Format: x4 array of uint8_t values. The first uint8_t value is for lane set 0, the second for lane set 1 and so on. The given index in the array is a mask which specifies which bit to invert in the lane swap settings for the given PEC/lane set.</description>
@@ -6366,6 +6873,18 @@
         <name>vddrPin</name>
         <type>uint8_t</type>
       </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the mux will connect to. OxFF indicates no mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the I2C mux for this device.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
     </complexType>
     <description>Information needed to address GPIO device</description>
     <id>GPIO_INFO</id>
@@ -7316,6 +7835,54 @@
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
   </enumerationType>
   <enumerationType>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+  </enumerationType>
+  <enumerationType>
     <description>DMI inband BAR enable. Set by platform. Used by p9c_set_inband_addr.</description>
     <enumerator>
       <name>DISABLE</name>
@@ -7726,6 +8293,42 @@
       <value>2</value>
     </enumerator>
     <id>SYSTEM_WOF_DISABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV undervolting given all validity check pass. If validity checks fail, WOV undervolting will be disabled for the present IPL. ON: Will disable WOV undervolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>1</value>
+    </enumerator>
+    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Overrides VPD_UNDERVOLT_TEST value to 1. The VPD_UNDERVOLT_TEST is set to 1 by mSLT or MFT, and means that undervolting test was run and passed on the part. However, for older parts, the field will be set to 0, so to force enablement of undervolting on older parts, this attribute can be set to override the VPD_UNDERVOLT_TEST. ON: Will override VPD_UNDERVOLT_TEST value to 1. OFF: Will not override VPD_UNDERVOLT_TEST Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>1</value>
+    </enumerator>
+    <id>WOV_UNDERV_FORCE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity checks fail, WOV overvolting will be disabled for the present IPL. ON: Will disable WOV overvolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>1</value>
+    </enumerator>
+    <id>SYSTEM_WOV_OVERV_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Disables IVRM enablement in the system Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
@@ -9238,6 +9841,66 @@
       <value>0x01</value>
     </enumerator>
     <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>EXPLR_ENABLE_US_TMPL_1</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>EXPLR_ENABLE_US_TMPL_5</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>EXPLR_ENABLE_US_TMPL_9</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>EXPLR_ENABLE_US_TMPL_A</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>EXPLR_ENABLE_US_TMPL_B</id>
   </enumerationType>
   <enumerationType>
     <default>NONE</default>
