@@ -186,22 +186,94 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
       <id>FRU_ID</id>
     </attribute>
     <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <id>EXPLR_ENABLE_US_TMPL_1</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_ENABLE_US_TMPL_5</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_ENABLE_US_TMPL_9</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_ENABLE_US_TMPL_A</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_ENABLE_US_TMPL_B</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_TMPL_0_PACING</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_TMPL_1_PACING</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_TMPL_5_PACING</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_TMPL_9_PACING</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_TMPL_B_PACING</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_SHRT_BACKOFF_TIMER</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_METADATA_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_PASID_BASE</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_ACTAG_BASE</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_AFU_ACTAG_LEN</id>
+    </attribute>
+    <attribute>
+      <id>EXPLR_PASID_LEN</id>
+    </attribute>
     <id>chip-ocmb</id>
     <parent>chip</parent>
   </targetType>
   <targetType>
     <attribute>
-      <id>FAPI_I2C_CONTROL_INFO</id>
-    </attribute>
-    <attribute>
       <default>EXPLORER</default>
       <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <default>
+        <field>
+          <id>reserved</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsFsiScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsInbandScom</id>
+          <value>0</value>
+        </field>
+        <field>
+          <id>supportsXscom</id>
+          <value>0</value>
+        </field>
+      </default>
+      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <id>chip-ocmb-explorer</id>
     <parent>chip-ocmb</parent>
@@ -339,6 +411,12 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
@@ -483,6 +561,18 @@
     </attribute>
     <attribute>
       <id>PROC_VRM_VOFFSET_VCS_UV</id>
+    </attribute>
+    <attribute>
+      <id>WOV_SAMPLE_125US</id>
+    </attribute>
+    <attribute>
+      <id>WOV_MAX_DROOP_10THPCT</id>
+    </attribute>
+    <attribute>
+      <id>WOV_UNDERV_VMIN_MV</id>
+    </attribute>
+    <attribute>
+      <id>WOV_UNDERV_LIMIT_ALGORITHM</id>
     </attribute>
     <attribute>
       <id>PBAX_GROUPID</id>
@@ -733,6 +823,9 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
       <id>I2C_MUX_INFO</id>
     </attribute>
     <attribute>
@@ -759,6 +852,9 @@
       <id>EEPROM_NV_INFO</id>
     </attribute>
     <attribute>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
       <id>FRU_ID</id>
     </attribute>
     <attribute>
@@ -782,9 +878,6 @@
     <attribute>
       <default>DIMM</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
@@ -1039,6 +1132,9 @@
     </attribute>
     <attribute>
       <id>MRW_DDR4_VDDR_MAX_LIMIT_POST_DRAM_INIT</id>
+    </attribute>
+    <attribute>
+      <id>MRW_DEFAULT_RISK_LEVEL</id>
     </attribute>
     <attribute>
       <id>MRW_MEM_THROTTLE_DENOMINATOR</id>
@@ -1719,27 +1815,6 @@
       <default>UNIT</default>
       <id>CLASS</id>
     </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>1</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
     <id>unit</id>
     <parent>base</parent>
   </targetType>
@@ -1771,27 +1846,6 @@
     <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>CAPP</default>
@@ -2052,6 +2106,36 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    </attribute>
+    <attribute>
+      <id>PROC_ENABLE_DL_TMPL_1</id>
+    </attribute>
+    <attribute>
+      <id>PROC_ENABLE_DL_TMPL_4</id>
+    </attribute>
+    <attribute>
+      <id>PROC_ENABLE_DL_TMPL_7</id>
+    </attribute>
+    <attribute>
+      <id>PROC_ENABLE_DL_TMPL_A</id>
+    </attribute>
+    <attribute>
+      <id>PROC_TMPL_0_PACING</id>
+    </attribute>
+    <attribute>
+      <id>PROC_TMPL_1_PACING</id>
+    </attribute>
+    <attribute>
+      <id>PROC_TMPL_4_PACING</id>
+    </attribute>
+    <attribute>
+      <id>PROC_TMPL_7_PACING</id>
+    </attribute>
+    <attribute>
+      <id>PROC_TMPL_A_PACING</id>
+    </attribute>
+    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-mcc-power9</id>
@@ -2174,27 +2258,6 @@
     <attribute>
       <default>FABRIC</default>
       <id>CDM_DOMAIN</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>NX</default>
@@ -2386,6 +2449,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
       <id>OMI_INBAND_BAR_ENABLE</id>
     </attribute>
     <attribute>
@@ -2424,6 +2490,9 @@
     <attribute>
       <default>IO</default>
       <id>CDM_DOMAIN</id>
+    </attribute>
+    <attribute>
+      <id>PEC_IS_BIFURCATABLE</id>
     </attribute>
     <attribute>
       <id>PEC_PCIE_IOP_REVERSAL</id>
