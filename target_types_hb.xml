@@ -563,7 +563,16 @@
       <id>PROC_VRM_VOFFSET_VCS_UV</id>
     </attribute>
     <attribute>
-      <id>WOV_UNDERV_FORCE</id>
+      <id>WOV_SAMPLE_125US</id>
+    </attribute>
+    <attribute>
+      <id>WOV_MAX_DROOP_10THPCT</id>
+    </attribute>
+    <attribute>
+      <id>WOV_UNDERV_VMIN_MV</id>
+    </attribute>
+    <attribute>
+      <id>WOV_UNDERV_LIMIT_ALGORITHM</id>
     </attribute>
     <attribute>
       <id>PBAX_GROUPID</id>
@@ -814,7 +823,7 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>I2C_MUX_INFO</id>
+      <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
       <default>PCA9847</default>
@@ -1668,12 +1677,6 @@
     </attribute>
     <attribute>
       <id>SYSTEM_WOF_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOV_OVERV_DISABLE</id>
     </attribute>
     <attribute>
       <id>SYSTEM_IVRM_DISABLE</id>
