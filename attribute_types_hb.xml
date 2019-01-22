@@ -2691,46 +2691,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV undervolting given all validity check pass. If validity checks fail, WOV undervolting will be disabled for the present IPL. ON: Will disable WOV undervolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOV_UNDERV_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Overrides VPD_UNDERVOLT_TEST value to 1. The VPD_UNDERVOLT_TEST is set to 1 by mSLT or MFT, and means that undervolting test was run and passed on the part. However, for older parts, the field will be set to 0, so to force enablement of undervolting on older parts, this attribute can be set to override the VPD_UNDERVOLT_TEST. ON: Will override VPD_UNDERVOLT_TEST value to 1. OFF: Will not override VPD_UNDERVOLT_TEST Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOV_UNDERV_FORCE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WOV_UNDERV_FORCE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity checks fail, WOV overvolting will be disabled for the present IPL. ON: Will disable WOV overvolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOV_OVERV_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_WOV_OVERV_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables IVRM enablement in the system Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
+    <description>Disables IVRM enablement in the system Producer: MRW Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYSTEM_IVRM_DISABLE</id>
       <macro>DIRECT</macro>
@@ -2787,6 +2748,58 @@
       <uint8_t>
         <default>0x00</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>If WOV undervolting and/or WOF overvolting is enabled, then this overrides default period at which the undervolting and/or overvolting is run. If 0, then will interally default to 2(~250us), and is also the minimum value</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOV_SAMPLE_125US</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOV_SAMPLE_125US</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>If WOV undervolting and/or WOF overvolting is enabled, then this is used to used as a check for maximum frequency loss. If frequency in tenths of percentage is below this value, then an error is logged and WOV is disabled.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOV_MAX_DROOP_10THPCT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOV_MAX_DROOP_10THPCT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum voltage(floor) that regulator voltage is set to whether undervolting or not. If 0, the Psafe computed voltage uplifted by the loadline*PowerSave RDP current is used. This implies that no undervolting can happen at Psafe, and very little undervolting slightly above Psafe frequency (slightly lower Pstate). Otherwise, setting this parameter higher than the (default) Psafe voltage effectively changes the Pstate table, raising any Pstate voltage to this value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOV_UNDERV_VMIN_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOV_UNDERV_VMIN_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Defines the algorithm used to set the voltage to quit undervolting. If 0, then value specified by ATTR_WOV_UNDERV_VMIN_MV attribute is used. UNDERV_VMIN(default): Stops undervolting below the value specified by ATTR_WOV_UNDERV_VMIN_MV. UNDERV_LIMIT: Learns the value of the undervolting limit based on part VPD TURBO: Stops undervolting below the TURBO VPD voltage. NOMINAL: Stops undervolting below the NOMINIAL VPD voltage.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOV_UNDERV_LIMIT_ALGORITHM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOV_UNDERV_LIMIT_ALGORITHM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3623,6 +3636,21 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MEM_MRW_IS_PLANAR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MEM_MRW_IS_PLANAR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>FALSE</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -4708,39 +4736,6 @@
         <default>0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <complexType>
-      <description>Structure to define the addressing for an I2C mux target.</description>
-      <field>
-        <default>physical:sys-0</default>
-        <description>Entity path to the chip that contains the I2C master.</description>
-        <name>i2cMasterPath</name>
-        <type>EntityPath</type>
-      </field>
-      <field>
-        <default>0x00</default>
-        <description>Port from the I2C Master device. This is a 6-bit value.</description>
-        <name>port</name>
-        <type>uint8_t</type>
-      </field>
-      <field>
-        <default>0x00</default>
-        <description>Device address on the I2C bus. This is a 7-bit value, but then shifted 1 bit left.</description>
-        <name>devAddr</name>
-        <type>uint8_t</type>
-      </field>
-      <field>
-        <default>0x00</default>
-        <description>I2C master engine. This is a 2-bit value.</description>
-        <name>engine</name>
-        <type>uint8_t</type>
-      </field>
-    </complexType>
-    <description>Information used to control a specific i2c mux device, to select a particular target bus.</description>
-    <id>I2C_MUX_INFO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
   </attribute>
   <attribute>
     <description>MCS Inband Scom base address</description>
@@ -6549,6 +6544,17 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
+    <id>TPM_MODEL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>LX keyword VPD data for HDAT module</description>
     <id>ASCII_VPD_LX_KEYWORD</id>
     <persistency>non-volatile</persistency>
@@ -8295,43 +8301,7 @@
     <id>SYSTEM_WOF_DISABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV undervolting given all validity check pass. If validity checks fail, WOV undervolting will be disabled for the present IPL. ON: Will disable WOV undervolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Overrides VPD_UNDERVOLT_TEST value to 1. The VPD_UNDERVOLT_TEST is set to 1 by mSLT or MFT, and means that undervolting test was run and passed on the part. However, for older parts, the field will be set to 0, so to force enablement of undervolting on older parts, this attribute can be set to override the VPD_UNDERVOLT_TEST. ON: Will override VPD_UNDERVOLT_TEST value to 1. OFF: Will not override VPD_UNDERVOLT_TEST Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>WOV_UNDERV_FORCE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enables Workload Optimized Voltage (WOV) undervolting algorithms which dynamically modify voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity checks fail, WOV overvolting will be disabled for the present IPL. ON: Will disable WOV overvolting Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_WOV_OVERV_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables IVRM enablement in the system Producer: Override Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
+    <description>Disables IVRM enablement in the system Producer: MRW Consumers: p9_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for PGPE/OCC CME Quad Pstate Region (CQPR) for CM Quad Manager</description>
     <enumerator>
       <name>OFF</name>
       <value>0</value>
@@ -8377,6 +8347,26 @@
       <value>1</value>
     </enumerator>
     <id>WOF_VRATIO_SELECT</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines the algorithm used to set the voltage to quit undervolting. If 0, then value specified by ATTR_WOV_UNDERV_VMIN_MV attribute is used. UNDERV_VMIN(default): Stops undervolting below the value specified by ATTR_WOV_UNDERV_VMIN_MV. UNDERV_LIMIT: Learns the value of the undervolting limit based on part VPD TURBO: Stops undervolting below the TURBO VPD voltage. NOMINAL: Stops undervolting below the NOMINIAL VPD voltage.</description>
+    <enumerator>
+      <name>UNDERV_VMIN</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>UNDERV_LIMIT</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>TURBO</name>
+      <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>NOMINAL</name>
+      <value>3</value>
+    </enumerator>
+    <id>WOV_UNDERV_LIMIT_ALGORITHM</id>
   </enumerationType>
   <enumerationType>
     <description>Disables the enablement of Voltage Droop Monitors (VDM) in the system. Producer: MRW Consumers: p9_pstate_parameter_block to clear flag for CME QuadManager Hcode reaction</description>
@@ -9841,6 +9831,18 @@
       <value>0x01</value>
     </enumerator>
     <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>MEM_MRW_IS_PLANAR</id>
   </enumerationType>
   <enumerationType>
     <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
