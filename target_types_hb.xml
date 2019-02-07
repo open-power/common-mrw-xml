@@ -1613,6 +1613,9 @@
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
     </attribute>
     <attribute>
+      <id>IO_O_MNFG_ERROR_THRESHOLD</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
