@@ -249,6 +249,12 @@
     <attribute>
       <id>EXPLR_PASID_LEN</id>
     </attribute>
+    <attribute>
+      <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_OCMB_EXP_BOOT_CONFIG_SERDES_FREQUENCY</id>
+    </attribute>
     <id>chip-ocmb</id>
     <parent>chip</parent>
   </targetType>
