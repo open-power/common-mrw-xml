@@ -3909,6 +3909,38 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The lane width of the OpenCapi channel</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of the OpenCAPI</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_OCMB_EXP_BOOT_CONFIG_SERDES_FREQUENCY</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_OCMB_EXP_BOOT_CONFIG_SERDES_FREQUENCY</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>3</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>System attribute. If all MCS chiplets are in an interleaving group (1=true, 0=false). - If true the SMP fabric is setup in normal mode and multiple MCSs are grouped (disallowing systems with memory only under 1 MCS (i.e. systems with a single C-DIMM)) - If false the SMP fabric is setup in checkerboard mode. Provided by the Machine Readable Workbook. This attribute is based on Machine-Type-Model (MTM) and is setup by the service processor.</description>
     <id>ALL_MCS_IN_INTERLEAVING_GROUP</id>
     <persistency>non-volatile</persistency>
@@ -9934,6 +9966,34 @@
       <value>0x01</value>
     </enumerator>
     <id>EXPLR_ENABLE_US_TMPL_B</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The lane width of the OpenCapi channel</description>
+    <enumerator>
+      <name>LANE_8</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>LANE_4</name>
+      <value>2</value>
+    </enumerator>
+    <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of the OpenCAPI</description>
+    <enumerator>
+      <name>SERDES_21_33GBPS</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>SERDES_23_46GBPS</name>
+      <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>SERDES_25_60GBPS</name>
+      <value>3</value>
+    </enumerator>
+    <id>MSS_OCMB_EXP_BOOT_CONFIG_SERDES_FREQUENCY</id>
   </enumerationType>
   <enumerationType>
     <default>NONE</default>
