@@ -208,21 +208,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Memory power control settings programmed during IPL Used by OCC when exiting idle power-save mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_POWER_CONTROL_REQUESTED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_POWER_CONTROL_REQUESTED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Memory power control settings for IDLE powersave mode Used by OCC when entering idle power-save mode</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
@@ -3134,6 +3119,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Bitstring that describes the enabled OBUS Bricks on this processor. The first brick is position bit0, etc Producer: Initialized by Hostboot firmware based on platform support Consumers: Read by p9_check_proc_config.C</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ENABLED_OBUS_BRICKS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ENABLED_OBUS_BRICKS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>env: 1 = Awan/HWSimulator. 0 = Simics/RealHW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IS_SIMULATION</id>
@@ -3665,6 +3663,21 @@
     <simpleType>
       <uint8_t>
         <default>FALSE</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Memory power control settings programmed during IPL Used by OCC when exiting idle power-save mode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_POWER_CONTROL_REQUESTED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_POWER_CONTROL_REQUESTED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>OFF</default>
       </uint8_t>
     </simpleType>
   </attribute>
