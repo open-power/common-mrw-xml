@@ -6064,6 +6064,17 @@
     <readable />
   </attribute>
   <attribute>
+    <description>Required Processor Compatibility Setting</description>
+    <id>PROC_COMPATIBILITY_REQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <enumeration>
+        <id>PROC_COMPATIBILITY_REQ</id>
+      </enumeration>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>PROC_CHIP Attribute If true, the chip is installed on a Dual Chip Module Provided by the Machine Readable Workbook</description>
     <id>PROC_DCM_INSTALLED</id>
     <persistency>non-volatile</persistency>
@@ -6602,6 +6613,17 @@
       </uint32_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>Indicates which istep we should execute the CXX testcases after, if CONFIG_EARLY_TESTCASES is set. Format: 0xMMmm, where MM=major step, mm=minor step, e.g. 6.9=0x0609.</description>
+    <id>EARLY_TESTCASES_ISTEP</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x0609</default>
+      </uint16_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
@@ -10704,6 +10726,23 @@
       <value>8</value>
     </enumerator>
     <id>PFET_VDD_VOFF_SEL</id>
+  </enumerationType>
+  <enumerationType>
+    <default>ALLOW_COMPATIBILITY</default>
+    <description>Enumeration specifying the compatibility setting for Processor ECs ALLOW_COMPATIBILITY = set RISK_LEVEL to best allowed FORCED_COMPATIBILITY = set RISK_LEVEL to a compatible level FORCED_NATIVE = set RISK_LEVEL to ECs native setting</description>
+    <enumerator>
+      <name>ALLOW_COMPATIBILITY</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FORCED_COMPATIBILITY</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>FORCED_NATIVE</name>
+      <value>2</value>
+    </enumerator>
+    <id>PROC_COMPATIBILITY_REQ</id>
   </enumerationType>
   <enumerationType>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
