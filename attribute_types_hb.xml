@@ -904,19 +904,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>REQUIRED/TRUE: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED : HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. FALSE : HW mirroring is disabled. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_HW_MIRRORING_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Enable early data from Memory. This also enable cp_me from L3.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_ENABLE_MEM_EARLY_DATA_SCOM</id>
@@ -7893,22 +7880,6 @@
       <value>0x08</value>
     </enumerator>
     <id>MSS_INTERLEAVE_GRANULARITY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>REQUIRED/TRUE: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED : HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. FALSE : HW mirroring is disabled. Provided by the MRW.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>REQUESTED</name>
-      <value>2</value>
-    </enumerator>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Enable early data from Memory. This also enable cp_me from L3.</description>
