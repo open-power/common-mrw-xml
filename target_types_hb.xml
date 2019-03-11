@@ -10,9 +10,6 @@
       <id>PHYS_PATH</id>
     </attribute>
     <attribute>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
-    <attribute>
       <default>0</default>
       <id>RESOURCE_IS_CRITICAL</id>
     </attribute>
@@ -107,27 +104,6 @@
     <attribute>
       <default>CENTAUR</default>
       <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>MEMBUF</default>
@@ -263,27 +239,6 @@
       <default>EXPLORER</default>
       <id>MODEL</id>
     </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
     <id>chip-ocmb-explorer</id>
     <parent>chip-ocmb</parent>
   </targetType>
@@ -348,27 +303,6 @@
     </attribute>
     <attribute>
       <id>LOCATION_CODE</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>1</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>PROC</default>
@@ -1618,9 +1552,6 @@
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_GRANULARITY</id>
-    </attribute>
-    <attribute>
-      <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
