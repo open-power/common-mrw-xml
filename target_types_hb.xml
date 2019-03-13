@@ -1,6 +1,14 @@
 <attributes>
   <targetType>
     <attribute>
+      <default>ASIC</default>
+      <id>CLASS</id>
+    </attribute>
+    <id>asic</id>
+    <parent>base</parent>
+  </targetType>
+  <targetType>
+    <attribute>
       <id>CLASS</id>
     </attribute>
     <attribute>
@@ -8,9 +16,6 @@
     </attribute>
     <attribute>
       <id>PHYS_PATH</id>
-    </attribute>
-    <attribute>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>0</default>
@@ -52,6 +57,10 @@
   <targetType>
     <id>chip-NPCT501</id>
     <parent>chip-tpm-cectpm</parent>
+  </targetType>
+  <targetType>
+    <id>chip-UCD9090</id>
+    <parent>ucd9090</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -107,27 +116,6 @@
     <attribute>
       <default>CENTAUR</default>
       <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>MEMBUF</default>
@@ -263,27 +251,6 @@
       <default>EXPLORER</default>
       <id>MODEL</id>
     </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>0</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
-    </attribute>
     <id>chip-ocmb-explorer</id>
     <parent>chip-ocmb</parent>
   </targetType>
@@ -348,27 +315,6 @@
     </attribute>
     <attribute>
       <id>LOCATION_CODE</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>reserved</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsFsiScom</id>
-          <value>1</value>
-        </field>
-        <field>
-          <id>supportsInbandScom</id>
-          <value>0</value>
-        </field>
-        <field>
-          <id>supportsXscom</id>
-          <value>1</value>
-        </field>
-      </default>
-      <id>PRIMARY_CAPABILITIES</id>
     </attribute>
     <attribute>
       <default>PROC</default>
@@ -835,6 +781,17 @@
     </attribute>
     <id>fan</id>
     <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
+      <default>POWER_SEQUENCER</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>i2c-power-sequencer</id>
+    <parent>asic</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1620,9 +1577,6 @@
       <id>MSS_INTERLEAVE_GRANULARITY</id>
     </attribute>
     <attribute>
-      <id>MRW_HW_MIRRORING_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
     </attribute>
     <attribute>
@@ -1825,6 +1779,22 @@
     </attribute>
     <id>uart</id>
     <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>UCD90120A</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>ucd90120a</id>
+    <parent>i2c-power-sequencer</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>UCD9090</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>ucd9090</id>
+    <parent>i2c-power-sequencer</parent>
   </targetType>
   <targetType>
     <attribute>
