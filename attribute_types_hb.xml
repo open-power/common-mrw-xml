@@ -904,19 +904,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>REQUIRED/TRUE: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED : HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. FALSE : HW mirroring is disabled. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_HW_MIRRORING_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Enable early data from Memory. This also enable cp_me from L3.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_ENABLE_MEM_EARLY_DATA_SCOM</id>
@@ -4798,6 +4785,51 @@
     </simpleType>
   </attribute>
   <attribute>
+    <complexType>
+      <description>Structure to define addressing this I2C slave device.</description>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path to the chip that contains the I2C master</description>
+        <name>i2cMasterPath</name>
+        <type>EntityPath</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>I2C master engine. This is a 2-bit value.</description>
+        <name>engine</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>Port from the I2C Master device. This is a 6-bit value.</description>
+        <name>port</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0x80</default>
+        <description>Device address on the I2C bus. This is a 7-bit value, but then shifted 1 bit left.</description>
+        <name>devAddr</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>0xFF</default>
+        <description>Determines which of the N selectable buses the I2C mux for this device must enable to connect this device to its I2C master, if applicable. 0xFF indicates no I2C mux present or N/A.</description>
+        <name>i2cMuxBusSelector</name>
+        <type>uint8_t</type>
+      </field>
+      <field>
+        <default>physical:sys-0</default>
+        <description>Entity path of the I2C mux for this device, if any.</description>
+        <name>i2cMuxPath</name>
+        <type>EntityPath</type>
+      </field>
+    </complexType>
+    <description>Information needed to address an I2C slave device</description>
+    <id>I2C_CONTROL_INFO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <description>MCS Inband Scom base address</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MCS_INBAND_BASE_ADDRESS</id>
@@ -6027,43 +6059,6 @@
     <readable />
   </attribute>
   <attribute>
-    <complexType>
-      <description>Structure which defines a target's primary capabilities. A target can only support at most FSI SCOM and one of the other two SCOM types. Applicable for all targets. Structure is read-only.</description>
-      <field>
-        <bits>1</bits>
-        <default>0</default>
-        <description>0b0: Target does not support FSI SCOM; 0b1: Target supports FSI SCOM</description>
-        <name>supportsFsiScom</name>
-        <type>uint8_t</type>
-      </field>
-      <field>
-        <bits>1</bits>
-        <default>0</default>
-        <description>0b0: Target does not support XSCOM; 0b1: Target supports FSI XSCOM</description>
-        <name>supportsXscom</name>
-        <type>uint8_t</type>
-      </field>
-      <field>
-        <bits>1</bits>
-        <default>0</default>
-        <description>0b0: Target does not support inband SCOM</description>
-        <name>supportsInbandScom</name>
-        <type>uint8_t</type>
-      </field>
-      <field>
-        <bits>5</bits>
-        <default>0</default>
-        <description>Reserved for future use</description>
-        <name>reserved</name>
-        <type>uint8_t</type>
-      </field>
-    </complexType>
-    <description>Attribute which describes capabilities of a target</description>
-    <id>PRIMARY_CAPABILITIES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-  </attribute>
-  <attribute>
     <description>Required Processor Compatibility Setting</description>
     <id>PROC_COMPATIBILITY_REQ</id>
     <persistency>non-volatile</persistency>
@@ -6286,17 +6281,17 @@
   </attribute>
   <attribute>
     <complexType>
-      <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only.</description>
+      <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only. Default values match OpenBMC implementation.</description>
       <field>
         <bits>1</bits>
-        <default>1</default>
+        <default>0</default>
         <description>If this flag is set then mailboxEnabled MUST also be set 0b0: SP does not support for VPD, payload, ATTR sync, VDDR, TOD; 0b1: SP supports VPD, payload, ATTR sync, VDDR, TOD</description>
         <name>baseServices</name>
         <type>uint32_t</type>
       </field>
       <field>
         <bits>1</bits>
-        <default>1</default>
+        <default>0</default>
         <description>0b0: SP does not initialize FSI slave logic, Hostboot must; 0b1: SP does initialize FSI slave logic so Hostboot should not</description>
         <name>fsiSlaveInit</name>
         <type>uint32_t</type>
@@ -6310,21 +6305,21 @@
       </field>
       <field>
         <bits>1</bits>
-        <default>1</default>
+        <default>0</default>
         <description>0b0: SP does not initialize FSI master logic, Hostboot must; 0b1: SP does initialize FSI master logic so Hostboot should not</description>
         <name>fsiMasterInit</name>
         <type>uint32_t</type>
       </field>
       <field>
         <bits>1</bits>
-        <default>1</default>
+        <default>0</default>
         <description>0b0: SP does not perform hardware change detection, Hostboot must; 0b1: SP does perform hardware change detection (HCDB) so Hostboot should not</description>
         <name>hardwareChangeDetection</name>
         <type>uint32_t</type>
       </field>
       <field>
         <bits>1</bits>
-        <default>1</default>
+        <default>0</default>
         <description>0b0: SP does not perform Power Line Disturbance (PLD) detection, Hostboot must; 0b1: SP does perform Power Line Disturbance (PLD) detection so Hostboot should not</description>
         <name>powerLineDisturbance</name>
         <type>uint32_t</type>
@@ -7893,22 +7888,6 @@
       <value>0x08</value>
     </enumerator>
     <id>MSS_INTERLEAVE_GRANULARITY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>REQUIRED/TRUE: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED : HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. FALSE : HW mirroring is disabled. Provided by the MRW.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>REQUESTED</name>
-      <value>2</value>
-    </enumerator>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Enable early data from Memory. This also enable cp_me from L3.</description>
@@ -10141,8 +10120,12 @@
       <value>10</value>
     </enumerator>
     <enumerator>
-      <name>MAX</name>
+      <name>ASIC</name>
       <value>11</value>
+    </enumerator>
+    <enumerator>
+      <name>MAX</name>
+      <value>12</value>
     </enumerator>
     <id>CLASS</id>
   </enumerationType>
@@ -10493,6 +10476,12 @@
     </enumerator>
     <enumerator>
       <name>PCA9847</name>
+    </enumerator>
+    <enumerator>
+      <name>UCD9090</name>
+    </enumerator>
+    <enumerator>
+      <name>UCD90120A</name>
     </enumerator>
     <id>MODEL</id>
   </enumerationType>
