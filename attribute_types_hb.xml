@@ -917,6 +917,97 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_CHK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_CHK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_MIN_EYE_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_MIN_EYE_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe postcusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_FFE_POSTCURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_FFE_POSTCURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute provides an a way to stress the SMP Abus Even Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>i This attribute provides an a way to stress the SMP Abus Odd Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
@@ -7900,6 +7991,18 @@
       <value>0x1</value>
     </enumerator>
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_OMI_MFG_CHK</id>
   </enumerationType>
   <enumerationType>
     <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>

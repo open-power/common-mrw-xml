@@ -368,6 +368,12 @@
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
+      <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
     </attribute>
     <attribute>
@@ -2471,6 +2477,21 @@
     <attribute>
       <default>OMIC</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_MFG_CHK</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_MFG_MIN_EYE_WIDTH</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_TX_MARGIN_RATIO</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_TX_FFE_PRECURSOR</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_TX_FFE_POSTCURSOR</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
