@@ -117,10 +117,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>temp1</value></field>
@@ -142,15 +138,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -186,10 +173,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>temp2</value></field>
@@ -211,15 +194,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -256,10 +230,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>temp3</value></field>
@@ -281,15 +251,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -325,10 +286,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default/>
-	</attribute>
-	<attribute>
 		<id>HWMON_FEATURE</id>
 		<default>
 				<field><id>HWMON_NAME</id><value>temp4</value></field>
@@ -350,15 +307,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default/>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>

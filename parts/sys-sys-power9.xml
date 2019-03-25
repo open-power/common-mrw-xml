@@ -459,12 +459,6 @@
       <id>DO_ABUS_DECONFIG</id>
     </attribute>
     <attribute>
-      <id>DUMMY_RW</id>
-    </attribute>
-    <attribute>
-      <id>EFFECTIVE_EC</id>
-    </attribute>
-    <attribute>
       <id>EXECUTION_PLATFORM</id>
     </attribute>
     <attribute>
@@ -481,9 +475,6 @@
     </attribute>
     <attribute>
       <id>FREQ_A_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_CORE_MAX</id>
     </attribute>
     <attribute>
       <id>FREQ_MEM_REFCLOCK</id>
@@ -513,13 +504,7 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <id>HB_RSV_MEM_SIZE_MB</id>
-    </attribute>
-    <attribute>
       <id>HB_SETTINGS</id>
-    </attribute>
-    <attribute>
-      <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -545,9 +530,6 @@
     </attribute>
     <attribute>
       <id>MAX_MBA_PORTS_PER_MBA</id>
-    </attribute>
-    <attribute>
-      <id>MEM_MIRROR_PLACEMENT_POLICY</id>
     </attribute>
     <attribute>
       <id>MNFG_ABUS_MIN_EYE_HEIGHT</id>
@@ -712,30 +694,6 @@
       <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
     </attribute>
     <attribute>
-      <id>PM_RESONANT_CLOCK_FULL_CLOCK_SECTOR_BUFFER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_HIGH_BAND_LOWER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_HIGH_BAND_UPPER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_LOW_BAND_LOWER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_RESONANT_CLOCK_LOW_BAND_UPPER_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_SAFE_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_SPIVID_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>PM_SYSTEM_IVRM_VPD_MIN_LEVEL</id>
-    </attribute>
-    <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
     </attribute>
     <attribute>
@@ -758,9 +716,6 @@
     </attribute>    
     <attribute>
       <id>REDUNDANT_FSPS</id>
-    </attribute>
-    <attribute>
-      <id>RUN_MAX_MEM_PATTERNS</id>
     </attribute>
     <attribute>
       <id>SP_FUNCTIONS</id>
