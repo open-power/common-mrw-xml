@@ -446,6 +446,33 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>IO_PB_IOOFIR_MASK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_O_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_SYSTEM_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
@@ -528,33 +555,6 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>IO_PB_IOOFIR_MASK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_O_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_SYSTEM_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_GROUP_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -1508,30 +1508,6 @@
       <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>MRW_FILTER_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CP_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>IO_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
-    </attribute>
-    <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
     </attribute>
     <attribute>
@@ -1701,6 +1677,30 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
+    </attribute>
+    <attribute>
+      <id>NEST_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>MRW_FILTER_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>SECURITY_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CP_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>IO_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>SECTOR_BUFFER_STRENGTH</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_VALUE</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
@@ -2445,6 +2445,12 @@
     <attribute>
       <default>OMI</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
       <id>OMI_INBAND_BAR_ENABLE</id>
