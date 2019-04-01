@@ -54,9 +54,6 @@
       <default>ENC</default>
     </attribute>
     <attribute>
-      <id>FIELD_CORE_OVERRIDE</id>
-    </attribute>
-    <attribute>
       <id>FRU_ID</id>
     </attribute>
     <attribute>

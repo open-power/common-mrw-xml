@@ -19,10 +19,6 @@
 		<default>CARD</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_INSTANCE</id>
 		<default>0xFF</default>
 	</attribute>
@@ -49,15 +45,6 @@
 	<attribute>
 		<id>POSITION</id>
 		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -204,10 +191,6 @@
 	<hidden_child_id>cpu_temp_sensor</hidden_child_id>
 	<hidden_child_id>cpu_func_sensor</hidden_child_id>
 	<attribute>
-		<id>BACKUP_SEEPROM_SELECT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>BOOT_FREQ_MHZ</id>
 		<default>2400</default>
 	</attribute>
@@ -233,6 +216,10 @@
 	</attribute>
 	<attribute>
 		<id>CLOCK_PLL_MUX0</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CLOCK_PLL_MUX_TOD</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -280,19 +267,11 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>EC_GARD</id>
 		<default>0</default>
 	</attribute>
 	<attribute>
@@ -307,6 +286,8 @@
 				<field><id>chipCount</id><value>0x04</value></field>
 				<field><id>writePageSize</id><value>0x80</value></field>
 				<field><id>writeCycleTime</id><value>0x0A</value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -321,6 +302,8 @@
 				<field><id>chipCount</id><value>0x04</value></field>
 				<field><id>writePageSize</id><value>0x80</value></field>
 				<field><id>writeCycleTime</id><value>0x05</value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -335,6 +318,8 @@
 				<field><id>chipCount</id><value>0x02</value></field>
 				<field><id>writePageSize</id><value>0x80</value></field>
 				<field><id>writeCycleTime</id><value>0x05</value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
@@ -349,11 +334,13 @@
 				<field><id>chipCount</id><value>0x02</value></field>
 				<field><id>writePageSize</id><value>0x80</value></field>
 				<field><id>writeCycleTime</id><value>0x05</value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
-		<id>EQ_GARD</id>
-		<default>0</default>
+		<id>ENABLED_OBUS_BRICKS</id>
+		<default></default>
 	</attribute>
 	<attribute>
 		<id>FABRIC_CHIP_ID</id>
@@ -426,10 +413,6 @@
             </default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>I2C_BUS_DIV_NEST</id>
 		<default></default>
 	</attribute>
@@ -470,20 +453,32 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+		<default>0x00</default>
+	</attribute>
+	<attribute>
+		<id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+		<default>0x00</default>
+	</attribute>
+	<attribute>
+		<id>IO_PB_IOOFIR_MASK</id>
+		<default></default>
+	</attribute>
+	<attribute>
 		<id>IPMI_INSTANCE</id>
 		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>ISTEP_MODE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>IS_SP_MODE</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>L2_CACHE_ASSOC_SETS</id>
@@ -508,6 +503,10 @@
 	<attribute>
 		<id>LEN_OF_SEEPROM_DATA</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>LOCATION_CODE</id>
+		<default></default>
 	</attribute>
 	<attribute>
 		<id>MB_BIT_RATE_DIVISOR_PLL</id>
@@ -590,57 +589,8 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>PM_PBAX_NODEID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_SLEEP_ENTRY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_SLEEP_EXIT</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_SLEEP_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_SPIVID_PORT_ENABLE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_UNDERVOLTING_FREQ_MAXIMUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_UNDERVOLTING_FRQ_MINIMUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_WINKLE_ENTRY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_WINKLE_EXIT</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PM_WINKLE_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>POSITION</id>
 		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_DCM_INSTALLED</id>
@@ -655,28 +605,12 @@
 		<default>0x00000000</default>
 	</attribute>
 	<attribute>
-		<id>PROC_INT_CQ_IC_BAR_ENABLE</id>
-		<default>0</default>
+		<id>PROC_OMI_OC_MAJOR_VER</id>
+		<default>0x3</default>
 	</attribute>
 	<attribute>
-		<id>PROC_INT_CQ_PC_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_INT_CQ_TM1_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_INT_CQ_VC_BAR_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NX_RNG_FAILED_INT_ADDR</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>PROC_NX_RNG_FAILED_INT_ENABLE</id>
-		<default>0</default>
+		<id>PROC_OMI_OC_MINOR_VER</id>
+		<default>0x1</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PB_BNDY_DMIPLL_DATA</id>
@@ -747,18 +681,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>SBE_FFDC_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SBE_INTERNAL_FFDC_ENABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SBE_RUNTIME_MODE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>SS_FILTER_BYPASS</id>
 		<default>0</default>
 	</attribute>
@@ -773,30 +695,6 @@
 	<attribute>
 		<id>TDP_RDP_CURRENT_FACTOR</id>
 		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>TIME_BASE</id>
-		<default>0x800000</default>
-	</attribute>
-	<attribute>
-		<id>TLB_DATA_ASSOC_SETS</id>
-		<default>4</default>
-	</attribute>
-	<attribute>
-		<id>TLB_DATA_ENTRIES</id>
-		<default>1024</default>
-	</attribute>
-	<attribute>
-		<id>TLB_INSTR_ASSOC_SETS</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>TLB_INSTR_ENTRIES</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>TLB_RESERVE_SIZE</id>
-		<default>128</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -847,8 +745,20 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>XIVE_HW_RESET</id>
-		<default>0</default>
+		<id>WOV_MAX_DROOP_10THPCT</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>WOV_SAMPLE_125US</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>WOV_UNDERV_LIMIT_ALGORITHM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>WOV_UNDERV_VMIN_MV</id>
+		<default></default>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -881,14 +791,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -899,15 +801,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -948,14 +841,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -966,15 +851,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1016,14 +892,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1040,15 +908,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
 		<default>0</default>
 	</attribute>
@@ -1063,14 +922,10 @@
 	<is_root>false</is_root>
 	<instance_name>cpucore_temp_sensor</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>CHIPLET_ID</id>
-		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1079,10 +934,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -1109,29 +960,8 @@
 		<default>0x01</default>
 	</attribute>
 	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>IPMI_SENSOR</default>
-	</attribute>
-	<attribute>
-		<id>PHYS_PATH</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1144,14 +974,10 @@
 	<is_root>false</is_root>
 	<instance_name>cpucore_func_sensor</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>CHIPLET_ID</id>
-		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1160,10 +986,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -1190,29 +1012,8 @@
 		<default>0x07</default>
 	</attribute>
 	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>IPMI_SENSOR</default>
-	</attribute>
-	<attribute>
-		<id>PHYS_PATH</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1225,14 +1026,10 @@
 	<is_root>false</is_root>
 	<instance_name>cpucore_freq_sensor</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>CHIPLET_ID</id>
-		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -1241,10 +1038,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -1271,29 +1064,8 @@
 		<default>0xC1</default>
 	</attribute>
 	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>IPMI_SENSOR</default>
-	</attribute>
-	<attribute>
-		<id>PHYS_PATH</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -1331,14 +1103,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1353,15 +1117,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1402,14 +1157,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -1420,15 +1167,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1470,14 +1208,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1492,15 +1222,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1542,14 +1263,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1564,15 +1277,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1613,14 +1317,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -1631,15 +1327,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1680,14 +1367,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -1698,15 +1377,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1748,14 +1418,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1770,15 +1432,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1820,14 +1473,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1842,15 +1487,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1891,14 +1527,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -1909,15 +1537,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1959,14 +1578,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -1981,15 +1592,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2031,14 +1633,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2053,15 +1647,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2102,14 +1687,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2120,15 +1697,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2169,14 +1737,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2187,15 +1747,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2237,14 +1788,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2259,15 +1802,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2309,14 +1843,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2331,15 +1857,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2380,14 +1897,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2398,15 +1907,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2448,14 +1948,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2470,15 +1962,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2520,14 +2003,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2542,15 +2017,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2591,14 +2057,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2609,15 +2067,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2658,14 +2107,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2676,15 +2117,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2726,14 +2158,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2748,15 +2172,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2798,14 +2213,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2820,15 +2227,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2869,14 +2267,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -2887,15 +2277,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2937,14 +2318,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -2959,15 +2332,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3009,14 +2373,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3031,15 +2387,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3080,14 +2427,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3098,15 +2437,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3147,14 +2477,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3165,15 +2487,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3215,14 +2528,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3237,15 +2542,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3287,14 +2583,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3309,15 +2597,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3358,14 +2637,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3376,15 +2647,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3426,14 +2688,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3448,15 +2702,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3498,14 +2743,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3520,15 +2757,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3569,14 +2797,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3587,15 +2807,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3636,14 +2847,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3654,15 +2857,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3704,14 +2898,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3726,15 +2912,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3776,14 +2953,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3798,15 +2967,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3847,14 +3007,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -3865,15 +3017,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3915,14 +3058,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -3937,15 +3072,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3987,14 +3113,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -4009,15 +3127,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4052,10 +3161,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IPMI_SENSORS</id>
 		<default></default>
 	</attribute>
@@ -4070,15 +3175,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4117,14 +3213,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -4135,15 +3223,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>0</value></field>
-				<field><id>supportsXscom</id><value>0</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4182,14 +3261,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -4200,15 +3271,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>0</value></field>
-				<field><id>supportsXscom</id><value>0</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4243,14 +3305,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -4261,15 +3315,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4309,20 +3354,16 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PEC_IS_BIFURCATABLE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>PEC_PCIE_IOP_REVERSAL</id>
@@ -4347,15 +3388,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_IOP_CONFIG</id>
@@ -4483,10 +3515,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<default></default>
 	</attribute>
@@ -4501,15 +3529,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4553,14 +3572,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -4571,15 +3582,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -4680,10 +3682,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>0</default>
 	</attribute>
@@ -4718,15 +3716,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4770,20 +3759,16 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PEC_IS_BIFURCATABLE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>PEC_PCIE_IOP_REVERSAL</id>
@@ -4808,15 +3793,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_IOP_CONFIG</id>
@@ -4945,10 +3921,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<default></default>
 	</attribute>
@@ -4963,15 +3935,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5015,14 +3978,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -5033,15 +3988,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -5142,10 +4088,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>1</default>
 	</attribute>
@@ -5180,15 +4122,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5236,14 +4169,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -5254,15 +4179,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -5363,10 +4279,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>1</default>
 	</attribute>
@@ -5401,15 +4313,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5455,20 +4358,16 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PEC_IS_BIFURCATABLE</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>PEC_PCIE_IOP_REVERSAL</id>
@@ -5493,15 +4392,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_IOP_CONFIG</id>
@@ -5629,10 +4519,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<default></default>
 	</attribute>
@@ -5647,15 +4533,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5699,14 +4576,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -5717,15 +4586,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -5826,10 +4686,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>2</default>
 	</attribute>
@@ -5864,15 +4720,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5913,10 +4760,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<default></default>
 	</attribute>
@@ -5931,15 +4774,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -5983,14 +4817,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -6001,15 +4827,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -6110,10 +4927,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>2</default>
 	</attribute>
@@ -6148,15 +4961,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6204,14 +5008,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -6222,15 +5018,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -6331,10 +5118,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>2</default>
 	</attribute>
@@ -6369,15 +5152,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6419,10 +5193,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IO_CONFIG_SELECT</id>
 		<default></default>
 	</attribute>
@@ -6437,15 +5207,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6489,14 +5250,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -6507,15 +5260,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -6616,10 +5360,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>2</default>
 	</attribute>
@@ -6654,15 +5394,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6710,14 +5441,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -6728,15 +5451,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>PROC_PCIE_BAR_ENABLE</id>
@@ -6837,10 +5551,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>IOP_NUM</id>
 		<default>2</default>
 	</attribute>
@@ -6875,15 +5585,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6922,14 +5623,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -6940,15 +5633,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -6983,14 +5667,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7001,15 +5677,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7044,14 +5711,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7062,15 +5721,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7105,14 +5755,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7123,15 +5765,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7166,14 +5799,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7184,15 +5809,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7227,14 +5843,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7245,15 +5853,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7288,14 +5887,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7306,15 +5897,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7349,14 +5931,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7367,15 +5941,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7410,14 +5975,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7428,15 +5985,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7471,14 +6019,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7489,15 +6029,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7532,14 +6063,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7550,15 +6073,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7593,14 +6107,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7611,15 +6117,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7654,14 +6151,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7672,15 +6161,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7715,14 +6195,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7733,15 +6205,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7776,14 +6239,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7794,15 +6249,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7837,14 +6283,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7855,15 +6293,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7898,14 +6327,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7916,15 +6337,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -7959,14 +6371,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -7977,15 +6381,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8020,14 +6415,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8038,15 +6425,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8081,14 +6459,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8099,15 +6469,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8142,14 +6503,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8160,15 +6513,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8203,14 +6547,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8221,15 +6557,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8264,14 +6591,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8282,15 +6601,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8325,14 +6635,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8343,15 +6645,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8386,14 +6679,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8404,15 +6689,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8447,14 +6723,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8465,15 +6733,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8508,14 +6767,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8526,15 +6777,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8569,14 +6811,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8587,15 +6821,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8630,14 +6855,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8648,15 +6865,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8691,14 +6899,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8709,15 +6909,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8752,14 +6943,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8770,15 +6953,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8813,14 +6987,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8831,15 +6997,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8874,14 +7031,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8892,15 +7041,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8935,14 +7075,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -8953,15 +7085,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -8996,14 +7119,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9014,15 +7129,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9057,14 +7163,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9075,15 +7173,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9118,14 +7207,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9136,15 +7217,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9179,14 +7251,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9197,15 +7261,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9240,14 +7295,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9258,15 +7305,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9301,14 +7339,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9319,15 +7349,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9362,14 +7383,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9380,15 +7393,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9423,14 +7427,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9441,15 +7437,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9484,14 +7471,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9502,15 +7481,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9545,14 +7515,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9563,15 +7525,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9606,14 +7559,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9624,15 +7569,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9667,14 +7603,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9685,15 +7613,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9728,14 +7647,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9746,15 +7657,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9789,14 +7691,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9807,15 +7701,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9850,14 +7735,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9868,15 +7745,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9911,14 +7779,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9929,15 +7789,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -9972,14 +7823,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -9990,15 +7833,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10033,14 +7867,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10051,15 +7877,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10094,14 +7911,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10112,15 +7921,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10155,14 +7955,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10173,15 +7965,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10216,14 +7999,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10234,15 +8009,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10277,14 +8043,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10295,15 +8053,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10338,14 +8087,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10356,15 +8097,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10399,14 +8131,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10417,15 +8141,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10460,14 +8175,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10478,15 +8185,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10521,14 +8219,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10539,15 +8229,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10582,14 +8263,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10600,15 +8273,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10643,14 +8307,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10661,15 +8317,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10704,14 +8351,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10722,15 +8361,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10765,14 +8395,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10783,15 +8405,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10826,14 +8439,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10844,15 +8449,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10887,14 +8483,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -10905,15 +8493,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -10956,16 +8535,8 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default>0x00</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IO_XBUS_CHAN_EQ</id>
@@ -10978,10 +8549,6 @@
 	<attribute>
 		<id>IO_XBUS_TX_MARGIN_RATIO</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>IO_X_DEBUG</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>IO_X_MFG_CHK</id>
@@ -11006,15 +8573,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11057,16 +8615,8 @@
 		<default>INOUT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default>0x80</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IO_XBUS_CHAN_EQ</id>
@@ -11079,10 +8629,6 @@
 	<attribute>
 		<id>IO_XBUS_TX_MARGIN_RATIO</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>IO_X_DEBUG</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>IO_X_MFG_CHK</id>
@@ -11107,15 +8653,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11160,14 +8697,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -11178,15 +8707,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11239,10 +8759,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EEPROM_VPD_PRIMARY_INFO</id>
 		<default>
 				<field><id>i2cMasterPath</id><value></value></field>
@@ -11254,15 +8770,13 @@
 				<field><id>chipCount</id><value></value></field>
 				<field><id>writePageSize</id><value></value></field>
 				<field><id>writeCycleTime</id><value></value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IBSCOM_MCS_BASE_ADDR</id>
@@ -11283,15 +8797,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11332,14 +8837,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -11350,19 +8847,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11401,10 +8885,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -11423,15 +8903,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11474,10 +8945,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -11496,15 +8963,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11549,14 +9007,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -11567,19 +9017,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11618,10 +9055,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -11640,15 +9073,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11691,10 +9115,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -11713,15 +9133,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11766,10 +9177,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EEPROM_VPD_PRIMARY_INFO</id>
 		<default>
 				<field><id>i2cMasterPath</id><value></value></field>
@@ -11781,15 +9188,13 @@
 				<field><id>chipCount</id><value></value></field>
 				<field><id>writePageSize</id><value></value></field>
 				<field><id>writeCycleTime</id><value></value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IBSCOM_MCS_BASE_ADDR</id>
@@ -11810,15 +9215,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11859,14 +9255,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -11877,19 +9265,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -11928,10 +9303,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -11950,15 +9321,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12001,10 +9363,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12023,15 +9381,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12076,14 +9425,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -12094,19 +9435,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12145,10 +9473,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12167,15 +9491,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12218,10 +9533,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12240,15 +9551,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12297,14 +9599,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -12315,15 +9609,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12376,10 +9661,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EEPROM_VPD_PRIMARY_INFO</id>
 		<default>
 				<field><id>i2cMasterPath</id><value></value></field>
@@ -12391,15 +9672,13 @@
 				<field><id>chipCount</id><value></value></field>
 				<field><id>writePageSize</id><value></value></field>
 				<field><id>writeCycleTime</id><value></value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IBSCOM_MCS_BASE_ADDR</id>
@@ -12420,15 +9699,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12469,14 +9739,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -12487,19 +9749,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12538,10 +9787,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12560,15 +9805,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12611,10 +9847,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12633,15 +9865,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12686,14 +9909,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -12704,19 +9919,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12755,10 +9957,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12777,15 +9975,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12828,10 +10017,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -12850,15 +10035,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12903,10 +10079,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
 		<id>EEPROM_VPD_PRIMARY_INFO</id>
 		<default>
 				<field><id>i2cMasterPath</id><value></value></field>
@@ -12918,15 +10090,13 @@
 				<field><id>chipCount</id><value></value></field>
 				<field><id>writePageSize</id><value></value></field>
 				<field><id>writeCycleTime</id><value></value></field>
+				<field><id>i2cMuxBusSelector</id><value></value></field>
+				<field><id>i2cMuxPath</id><value></value></field>
 		</default>
 	</attribute>
 	<attribute>
 		<id>EI_BUS_TX_MSBSWAP</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
 	</attribute>
 	<attribute>
 		<id>IBSCOM_MCS_BASE_ADDR</id>
@@ -12947,15 +10117,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -12996,14 +10157,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -13014,19 +10167,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13065,10 +10205,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -13087,15 +10223,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13138,10 +10265,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -13160,15 +10283,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13213,14 +10327,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>DUMMY_RW</id>
-		<default>5</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -13231,19 +10337,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RCD_PARITY_RECONFIG_LOOP_COUNT</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13282,10 +10375,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -13304,15 +10393,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13355,10 +10435,6 @@
 		<default>OUT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MBA_DIMM</id>
 		<default>1</default>
 	</attribute>
@@ -13377,15 +10453,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13436,10 +10503,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13450,15 +10513,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13505,10 +10559,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13519,15 +10569,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13582,10 +10623,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13596,15 +10633,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13659,10 +10687,6 @@
 		<default>1</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13673,15 +10697,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13736,10 +10751,6 @@
 		<default>2</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13750,15 +10761,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13813,10 +10815,6 @@
 		<default>3</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13827,15 +10825,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13890,10 +10879,6 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13904,15 +10889,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -13967,10 +10943,6 @@
 		<default>1</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -13981,15 +10953,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -14044,10 +11007,6 @@
 		<default>2</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default></default>
 	</attribute>
@@ -14058,15 +11017,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -15225,10 +12175,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -15239,15 +12185,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -15282,10 +12219,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -15296,15 +12229,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -15339,10 +12263,6 @@
 		<default>UNIT</default>
 	</attribute>
 	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default>0x0</default>
-	</attribute>
-	<attribute>
 		<id>MODEL</id>
 		<default>NIMBUS</default>
 	</attribute>
@@ -15353,15 +12273,6 @@
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -15378,14 +12289,10 @@
 	<is_root>false</is_root>
 	<instance_name>cpu_temp_sensor</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>CHIPLET_ID</id>
-		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -15394,10 +12301,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -15424,29 +12327,8 @@
 		<default>0x01</default>
 	</attribute>
 	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>IPMI_SENSOR</default>
-	</attribute>
-	<attribute>
-		<id>PHYS_PATH</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -15459,14 +12341,10 @@
 	<is_root>false</is_root>
 	<instance_name>cpu_func_sensor</instance_name>
 	<position>-1</position>
-	<parent>unit</parent>
+	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>CHIPLET_ID</id>
-		<default>0xFF</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -15475,10 +12353,6 @@
 	<attribute>
 		<id>CLASS</id>
 		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>IPMI_ENTITY_ID</id>
@@ -15505,29 +12379,8 @@
 		<default>0x07</default>
 	</attribute>
 	<attribute>
-		<id>MODEL</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>MRW_TYPE</id>
 		<default>IPMI_SENSOR</default>
-	</attribute>
-	<attribute>
-		<id>PHYS_PATH</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value>1</value></field>
-				<field><id>supportsXscom</id><value>1</value></field>
-				<field><id>supportsInbandScom</id><value>0</value></field>
-				<field><id>reserved</id><value>0</value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>RESOURCE_IS_CRITICAL</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
