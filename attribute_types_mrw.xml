@@ -1541,6 +1541,17 @@
 		<serverwizReadonly/>
 	</attribute>
 	<attribute>
+		<id>MUX_CHANNEL</id>
+		<description>Channel number for the I2C channel unit on an I2C Mux</description>
+		<simpleType>
+			<uint8_t>
+			</uint8_t>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable/>
+		<writeable/>
+	</attribute>
+	<attribute>
 		<id>I2C_ADDRESS</id>
 		<description>I2C Address</description>
 		<simpleType>
