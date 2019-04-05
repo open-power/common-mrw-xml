@@ -539,6 +539,12 @@
       <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>FREQ_O_MHZ</id>
     </attribute>
     <attribute>
@@ -549,12 +555,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -1418,6 +1418,186 @@
       <id>SBE_IMAGE_MINIMUM_VALID_ECS</id>
     </attribute>
     <attribute>
+      <id>EXTERNAL_VRM_STEPSIZE</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_TRANSITION_START_NS</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</id>
+    </attribute>
+    <attribute>
+      <id>AVSBUS_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>SPIPSS_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>STOP4_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>STOP8_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>STOP11_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_WOF_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_IVRM_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>WOF_ENABLE_FRATIO</id>
+    </attribute>
+    <attribute>
+      <id>WOF_ENABLE_VRATIO</id>
+    </attribute>
+    <attribute>
+      <id>WOF_VRATIO_SELECT</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_VDM_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>VDM_EXTREME_THOTTLE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>DPLL_VDM_RESPONSE</id>
+    </attribute>
+    <attribute>
+      <id>IVRM_STABILIZATION_DELAY_NS</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_RESCLK_STEP_DELAY</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_RING_DBG_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PERF_24x7_INVOCATION_TIME_MS</id>
+    </attribute>
+    <attribute>
+      <id>PGPE_HCODE_FUNCTION_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>POUND_W_STATIC_DATA_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>AUX_FUNC_INVOCATION_TIME_MS</id>
+    </attribute>
+    <attribute>
+      <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>NEST_LEAKAGE_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
+    </attribute>
+    <attribute>
+      <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
+      <id>NEST_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>MRW_FILTER_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>SECURITY_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CP_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>IO_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>SECTOR_BUFFER_STRENGTH</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_VALUE</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MNFG_ERROR_THRESHOLD</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_PROC_REFCLOCK_KHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_MEM_REFCLOCK</id>
+    </attribute>
+    <attribute>
+      <id>MAX_ALLOWED_DIMM_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>REQUIRED_SYNCH_MODE</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_PB_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_A_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_X_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PM_SAFE_FREQUENCY_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PM_SAFE_VOLTAGE_MV</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_PCIE_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>DD1_SLOW_PCI_REF_CLOCK</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_A_BUS_WIDTH</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_X_BUS_WIDTH</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_PUMP_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_CCSM_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_SMP_OPTICS_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_CAPI_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_EPS_TABLE_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_INTERLEAVE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_INTERLEAVE_GRANULARITY</id>
+    </attribute>
+    <attribute>
+      <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
     </attribute>
     <attribute>
@@ -1523,183 +1703,6 @@
       <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
     </attribute>
     <attribute>
-      <id>EXTERNAL_VRM_STEPSIZE</id>
-    </attribute>
-    <attribute>
-      <id>EXTERNAL_VRM_TRANSITION_START_NS</id>
-    </attribute>
-    <attribute>
-      <id>EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US</id>
-    </attribute>
-    <attribute>
-      <id>EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
-    </attribute>
-    <attribute>
-      <id>EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</id>
-    </attribute>
-    <attribute>
-      <id>AVSBUS_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>SPIPSS_FREQUENCY</id>
-    </attribute>
-    <attribute>
-      <id>STOP4_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>STOP8_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>STOP11_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOF_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_IVRM_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>WOF_ENABLE_FRATIO</id>
-    </attribute>
-    <attribute>
-      <id>WOF_ENABLE_VRATIO</id>
-    </attribute>
-    <attribute>
-      <id>WOF_VRATIO_SELECT</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_VDM_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>VDM_EXTREME_THOTTLE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>DPLL_VDM_RESPONSE</id>
-    </attribute>
-    <attribute>
-      <id>IVRM_STABILIZATION_DELAY_NS</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RESCLK_STEP_DELAY</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_RING_DBG_MODE</id>
-    </attribute>
-    <attribute>
-      <id>PERF_24x7_INVOCATION_TIME_MS</id>
-    </attribute>
-    <attribute>
-      <id>PGPE_HCODE_FUNCTION_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>POUND_W_STATIC_DATA_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>AUX_FUNC_INVOCATION_TIME_MS</id>
-    </attribute>
-    <attribute>
-      <id>SYS_VFRT_STATIC_DATA_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>NEST_LEAKAGE_PERCENT</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_PB_MHZ_POUNDV_FALLBACK</id>
-    </attribute>
-    <attribute>
-      <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>MRW_FILTER_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CP_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>IO_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MNFG_ERROR_THRESHOLD</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_PROC_REFCLOCK_KHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_MEM_REFCLOCK</id>
-    </attribute>
-    <attribute>
-      <id>MAX_ALLOWED_DIMM_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>REQUIRED_SYNCH_MODE</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_PB_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_A_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_X_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PM_SAFE_FREQUENCY_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PM_SAFE_VOLTAGE_MV</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_PCIE_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>DD1_SLOW_PCI_REF_CLOCK</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_A_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_X_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_PUMP_MODE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_CCSM_MODE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_SMP_OPTICS_MODE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_CAPI_MODE</id>
-    </attribute>
-    <attribute>
-      <id>PROC_EPS_TABLE_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_INTERLEAVE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_INTERLEAVE_GRANULARITY</id>
-    </attribute>
-    <attribute>
-      <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -1710,9 +1713,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2447,19 +2447,16 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_GROUP_POS</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_NUM</id>
-    </attribute>
-    <attribute>
-      <id>OMI_INBAND_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
