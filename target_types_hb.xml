@@ -539,12 +539,6 @@
       <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
       <id>FREQ_O_MHZ</id>
     </attribute>
     <attribute>
@@ -561,6 +555,12 @@
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <id>chip-processor</id>
     <parent>chip</parent>
