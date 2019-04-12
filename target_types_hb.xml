@@ -446,12 +446,6 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
@@ -471,6 +465,12 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
@@ -2447,16 +2447,16 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_GROUP_POS</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_NUM</id>
-    </attribute>
-    <attribute>
       <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
