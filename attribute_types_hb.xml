@@ -1247,7 +1247,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
       <macro>DIRECT</macro>
@@ -2202,22 +2202,6 @@
       <uint8_t>
         <default>AUTO</default>
       </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>List of memory frequencies supported by the current system.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_SUPPORTED_FREQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>1866,2133,2400,2667</default>
-      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3779,6 +3763,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>List of memory frequencies supported by the current system.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_SUPPORTED_FREQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint32_t>
+        <default>1866,2133,2400,2667</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MEM_MRW_IS_PLANAR</id>
@@ -3805,246 +3805,6 @@
     <simpleType>
       <uint8_t>
         <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_5</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_5</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_9</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_9</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_A</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_A</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_B</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_B</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 0 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_0_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_0_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 1 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_1_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_1_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 5 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_5_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_5_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 9 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_9_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_9_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template B pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_B_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_B_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Short back-off timer value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_SHRT_BACKOFF_TIMER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_SHRT_BACKOFF_TIMER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable OpenCAPI metadata</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_METADATA_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_METADATA_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The PASID base</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_PASID_BASE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_PASID_BASE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The desired actag base</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ACTAG_BASE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ACTAG_BASE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The expected number of actags to be supported by the ocmb. Must be 1 for Explorer Validate via OCTRLTAG 10518 OCTRLTAG_AFU_ACTAG_LENGTH_SUPPORTED</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_AFU_ACTAG_LEN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_AFU_ACTAG_LEN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x1</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The expected number of PASIDs to be supported by the ocmb. Number of consecutive PASIDs this AFU supports is 2^pasid_length_supported Validate via OPASID 10100 OPASID_MAX_PASID_WIDTH</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_PASID_LEN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_PASID_LEN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -8418,26 +8178,6 @@
     <id>MSS_MRW_DRAM_2N_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>List of memory frequencies supported by the current system.</description>
-    <enumerator>
-      <name>MT1866</name>
-      <value>1866</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2133</name>
-      <value>2133</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2400</name>
-      <value>2400</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2666</name>
-      <value>2666</value>
-    </enumerator>
-    <id>MSS_MRW_SUPPORTED_FREQ</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enables DRAM Write CRC</description>
     <enumerator>
       <name>DISABLE</name>
@@ -10090,6 +9830,34 @@
     <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
   </enumerationType>
   <enumerationType>
+    <description>List of memory frequencies supported by the current system.</description>
+    <enumerator>
+      <name>MT1866</name>
+      <value>1866</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2133</name>
+      <value>2133</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2400</name>
+      <value>2400</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2666</name>
+      <value>2666</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2933</name>
+      <value>2933</value>
+    </enumerator>
+    <enumerator>
+      <name>MT3200</name>
+      <value>3200</value>
+    </enumerator>
+    <id>MSS_MRW_SUPPORTED_FREQ</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
     <enumerator>
       <name>FALSE</name>
@@ -10100,66 +9868,6 @@
       <value>0x01</value>
     </enumerator>
     <id>MEM_MRW_IS_PLANAR</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_1</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_5</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_9</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_A</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_B</id>
   </enumerationType>
   <enumerationType>
     <description>The lane width of the OpenCapi channel</description>

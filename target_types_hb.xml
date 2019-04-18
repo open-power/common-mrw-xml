@@ -190,54 +190,6 @@
       <id>MEM_MRW_IS_PLANAR</id>
     </attribute>
     <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_1</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_5</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_9</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_A</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_B</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_0_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_1_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_5_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_9_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_B_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_SHRT_BACKOFF_TIMER</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_METADATA_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_PASID_BASE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ACTAG_BASE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_AFU_ACTAG_LEN</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_PASID_LEN</id>
-    </attribute>
-    <attribute>
       <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
     </attribute>
     <attribute>
@@ -1658,9 +1610,6 @@
       <id>MSS_MRW_DRAM_2N_MODE</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_SUPPORTED_FREQ</id>
-    </attribute>
-    <attribute>
       <id>MSS_MRW_DRAM_WRITE_CRC</id>
     </attribute>
     <attribute>
@@ -1767,6 +1716,9 @@
     </attribute>
     <attribute>
       <id>CEN_MRW_WR_VREF_CHECK_VREF_STEP_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_SUPPORTED_FREQ</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_POWER_CONTROL_REQUESTED</id>
@@ -2021,6 +1973,9 @@
     <attribute>
       <default>MC</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
