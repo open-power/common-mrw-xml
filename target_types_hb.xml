@@ -190,54 +190,6 @@
       <id>MEM_MRW_IS_PLANAR</id>
     </attribute>
     <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_1</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_5</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_9</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_A</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ENABLE_US_TMPL_B</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_0_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_1_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_5_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_9_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_TMPL_B_PACING</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_SHRT_BACKOFF_TIMER</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_METADATA_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_PASID_BASE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_ACTAG_BASE</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_AFU_ACTAG_LEN</id>
-    </attribute>
-    <attribute>
-      <id>EXPLR_PASID_LEN</id>
-    </attribute>
-    <attribute>
       <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
     </attribute>
     <attribute>
@@ -446,33 +398,6 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>IO_PB_IOOFIR_MASK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_O_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_SYSTEM_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_GROUP_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
@@ -555,6 +480,33 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>IO_PB_IOOFIR_MASK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_O_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_SYSTEM_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -734,6 +686,10 @@
     </attribute>
     <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
+  </targetType>
+  <targetType>
+    <id>chip-vreg-generic</id>
+    <parent>pmic</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -917,6 +873,17 @@
     </attribute>
     <id>panel</id>
     <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
+      <default>PMIC</default>
+      <id>TYPE</id>
+    </attribute>
+    <id>pmic</id>
+    <parent>asic</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1505,7 +1472,28 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+      <id>NEST_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>MRW_FILTER_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>SECURITY_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CP_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>IO_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>SECTOR_BUFFER_STRENGTH</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_VALUE</id>
     </attribute>
     <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
@@ -1574,135 +1562,6 @@
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_PWR_INTERCEPT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_PWR_SLOPE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_MEM_M_DRAM_CLOCKS</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
-    </attribute>
-    <attribute>
-      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_FINE_REFRESH_MODE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_PREFETCH_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_CLEANER_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_DRAM_2N_MODE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_SUPPORTED_FREQ</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_DRAM_WRITE_CRC</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_TEMP_REFRESH_MODE</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_FORCE_BCMODE_OFF</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>MRW_FILTER_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CP_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>IO_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -1713,6 +1572,9 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1769,7 +1631,103 @@
       <id>CEN_MRW_WR_VREF_CHECK_VREF_STEP_SIZE</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_SUPPORTED_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_PWR_INTERCEPT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_PWR_SLOPE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MEM_M_DRAM_CLOCKS</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_POWER_CONTROL_REQUESTED</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
+    </attribute>
+    <attribute>
+      <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_FINE_REFRESH_MODE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_DRAM_2N_MODE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_DRAM_WRITE_CRC</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_TEMP_REFRESH_MODE</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
     </attribute>
     <id>sys-sys-power9</id>
     <parent>base</parent>
@@ -2021,6 +1979,9 @@
     <attribute>
       <default>MC</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2447,16 +2408,16 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_GROUP_POS</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_NUM</id>
-    </attribute>
-    <attribute>
       <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
