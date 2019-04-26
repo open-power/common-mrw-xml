@@ -1247,7 +1247,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
       <macro>DIRECT</macro>
@@ -1486,6 +1486,20 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>FREQ_PB_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of the OMI channel.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_OMI_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_OMI_MHZ</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -1796,431 +1810,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port (MCA) basis Also used for emergency mode throttle MBA_FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional Consumer: thermal_init, initfile</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>32</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to be at or under the power limit Per DIMM basis KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM+VPP thermal power limit per DIMM = 32-63 Consumers: eff_config_thermal and bulk_pwr_throttles</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>10</array>
-      <uint64_t>
-        <default>0xffffe000000006a4,0,0,0,0,0,0,0,0,0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_PWR_INTERCEPT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_PWR_INTERCEPT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>100</array>
-      <uint64_t>
-        <default>0xffffe00002CC03AE,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_PWR_SLOPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_PWR_SLOPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>100</array>
-      <uint64_t>
-        <default>0xffffe00003FD0546,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook Refresh Rate Desired refresh interval used in refresh register 0, MBAREF0Q_CFG_REFRESH_INTERVAL 7.8 us (SINGLE) 3.9 us (DOUBLE) 7.02 us (SINGLE_10_PERCENT_FASTER) 3.51 us (DOUBLE_10_PERCENT_FASTER)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_REFRESH_RATE_REQUEST</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at max utilization. Value should be 0 for ISDIMMs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at idle utilization. Value should be 0 for ISDIMMs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook for the number of M DRAM clocks. One approach to curbing DRAM power usage is by throttling traffic through a programmable N commands over M window.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_MEM_M_DRAM_CLOCKS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_MEM_M_DRAM_CLOCKS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00000200</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values. Max databus utilization on a per port basis Default to 90%</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x00002328</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Option to control MCS prefetch retry threshold, for performance optimization. This attribute controls the number of retries in the prefetch engine. Retry threshold available ranges from 16 to 30. Note: Values outside those ranges will default to 30. In MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_MCS_PREFETCH_RETRY_THRESHOLD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Memory power control settings for IDLE powersave mode Used by OCC when entering idle power-save mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook VMEM regulator power limit per CDIMM assuming a full configuration. Units in cW Used for Cumulus Consumed in mss_eff_config_thermal</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook VMEM regulator power limit per DIMM assuming a full configuration. Units in cW Consumed in mss_eff_config_thermal</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x000006A4</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value for the maximum possible number of dimms that can be installed under any of the VMEM regulators. Consumed in eff_config_thermal to calculate mem_watt_target</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_AVDD_OFFSET_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VDD_OFFSET_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VCS_OFFSET_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VPP_OFFSET_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_VDDR_OFFSET_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_FINE_REFRESH_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_FINE_REFRESH_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>NORMAL</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Temperature refresh range. Sets DDR4 MRS4. Should be defaulted to extended range. NORMAL for running at 85 degrees C or less, EXTENDED for 95 or less degrees C Used for calculating periodic refresh intervals JEDEC DDR4 spec 1716.78C from 07-2016 page 46 4.8.1</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_TEMP_REFRESH_RANGE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>For resetting the phy delay values at the beginning of calling mss_draminit_training. YES means the vaules will be reset.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>YES</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value of on or off. Determines if prefetching enabled or not.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_PREFETCH_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_PREFETCH_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value of on or off. Determines if the cleaner of the L4 cache (write modified entries to memory on idle cycles) enabled or not. See chapter 7 of the Centaur Workbook.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_CLEANER_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_CLEANER_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes the settings for periodic calibration for all ports: Reading left to right. (DEFAULT: 0xD90C -&gt; Byte 0(11011001), Byte 1(00001100)) For each bit: OFF = 0, ON = 1. Setting to 0 indicates to disable periodic memcal. Byte 0: 0: ZCAL 1: SYSCK_ALIGN 2: RDCENTERING 3: RDLCK_ALIGN 4: DQS_ALIGN 5: RDCLK_UPDATE 6: PER_DUTYCYCLE 7: PERCAL_PWR_DIS Byte 1: 0: PERCAL_REPEAT 1: PERCAL_REPEAT 2: PERCAL_REPEAT 3: SINGLE_BIT_MPR 4: MBA_CFG_0 5: MBA_CFG_1 6: SPARE 7: SPARE</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>0xD90C</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Describes the settings for periodic ZQ calibration for all ports: Reading left to right. For each bit: OFF = 0, ON = 1. Setting to 0 indicates to disable periodic zqcal. Byte 0: 0: ZQCAL All others reserved for future use</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>0x8000</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Allows user to manually turn on and off 2N Mode. AUTO indicates to use Signal Integrity generated setting (from VPD).</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_DRAM_2N_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_DRAM_2N_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>AUTO</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>List of memory frequencies supported by the current system.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_SUPPORTED_FREQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>1866,2133,2400,2667</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
@@ -2234,94 +1823,6 @@
       <uint64_t>
         <default>0</default>
       </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enables DRAM Write CRC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_DRAM_WRITE_CRC</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_DRAM_WRITE_CRC</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used in MR4 A3 Temperature refresh mode Should be defaulted to disable</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_TEMP_REFRESH_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_TEMP_REFRESH_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_FORCE_BCMODE_OFF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_NVDIMM_PLUG_RULES</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Bitmap of DRAM widths supported by a system. A 1 indicates that the system supports a density. Enums below represent the the bit location in the attribute for a given DRAM width. Default value is 0xC -&gt; both x4/x8 supported</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xc0</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3779,6 +3280,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>List of memory frequencies supported by the current system.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_SUPPORTED_FREQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint32_t>
+        <default>1866,2133,2400,2667</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MEM_MRW_IS_PLANAR</id>
@@ -3791,6 +3308,144 @@
       <uint8_t>
         <default>FALSE</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port basis Also used for emergency mode throttle FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional Consumer: thermal_init, initfile</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>32</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to be at or under the power limit Per DIMM basis KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM+VPP thermal power limit per DIMM = 32-63 Consumers: eff_config_thermal and bulk_pwr_throttles</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>10</array>
+      <uint64_t>
+        <default>0xffffe000000006a4,0,0,0,0,0,0,0,0,0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_PWR_INTERCEPT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_PWR_INTERCEPT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>100</array>
+      <uint64_t>
+        <default>0xffffe00002CC03AE,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to get the VDDR and VDDR+VPP power curve for each DIMM Decoded and used to set ATTR_MSS_TOTAL_PWR_INTERCEPT Key Value pair KEY (0-19): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-7, DIMM_WIDTH = 8-10, DIMM_DENSITY = 11-13, DIMM_STACK_TYPE = 14-15, DRAM_MFGID = 16-18, DIMMS_PER_PORT = 19-20, Bits 21-32: Not used VALUE (bits 32-63) in cW: VMEM power curve = 32-47 VMEM+VPP power curve = 48-63 Consumers: eff_config_thermal</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_PWR_SLOPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_PWR_SLOPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>100</array>
+      <uint64_t>
+        <default>0xffffe00003FD0546,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook Refresh Rate Desired refresh interval used in refresh register 0, MBAREF0Q_CFG_REFRESH_INTERVAL 7.8 us (SINGLE) 3.9 us (DOUBLE) 7.02 us (SINGLE_10_PERCENT_FASTER) 3.51 us (DOUBLE_10_PERCENT_FASTER)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_REFRESH_RATE_REQUEST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at max utilization. Value should be 0 for ISDIMMs</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook DIMM power curve percent uplift for this system at idle utilization. Value should be 0 for ISDIMMs</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_DIMM_POWER_CURVE_PERCENT_UPLIFT_IDLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook for the number of M DRAM clocks. One approach to curbing DRAM power usage is by throttling traffic through a programmable N commands over M window.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_MEM_M_DRAM_CLOCKS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_MEM_M_DRAM_CLOCKS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x00000200</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values. Max databus utilization on a per port basis Default to 90%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x00002328</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -3809,242 +3464,318 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
+    <description>Memory power control settings for IDLE powersave mode Used by OCC when entering idle power-save mode</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_1</id>
+      <id>ATTR_MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_1</id>
+    <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
-        <default>DISABLED</default>
+        <default>OFF</default>
       </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
+    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_5</id>
+      <id>ATTR_MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_5</id>
+    <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
-        <default>ENABLED</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
+    <description>Machine Readable Workbook VMEM regulator power limit per CDIMM assuming a full configuration. Units in cW Used for Cumulus Consumed in mss_eff_config_thermal</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_9</id>
+      <id>ATTR_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_9</id>
+    <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR3</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
+      <uint32_t />
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
+    <description>Machine Readable Workbook VMEM regulator power limit per DIMM assuming a full configuration. Units in cW Consumed in mss_eff_config_thermal</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_A</id>
+      <id>ATTR_MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_A</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ENABLE_US_TMPL_B</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_ENABLE_US_TMPL_B</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 0 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_0_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_0_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 1 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_1_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_1_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 5 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_5_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_5_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template 9 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_9_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_9_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Template B pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_TMPL_B_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_TMPL_B_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Short back-off timer value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_SHRT_BACKOFF_TIMER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_SHRT_BACKOFF_TIMER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable OpenCAPI metadata</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_METADATA_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_METADATA_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The PASID base</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_PASID_BASE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXPLR_PASID_BASE</id>
+    <id>MRW_VMEM_REGULATOR_MEMORY_POWER_LIMIT_PER_DIMM_DDR4</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint32_t>
-        <default>0x0</default>
+        <default>0x000006A4</default>
       </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
-    <description>The desired actag base</description>
+    <description>Machine Readable Workbook value for the maximum possible number of dimms that can be installed under any of the VMEM regulators. Consumed in eff_config_thermal to calculate mem_watt_target</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_ACTAG_BASE</id>
+      <id>ATTR_MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_ACTAG_BASE</id>
+    <id>MSS_MRW_MAX_NUMBER_DIMMS_POSSIBLE_PER_VMEM_REGULATOR</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t>
-        <default>0x0</default>
-      </uint32_t>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
-    <description>The expected number of actags to be supported by the ocmb. Must be 1 for Explorer Validate via OCTRLTAG 10518 OCTRLTAG_AFU_ACTAG_LENGTH_SUPPORTED</description>
+    <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_AFU_ACTAG_LEN</id>
+      <id>ATTR_MSS_MRW_AVDD_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_AFU_ACTAG_LEN</id>
+    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t>
-        <default>0x1</default>
-      </uint32_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
-    <description>The expected number of PASIDs to be supported by the ocmb. Number of consecutive PASIDs this AFU supports is 2^pasid_length_supported Validate via OPASID 10100 OPASID_MAX_PASID_WIDTH</description>
+    <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_EXPLR_PASID_LEN</id>
+      <id>ATTR_MSS_MRW_VDD_OFFSET_ENABLE</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>EXPLR_PASID_LEN</id>
+    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_VCS_OFFSET_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_VPP_OFFSET_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_VDDR_OFFSET_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_FINE_REFRESH_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_FINE_REFRESH_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>NORMAL</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Temperature refresh range. Sets DDR4 MRS4. Should be defaulted to extended range. NORMAL for running at 85 degrees C or less, EXTENDED for 95 or less degrees C Used for calculating periodic refresh intervals JEDEC DDR4 spec 1716.78C from 07-2016 page 46 4.8.1</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_TEMP_REFRESH_RANGE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>For resetting the phy delay values at the beginning of calling mss_draminit_training. YES means the vaules will be reset.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>YES</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Describes the settings for periodic calibration for all ports: Reading left to right. (DEFAULT: 0xD90C -&gt; Byte 0(11011001), Byte 1(00001100)) For each bit: OFF = 0, ON = 1. Setting to 0 indicates to disable periodic memcal. Byte 0: 0: ZCAL 1: SYSCK_ALIGN 2: RDCENTERING 3: RDLCK_ALIGN 4: DQS_ALIGN 5: RDCLK_UPDATE 6: PER_DUTYCYCLE 7: PERCAL_PWR_DIS Byte 1: 0: PERCAL_REPEAT 1: PERCAL_REPEAT 2: PERCAL_REPEAT 3: SINGLE_BIT_MPR 4: MBA_CFG_0 5: MBA_CFG_1 6: SPARE 7: SPARE</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_PERIODIC_MEMCAL_MODE_OPTIONS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0xD90C</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Describes the settings for periodic ZQ calibration for all ports: Reading left to right. For each bit: OFF = 0, ON = 1. Setting to 0 indicates to disable periodic zqcal. Byte 0: 0: ZQCAL All others reserved for future use</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_PERIODIC_ZQCAL_MODE_OPTIONS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x8000</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Allows user to manually turn on and off 2N Mode. AUTO indicates to use Signal Integrity generated setting (from VPD).</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DRAM_2N_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_DRAM_2N_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>AUTO</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enables DRAM Write CRC</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DRAM_WRITE_CRC</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_DRAM_WRITE_CRC</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
         <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Used in MR4 A3 Temperature refresh mode Should be defaulted to disable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_TEMP_REFRESH_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_TEMP_REFRESH_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_FORCE_BCMODE_OFF</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_NVDIMM_PLUG_RULES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t>
+        <default>0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Bitmap of DRAM widths supported by a system. A 1 indicates that the system supports a density. Enums below represent the the bit location in the attribute for a given DRAM width. Default value is 0xC -&gt; both x4/x8 supported</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xc0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -4062,7 +3793,6 @@
         <default>1</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>The frequency of the OpenCAPI</description>
@@ -4078,7 +3808,6 @@
         <default>3</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>System attribute. If all MCS chiplets are in an interleaving group (1=true, 0=false). - If true the SMP fabric is setup in normal mode and multiple MCSs are grouped (disallowing systems with memory only under 1 MCS (i.e. systems with a single C-DIMM)) - If false the SMP fabric is setup in checkerboard mode. Provided by the Machine Readable Workbook. This attribute is based on Machine-Type-Model (MTM) and is setup by the service processor.</description>
@@ -8134,6 +7863,22 @@
     <id>FREQ_MCA_MHZ</id>
   </enumerationType>
   <enumerationType>
+    <description>The frequency of the OMI channel.</description>
+    <enumerator>
+      <name>21330</name>
+      <value>21330</value>
+    </enumerator>
+    <enumerator>
+      <name>23460</name>
+      <value>23460</value>
+    </enumerator>
+    <enumerator>
+      <name>25600</name>
+      <value>25600</value>
+    </enumerator>
+    <id>FREQ_OMI_MHZ</id>
+  </enumerationType>
+  <enumerationType>
     <description>MRW control to permit Normal (100 MHz) or Slow (94 MHz) operation of PCIE reference clock. On Nimbus DD1 HW, Slow operation is required to achieve Gen4 operation. Provided by the MRW.</description>
     <enumerator>
       <name>NORMAL</name>
@@ -8236,266 +7981,6 @@
       <value>0x1</value>
     </enumerator>
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Machine Readable Workbook Refresh Rate Desired refresh interval used in refresh register 0, MBAREF0Q_CFG_REFRESH_INTERVAL 7.8 us (SINGLE) 3.9 us (DOUBLE) 7.02 us (SINGLE_10_PERCENT_FASTER) 3.51 us (DOUBLE_10_PERCENT_FASTER)</description>
-    <enumerator>
-      <name>DOUBLE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>SINGLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>SINGLE_10_PERCENT_FASTER</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>DOUBLE_10_PERCENT_FASTER</name>
-      <value>3</value>
-    </enumerator>
-    <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
-    <enumerator>
-      <name>NORMAL</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FIXED_2X</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>FIXED_4X</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>FLY_2X</name>
-      <value>5</value>
-    </enumerator>
-    <enumerator>
-      <name>FLY_4X</name>
-      <value>6</value>
-    </enumerator>
-    <id>MSS_MRW_FINE_REFRESH_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Temperature refresh range. Sets DDR4 MRS4. Should be defaulted to extended range. NORMAL for running at 85 degrees C or less, EXTENDED for 95 or less degrees C Used for calculating periodic refresh intervals JEDEC DDR4 spec 1716.78C from 07-2016 page 46 4.8.1</description>
-    <enumerator>
-      <name>NORMAL</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>EXTEND</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>For resetting the phy delay values at the beginning of calling mss_draminit_training. YES means the vaules will be reset.</description>
-    <enumerator>
-      <name>YES</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>NO</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Value of on or off. Determines if prefetching enabled or not.</description>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <id>MSS_MRW_PREFETCH_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Value of on or off. Determines if the cleaner of the L4 cache (write modified entries to memory on idle cycles) enabled or not. See chapter 7 of the Centaur Workbook.</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_CLEANER_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Allows user to manually turn on and off 2N Mode. AUTO indicates to use Signal Integrity generated setting (from VPD).</description>
-    <enumerator>
-      <name>AUTO</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FORCE_TO_1N_MODE</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>FORCE_TO_2N_MODE</name>
-      <value>2</value>
-    </enumerator>
-    <id>MSS_MRW_DRAM_2N_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>List of memory frequencies supported by the current system.</description>
-    <enumerator>
-      <name>MT1866</name>
-      <value>1866</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2133</name>
-      <value>2133</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2400</name>
-      <value>2400</value>
-    </enumerator>
-    <enumerator>
-      <name>MT2666</name>
-      <value>2666</value>
-    </enumerator>
-    <id>MSS_MRW_SUPPORTED_FREQ</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enables DRAM Write CRC</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_DRAM_WRITE_CRC</id>
-  </enumerationType>
-  <enumerationType>
-    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
-    <enumerator>
-      <name>NO</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>YES</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
-  </enumerationType>
-  <enumerationType>
-    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
-    <enumerator>
-      <name>NO_NVDIMM</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>NVDIMM_CAPABLE</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Bitmap of DRAM widths supported by a system. A 1 indicates that the system supports a density. Enums below represent the the bit location in the attribute for a given DRAM width. Default value is 0xC -&gt; both x4/x8 supported</description>
-    <enumerator>
-      <name>X4</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>X8</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
   </enumerationType>
   <enumerationType>
     <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
@@ -8886,6 +8371,10 @@
     <enumerator>
       <name>EXPLORER</name>
       <value>0x8</value>
+    </enumerator>
+    <enumerator>
+      <name>GEMINI</name>
+      <value>0x9</value>
     </enumerator>
     <id>NAME</id>
   </enumerationType>
@@ -10090,6 +9579,34 @@
     <id>CEN_MSS_VOLT_COMPLIANT_DIMMS</id>
   </enumerationType>
   <enumerationType>
+    <description>List of memory frequencies supported by the current system.</description>
+    <enumerator>
+      <name>MT1866</name>
+      <value>1866</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2133</name>
+      <value>2133</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2400</name>
+      <value>2400</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2666</name>
+      <value>2666</value>
+    </enumerator>
+    <enumerator>
+      <name>MT2933</name>
+      <value>2933</value>
+    </enumerator>
+    <enumerator>
+      <name>MT3200</name>
+      <value>3200</value>
+    </enumerator>
+    <id>MSS_MRW_SUPPORTED_FREQ</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicates if the DIMM connected to this controller are in a planar configuration</description>
     <enumerator>
       <name>FALSE</name>
@@ -10102,64 +9619,220 @@
     <id>MEM_MRW_IS_PLANAR</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable Explorer upstream transmit template 1. Should be disabled by default.</description>
+    <description>Machine Readable Workbook Refresh Rate Desired refresh interval used in refresh register 0, MBAREF0Q_CFG_REFRESH_INTERVAL 7.8 us (SINGLE) 3.9 us (DOUBLE) 7.02 us (SINGLE_10_PERCENT_FASTER) 3.51 us (DOUBLE_10_PERCENT_FASTER)</description>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>DOUBLE</name>
+      <value>0</value>
     </enumerator>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>SINGLE</name>
+      <value>1</value>
     </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_1</id>
+    <enumerator>
+      <name>SINGLE_10_PERCENT_FASTER</name>
+      <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>DOUBLE_10_PERCENT_FASTER</name>
+      <value>3</value>
+    </enumerator>
+    <id>MSS_MRW_REFRESH_RATE_REQUEST</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable Explorer upstream transmit template 5. Should be enabled by default.</description>
+    <description>Machine Readable Workbook enablement of the HWP code to adjust the VMEM regulator power limit based on number of installed DIMMs.</description>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>FALSE</name>
+      <value>0</value>
     </enumerator>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>TRUE</name>
+      <value>1</value>
     </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_5</id>
+    <id>MSS_MRW_VMEM_REGULATOR_POWER_LIMIT_PER_DIMM_ADJ_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable Explorer upstream transmit template 9. Should be enabled by default.</description>
+    <description>Used for to determine whether to apply an offset to AVDD. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>ENABLE</name>
+      <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>DISABLE</name>
+      <value>0</value>
     </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_9</id>
+    <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable Explorer upstream transmit template A. Not supported by Axone</description>
+    <description>Used for to determine whether to apply an offset to VDD. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>ENABLE</name>
+      <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>DISABLE</name>
+      <value>0</value>
     </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_A</id>
+    <id>MSS_MRW_VDD_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable Explorer upstream transmit template B. Not supported by Axone</description>
+    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>ENABLE</name>
+      <value>1</value>
     </enumerator>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>DISABLE</name>
+      <value>0</value>
     </enumerator>
-    <id>EXPLR_ENABLE_US_TMPL_B</id>
+    <id>MSS_MRW_VCS_OFFSET_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Used for to determine whether to apply an offset to VCS. Supplied by MRW.</description>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <id>MSS_MRW_VPP_OFFSET_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Used for to determine whether to apply an offset to VDDR. Supplied by MRW.</description>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
+    <enumerator>
+      <name>NORMAL</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FIXED_2X</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>FIXED_4X</name>
+      <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>FLY_2X</name>
+      <value>5</value>
+    </enumerator>
+    <enumerator>
+      <name>FLY_4X</name>
+      <value>6</value>
+    </enumerator>
+    <id>MSS_MRW_FINE_REFRESH_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Temperature refresh range. Sets DDR4 MRS4. Should be defaulted to extended range. NORMAL for running at 85 degrees C or less, EXTENDED for 95 or less degrees C Used for calculating periodic refresh intervals JEDEC DDR4 spec 1716.78C from 07-2016 page 46 4.8.1</description>
+    <enumerator>
+      <name>NORMAL</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>EXTEND</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_TEMP_REFRESH_RANGE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>For resetting the phy delay values at the beginning of calling mss_draminit_training. YES means the vaules will be reset.</description>
+    <enumerator>
+      <name>YES</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>NO</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_RESET_DELAY_BEFORE_CAL</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Allows user to manually turn on and off 2N Mode. AUTO indicates to use Signal Integrity generated setting (from VPD).</description>
+    <enumerator>
+      <name>AUTO</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FORCE_TO_1N_MODE</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>FORCE_TO_2N_MODE</name>
+      <value>2</value>
+    </enumerator>
+    <id>MSS_MRW_DRAM_2N_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enables DRAM Write CRC</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_DRAM_WRITE_CRC</id>
+  </enumerationType>
+  <enumerationType>
+    <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
+    <enumerator>
+      <name>NO</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>YES</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_FORCE_BCMODE_OFF</id>
+  </enumerationType>
+  <enumerationType>
+    <description>A bitmap containing the plug rules for NVDIMM. 1 if a DIMM supports an NVDIMM being plugged in, 0 if it does not DIMM slot 0 is the left most bit The index to the bitmap is the position of the DIMM target As such, a bitmap of 0b10010000, would allow NVDIMM plugged into DIMM0 and DIMM3 Note: this attribute is a 64 bit number to account for 16 DIMM per processor if there is ever a 4 processor system</description>
+    <enumerator>
+      <name>NO_NVDIMM</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>NVDIMM_CAPABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Bitmap of DRAM widths supported by a system. A 1 indicates that the system supports a density. Enums below represent the the bit location in the attribute for a given DRAM width. Default value is 0xC -&gt; both x4/x8 supported</description>
+    <enumerator>
+      <name>X4</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>X8</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_SUPPORTED_DRAM_WIDTH</id>
   </enumerationType>
   <enumerationType>
     <description>The lane width of the OpenCapi channel</description>
@@ -11342,8 +11015,12 @@
       <value>77</value>
     </enumerator>
     <enumerator>
-      <name>LAST_IN_RANGE</name>
+      <name>PMIC</name>
       <value>78</value>
+    </enumerator>
+    <enumerator>
+      <name>LAST_IN_RANGE</name>
+      <value>79</value>
     </enumerator>
     <id>TYPE</id>
   </enumerationType>
