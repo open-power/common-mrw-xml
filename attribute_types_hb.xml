@@ -15,92 +15,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_CHK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_CHK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum eye width to allow passing through manufacturing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of margin to be applied.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_MARGIN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe precusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_CHAN_EQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_CHAN_EQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Firmware provides a default value of 50mV if this attribute is zero. Consumer: p9_pstate_parameter_block -&gt; p9_setup_evid Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
@@ -932,6 +846,94 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_CHK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_CHK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>6</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_CHAN_EQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_CHAN_EQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <global />
     <hwpfToHbAttrMap>
@@ -944,6 +946,883 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of X Bus for Field usage This value must be initialized by platforms by reading the value from System Model - x_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_X_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>X_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of X Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - x_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_X_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>X_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of O Bus for Field usage This value must be initialized by platforms by reading the value from System Model - a_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_O_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>O_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of O Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - a_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_O_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>O_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of Memory Bus for Field usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_field of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_EREPAIR_THRESHOLD_FIELD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Firmware specified eRepair threshold limit of Memory Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_mnfg of system_policy_table</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_EREPAIR_THRESHOLD_MNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_MFG_CHK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_MFG_CHK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_MFG_MIN_EYE_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_MFG_MIN_EYE_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OBUS_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OBUS_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OBUS_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OBUS_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe postcusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OBUS_TX_FFE_POSTCURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute provides a place for Hostboot to save off the IO_OLLFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OLLFIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OLLFIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>This attribute provides a place for Hostboot to save off the PB_IOOFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_PB_IOOFIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_PB_IOOFIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Indicates if the Obus channel is a board or a cable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_CHANNEL_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_CHANNEL_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute provides an a way to stress the SMP Abus Even Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute provides an a way to stress the SMP Abus Odd Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>When in MNFG mode, we want to change the CRC/ECC thresholds and FIR masks. This is put into place for our longer manufacturing test runs.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_O_MNFG_ERROR_THRESHOLD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_O_MNFG_ERROR_THRESHOLD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of the processor refclock in kHz. Provided by the Machine Readable Workbook. This can be overridden to adjust the refclock frequency.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_PROC_REFCLOCK_KHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_PROC_REFCLOCK_KHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>133333</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of the processor DPLL refclock in kHz.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_DPLL_REFCLOCK_KHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_DPLL_REFCLOCK_KHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>133333</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of the memory refclock in MHz. Provided by the Machine Readable Workbook. This is read by the set_ref_clock HWP to find out the desired frequency. This can be overridden to adjust the refclock frequency.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_MEM_REFCLOCK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_MEM_REFCLOCK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum frequency (in MHz) that this system can run the DIMMs at. There are 5 possible values determined by the dimm configuration. For configurations which have mixed rank configurations, the lowest frequency based on ranks of either DIMM is chosen. For example if there was a 1R and a 2R DIMM installed, and 1R dual drop was a lower max freq than 2R dual drop, then the 1R max freq would be the max allowed. [0]=One rank, single drop [1]=Two rank, single drop [2]=Four rank, single drop [3]=One rank, dual drop [4]=Two rank, dual drop A value of zero would indicate an unsupported configuration. Note: Do not use this attribute to limit configurations, it is not checked during plug rules. If you have an unsupported configuration, use the value 0 as the maximum freq.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MAX_ALLOWED_DIMM_FREQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MAX_ALLOWED_DIMM_FREQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>5</array>
+      <uint32_t>
+        <default>2400,2400,2400,2400,2400</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specify the system policy to enforce synchronous mode between memory and nest. This drives the value of ATTR_MEM_IN_SYNCH_MODE. UNDETERMINED : Run synchronously if the dimm and nest freq matches ALWAYS : Require matching frequencies and deconfigure memory that does not match the nest NEVER : Do not run synchronously, even if the frequencies match</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_REQUIRED_SYNCH_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>REQUIRED_SYNCH_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's nest mesh clock, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_PB_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_PB_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of the OMI channel.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_OMI_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_OMI_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Should the 20GHz or the 26GHz OMI PLL VCO be used.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_PLL_VCO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_PLL_VCO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's Obus mesh clocks, in MHz. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_O_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_O_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint32_t>
+        <default>1611,1611,1611,1611</default>
+      </uint32_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's Abus, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_A_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_A_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x1900</default>
+      </uint32_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's Xbus mesh clocks, in MHz. This is the same for all chips in the system.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_X_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_X_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>2000</default>
+      </uint32_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Frequency (in MHz) to move to if the Power Management function fails. This is the same for all cores in the system. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PM_SAFE_FREQUENCY_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PM_SAFE_FREQUENCY_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Voltage (in mV) to move to if the Power Management function fails. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PM_SAFE_VOLTAGE_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PM_SAFE_VOLTAGE_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's PCI-e bus in MHz. This is the same for all PCI-e busses in the system. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_PCIE_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_PCIE_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>MRW control to permit Normal (100 MHz) or Slow (94 MHz) operation of PCIE reference clock. On Nimbus DD1 HW, Slow operation is required to achieve Gen4 operation. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DD1_SLOW_PCI_REF_CLOCK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DD1_SLOW_PCI_REF_CLOCK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor SMP A bus width. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_A_BUS_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_A_BUS_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>4_BYTE</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor SMP X bus width. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_X_BUS_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_X_BUS_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>4_BYTE</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor SMP Fabric broadcast scope configuration. CHIP_IS_NODE = MODE1 = default CHIP_IS_GROUP = MODE2 Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_PUMP_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_PUMP_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor SMP topology configuration. 0 = default = 1 or 2 hop topology (PHYP image spans system) Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_CCSM_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_CCSM_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Per-link optics configuration 0 = default = SMP 1 = CAPI 2.0 2 = NV 2.0 3 = OPENCAPI Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OPTICS_CONFIG_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OPTICS_CONFIG_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>NV</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor SMP optics mode. 0 = default = Optics_is_X_bus 1 = Optics_is_A_bus Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_SMP_OPTICS_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_SMP_OPTICS_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>OPTICS_IS_X_BUS</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor CAPI attachement protocol mode. 0 = default = no: SMPA CAPI attachement 1 = yes: SMPA CAPI attachement Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_CAPI_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_CAPI_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>OFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_SYSTEM_ID</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_SYSTEM_ID</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_EPS_TABLE_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_EPS_TABLE_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DMI_REFCLOCK_SWIZZLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p9a_ocmb_enable</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_REFCLOCK_SWIZZLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then group of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_INTERLEAVE_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xAF</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_INTERLEAVE_GRANULARITY</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_INTERLEAVE_GRANULARITY</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable early data from Memory. This also enable cp_me from L3.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ENABLE_MEM_EARLY_DATA_SCOM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>2</array>
+      <uint64_t>
+        <default>0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 0 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_0_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_0_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xF</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 1 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_1_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_1_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 4 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_4_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_4_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 7 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_7_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_7_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template A pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_A_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_A_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI major version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MAJOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x3</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI minor version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MINOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Axone only - setup clock mux settings for TOD Refclk input 0b0 = 16 MHz I/O Filter PLL Output 0b1 = 32 MHz LPC reference clock</description>
@@ -1427,855 +2306,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Firmware specified eRepair threshold limit of X Bus for Field usage This value must be initialized by platforms by reading the value from System Model - x_threshold_field of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_X_EREPAIR_THRESHOLD_FIELD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>X_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Firmware specified eRepair threshold limit of X Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - x_threshold_mnfg of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_X_EREPAIR_THRESHOLD_MNFG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>X_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Firmware specified eRepair threshold limit of O Bus for Field usage This value must be initialized by platforms by reading the value from System Model - a_threshold_field of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_O_EREPAIR_THRESHOLD_FIELD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>O_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Firmware specified eRepair threshold limit of O Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - a_threshold_mnfg of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_O_EREPAIR_THRESHOLD_MNFG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>O_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Firmware specified eRepair threshold limit of Memory Bus for Field usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_field of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DMI_EREPAIR_THRESHOLD_FIELD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Firmware specified eRepair threshold limit of Memory Bus for MNFG usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_mnfg of system_policy_table</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DMI_EREPAIR_THRESHOLD_MNFG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DMI_EREPAIR_THRESHOLD_MNFG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 0 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_0_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_0_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xF</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 1 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_1_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_1_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 4 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_4_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_4_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 7 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_7_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_7_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template A pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_A_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_A_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI major version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MAJOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x3</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI minor version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MINOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_MFG_CHK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_MFG_CHK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum eye width to allow passing through manufacturing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_MFG_MIN_EYE_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_MFG_MIN_EYE_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of margin to be applied.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OBUS_TX_MARGIN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OBUS_TX_MARGIN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe precusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OBUS_TX_FFE_PRECURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OBUS_TX_FFE_PRECURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe postcusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OBUS_TX_FFE_POSTCURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OBUS_TX_FFE_POSTCURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute provides a place for Hostboot to save off the IO_OLLFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OLLFIR_MASK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OLLFIR_MASK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>This attribute provides a place for Hostboot to save off the PB_IOOFIR_MASK. During IPL time Hostboot wants to change the value of the FIR but it will write the value back during Hostboot Runtime (HBRT). Hostboot will need to wait to save the values until after p9_chiplet_scominit is called because that HWP sets the fir masks we want to save off. Values will need to restored after the PEER_TARGET values have been updated in HBRT</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_PB_IOOFIR_MASK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_PB_IOOFIR_MASK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicates if the Obus channel is a board or a cable</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_CHANNEL_TYPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_CHANNEL_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute provides an a way to stress the SMP Abus Even Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute provides an a way to stress the SMP Abus Odd Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>When in MNFG mode, we want to change the CRC/ECC thresholds and FIR masks. This is put into place for our longer manufacturing test runs.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_O_MNFG_ERROR_THRESHOLD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_O_MNFG_ERROR_THRESHOLD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The frequency of the processor refclock in kHz. Provided by the Machine Readable Workbook. This can be overridden to adjust the refclock frequency.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_PROC_REFCLOCK_KHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_PROC_REFCLOCK_KHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>133333</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The frequency of the memory refclock in MHz. Provided by the Machine Readable Workbook. This is read by the set_ref_clock HWP to find out the desired frequency. This can be overridden to adjust the refclock frequency.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_MEM_REFCLOCK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_MEM_REFCLOCK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Maximum frequency (in MHz) that this system can run the DIMMs at. There are 5 possible values determined by the dimm configuration. For configurations which have mixed rank configurations, the lowest frequency based on ranks of either DIMM is chosen. For example if there was a 1R and a 2R DIMM installed, and 1R dual drop was a lower max freq than 2R dual drop, then the 1R max freq would be the max allowed. [0]=One rank, single drop [1]=Two rank, single drop [2]=Four rank, single drop [3]=One rank, dual drop [4]=Two rank, dual drop A value of zero would indicate an unsupported configuration. Note: Do not use this attribute to limit configurations, it is not checked during plug rules. If you have an unsupported configuration, use the value 0 as the maximum freq.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MAX_ALLOWED_DIMM_FREQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MAX_ALLOWED_DIMM_FREQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>5</array>
-      <uint32_t>
-        <default>2400,2400,2400,2400,2400</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Specify the system policy to enforce synchronous mode between memory and nest. This drives the value of ATTR_MEM_IN_SYNCH_MODE. UNDETERMINED : Run synchronously if the dimm and nest freq matches ALWAYS : Require matching frequencies and deconfigure memory that does not match the nest NEVER : Do not run synchronously, even if the frequencies match</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_REQUIRED_SYNCH_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>REQUIRED_SYNCH_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The frequency of a processor's nest mesh clock, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_PB_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_PB_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The frequency of the OMI channel.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_OMI_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_OMI_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Should the 20GHz or the 26GHz OMI PLL VCO be used.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_PLL_VCO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_PLL_VCO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The frequency of a processor's Obus mesh clocks, in MHz. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_O_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_O_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>1611,1611,1611,1611</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The frequency of a processor's Abus, in MHz. This is the same for all chips in the system. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_A_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_A_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x1900</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The frequency of a processor's Xbus mesh clocks, in MHz. This is the same for all chips in the system.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_X_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_X_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>2000</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Frequency (in MHz) to move to if the Power Management function fails. This is the same for all cores in the system. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PM_SAFE_FREQUENCY_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PM_SAFE_FREQUENCY_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Voltage (in mV) to move to if the Power Management function fails. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PM_SAFE_VOLTAGE_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PM_SAFE_VOLTAGE_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The frequency of a processor's PCI-e bus in MHz. This is the same for all PCI-e busses in the system. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_PCIE_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_PCIE_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>MRW control to permit Normal (100 MHz) or Slow (94 MHz) operation of PCIE reference clock. On Nimbus DD1 HW, Slow operation is required to achieve Gen4 operation. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DD1_SLOW_PCI_REF_CLOCK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DD1_SLOW_PCI_REF_CLOCK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP A bus width. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_A_BUS_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_A_BUS_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>4_BYTE</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP X bus width. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_X_BUS_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_X_BUS_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>4_BYTE</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP Fabric broadcast scope configuration. CHIP_IS_NODE = MODE1 = default CHIP_IS_GROUP = MODE2 Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_PUMP_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_PUMP_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP topology configuration. 0 = default = 1 or 2 hop topology (PHYP image spans system) Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_CCSM_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_CCSM_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Per-link optics configuration 0 = default = SMP 1 = CAPI 2.0 2 = NV 2.0 3 = OPENCAPI Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OPTICS_CONFIG_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OPTICS_CONFIG_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>NV</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP optics mode. 0 = default = Optics_is_X_bus 1 = Optics_is_A_bus Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_SMP_OPTICS_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_SMP_OPTICS_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OPTICS_IS_X_BUS</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor CAPI attachement protocol mode. 0 = default = no: SMPA CAPI attachement 1 = yes: SMPA CAPI attachement Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_CAPI_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_CAPI_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Logical fabric system ID associated with this chip. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_SYSTEM_ID</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_SYSTEM_ID</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_EPS_TABLE_TYPE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_EPS_TABLE_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Define DMI Ref clock/Swizzle for Centaur. Mapper from DMI unit id -&gt; ROOT CNTL 6 refclk drive enable bit consumer: p9_cen_ref_clk_enable</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DMI_REFCLOCK_SWIZZLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DMI_REFCLOCK_SWIZZLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p9a_ocmb_enable</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_REFCLOCK_SWIZZLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then group of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_INTERLEAVE_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xAF</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_INTERLEAVE_GRANULARITY</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_INTERLEAVE_GRANULARITY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable early data from Memory. This also enable cp_me from L3.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ENABLE_MEM_EARLY_DATA_SCOM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint64_t>
-        <default>0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_OMI_MFG_CHK</id>
@@ -2720,6 +2750,48 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>NPU0 NTL Private Register Interface (PRI) Configuration register settings Array 0 = SM0 value 1 = SM1 value 2 = SM2 value 3 = SM3 value Bits of values: 0 PRI_CONFIG_DISABLE: Disable 1 Disable (this will disable NTL from decoding the NDL register space) 1:2 PRI_CONFIG_NDL: NDL indication sent in the PRI Read/Write access 00 = NDL 0 01 = NDL 1 10 = NDL 2 11 = NDL 3 3:4 PRI_CONFIG_PHY: Indicates if NTL should decode a PHY register space 00 = Decode PHY0 register space 01 = Decode PHY1 register space 1- = Do not decode any PHY register space</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_NPU0_PRI_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_NPU0_PRI_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>NPU1 NTL Private Register Interface (PRI) Configuration register settings Array 0 = SM0 value 1 = SM1 value 2 = SM2 value 3 = SM3 value Bits of values: 0 PRI_CONFIG_DISABLE: Disable 1 Disable (this will disable NTL from decoding the NDL register space) 1:2 PRI_CONFIG_NDL: NDL indication sent in the PRI Read/Write access 00 = NDL 0 01 = NDL 1 10 = NDL 2 11 = NDL 3 3:4 PRI_CONFIG_PHY: Indicates if NTL should decode a PHY register space 00 = Decode PHY0 register space 01 = Decode PHY1 register space 1- = Do not decode any PHY register space</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_NPU1_PRI_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_NPU1_PRI_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>NPU2 NTL Private Register Interface (PRI) Configuration register settings Array 0 = SM0 value 1 = SM1 value 2 = SM2 value 3 = SM3 value Bits of values: 0 PRI_CONFIG_DISABLE: Disable 1 Disable (this will disable NTL from decoding the NDL register space) 1:2 PRI_CONFIG_NDL: NDL indication sent in the PRI Read/Write access 00 = NDL 0 01 = NDL 1 10 = NDL 2 11 = NDL 3 3:4 PRI_CONFIG_PHY: Indicates if NTL should decode a PHY register space 00 = Decode PHY0 register space 01 = Decode PHY1 register space 1- = Do not decode any PHY register space</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_NPU2_PRI_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_NPU2_PRI_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_DMI_PROC_DEBUG</id>
@@ -2756,21 +2828,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -5889,7 +5946,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>1</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
     <writeable />
@@ -7542,38 +7599,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_X_MFG_CHK</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <enumerator>
-      <name>DIS_RX_LTE</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>DIS_TX_AC_BOOST</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_GAIN_PEAK_INITS</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_VGA_GAIN_TARGET</name>
-      <value>0x08</value>
-    </enumerator>
-    <id>IO_XBUS_CHAN_EQ</id>
-  </enumerationType>
-  <enumerationType>
     <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Provided by the Machine Readable Workbook. Consumer: p9_pm_pss_init</description>
     <enumerator>
       <name>NONE</name>
@@ -7890,6 +7915,50 @@
     <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_X_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <enumerator>
+      <name>DIS_RX_LTE</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DIS_TX_AC_BOOST</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_GAIN_PEAK_INITS</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_VGA_GAIN_TARGET</name>
+      <value>0x08</value>
+    </enumerator>
+    <id>IO_XBUS_CHAN_EQ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <enumerator>
       <name>NO_SWAP</name>
@@ -7908,94 +7977,6 @@
       <value>0x40</value>
     </enumerator>
     <id>EI_BUS_TX_MSBSWAP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_SBE_MASTER_CHIP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines system specific value of processor refclock receiver termination</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FIFTY_OHM</name>
-      <value>1</value>
-    </enumerator>
-    <id>CP_REFCLOCK_RCVR_TERM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines system specific value of PCI refclock receiver termination</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FIFTY_OHM</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>ONE_HUNDRED_OHM</name>
-      <value>3</value>
-    </enumerator>
-    <id>IO_REFCLOCK_RCVR_TERM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
   </enumerationType>
   <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
@@ -8240,6 +8221,94 @@
       <value>0x1</value>
     </enumerator>
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>PROC_SBE_MASTER_CHIP</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines system specific value of processor refclock receiver termination</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FIFTY_OHM</name>
+      <value>1</value>
+    </enumerator>
+    <id>CP_REFCLOCK_RCVR_TERM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines system specific value of PCI refclock receiver termination</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FIFTY_OHM</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>ONE_HUNDRED_OHM</name>
+      <value>3</value>
+    </enumerator>
+    <id>IO_REFCLOCK_RCVR_TERM</id>
   </enumerationType>
   <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
@@ -8496,18 +8565,6 @@
       <value>0x1</value>
     </enumerator>
     <id>FUSED_CORE_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
@@ -10571,9 +10628,6 @@
     <enumerator>
       <name>CENTAUR</name>
       <value>48</value>
-    </enumerator>
-    <enumerator>
-      <name>EXPLORER</name>
     </enumerator>
     <enumerator>
       <name>OCMB</name>
