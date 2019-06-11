@@ -5,6 +5,19 @@
       <id>CLASS</id>
       <default>CARD</default>
     </attribute>
+    <attribute>
+      <id>FRU_ID</id>
+      <default/>
+    </attribute>
+    <attribute>
+      <id>FRU_NAME</id>
+    </attribute>
+    <attribute>
+      <id>IPMI_INSTANCE</id>
+    </attribute>
+    <attribute>
+      <id>POSITION</id>
+    </attribute>
     <instance_name>card</instance_name>
     <is_root>true</is_root>
     <parent>base</parent>

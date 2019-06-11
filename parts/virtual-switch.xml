@@ -14,6 +14,7 @@
     <is_root>true</is_root>
     <parent>mrw-chip</parent>
     <parent_type>chip-PEX8725</parent_type>
+    <parent_type>chip-microsemi-gen4-switch</parent_type>
     <child_id>Virtual_Switch_Perst</child_id>
     <position>-1</position>
     <type>Virtual-Switch</type>
