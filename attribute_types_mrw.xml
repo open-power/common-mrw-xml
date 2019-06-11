@@ -156,7 +156,7 @@
 			<value>1</value>
 		</enumerator>
 		<default>'0' means present</default>
-	</enumerationType>	
+	</enumerationType>
 	<enumerationType>
 		<id>DRIVER_TYPE</id>
 		<description>Driver Type</description>
@@ -203,7 +203,7 @@
 		<enumerator>
 			<name>CentVCS</name>
 			<value>8</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>MemIO</name>
 			<value>9</value>
@@ -215,11 +215,11 @@
 		<enumerator>
 			<name>VPP</name>
 			<value>11</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>VTT</name>
 			<value>12</value>
-		</enumerator>		
+		</enumerator>
 		<enumerator>
 			<name>3.3VCS</name>
 			<value>13</value>
@@ -231,7 +231,7 @@
 		<enumerator>
 			<name>1.1VCS</name>
 			<value>15</value>
-		</enumerator>				
+		</enumerator>
 		<enumerator>
 			<name>1.8V</name>
 			<value>16</value>
@@ -243,7 +243,7 @@
 		<enumerator>
 			<name>0.9V</name>
 			<value>18</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>3.3V</name>
 			<value>19</value>
@@ -251,11 +251,11 @@
 		<enumerator>
 			<name>5.0V</name>
 			<value>20</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>12V</name>
 			<value>21</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>12VCS</name>
 			<value>22</value>
@@ -267,7 +267,7 @@
 		<enumerator>
 			<name>1.5V</name>
 			<value>24</value>
-		</enumerator>																													
+		</enumerator>
 		<default>UNKNOWN</default>
 	</enumerationType>
 	<enumerationType>
@@ -319,7 +319,7 @@
 			<value>1</value>
 		</enumerator>
 		<default>NO</default>
-	</enumerationType>				
+	</enumerationType>
 	<enumerationType>
 		<id>CARD_TYPE</id>
 		<description>Type of card</description>
@@ -374,11 +374,11 @@
 		<enumerator>
 			<name>HDD</name>
 			<value>12</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>LCC</name>
 			<value>13</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>MEZZANINE</name>
 			<value>14</value>
@@ -386,7 +386,7 @@
 		<enumerator>
 			<name>NVME</name>
 			<value>15</value>
-		</enumerator>			
+		</enumerator>
 		<enumerator>
 			<name>OP-PANEL</name>
 			<value>16</value>
@@ -394,7 +394,7 @@
 		<enumerator>
 			<name>PCIE</name>
 			<value>17</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>PCIE-RISER</name>
 			<value>18</value>
@@ -402,41 +402,41 @@
 		<enumerator>
 			<name>GENERIC_PCIE</name>
 			<value>19</value>
-		</enumerator>			
+		</enumerator>
 		<enumerator>
 			<name>PLANAR</name>
 			<value>20</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>POWER-DIST</name>
 			<value>21</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>POWER-INTERFACE</name>
 			<value>22</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>POWERSUPPLY</name>
 			<value>23</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>RAID</name>
 			<value>24</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>MEM-RISER</name>
 			<value>25</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>TPM</name>
 			<value>26</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>VRM</name>
 			<value>27</value>
-		</enumerator>																																						
+		</enumerator>
 		<default>NA</default>
-	</enumerationType>	
+	</enumerationType>
 	<enumerationType>
 		<id>CONNECTOR_TYPE</id>
 		<description>Type of connector</description>
@@ -495,9 +495,9 @@
 		<enumerator>
 			<name>SAS</name>
 			<value>13</value>
-		</enumerator>		
+		</enumerator>
 		<default>NA</default>
-	</enumerationType>	
+	</enumerationType>
 	<enumerationType>
 		<id>LED_TYPE</id>
 		<description>Type of led</description>
@@ -528,7 +528,7 @@
 		<enumerator>
 			<name>ACTIVITY</name>
 			<value>6</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>STANDBY-GOOD</name>
 			<value>7</value>
@@ -536,8 +536,8 @@
 		<enumerator>
 		        <name>ENC-POWER</name>
 		        <value>8</value>
-		</enumerator>						
-		<default>NA</default>		
+		</enumerator>
+		<default>NA</default>
 		</enumerationType>
 	<enumerationType>
 		<id>VPD_SIZE</id>
@@ -549,11 +549,11 @@
 		<enumerator>
 			<name>24c04</name>
 			<value>1</value>
-		</enumerator>		
+		</enumerator>
 		<enumerator>
 			<name>24c16</name>
 			<value>2</value>
-		</enumerator>		
+		</enumerator>
 		<enumerator>
 			<name>24c32</name>
 			<value>3</value>
@@ -565,11 +565,11 @@
 		<enumerator>
 			<name>24c128</name>
 			<value>5</value>
-		</enumerator>		
+		</enumerator>
 		<enumerator>
 			<name>24c512</name>
 			<value>6</value>
-		</enumerator>				
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>
 	<enumerationType>
@@ -586,9 +586,9 @@
 		<enumerator>
 			<name>PIB</name>
 			<value>2</value>
-		</enumerator>			
+		</enumerator>
 		<default>NA</default>
-	</enumerationType>					
+	</enumerationType>
 	<enumerationType>
 		<id>VPD_TYPE</id>
 		<description>Types of VPD</description>
@@ -627,11 +627,11 @@
 		<enumerator>
 			<name>RSBE</name>
 			<value>8</value>
-		</enumerator>	
+		</enumerator>
 		<enumerator>
 			<name>DVPD</name>
 			<value>9</value>
-		</enumerator>		
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>
 		<enumerationType>
@@ -648,7 +648,7 @@
 		<enumerator>
 			<name>NA</name>
 			<value>2</value>
-		</enumerator>				
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>
 	<enumerationType>
@@ -765,7 +765,11 @@
 		<enumerator>
 			<name>OBUS</name>
 			<value>27</value>
-		</enumerator>		
+		</enumerator>
+		<enumerator>
+			<name>OMI</name>
+			<value>28</value>
+		</enumerator>
 	</enumerationType>
 	<enumerationType>
 		<id>MRW_TYPE</id>
@@ -990,7 +994,7 @@
 		<simpleType><uint8_t/></simpleType>
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
-	</attribute>		
+	</attribute>
 	<attribute>
 		<id>GROUP_NAME</id>
 		<description>Group Name</description>
@@ -1147,7 +1151,7 @@
 		<readable/>
 		<writeable/>
         <global/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SLOT_TYPE</id>
 		<description>Defines if the PCIe slot is coming from a switch or directly from the CPU PHB</description>
@@ -1235,7 +1239,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>MAX_POWER</id>
 		<description>Defines the maximum power consumption for a PCIe slot</description>
@@ -1257,7 +1261,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>							
+	</attribute>
 	<attribute>
 		<id>32BIT_MMIO_SIZE</id>
 		<description>PCIe slot 32bit MMIO size definition</description>
@@ -1279,7 +1283,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>32BIT_DMA_SIZE</id>
 		<description>PCIe slot 32bit DMA size definition</description>
@@ -1301,7 +1305,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>				
+	</attribute>
 	<attribute>
 		<id>HDDW_ORDER</id>
 		<description>PCIe slot HDDW order definition</description>
@@ -1312,7 +1316,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>		
+	</attribute>
 	<attribute>
 		<id>SWITCH_MODEL</id>
 		<description>PCIe switch model definition</description>
@@ -1323,7 +1327,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>STATION</id>
 		<description>PCIe switch station definition</description>
@@ -1345,7 +1349,7 @@
 		<persistency>volatile-zeroed</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>PRESENCE_DETECT</id>
 		<description>Presence detect information</description>
@@ -1358,7 +1362,7 @@
 		<readable/>
 		<writeable/>
 		<global/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>LOGIC_VALUE</id>
 		<description>Logic value 0 or 1</description>
@@ -1370,7 +1374,7 @@
 		<readable/>
 		<writeable/>
 		<global/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>MRU_PREFIX</id>
 		<description>Prefix to generate MRU_ID's with</description>
@@ -1589,7 +1593,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>		
+	</attribute>
 	<attribute>
 		<id>I2C_SPEED</id>
 		<description>I2C Speed in kHz</description>
@@ -1633,7 +1637,7 @@
 		<persistency>non-volatile</persistency>
 		<readable />
 		<writeable />
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>OBUS_CONFIG</id>
 		<description>OBUS Configuration Selector</description>
@@ -1668,7 +1672,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>CARD_TYPE</id>
 		<description>Type of card</description>
@@ -1709,7 +1713,7 @@
 		<readable/>
 		<writeable/>
 		<global/>
-	</attribute>		
+	</attribute>
 	<attribute>
 		<id>VPD_TYPE</id>
 		<description>MVPD,CVPD, or SPD</description>
@@ -1733,7 +1737,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SYSTEM_NAME</id>
 		<description>System Name</description>
@@ -1935,11 +1939,11 @@
         <attribute>
                 <id>CONFIG_APPLY</id>
                 <description>
-                       Specifies in which node configuration this bus is 
-                       applicable to, it is a string value with node numbers 
-                       seperated by comma, further a value of "w" is used 
-                       for wrap test and a value of "d" is used for default 
-                       and specifies all nodes 
+                       Specifies in which node configuration this bus is
+                       applicable to, it is a string value with node numbers
+                       seperated by comma, further a value of "w" is used
+                       for wrap test and a value of "d" is used for default
+                       and specifies all nodes
                 </description>
                 <simpleType>
                         <string/>
@@ -2211,7 +2215,7 @@
 		<readable/>
 		<writeable/>
 	</attribute>
-	
+
 	<attribute>
 		<id>ENABLE_HOTPLUG</id>
 		<description>enables hotplug function (0=no,1=yes)</description>
@@ -2232,7 +2236,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>			
+	</attribute>
 
 	<attribute>
 		<id>ENABLE_SRIOV</id>
@@ -2243,7 +2247,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<writeable/>
-	</attribute>	
+	</attribute>
 
 	<attribute>
 		<id>ENABLE_ELLOCO</id>
@@ -2255,7 +2259,7 @@
 		<readable/>
 		<writeable/>
 	</attribute>
-	
+
 	<attribute>
 		<id>ENABLE_NVLINK</id>
 		<description>enables NVLINK function (0=no,1=yes)</description>
@@ -2266,7 +2270,7 @@
 		<readable/>
 		<writeable/>
 		<serverwizReadonly/>
-	</attribute>	
+	</attribute>
 
 	<attribute>
 		<id>PCIE_LANE_SWAP_TABLE</id>
@@ -2347,7 +2351,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>ASSOCIATION_TYPE</id>
 		<description>Associates 2 parts together</description>
@@ -2460,7 +2464,7 @@
 		<readable/>
 		<serverwizReadonly/>
 	</attribute>
-	
+
 	<!-- FSP stuff -->
 	<attribute>
 		<id>PIN_NAME[0]</id>
@@ -2645,7 +2649,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<global/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_DRIVER_TYPE[0]</id>
 		<description>driver type</description>
@@ -2737,7 +2741,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<serverwizReadonly/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_DIO_NUM</id>
 		<description>IOMUX DIO number</description>
@@ -2767,7 +2771,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<serverwizReadonly/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_ENGINE_NUM[1]</id>
 		<description>IOMUX Engine number</description>
@@ -2777,7 +2781,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<serverwizReadonly/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_ENGINE_NUM[2]</id>
 		<description>IOMUX Engine number</description>
@@ -2787,7 +2791,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 		<serverwizReadonly/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_ENGINE_NUM[3]</id>
 		<description>IOMUX Engine number</description>
@@ -2806,7 +2810,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_MODE_CONTROL[1]</id>
 		<description>IOMUX Engine number</description>
@@ -2815,7 +2819,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_MODE_CONTROL[2]</id>
 		<description>IOMUX Engine number</description>
@@ -2824,7 +2828,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>SP_MODE_CONTROL[3]</id>
 		<description>IOMUX Engine number</description>
@@ -2833,8 +2837,8 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
-	
+	</attribute>
+
 
 	<attribute>
 		<id>ENTITY_ID_LOOKUP</id>
@@ -3131,7 +3135,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_ERROR_REG_BITMASK</id>
 		<description>Fan tach error register bitmask</description>
@@ -3141,7 +3145,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_ADDRESS</id>
 		<description>Fan tach partner HS register address</description>
@@ -3151,7 +3155,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_PARTNER_HS_REG_BITMASK</id>
 		<description>Fan tach partner HS register bitmask</description>
@@ -3171,7 +3175,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_HIGH_BITMASK</id>
 		<description>Fan tach SPD register high bitmask</description>
@@ -3191,7 +3195,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_SPD_REG_LOW_BITMASK</id>
 		<description>Fan tach SPD register low bitmask</description>
@@ -3211,7 +3215,7 @@
 		</simpleType>
 		<persistency>non-volatile</persistency>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>FAN_TYPE_SEL_BITMASK</id>
 		<description>Fan tach type select bitmask</description>
@@ -3222,7 +3226,7 @@
 		<persistency>non-volatile</persistency>
 		<readable/>
 	</attribute>
-	<!-- Start DPSS attributes -->	
+	<!-- Start DPSS attributes -->
 	<attribute>
 		<id>PIN_NUM</id>
 		<simpleType>
@@ -5688,7 +5692,7 @@
 		</field>
 		</complexType>
 		<readable/>
-	</attribute>	
+	</attribute>
 	<attribute>
 		<id>VOLTAGE</id>
 		<complexType>
