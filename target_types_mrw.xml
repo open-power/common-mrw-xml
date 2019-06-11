@@ -53,7 +53,7 @@
 		<attribute>
         	<id>POSITION</id>
     	</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>card</id>
 		<parent>base</parent>
@@ -62,7 +62,7 @@
 		</attribute>
 		<attribute>
 			<id>LOCATION_CODE_TYPE</id>
-		</attribute>	
+		</attribute>
 		<attribute>
 			<id>POSITION</id>
 		</attribute>
@@ -88,7 +88,7 @@
 		</attribute>
 		<attribute>
 			<id>LOCATION_CODE_TYPE</id>
-		</attribute>	
+		</attribute>
 		<attribute>
 			<id>POSITION</id>
 		</attribute>
@@ -105,10 +105,10 @@
 		<attribute>
 			<id>RU_TYPE</id>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>connector</id>
-	    <parent>mrw-base</parent>	
+	    <parent>mrw-base</parent>
 		<attribute>
 			<id>CLASS</id>
 			<default>CONNECTOR</default>
@@ -153,7 +153,7 @@
         	<id>CHIP_UNIT</id>
         	<default>0</default>
     	</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-ex-power8</id>
 		<parent>unit</parent>
@@ -188,6 +188,20 @@
 	</targetType>
 	<targetType>
 		<id>unit-core-power8</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>TYPE</id>
+			<default>CORE</default>
+		</attribute>
+		<attribute>
+			<id>IPMI_INSTANCE</id>
+		</attribute>
+		<attribute>
+			<id>FRU_NAME</id>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>unit-core-power9</id>
 		<parent>unit</parent>
 		<attribute>
 			<id>TYPE</id>
@@ -324,27 +338,27 @@
         <attribute>
             <id>ENABLE_LSI</id>
             <default/>
-        </attribute>     
+        </attribute>
         <attribute>
             <id>ENABLE_HOTPLUG</id>
             <default/>
-        </attribute>             
+        </attribute>
         <attribute>
             <id>ENABLE_CABLECARD</id>
             <default/>
-        </attribute> 
+        </attribute>
         <attribute>
             <id>ENABLE_SRIOV</id>
             <default/>
-        </attribute>   
+        </attribute>
         <attribute>
             <id>ENABLE_ELLOCO</id>
             <default/>
-        </attribute>     
+        </attribute>
         <attribute>
             <id>ENABLE_NVLINK</id>
             <default/>
-        </attribute>                               
+        </attribute>
         <attribute>
             <id>IOP_NUM</id>
             <default>1</default>
@@ -372,7 +386,7 @@
         <attribute>
             <id>PCIE_LANE_GROUP</id>
             <default>0</default>
-        </attribute>        
+        </attribute>
         <attribute>
             <id>PCIE_LANE_SET</id>
             <default>0</default>
@@ -388,27 +402,27 @@
         <attribute>
             <id>ENABLE_LSI</id>
             <default/>
-        </attribute>     
+        </attribute>
         <attribute>
             <id>ENABLE_HOTPLUG</id>
             <default/>
-        </attribute>             
+        </attribute>
         <attribute>
             <id>ENABLE_CABLECARD</id>
             <default/>
-        </attribute> 
+        </attribute>
         <attribute>
             <id>ENABLE_SRIOV</id>
             <default/>
-        </attribute>   
+        </attribute>
         <attribute>
             <id>ENABLE_ELLOCO</id>
             <default/>
-        </attribute>     
+        </attribute>
         <attribute>
             <id>ENABLE_NVLINK</id>
             <default/>
-        </attribute>        
+        </attribute>
         <attribute>
             <id>IOP_NUM</id>
             <default>1</default>
@@ -416,8 +430,8 @@
         <attribute>
         	<id>MGC_LOAD_SOURCE</id>
         	<default/>
-        </attribute>        
-    </targetType>         
+        </attribute>
+    </targetType>
 	<targetType>
 		<id>unit-pci-naples</id>
 		<parent>unit-pci-power8</parent>
@@ -577,7 +591,7 @@
 		<attribute>
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
-		
+
 		<attribute>
 			<id>IBSCOM_MCS_BASE_ADDR</id>
 			<default>0x0003E00000000000,0x40000000000,0x10000000000,0x2000000000
@@ -740,13 +754,23 @@
                 <parent>connector</parent>
                 <parent_type>card-motherboard</parent_type>
                 <parent_type>card-daughtercard</parent_type>
-                
-        </targetType>
 
+        </targetType>
+	<targetType>
+		<id>connector-dimmconn-ddimm</id>
+		<parent>connector</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+	</targetType>
 	<targetType>
 		<id>lcard-dimm-jedec</id>
 		<parent>lcard-dimm</parent>
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
+	</targetType>
+	<targetType>
+		<id>lcard-dimm-ddimm</id>
+		<parent>lcard-dimm</parent>
+		<parent_type>connector-dimmconn-ddimm</parent_type>
 	</targetType>
 	<targetType>
 		<id>unit-ddr3-jedec</id>
@@ -795,7 +819,7 @@
 			<id>DIRECTION</id>
 			<default>IN</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>connector-cdimm-cdimm</id>
 		<parent>connector</parent>
@@ -806,7 +830,7 @@
 			<default>JEDEC</default>
 		</attribute>
 	</targetType>
-	
+
 	<targetType>
 		<id>connector-usb-generic</id>
 		<parent>connector</parent>
@@ -817,7 +841,7 @@
 			<default>USB</default>
 		</attribute>
 	</targetType>
-	
+
 	<targetType>
 		<id>connector-hmc-generic</id>
 		<parent>connector</parent>
@@ -1100,7 +1124,7 @@
 		<attribute>
 			<id>TYPE</id>
 			<default>FSI</default>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>FSI_PORT</id>
 			<default>0x00</default>
@@ -1116,7 +1140,7 @@
 		<attribute>
 			<id>CMFSI</id>
 			<default>0x00</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-fsicm-slave</id>
@@ -1176,15 +1200,15 @@
 		<attribute>
 			<id>I2C_CONNECTION_TYPE</id>
 			<default>NA</default>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>REG_BASE_ADDRESS</id>
 			<default/>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>REG_OFFSET</id>
 			<default/>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-i2cmd-master</id>
@@ -1212,8 +1236,8 @@
 		<attribute>
 			<id>I2C_CONNECTION_TYPE</id>
 			<default>NA</default>
-		</attribute>		
-	</targetType>	
+		</attribute>
+	</targetType>
 	<targetType>
 		<id>unit-i2c-slave</id>
 		<parent>mrw-unit</parent>
@@ -1278,7 +1302,7 @@
 		<attribute>
 			<id>SUBSYSTEM_DEVICE_ID</id>
 			<default/>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-usb-slave</id>
@@ -1298,7 +1322,7 @@
 		<attribute>
 			<id>PIN_NAME</id>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-clk-master</id>
 		<parent>mrw-unit</parent>
@@ -1437,7 +1461,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>SPI_ENGINE</id>
 			<default>0x00</default>
@@ -1494,7 +1518,7 @@
 			<id>DIRECTION</id>
 			<default>IN</default>
 		</attribute>
-	</targetType>			
+	</targetType>
 	<targetType>
 		<id>unit-uart-slave</id>
 		<parent>mrw-unit</parent>
@@ -1509,7 +1533,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>			
+		</attribute>
 	</targetType>
     <targetType>
 		<id>unit-uart-master</id>
@@ -1529,7 +1553,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>OUT</default>
-		</attribute>			
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-gpio-generic</id>
@@ -1567,9 +1591,9 @@
 		<attribute>
 			<id>PIN_NUM</id>
 		</attribute>
-		<attribute>	
+		<attribute>
 			<id>ENGINE</id>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>i2c-device</id>
@@ -1716,7 +1740,7 @@
 			<id>RAIL_NAME</id>
 			<default>UNKNOWN</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-presence-generic</id>
 		<parent>unit-gpio-generic</parent>
@@ -1736,7 +1760,7 @@
 			<id>GPIO_TYPE</id>
 			<default>PRESENCE</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-perst-generic</id>
 		<parent>unit-gpio-generic</parent>
@@ -1756,7 +1780,7 @@
 			<id>GPIO_TYPE</id>
 			<default>PERST</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-pgood-generic</id>
 		<parent>unit-gpio-generic</parent>
@@ -1776,7 +1800,7 @@
 			<id>GPIO_TYPE</id>
 			<default>PGOOD</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-enable-generic</id>
 		<parent>unit-gpio-generic</parent>
@@ -1796,7 +1820,7 @@
 			<id>GPIO_TYPE</id>
 			<default>ENABLE</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-vin-generic</id>
 		<parent>mrw-unit</parent>
@@ -1856,7 +1880,7 @@
 			<id>RAIL_NAME</id>
 			<default>UNKNOWN</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>unit-power-generic</id>
 		<parent>mrw-unit</parent>
@@ -2136,8 +2160,8 @@
 		<attribute>
 			<id>WIDTH</id>
 			<default/>
-		</attribute>				
-	</targetType>		
+		</attribute>
+	</targetType>
 
 	<!-- SXM2 -->
 	<targetType>
@@ -2171,7 +2195,7 @@
 		<parent>card-sxm2card</parent>
 		<parent_type>slot-sxm2slot-generic</parent_type>
 	</targetType>
-	
+
 	<!-- PCIe -->
 	<targetType>
 		<id>slot-pcieslot</id>
@@ -2213,7 +2237,7 @@
 		<attribute>
 			<id>SLOT_TYPE</id>
 			<default/>
-		</attribute>				
+		</attribute>
 		<attribute>
 			<id>HDDW_ORDER</id>
 			<default/>
@@ -2225,11 +2249,11 @@
 		<attribute>
 			<id>64BIT_MMIO_SIZE</id>
 			<default/>
-		</attribute>	
+		</attribute>
 		<attribute>
 			<id>32BIT_DMA_SIZE</id>
 			<default/>
-		</attribute>	
+		</attribute>
 		<attribute>
 			<id>64BIT_DMA_SIZE</id>
 			<default/>
@@ -2245,7 +2269,7 @@
 		<attribute>
 			<id>DEFAULT_PCIE_COOLING_TYPE</id>
 			<default/>
-		</attribute>											
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>card-pciecard</id>
@@ -2341,7 +2365,7 @@
             <id>PCIE_LANE_SWAP_TABLE</id>
             <default/>
         </attribute>
-    </targetType>      
+    </targetType>
     <targetType>
         <id>unit-pciconfig1-nimbus</id>
         <parent>unit</parent>
@@ -2364,7 +2388,7 @@
             <id>PCIE_LANE_SWAP_TABLE</id>
             <default/>
         </attribute>
-    </targetType>   
+    </targetType>
 	<targetType>
 		<id>unit-pciconfig1-venice</id>
 		<parent>unit</parent>
@@ -2576,7 +2600,7 @@
 		<attribute>
 			<id>SLOT_TYPE</id>
 			<default/>
-		</attribute>				
+		</attribute>
 		<attribute>
 			<id>HDDW_ORDER</id>
 			<default/>
@@ -2597,6 +2621,11 @@
 	</targetType>
 	<targetType>
 		<id>card-gv100card-card</id>
+		<parent>card-obuscard</parent>
+		<parent_type>slot-obusslot-generic</parent_type>
+	</targetType>
+	<targetType>
+		<id>card-ga100card-card</id>
 		<parent>card-obuscard</parent>
 		<parent_type>slot-obusslot-generic</parent_type>
 	</targetType>
@@ -2623,7 +2652,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>			
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>FSICM</id>
@@ -2638,7 +2667,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>FSIM</id>
@@ -2653,14 +2682,14 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>					
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>ABUS</id>
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>SOURCE_TX_MSBSWAP</id>
 			<default>0</default>
@@ -2680,7 +2709,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>XBUS</id>
@@ -2695,7 +2724,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>OBUS</id>
@@ -2705,6 +2734,13 @@
 		</attribute>
 		<attribute>
 			<id>OBUS_CONFIG</id>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>OMI</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
 		</attribute>
 	</targetType>
 	<targetType>
@@ -2730,7 +2766,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>PCIE</id>
@@ -2753,7 +2789,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>			
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>GPIO</id>
@@ -2768,7 +2804,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>			
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>DMI</id>
@@ -2787,7 +2823,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>DDR3</id>
@@ -2830,7 +2866,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>				
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>SC</id>
@@ -2841,7 +2877,7 @@
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>TACH</id>
@@ -2859,8 +2895,8 @@
 		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>2</default>
-		</attribute>		
-	</targetType>	
+		</attribute>
+	</targetType>
 	<targetType>
 		<id>AVS</id>
 		<attribute>
@@ -2870,8 +2906,8 @@
 		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>2</default>
-		</attribute>		
-	</targetType>	
+		</attribute>
+	</targetType>
 	<targetType>
 		<id>PSI</id>
 		<attribute>
@@ -2889,14 +2925,14 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 	<targetType>
 		<id>LOGICAL_ASSOCIATION</id>
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
-		
+
 	</targetType>
 	<targetType>
 		<id>unit-logic_assoc-generic</id>
@@ -2942,7 +2978,7 @@
 	    <attribute>
 		    <id>BMC_DT_PINCTRL_FUNCS</id>
 		</attribute>
-	</targetType>		
+	</targetType>
 	<targetType>
 		<id>unit-iomux_group-fsp2</id>
 		<parent>mrw-unit</parent>
@@ -3001,7 +3037,7 @@
 		</attribute>
 		<attribute>
 			<id>PIN_NAME[3]</id>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>PIN_NUM[0]</id>
 		</attribute>
@@ -3013,7 +3049,7 @@
 		</attribute>
 		<attribute>
 			<id>PIN_NUM[3]</id>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>SP_DIRECTION[0]</id>
 		</attribute>
@@ -3092,7 +3128,7 @@
 		</attribute>
 		<attribute>
 			<id>PIN_NAME[3]</id>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>PIN_NUM[0]</id>
 		</attribute>
@@ -3104,7 +3140,7 @@
 		</attribute>
 		<attribute>
 			<id>PIN_NUM[3]</id>
-		</attribute>		
+		</attribute>
 		<attribute>
 			<id>SP_DIRECTION[0]</id>
 		</attribute>
@@ -3650,7 +3686,7 @@
 		<attribute>
 			<id>FAN_SPD_REG_LOW_BITMASK</id>
 			<default/>
-		</attribute>	
+		</attribute>
 		<attribute>
 			<id>FAN_TYPE_SEL_ADDRESS</id>
 			<default/>
@@ -3658,7 +3694,7 @@
 		<attribute>
 			<id>FAN_TYPE_SEL_BITMASK</id>
 			<default/>
-		</attribute>							
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>unit-ipmi-sensor</id>
@@ -3757,19 +3793,19 @@
 			<id>TYPE</id>
 			<default>PROC</default>
 		</attribute>
-	</targetType>	
+	</targetType>
 <targetType>
     <id>chip-processor-nimbus</id>
     <parent>chip-processor-power9</parent>
-    
-    
-    
+
+
+
 </targetType>
 
 <targetType>
     <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
-</targetType>    
+</targetType>
 
 <!-- MCA
      Nimbus : 2 MCAs under each MCS (total of 8 per chip)
@@ -3789,7 +3825,7 @@
     <attribute>
         <id>BUS_TYPE</id>
         <default>DMI</default>
-    </attribute>    
+    </attribute>
     <attribute>
 		<id>DIRECTION</id>
 		<default>OUT</default>
@@ -3884,7 +3920,7 @@
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
-    </attribute>    
+    </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
       <default>0</default>
@@ -3896,11 +3932,11 @@
     <attribute>
       <id>MRW_TYPE</id>
       <default>NA</default>
-    </attribute>   
+    </attribute>
     <attribute>
       <id>TYPE</id>
       <default>OBUS</default>
-    </attribute>           
+    </attribute>
 </targetType>
 
 <targetType>
@@ -3917,7 +3953,7 @@
     <attribute>
       <id>CDM_DOMAIN</id>
       <default>FABRIC</default>
-    </attribute>    
+    </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
       <default>0</default>
@@ -3929,11 +3965,11 @@
     <attribute>
       <id>MRW_TYPE</id>
       <default>NA</default>
-    </attribute>   
+    </attribute>
     <attribute>
       <id>TYPE</id>
       <default>OBUS</default>
-    </attribute>             
+    </attribute>
 </targetType>
 
 
@@ -3962,9 +3998,9 @@
     <attribute>
          <id>CHIP_UNIT</id>
          <default/>
-    </attribute>            
+    </attribute>
 </targetType>
-    		
+
 <targetType>
     <id>unit-obus-brick-nimbus</id>
     <parent>unit-obus-brick-power9</parent>
@@ -3991,7 +4027,7 @@
     <attribute>
     	<id>MRW_TYPE</id>
     	<default>NA</default>
-    </attribute>    
+    </attribute>
 </targetType>
 
 <targetType>
@@ -4020,7 +4056,7 @@
     <attribute>
     	<id>MRW_TYPE</id>
     	<default>NA</default>
-    </attribute>    
+    </attribute>
 </targetType>
 <targetType>
     <id>unit-obus-smpgroup</id>
@@ -4044,7 +4080,50 @@
     <attribute>
          <id>CHIP_UNIT</id>
          <default/>
-    </attribute>            
+    </attribute>
+</targetType>
+
+<!--- OMI -->
+<targetType>
+    <id>unit-omi-power9</id>
+    <parent>unit</parent>
+</targetType>
+
+ <targetType>
+    <id>unit-omi-axone</id>
+    <parent>unit-omi-power9</parent>
+    <attribute>
+        <id>MODEL</id>
+        <default>AXONE</default>
+    </attribute>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>OMI</default>
+    </attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>INOUT</default>
+	 </attribute>
+    <attribute>
+      <id>CDM_DOMAIN</id>
+      <default>MEM</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>CLASS</id>
+      <default>UNIT</default>
+    </attribute>
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <attribute>
+      <id>TYPE</id>
+      <default>OMI</default>
+    </attribute>
 </targetType>
 
 <!-- NV
@@ -4531,7 +4610,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>dpss.unit-pgood-generic</id>
@@ -4914,7 +4993,7 @@
 			<default>
 				<field><id>Register</id><value/></field>
 			</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>dpss.unit-presence-generic</id>
@@ -5324,7 +5403,7 @@
 		</attribute>
 		<attribute>
 			<id>OFFSET</id>
-		</attribute>								
+		</attribute>
 		<attribute>
 			<id>ADC_CHANNEL_ASSIGNMENT</id>
 		</attribute>
@@ -5365,7 +5444,7 @@
                 <attribute>
                         <id>IPMI_SENSOR_TYPE</id>
                         <default>0xC2</default>
-                </attribute>		
+                </attribute>
 	</targetType>
 	<targetType>
 		<id>apss.unit-adc_global-generic</id>
@@ -5379,7 +5458,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>apss.unit-gpio-generic</id>
@@ -5405,7 +5484,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>apss.unit-i2c-slave</id>
@@ -5465,7 +5544,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>apss.unit-uart-slave</id>
@@ -5492,5 +5571,5 @@
             <id>HWMON_FEATURE</id>
         </attribute>
     </targetType>
-		
+
 </targetTypes>
