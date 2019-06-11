@@ -26,10 +26,10 @@
     <child_id>i2c-ts0</child_id>
     <child_id>i2c-ts1</child_id>
     <instance_name>ocmb</instance_name>
-    <is_root>true</is_root>
+    <is_root>false</is_root>
     <parent>chip</parent>
     <parent_type>lcard-dimm-ddimm</parent_type>
-    <position>0</position>
+    <position>-1</position>
     <type>chip-ocmb</type>
   </targetPart>
   <targetPart>
