@@ -2030,6 +2030,9 @@
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
+    <attribute>
+      <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
+    </attribute>
     <id>sys-sys-power9</id>
     <parent>base</parent>
   </targetType>
