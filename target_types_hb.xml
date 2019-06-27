@@ -444,33 +444,6 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
-      <id>IO_PB_IOOFIR_MASK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_OMI_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>OMI_PLL_VCO</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_O_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_SYSTEM_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_GROUP_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
     </attribute>
     <attribute>
@@ -559,6 +532,33 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
+    </attribute>
+    <attribute>
+      <id>IO_PB_IOOFIR_MASK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_OMI_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>OMI_PLL_VCO</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_O_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_SYSTEM_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -1086,6 +1086,59 @@
     <parent>lcard-dimm</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <default>
+        <field>
+          <id>byteAddrOffset</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>chipCount</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>devAddr</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>eepromContentType</id>
+          <value>0x4</value>
+        </field>
+        <field>
+          <id>engine</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMasterPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>i2cMuxBusSelector</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMuxPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>maxMemorySizeKB</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>port</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>writeCycleTime</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>writePageSize</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+      </default>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
     <id>lcard-dimm-ddimm</id>
     <parent>lcard-dimm</parent>
   </targetType>
@@ -1390,6 +1443,9 @@
     </attribute>
     <attribute>
       <id>NUMERIC_POD_TYPE_TEST</id>
+    </attribute>
+    <attribute>
+      <id>NVDIMM_AUTO_ARM</id>
     </attribute>
     <attribute>
       <id>NVDIMM_ENCRYPTION_ENABLE</id>
@@ -1740,6 +1796,33 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
+      <id>NEST_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>MRW_FILTER_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>SECURITY_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CP_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>IO_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>SECTOR_BUFFER_STRENGTH</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_VALUE</id>
+    </attribute>
+    <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
     </attribute>
     <attribute>
@@ -1809,30 +1892,6 @@
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
     </attribute>
     <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>MRW_FILTER_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CP_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>IO_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -1843,9 +1902,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2762,6 +2818,12 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
+    </attribute>
+    <attribute>
       <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -2774,10 +2836,7 @@
       <id>OMI_DL_X4_BACKOFF_ENABLE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_GROUP_POS</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_NUM</id>
+      <id>OMI_DL_PREIPL_PRBS_TIME</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
