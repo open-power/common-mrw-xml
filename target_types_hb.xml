@@ -1086,6 +1086,59 @@
     <parent>lcard-dimm</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <default>
+        <field>
+          <id>byteAddrOffset</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>chipCount</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>devAddr</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>eepromContentType</id>
+          <value>0x4</value>
+        </field>
+        <field>
+          <id>engine</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMasterPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>i2cMuxBusSelector</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMuxPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>maxMemorySizeKB</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>port</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>writeCycleTime</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>writePageSize</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+      </default>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
     <id>lcard-dimm-ddimm</id>
     <parent>lcard-dimm</parent>
   </targetType>
@@ -1390,6 +1443,9 @@
     </attribute>
     <attribute>
       <id>NUMERIC_POD_TYPE_TEST</id>
+    </attribute>
+    <attribute>
+      <id>NVDIMM_AUTO_ARM</id>
     </attribute>
     <attribute>
       <id>NVDIMM_ENCRYPTION_ENABLE</id>
@@ -2772,6 +2828,9 @@
     </attribute>
     <attribute>
       <id>OMI_DL_X4_BACKOFF_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_PREIPL_PRBS_TIME</id>
     </attribute>
     <attribute>
       <id>OMI_DL_GROUP_POS</id>

@@ -2735,6 +2735,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The time to send pre-ipl PRBS in ms.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_PREIPL_PRBS_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_PREIPL_PRBS_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x100</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_DL_GROUP_POS</id>
@@ -5954,6 +5969,18 @@
     <id>NUMERIC_POD_TYPE_TEST</id>
     <persistency>non-volatile</persistency>
     <readable />
+  </attribute>
+  <attribute>
+    <description>0 - Do not automatically arm all NVDIMMS in the system at runtime 1 - Automatically arm all NVDIMMS in the system at runtime</description>
+    <id>NVDIMM_AUTO_ARM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>0 - Encryption is not enabled on all NVDIMMS in the system 1 - Encryption is enabled on all NVDIMMS in the system</description>
