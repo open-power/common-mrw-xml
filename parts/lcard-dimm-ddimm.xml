@@ -6,6 +6,7 @@
       <default>JEDEC</default>
     </attribute>
     <child_id>ocmb</child_id>
+    <child_id>ddr4</child_id>
     <child_id>pmic0</child_id>
     <child_id>pmic1</child_id>
     <child_id>spd</child_id>
@@ -22,6 +23,7 @@
   <targetPart>
     <id>ocmb</id>
     <child_id>omi</child_id>
+    <child_id>ddr_ch</child_id>
     <child_id>i2c-ocmb</child_id>
     <child_id>i2c-ts0</child_id>
     <child_id>i2c-ts1</child_id>
@@ -51,6 +53,26 @@
     <parent>unit</parent>
     <position>-1</position>
     <type>unit-ocmb</type>
+  </targetPart>
+  <targetPart>
+    <id>ddr_ch</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>DDR4</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+    <instance_name>ddr_ch</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-dimm_port-power9</type>
   </targetPart>
   <targetPart>
     <id>dimm_func_sensor</id>
@@ -384,5 +406,53 @@
     <parent>chip-vpd-device</parent>
     <position>-1</position>
     <type>chip-spd-device</type>
+  </targetPart>
+  <targetPart>
+	<id>ddr4</id>
+	<type>unit-ddr4-jedec</type>
+	<is_root>false</is_root>
+	<instance_name>ddr4</instance_name>
+	<position>-1</position>
+	<parent>unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR4</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0xFF</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default>JEDEC</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PHYS_PATH</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RESOURCE_IS_CRITICAL</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
   </targetPart>
 </partInstance>
