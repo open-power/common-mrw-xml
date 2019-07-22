@@ -23,7 +23,7 @@
   <targetPart>
     <id>ocmb</id>
     <child_id>omi</child_id>
-    <child_id>ddr_ch</child_id>
+    <child_id>mem_port</child_id>
     <child_id>i2c-ocmb</child_id>
     <child_id>i2c-ts0</child_id>
     <child_id>i2c-ts1</child_id>
@@ -55,7 +55,7 @@
     <type>unit-ocmb</type>
   </targetPart>
   <targetPart>
-    <id>ddr_ch</id>
+    <id>mem_port</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>DDR4</default>
@@ -68,11 +68,11 @@
       <id>DIRECTION</id>
       <default>OUT</default>
     </attribute>
-    <instance_name>ddr_ch</instance_name>
+    <instance_name>mem_port</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
-    <type>unit-dimm_port-power9</type>
+    <type>unit-mem_port</type>
   </targetPart>
   <targetPart>
     <id>dimm_func_sensor</id>
