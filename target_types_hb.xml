@@ -59,6 +59,10 @@
     <parent>chip-tpm-cectpm</parent>
   </targetType>
   <targetType>
+    <id>chip-PCA9847</id>
+    <parent>i2c_mux_pca9847</parent>
+  </targetType>
+  <targetType>
     <id>chip-UCD9090</id>
     <parent>ucd9090</parent>
   </targetType>
