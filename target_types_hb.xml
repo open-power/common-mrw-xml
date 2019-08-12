@@ -2073,9 +2073,6 @@
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
-      <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    </attribute>
-    <attribute>
       <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
     </attribute>
     <id>sys-sys-power9</id>
@@ -2831,13 +2828,10 @@
       <id>OMI_DL_LN_REV_ENABLE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_X4_BACKOFF_ENABLE</id>
+      <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
       <id>OMI_DL_PREIPL_PRBS_TIME</id>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
     </attribute>
     <id>unit-omi-power9</id>
     <parent>unit</parent>

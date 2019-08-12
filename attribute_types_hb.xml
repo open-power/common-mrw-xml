@@ -2614,36 +2614,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The DL half width backoff enable bit in DL_CONFIG0_CFG (bit 47)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_X4_BACKOFF_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_DL_X4_BACKOFF_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x01</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>The time to send pre-ipl PRBS in ms.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_PREIPL_PRBS_TIME</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_DL_PREIPL_PRBS_TIME</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x100</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_OMI_MFG_CHK</id>
@@ -3322,6 +3292,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The time to send pre-ipl PRBS in ms.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_PREIPL_PRBS_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_PREIPL_PRBS_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>0x100</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>List of memory frequencies supported by the current system.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
@@ -3912,21 +3897,6 @@
     <simpleType>
       <uint8_t>
         <default>ALLOW_ENTERPRISE</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>NO_SWAP</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -8520,18 +8490,6 @@
     <id>OMI_DL_LN_REV_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>The DL half width backoff enable bit in DL_CONFIG0_CFG (bit 47)</description>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <id>OMI_DL_X4_BACKOFF_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -10162,18 +10120,6 @@
       <value>2</value>
     </enumerator>
     <id>MSS_OCMB_ENTERPRISE_POLICY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <enumerator>
-      <name>SWAP</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>NO_SWAP</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
   </enumerationType>
   <enumerationType>
     <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
