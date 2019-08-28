@@ -1,0 +1,186 @@
+<attributes>
+	<attribute>
+		<id>MANUFACTURER</id>
+        <description>The manufacturer</description>
+		<simpleType>
+			<string/>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+	<attribute>
+		<id>BMC_DT_COMPATIBLE</id>
+        <description>The 'compatible' field for the part in the BMC device tree</description>
+		<simpleType>
+			<string>
+                <default/>
+            </string>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>NCSI_MODE</id>
+        <description>1 = Use NC-SI (Network Controller-Sideband Interface) mode</description>
+		<simpleType>
+			<boolean>
+                <default>0</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>USE_HW_CHECKSUM</id>
+        <description>1 = Use hardware checksum mode</description>
+		<simpleType>
+			<boolean>
+                <default>1</default>
+            </boolean>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+        <id>BMC_DT_ATTR_NAMES</id>
+        <description>
+            Specifies which attributes, besides the existing BMC_DT_* attributes,
+            should be included as a property for this device's node in the BMC
+            device tree.  The first column is the name of the MRW attribute, and
+            the second is what the name of the property should be in the device tree.
+        </description>
+        <simpleType>
+            <string>
+                <default>
+                NA, NA,
+                NA, NA,
+                NA, NA,
+                NA, NA
+                </default>
+            </string>
+        <array>4,2</array>
+        </simpleType>
+        <readable/>
+    </attribute>
+
+    <attribute>
+        <id>BMC_DT_PINCTRL_FUNCS</id>
+        <description>Holds the pin control functions associated with the pingroup,
+                     which allows Linux to know which function to enable for a
+                     multi-function pin or set of pins.
+                     (https://www.kernel.org/doc/Documentation/pinctrl.txt)
+        </description>
+        <simpleType>
+            <string>
+                <default>
+                NA,NA,NA,NA,NA,NA,NA,NA
+                </default>
+            </string>
+        <array>8,1</array>
+        </simpleType>
+        <readable/>
+    </attribute>
+
+    <attribute>
+        <id>CONTROL_GROUPS</id>
+        <description>Contains information about which control groups an LED
+                     belongs to. A row in the array specifies the group name
+                     and properties for this LED in that group.
+                     GroupName, BlinkFreqHz(0 = on solid), DutyCycle(0-100)
+        </description>
+        <simpleType>
+            <string>
+            </string>
+        <array>16,3</array>
+        </simpleType>
+    </attribute>
+
+    <attribute>
+        <id>HWMON_FEATURE</id>
+        <description>Contains information about a hwmon feature, where a
+                     feature is an input that the chip measures, like
+                     a temperature or voltage.
+        </description>
+        <complexType>
+        <field>
+            <name>HWMON_NAME</name>
+            <description>The name the hwmon uses, like 'in1'.</description>
+            <type>string</type>
+        </field>
+        <field>
+            <name>DESCRIPTIVE_NAME</name>
+            <description>A useful name for the feature, like 'ambient temp'
+                         or 'VDDR voltage'.</description>
+            <type>string</type>
+        </field>
+        <field>
+            <name>WARN_LOW</name>
+            <description>A low warning threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>WARN_HIGH</name>
+            <description>A high warning threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>CRIT_LOW</name>
+            <description>A low critical threshold value</description>
+            <type>int32_t</type>
+        </field>
+        <field>
+            <name>CRIT_HIGH</name>
+            <description>A high critical threshold value</description>
+            <type>int32_t</type>
+            </field>
+        </complexType>
+    </attribute>
+
+    <attribute>
+		<id>REG_BASE_ADDRESS</id>
+        <description>The base register address of a function in hex.</description>
+		<simpleType>
+			<uint32_t>
+                <default/>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <attribute>
+		<id>REG_OFFSET</id>
+        <description>The offset, in hex, from the REG_BASE_ADDRESS that the
+                     registers pertaining to this unit start at.</description>
+		<simpleType>
+			<uint32_t>
+                <default/>
+            </uint32_t>
+		</simpleType>
+		<readable/>
+	</attribute>
+
+    <enumerationType>
+        <id>LED_PRIORITY</id>
+        <enumerator>
+            <name>BLINK</name>
+            <value>0</value>
+        </enumerator>
+        <enumerator>
+            <name>ON</name>
+            <value>1</value>
+        </enumerator>
+    </enumerationType>
+
+    <attribute>
+        <id>LED_PRIORITY</id>
+        <description>If the LED is asserted with more than one action at the
+                     same time, this attribute defines which action takes priority.
+        </description>
+        <simpleType>
+            <enumeration>
+                <id>LED_PRIORITY</id>
+            </enumeration>
+        </simpleType>
+    </attribute>
+
+</attributes>
