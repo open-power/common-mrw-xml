@@ -1,0 +1,32 @@
+<partInstance>
+  <targetPart>
+    <id>chip-omi-endpoint</id>
+    <child_id>omi</child_id>
+    <instance_name>omi_endpoint</instance_name>
+    <is_root>true</is_root>
+    <parent>chip</parent>
+    <parent_type>lcard-dimm-ddimm</parent_type>
+    <position>0</position>
+    <type>chip-omi-endpoint</type>
+  </targetPart>
+  <targetPart>
+    <id>omi</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>OMI</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <instance_name>omi</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-omi-endpoint</type>
+  </targetPart>
+</partInstance>
