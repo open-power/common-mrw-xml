@@ -1,0 +1,12 @@
+<partInstance>
+  <targetPart>
+		<id>slot-opencapislot-generic</id>
+		<parent>slot-opencapislot</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+	    <instance_name>opencapicard</instance_name>
+   		<is_root>true</is_root>
+        <position>0</position>
+        <type>slot-opencapislot-generic</type>
+  </targetPart>
+</partInstance>

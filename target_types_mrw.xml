@@ -2344,6 +2344,82 @@
 		<parent>card-sxm2card</parent>
 		<parent_type>slot-sxm2slot-generic</parent_type>
 	</targetType>
+
+	<!-- OpenCAPI -->
+	<targetType>
+		<id>slot-opencapislot</id>
+		<parent>mrw-base</parent>
+		<attribute>
+			<id>CLASS</id>
+			<default>CONNECTOR</default>
+		</attribute>
+        <attribute>
+            <id>POSITION</id>
+        </attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE</id>
+		</attribute>
+		<attribute>
+			<id>LOCATION_CODE_TYPE</id>
+		</attribute>
+		<attribute>
+			<id>CONNECTOR_TYPE</id>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>slot-opencapislot-generic</id>
+		<parent>slot-opencapislot</parent>
+		<parent_type>card-motherboard</parent_type>
+		<parent_type>card-daughtercard</parent_type>
+		<attribute>
+			<id>SLOT_NAME</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>SLOT_INDEX</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>SLOT_TYPE</id>
+			<default/>
+		</attribute>				
+		<attribute>
+			<id>HDDW_ORDER</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>32BIT_MMIO_SIZE</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>64BIT_MMIO_SIZE</id>
+			<default/>
+		</attribute>	
+		<attribute>
+			<id>32BIT_DMA_SIZE</id>
+			<default/>
+		</attribute>	
+		<attribute>
+			<id>64BIT_DMA_SIZE</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>MSI</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>MAX_POWER</id>
+			<default/>
+		</attribute>
+		<attribute>
+			<id>DEFAULT_PCIE_COOLING_TYPE</id>
+			<default/>
+		</attribute>											
+	</targetType>
 	
 	<!-- PCIe -->
 	<targetType>

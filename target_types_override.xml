@@ -4,6 +4,7 @@
 		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
+		<parent_type>sys-sys-power10</parent_type>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -18,6 +19,7 @@
 		<parent>mrw-base</parent>
 		<parent_type>sys-sys-power8</parent_type>
 		<parent_type>sys-sys-power9</parent_type>
+		<parent_type>sys-sys-power10</parent_type>
 		<attribute>
 			<id>TYPE</id>
 			<default>NA</default>
@@ -67,7 +69,6 @@
 		<parent_type>targetoverride</parent_type>
 		<attribute><id>TARGET_NAME</id></attribute>
 		<attribute><id>ALL_MCS_IN_INTERLEAVING_GROUP</id></attribute>
-		<attribute><id>DMI_EREPAIR_THRESHOLD_FIELD</id></attribute>
 		<attribute><id>CARD_USE</id></attribute>
 	</targetType>	
 </targetTypes>
