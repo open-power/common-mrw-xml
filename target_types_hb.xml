@@ -2006,12 +2006,6 @@
       <id>ICACHE_SIZE</id>
     </attribute>
     <attribute>
-      <id>IMT_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>IMT_BASE_ADDR</id>
-    </attribute>
-    <attribute>
       <id>ISTEP_MODE</id>
     </attribute>
     <attribute>
@@ -6141,9 +6135,6 @@
         </field>
       </default>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EI_BUS_TX_MSBSWAP</id>
     </attribute>
     <attribute>
       <default>0x00000033</default>
