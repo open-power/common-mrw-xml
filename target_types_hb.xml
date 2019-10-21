@@ -2833,9 +2833,6 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
-    <attribute>
-      <id>OMI_DL_PREIPL_PRBS_TIME</id>
-    </attribute>
     <id>unit-omi-power9</id>
     <parent>unit</parent>
   </targetType>
