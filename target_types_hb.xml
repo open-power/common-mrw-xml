@@ -442,39 +442,6 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>IO_PB_IOOFIR_MASK</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
-    </attribute>
-    <attribute>
-      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_OMI_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>OMI_PLL_VCO</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_O_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_SYSTEM_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_GROUP_ID</id>
-    </attribute>
-    <attribute>
-      <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
@@ -557,6 +524,39 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
+    </attribute>
+    <attribute>
+      <id>IO_PB_IOOFIR_MASK</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_EVEN</id>
+    </attribute>
+    <attribute>
+      <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_OMI_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>OMI_PLL_VCO</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_O_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_SYSTEM_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_GROUP_ID</id>
+    </attribute>
+    <attribute>
+      <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -1794,7 +1794,28 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+      <id>NEST_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>MRW_FILTER_PLL_BUCKET</id>
+    </attribute>
+    <attribute>
+      <id>SECURITY_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>CP_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>IO_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>SECTOR_BUFFER_STRENGTH</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>PULSE_MODE_VALUE</id>
     </attribute>
     <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
@@ -1866,30 +1887,6 @@
       <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
     </attribute>
     <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>MRW_FILTER_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>CP_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>IO_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
-    </attribute>
-    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -1900,6 +1897,9 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2074,9 +2074,6 @@
     </attribute>
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
-    </attribute>
-    <attribute>
-      <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
     </attribute>
     <id>sys-sys-power9</id>
     <parent>base</parent>
@@ -2816,25 +2813,22 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>OMI_REFCLOCK_SWIZZLE</id>
-    </attribute>
-    <attribute>
       <id>OMI_DL_GROUP_POS</id>
     </attribute>
     <attribute>
       <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
       <id>OMI_DL_LN_REV_ENABLE</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_PREIPL_PRBS_TIME</id>
     </attribute>
     <id>unit-omi-power9</id>
     <parent>unit</parent>
