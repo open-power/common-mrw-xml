@@ -442,12 +442,6 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
@@ -473,6 +467,12 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
@@ -1794,9 +1794,6 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
     </attribute>
     <attribute>
@@ -1900,6 +1897,9 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2819,13 +2819,13 @@
       <id>OMI_REFCLOCK_SWIZZLE</id>
     </attribute>
     <attribute>
+      <id>OMI_DL_LN_REV_ENABLE</id>
+    </attribute>
+    <attribute>
       <id>OMI_DL_GROUP_POS</id>
     </attribute>
     <attribute>
       <id>OMI_DL_NUM</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_LN_REV_ENABLE</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>

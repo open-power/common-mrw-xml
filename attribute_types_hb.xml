@@ -15,6 +15,95 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_CHK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_CHK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>6</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_CHAN_EQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_CHAN_EQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>2</array>
+      <uint64_t>
+        <default>0</default>
+      </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Firmware provides a default value of 50mV if this attribute is zero. Consumer: p9_pstate_parameter_block -&gt; p9_setup_evid Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
@@ -801,301 +890,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_CHK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_CHK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum eye width to allow passing through manufacturing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of margin to be applied.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_MARGIN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe precusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_CHAN_EQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_CHAN_EQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint64_t>
-        <default>0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 0 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_0_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_0_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xF</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 1 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_1_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_1_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 4 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_4_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_4_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 7 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_7_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_7_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template A pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_A_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_A_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI major version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MAJOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x3</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI minor version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MINOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <global />
     <hwpfToHbAttrMap>
@@ -1778,6 +1572,197 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 0 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_0_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_0_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xF</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 1 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_1_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_1_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 4 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_4_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_4_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 7 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_7_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_7_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template A pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_A_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_A_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI major version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MAJOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x3</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI minor version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MINOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Axone only - setup clock mux settings for TOD Refclk input 0b0 = 16 MHz I/O Filter PLL Output 0b1 = 32 MHz LPC reference clock</description>
@@ -2675,6 +2660,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_LN_REV_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_LN_REV_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x01</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_DL_GROUP_POS</id>
@@ -2744,17 +2744,17 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <description>True or false whether row repair is supported MRW attribute</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_LN_REV_ENABLE</id>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>OMI_DL_LN_REV_ENABLE</id>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x01</default>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -7567,6 +7567,38 @@
     </simpleType>
   </attribute>
   <enumerationType>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_X_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <enumerator>
+      <name>DIS_RX_LTE</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DIS_TX_AC_BOOST</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_GAIN_PEAK_INITS</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_VGA_GAIN_TARGET</name>
+      <value>0x08</value>
+    </enumerator>
+    <id>IO_XBUS_CHAN_EQ</id>
+  </enumerationType>
+  <enumerationType>
     <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Provided by the Machine Readable Workbook. Consumer: p9_pm_pss_init</description>
     <enumerator>
       <name>NONE</name>
@@ -7859,98 +7891,6 @@
     <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_X_MFG_CHK</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <enumerator>
-      <name>DIS_RX_LTE</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>DIS_TX_AC_BOOST</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_GAIN_PEAK_INITS</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_VGA_GAIN_TARGET</name>
-      <value>0x08</value>
-    </enumerator>
-    <id>IO_XBUS_CHAN_EQ</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-  </enumerationType>
-  <enumerationType>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <enumerator>
       <name>NO_SWAP</name>
@@ -8231,6 +8171,54 @@
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
   </enumerationType>
   <enumerationType>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
     <enumerator>
       <name>FALSE</name>
@@ -8503,6 +8491,18 @@
     <id>PROC_PCIE_CACHE_INJ_THROTTLE</id>
   </enumerationType>
   <enumerationType>
+    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <id>OMI_DL_LN_REV_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8515,16 +8515,16 @@
     <id>IO_DMI_PROC_DEBUG</id>
   </enumerationType>
   <enumerationType>
-    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <description>True or false whether row repair is supported MRW attribute</description>
     <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
+      <name>SUPPORTED</name>
+      <value>1</value>
     </enumerator>
     <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
     </enumerator>
-    <id>OMI_DL_LN_REV_ENABLE</id>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
