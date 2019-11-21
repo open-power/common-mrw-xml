@@ -139,6 +139,7 @@
 	<child_id>fsim-4</child_id>
 	<child_id>fsim-5</child_id>	
 	<child_id>fsim-6</child_id>	
+	<child_id>fsim-7</child_id>	
 	<child_id>i2c-slave</child_id>
 	<child_id>i2c-master-dimm01</child_id>
 	<child_id>i2c-master-dimm23</child_id>
@@ -12724,7 +12725,7 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>1</default>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -12788,7 +12789,7 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>2</default>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -12852,7 +12853,7 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>3</default>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -12916,7 +12917,7 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>4</default>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -12980,7 +12981,7 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>5</default>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
@@ -13044,7 +13045,71 @@
 	</attribute>
 	<attribute>
 		<id>FSI_PORT</id>
-		<default>6</default>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>FSIM</default>
+	</attribute>
+	<attribute>
+		<id>PHYS_PATH</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RESOURCE_IS_CRITICAL</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>FSI</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>fsim-7</id>
+	<type>unit-fsi-proc</type>
+	<is_root>false</is_root>
+	<instance_name>fsim-7</instance_name>
+	<position>-1</position>
+	<parent>unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>FSIM</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0xFF</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>7</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>CMFSI</id>
+		<default>0x00</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>FSI_ENGINE</id>
+		<default>0x0D</default>
+	</attribute>
+	<attribute>
+		<id>FSI_LINK</id>
+		<default>0x07</default>
+	</attribute>
+	<attribute>
+		<id>FSI_PORT</id>
+		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MODEL</id>
