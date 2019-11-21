@@ -66,7 +66,6 @@
 	<child_id>UCD90320.en29</child_id>
 	<child_id>UCD90320.en30</child_id>
 	<child_id>UCD90320.en31</child_id>
-	<child_id>UCD90320.en32</child_id>
 	<child_id>UCD90320.dmon1</child_id>
 	<child_id>UCD90320.dmon2</child_id>
 	<child_id>UCD90320.dmon3</child_id>
@@ -79,6 +78,7 @@
 	<child_id>UCD90320.gpio2</child_id>
 	<child_id>UCD90320.gpio3</child_id>
 	<child_id>UCD90320.gpio4</child_id>
+	<child_id>UCD90320.en32</child_id>
 	<child_id>UCD90320.mar1</child_id>
 	<child_id>UCD90320.mar2</child_id>
 	<child_id>UCD90320.mar3</child_id>
@@ -103,6 +103,9 @@
 	<child_id>UCD90320.mar22</child_id>
 	<child_id>UCD90320.mar23</child_id>
 	<child_id>UCD90320.mar24</child_id>
+	<child_id>UCD90320.pmbus-cntrl</child_id>
+	<child_id>UCD90320.reset</child_id>
+	<child_id>UCD90320.pmbus-alert</child_id>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
@@ -290,6 +293,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -418,6 +425,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -550,6 +561,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -678,6 +693,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -810,6 +829,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -938,6 +961,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -1070,6 +1097,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -1198,6 +1229,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -1330,6 +1365,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -1458,6 +1497,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -1590,6 +1633,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -1718,6 +1765,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -1850,6 +1901,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -1978,6 +2033,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -2110,6 +2169,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -2238,6 +2301,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -2370,6 +2437,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -2498,6 +2569,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -2630,6 +2705,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -2758,6 +2837,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -2890,6 +2973,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -3018,6 +3105,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -3150,6 +3241,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -3278,6 +3373,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -5361,70 +5460,6 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>UCD90320.en32</id>
-	<type>unit-gpio-generic</type>
-	<is_root>false</is_root>
-	<instance_name>UCD90320.en32</instance_name>
-	<position>-1</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>GPIO</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>INOUT</default>
-	</attribute>
-	<attribute>
-		<id>DRIVER_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ENGINE</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NAME</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>POR_VALUE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
 	<id>UCD90320.dmon1</id>
 	<type>unit-hwmon-feature</type>
 	<is_root>false</is_root>
@@ -5456,6 +5491,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -5588,6 +5627,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -5716,6 +5759,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -5848,6 +5895,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -5976,6 +6027,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -6108,6 +6163,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -6238,6 +6297,10 @@
 		<default>0</default>
 	</attribute>
 	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
 		<id>FAPI_NAME</id>
 		<default>unknown</default>
 	</attribute>
@@ -6366,6 +6429,10 @@
 	<attribute>
 		<id>DECONFIG_GARDABLE</id>
 		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
 	</attribute>
 	<attribute>
 		<id>FAPI_NAME</id>
@@ -6661,6 +6728,70 @@
 	<type>unit-gpio-generic</type>
 	<is_root>false</is_root>
 	<instance_name>UCD90320.gpio4</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>INOUT</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>ENGINE</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_OUTPUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>UCD90320.en32</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>UCD90320.en32</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
@@ -8197,6 +8328,198 @@
 	<type>unit-gpio-generic</type>
 	<is_root>false</is_root>
 	<instance_name>UCD90320.mar24</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>INOUT</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>ENGINE</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_OUTPUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>UCD90320.pmbus-cntrl</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>UCD90320.pmbus-cntrl</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>INOUT</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>ENGINE</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_OUTPUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>UCD90320.reset</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>UCD90320.reset</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>INOUT</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>ENGINE</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_OUTPUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>UCD90320.pmbus-alert</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>UCD90320.pmbus-alert</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
