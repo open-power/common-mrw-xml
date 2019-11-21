@@ -810,6 +810,18 @@
 			<id>SCHEMATIC_INTERFACE</id>
 		</attribute>
 	</targetType>
+	<targetType>
+		<id>unit-mem_port</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>DDR4</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>OUT</default>
+		</attribute>
+	</targetType>
 
 	<!-- DIMMs -->
 
