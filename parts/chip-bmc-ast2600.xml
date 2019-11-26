@@ -44495,10 +44495,6 @@
 		<default>0x00</default>
 	</attribute>
 	<attribute>
-		<id>FSI_FUNCTION</id>
-		<default>BMC_CODE</default>
-	</attribute>
-	<attribute>
 		<id>FSI_PORT</id>
 		<default>0x00</default>
 	</attribute>
