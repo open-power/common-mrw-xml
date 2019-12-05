@@ -15,95 +15,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint64_t>
-        <default>0</default>
-      </uint64_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_CHK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_CHK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum eye width to allow passing through manufacturing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of margin to be applied.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_MARGIN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe precusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_XBUS_CHAN_EQ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_XBUS_CHAN_EQ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Step size (binary in microvolts) to take upon external VRM voltage transitions. The value set here must take into account where internal VRMs are enabled or not as, when they are enabled, the step size must account for the tracking (eg PFET strength recalculation) for the step. Firmware provides a default value of 50mV if this attribute is zero. Consumer: p9_pstate_parameter_block -&gt; p9_setup_evid Pstate Parameter Block (PSPB) for PGPE Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
@@ -890,6 +801,94 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_CHK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_CHK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_X_MFG_MIN_EYE_WIDTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_X_MFG_MIN_EYE_WIDTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>6</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_XBUS_CHAN_EQ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_XBUS_CHAN_EQ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
     <global />
     <hwpfToHbAttrMap>
@@ -979,19 +978,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -1155,6 +1141,19 @@
       <uint8_t>
         <default>0x00</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -1571,6 +1570,22 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Each MCA value is a 64-bit vector, where each byte represents an unsupported rank configuration. Each nibble in the byte represents the total count of ranks (master and slave) on each DIMM. The left-most nibble represents slot 0 and the right represents 1.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_UNSUPPORTED_RANK_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>2</array>
+      <uint64_t>
+        <default>0</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -2741,21 +2756,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -7624,38 +7624,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_X_MFG_CHK</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
-    <enumerator>
-      <name>DIS_RX_LTE</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>DIS_TX_AC_BOOST</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_GAIN_PEAK_INITS</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>LOWER_VGA_GAIN_TARGET</name>
-      <value>0x08</value>
-    </enumerator>
-    <id>IO_XBUS_CHAN_EQ</id>
-  </enumerationType>
-  <enumerationType>
     <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Provided by the Machine Readable Workbook. Consumer: p9_pm_pss_init</description>
     <enumerator>
       <name>NONE</name>
@@ -7946,6 +7914,50 @@
       <value>0x01</value>
     </enumerator>
     <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_X_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Alternate settings for short Xbus channels bit 0 -- Disable RX LTE bit 1 -- Disable AC BOOST bit 2 -- Low Gain/Peaking Init Settings bit 3 -- Lower VGA Gain Target -10%</description>
+    <enumerator>
+      <name>DIS_RX_LTE</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DIS_TX_AC_BOOST</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_GAIN_PEAK_INITS</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>LOWER_VGA_GAIN_TARGET</name>
+      <value>0x08</value>
+    </enumerator>
+    <id>IO_XBUS_CHAN_EQ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Source: MRW: Downstream MSB Swap and Upstream MSB Swap Usage: TX_MSBSWAP initfile setting for DMI and X buses This attribute represents whether or not a single clock group bus such as DMI and X bus was wired by the board designer using a feature called MSB Swap where lane 0 of the TX chip wires to lane n-1 on the RX chip where 'n' is the width of the bus. A basic description of this capability is that the board designer can save layers on the board wiring by crossing the wiring between the two chips in a prescribed manner. In a non-MSB Swapped bus Lane 0 on the TX chip wires to lane 0 on the RX chip, lane 1 to lane 1 and so on. If a bus is MSB Swapped then lane 0 of the TX chip wires to lane 'n-1' of the RX chip, lane 1 to lane 'n-2', etc. Random or arbitrary wiring of TX to RX lanes on different chips is NOT ALLOWED. The Master Chip of two connected chips is defined as the chip with the smaller value of (100*Node + Pos). The Slave Chip of two connected chips is defined as the chip with the larger value of (100*Node + Pos). The Downstream direction is defined as the direction from the Master chip to the Slave chip. The Upstream direction is defined as the direction from the Slave chip to the Master chip. The Downstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Downstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). The Upstream TX_MSBSWAP from the MRW is a uint8 value. 0x01 means the Upstream bus is wired msb to lsb etc. and 0x00 means the bus is wired normally, msb to msb, lsb to lsb (lane0 to lane0). It is up to the platform code to set up each ATTR_EI_BUS_TX_MSBSWAP value for the correct target endpoints.</description>
@@ -8570,18 +8582,6 @@
       <value>0x1</value>
     </enumerator>
     <id>FUSED_CORE_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
