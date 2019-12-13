@@ -12,6 +12,9 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
+      <id>FAPI_NAME</id>
+    </attribute>
+    <attribute>
       <id>MODEL</id>
     </attribute>
     <attribute>
@@ -232,6 +235,9 @@
     </attribute>
     <attribute>
       <id>OCMB_COUNTER</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>MEM_MRW_IS_PLANAR</id>
@@ -504,6 +510,9 @@
     </attribute>
     <attribute>
       <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>BOOT_FREQ_MHZ</id>
@@ -1043,6 +1052,9 @@
     <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>lcard-dimm</id>
     <parent>card</parent>
   </targetType>
@@ -1156,6 +1168,9 @@
     <attribute>
       <default>PMIC</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>pmic</id>
     <parent>asic</parent>
@@ -1280,12 +1295,6 @@
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1329,6 +1338,15 @@
     </attribute>
     <attribute>
       <id>STOP_LEVELS_DISABLED</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1431,9 +1449,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1703,6 +1718,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-core</id>
     <parent>unit</parent>
   </targetType>
@@ -1741,6 +1759,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-eq</id>
     <parent>unit</parent>
   </targetType>
@@ -1764,6 +1785,9 @@
     <attribute>
       <default>FC</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-fc-power10</id>
     <parent>unit</parent>
@@ -1790,6 +1814,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-iohs-power10</id>
     <parent>unit</parent>
@@ -1850,6 +1877,12 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-mc-power10</id>
     <parent>unit</parent>
@@ -1943,6 +1976,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-mcc</id>
     <parent>unit</parent>
@@ -2047,6 +2083,9 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <attribute>
       <id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
     </attribute>
     <id>unit-mem_port</id>
@@ -2059,6 +2098,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-mi</id>
     <parent>unit</parent>
@@ -2094,6 +2136,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-nmmu-power10</id>
     <parent>unit</parent>
@@ -2301,6 +2346,9 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <attribute>
       <id>OMI_DL_PREIPL_PRBS_TIME</id>
     </attribute>
     <id>unit-omi</id>
@@ -2333,6 +2381,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-omic</id>
     <parent>unit</parent>
   </targetType>
@@ -2360,6 +2411,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-pau-power10</id>
     <parent>unit</parent>
   </targetType>
@@ -2371,6 +2425,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-pauc-power10</id>
     <parent>unit</parent>
   </targetType>
@@ -2381,6 +2438,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-pec</id>
     <parent>unit</parent>
@@ -2443,6 +2503,9 @@
     <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
     <id>unit-perv</id>
     <parent>unit</parent>
   </targetType>
@@ -2485,6 +2548,9 @@
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
     </attribute>
     <id>unit-phb</id>
     <parent>unit</parent>
