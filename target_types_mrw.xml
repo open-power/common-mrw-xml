@@ -4228,11 +4228,7 @@
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
-    </attribute>
-    <attribute>
-      <id>CDM_DOMAIN</id>
-      <default>FABRIC</default>
-    </attribute>    
+    </attribute>   
     <attribute>
       <id>CHIP_UNIT</id>
       <default>0</default>
@@ -4261,11 +4257,7 @@
     <attribute>
       <id>BUS_TYPE</id>
       <default>OBUS</default>
-    </attribute>
-    <attribute>
-      <id>CDM_DOMAIN</id>
-      <default>FABRIC</default>
-    </attribute>    
+    </attribute>  
     <attribute>
       <id>CHIP_UNIT</id>
       <default>0</default>
@@ -4329,10 +4321,6 @@
       <default>OBUS_BRICK</default>
     </attribute>
     <attribute>
-      <id>CDM_DOMAIN</id>
-      <default>FABRIC</default>
-    </attribute>
-    <attribute>
     	<id>CLASS</id>
     	<default>UNIT</default>
     </attribute>
@@ -4356,10 +4344,6 @@
     <attribute>
       <id>TYPE</id>
       <default>OBUS_BRICK</default>
-    </attribute>
-    <attribute>
-      <id>CDM_DOMAIN</id>
-      <default>FABRIC</default>
     </attribute>
     <attribute>
     	<id>CLASS</id>
