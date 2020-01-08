@@ -584,112 +584,6 @@
       <id>EEPROM_SBE_PRIMARY_INFO</id>
     </attribute>
     <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x3</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x3</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <id>FSP_BAR_SIZE</id>
     </attribute>
     <attribute>
@@ -1289,6 +1183,12 @@
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1332,15 +1232,6 @@
     </attribute>
     <attribute>
       <id>STOP_LEVELS_DISABLED</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1443,6 +1334,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
