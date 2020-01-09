@@ -364,6 +364,12 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>VDD_AVSBUS_BUSNUM</id>
     </attribute>
     <attribute>
@@ -527,12 +533,6 @@
     </attribute>
     <attribute>
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
@@ -1797,9 +1797,6 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>NEST_PLL_BUCKET</id>
     </attribute>
     <attribute>
@@ -1903,6 +1900,9 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
