@@ -1,58 +1,5 @@
 <attributes>
   <attribute>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CYCLE_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CYCLE_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Time between invocations of auxiliary function on GPE1. The time (in is as 2^ATTR_AUX_FUNC_INVOCATION_TIME_MS with 0 indicating the is OFF. Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Provided by the Machine Readable Workbook to tune the collection. Platform default:1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -409,6 +356,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Defines the AVSBus (0, 1 or 2) which has the indicated rail VRM [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO Producer:Machine Readable Workbook Consumers: p10_set_evid; p10_set_voltage (tool) -&gt; Global Pstate Parameter Block (GPPB) for PGPE; OCC Pstate Parameter Block OCC *MOST* systems use Bus 0 for VDD, Bus 1 for VCS, Bus 2 for VIO and VDN. If is not the case, the value must be appropriately set by the platform (eg MRW or equivalent)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_AVSBUS_BUSNUM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>AVSBUS_BUSNUM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>AVSBus Clock Frequency (binary in KHz) Consumer: p10_ocb_init.C Overridden by the Machine Readable Workbook. If default of 0 is read, HWP will set AVSBus frequency to 1MHz.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AVSBUS_FREQUENCY</id>
@@ -419,6 +382,38 @@
     <readable />
     <simpleType>
       <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Defines the AVSBus rail selector number (0 - 15) for the VRM on the bus by ATTR_AVSBUS_BUSNUM[x]. [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO Producer:Machine Readable Workbook Consumers: p10_set_evid; p10_set_voltage (tool) -&gt; Global Pstate Parameter Block (GPPB) for PGPE OCC Pstate Parameter Block OCC *MOST* systems use Bus 0 for VDD, Bus 1 for VCS, Bus 2 for VIO and VDN. If is not the case, the value must be appropriately set by the platform (eg or equivalent)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_AVSBUS_RAIL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>AVSBUS_RAIL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXTERNAL_VRM_STEPSIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint32_t>
+        <default>0x00</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -543,6 +538,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Time to delay before powering off the MMA due to the lack of MMA instructions. Time = 1ms * 2**ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS. Valid values of 0x00 - 0x17 to yield times from 1ms to 2.3 hours -: 0x00 - 1ms ... 0x01 - 1 second (default) ... 0x17 - 1 day 0x18 - 0xFD - Reserved (maps as 0x17) 0xFE - every QME FIT timer interrupt (~250us) 0xFF - no power off of MMA (QME Hcode still runs; different behavior ATTR_SYSTEM_MMA_POWEROFF_DISABLE) Producer: Machine Readable Workbook Consumer: QME Hcode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xA</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Defines the STOP levels supported by the Hcode in the present driver. Represented as bit vector where bit 0 = STOP0; bit 1 = STOP 1, ..., bit 15 = STOP15.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_STOP_LEVELS_SUPPORTED</id>
@@ -587,6 +597,74 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CYCLE_COUNT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CYCLE_COUNT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then groups of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -616,6 +694,20 @@
         <default>0x00</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_HW_MIRRORING_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_HW_MIRRORING_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
@@ -1422,6 +1514,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates if LPC console is enabled on system</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_LPC_CONSOLE_CNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>LPC_CONSOLE_CNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLE</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of the processor refclock in KHz. Provided by the Machine Readable Workbook. This can be overridden to adjust the refclock frequency.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_CP_REFCLOCK_KHZ</id>
@@ -1943,21 +2051,6 @@
       <uint8_t />
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Logical position of target within a system. This is derived from the SMP location of each processor and each target's relationship to a proc. - PROC = based on SMP groupid+chipid - MEMBUF = PROC:FAPI_POS * [max membuf per proc] - 1st level child unit = [parent chip]:FAPI_POS * [max children of this type per chip] - 2nd+ level child unit = [immediate parent unit]:FAPI_POS * [max units below parent] Note: This should not be used algorithmically by HWPs directly. Note: Value ignores physical drawer boundaries, the value is unique across the entire system. This data is derived from the MRW.</description>
@@ -3166,6 +3259,16 @@
         <default>0x0</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Hierarchical path to the target with respect to logical affinity</description>
+    <id>AFFINITY_PATH</id>
+    <mrwRequired />
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
   </attribute>
   <attribute>
     <description>System attribute. If all MCS chiplets are in an interleaving group (1=true, 0=false). - If true the SMP fabric is setup in normal mode and multiple MCSs are grouped (disallowing systems with memory only under 1 MCS (i.e. systems with a single C-DIMM)) - If false the SMP fabric is setup in checkerboard mode. Provided by the Machine Readable Workbook. This attribute is based on Machine-Type-Model (MTM) and is setup by the service processor.</description>
@@ -6628,30 +6731,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RUNN_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <enumerator>
       <name>NONE</name>
@@ -6900,6 +6979,42 @@
     <id>PMCR_MOST_RECENT_MODE</id>
   </enumerationType>
   <enumerationType>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>RUNN_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -6938,6 +7053,22 @@
       <value>0x08</value>
     </enumerator>
     <id>MSS_INTERLEAVE_GRANULARITY</id>
+  </enumerationType>
+  <enumerationType>
+    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW.</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>REQUIRED</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>REQUESTED</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>MRW_HW_MIRRORING_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Processor fabric SL domain (proxime) configuration.</description>
@@ -7560,6 +7691,18 @@
     <id>DCADJ_BYPASS</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates if LPC console is enabled on system</description>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <id>LPC_CONSOLE_CNFG</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip.</description>
     <enumerator>
       <name>1333</name>
@@ -7726,18 +7869,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
