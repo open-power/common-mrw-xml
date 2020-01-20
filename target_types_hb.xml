@@ -9,6 +9,9 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <id>CLASS</id>
     </attribute>
     <attribute>
@@ -67,6 +70,10 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>affinity:sys-0/node-0/bmc-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <default>AST2500</default>
       <id>MODEL</id>
     </attribute>
@@ -94,6 +101,10 @@
     <parent>sp</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <default>affinity:sys-0/node-0/bmc-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
     <attribute>
       <default>AST2600</default>
       <id>MODEL</id>
@@ -353,7 +364,16 @@
       <id>PROC_VRM_VOFFSET_UV</id>
     </attribute>
     <attribute>
+      <id>AVSBUS_BUSNUM</id>
+    </attribute>
+    <attribute>
       <id>AVSBUS_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>AVSBUS_RAIL</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_STEPSIZE</id>
     </attribute>
     <attribute>
       <id>EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
@@ -495,6 +515,9 @@
     </attribute>
     <attribute>
       <id>DCADJ_TARGET_OVERRIDE</id>
+    </attribute>
+    <attribute>
+      <id>LPC_CONSOLE_CNFG</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_FLOOR_MHZ</id>
@@ -1101,6 +1124,10 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>affinity:sys-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
     <attribute>
@@ -1183,12 +1210,6 @@
       <id>IPMI_SENSORS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1228,16 +1249,31 @@
       <id>SPIPSS_FREQUENCY</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+    </attribute>
+    <attribute>
       <id>STOP_LEVELS_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>STOP_LEVELS_DISABLED</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_GRANULARITY</id>
+    </attribute>
+    <attribute>
+      <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
@@ -1334,9 +1370,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
