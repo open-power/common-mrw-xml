@@ -529,6 +529,12 @@
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
@@ -536,12 +542,6 @@
     </attribute>
     <attribute>
       <id>IO_O_MFG_STRESS_PR_OFFSET_ODD</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>FREQ_OMI_MHZ</id>
