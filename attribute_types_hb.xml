@@ -2735,36 +2735,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>NO_SWAP</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>LITTLE_ENDIAN</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port basis Also used for emergency mode throttle MBA_FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
@@ -5069,6 +5039,7 @@
     <readable />
     <simpleType>
       <enumeration>
+        <default>PHYP</default>
         <id>PAYLOAD_KIND</id>
       </enumeration>
     </simpleType>
@@ -8241,30 +8212,6 @@
       <value>2</value>
     </enumerator>
     <id>MSS_OCMB_ENTERPRISE_POLICY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <enumerator>
-      <name>SWAP</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>NO_SWAP</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <enumerator>
-      <name>LITTLE_ENDIAN</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>BIG_ENDIAN</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
   </enumerationType>
   <enumerationType>
     <description>The lane width of the OpenCapi channel</description>

@@ -1501,12 +1501,6 @@
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
-      <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    </attribute>
-    <attribute>
-      <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
-    </attribute>
-    <attribute>
       <id>FREQ_PB_MHZ</id>
     </attribute>
     <attribute>
