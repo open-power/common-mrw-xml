@@ -1201,13 +1201,106 @@
       <id>EARLY_TESTCASES_ISTEP</id>
     </attribute>
     <attribute>
+      <id>ADC_CHANNEL_FUNC_IDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GAINS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GNDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_OFFSETS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
+    </attribute>
+    <attribute>
       <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_MODES</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_PINS</id>
     </attribute>
     <attribute>
       <id>BMC_MAX_ERROR_LOG_SIZE</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_L3_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_HPC_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_QUAD_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
     </attribute>
     <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -1256,15 +1349,6 @@
     </attribute>
     <attribute>
       <id>STOP_LEVELS_DISABLED</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1370,6 +1454,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2216,6 +2303,9 @@
       <default>OCC</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
     <id>unit-occ-power10</id>
     <parent>unit</parent>
   </targetType>
@@ -2227,9 +2317,6 @@
     <attribute>
       <default>OCC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
     </attribute>
     <id>unit-occ-power9</id>
     <parent>unit</parent>
