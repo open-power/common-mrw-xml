@@ -526,7 +526,7 @@
       <id>FREQ_CORE_BOOT_MHZ</id>
     </attribute>
     <attribute>
-      <id>I2C_BUS_DIV_REF</id>
+      <id>SPI_BUS_DIV_REF</id>
     </attribute>
     <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
