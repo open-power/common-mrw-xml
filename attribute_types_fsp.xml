@@ -821,5 +821,59 @@
     <writeable/>
     <fspOnly/>
 </attribute>
+<attribute>
+    <id>ICACHE_SIZE</id>
+    <description>The instruction cache size - for modules only</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+<attribute>
+    <id>DATA_CACHE_SIZE</id>
+    <description>The data cache size - for modules only</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+<attribute>
+    <id>L2_CACHE_SIZE</id>
+    <description>The L2 cache size - for modules only</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+<attribute>
+    <id>L3_CACHE_SIZE</id>
+    <description>The L3 cache size - for modules only</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+<attribute>
+    <id>SYSTEM_FAMILY</id>
+    <description>The System Family type</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
+<attribute>
+    <id>THREAD_COUNT</id>
+    <description>The thread count</description>
+    <simpleType>
+        <uint8_t/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>
+</attribute>
 
 </attributes>
