@@ -496,6 +496,10 @@
 			<name>SAS</name>
 			<value>13</value>
 		</enumerator>		
+		<enumerator>
+			<name>INTERNAL CABLE</name>
+			<value>14</value>
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>	
 	<enumerationType>
@@ -588,7 +592,24 @@
 			<value>2</value>
 		</enumerator>			
 		<default>NA</default>
-	</enumerationType>					
+	</enumerationType>		
+	<enumerationType>
+		<id>SPI_CONNECTION_TYPE</id>
+		<description>Type of SPI connection</description>
+		<enumerator>
+			<name>NA</name>
+			<value>0</value>
+		</enumerator>
+		<enumerator>
+			<name>CFAM</name>
+			<value>1</value>
+		</enumerator>
+		<enumerator>
+			<name>PIB</name>
+			<value>2</value>
+		</enumerator>			
+		<default>NA</default>
+	</enumerationType>							
 	<enumerationType>
 		<id>VPD_TYPE</id>
 		<description>Types of VPD</description>
@@ -1591,6 +1612,19 @@
 		<simpleType>
 			<enumeration>
 				<id>I2C_CONNECTION_TYPE</id>
+				<default>NA</default>
+			</enumeration>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable/>
+		<writeable/>
+	</attribute>		
+	<attribute>
+		<id>SPI_CONNECTION_TYPE</id>
+		<description>Type of SPI connection</description>
+		<simpleType>
+			<enumeration>
+				<id>SPI_CONNECTION_TYPE</id>
 				<default>NA</default>
 			</enumeration>
 		</simpleType>

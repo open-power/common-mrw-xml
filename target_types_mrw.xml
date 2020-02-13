@@ -1,5 +1,4 @@
 <targetTypes>
-
 	<targetType>
 		<id>base</id>
 		<attribute>
@@ -1629,6 +1628,10 @@
 			<id>SPI_PORT</id>
 			<default>0x00</default>
 		</attribute>
+		<attribute>
+			<id>SPI_CONNECTION_TYPE</id>
+			<default>CFAM</default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>unit-avs-master</id>
@@ -3134,6 +3137,10 @@
 			<id>BUS_WIDTH</id>
 			<default>2</default>
 		</attribute>		
+		<attribute>
+			<id>SPI_CONNECTION_TYPE</id>
+			<default>CFAM</default>
+		</attribute>		
 	</targetType>	
 	<targetType>
 		<id>AVS</id>
@@ -4055,8 +4062,31 @@
 <targetType>
     <id>chip-processor-power10</id>
     <parent>chip-processor</parent>
+    <attribute>
+        <id>ICACHE_SIZE</id>
+        <default>32</default>
+    </attribute>    
+    <attribute>
+        <id>DATA_CACHE_SIZE</id>
+        <default>32</default>
+    </attribute>    
+    <attribute>
+        <id>L2_CACHE_SIZE</id>
+        <default>32</default>
+    </attribute>    
+    <attribute>
+        <id>L3_CACHE_SIZE</id>
+        <default>32</default>
+    </attribute>    
+    <attribute>
+        <id>SYSTEM_TYPE</id>
+        <default>32</default>
+    </attribute>    
+    <attribute>
+        <id>THREAD_COUNT</id>
+        <default>32</default>
+    </attribute>    
 </targetType> 
-
 
 <!-- MCA
      Nimbus : 2 MCAs under each MCS (total of 8 per chip)
