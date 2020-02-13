@@ -9,6 +9,9 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <id>CLASS</id>
     </attribute>
     <attribute>
@@ -67,6 +70,10 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>affinity:sys-0/node-0/bmc-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <default>AST2500</default>
       <id>MODEL</id>
     </attribute>
@@ -94,6 +101,10 @@
     <parent>sp</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <default>affinity:sys-0/node-0/bmc-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
     <attribute>
       <default>AST2600</default>
       <id>MODEL</id>
@@ -353,7 +364,16 @@
       <id>PROC_VRM_VOFFSET_UV</id>
     </attribute>
     <attribute>
+      <id>AVSBUS_BUSNUM</id>
+    </attribute>
+    <attribute>
       <id>AVSBUS_FREQUENCY</id>
+    </attribute>
+    <attribute>
+      <id>AVSBUS_RAIL</id>
+    </attribute>
+    <attribute>
+      <id>EXTERNAL_VRM_STEPSIZE</id>
     </attribute>
     <attribute>
       <id>EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
@@ -497,13 +517,16 @@
       <id>DCADJ_TARGET_OVERRIDE</id>
     </attribute>
     <attribute>
+      <id>LPC_CONSOLE_CNFG</id>
+    </attribute>
+    <attribute>
       <id>FREQ_CORE_FLOOR_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
     </attribute>
     <attribute>
-      <id>I2C_BUS_DIV_REF</id>
+      <id>SPI_BUS_DIV_REF</id>
     </attribute>
     <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
@@ -582,112 +605,6 @@
     </attribute>
     <attribute>
       <id>EEPROM_SBE_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x3</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x3</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
     <attribute>
       <id>FSP_BAR_SIZE</id>
@@ -1207,6 +1124,10 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>affinity:sys-0</default>
+      <id>AFFINITY_PATH</id>
+    </attribute>
+    <attribute>
       <id>ASYNC_NEST_FREQ_MHZ</id>
     </attribute>
     <attribute>
@@ -1280,13 +1201,100 @@
       <id>EARLY_TESTCASES_ISTEP</id>
     </attribute>
     <attribute>
+      <id>ADC_CHANNEL_FUNC_IDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GAINS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_GNDS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_OFFSETS</id>
+    </attribute>
+    <attribute>
+      <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
+    </attribute>
+    <attribute>
       <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_MODES</id>
+    </attribute>
+    <attribute>
+      <id>APSS_GPIO_PORT_PINS</id>
     </attribute>
     <attribute>
       <id>BMC_MAX_ERROR_LOG_SIZE</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_L3_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_HPC_BULK_POWER_LIMIT_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_PROC_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_QUAD_WEIGHT</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -1328,6 +1336,9 @@
       <id>SPIPSS_FREQUENCY</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+    </attribute>
+    <attribute>
       <id>STOP_LEVELS_SUPPORTED</id>
     </attribute>
     <attribute>
@@ -1347,6 +1358,9 @@
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_GRANULARITY</id>
+    </attribute>
+    <attribute>
+      <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
@@ -1572,12 +1586,6 @@
     </attribute>
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
-    </attribute>
-    <attribute>
-      <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    </attribute>
-    <attribute>
-      <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
     </attribute>
     <attribute>
       <id>FREQ_PB_MHZ</id>
@@ -2295,6 +2303,9 @@
       <default>OCC</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <id>IPMI_SENSORS</id>
+    </attribute>
     <id>unit-occ-power10</id>
     <parent>unit</parent>
   </targetType>
@@ -2306,9 +2317,6 @@
     <attribute>
       <default>OCC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
     </attribute>
     <id>unit-occ-power9</id>
     <parent>unit</parent>

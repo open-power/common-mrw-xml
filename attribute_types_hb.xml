@@ -356,6 +356,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Defines the AVSBus (0, 1 or 2) which has the indicated rail VRM [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO Producer:Machine Readable Workbook Consumers: p10_set_evid; p10_set_voltage (tool) -&gt; Global Pstate Parameter Block (GPPB) for PGPE; OCC Pstate Parameter Block OCC *MOST* systems use Bus 0 for VDD, Bus 1 for VCS, Bus 2 for VIO and VDN. If is not the case, the value must be appropriately set by the platform (eg MRW or equivalent)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_AVSBUS_BUSNUM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>AVSBUS_BUSNUM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>AVSBus Clock Frequency (binary in KHz) Consumer: p10_ocb_init.C Overridden by the Machine Readable Workbook. If default of 0 is read, HWP will set AVSBus frequency to 1MHz.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AVSBUS_FREQUENCY</id>
@@ -366,6 +382,38 @@
     <readable />
     <simpleType>
       <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Defines the AVSBus rail selector number (0 - 15) for the VRM on the bus by ATTR_AVSBUS_BUSNUM[x]. [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO Producer:Machine Readable Workbook Consumers: p10_set_evid; p10_set_voltage (tool) -&gt; Global Pstate Parameter Block (GPPB) for PGPE OCC Pstate Parameter Block OCC *MOST* systems use Bus 0 for VDD, Bus 1 for VCS, Bus 2 for VIO and VDN. If is not the case, the value must be appropriately set by the platform (eg or equivalent)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_AVSBUS_RAIL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>AVSBUS_RAIL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>EXTERNAL_VRM_STEPSIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint32_t>
+        <default>0x00</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -485,9 +533,26 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t />
+      <uint32_t>
+        <default>0x1000</default>
+      </uint32_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>Time to delay before powering off the MMA due to the lack of MMA instructions. Time = 1ms * 2**ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS. Valid values of 0x00 - 0x17 to yield times from 1ms to 2.3 hours -: 0x00 - 1ms ... 0x01 - 1 second (default) ... 0x17 - 1 day 0x18 - 0xFD - Reserved (maps as 0x17) 0xFE - every QME FIT timer interrupt (~250us) 0xFF - no power off of MMA (QME Hcode still runs; different behavior ATTR_SYSTEM_MMA_POWEROFF_DISABLE) Producer: Machine Readable Workbook Consumer: QME Hcode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xA</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Defines the STOP levels supported by the Hcode in the present driver. Represented as bit vector where bit 0 = STOP0; bit 1 = STOP 1, ..., bit 15 = STOP15.</description>
@@ -631,6 +696,20 @@
         <default>0x00</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_HW_MIRRORING_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_HW_MIRRORING_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
@@ -1437,6 +1516,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates if LPC console is enabled on system</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_LPC_CONSOLE_CNFG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>LPC_CONSOLE_CNFG</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLE</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of the processor refclock in KHz. Provided by the Machine Readable Workbook. This can be overridden to adjust the refclock frequency.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_CP_REFCLOCK_KHZ</id>
@@ -1590,18 +1685,16 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Ref clock I2C bus divider consumed by code running out of OTPROM</description>
+    <description>Ref clock SPI bus divider consumed by code running out of OTPROM</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_I2C_BUS_DIV_REF</id>
+      <id>ATTR_SPI_BUS_DIV_REF</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>I2C_BUS_DIV_REF</id>
+    <id>SPI_BUS_DIV_REF</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint16_t>
-        <default>0x0003</default>
-      </uint16_t>
+      <uint16_t />
     </simpleType>
     <writeable />
   </attribute>
@@ -1752,6 +1845,7 @@
     <simpleType>
       <uint64_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
@@ -2641,36 +2735,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>NO_SWAP</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>LITTLE_ENDIAN</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Safe mode throttle value for numerator cfg_nm_n_per_port Set to below optimum value/ rate. On a per port basis Also used for emergency mode throttle MBA_FARB4Q_EMERGENCY_N Used to thermally protect the system in all supported environmental conditions when OCC is not functional</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
@@ -3167,6 +3231,16 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Hierarchical path to the target with respect to logical affinity</description>
+    <id>AFFINITY_PATH</id>
+    <mrwRequired />
+    <nativeType>
+      <name>EntityPath</name>
+    </nativeType>
+    <persistency>non-volatile</persistency>
+    <readable />
+  </attribute>
+  <attribute>
     <description>System attribute. If all MCS chiplets are in an interleaving group (1=true, 0=false). - If true the SMP fabric is setup in normal mode and multiple MCSs are grouped (disallowing systems with memory only under 1 MCS (i.e. systems with a single C-DIMM)) - If false the SMP fabric is setup in checkerboard mode. Provided by the Machine Readable Workbook. This attribute is based on Machine-Type-Model (MTM) and is setup by the service processor.</description>
     <id>ALL_MCS_IN_INTERLEAVING_GROUP</id>
     <persistency>non-volatile</persistency>
@@ -3190,7 +3264,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Memory AVDD voltage domain ID. All memory buffers in the same AVDD voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by genHwsvMrwXml.pl</description>
+    <description>Memory AVDD voltage domain ID. All memory buffers in the same AVDD voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by MRW processing scripts.</description>
     <id>AVDD_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -3967,14 +4041,14 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Designates the speed at which a given I2C bus should run. Creator: MRW Purpose: Used by FW to know the fastest possible bus speed that all of the devices on a given bus are able to use. Data Format: 4x13 array of uint16_t values. The first index indicates the engine number of the bus. The second index indicates the port number of the bus. The value in the array is the I2C bus speed used for that engine/port combination in KHz.</description>
+    <description>Designates the speed at which a given I2C bus should run. Creator: MRW Purpose: Used by FW to know the fastest possible bus speed that all of the devices on a given bus are able to use. Data Format: 4x16 array of uint16_t values. The first index indicates the engine number of the bus. The second index indicates the port number of the bus. The value in the array is the I2C bus speed used for that engine/port combination in KHz.</description>
     <id>I2C_BUS_SPEED_ARRAY</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>4,13</array>
+      <array>4,16</array>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0, 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -4793,7 +4867,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Nest VCS Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
+    <description>Nest VCS Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the MRW processing scripts.</description>
     <id>NEST_VCS_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4804,7 +4878,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Nest VDDR Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
+    <description>Nest VDDR Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the MRW processing scripts.</description>
     <id>NEST_VDDR_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4815,7 +4889,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Nest VDD Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
+    <description>Nest VDD Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the MRW processing scripts.</description>
     <id>NEST_VDD_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4826,7 +4900,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Nest VDN Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
+    <description>Nest VDN Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the MRW processing scripts.</description>
     <id>NEST_VDN_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4837,7 +4911,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Nest VIO Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the genHwsvMrwXml.pl</description>
+    <description>Nest VIO Voltage Rail ID. The ID is an arbitrary value and is needed as correlation token between HB and HWSV. It will be generated by the MRW processing scripts.</description>
     <id>NEST_VIO_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -4965,6 +5039,7 @@
     <readable />
     <simpleType>
       <enumeration>
+        <default>PHYP</default>
         <id>PAYLOAD_KIND</id>
       </enumeration>
     </simpleType>
@@ -5635,7 +5710,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Memory VCS voltage domain ID. All memory buffers in the same VCS voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by genHwsvMrwXml.pl</description>
+    <description>Memory VCS voltage domain ID. All memory buffers in the same VCS voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by MRW processing scripts.</description>
     <id>VCS_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -5646,7 +5721,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Memory VDD voltage domain ID. All memory buffers in the same VDD voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by genHwsvMrwXml.pl</description>
+    <description>Memory VDD voltage domain ID. All memory buffers in the same VDD voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by MRW processing scripts.</description>
     <id>VDD_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -5657,7 +5732,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Memory VPP voltage domain ID. All memory buffers in the same VPP voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by genHwsvMrwXml.pl</description>
+    <description>Memory VPP voltage domain ID. All memory buffers in the same VPP voltage domain will share the same ID. IDs are arbitrarily assigned, used for correlation between HB + HWSV, and are generated by MRW processing scripts.</description>
     <id>VPP_ID</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -6366,6 +6441,15 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Weight factor (in 1/10ths) for each L3 DTS to calculate a core temperature.</description>
+    <id>OPEN_POWER_L3_WEIGHT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Memory controller temperature where an error will occur in degrees C</description>
     <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
     <persistency>non-volatile</persistency>
@@ -6503,7 +6587,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Weight factor (in 1/10ths) for each quad (cache) DTS to calculate a core temperature.</description>
+    <description>Weight factor (in 1/10ths) for each quad (racetrack) DTS to calculate a core temperature.</description>
     <id>OPEN_POWER_QUAD_WEIGHT</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -6951,6 +7035,22 @@
     <id>MSS_INTERLEAVE_GRANULARITY</id>
   </enumerationType>
   <enumerationType>
+    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW.</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>REQUIRED</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>REQUESTED</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>MRW_HW_MIRRORING_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Processor fabric SL domain (proxime) configuration.</description>
     <enumerator>
       <name>HEMISPHERE</name>
@@ -7146,11 +7246,11 @@
     </enumerator>
     <enumerator>
       <name>RCS_ASYNC_OUT</name>
-      <value>0x1</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>RCS_SYNC_OUT</name>
-      <value>0x2</value>
+      <value>0x1</value>
     </enumerator>
     <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
   </enumerationType>
@@ -7162,11 +7262,11 @@
     </enumerator>
     <enumerator>
       <name>RCS_ASYNC_OUT</name>
-      <value>0x1</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>RCS_SYNC_OUT</name>
-      <value>0x2</value>
+      <value>0x1</value>
     </enumerator>
     <id>CLOCK_MUX0B_RCS_PLL_INPUT</id>
   </enumerationType>
@@ -7178,11 +7278,11 @@
     </enumerator>
     <enumerator>
       <name>RCS_ASYNC_OUT</name>
-      <value>0x1</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>RCS_SYNC_OUT</name>
-      <value>0x2</value>
+      <value>0x1</value>
     </enumerator>
     <id>CLOCK_MUX0C_RCS_PLL_INPUT</id>
   </enumerationType>
@@ -7194,11 +7294,11 @@
     </enumerator>
     <enumerator>
       <name>RCS_ASYNC_OUT</name>
-      <value>0x1</value>
+      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>RCS_SYNC_OUT</name>
-      <value>0x2</value>
+      <value>0x1</value>
     </enumerator>
     <id>CLOCK_MUX0D_RCS_PLL_INPUT</id>
   </enumerationType>
@@ -7282,11 +7382,11 @@
     </enumerator>
     <enumerator>
       <name>PLLNESTFLT</name>
-      <value>1</value>
+      <value>2</value>
     </enumerator>
     <enumerator>
       <name>PLLIOFLT</name>
-      <value>2</value>
+      <value>1</value>
     </enumerator>
     <id>CLOCK_MUX12_OMI_LCPLL_INPUT</id>
   </enumerationType>
@@ -7298,11 +7398,11 @@
     </enumerator>
     <enumerator>
       <name>PLLNESTFLT</name>
-      <value>1</value>
+      <value>2</value>
     </enumerator>
     <enumerator>
       <name>PLLIOFLT</name>
-      <value>2</value>
+      <value>1</value>
     </enumerator>
     <id>CLOCK_MUX13_OPT_133_SOURCE_INPUT</id>
   </enumerationType>
@@ -7326,11 +7426,11 @@
     </enumerator>
     <enumerator>
       <name>MUX14</name>
-      <value>1</value>
+      <value>2</value>
     </enumerator>
     <enumerator>
       <name>MUX13</name>
-      <value>2</value>
+      <value>1</value>
     </enumerator>
     <id>CLOCK_MUX_IOHS_LCPLL_INPUT</id>
   </enumerationType>
@@ -7342,11 +7442,11 @@
     </enumerator>
     <enumerator>
       <name>PLLIOSSFLT</name>
-      <value>1</value>
+      <value>2</value>
     </enumerator>
     <enumerator>
       <name>MUX0D</name>
-      <value>2</value>
+      <value>1</value>
     </enumerator>
     <id>CLOCK_MUX23_PCI_INPUT</id>
   </enumerationType>
@@ -7358,11 +7458,11 @@
     </enumerator>
     <enumerator>
       <name>PCI_REFCLOCK0</name>
-      <value>1</value>
+      <value>2</value>
     </enumerator>
     <enumerator>
       <name>PCI_REFCLOCK1</name>
-      <value>2</value>
+      <value>1</value>
     </enumerator>
     <id>CLOCK_MUX_PCI_LCPLL_INPUT</id>
   </enumerationType>
@@ -7571,6 +7671,18 @@
     <id>DCADJ_BYPASS</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates if LPC console is enabled on system</description>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <id>LPC_CONSOLE_CNFG</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip.</description>
     <enumerator>
       <name>1333</name>
@@ -7637,6 +7749,46 @@
       <value>2</value>
     </enumerator>
     <id>REQUIRED_SYNCH_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Bit vector of dynamic init features which are applied when customizing the IPL image. Individual features are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple features can be selected at once.</description>
+    <enumerator>
+      <name>CACHE_CONTAINED</name>
+      <value>0x8000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>CHIP_CONTAINED</name>
+      <value>0x4000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>COMMON_CONTAINED</name>
+      <value>0x2000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>HOSTBOOT</name>
+      <value>0x1000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>L2RC_HIGH_JITTER</name>
+      <value>0x0800000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>RUNN_SRESET_T0</name>
+      <value>0x0400000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>RUNN_SRESET_T1</name>
+      <value>0x0200000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>RUNN_SRESET_T2</name>
+      <value>0x0100000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>RUNN_SRESET_T3</name>
+      <value>0x0080000000000000</value>
+    </enumerator>
+    <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
   <enumerationType>
     <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
@@ -8069,30 +8221,6 @@
       <value>2</value>
     </enumerator>
     <id>MSS_OCMB_ENTERPRISE_POLICY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Controls whether or not the first and second half of MMIO transactions are swapped before and after mmio accesses to the buffer.</description>
-    <enumerator>
-      <name>SWAP</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>NO_SWAP</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_EXP_STRUCT_MMIO_WORD_SWAP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <enumerator>
-      <name>LITTLE_ENDIAN</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>BIG_ENDIAN</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_EXP_OMI_CFG_ENDIAN_CTRL</id>
   </enumerationType>
   <enumerationType>
     <description>The lane width of the OpenCapi channel</description>
