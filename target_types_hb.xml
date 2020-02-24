@@ -2347,9 +2347,6 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
-    <attribute>
-      <id>OMI_DL_PREIPL_PRBS_TIME</id>
-    </attribute>
     <id>unit-omi</id>
     <parent>unit</parent>
   </targetType>
