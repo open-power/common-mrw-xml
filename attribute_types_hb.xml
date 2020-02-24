@@ -2126,21 +2126,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The time to send pre-ipl PRBS in ms.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_PREIPL_PRBS_TIME</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_DL_PREIPL_PRBS_TIME</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x100</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>List of memory frequencies supported by the current system.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
@@ -2641,7 +2626,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to be at or under the power limit Per DIMM basis KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW: OCMB+DRAM thermal power limit per DIMM = 32-47</description>
+    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to meet the thermal power per DIMM limit Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW: thermal power limit DDIMM: Total OCMB+DRAM power limit per DDIMM non-DDIMM: VMEM+VPP power limit per DIMM</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_OCMB_THERMAL_MEMORY_POWER_LIMIT</id>
       <macro>DIRECT</macro>
@@ -2657,7 +2642,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to get the OCMB+DRAM power curve for each DIMM Per DIMM basis KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: OCMB+DRAM thermal power limit per DIMM = 32-47</description>
+    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: DIMM power slope DDIMM: Total OCMB+DRAM power slope per DDIMM non-DDIMM: VMEM+VPP power slope per DIMM</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_OCMB_PWR_SLOPE</id>
       <macro>DIRECT</macro>
@@ -2673,7 +2658,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to get the OCMB+DRAM power curve for each DIMM Per DIMM basis KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: OCMB+DRAM thermal power limit per DIMM = 32-47</description>
+    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: DIMM power intercept DDIMM: Total OCMB+DRAM power intercept per DDIMM non-DDIMM: VMEM+VPP power intercept per DIMM</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_OCMB_PWR_INTERCEPT</id>
       <macro>DIRECT</macro>
@@ -2689,7 +2674,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Machine Readable Workbook Power Curve Intercept and limit for DIMM Used to get the PMIC power curve and limit for each DIMM Per DIMM basis KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-39): Current limit (dA) VALUE (bits 40-51): Current slope (cA/utilization) VALUE (bits 52-63): Current intercept (cA)</description>
+    <description>Machine Readable Workbook Current Curve Intercept and limit for DIMM Used to calculate throttles to meet regulator current per DIMM limit Per DIMM basis, uses first matching KEY entry For DDIMM, use PMIC SW output that provides worst case throttling KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-39): Current limit (dA) DDIMM: PMIC output current limit per DDIMM non-DDIMM: VMEM regulator current limit per DIMM VALUE (bits 40-51): Current slope (cA/utilization) DDIMM: PMIC output current slope per DDIMM non-DDIMM: VMEM regulator current slope per DIMM VALUE (bits 52-63): Current intercept (cA) DDIMM: PMIC output current intercept per DDIMM non-DDIMM: VMEM regulator current intercept per DIMM</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_OCMB_CURRENT_CURVE_WITH_LIMIT</id>
       <macro>DIRECT</macro>
@@ -8381,11 +8366,11 @@
       <value>0</value>
     </enumerator>
     <enumerator>
-      <name>FORCE_ENTERPRISE</name>
+      <name>REQUIRE_ENTERPRISE</name>
       <value>1</value>
     </enumerator>
     <enumerator>
-      <name>FORCE_COMMODITY</name>
+      <name>FORCE_NONENTERPRISE</name>
       <value>2</value>
     </enumerator>
     <id>MSS_OCMB_ENTERPRISE_POLICY</id>
