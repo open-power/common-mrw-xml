@@ -2033,7 +2033,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t />
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -5422,18 +5424,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The amount of SMF memory requested by the user, in bytes (read from NVRAM). The minimum non-zero amount is 256MB.</description>
-    <id>SMF_MEM_AMT_REQUESTED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t>
-        <default>0x0</default>
-      </uint64_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <complexType>
       <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only. Default values match OpenBMC implementation.</description>
       <field>
@@ -7940,6 +7930,10 @@
     <enumerator>
       <name>RUNN_USE_QME_TB_SRC</name>
       <value>0x0000000000002000</value>
+    </enumerator>
+    <enumerator>
+      <name>HV_INITS</name>
+      <value>0x0000000000001000</value>
     </enumerator>
     <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
