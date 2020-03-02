@@ -801,19 +801,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_X_MFG_CHK</id>
@@ -887,6 +874,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>True or false whether row repair is supported MRW attribute</description>
     <hwpfToHbAttrMap>
       <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
@@ -909,487 +909,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>EI_BUS_TX_MSBSWAP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Axone only - setup clock mux settings for TOD Refclk input 0b0 = 16 MHz I/O Filter PLL Output 0b1 = 32 MHz LPC reference clock</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CLOCK_PLL_MUX_TOD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CLOCK_PLL_MUX_TOD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>setup clock mux settings</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CLOCK_PLL_MUX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CLOCK_PLL_MUX</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Clock Mux#0 settings</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CLOCK_PLL_MUX0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CLOCK_PLL_MUX0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Ref clock I2C bus divider consumed by code running out of OTPROM</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_I2C_BUS_DIV_REF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>I2C_BUS_DIV_REF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>0x0003</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Select Nest I2C and pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_NEST_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>NEST_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x05</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>System specific value for Filter PLL bucket, provided by MRW. If non-zero, this value will directly set ATTR_FILTER_PLL_BUCKET (used by SBE to select bucket). If zero, VPD MK content will set ATTR_FILTER_PLL_BUCKET.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_FILTER_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_FILTER_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>EQ boot frequency multiplier The equation for this setting is BOOT_FREQ(MHz)/(REFCLK/DPLL_DIVIDER) where the DPLL DIVIDER is planned for being set to 8. The value needs to be loaded right justified. The value's right most 11 bits (becoming 0:10) is written as bits 17:27 of PPM DPLL freq ctrl register. Bits 0:7 become DPLL.MULT_INTG(0:7) and bits 8:10 are DPLL.MULT_FRAC(0:2). As an example: 3000MHz / (133MHz/8) = 3000 / 16.667 = ~180 =&gt; 0xB4</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BOOT_FREQ_MULT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>BOOT_FREQ_MULT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>150</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>EQ boot frequency</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BOOT_FREQ_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>BOOT_FREQ_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>2400</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BRANCH_PIBMEM_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>BRANCH_PIBMEM_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>I2C Bus speed based on nest freq, ref clock</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_I2C_BUS_DIV_NEST</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>I2C_BUS_DIV_NEST</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_LEN_OF_SEEPROM_DATA</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>LEN_OF_SEEPROM_DATA</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MB_BIT_RATE_DIVISOR_PLL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MB_BIT_RATE_DIVISOR_PLL</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MB_BIT_RATE_DIVISOR_REFCLK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MB_BIT_RATE_DIVISOR_REFCLK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>133</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Ring image for pb_bndy_dmipll ring creator: platform firmware notes:</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PB_BNDY_DMIPLL_DATA</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PB_BNDY_DMIPLL_DATA</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Ring image for pb_bndy_dmipll ring for DC cal creator: platform firmware notes:</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PB_BNDY_DMIPLL_FOR_DCCAL_DATA</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PB_BNDY_DMIPLL_FOR_DCCAL_DATA</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Ring image for perv_bndy_pll ring containing filter plls and xb_pll,nest_pll creator: platform firmware notes:</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PERV_BNDY_PLL_DATA</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PERV_BNDY_PLL_DATA</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_SBE_MASTER_CHIP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_SBE_MASTER_CHIP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_START_PIBMEM_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>START_PIBMEM_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_START_SEEPROM_ADDR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>START_SEEPROM_ADDR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WAIT_N0</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WAIT_N0</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WAIT_N1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WAIT_N1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WAIT_N2</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WAIT_N2</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>FIXME - NEEDS DESCRIPTION</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WAIT_N3</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WAIT_N3</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Holds the state of Security Access Bit (SAB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SECURITY_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SECURITY_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>To disable force pfet off control from fuse status</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PFET_OFF_CONTROLS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PFET_OFF_CONTROLS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Holds Obus ratio value 0b00 Normal speed. 0b01 Half speed.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OBUS_RATIO_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OBUS_RATIO_VALUE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>To skip the locking sequence and check for lock of CP filter PLL</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CP_FILTER_BYPASS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CP_FILTER_BYPASS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>To skip the locking sequence and check for lock of SS filter PLL</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SS_FILTER_BYPASS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SS_FILTER_BYPASS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>To skip the locking sequence and check for lock of IO filter PLL</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_FILTER_BYPASS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_FILTER_BYPASS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Skip locking sequence and check for lock of DPLL</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DPLL_BYPASS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DPLL_BYPASS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Skip the locking sequence and check for lock of NEST/MEM/XBUS/OBUS/PCI PLLs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_NEST_MEM_X_O_PCI_BYPASS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>NEST_MEM_X_O_PCI_BYPASS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines system specific value of processor refclock receiver termination</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CP_REFCLOCK_RCVR_TERM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CP_REFCLOCK_RCVR_TERM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines system specific value of PCI refclock receiver termination</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_REFCLOCK_RCVR_TERM</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_REFCLOCK_RCVR_TERM</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Sector buffer strength</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SECTOR_BUFFER_STRENGTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SECTOR_BUFFER_STRENGTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>enable the pulse mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PULSE_MODE_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PULSE_MODE_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>value for pulse mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PULSE_MODE_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PULSE_MODE_VALUE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -2258,6 +1777,487 @@
       <uint64_t>
         <default>0</default>
       </uint64_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Axone only - setup clock mux settings for TOD Refclk input 0b0 = 16 MHz I/O Filter PLL Output 0b1 = 32 MHz LPC reference clock</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CLOCK_PLL_MUX_TOD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CLOCK_PLL_MUX_TOD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>setup clock mux settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CLOCK_PLL_MUX</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CLOCK_PLL_MUX</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Clock Mux#0 settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CLOCK_PLL_MUX0</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CLOCK_PLL_MUX0</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Ref clock I2C bus divider consumed by code running out of OTPROM</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_BUS_DIV_REF</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_BUS_DIV_REF</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x0003</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Select Nest I2C and pll setting from one of the supported frequencies</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_NEST_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>NEST_PLL_BUCKET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x05</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>System specific value for Filter PLL bucket, provided by MRW. If non-zero, this value will directly set ATTR_FILTER_PLL_BUCKET (used by SBE to select bucket). If zero, VPD MK content will set ATTR_FILTER_PLL_BUCKET.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_FILTER_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_FILTER_PLL_BUCKET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>EQ boot frequency multiplier The equation for this setting is BOOT_FREQ(MHz)/(REFCLK/DPLL_DIVIDER) where the DPLL DIVIDER is planned for being set to 8. The value needs to be loaded right justified. The value's right most 11 bits (becoming 0:10) is written as bits 17:27 of PPM DPLL freq ctrl register. Bits 0:7 become DPLL.MULT_INTG(0:7) and bits 8:10 are DPLL.MULT_FRAC(0:2). As an example: 3000MHz / (133MHz/8) = 3000 / 16.667 = ~180 =&gt; 0xB4</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_BOOT_FREQ_MULT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>BOOT_FREQ_MULT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>150</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>EQ boot frequency</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_BOOT_FREQ_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>BOOT_FREQ_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>2400</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_BRANCH_PIBMEM_ADDR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>BRANCH_PIBMEM_ADDR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>I2C Bus speed based on nest freq, ref clock</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_BUS_DIV_NEST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_BUS_DIV_NEST</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_LEN_OF_SEEPROM_DATA</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>LEN_OF_SEEPROM_DATA</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MB_BIT_RATE_DIVISOR_PLL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MB_BIT_RATE_DIVISOR_PLL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MB_BIT_RATE_DIVISOR_REFCLK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MB_BIT_RATE_DIVISOR_REFCLK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>133</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Ring image for pb_bndy_dmipll ring creator: platform firmware notes:</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PB_BNDY_DMIPLL_DATA</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PB_BNDY_DMIPLL_DATA</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Ring image for pb_bndy_dmipll ring for DC cal creator: platform firmware notes:</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PB_BNDY_DMIPLL_FOR_DCCAL_DATA</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PB_BNDY_DMIPLL_FOR_DCCAL_DATA</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Ring image for perv_bndy_pll ring containing filter plls and xb_pll,nest_pll creator: platform firmware notes:</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PERV_BNDY_PLL_DATA</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PERV_BNDY_PLL_DATA</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_SBE_MASTER_CHIP</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_SBE_MASTER_CHIP</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_START_PIBMEM_ADDR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>START_PIBMEM_ADDR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_START_SEEPROM_ADDR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>START_SEEPROM_ADDR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WAIT_N0</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WAIT_N0</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WAIT_N1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WAIT_N1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WAIT_N2</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WAIT_N2</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>FIXME - NEEDS DESCRIPTION</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WAIT_N3</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WAIT_N3</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Holds the state of Security Access Bit (SAB)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SECURITY_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SECURITY_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>To disable force pfet off control from fuse status</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PFET_OFF_CONTROLS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PFET_OFF_CONTROLS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Holds Obus ratio value 0b00 Normal speed. 0b01 Half speed.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OBUS_RATIO_VALUE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OBUS_RATIO_VALUE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>To skip the locking sequence and check for lock of CP filter PLL</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CP_FILTER_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CP_FILTER_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>To skip the locking sequence and check for lock of SS filter PLL</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SS_FILTER_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SS_FILTER_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>To skip the locking sequence and check for lock of IO filter PLL</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_FILTER_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_FILTER_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Skip locking sequence and check for lock of DPLL</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DPLL_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DPLL_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Skip the locking sequence and check for lock of NEST/MEM/XBUS/OBUS/PCI PLLs</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_NEST_MEM_X_O_PCI_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>NEST_MEM_X_O_PCI_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Defines system specific value of processor refclock receiver termination</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CP_REFCLOCK_RCVR_TERM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CP_REFCLOCK_RCVR_TERM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Defines system specific value of PCI refclock receiver termination</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_REFCLOCK_RCVR_TERM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_REFCLOCK_RCVR_TERM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Sector buffer strength</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SECTOR_BUFFER_STRENGTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SECTOR_BUFFER_STRENGTH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>enable the pulse mode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PULSE_MODE_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PULSE_MODE_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>value for pulse mode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PULSE_MODE_VALUE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PULSE_MODE_VALUE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -8010,46 +8010,6 @@
     <id>EI_BUS_TX_MSBSWAP</id>
   </enumerationType>
   <enumerationType>
-    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_SBE_MASTER_CHIP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines system specific value of processor refclock receiver termination</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FIFTY_OHM</name>
-      <value>1</value>
-    </enumerator>
-    <id>CP_REFCLOCK_RCVR_TERM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines system specific value of PCI refclock receiver termination</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>FIFTY_OHM</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>ONE_HUNDRED_OHM</name>
-      <value>3</value>
-    </enumerator>
-    <id>IO_REFCLOCK_RCVR_TERM</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
     <enumerator>
       <name>DISABLED</name>
@@ -8344,6 +8304,46 @@
       <value>0x1</value>
     </enumerator>
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Indicates if SBE on this chip is serving as hosboot drawer master</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>PROC_SBE_MASTER_CHIP</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines system specific value of processor refclock receiver termination</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FIFTY_OHM</name>
+      <value>1</value>
+    </enumerator>
+    <id>CP_REFCLOCK_RCVR_TERM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Defines system specific value of PCI refclock receiver termination</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>FIFTY_OHM</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>ONE_HUNDRED_OHM</name>
+      <value>3</value>
+    </enumerator>
+    <id>IO_REFCLOCK_RCVR_TERM</id>
   </enumerationType>
   <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
