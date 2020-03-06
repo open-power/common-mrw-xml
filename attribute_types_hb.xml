@@ -907,6 +907,76 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE MMIO0 BAR base address offset creator: platform consumer: p10_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 8:47 (excludes system/memory select/group/chip fields) Array index: PHB number (0:5)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>6</array>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE MMIO1 BAR base address offset creator: platform consumer: p10_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 8:47 (excludes system/memory select/group/chip fields) Array index: PHB number (0:5)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_MMIO_BAR1_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_MMIO_BAR1_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>6</array>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE PHB register space BAR base address offset creator: platform consumer: p10_setup_bars firmware notes: Attribute holds offset (relative to chip MMIO origin) to program into chip address range field of BAR -- RA bits 8:49 (excludes system/memory select/group/chip fields) Array index: PHB number (0:5)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_PHB_REGISTER_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_PHB_REGISTER_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>6</array>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE MMIO BAR size values creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) NOTE: supported MMIO BAR0/1 sizes are from 64KB-32PB NOTE: only supported PHB register size is 16KB</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_BAR_SIZE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_BAR_SIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Defines system specific value of SYS0 refclock receiver termination</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYS0_REFCLOCK_RCVR_TERM</id>
@@ -1679,7 +1749,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint16_t />
+      <uint16_t>
+        <default>0x41</default>
+      </uint16_t>
     </simpleType>
     <writeable />
   </attribute>
@@ -5223,7 +5295,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PCIE IOP lane configuration creator: platform consumer: proc_pcie_scominit firmware notes: Encoded PCIE IOP lane configuration</description>
+    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_CONFIG</id>
       <macro>DIRECT</macro>
@@ -7150,6 +7222,202 @@
     <id>FREQ_OMI_MHZ</id>
   </enumerationType>
   <enumerationType>
+    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
+    <enumerator>
+      <name>NO_FURCATION</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>BI_FURCATION</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>TRI_FURCATION</name>
+      <value>0x10</value>
+    </enumerator>
+    <id>PROC_PCIE_IOP_CONFIG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>PROC_PCIE_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>PCIE MMIO BAR size values creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) NOTE: supported MMIO BAR0/1 sizes are from 64KB-32PB NOTE: only supported PHB register size is 16KB</description>
+    <enumerator>
+      <name>32_PB</name>
+      <value>0x8000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>16_PB</name>
+      <value>0xC000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>8_PB</name>
+      <value>0xE000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>4_PB</name>
+      <value>0xF000000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>2_PB</name>
+      <value>0xF800000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>1_PB</name>
+      <value>0xFC00000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>512_TB</name>
+      <value>0xFE00000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>256_TB</name>
+      <value>0xFF00000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>128_TB</name>
+      <value>0xFF80000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>64_TB</name>
+      <value>0xFFC0000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>32_TB</name>
+      <value>0xFFE0000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>16_TB</name>
+      <value>0xFFF0000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>8_TB</name>
+      <value>0xFFF8000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>4_TB</name>
+      <value>0xFFFC000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>2_TB</name>
+      <value>0xFFFE000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>1_TB</name>
+      <value>0xFFFF000000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>512_GB</name>
+      <value>0xFFFF800000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>256_GB</name>
+      <value>0xFFFFC00000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>128_GB</name>
+      <value>0xFFFFE00000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>64_GB</name>
+      <value>0xFFFFF00000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>32_GB</name>
+      <value>0xFFFFF80000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>16_GB</name>
+      <value>0xFFFFFC0000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>8_GB</name>
+      <value>0xFFFFFE0000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>4_GB</name>
+      <value>0xFFFFFF0000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>2_GB</name>
+      <value>0xFFFFFF8000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>1_GB</name>
+      <value>0xFFFFFFC000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>512_MB</name>
+      <value>0xFFFFFFE000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>256_MB</name>
+      <value>0xFFFFFFF000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>128_MB</name>
+      <value>0xFFFFFFF800000000</value>
+    </enumerator>
+    <enumerator>
+      <name>64_MB</name>
+      <value>0xFFFFFFFC00000000</value>
+    </enumerator>
+    <enumerator>
+      <name>32_MB</name>
+      <value>0xFFFFFFFE00000000</value>
+    </enumerator>
+    <enumerator>
+      <name>16_MB</name>
+      <value>0xFFFFFFFF00000000</value>
+    </enumerator>
+    <enumerator>
+      <name>8_MB</name>
+      <value>0xFFFFFFFF80000000</value>
+    </enumerator>
+    <enumerator>
+      <name>4_MB</name>
+      <value>0xFFFFFFFFC0000000</value>
+    </enumerator>
+    <enumerator>
+      <name>2_MB</name>
+      <value>0xFFFFFFFFE0000000</value>
+    </enumerator>
+    <enumerator>
+      <name>1_MB</name>
+      <value>0xFFFFFFFFF0000000</value>
+    </enumerator>
+    <enumerator>
+      <name>512_KB</name>
+      <value>0xFFFFFFFFF8000000</value>
+    </enumerator>
+    <enumerator>
+      <name>256_KB</name>
+      <value>0xFFFFFFFFFC000000</value>
+    </enumerator>
+    <enumerator>
+      <name>128_KB</name>
+      <value>0xFFFFFFFFFE000000</value>
+    </enumerator>
+    <enumerator>
+      <name>64_KB</name>
+      <value>0xFFFFFFFFFF000000</value>
+    </enumerator>
+    <enumerator>
+      <name>16_KB</name>
+      <value>0xFFFFFFFFFFFFFFFF</value>
+    </enumerator>
+    <id>PROC_PCIE_BAR_SIZE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Defines system specific value of SYS0 refclock receiver termination</description>
     <enumerator>
       <name>NONE</name>
@@ -8706,7 +8974,7 @@
   </enumerationType>
   <enumerationType>
     <default>RAW</default>
-    <description>Enumeration indicating a target's eeprom content type. RAW - eeprom has no specified layout ISDIMM - uses standard JEDEC layout for DDR memory IBM_FRUVPD - uses ipz converged vpd layout with records/keywords for generic FRUs IBM_MVPD - use ipz converged vpd layout with records/keywords for processor modules DDIMM - uses Differential DIMM layout</description>
+    <description>Enumeration indicating a target's eeprom content type. RAW - eeprom has no specified layout ISDIMM - uses standard JEDEC layout for DDR memory IBM_FRUVPD - uses ipz converged vpd layout with records/keywords for generic FRUs IBM_MVPD - use ipz converged vpd layout with records/keywords for processor modules DDIMM - uses Differential DIMM layout SBE_BOOT_CODE - SBE code SBE_MEASUREMENT_CODE - Measurement code WOF_DATA - WOF data KEYSTORE - Keystore data</description>
     <enumerator>
       <name>RAW</name>
       <value>0</value>
@@ -8726,6 +8994,22 @@
     <enumerator>
       <name>DDIMM</name>
       <value>4</value>
+    </enumerator>
+    <enumerator>
+      <name>SBE_BOOT_CODE</name>
+      <value>5</value>
+    </enumerator>
+    <enumerator>
+      <name>SBE_MEASUREMENT_CODE</name>
+      <value>6</value>
+    </enumerator>
+    <enumerator>
+      <name>WOF_DATA</name>
+      <value>7</value>
+    </enumerator>
+    <enumerator>
+      <name>KEYSTORE</name>
+      <value>8</value>
     </enumerator>
     <id>EEPROM_CONTENT_TYPE</id>
   </enumerationType>
