@@ -1369,6 +1369,18 @@
       <id>PROC_EPS_TABLE_TYPE</id>
     </attribute>
     <attribute>
+      <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_MMIO_BAR1_BASE_ADDR_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_PHB_REGISTER_BASE_ADDR_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_BAR_SIZE</id>
+    </attribute>
+    <attribute>
       <id>SYS0_REFCLOCK_RCVR_TERM</id>
     </attribute>
     <attribute>
@@ -2433,6 +2445,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>PROC_PCIE_IOP_CONFIG</id>
+    </attribute>
+    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
@@ -2541,6 +2556,9 @@
     <attribute>
       <default>PHB</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_BAR_ENABLE</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
