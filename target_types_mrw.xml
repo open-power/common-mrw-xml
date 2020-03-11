@@ -1604,6 +1604,10 @@
 			<id>SPI_FUNCTION</id>
 			<default>NOT_DEFINED</default>
 		</attribute>
+		<attribute>
+			<id>SPI_CONNECTION_TYPE</id>
+			<default>CFAM</default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>unit-spi-slave</id>
@@ -1628,10 +1632,6 @@
 			<id>SPI_PORT</id>
 			<default>0x00</default>
 		</attribute>
-		<attribute>
-			<id>SPI_CONNECTION_TYPE</id>
-			<default>CFAM</default>
-		</attribute>		
 	</targetType>
 	<targetType>
 		<id>unit-avs-master</id>
@@ -5583,6 +5583,10 @@
 		<attribute>
 			<id>DIRECTION</id>
 		</attribute>
+		<attribute>
+			<id>SPI_CONNECTION_TYPE</id>
+			<default>CFAM</default>
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>dpss.unit-tach-slave</id>
@@ -5827,7 +5831,7 @@
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>		
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>apss.unit-uart-slave</id>
