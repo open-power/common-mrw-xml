@@ -1535,6 +1535,9 @@
       <id>FREQ_MCA_MHZ</id>
     </attribute>
     <attribute>
+      <id>PHYS_PRES_REIPL</id>
+    </attribute>
+    <attribute>
       <default>0x3100070100300FF1</default>
       <id>ASCII_VPD_LX_KEYWORD</id>
     </attribute>
