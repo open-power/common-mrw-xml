@@ -6801,6 +6801,18 @@
     <readable />
   </attribute>
   <attribute>
+    <description>Designates if this this IPL was due to a request to open the Physical Presence Window: 0 - This IPL was NOT due to a Request to Open Window 1 - This IPL was due to a Request to Open Window</description>
+    <id>PHYS_PRES_REIPL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
     <id>TPM_MODEL</id>
     <persistency>non-volatile</persistency>
@@ -11719,6 +11731,10 @@
     <enumerator>
       <name>PCI_BIFURCATED</name>
       <value>0xCD03</value>
+    </enumerator>
+    <enumerator>
+      <name>KEY_CLEAR_REQUEST</name>
+      <value>0xCDD0</value>
     </enumerator>
     <id>SENSOR_NAME</id>
   </enumerationType>
