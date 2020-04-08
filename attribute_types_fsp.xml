@@ -426,35 +426,29 @@
     <readable/>
 </attribute>
 
-<enumerationType>
-    <id>SUPPORTED_MTMS</id>
-    <description>An enumeration of all possible MTMs supporting a given CCIN</description>
-    <enumerator>
-        <name>9040-MR9</name>
-        <value>0</value>
-    </enumerator>
-    <enumerator>
-        <name>ALL</name>
-        <value>1</value>
-    </enumerator>
-    <default>ALL</default>
-</enumerationType>
-
 <attribute>
     <id>SUPPORTED_MTMS</id>
     <description>MTMs where this CCIN will be supported. A comma separated list of MTMs</description>
     <simpleType>
-        <enumeration>
-            <id>SUPPORTED_MTMS</id>
-        </enumeration>
+        <string/>
+    </simpleType>
+    <persistency>non-volatile</persistency>
+    <readable/>    
+</attribute>
+
+<attribute>
+    <id>CORES</id>
+    <description>The number of cores - for modules only</description>
+    <simpleType>
+        <uint8_t/>
     </simpleType>
     <persistency>non-volatile</persistency>
     <readable/>
 </attribute>
 
 <attribute>
-    <id>CORES</id>
-    <description>The number of cores - for modules only</description>
+    <id>EC_LEVEL</id>
+    <description>The processor EC level - for modules only</description>
     <simpleType>
         <uint8_t/>
     </simpleType>
