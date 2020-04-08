@@ -725,7 +725,6 @@
 
 	<targetType>
 		<id>unit-omi-power10</id>
-		<parent>unit</parent>
 		<attribute>
 			<id>DIRECTION</id>
 			<default>INOUT</default>
@@ -4164,7 +4163,6 @@
   </targetType>
   <targetType>
     <id>unit-phb-power10</id>
-    <parent>unit</parent>
 	<attribute>
 		<id>VENDOR_ID</id>
 		<default/>

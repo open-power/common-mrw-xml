@@ -38,8 +38,13 @@
 		<parent>targetoverride</parent>
 		<parent_type>targetoverride</parent_type>
 		<attribute><id>TARGET_NAME</id></attribute>
+		<attribute><id>CCIN</id></attribute>
 		<attribute><id>CORES</id></attribute>
 		<attribute><id>CARD_USE</id></attribute>
+		<attribute><id>EC_LEVEL</id></attribute>
+		<attribute><id>FREQUENCY</id></attribute>
+		<attribute><id>RU_TYPE</id></attribute>
+		<attribute><id>SUPPORTED_MTMS</id></attribute>
 		<attribute><id>PART_NUMBER</id></attribute>
 	</targetType>
 	<targetType>
