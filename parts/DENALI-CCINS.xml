@@ -11,7 +11,7 @@
 	<parent_type>sys-sys-power8</parent_type>
 	<parent_type>sys-sys-power9</parent_type>
 	<parent_type>sys-sys-power10</parent_type>
-	<child_id>Denali-CCINS.tanager</child_id>
+	<child_id>Denali-CCINS.Tanager</child_id>
 	<child_id>Denali-CCINS.gannet</child_id>
 	<child_id>Denali-CCINS.pinyon</child_id>
 	<child_id>Denali-CCINS.heron</child_id>
@@ -127,10 +127,10 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Denali-CCINS.tanager</id>
+	<id>Denali-CCINS.Tanager</id>
 	<type>override-ccin-card</type>
 	<is_root>false</is_root>
-	<instance_name>Denali-CCINS.tanager</instance_name>
+	<instance_name>Denali-CCINS.Tanager</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
