@@ -587,12 +587,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
@@ -1191,6 +1185,9 @@
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
+      <id>SBE_UPDATE_DISABLE</id>
+    </attribute>
+    <attribute>
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
@@ -1202,6 +1199,9 @@
     </attribute>
     <attribute>
       <id>EARLY_TESTCASES_ISTEP</id>
+    </attribute>
+    <attribute>
+      <id>PHYS_PRES_REIPL</id>
     </attribute>
     <attribute>
       <id>PROC_MODULE_TYPE</id>
@@ -1303,12 +1303,6 @@
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1355,6 +1349,15 @@
     </attribute>
     <attribute>
       <id>STOP_LEVELS_DISABLED</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1474,13 +1477,13 @@
       <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>IS_SIMULATION</id>
     </attribute>
     <attribute>
       <id>EXECUTION_PLATFORM</id>
+    </attribute>
+    <attribute>
+      <id>MFG_FLAGS</id>
     </attribute>
     <attribute>
       <id>MNFG_FLAGS</id>
