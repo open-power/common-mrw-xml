@@ -587,12 +587,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
@@ -1051,7 +1045,6 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <default>POWER9</default>
       <id>MODEL</id>
     </attribute>
     <attribute>
@@ -1191,6 +1184,9 @@
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
+      <id>SBE_UPDATE_DISABLE</id>
+    </attribute>
+    <attribute>
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
@@ -1202,6 +1198,9 @@
     </attribute>
     <attribute>
       <id>EARLY_TESTCASES_ISTEP</id>
+    </attribute>
+    <attribute>
+      <id>PHYS_PRES_REIPL</id>
     </attribute>
     <attribute>
       <id>PROC_MODULE_TYPE</id>
@@ -1481,6 +1480,9 @@
     </attribute>
     <attribute>
       <id>EXECUTION_PLATFORM</id>
+    </attribute>
+    <attribute>
+      <id>MFG_FLAGS</id>
     </attribute>
     <attribute>
       <id>MNFG_FLAGS</id>
@@ -2318,14 +2320,14 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>OCC</default>
-      <id>TYPE</id>
+      <default>POWER10</default>
+      <id>MODEL</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
     </attribute>
     <id>unit-occ-power10</id>
-    <parent>unit</parent>
+    <parent>occ</parent>
   </targetType>
   <targetType>
     <attribute>
