@@ -3139,7 +3139,11 @@
 		<attribute>
 			<id>SPI_CONNECTION_TYPE</id>
 			<default>CFAM</default>
-		</attribute>		
+		</attribute>	
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>			
 	</targetType>	
 	<targetType>
 		<id>AVS</id>
