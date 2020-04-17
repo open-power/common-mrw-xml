@@ -587,12 +587,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>EEPROM_VPD_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
       <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
@@ -1481,6 +1475,9 @@
     </attribute>
     <attribute>
       <id>EXECUTION_PLATFORM</id>
+    </attribute>
+    <attribute>
+      <id>MFG_FLAGS</id>
     </attribute>
     <attribute>
       <id>MNFG_FLAGS</id>
