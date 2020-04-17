@@ -1201,6 +1201,9 @@
       <id>EARLY_TESTCASES_ISTEP</id>
     </attribute>
     <attribute>
+      <id>PHYS_PRES_REIPL</id>
+    </attribute>
+    <attribute>
       <id>PROC_MODULE_TYPE</id>
     </attribute>
     <attribute>

@@ -6055,6 +6055,18 @@
     <readable />
   </attribute>
   <attribute>
+    <description>Designates if this this IPL was due to a request to open the Physical Presence Window: 0 - This IPL was NOT due to a Request to Open Window 1 - This IPL was due to a Request to Open Window</description>
+    <id>PHYS_PRES_REIPL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Enumeration of the type of processor module used in the system. Expected to be filled out by the MRW and expected to be the same for every processor module in the system</description>
     <id>PROC_MODULE_TYPE</id>
     <persistency>non-volatile</persistency>
@@ -8546,10 +8558,6 @@
       <value>22</value>
     </enumerator>
     <enumerator>
-      <name>MNFG_TEST_DRAM_REPAIRS</name>
-      <value>22</value>
-    </enumerator>
-    <enumerator>
       <name>MNFG_NO_AP</name>
       <value>23</value>
     </enumerator>
@@ -8571,10 +8579,6 @@
     </enumerator>
     <enumerator>
       <name>MNFG_NO_RBS</name>
-      <value>28</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_DRAM_REPAIRS</name>
       <value>28</value>
     </enumerator>
     <enumerator>
@@ -8686,15 +8690,7 @@
       <value>58</value>
     </enumerator>
     <enumerator>
-      <name>MNFG_NO_MEM_EREPAIR</name>
-      <value>58</value>
-    </enumerator>
-    <enumerator>
       <name>MNFG_DISABLE_FABRIC_eREPAIR</name>
-      <value>59</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_L3_EREPAIR</name>
       <value>59</value>
     </enumerator>
     <enumerator>
@@ -8708,10 +8704,6 @@
     <enumerator>
       <name>MNFG_SYS_DUMP_TERM</name>
       <value>62</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_RIO_WRAP</name>
-      <value>63</value>
     </enumerator>
     <enumerator>
       <name>MNFG_PSI_DIAGNOSTIC</name>
@@ -8758,10 +8750,6 @@
       <value>73</value>
     </enumerator>
     <enumerator>
-      <name>MNFG_PREVENT_RAE</name>
-      <value>73</value>
-    </enumerator>
-    <enumerator>
       <name>MNFG_IB_FREQ_BIAS_HIGH</name>
       <value>74</value>
     </enumerator>
@@ -8802,23 +8790,11 @@
       <value>86</value>
     </enumerator>
     <enumerator>
-      <name>MNFG_DMI_DEPLOY_ONE_SPARE_DATA_ONE_SPARE_CLOCK</name>
-      <value>86</value>
-    </enumerator>
-    <enumerator>
       <name>MNFG_DMI_DEPLOY_LANE_SPARES</name>
       <value>87</value>
     </enumerator>
     <enumerator>
-      <name>MNFG_DMI_DEPLOY_TWO_SPARE_DATA</name>
-      <value>87</value>
-    </enumerator>
-    <enumerator>
       <name>MNFG_ENERGYSCALE_SPECIAL_POLICIES</name>
-      <value>88</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_TPMD_SPECIAL_POLICIES</name>
       <value>88</value>
     </enumerator>
     <enumerator>
@@ -11015,6 +10991,10 @@
     <enumerator>
       <name>PCI_BIFURCATED</name>
       <value>0xCD03</value>
+    </enumerator>
+    <enumerator>
+      <name>KEY_CLEAR_REQUEST</name>
+      <value>0xCDD0</value>
     </enumerator>
     <id>SENSOR_NAME</id>
   </enumerationType>
