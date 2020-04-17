@@ -1185,6 +1185,9 @@
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
+      <id>SBE_UPDATE_DISABLE</id>
+    </attribute>
+    <attribute>
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
