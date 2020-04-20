@@ -599,6 +599,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Establishes the minimum voltage offset at the module pins in mV that the VCS rail is above the VDD rail during Pstate operations when VCS above any established VCS floor defined by ATTR_VCS_FLOOR_MV. If ATTR_VCS_FLOOR_MV is 0, this offset will apply across the entire VCS voltage range. Producer: MRW Consumers: p10_pstate_parameter_build -&gt; PGPE Hcode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_VCS_VDD_OFFSET_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>VCS_VDD_OFFSET_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>20</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_RUNN_MODE</id>
