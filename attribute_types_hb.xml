@@ -5457,6 +5457,18 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Enumeration of the type of processor module used in the system. Expected to be filled out by the MRW and expected to be the same for every processor module in the system</description>
+    <id>PROC_MODULE_TYPE</id>
+    <mrwRequired />
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <enumeration>
+        <id>PROC_MODULE_TYPE</id>
+      </enumeration>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_CONFIG</id>
@@ -6080,17 +6092,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Enumeration of the type of processor module used in the system. Expected to be filled out by the MRW and expected to be the same for every processor module in the system</description>
-    <id>PROC_MODULE_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <enumeration>
-        <id>PROC_MODULE_TYPE</id>
-      </enumeration>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
@@ -10427,6 +10428,18 @@
     <id>PROC_FABRIC_X_BUS_WIDTH</id>
   </enumerationType>
   <enumerationType>
+    <description>Enumeration for processor module type that come from HDAT spec 0x50 = DCM 0x51 = SCM</description>
+    <enumerator>
+      <name>GODEL</name>
+      <value>0x50</value>
+    </enumerator>
+    <enumerator>
+      <name>BLAISE</name>
+      <value>0x51</value>
+    </enumerator>
+    <id>PROC_MODULE_TYPE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enumeration indicating which _PBIEX_ASYNC_SEL should be use</description>
     <enumerator>
       <name>SEL0</name>
@@ -10847,19 +10860,6 @@
       <value>0x01</value>
     </enumerator>
     <id>IPMI_SENSOR_ARRAY</id>
-  </enumerationType>
-  <enumerationType>
-    <default>GODEL</default>
-    <description>Enumeration for processor module type that come from HDAT spec 0x50 = DCM 0x51 = SCM</description>
-    <enumerator>
-      <name>GODEL</name>
-      <value>0x50</value>
-    </enumerator>
-    <enumerator>
-      <name>BLAISE</name>
-      <value>0x51</value>
-    </enumerator>
-    <id>PROC_MODULE_TYPE</id>
   </enumerationType>
   <enumerationType>
     <description>Enumeration indicating the IPMI sensor name, which will be used by hostboot when determining the sensor number to return. The sensor name consists of one byte of sensor type plus one byte of sub-type, to differentiate similar sensors under the same target. Our implementaion uses the IPMI defined entity ID as the sub-type.</description>

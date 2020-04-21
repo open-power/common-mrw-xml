@@ -1184,6 +1184,9 @@
       <id>PHYS_PATH</id>
     </attribute>
     <attribute>
+      <id>PROC_MODULE_TYPE</id>
+    </attribute>
+    <attribute>
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
@@ -1204,9 +1207,6 @@
     </attribute>
     <attribute>
       <id>PHYS_PRES_REIPL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_MODULE_TYPE</id>
     </attribute>
     <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
