@@ -1157,6 +1157,7 @@
 	<attribute>
 		<id>SLOT_NAME</id>
 		<description>PCIe slot name definition</description>
+		<global/>
 		<simpleType>
 			<uint8_t>
 			</uint8_t>
