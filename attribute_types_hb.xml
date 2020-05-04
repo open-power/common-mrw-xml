@@ -922,6 +922,39 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_PHB_ACTIVE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_PHB_ACTIVE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>ENABLE,DISABLE,DISABLE</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>This attribute controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_LANE_REVERSAL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_LANE_REVERSAL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>DISABLE,DISABLE,DISABLE</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_BAR_ENABLE</id>
@@ -5469,7 +5502,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
+    <description>PCIE IOP lane configuration creator: platform consumer: proc_pcie_scominit firmware notes: Encoded PCIE IOP lane configuration</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_CONFIG</id>
       <macro>DIRECT</macro>
@@ -5578,16 +5611,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>PCIE PHB valid mask creator: platform consumer: proc_pcie_scominit firmware notes: Bit mask defining set of active/valid PHBs bit0=PHB0, bit1=PHB1, bit2=PHB2, bit3=PHB3</description>
-    <id>PROC_PCIE_PHB_ACTIVE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines system specific value of processor refclock receiver termination (FSI GP4 bits 8:9)</description>
@@ -7408,20 +7431,28 @@
     <id>FREQ_OMI_MHZ</id>
   </enumerationType>
   <enumerationType>
-    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
+    <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <enumerator>
-      <name>NO_FURCATION</name>
+      <name>DISABLE</name>
       <value>0x00</value>
     </enumerator>
     <enumerator>
-      <name>BI_FURCATION</name>
+      <name>ENABLE</name>
       <value>0x01</value>
     </enumerator>
+    <id>PROC_PCIE_PHB_ACTIVE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>This attribute controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <enumerator>
-      <name>TRI_FURCATION</name>
-      <value>0x10</value>
+      <name>DISABLE</name>
+      <value>0x00</value>
     </enumerator>
-    <id>PROC_PCIE_IOP_CONFIG</id>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_PCIE_LANE_REVERSAL</id>
   </enumerationType>
   <enumerationType>
     <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
