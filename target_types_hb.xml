@@ -638,9 +638,6 @@
       <id>PROC_DCM_INSTALLED</id>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_PHB_ACTIVE</id>
-    </attribute>
-    <attribute>
       <id>RNG_BAR_SIZE</id>
     </attribute>
     <attribute>
@@ -2459,7 +2456,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_IOP_CONFIG</id>
+      <id>PROC_PCIE_PHB_ACTIVE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_REVERSAL</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
