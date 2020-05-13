@@ -1288,6 +1288,9 @@
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
+      <id>KEY_CLEAR_REQUEST</id>
+    </attribute>
+    <attribute>
       <default>43</default>
       <id>MAX_CHIPLETS_PER_PROC</id>
     </attribute>
