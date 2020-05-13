@@ -2205,6 +2205,36 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Device type of I2C slave device</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_DEV_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_DEV_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Represents the ordinal position of this target compared to other peer GENERICI2CSLAVE targets with the same ATTR_I2C_DEV_TYPE</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_SUB_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_SUB_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Logical position of target within a system. This is derived from the SMP location of each processor and each target's relationship to a proc. - PROC = based on SMP groupid+chipid - MEMBUF = PROC:FAPI_POS * [max membuf per proc] - 1st level child unit = [parent chip]:FAPI_POS * [max children of this type per chip] - 2nd+ level child unit = [immediate parent unit]:FAPI_POS * [max units below parent] Note: This should not be used algorithmically by HWPs directly. Note: Value ignores physical drawer boundaries, the value is unique across the entire system. This data is derived from the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FAPI_POS</id>
@@ -8508,6 +8538,18 @@
       <value>0</value>
     </enumerator>
     <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Device type of I2C slave device</description>
+    <enumerator>
+      <name>ADS7138_ADC</name>
+      <value />
+    </enumerator>
+    <enumerator>
+      <name>PCA9554A_GPIO_EXPANDER</name>
+      <value />
+    </enumerator>
+    <id>I2C_DEV_TYPE</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
