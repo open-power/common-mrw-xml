@@ -500,6 +500,10 @@
 			<name>INTERNAL CABLE</name>
 			<value>14</value>
 		</enumerator>
+		<enumerator>
+			<name>SMP-INTERNAL</name>
+			<value>15</value>
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>	
 	<enumerationType>
