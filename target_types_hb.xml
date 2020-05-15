@@ -1143,6 +1143,9 @@
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
+      <id>KEY_CLEAR_REQUEST</id>
+    </attribute>
+    <attribute>
       <default>POWER10</default>
       <id>MODEL</id>
     </attribute>
