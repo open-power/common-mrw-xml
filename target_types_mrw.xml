@@ -34,6 +34,13 @@
     	</attribute>
   	</targetType>  	
 	<targetType>
+    	<id>enc-controlnode-power10</id>
+    	<parent>base</parent>
+    	<attribute>
+    		<id>ENC_TYPE</id>
+    	</attribute>
+  	</targetType>  	
+	<targetType>
 		<id>chip</id>
 		<parent>base</parent>
 		<parent_type>card-motherboard</parent_type>
