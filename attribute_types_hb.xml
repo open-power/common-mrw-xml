@@ -984,6 +984,7 @@
         <default>DISABLE,DISABLE,DISABLE</default>
       </uint8_t>
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
