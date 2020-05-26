@@ -1,58 +1,5 @@
 <attributes>
   <attribute>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CYCLE_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CYCLE_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Time between invocations of auxiliary function on GPE1. The time (in is as 2^ATTR_AUX_FUNC_INVOCATION_TIME_MS with 0 indicating the is OFF. Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Provided by the Machine Readable Workbook to tune the collection. Platform default:1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -678,6 +625,74 @@
     <simpleType>
       <uint8_t>
         <default>20</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CYCLE_COUNT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CYCLE_COUNT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2190,21 +2205,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -4098,50 +4098,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>This attribute represents the Maximum number of L2 Column Repairs allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>7</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Line Deletes allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L2_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Column Repairs allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L3_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>7</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Line Deletes allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>System attribute. The frequency of the processor refclock in MHz. Provided by the MRW.</description>
     <id>FREQ_PROC_REFCLOCK</id>
     <persistency>non-volatile</persistency>
@@ -4482,50 +4438,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>This attribute represents the maximum number of L4 Cache CEs allowed. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_L4_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Base threshold (for 2GB DRAM ) of Memory CEs allowed during IPL. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_IPL_SOFT_CE_TH_ALGO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the maximum number of Memory RCEs allowed per Rank during runtime. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_RT_RCE_PER_RANK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Base threshold (for 2GB DRAM ) of Memory CEs allowed during runtime. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
     <id>MNFG_TH_L2_CACHE_CES</id>
     <persistency>non-volatile</persistency>
@@ -4654,105 +4566,6 @@
     <simpleType>
       <uint8_t>
         <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Column Repairs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Directory CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_DIR_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Line Deletes allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>3</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Column Repairs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Directory CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_DIR_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Line Deletes allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>With MNFG thresholds enabled, PRD will make a predictive callout when an RCD parity error (recovery enabled) attention count is equal to this value. A value of 0 defaults to the max threshold of 0xff.</description>
-    <id>MNFG_TH_RCD_PARITY_ERRORS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -7039,30 +6852,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RUNN_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <enumerator>
       <name>NONE</name>
@@ -7309,6 +7098,42 @@
       <value>1</value>
     </enumerator>
     <id>PMCR_MOST_RECENT_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>RUNN_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
@@ -8309,180 +8134,72 @@
       <value>0x0080000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC0_FAST</name>
+      <name>FBC_MC_FAST</name>
       <value>0x0040000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC1_FAST</name>
+      <name>FBC_ASYNC_RT2PA_NOMINAL</name>
       <value>0x0020000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC2_FAST</name>
+      <name>FBC_ASYNC_RT2PA_SAFE</name>
       <value>0x0010000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC3_FAST</name>
+      <name>FBC_ASYNC_PA2RT_TURBO</name>
       <value>0x0008000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2PA_NOMINAL</name>
+      <name>FBC_ASYNC_PA2RT_NOMINAL</name>
       <value>0x0004000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2PA_SAFE</name>
+      <name>FBC_ASYNC_PA2RT_SAFE</name>
       <value>0x0002000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_TURBO</name>
+      <name>FBC_ASYNC_RT2MC_ULTRATURBO</name>
       <value>0x0001000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_NOMINAL</name>
+      <name>FBC_ASYNC_RT2MC_TURBO</name>
       <value>0x0000800000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_SAFE</name>
+      <name>FBC_ASYNC_RT2MC_NOMINAL</name>
       <value>0x0000400000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_ULTRATURBO</name>
+      <name>FBC_ASYNC_RT2MC_SAFE</name>
       <value>0x0000200000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_TURBO</name>
+      <name>FBC_ASYNC_MC2RT_ULTRATURBO</name>
       <value>0x0000100000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_NOMINAL</name>
+      <name>FBC_ASYNC_MC2RT_TURBO</name>
       <value>0x0000080000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_SAFE</name>
+      <name>FBC_ASYNC_MC2RT_NOMINAL</name>
       <value>0x0000040000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_ULTRATURBO</name>
+      <name>FBC_ASYNC_MC2RT_SAFE</name>
       <value>0x0000020000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_TURBO</name>
+      <name>RUNN_USE_QME_TB_SRC</name>
       <value>0x0000010000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_NOMINAL</name>
+      <name>HV_INITS</name>
       <value>0x0000008000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_SAFE</name>
-      <value>0x0000004000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_ULTRATURBO</name>
-      <value>0x0000002000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_TURBO</name>
-      <value>0x0000001000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_NOMINAL</name>
-      <value>0x0000000800000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_SAFE</name>
-      <value>0x0000000400000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_ULTRATURBO</name>
-      <value>0x0000000200000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_TURBO</name>
-      <value>0x0000000100000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_NOMINAL</name>
-      <value>0x0000000080000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_SAFE</name>
-      <value>0x0000000040000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_ULTRATURBO</name>
-      <value>0x0000000020000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_TURBO</name>
-      <value>0x0000000010000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_NOMINAL</name>
-      <value>0x0000000008000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_SAFE</name>
-      <value>0x0000000004000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_ULTRATURBO</name>
-      <value>0x0000000002000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_TURBO</name>
-      <value>0x0000000001000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_NOMINAL</name>
-      <value>0x0000000000800000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_SAFE</name>
-      <value>0x0000000000400000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_ULTRATURBO</name>
-      <value>0x0000000000200000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_TURBO</name>
-      <value>0x0000000000100000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_NOMINAL</name>
-      <value>0x0000000000080000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_SAFE</name>
-      <value>0x0000000000040000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_ULTRATURBO</name>
-      <value>0x0000000000020000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_TURBO</name>
-      <value>0x0000000000010000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_NOMINAL</name>
-      <value>0x0000000000008000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_SAFE</name>
-      <value>0x0000000000004000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_USE_QME_TB_SRC</name>
-      <value>0x0000000000002000</value>
-    </enumerator>
-    <enumerator>
-      <name>HV_INITS</name>
-      <value>0x0000000000001000</value>
-    </enumerator>
-    <enumerator>
       <name>MMA_STATIC_POWEROFF</name>
-      <value>0x0000000000000800</value>
+      <value>0x0000004000000000</value>
     </enumerator>
     <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
@@ -8547,26 +8264,14 @@
     <id>SMF_CONFIG</id>
   </enumerationType>
   <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-  </enumerationType>
-  <enumerationType>
     <description>Device type of I2C slave device</description>
     <enumerator>
       <name>ADS7138_ADC</name>
-      <value />
+      <value>0</value>
     </enumerator>
     <enumerator>
       <name>PCA9554A_GPIO_EXPANDER</name>
-      <value />
+      <value>1</value>
     </enumerator>
     <id>I2C_DEV_TYPE</id>
   </enumerationType>
