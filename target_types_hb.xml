@@ -337,15 +337,6 @@
       <id>WOF_DCM_TRACKING_ENABLE</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_PDV_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_PDW_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_IQ_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
       <id>PBAX_CHIPID</id>
     </attribute>
     <attribute>
@@ -521,6 +512,9 @@
     </attribute>
     <attribute>
       <id>LPC_CONSOLE_CNFG</id>
+    </attribute>
+    <attribute>
+      <id>BOOT_PAU_DPLL_BYPASS</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_FLOOR_MHZ</id>
@@ -1146,10 +1140,6 @@
       <id>KEY_CLEAR_REQUEST</id>
     </attribute>
     <attribute>
-      <default>POWER10</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
       <id>MRW_DDR4_VDDR_MAX_LIMIT</id>
     </attribute>
     <attribute>
@@ -1199,11 +1189,22 @@
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
+      <id>SUPPORTED_STOP_STATES</id>
+    </attribute>
+    <attribute>
       <id>TPM_REQUIRED</id>
     </attribute>
     <attribute>
       <default>SYS</default>
       <id>TYPE</id>
+    </attribute>
+    <id>sys</id>
+    <parent>base</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>POWER10</default>
+      <id>MODEL</id>
     </attribute>
     <attribute>
       <id>EARLY_TESTCASES_ISTEP</id>
@@ -1308,10 +1309,22 @@
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
       <id>DDS_DPLL_SLEW_MODE</id>
+    </attribute>
+    <attribute>
+      <id>DDS_TRIP_MODE</id>
+    </attribute>
+    <attribute>
+      <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
     </attribute>
     <attribute>
       <id>POUND_W_STATIC_DATA_ENABLE</id>
@@ -1357,15 +1370,6 @@
     </attribute>
     <attribute>
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1483,6 +1487,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1653,7 +1660,7 @@
       <id>NEST_LEAKAGE_PERCENT</id>
     </attribute>
     <id>sys-sys-power10</id>
-    <parent>base</parent>
+    <parent>sys</parent>
   </targetType>
   <targetType>
     <attribute>
