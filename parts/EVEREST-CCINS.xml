@@ -21,6 +21,7 @@
 	<child_id>Everest-CCINS.VRM-Reist-aux</child_id>
 	<child_id>Everest-CCINS.Hill-OpPanel-LCD</child_id>
 	<child_id>Everest-CCINS.Rover-OpPanel</child_id>
+    <child_id>Everest-CCINS.Fanxipan</child_id>
 	<child_id>Everest-CCINS.Fan-Blackdog</child_id>
 	<child_id>Everest-CCINS.16GB-DDIMM_2U</child_id>
 	<child_id>Everest-CCINS.32GB-DDIMM_2U</child_id>
@@ -1506,6 +1507,55 @@
 	<attribute>
 		<id>TARGET_NAME</id>
 		<default>MEX 4U Cable Card for Fanout Module</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Everest-CCINS.Fansipan</id>
+	<type>override-ccin-card</type>
+	<is_root>false</is_root>
+	<instance_name>Everest-CCINS.Fansipan</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>2C64</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9040-MRX</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Power Distribution Card</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
