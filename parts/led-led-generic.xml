@@ -26,6 +26,10 @@
         <default/>
     </attribute>
     <attribute>
+        <id>BMC_ACCESS</id>
+        <default/>
+    </attribute>
+    <attribute>
         <id>VIEW_REAR</id>
         <default/>
     </attribute>

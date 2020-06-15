@@ -15388,6 +15388,70 @@
 	</attribute>
 </targetPart>
 <targetPart>
+	<id>dcm-attn-master</id>
+	<type>unit-gpio-generic</type>
+	<is_root>false</is_root>
+	<instance_name>dcm-attn-master</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>DRIVER_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>ENGINE</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>GENERIC_OUTPUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NUM</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>POR_VALUE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>SCHEMATIC_INTERFACE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
 	<id>proc_fru_assoc</id>
 	<type>unit-logic_assoc-generic</type>
 	<is_root>false</is_root>
@@ -15631,6 +15695,7 @@
 	<child_id>tpm-rst-master</child_id>
 	<child_id>tpm-int-slave</child_id>
 	<child_id>stby-reset-slave</child_id>
+	<child_id>dcm-attn-master</child_id>
 	<child_id>vdd-vin</child_id>
 	<child_id>vcs-vin</child_id>
 	<child_id>vdn-vin</child_id>
