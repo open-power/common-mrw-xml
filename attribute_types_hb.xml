@@ -932,7 +932,7 @@
     <simpleType>
       <array>3</array>
       <uint8_t>
-        <default>ENABLE,DISABLE,DISABLE</default>
+        <default>ENABLE,ENABLE,ENABLE</default>
       </uint8_t>
     </simpleType>
     <writeable />
