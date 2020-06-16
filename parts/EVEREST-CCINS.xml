@@ -17,7 +17,7 @@
 	<child_id>Everest-CCINS.Basecamp</child_id>
 	<child_id>Everest-CCINS.VRM-Norgay-cpuvdd</child_id>
 	<child_id>Everest-CCINS.VRM-Gluten-cpuvio</child_id>
-	<child_id>Everest-CCINS.VRM-Narmet-cpushare</child_id>
+	<child_id>Everest-CCINS.VRM-Marmet-cpushare</child_id>
 	<child_id>Everest-CCINS.VRM-Reist-aux</child_id>
 	<child_id>Everest-CCINS.Hill-OpPanel-LCD</child_id>
 	<child_id>Everest-CCINS.Rover-OpPanel</child_id>
@@ -352,10 +352,10 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Everest-CCINS.VRM-Narmet-cpushare</id>
+	<id>Everest-CCINS.VRM-Marmet-cpushare</id>
 	<type>override-ccin-card</type>
 	<is_root>false</is_root>
-	<instance_name>Everest-CCINS.VRM-Narmet-cpushare</instance_name>
+	<instance_name>Everest-CCINS.VRM-Marmet-cpushare</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
