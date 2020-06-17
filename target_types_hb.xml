@@ -409,9 +409,6 @@
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
     </attribute>
     <attribute>
-      <id>FREQ_OMI_MHZ</id>
-    </attribute>
-    <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
     </attribute>
     <attribute>
@@ -521,6 +518,9 @@
     </attribute>
     <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
       <id>SPI_BUS_DIV_REF</id>
@@ -1381,6 +1381,9 @@
       <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
+      <id>DYNAMIC_INIT_MODE_VEC</id>
+    </attribute>
+    <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
     </attribute>
     <attribute>
@@ -1849,6 +1852,9 @@
     </attribute>
     <attribute>
       <id>FREQ_IOHS_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_IOHS_LINK_MHZ</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2484,6 +2490,12 @@
     <parent>unit</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_REVERSAL_BASE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
+    </attribute>
     <id>unit-pec-power10</id>
     <parent>unit-pec</parent>
   </targetType>
@@ -2621,6 +2633,15 @@
     <parent>unit-phb-power9</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN5</id>
+    </attribute>
     <id>unit-phb-power10</id>
     <parent>unit-phb</parent>
   </targetType>
