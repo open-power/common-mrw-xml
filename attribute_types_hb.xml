@@ -10705,11 +10705,6 @@
       <value>0x4000</value>
     </enumerator>
     <enumerator>
-      <description>"Clear PEF SSO" : This indicates to OPAL/PEF to clear the System Security Office certificate</description>
-      <name>PEF_SSO</name>
-      <value>0x2000</value>
-    </enumerator>
-    <enumerator>
       <description>"Clear PowerVM System Key" : This indicates to PowerVM to clear the system key to the default state</description>
       <name>POWERVM_SYSKEY</name>
       <value>0x1000</value>
@@ -10717,7 +10712,7 @@
     <enumerator>
       <description>Reserved bits</description>
       <name>RESERVED_1</name>
-      <value>0x0E00</value>
+      <value>0x2E00</value>
     </enumerator>
     <enumerator>
       <description>MFG mode and imprint driver only : Clear all sensitive data and leave storage empty</description>
