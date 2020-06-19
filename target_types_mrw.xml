@@ -2528,6 +2528,15 @@
 		</attribute>
 	</targetType>
 	<targetType>
+		<id>card-pciecard-nvme</id>
+		<parent>card-pciecard</parent>
+		<parent_type>slot-pcieslot-generic</parent_type>
+		<attribute>
+			<id>RU_TYPE</id>
+			<default/>
+		</attribute>
+	</targetType>
+	<targetType>
 		<id>unit-pciconfig0-venice</id>
 		<parent>unit</parent>
 		<attribute>
