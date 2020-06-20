@@ -394,6 +394,9 @@
       <id>SAFE_MODE_THROTTLE_IDX</id>
     </attribute>
     <attribute>
+      <id>WOF_DCCR_VALUE</id>
+    </attribute>
+    <attribute>
       <id>VCS_VDD_OFFSET_MV</id>
     </attribute>
     <attribute>
@@ -1309,12 +1312,6 @@
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1370,6 +1367,15 @@
     </attribute>
     <attribute>
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1490,9 +1496,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
