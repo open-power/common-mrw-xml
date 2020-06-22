@@ -2531,11 +2531,11 @@
 		<id>card-pciecard-nvme</id>
 		<parent>card-pciecard</parent>
 		<parent_type>slot-pcieslot-generic</parent_type>
-		<attribute>
+				<attribute>
 			<id>RU_TYPE</id>
 			<default/>
 		</attribute>
-	</targetType>
+	</targetType>	
 	<targetType>
 		<id>unit-pciconfig0-venice</id>
 		<parent>unit</parent>
@@ -5707,49 +5707,18 @@
 			<id>GAIN</id>
 		</attribute>
 		<attribute>
+			<id>GND</id>
+		</attribute>		
+		<attribute>
 			<id>OFFSET</id>
 		</attribute>								
-		<attribute>
-			<id>ADC_CHANNEL_ASSIGNMENT</id>
-		</attribute>
-		<attribute>
-			<id>ADC_CHANNEL_ID</id>
-		</attribute>
-		<attribute>
-			<id>ADC_CHANNEL_GAIN</id>
-		</attribute>
-		<attribute>
-			<id>ADC_CHANNEL_GROUND</id>
-		</attribute>
-		<attribute>
-			<id>ADC_CHANNEL_OFFSET</id>
-		</attribute>
 		<attribute>
 			<id>PIN-NAME</id>
 		</attribute>
 		<attribute>
 			<id>DIRECTION</id>
 			<default>IN</default>
-		</attribute>
-		<attribute>
-		       <id>IPMI_SENSOR_ID</id>
-		       <default/>
-		</attribute>
-                <attribute>
-                        <id>IPMI_SENSOR_NAME_SUFFIX</id>
-                </attribute>
-                <attribute>
-                        <id>IPMI_ENTITY_ID</id>
-                        <default>0xD7</default>
-                </attribute>
-                <attribute>
-                        <id>IPMI_SENSOR_READING_TYPE</id>
-                        <default>0x01</default>
-                </attribute>
-                <attribute>
-                        <id>IPMI_SENSOR_TYPE</id>
-                        <default>0xC2</default>
-                </attribute>		
+		</attribute>		
 	</targetType>
 	<targetType>
 		<id>apss.unit-adc_global-generic</id>
