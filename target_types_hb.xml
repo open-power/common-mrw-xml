@@ -337,15 +337,6 @@
       <id>WOF_DCM_TRACKING_ENABLE</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_PDV_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_PDW_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_IQ_VALIDATION_MODE</id>
-    </attribute>
-    <attribute>
       <id>PBAX_CHIPID</id>
     </attribute>
     <attribute>
@@ -403,6 +394,12 @@
       <id>SAFE_MODE_THROTTLE_IDX</id>
     </attribute>
     <attribute>
+      <id>WOF_DCCR_VALUE</id>
+    </attribute>
+    <attribute>
+      <id>VCS_VDD_OFFSET_MV</id>
+    </attribute>
+    <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
     </attribute>
     <attribute>
@@ -413,9 +410,6 @@
     </attribute>
     <attribute>
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
@@ -520,10 +514,16 @@
       <id>LPC_CONSOLE_CNFG</id>
     </attribute>
     <attribute>
+      <id>BOOT_PAU_DPLL_BYPASS</id>
+    </attribute>
+    <attribute>
       <id>FREQ_CORE_FLOOR_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
       <id>SPI_BUS_DIV_REF</id>
@@ -633,9 +633,6 @@
     </attribute>
     <attribute>
       <id>PROC_DCM_INSTALLED</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PHB_ACTIVE</id>
     </attribute>
     <attribute>
       <id>RNG_BAR_SIZE</id>
@@ -1143,8 +1140,7 @@
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
-      <default>POWER10</default>
-      <id>MODEL</id>
+      <id>KEY_CLEAR_REQUEST</id>
     </attribute>
     <attribute>
       <id>MRW_DDR4_VDDR_MAX_LIMIT</id>
@@ -1181,6 +1177,12 @@
       <id>PHYS_PATH</id>
     </attribute>
     <attribute>
+      <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
+    </attribute>
+    <attribute>
+      <id>PROC_MODULE_TYPE</id>
+    </attribute>
+    <attribute>
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
@@ -1190,20 +1192,28 @@
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
+      <id>SUPPORTED_STOP_STATES</id>
+    </attribute>
+    <attribute>
       <id>TPM_REQUIRED</id>
     </attribute>
     <attribute>
       <default>SYS</default>
       <id>TYPE</id>
     </attribute>
+    <id>sys</id>
+    <parent>base</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <default>POWER10</default>
+      <id>MODEL</id>
+    </attribute>
     <attribute>
       <id>EARLY_TESTCASES_ISTEP</id>
     </attribute>
     <attribute>
       <id>PHYS_PRES_REIPL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_MODULE_TYPE</id>
     </attribute>
     <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
@@ -1308,6 +1318,12 @@
       <id>DDS_DPLL_SLEW_MODE</id>
     </attribute>
     <attribute>
+      <id>DDS_TRIP_MODE</id>
+    </attribute>
+    <attribute>
+      <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
+    </attribute>
+    <attribute>
       <id>POUND_W_STATIC_DATA_ENABLE</id>
     </attribute>
     <attribute>
@@ -1350,6 +1366,9 @@
       <id>STOP_LEVELS_DISABLED</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
+    </attribute>
+    <attribute>
       <id>RUNN_MODE</id>
     </attribute>
     <attribute>
@@ -1366,6 +1385,9 @@
     </attribute>
     <attribute>
       <id>MRW_HW_MIRRORING_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>DYNAMIC_INIT_MODE_VEC</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
@@ -1644,7 +1666,7 @@
       <id>NEST_LEAKAGE_PERCENT</id>
     </attribute>
     <id>sys-sys-power10</id>
-    <parent>base</parent>
+    <parent>sys</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1833,6 +1855,9 @@
     </attribute>
     <attribute>
       <id>FREQ_IOHS_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_IOHS_LINK_MHZ</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2453,7 +2478,10 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>PROC_PCIE_IOP_CONFIG</id>
+      <id>PROC_PCIE_PHB_ACTIVE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_REVERSAL</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2465,6 +2493,12 @@
     <parent>unit</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_REVERSAL_BASE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
+    </attribute>
     <id>unit-pec-power10</id>
     <parent>unit-pec</parent>
   </targetType>
@@ -2602,6 +2636,15 @@
     <parent>unit-phb-power9</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN5</id>
+    </attribute>
     <id>unit-phb-power10</id>
     <parent>unit-phb</parent>
   </targetType>

@@ -28,6 +28,34 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates whether to calculate trip offsets per core or per chip. Default is per chip. CHIP or CORE Producer: MRWB</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DDS_TRIP_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DDS_TRIP_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>CHIP</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>A bit vector to indicate which of FDCR items to interpolate. Multiple items can be set to be interpolated. Producer: MRWB</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DDS_TRIP_INTERPOLATION_CONTROL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>if set to 1, p10_dump_stop_info output will be written to error logs</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
@@ -83,7 +111,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>1</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -213,51 +241,6 @@
     <readable />
     <simpleType>
       <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines the mode of #V checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_PSTATE_DISABLE, fails the IPL (product default). else act as OFF INFO - if not ATTR_SYSTEM_PSTATE_DISABLE, Info error log; Pstates are disabled; IPL continues. else act as OFF WARN - if not ATTR_SYSTEM_PSTATE_DISABLE, error messages to traces; no error logs, Pstates are disabled (as #V is bad), IPL continues. else act as OFF OFF - no checking performed; IPL continues. Pstates are follow ATTR_SYSTEM_PSTATE_DISABLE (user beware if not Disabled). Producer: Override Consumers: p10_pstate_parameter_build</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_PDV_VALIDATION_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_PDV_VALIDATION_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>FAIL</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines the mode of #W checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, fails the IPL (product default); else act as OFF. INFO - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; Info error log; WOF AND DDS are disabled; IPL continues. else if act as OFF WARN - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; no error logs, WOF and DDS are disabled, IPL continues. else if act as OFF OFF - no checking performed; IPL continues. WOF and DDS follow ATTR_SYSTEM_WOF_DISABLE and ATTR_SYSTEM_DDS_DISABLE (user beware if not Disabled).</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_PDW_VALIDATION_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_PDW_VALIDATION_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>FAIL</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines the mode of IQ checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, fails the IPL (product default); else act as OFF. INFO - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; Info error log; WOF AND DDS are disabled; IPL continues. else if act as OFF WARN - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; no error logs, WOF and DDS are disabled, IPL continues. else if act as OFF OFF - no checking performed; IPL continues. WOF and DDS follow ATTR_SYSTEM_WOF_DISABLE and ATTR_SYSTEM_DDS_DISABLE (user beware if not Disabled).</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_IQ_VALIDATION_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_IQ_VALIDATION_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>FAIL</default>
-      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -599,6 +582,49 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Limits the number of Pstates below the frequency floor that can be used for throttling. Valid responsive values: 0 to 63. Values above 63 will be capped to 63. Consumer: p10_pstate_parameter_build -&gt; OCC Parameter Block</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to set into the Droop Count Control Register to establish the light and heavy droop thresholds. 0:3 DTT_LARGE_OFFSET Used for both DTT[01]_EVENT_SEL="100".This field is added to the Large Droop Bin (FDCR[LARGE_DROOP_DETECT]+ FDCR[TRIP_OFFSET] + FDCR[CAL_ADJ]) to select the target DDS_DATAbin location for "dirty" timing margin. 4:7 DTT0_THRESH_SCALE Droop Throttle Threshold0 Scale Factor (4-bit) for use by the following field. 8:15 DTT0_THRESH_VALUE Droop Throttle Threshold0 Compare Value (8-bit). When the 24-bit DroopThrottle Count0 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 16:19 DTT1_THRESH_SCALE Droop Throttle Threshold1 Scale Factor (4-bit) for use by the following field. 20:17 DTT1_THRESH_VALUE Droop Throttle Threshold1 Compare Value (8-bit). When the 24-bit DroopThrottle Count1 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 28:30 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT, when this field is: 000: DROOP_COUNT0 disabled Single occurrence of a droop event leading to performance loss selects what to compare with FTC Event Data(4:6) 001: "110" rising edge of a small throttle response 010: "111" rising edge of a large throttle response 011: "110" or "111" rising edge of a either throttle response Raw timing margin from 0 to 15 bins above the Large detect point. 100: Cycles that the bin selected by LARGE_DROOP_DETECT plus TRIP_OFFSET plus 4-bit DTT_LARGE_OFFSET was '0' (indicating loss of timing margin). How long actually throttling at a "full rate"including due to predicted response (slope and adj and ddp) selects what to compare with FTC Event Data(4:6) 101:"110" or ("01X" and NOT ("011" and Event Data(7))) meaning number of cycles that small throttle was present and not in recovery phase 110: "111`" or 100" meaning number of cycles that large droop was presentand not in either recovery phase 111: either small or large throttle present and not in recovery (OR of the twoabove) 31:33 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT. See DTT0_EVENT_SEL Consumer: p10_pm_pgpe_init</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_DCCR_VALUE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOF_DCCR_VALUE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Establishes the minimum voltage offset at the module pins in mV that the VCS rail is above the VDD rail during Pstate operations when VCS above any established VCS floor defined by ATTR_VCS_FLOOR_MV. If ATTR_VCS_FLOOR_MV is 0, this offset will apply across the entire VCS voltage range. Producer: MRW Consumers: p10_pstate_parameter_build -&gt; PGPE Hcode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_VCS_VDD_OFFSET_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>VCS_VDD_OFFSET_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>20</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_RUNN_MODE</id>
@@ -712,6 +738,19 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Bit vector of user selectable dynamic init modes which can be applied when customizing the IPL image. Each dynamic init mode can generally cover the application of multiple dynamic init features; the init mode content (in terms of dynamic init features), is defined in p10_dynamic_services.xml Individual init modes are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple init modes can be selected at once.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DYNAMIC_INIT_MODE_VEC</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DYNAMIC_INIT_MODE_VEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
@@ -767,6 +806,7 @@
   </attribute>
   <attribute>
     <description>Processor fabric topology ID associated with this chip. This is a 4-bit field in the format specified by ATTR_PROC_FABRIC_TOPOLOGY_MODE. Provided by the MRW.</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_FABRIC_TOPOLOGY_ID</id>
       <macro>DIRECT</macro>
@@ -794,7 +834,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI/NV OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI/NV OPT4 = SMPA/SMPX/OCAPI/NV OPT5 = SMPA/SMPX/OCAPI/NV OPT6 = SMPA/SMPX/OCAPI/NV OPT7 = SMPA/SMPX/OCAPI/NV Provided by the MRW.</description>
+    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IOHS_CONFIG_MODE</id>
       <macro>DIRECT</macro>
@@ -863,20 +903,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The frequency of the OMI channel.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_OMI_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_OMI_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_DL_GROUP_POS</id>
@@ -920,6 +946,40 @@
         <default>0</default>
       </uint32_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_PHB_ACTIVE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_PHB_ACTIVE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>ENABLE,ENABLE,ENABLE</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>This attribute controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_LANE_REVERSAL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_PCIE_LANE_REVERSAL</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>DISABLE,DISABLE,DISABLE</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
@@ -1602,6 +1662,22 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Force the SBE to boot with PAU DPLL in bypass</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_BOOT_PAU_DPLL_BYPASS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>BOOT_PAU_DPLL_BYPASS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>BYPASS</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of the processor refclock in KHz. Provided by the Machine Readable Workbook. This can be overridden to adjust the refclock frequency.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_CP_REFCLOCK_KHZ</id>
@@ -1660,6 +1736,7 @@
         <default>2200</default>
       </uint32_t>
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>The system-wide minimum frequency of the core mesh clock, in MHz. This is the lowest floor frequency across all chips in the system. Used for fabric epsilon calculations.</description>
@@ -1715,12 +1792,39 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The frequency of the OMI channel.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_OMI_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_OMI_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of a processor's IOHS mesh clocks, in MHz. This can be set differently on a by-link basis.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_IOHS_MHZ</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>FREQ_IOHS_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's IOHS link clock, in MHz. This can be set differently on a by-link basis.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_IOHS_LINK_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_IOHS_LINK_MHZ</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -2140,6 +2244,36 @@
       </uint8_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>Device type of I2C slave device</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_DEV_TYPE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_DEV_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Represents the ordinal position of this target compared to other peer GENERICI2CSLAVE targets with the same ATTR_I2C_DEV_TYPE</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_I2C_SUB_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>I2C_SUB_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Logical position of target within a system. This is derived from the SMP location of each processor and each target's relationship to a proc. - PROC = based on SMP groupid+chipid - MEMBUF = PROC:FAPI_POS * [max membuf per proc] - 1st level child unit = [parent chip]:FAPI_POS * [max children of this type per chip] - 2nd+ level child unit = [immediate parent unit]:FAPI_POS * [max units below parent] Note: This should not be used algorithmically by HWPs directly. Note: Value ignores physical drawer boundaries, the value is unique across the entire system. This data is derived from the MRW.</description>
@@ -4003,50 +4137,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>This attribute represents the Maximum number of L2 Column Repairs allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L2_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>7</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Line Deletes allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L2_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Column Repairs allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L3_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>7</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Line Deletes allowed in the Field. creator: platform (generated based on MRW data)</description>
-    <id>FIELD_TH_P8EX_L3_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>6</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>System attribute. The frequency of the processor refclock in MHz. Provided by the MRW.</description>
     <id>FREQ_PROC_REFCLOCK</id>
     <persistency>non-volatile</persistency>
@@ -4235,6 +4325,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Indicates types of Key Clear Requests are being made</description>
+    <id>KEY_CLEAR_REQUEST</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <enumeration>
+        <default>NONE</default>
+        <id>KEY_CLEAR_REQUEST</id>
+      </enumeration>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Location code of the Fru target</description>
     <id>LOCATION_CODE</id>
     <persistency>non-volatile</persistency>
@@ -4374,50 +4477,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>This attribute represents the maximum number of L4 Cache CEs allowed. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_L4_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Base threshold (for 2GB DRAM ) of Memory CEs allowed during IPL. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_IPL_SOFT_CE_TH_ALGO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the maximum number of Memory RCEs allowed per Rank during runtime. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_RT_RCE_PER_RANK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Base threshold (for 2GB DRAM ) of Memory CEs allowed during runtime. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
     <id>MNFG_TH_L2_CACHE_CES</id>
     <persistency>non-volatile</persistency>
@@ -4546,105 +4605,6 @@
     <simpleType>
       <uint8_t>
         <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Column Repairs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Directory CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_DIR_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L2 Line Deletes allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L2_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_CACHE_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>3</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Column Repairs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_COL_REPAIRS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Directory CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_DIR_CES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute represents the Maximum number of L3 Line Deletes allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
-    <id>MNFG_TH_P8EX_L3_LINE_DELETES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>With MNFG thresholds enabled, PRD will make a predictive callout when an RCD parity error (recovery enabled) attention count is equal to this value. A value of 0 defaults to the max threshold of 0xff.</description>
-    <id>MNFG_TH_RCD_PARITY_ERRORS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -5442,7 +5402,19 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
+    <description>Enumeration of the type of processor module used in the system. Expected to be filled out by the MRW and expected to be the same for every processor module in the system</description>
+    <id>PROC_MODULE_TYPE</id>
+    <mrwRequired />
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <enumeration>
+        <id>PROC_MODULE_TYPE</id>
+      </enumeration>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE IOP lane configuration creator: platform consumer: proc_pcie_scominit firmware notes: Encoded PCIE IOP lane configuration</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_IOP_CONFIG</id>
       <macro>DIRECT</macro>
@@ -5474,7 +5446,7 @@
     <simpleType>
       <array>16</array>
       <uint16_t>
-        <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
+        <default>0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454,</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -5488,6 +5460,31 @@
       <uint16_t>
         <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE Lane Equalization values for each PHB Creator: MRW Purpose: Holds settings which are loaded into the HW to optimize the PCIE lane signal eye between the chips + PCIE Gen5 endpoints Data Format: 16 entries of 16 bytes of EQ data per PHB. Each PHB has an EQ value for each of its 16 lanes. Each value is a uint16 formatted as follows: Bit 0:3 - up_rx_hint (bit 0 reserved) Bit 4:7 - up_tx_preset Bit 8:11 - dn_rx_hint (bit 0 reserved) Bit 12:15 - dn_tx_preset</description>
+    <id>PROC_PCIE_LANE_EQUALIZATION_GEN5</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>16</array>
+      <uint16_t>
+        <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute holds the base MRW values that controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. On some systems Dynamic Bifurcation can occur (based on VPD values or some other indicator) which may tweak the value provided in this _BASE attribute and the ATTR_PROC_PCIE_LANE_REVERSAL used by the HWP directly. If no dynamic bifurcation occurs the _BASE attribute value and ATTR_PROC_PCIE_LANE_REVERSAL will be identical. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL_BASE (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <global />
+    <id>PROC_PCIE_LANE_REVERSAL_BASE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>0x0,0x0,0x0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -5553,14 +5550,17 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PCIE PHB valid mask creator: platform consumer: proc_pcie_scominit firmware notes: Bit mask defining set of active/valid PHBs bit0=PHB0, bit1=PHB1, bit2=PHB2, bit3=PHB3</description>
-    <id>PROC_PCIE_PHB_ACTIVE</id>
+    <description>This attribute holds the base values from the MRW to define how to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. On some systems Dynamic Bifurcation can occur (based on VPD values or some other indicator) which may tweak the value provided in this _BASE attribute and the ATTR_PROC_PCIE_PHB_ACTIVE used by the HWP directly. If no dynamic bifurcation occurs the _BASE attribute value and ATTR_PROC_PCIE_PHB_ACTIVE will be identical. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE_BASE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <global />
+    <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t />
+      <array>3</array>
+      <uint8_t>
+        <default>0x1,0x1,0x1</default>
+      </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines system specific value of processor refclock receiver termination (FSI GP4 bits 8:9)</description>
@@ -6065,17 +6065,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Enumeration of the type of processor module used in the system. Expected to be filled out by the MRW and expected to be the same for every processor module in the system</description>
-    <id>PROC_MODULE_TYPE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <enumeration>
-        <id>PROC_MODULE_TYPE</id>
-      </enumeration>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
@@ -6956,6 +6945,54 @@
     <id>DDS_DPLL_SLEW_MODE</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicates whether to calculate trip offsets per core or per chip. Default is per chip. CHIP or CORE Producer: MRWB</description>
+    <enumerator>
+      <name>CHIP</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>DDS_TRIP_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>A bit vector to indicate which of FDCR items to interpolate. Multiple items can be set to be interpolated. Producer: MRWB</description>
+    <enumerator>
+      <name>TRIP</name>
+      <value>0x80</value>
+    </enumerator>
+    <enumerator>
+      <name>DATA0</name>
+      <value>0x40</value>
+    </enumerator>
+    <enumerator>
+      <name>DATA1</name>
+      <value>0x20</value>
+    </enumerator>
+    <enumerator>
+      <name>DATA2</name>
+      <value>0x10</value>
+    </enumerator>
+    <enumerator>
+      <name>LARGE</name>
+      <value>0x8</value>
+    </enumerator>
+    <enumerator>
+      <name>SMALL</name>
+      <value>0x4</value>
+    </enumerator>
+    <enumerator>
+      <name>SLOPEA</name>
+      <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <name>SLOPEB</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enables pstate parameter block code to use the static #W data Consumer: p10_pstate_parameter_build.C Platform default:OFF</description>
     <enumerator>
       <name>OFF</name>
@@ -7098,66 +7135,6 @@
       <value>1</value>
     </enumerator>
     <id>WOF_DCM_TRACKING_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines the mode of #V checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_PSTATE_DISABLE, fails the IPL (product default). else act as OFF INFO - if not ATTR_SYSTEM_PSTATE_DISABLE, Info error log; Pstates are disabled; IPL continues. else act as OFF WARN - if not ATTR_SYSTEM_PSTATE_DISABLE, error messages to traces; no error logs, Pstates are disabled (as #V is bad), IPL continues. else act as OFF OFF - no checking performed; IPL continues. Pstates are follow ATTR_SYSTEM_PSTATE_DISABLE (user beware if not Disabled). Producer: Override Consumers: p10_pstate_parameter_build</description>
-    <enumerator>
-      <name>FAIL</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>INFO</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>WARN</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF</name>
-      <value>3</value>
-    </enumerator>
-    <id>SYSTEM_PDV_VALIDATION_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines the mode of #W checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, fails the IPL (product default); else act as OFF. INFO - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; Info error log; WOF AND DDS are disabled; IPL continues. else if act as OFF WARN - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; no error logs, WOF and DDS are disabled, IPL continues. else if act as OFF OFF - no checking performed; IPL continues. WOF and DDS follow ATTR_SYSTEM_WOF_DISABLE and ATTR_SYSTEM_DDS_DISABLE (user beware if not Disabled).</description>
-    <enumerator>
-      <name>FAIL</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>INFO</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>WARN</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF</name>
-      <value>3</value>
-    </enumerator>
-    <id>SYSTEM_PDW_VALIDATION_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines the mode of IQ checking in relationship to system reaction FAIL - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, fails the IPL (product default); else act as OFF. INFO - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; Info error log; WOF AND DDS are disabled; IPL continues. else if act as OFF WARN - if not ATTR_SYSTEM_WOF_DISABLE or not ATTR_SYSTEM_DDS_DISABLE, error messages to traces; no error logs, WOF and DDS are disabled, IPL continues. else if act as OFF OFF - no checking performed; IPL continues. WOF and DDS follow ATTR_SYSTEM_WOF_DISABLE and ATTR_SYSTEM_DDS_DISABLE (user beware if not Disabled).</description>
-    <enumerator>
-      <name>FAIL</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>INFO</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>WARN</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF</name>
-      <value>3</value>
-    </enumerator>
-    <id>SYSTEM_IQ_VALIDATION_MODE</id>
   </enumerationType>
   <enumerationType>
     <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Producer: Machine Readable Workbook Consumer: p10_pm_pss_init</description>
@@ -7324,7 +7301,7 @@
     <id>PROC_FABRIC_TOPOLOGY_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI/NV OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI/NV OPT4 = SMPA/SMPX/OCAPI/NV OPT5 = SMPA/SMPX/OCAPI/NV OPT6 = SMPA/SMPX/OCAPI/NV OPT7 = SMPA/SMPX/OCAPI/NV Provided by the MRW.</description>
+    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <enumerator>
       <name>SMPX</name>
       <value>0x0</value>
@@ -7332,10 +7309,6 @@
     <enumerator>
       <name>SMPA</name>
       <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>NV</name>
-      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>OCAPI</name>
@@ -7384,40 +7357,28 @@
     <id>LINK_SPEED</id>
   </enumerationType>
   <enumerationType>
-    <description>The frequency of the OMI channel.</description>
+    <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <enumerator>
-      <name>19200</name>
-      <value>19200</value>
-    </enumerator>
-    <enumerator>
-      <name>21330</name>
-      <value>21330</value>
-    </enumerator>
-    <enumerator>
-      <name>23460</name>
-      <value>23460</value>
-    </enumerator>
-    <enumerator>
-      <name>25600</name>
-      <value>25600</value>
-    </enumerator>
-    <id>FREQ_OMI_MHZ</id>
-  </enumerationType>
-  <enumerationType>
-    <description>PCIE IOP lane configuration creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. ATTR_PROC_PCIE_IOP_CONFIG = 0x00 = No Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:15); PHB1 X; PHB2 X 0x04 = PHB0 (15:00); PHB1 X; PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x01 = Bi Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:07); PHB2 X 0x01 = PHB0 (00:07); PHB1 (07:00); PHB2 X 0x02 = PHB0 (07:00); PHB1 (00:07); PHB2 X 0x03 = PHB0 (07:00); PHB1 (07:00); PHB2 X ATTR_PROC_PCIE_IOP_CONFIG = 0x10 = Tri Furcation ATTR_PROC_PCIE_IOP_SWAP = 0x00 = PHB0 (00:07); PHB1 (00:03); PHB2 (00:03) 0x01 = PHB0 (00:07); PHB1 (00:03); PHB2 (03:00) 0x02 = PHB0 (00:07); PHB1 (03:00); PHB2 (00:03) 0x03 = PHB0 (00:07); PHB1 (03:00); PHB2 (03:00) 0x04 = PHB0 (07:00); PHB1 (00:03); PHB2 (00:00) 0x05 = PHB0 (07:00); PHB1 (00:03); PHB2 (03:00) 0x06 = PHB0 (07:00); PHB1 (03:00); PHB2 (00:03) 0x07 = PHB0 (07:00); PHB1 (03:00); PHB2 (03:00)</description>
-    <enumerator>
-      <name>NO_FURCATION</name>
+      <name>DISABLE</name>
       <value>0x00</value>
     </enumerator>
     <enumerator>
-      <name>BI_FURCATION</name>
+      <name>ENABLE</name>
       <value>0x01</value>
     </enumerator>
+    <id>PROC_PCIE_PHB_ACTIVE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>This attribute controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <enumerator>
-      <name>TRI_FURCATION</name>
-      <value>0x10</value>
+      <name>DISABLE</name>
+      <value>0x00</value>
     </enumerator>
-    <id>PROC_PCIE_IOP_CONFIG</id>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_PCIE_LANE_REVERSAL</id>
   </enumerationType>
   <enumerationType>
     <description>PCIE MMIO BAR enable creator: platform consumer: p10_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
@@ -8108,6 +8069,18 @@
     <id>LPC_CONSOLE_CNFG</id>
   </enumerationType>
   <enumerationType>
+    <description>Force the SBE to boot with PAU DPLL in bypass</description>
+    <enumerator>
+      <name>BYPASS</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>NO_BYPASS</name>
+      <value>0x0</value>
+    </enumerator>
+    <id>BOOT_PAU_DPLL_BYPASS</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip.</description>
     <enumerator>
       <name>1333</name>
@@ -8128,15 +8101,27 @@
     <id>FREQ_MC_MHZ</id>
   </enumerationType>
   <enumerationType>
+    <description>The frequency of the OMI channel.</description>
+    <enumerator>
+      <name>21330</name>
+      <value>21330</value>
+    </enumerator>
+    <enumerator>
+      <name>23460</name>
+      <value>23460</value>
+    </enumerator>
+    <enumerator>
+      <name>25600</name>
+      <value>25600</value>
+    </enumerator>
+    <enumerator>
+      <name>32000</name>
+      <value>32000</value>
+    </enumerator>
+    <id>FREQ_OMI_MHZ</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of a processor's IOHS mesh clocks, in MHz. This can be set differently on a by-link basis.</description>
-    <enumerator>
-      <name>1250</name>
-      <value>1250</value>
-    </enumerator>
-    <enumerator>
-      <name>1563</name>
-      <value>1563</value>
-    </enumerator>
     <enumerator>
       <name>1611</name>
       <value>1611</value>
@@ -8150,14 +8135,54 @@
       <value>2000</value>
     </enumerator>
     <enumerator>
+      <name>2031</name>
+      <value>2031</value>
+    </enumerator>
+    <enumerator>
       <name>2067</name>
       <value>2067</value>
     </enumerator>
     <enumerator>
-      <name>2070</name>
-      <value>2070</value>
+      <name>2109</name>
+      <value>2109</value>
     </enumerator>
     <id>FREQ_IOHS_MHZ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of a processor's IOHS link clock, in MHz. This can be set differently on a by-link basis.</description>
+    <enumerator>
+      <name>25781</name>
+      <value>25781</value>
+    </enumerator>
+    <enumerator>
+      <name>31875</name>
+      <value>31875</value>
+    </enumerator>
+    <enumerator>
+      <name>32000</name>
+      <value>32000</value>
+    </enumerator>
+    <enumerator>
+      <name>32500</name>
+      <value>32500</value>
+    </enumerator>
+    <enumerator>
+      <name>33067</name>
+      <value>33067</value>
+    </enumerator>
+    <enumerator>
+      <name>33750</name>
+      <value>33750</value>
+    </enumerator>
+    <id>FREQ_IOHS_LINK_MHZ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of a processor's PCIe bus in MHz. This is the same for all PCIe buses in the system. Provided by the MRW.</description>
+    <enumerator>
+      <name>2000</name>
+      <value>2000</value>
+    </enumerator>
+    <id>FREQ_PCIE_MHZ</id>
   </enumerationType>
   <enumerationType>
     <description>Specify the system policy to enforce synchronous mode between memory and nest. This drives the value of ATTR_MEM_IN_SYNCH_MODE. UNDETERMINED : Run synchronously if the dimm and nest freq matches ALWAYS : Require matching frequencies and deconfigure memory that does not match the nest NEVER : Do not run synchronously, even if the frequencies match</description>
@@ -8214,176 +8239,72 @@
       <value>0x0080000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC0_FAST</name>
+      <name>FBC_MC_FAST</name>
       <value>0x0040000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC1_FAST</name>
+      <name>FBC_ASYNC_RT2PA_NOMINAL</name>
       <value>0x0020000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC2_FAST</name>
+      <name>FBC_ASYNC_RT2PA_SAFE</name>
       <value>0x0010000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_MC3_FAST</name>
+      <name>FBC_ASYNC_PA2RT_TURBO</name>
       <value>0x0008000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2PA_NOMINAL</name>
+      <name>FBC_ASYNC_PA2RT_NOMINAL</name>
       <value>0x0004000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2PA_SAFE</name>
+      <name>FBC_ASYNC_PA2RT_SAFE</name>
       <value>0x0002000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_TURBO</name>
+      <name>FBC_ASYNC_RT2MC_ULTRATURBO</name>
       <value>0x0001000000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_NOMINAL</name>
+      <name>FBC_ASYNC_RT2MC_TURBO</name>
       <value>0x0000800000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_PA2RT_SAFE</name>
+      <name>FBC_ASYNC_RT2MC_NOMINAL</name>
       <value>0x0000400000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_ULTRATURBO</name>
+      <name>FBC_ASYNC_RT2MC_SAFE</name>
       <value>0x0000200000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_TURBO</name>
+      <name>FBC_ASYNC_MC2RT_ULTRATURBO</name>
       <value>0x0000100000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_NOMINAL</name>
+      <name>FBC_ASYNC_MC2RT_TURBO</name>
       <value>0x0000080000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC0_SAFE</name>
+      <name>FBC_ASYNC_MC2RT_NOMINAL</name>
       <value>0x0000040000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_ULTRATURBO</name>
+      <name>FBC_ASYNC_MC2RT_SAFE</name>
       <value>0x0000020000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_TURBO</name>
+      <name>RUNN_USE_QME_TB_SRC</name>
       <value>0x0000010000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_NOMINAL</name>
+      <name>HV_INITS</name>
       <value>0x0000008000000000</value>
     </enumerator>
     <enumerator>
-      <name>FBC_ASYNC_RT2MC1_SAFE</name>
+      <name>MMA_STATIC_POWEROFF</name>
       <value>0x0000004000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_ULTRATURBO</name>
-      <value>0x0000002000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_TURBO</name>
-      <value>0x0000001000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_NOMINAL</name>
-      <value>0x0000000800000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC2_SAFE</name>
-      <value>0x0000000400000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_ULTRATURBO</name>
-      <value>0x0000000200000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_TURBO</name>
-      <value>0x0000000100000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_NOMINAL</name>
-      <value>0x0000000080000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC3_SAFE</name>
-      <value>0x0000000040000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_ULTRATURBO</name>
-      <value>0x0000000020000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_TURBO</name>
-      <value>0x0000000010000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_NOMINAL</name>
-      <value>0x0000000008000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT0_SAFE</name>
-      <value>0x0000000004000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_ULTRATURBO</name>
-      <value>0x0000000002000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_TURBO</name>
-      <value>0x0000000001000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_NOMINAL</name>
-      <value>0x0000000000800000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT1_SAFE</name>
-      <value>0x0000000000400000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_ULTRATURBO</name>
-      <value>0x0000000000200000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_TURBO</name>
-      <value>0x0000000000100000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_NOMINAL</name>
-      <value>0x0000000000080000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT2_SAFE</name>
-      <value>0x0000000000040000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_ULTRATURBO</name>
-      <value>0x0000000000020000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_TURBO</name>
-      <value>0x0000000000010000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_NOMINAL</name>
-      <value>0x0000000000008000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT3_SAFE</name>
-      <value>0x0000000000004000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_USE_QME_TB_SRC</name>
-      <value>0x0000000000002000</value>
-    </enumerator>
-    <enumerator>
-      <name>HV_INITS</name>
-      <value>0x0000000000001000</value>
     </enumerator>
     <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
@@ -8446,6 +8367,18 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Device type of I2C slave device</description>
+    <enumerator>
+      <name>ADS7138_ADC</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>PCA9554A_GPIO_EXPANDER</name>
+      <value>1</value>
+    </enumerator>
+    <id>I2C_DEV_TYPE</id>
   </enumerationType>
   <enumerationType>
     <description>1 if the target is functional, else 0. Set by the platform.</description>
@@ -9886,6 +9819,45 @@
     <id>HWAS_CHANGED_BIT</id>
   </enumerationType>
   <enumerationType>
+    <description>Enum indicating the different possible Key Clear Request values NOTE: See "Host FW key clear requests" in HDAT spec</description>
+    <enumerator>
+      <description>(Default) Key Clear not requested</description>
+      <name>NONE</name>
+      <value>0x0000</value>
+    </enumerator>
+    <enumerator>
+      <description>"Clear All" : Clear/reset all sensitive data controlled by platform firmware from the system</description>
+      <name>ALL</name>
+      <value>0x8000</value>
+    </enumerator>
+    <enumerator>
+      <description>"Clear OS Keys" : This indicates OPAL to clear the OS secureboot keys</description>
+      <name>OS_KEYS</name>
+      <value>0x4000</value>
+    </enumerator>
+    <enumerator>
+      <description>"Clear PowerVM System Key" : This indicates to PowerVM to clear the system key to the default state</description>
+      <name>POWERVM_SYSKEY</name>
+      <value>0x1000</value>
+    </enumerator>
+    <enumerator>
+      <description>Reserved bits</description>
+      <name>RESERVED_1</name>
+      <value>0x2E00</value>
+    </enumerator>
+    <enumerator>
+      <description>MFG mode and imprint driver only : Clear all sensitive data and leave storage empty</description>
+      <name>MFG</name>
+      <value>0x0100</value>
+    </enumerator>
+    <enumerator>
+      <description>Reserved bits</description>
+      <name>RESERVED_2</name>
+      <value>0x00FF</value>
+    </enumerator>
+    <id>KEY_CLEAR_REQUEST</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enum for MFG_WRAP_TEST_ABUS_LINKS_SET</description>
     <enumerator>
       <name>SET_NONE</name>
@@ -10412,6 +10384,18 @@
     <id>PROC_FABRIC_X_BUS_WIDTH</id>
   </enumerationType>
   <enumerationType>
+    <description>Enumeration for processor module type that come from HDAT spec 0x50 = DCM 0x51 = SCM</description>
+    <enumerator>
+      <name>GODEL</name>
+      <value>0x50</value>
+    </enumerator>
+    <enumerator>
+      <name>BLAISE</name>
+      <value>0x51</value>
+    </enumerator>
+    <id>PROC_MODULE_TYPE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enumeration indicating which _PBIEX_ASYNC_SEL should be use</description>
     <enumerator>
       <name>SEL0</name>
@@ -10834,17 +10818,38 @@
     <id>IPMI_SENSOR_ARRAY</id>
   </enumerationType>
   <enumerationType>
-    <default>GODEL</default>
-    <description>Enumeration for processor module type that come from HDAT spec 0x50 = DCM 0x51 = SCM</description>
+    <description>Enumeration used in OR expression to indicate why to update SBE.</description>
     <enumerator>
-      <name>GODEL</name>
-      <value>0x50</value>
+      <description>Just clears the value</description>
+      <name>CLEAR</name>
+      <value>0x0</value>
     </enumerator>
     <enumerator>
-      <name>BLAISE</name>
-      <value>0x51</value>
+      <description>See targetservicestart for details, if processor is swapped need to update SBE.</description>
+      <name>BAR_MISMATCH</name>
+      <value>0x1</value>
     </enumerator>
-    <id>PROC_MODULE_TYPE</id>
+    <enumerator>
+      <description>See call_mss_freq for details, if new and old frequency changes need to update SBE.</description>
+      <name>MSS_FREQ_CHANGE</name>
+      <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <description>See call_mss_attr_update for details, if topology changes need to update SBE.</description>
+      <name>TOPOLOGY_CHECKS</name>
+      <value>0x4</value>
+    </enumerator>
+    <enumerator>
+      <description>See call_mss_attr_update for details, if HRMOR outside configured range need to update SBE.</description>
+      <name>HRMOR_OUTSIDE_CONFIGURED_MEM</name>
+      <value>0x8</value>
+    </enumerator>
+    <enumerator>
+      <description>See call_mss_attr_update for details, if fabric topology changes need to update SBE.</description>
+      <name>FABRIC_EFF_TOPOLOGY</name>
+      <value>0x10</value>
+    </enumerator>
+    <id>SBE_UPDATE_TYPE</id>
   </enumerationType>
   <enumerationType>
     <description>Enumeration indicating the IPMI sensor name, which will be used by hostboot when determining the sensor number to return. The sensor name consists of one byte of sensor type plus one byte of sub-type, to differentiate similar sensors under the same target. Our implementaion uses the IPMI defined entity ID as the sub-type.</description>

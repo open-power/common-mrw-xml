@@ -504,11 +504,11 @@
 			<name>INTERNAL CABLE</name>
 			<value>14</value>
 		</enumerator>
-		<enumerator>
-			<name>BMC</name>
+    <enumerator>
+			<name>SMP-INTERNAL</name>
 			<value>15</value>
-		</enumerator>	
-		<enumerator>
+		</enumerator>
+    <enumerator>
 			<name>DISPLAYPORT</name>
 			<value>16</value>
 		</enumerator>	
@@ -1193,6 +1193,7 @@
 	<attribute>
 		<id>SLOT_NAME</id>
 		<description>PCIe slot name definition</description>
+		<global/>
 		<simpleType>
 			<uint8_t>
 			</uint8_t>
