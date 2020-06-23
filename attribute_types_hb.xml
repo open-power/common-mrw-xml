@@ -5643,6 +5643,34 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This policy determines if a new FW Secure Version will be locked into the SBE Seeproms during the SBE Update process such that previous versions will no longer be supported. - 0b0 - (Default) Policy Disabled - Do NOT Lock In Secure Version - 0b1 - Policy Enabled - Do Lock In Secure Version</description>
+    <id>SECURE_VERSION_LOCKIN_POLICY</id>
+    <persistency>non-volatile</persistency>
+    <range>
+      <max>1</max>
+      <min>0</min>
+    </range>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The value of the FW Secure Version found in the SBE Seeprom of the master processor used to boot this node. It will get updated, if necessary, by Hostboot on each IPL.</description>
+    <id>SECURE_VERSION_SEEPROM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <complexType>
       <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only. Default values match OpenBMC implementation.</description>
       <field>

@@ -734,6 +734,9 @@
       <id>MODEL</id>
     </attribute>
     <attribute>
+      <id>SECURE_VERSION_SEEPROM</id>
+    </attribute>
+    <attribute>
       <default>NODE</default>
       <id>TYPE</id>
     </attribute>
@@ -1187,6 +1190,9 @@
     </attribute>
     <attribute>
       <id>SBE_UPDATE_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>SECURE_VERSION_LOCKIN_POLICY</id>
     </attribute>
     <attribute>
       <id>SP_FUNCTIONS</id>
