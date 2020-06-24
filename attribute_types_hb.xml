@@ -216,6 +216,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2, 3 Consumers: Hostboot firmware</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_INDEX_SELECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOF_INDEX_SELECT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>If WOF Throttle Control Loop is enabled, then selects the mode to update throttle control values. BINARY: Will update the throttle control values by half the current value of throttle. DECINC: Will update throttle control value by one in each step. Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_WOF_THROTTLE_CONTROL_LOOP_MODE</id>
