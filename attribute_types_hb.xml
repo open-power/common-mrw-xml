@@ -1,58 +1,5 @@
 <attributes>
   <attribute>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CYCLE_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CYCLE_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Time between invocations of auxiliary function on GPE1. The time (in is as 2^ATTR_AUX_FUNC_INVOCATION_TIME_MS with 0 indicating the is OFF. Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Provided by the Machine Readable Workbook to tune the collection. Platform default:1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -266,6 +213,19 @@
       <uint8_t>
         <default>OFF</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2, 3 Consumers: Hostboot firmware</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_INDEX_SELECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOF_INDEX_SELECT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -650,6 +610,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Value to set into the Droop Count Control Register to establish the light and heavy droop thresholds. 0:3 DTT_LARGE_OFFSET Used for both DTT[01]_EVENT_SEL="100".This field is added to the Large Droop Bin (FDCR[LARGE_DROOP_DETECT]+ FDCR[TRIP_OFFSET] + FDCR[CAL_ADJ]) to select the target DDS_DATAbin location for "dirty" timing margin. 4:7 DTT0_THRESH_SCALE Droop Throttle Threshold0 Scale Factor (4-bit) for use by the following field. 8:15 DTT0_THRESH_VALUE Droop Throttle Threshold0 Compare Value (8-bit). When the 24-bit DroopThrottle Count0 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 16:19 DTT1_THRESH_SCALE Droop Throttle Threshold1 Scale Factor (4-bit) for use by the following field. 20:17 DTT1_THRESH_VALUE Droop Throttle Threshold1 Compare Value (8-bit). When the 24-bit DroopThrottle Count1 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 28:30 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT, when this field is: 000: DROOP_COUNT0 disabled Single occurrence of a droop event leading to performance loss selects what to compare with FTC Event Data(4:6) 001: "110" rising edge of a small throttle response 010: "111" rising edge of a large throttle response 011: "110" or "111" rising edge of a either throttle response Raw timing margin from 0 to 15 bins above the Large detect point. 100: Cycles that the bin selected by LARGE_DROOP_DETECT plus TRIP_OFFSET plus 4-bit DTT_LARGE_OFFSET was '0' (indicating loss of timing margin). How long actually throttling at a "full rate"including due to predicted response (slope and adj and ddp) selects what to compare with FTC Event Data(4:6) 101:"110" or ("01X" and NOT ("011" and Event Data(7))) meaning number of cycles that small throttle was present and not in recovery phase 110: "111`" or 100" meaning number of cycles that large droop was presentand not in either recovery phase 111: either small or large throttle present and not in recovery (OR of the twoabove) 31:33 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT. See DTT0_EVENT_SEL Consumer: p10_pm_pgpe_init</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_DCCR_VALUE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOF_DCCR_VALUE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Establishes the minimum voltage offset at the module pins in mV that the VCS rail is above the VDD rail during Pstate operations when VCS above any established VCS floor defined by ATTR_VCS_FLOOR_MV. If ATTR_VCS_FLOOR_MV is 0, this offset will apply across the entire VCS voltage range. Producer: MRW Consumers: p10_pstate_parameter_build -&gt; PGPE Hcode</description>
     <hwpfToHbAttrMap>
       <id>ATTR_VCS_VDD_OFFSET_MV</id>
@@ -661,6 +634,74 @@
     <simpleType>
       <uint8_t>
         <default>20</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CYCLE_COUNT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CYCLE_COUNT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -708,6 +749,19 @@
       <uint8_t />
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>Bit vector of user selectable dynamic init modes which can be applied when customizing the IPL image. Each dynamic init mode can generally cover the application of multiple dynamic init features; the init mode content (in terms of dynamic init features), is defined in p10_dynamic_services.xml Individual init modes are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple init modes can be selected at once.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DYNAMIC_INIT_MODE_VEC</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DYNAMIC_INIT_MODE_VEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
   </attribute>
   <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
@@ -793,7 +847,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI/NV OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI/NV OPT4 = SMPA/SMPX/OCAPI/NV OPT5 = SMPA/SMPX/OCAPI/NV OPT6 = SMPA/SMPX/OCAPI/NV OPT7 = SMPA/SMPX/OCAPI/NV Provided by the MRW.</description>
+    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IOHS_CONFIG_MODE</id>
       <macro>DIRECT</macro>
@@ -860,20 +914,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>The frequency of the OMI channel.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_OMI_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_OMI_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
@@ -1765,12 +1805,39 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The frequency of the OMI channel.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_OMI_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_OMI_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>The frequency of a processor's IOHS mesh clocks, in MHz. This can be set differently on a by-link basis.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_IOHS_MHZ</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>FREQ_IOHS_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The frequency of a processor's IOHS link clock, in MHz. This can be set differently on a by-link basis.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_IOHS_LINK_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_IOHS_LINK_MHZ</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -2190,21 +2257,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -5407,7 +5459,7 @@
     <simpleType>
       <array>16</array>
       <uint16_t>
-        <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
+        <default>0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454, 0x5454,0x5454,0x5454,0x5454,</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -5421,6 +5473,31 @@
       <uint16_t>
         <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PCIE Lane Equalization values for each PHB Creator: MRW Purpose: Holds settings which are loaded into the HW to optimize the PCIE lane signal eye between the chips + PCIE Gen5 endpoints Data Format: 16 entries of 16 bytes of EQ data per PHB. Each PHB has an EQ value for each of its 16 lanes. Each value is a uint16 formatted as follows: Bit 0:3 - up_rx_hint (bit 0 reserved) Bit 4:7 - up_tx_preset Bit 8:11 - dn_rx_hint (bit 0 reserved) Bit 12:15 - dn_tx_preset</description>
+    <id>PROC_PCIE_LANE_EQUALIZATION_GEN5</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>16</array>
+      <uint16_t>
+        <default>0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777, 0x7777,0x7777,0x7777,0x7777</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute holds the base MRW values that controls the latches required to configure the PHBs to swap its lanes if wiring to the connector/device is straight or reverse. On some systems Dynamic Bifurcation can occur (based on VPD values or some other indicator) which may tweak the value provided in this _BASE attribute and the ATTR_PROC_PCIE_LANE_REVERSAL used by the HWP directly. If no dynamic bifurcation occurs the _BASE attribute value and ATTR_PROC_PCIE_LANE_REVERSAL will be identical. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted HWP Attributes ATTR_PROC_PCIE_LANE_REVERSAL_BASE (Stack0, Stack1, Stack2) (1, 0, 0) Reverse lanes on PHB0. TC_PCI_LANE_CFG_DC_2H Do not reverse lanes on PHB1. TC_PCI_LANE_CFG_DC_3H Do not reverse lanes on PHB2. TC_PCI_LANE_CFG_DC_4H Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <global />
+    <id>PROC_PCIE_LANE_REVERSAL_BASE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>0x0,0x0,0x0</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -5483,6 +5560,19 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute holds the base values from the MRW to define how to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. On some systems Dynamic Bifurcation can occur (based on VPD values or some other indicator) which may tweak the value provided in this _BASE attribute and the ATTR_PROC_PCIE_PHB_ACTIVE used by the HWP directly. If no dynamic bifurcation occurs the _BASE attribute value and ATTR_PROC_PCIE_PHB_ACTIVE will be identical. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE_BASE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
+    <global />
+    <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>3</array>
+      <uint8_t>
+        <default>0x1,0x1,0x1</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -5564,6 +5654,34 @@
         <default>0</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>This policy determines if a new FW Secure Version will be locked into the SBE Seeproms during the SBE Update process such that previous versions will no longer be supported. - 0b0 - (Default) Policy Disabled - Do NOT Lock In Secure Version - 0b1 - Policy Enabled - Do Lock In Secure Version</description>
+    <id>SECURE_VERSION_LOCKIN_POLICY</id>
+    <persistency>non-volatile</persistency>
+    <range>
+      <max>1</max>
+      <min>0</min>
+    </range>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The value of the FW Secure Version found in the SBE Seeprom of the master processor used to boot this node. It will get updated, if necessary, by Hostboot on each IPL.</description>
+    <id>SECURE_VERSION_SEEPROM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <complexType>
@@ -6852,30 +6970,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RUNN_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <enumerator>
       <name>NONE</name>
@@ -7112,6 +7206,42 @@
     <id>PMCR_MOST_RECENT_MODE</id>
   </enumerationType>
   <enumerationType>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>RUNN_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -7212,7 +7342,7 @@
     <id>PROC_FABRIC_TOPOLOGY_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI/NV OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI/NV OPT4 = SMPA/SMPX/OCAPI/NV OPT5 = SMPA/SMPX/OCAPI/NV OPT6 = SMPA/SMPX/OCAPI/NV OPT7 = SMPA/SMPX/OCAPI/NV Provided by the MRW.</description>
+    <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <enumerator>
       <name>SMPX</name>
       <value>0x0</value>
@@ -7220,10 +7350,6 @@
     <enumerator>
       <name>SMPA</name>
       <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>NV</name>
-      <value>0x2</value>
     </enumerator>
     <enumerator>
       <name>OCAPI</name>
@@ -7270,26 +7396,6 @@
       <value>50</value>
     </enumerator>
     <id>LINK_SPEED</id>
-  </enumerationType>
-  <enumerationType>
-    <description>The frequency of the OMI channel.</description>
-    <enumerator>
-      <name>19200</name>
-      <value>19200</value>
-    </enumerator>
-    <enumerator>
-      <name>21330</name>
-      <value>21330</value>
-    </enumerator>
-    <enumerator>
-      <name>23460</name>
-      <value>23460</value>
-    </enumerator>
-    <enumerator>
-      <name>25600</name>
-      <value>25600</value>
-    </enumerator>
-    <id>FREQ_OMI_MHZ</id>
   </enumerationType>
   <enumerationType>
     <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
@@ -8036,15 +8142,27 @@
     <id>FREQ_MC_MHZ</id>
   </enumerationType>
   <enumerationType>
+    <description>The frequency of the OMI channel.</description>
+    <enumerator>
+      <name>21330</name>
+      <value>21330</value>
+    </enumerator>
+    <enumerator>
+      <name>23460</name>
+      <value>23460</value>
+    </enumerator>
+    <enumerator>
+      <name>25600</name>
+      <value>25600</value>
+    </enumerator>
+    <enumerator>
+      <name>32000</name>
+      <value>32000</value>
+    </enumerator>
+    <id>FREQ_OMI_MHZ</id>
+  </enumerationType>
+  <enumerationType>
     <description>The frequency of a processor's IOHS mesh clocks, in MHz. This can be set differently on a by-link basis.</description>
-    <enumerator>
-      <name>1250</name>
-      <value>1250</value>
-    </enumerator>
-    <enumerator>
-      <name>1563</name>
-      <value>1563</value>
-    </enumerator>
     <enumerator>
       <name>1611</name>
       <value>1611</value>
@@ -8058,14 +8176,54 @@
       <value>2000</value>
     </enumerator>
     <enumerator>
+      <name>2031</name>
+      <value>2031</value>
+    </enumerator>
+    <enumerator>
       <name>2067</name>
       <value>2067</value>
     </enumerator>
     <enumerator>
-      <name>2070</name>
-      <value>2070</value>
+      <name>2109</name>
+      <value>2109</value>
     </enumerator>
     <id>FREQ_IOHS_MHZ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of a processor's IOHS link clock, in MHz. This can be set differently on a by-link basis.</description>
+    <enumerator>
+      <name>25781</name>
+      <value>25781</value>
+    </enumerator>
+    <enumerator>
+      <name>31875</name>
+      <value>31875</value>
+    </enumerator>
+    <enumerator>
+      <name>32000</name>
+      <value>32000</value>
+    </enumerator>
+    <enumerator>
+      <name>32500</name>
+      <value>32500</value>
+    </enumerator>
+    <enumerator>
+      <name>33067</name>
+      <value>33067</value>
+    </enumerator>
+    <enumerator>
+      <name>33750</name>
+      <value>33750</value>
+    </enumerator>
+    <id>FREQ_IOHS_LINK_MHZ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The frequency of a processor's PCIe bus in MHz. This is the same for all PCIe buses in the system. Provided by the MRW.</description>
+    <enumerator>
+      <name>2000</name>
+      <value>2000</value>
+    </enumerator>
+    <id>FREQ_PCIE_MHZ</id>
   </enumerationType>
   <enumerationType>
     <description>Specify the system policy to enforce synchronous mode between memory and nest. This drives the value of ATTR_MEM_IN_SYNCH_MODE. UNDETERMINED : Run synchronously if the dimm and nest freq matches ALWAYS : Require matching frequencies and deconfigure memory that does not match the nest NEVER : Do not run synchronously, even if the frequencies match</description>
@@ -8250,18 +8408,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
@@ -9731,11 +9877,6 @@
       <value>0x4000</value>
     </enumerator>
     <enumerator>
-      <description>"Clear PEF SSO" : This indicates to OPAL/PEF to clear the System Security Office certificate</description>
-      <name>PEF_SSO</name>
-      <value>0x2000</value>
-    </enumerator>
-    <enumerator>
       <description>"Clear PowerVM System Key" : This indicates to PowerVM to clear the system key to the default state</description>
       <name>POWERVM_SYSKEY</name>
       <value>0x1000</value>
@@ -9743,7 +9884,7 @@
     <enumerator>
       <description>Reserved bits</description>
       <name>RESERVED_1</name>
-      <value>0x0E00</value>
+      <value>0x2E00</value>
     </enumerator>
     <enumerator>
       <description>MFG mode and imprint driver only : Clear all sensitive data and leave storage empty</description>

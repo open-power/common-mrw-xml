@@ -394,6 +394,9 @@
       <id>SAFE_MODE_THROTTLE_IDX</id>
     </attribute>
     <attribute>
+      <id>WOF_DCCR_VALUE</id>
+    </attribute>
+    <attribute>
       <id>VCS_VDD_OFFSET_MV</id>
     </attribute>
     <attribute>
@@ -407,9 +410,6 @@
     </attribute>
     <attribute>
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
@@ -521,6 +521,9 @@
     </attribute>
     <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
       <id>SPI_BUS_DIV_REF</id>
@@ -729,6 +732,9 @@
     <attribute>
       <default>POWER10</default>
       <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <id>SECURE_VERSION_SEEPROM</id>
     </attribute>
     <attribute>
       <default>NODE</default>
@@ -1186,6 +1192,9 @@
       <id>SBE_UPDATE_DISABLE</id>
     </attribute>
     <attribute>
+      <id>SECURE_VERSION_LOCKIN_POLICY</id>
+    </attribute>
+    <attribute>
       <id>SP_FUNCTIONS</id>
     </attribute>
     <attribute>
@@ -1309,12 +1318,6 @@
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1354,6 +1357,9 @@
       <id>SYSTEM_WOV_UNDERV_DISABLE</id>
     </attribute>
     <attribute>
+      <id>WOF_INDEX_SELECT</id>
+    </attribute>
+    <attribute>
       <id>WOF_THROTTLE_CONTROL_LOOP_MODE</id>
     </attribute>
     <attribute>
@@ -1372,6 +1378,15 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1379,6 +1394,9 @@
     </attribute>
     <attribute>
       <id>MRW_HW_MIRRORING_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>DYNAMIC_INIT_MODE_VEC</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
@@ -1487,9 +1505,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1849,6 +1864,9 @@
     </attribute>
     <attribute>
       <id>FREQ_IOHS_MHZ</id>
+    </attribute>
+    <attribute>
+      <id>FREQ_IOHS_LINK_MHZ</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
@@ -2484,6 +2502,12 @@
     <parent>unit</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_REVERSAL_BASE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
+    </attribute>
     <id>unit-pec-power10</id>
     <parent>unit-pec</parent>
   </targetType>
@@ -2621,6 +2645,15 @@
     <parent>unit-phb-power9</parent>
   </targetType>
   <targetType>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
+    </attribute>
+    <attribute>
+      <id>PROC_PCIE_LANE_EQUALIZATION_GEN5</id>
+    </attribute>
     <id>unit-phb-power10</id>
     <parent>unit-phb</parent>
   </targetType>
