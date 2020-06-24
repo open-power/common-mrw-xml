@@ -1357,6 +1357,9 @@
       <id>SYSTEM_WOV_UNDERV_DISABLE</id>
     </attribute>
     <attribute>
+      <id>WOF_INDEX_SELECT</id>
+    </attribute>
+    <attribute>
       <id>WOF_THROTTLE_CONTROL_LOOP_MODE</id>
     </attribute>
     <attribute>
