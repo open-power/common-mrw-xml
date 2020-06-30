@@ -496,19 +496,7 @@
       <id>SKEWADJ_BYPASS</id>
     </attribute>
     <attribute>
-      <id>SKEWADJ_CORE_PDLY_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>SKEWADJ_CACHE_PDLY_OVERRIDE</id>
-    </attribute>
-    <attribute>
       <id>DCADJ_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>DCADJ_DCC_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>DCADJ_TARGET_OVERRIDE</id>
     </attribute>
     <attribute>
       <id>LPC_CONSOLE_CNFG</id>
@@ -1318,12 +1306,6 @@
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1384,6 +1366,15 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1393,9 +1384,6 @@
       <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
-      <id>DYNAMIC_INIT_MODE_VEC</id>
-    </attribute>
-    <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
     </attribute>
     <attribute>
@@ -1403,6 +1391,9 @@
     </attribute>
     <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>MRW_L2_INCREASE_JITTER</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
@@ -1436,12 +1427,6 @@
     </attribute>
     <attribute>
       <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
     </attribute>
     <attribute>
       <id>FREQ_CP_REFCLOCK_KHZ</id>
@@ -1502,9 +1487,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
