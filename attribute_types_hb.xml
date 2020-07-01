@@ -2171,7 +2171,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x1</default>
+        <default>0x00</default>
       </uint8_t>
     </simpleType>
     <writeable />
@@ -8268,6 +8268,10 @@
     <enumerator>
       <name>RUNN_CONTAINED_DUMP</name>
       <value>0x0000002000000000</value>
+    </enumerator>
+    <enumerator>
+      <name>UV_INITS</name>
+      <value>0x0000001000000000</value>
     </enumerator>
     <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
