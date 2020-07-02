@@ -1483,9 +1483,6 @@
       <id>MAX_SBE_SEEPROM_SIZE</id>
     </attribute>
     <attribute>
-      <id>DYNAMIC_INIT_FEATURE_VEC</id>
-    </attribute>
-    <attribute>
       <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
