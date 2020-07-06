@@ -665,6 +665,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Master seed used to seed the RNG for generating thread seeds for exercisers.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MASTER_SEED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MASTER_SEED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>OMI inband BAR enable. Set by platform.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
