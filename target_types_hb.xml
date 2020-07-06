@@ -400,6 +400,9 @@
       <id>VCS_VDD_OFFSET_MV</id>
     </attribute>
     <attribute>
+      <id>RUNN_MASTER_SEED</id>
+    </attribute>
+    <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
     </attribute>
     <attribute>
