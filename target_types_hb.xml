@@ -517,9 +517,6 @@
       <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
-      <id>SPI_BUS_DIV_REF</id>
-    </attribute>
-    <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
     </attribute>
     <attribute>
