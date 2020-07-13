@@ -27,6 +27,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Master seed used to seed the RNG for generating thread seeds for exercisers.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MASTER_SEED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MASTER_SEED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>OMI inband BAR enable. Set by platform.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
@@ -736,19 +749,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Bit vector of user selectable dynamic init modes which can be applied when customizing the IPL image. Each dynamic init mode can generally cover the application of multiple dynamic init features; the init mode content (in terms of dynamic init features), is defined in p10_dynamic_services.xml Individual init modes are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple init modes can be selected at once.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DYNAMIC_INIT_MODE_VEC</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DYNAMIC_INIT_MODE_VEC</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
@@ -894,6 +894,19 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>PROC_EPS_TABLE_TYPE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Increase the L2 re-request jitter for larger systems</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_L2_INCREASE_JITTER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_L2_INCREASE_JITTER</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -1436,36 +1449,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>enable the pulse mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PULSE_MODE_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PULSE_MODE_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLE</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>value for pulse mode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PULSE_MODE_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PULSE_MODE_VALUE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>To skip the locking sequence and check for lock of CP TOD Filter PLL</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CP_PLLTODFLT_BYPASS</id>
@@ -1578,32 +1561,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Skew Adjust: Set fixed value for core-cache delay bit 0: override enabled bits 12:15: override value Taken from CP00 MK keyword in VPD</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SKEWADJ_CORE_PDLY_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SKEWADJ_CORE_PDLY_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Skew Adjust: Set fixed value for cache-nest delay bit 0: override enabled bits 12:15: override value Taken from CP00 MK keyword in VPD</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SKEWADJ_CACHE_PDLY_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SKEWADJ_CACHE_PDLY_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Keep core duty cycle adjust logic bypassed</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DCADJ_BYPASS</id>
@@ -1616,32 +1573,6 @@
       <uint8_t />
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>Duty Cycle Adjust: Set fixed value for duty cycle control bit 0: override enabled bits 8:15: override value Taken from CP00 MK keyword in VPD</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DCADJ_DCC_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DCADJ_DCC_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Duty Cycle Adjust: Set duty cycle target different from 50% bit 0: override enabled bits 8:15: override value (signed integer, delta from 50%) Taken from CP00 MK keyword in VPD</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DCADJ_TARGET_OVERRIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DCADJ_TARGET_OVERRIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
   </attribute>
   <attribute>
     <description>Indicates if LPC console is enabled on system</description>
@@ -1857,22 +1788,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Ref clock SPI bus divider consumed by code running out of OTPROM</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SPI_BUS_DIV_REF</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SPI_BUS_DIV_REF</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>0x41</default>
-      </uint16_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Maximum frequency (in MHz) that this system can run the DIMMs at. There are 5 possible values determined by the dimm configuration. For configurations which have mixed rank configurations, the lowest frequency based on ranks of either DIMM is chosen. For example if there was a 1R and a 2R DIMM installed, and 1R dual drop was a lower max freq than 2R dual drop, then the 1R max freq would be the max allowed. [0]=One rank, single drop [1]=Two rank, single drop [2]=Four rank, single drop [3]=One rank, dual drop [4]=Two rank, dual drop A value of zero would indicate an unsupported configuration. Note: Do not use this attribute to limit configurations, it is not checked during plug rules. If you have an unsupported configuration, use the value 0 as the maximum freq.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MAX_ALLOWED_DIMM_FREQ</id>
@@ -2021,20 +1936,6 @@
         <default>0x80000</default>
       </uint32_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Bit vector of dynamic init features which are applied when customizing the IPL image. Individual features are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple features can be selected at once.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DYNAMIC_INIT_FEATURE_VEC</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DYNAMIC_INIT_FEATURE_VEC</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
@@ -2238,7 +2139,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x1</default>
+        <default>0x00</default>
       </uint8_t>
     </simpleType>
     <writeable />
@@ -5785,7 +5686,7 @@
     <readable />
     <simpleType>
       <string>
-        <default>ibm,p9</default>
+        <default>ibm,p10-openbmc</default>
         <sizeInclNull>64</sizeInclNull>
       </string>
     </simpleType>
@@ -5797,7 +5698,7 @@
     <readable />
     <simpleType>
       <string>
-        <default>ibm,miscopenpower</default>
+        <default>ibm,rainier</default>
         <sizeInclNull>64</sizeInclNull>
       </string>
     </simpleType>
@@ -6228,14 +6129,15 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PHYP system type value for habanero and barreleye (0x3015 and 0x3016 respectively). The value is updated in the system xml.</description>
+    <description>PHYP system type value for rainier is 0x5030</description>
     <id>PHYP_SYSTEM_TYPE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t />
+      <uint32_t>
+        <default>0x50300000</default>
+      </uint32_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Hardware topology for HDAT creator:MRW consumer:HDAT firmware notes: Hardware Topology 2 Bytes Byte 1: bit 0-3: Node Id bit 4-7: Socket id inside the node bit 8-11: Proc id inside socket bit 12-15:Hub Id inside proc</description>
@@ -7386,6 +7288,18 @@
     <id>LINK_SPEED</id>
   </enumerationType>
   <enumerationType>
+    <description>Increase the L2 re-request jitter for larger systems</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MRW_L2_INCREASE_JITTER</id>
+  </enumerationType>
+  <enumerationType>
     <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <enumerator>
       <name>DISABLE</name>
@@ -7966,18 +7880,6 @@
     <id>PROC_SBE_MASTER_CHIP</id>
   </enumerationType>
   <enumerationType>
-    <description>enable the pulse mode</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <id>PULSE_MODE_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>To skip the locking sequence and check for lock of CP TOD Filter PLL</description>
     <enumerator>
       <name>BYPASS</name>
@@ -8228,114 +8130,6 @@
       <value>2</value>
     </enumerator>
     <id>REQUIRED_SYNCH_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Bit vector of dynamic init features which are applied when customizing the IPL image. Individual features are selected/deselected by setting/clearing the corresponding bit in this vector. Note: multiple features can be selected at once.</description>
-    <enumerator>
-      <name>CACHE_CONTAINED</name>
-      <value>0x8000000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>CHIP_CONTAINED</name>
-      <value>0x4000000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>COMMON_CONTAINED</name>
-      <value>0x2000000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>HOSTBOOT</name>
-      <value>0x1000000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>L2RC_HIGH_JITTER</name>
-      <value>0x0800000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_SRESET_T0</name>
-      <value>0x0400000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_SRESET_T1</name>
-      <value>0x0200000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_SRESET_T2</name>
-      <value>0x0100000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_SRESET_T3</name>
-      <value>0x0080000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_MC_FAST</name>
-      <value>0x0040000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2PA_NOMINAL</name>
-      <value>0x0020000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2PA_SAFE</name>
-      <value>0x0010000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_PA2RT_TURBO</name>
-      <value>0x0008000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_PA2RT_NOMINAL</name>
-      <value>0x0004000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_PA2RT_SAFE</name>
-      <value>0x0002000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC_ULTRATURBO</name>
-      <value>0x0001000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC_TURBO</name>
-      <value>0x0000800000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC_NOMINAL</name>
-      <value>0x0000400000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_RT2MC_SAFE</name>
-      <value>0x0000200000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT_ULTRATURBO</name>
-      <value>0x0000100000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT_TURBO</name>
-      <value>0x0000080000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT_NOMINAL</name>
-      <value>0x0000040000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>FBC_ASYNC_MC2RT_SAFE</name>
-      <value>0x0000020000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>RUNN_USE_QME_TB_SRC</name>
-      <value>0x0000010000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>HV_INITS</name>
-      <value>0x0000008000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>MMA_STATIC_POWEROFF</name>
-      <value>0x0000004000000000</value>
-    </enumerator>
-    <id>DYNAMIC_INIT_FEATURE_VEC</id>
   </enumerationType>
   <enumerationType>
     <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>

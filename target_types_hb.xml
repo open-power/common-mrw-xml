@@ -328,6 +328,9 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>RUNN_MASTER_SEED</id>
+    </attribute>
+    <attribute>
       <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
     </attribute>
     <attribute>
@@ -496,19 +499,7 @@
       <id>SKEWADJ_BYPASS</id>
     </attribute>
     <attribute>
-      <id>SKEWADJ_CORE_PDLY_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>SKEWADJ_CACHE_PDLY_OVERRIDE</id>
-    </attribute>
-    <attribute>
       <id>DCADJ_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>DCADJ_DCC_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>DCADJ_TARGET_OVERRIDE</id>
     </attribute>
     <attribute>
       <id>LPC_CONSOLE_CNFG</id>
@@ -524,9 +515,6 @@
     </attribute>
     <attribute>
       <id>FREQ_OMI_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>SPI_BUS_DIV_REF</id>
     </attribute>
     <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
@@ -1201,6 +1189,12 @@
       <id>SUPPORTED_STOP_STATES</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_FAMILY</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
       <id>TPM_REQUIRED</id>
     </attribute>
     <attribute>
@@ -1220,6 +1214,12 @@
     </attribute>
     <attribute>
       <id>PHYS_PRES_REIPL</id>
+    </attribute>
+    <attribute>
+      <id>PHYP_SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_BRAND_NAME</id>
     </attribute>
     <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
@@ -1250,6 +1250,9 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>IS_MPIPL_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
@@ -1316,6 +1319,9 @@
     </attribute>
     <attribute>
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>RUNN_MODE</id>
@@ -1393,9 +1399,6 @@
       <id>MRW_HW_MIRRORING_ENABLE</id>
     </attribute>
     <attribute>
-      <id>DYNAMIC_INIT_MODE_VEC</id>
-    </attribute>
-    <attribute>
       <id>PROC_FABRIC_BROADCAST_MODE</id>
     </attribute>
     <attribute>
@@ -1403,6 +1406,9 @@
     </attribute>
     <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>MRW_L2_INCREASE_JITTER</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
@@ -1436,12 +1442,6 @@
     </attribute>
     <attribute>
       <id>SECTOR_BUFFER_STRENGTH</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>PULSE_MODE_VALUE</id>
     </attribute>
     <attribute>
       <id>FREQ_CP_REFCLOCK_KHZ</id>
@@ -1496,9 +1496,6 @@
     </attribute>
     <attribute>
       <id>MAX_SBE_SEEPROM_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>DYNAMIC_INIT_FEATURE_VEC</id>
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
