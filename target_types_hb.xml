@@ -1189,6 +1189,12 @@
       <id>SUPPORTED_STOP_STATES</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_FAMILY</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
       <id>TPM_REQUIRED</id>
     </attribute>
     <attribute>
@@ -1208,6 +1214,12 @@
     </attribute>
     <attribute>
       <id>PHYS_PRES_REIPL</id>
+    </attribute>
+    <attribute>
+      <id>PHYP_SYSTEM_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_BRAND_NAME</id>
     </attribute>
     <attribute>
       <id>ADC_CHANNEL_FUNC_IDS</id>
@@ -1238,6 +1250,9 @@
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
+    </attribute>
+    <attribute>
+      <id>IS_MPIPL_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
@@ -1304,6 +1319,9 @@
     </attribute>
     <attribute>
       <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
     </attribute>
     <attribute>
       <id>RUNN_MODE</id>
