@@ -5686,7 +5686,7 @@
     <readable />
     <simpleType>
       <string>
-        <default>ibm,p9</default>
+        <default>ibm,p10-openbmc</default>
         <sizeInclNull>64</sizeInclNull>
       </string>
     </simpleType>
@@ -5698,7 +5698,7 @@
     <readable />
     <simpleType>
       <string>
-        <default>ibm,miscopenpower</default>
+        <default>ibm,rainier</default>
         <sizeInclNull>64</sizeInclNull>
       </string>
     </simpleType>
@@ -6129,14 +6129,15 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>PHYP system type value for habanero and barreleye (0x3015 and 0x3016 respectively). The value is updated in the system xml.</description>
+    <description>PHYP system type value for rainier is 0x5030</description>
     <id>PHYP_SYSTEM_TYPE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t />
+      <uint32_t>
+        <default>0x50300000</default>
+      </uint32_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Hardware topology for HDAT creator:MRW consumer:HDAT firmware notes: Hardware Topology 2 Bytes Byte 1: bit 0-3: Node Id bit 4-7: Socket id inside the node bit 8-11: Proc id inside socket bit 12-15:Hub Id inside proc</description>
