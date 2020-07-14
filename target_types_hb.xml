@@ -328,9 +328,6 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
-      <id>RUNN_MASTER_SEED</id>
-    </attribute>
-    <attribute>
       <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
     </attribute>
     <attribute>
@@ -401,6 +398,9 @@
     </attribute>
     <attribute>
       <id>VCS_VDD_OFFSET_MV</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MASTER_SEED</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
@@ -1128,10 +1128,52 @@
       <id>DPO_MIN_FREQ_PERCENT</id>
     </attribute>
     <attribute>
+      <id>FIELD_TH_L2_LINE_DELETES</id>
+    </attribute>
+    <attribute>
+      <id>FIELD_TH_L3_LINE_DELETES</id>
+    </attribute>
+    <attribute>
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
       <id>KEY_CLEAR_REQUEST</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L2_CACHE_CES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L2_DIR_CES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L2_LINE_DELETES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L3_CACHE_CES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L3_DIR_CES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_L3_LINE_DELETES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_IMPES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_IPL_SOFT_CE_TH_ALGO</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_IUES</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_RCD_PARITY_ERRORS</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_RT_RCE_PER_RANK</id>
+    </attribute>
+    <attribute>
+      <id>MNFG_TH_MEMORY_RT_SOFT_CE_TH_ALGO</id>
     </attribute>
     <attribute>
       <id>MRW_DDR4_VDDR_MAX_LIMIT</id>
@@ -1324,12 +1366,6 @@
       <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1388,6 +1424,15 @@
     </attribute>
     <attribute>
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1499,9 +1544,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
