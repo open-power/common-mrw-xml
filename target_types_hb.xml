@@ -403,6 +403,9 @@
       <id>RUNN_MASTER_SEED</id>
     </attribute>
     <attribute>
+      <id>RUNN_CORE_SEED_SELECT</id>
+    </attribute>
+    <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
     </attribute>
     <attribute>
@@ -503,6 +506,9 @@
     </attribute>
     <attribute>
       <id>LPC_CONSOLE_CNFG</id>
+    </attribute>
+    <attribute>
+      <id>CLOCKSTOP_ON_XSTOP</id>
     </attribute>
     <attribute>
       <id>BOOT_PAU_DPLL_BYPASS</id>

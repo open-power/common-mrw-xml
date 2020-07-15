@@ -678,6 +678,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CORE_SEED_SELECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CORE_SEED_SELECT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>RANDOM</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>OMI inband BAR enable. Set by platform.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
@@ -1602,6 +1617,20 @@
       <uint8_t>
         <default>ENABLE</default>
       </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Set up the chip so that all chiplet clocks are automatically stopped in case of a checkstop. Possible enum values: DISABLED - Don't stop clocks on any error STOP_ON_XSTOP - Stop on either an xstop in the local chiplet or on a system xstop coming in from outside the chiplet STOP_ON_XSTOP_AND_SPATTN - Like above, plus special attentions STOP_ON_STAGED_XSTOP - Stop _only_ on an incoming staged system xstop to ensure that all chiplets stop in the same instant. This will result in a longer delay between the original error and the clocks stopping.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CLOCKSTOP_ON_XSTOP</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CLOCKSTOP_ON_XSTOP</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
     <writeable />
   </attribute>
@@ -7120,6 +7149,142 @@
     <id>RUNN_MODE</id>
   </enumerationType>
   <enumerationType>
+    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
+    <enumerator>
+      <name>RANDOM</name>
+      <value>0xff</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE00</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE08</name>
+      <value>0x08</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE16</name>
+      <value>0x10</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE24</name>
+      <value>0x18</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE01</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE09</name>
+      <value>0x09</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE17</name>
+      <value>0x11</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE25</name>
+      <value>0x19</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE02</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE10</name>
+      <value>0x0a</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE18</name>
+      <value>0x12</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE26</name>
+      <value>0x1a</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE03</name>
+      <value>0x03</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE11</name>
+      <value>0x0b</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE19</name>
+      <value>0x13</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE27</name>
+      <value>0x1b</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE04</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE12</name>
+      <value>0x0c</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE20</name>
+      <value>0x14</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE28</name>
+      <value>0x1c</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE05</name>
+      <value>0x05</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE13</name>
+      <value>0x0d</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE21</name>
+      <value>0x15</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE29</name>
+      <value>0x1d</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE06</name>
+      <value>0x06</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE14</name>
+      <value>0x0e</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE22</name>
+      <value>0x16</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE30</name>
+      <value>0x1e</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE07</name>
+      <value>0x07</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE15</name>
+      <value>0x0f</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE23</name>
+      <value>0x17</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE31</name>
+      <value>0x1f</value>
+    </enumerator>
+    <id>RUNN_CORE_SEED_SELECT</id>
+  </enumerationType>
+  <enumerationType>
     <description>OMI inband BAR enable. Set by platform.</description>
     <enumerator>
       <name>DISABLE</name>
@@ -8010,6 +8175,26 @@
       <value>0x0</value>
     </enumerator>
     <id>LPC_CONSOLE_CNFG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Set up the chip so that all chiplet clocks are automatically stopped in case of a checkstop. Possible enum values: DISABLED - Don't stop clocks on any error STOP_ON_XSTOP - Stop on either an xstop in the local chiplet or on a system xstop coming in from outside the chiplet STOP_ON_XSTOP_AND_SPATTN - Like above, plus special attentions STOP_ON_STAGED_XSTOP - Stop _only_ on an incoming staged system xstop to ensure that all chiplets stop in the same instant. This will result in a longer delay between the original error and the clocks stopping.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>STOP_ON_XSTOP</name>
+      <value>0x7B</value>
+    </enumerator>
+    <enumerator>
+      <name>STOP_ON_XSTOP_AND_SPATTN</name>
+      <value>0x5B</value>
+    </enumerator>
+    <enumerator>
+      <name>STOP_ON_STAGED_XSTOP</name>
+      <value>0xFD</value>
+    </enumerator>
+    <id>CLOCKSTOP_ON_XSTOP</id>
   </enumerationType>
   <enumerationType>
     <description>Force the SBE to boot with PAU DPLL in bypass</description>
