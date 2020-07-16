@@ -1752,7 +1752,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip.</description>
+    <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip. This frequency is 1/16 of the OMI frequency.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_MC_MHZ</id>
       <macro>DIRECT</macro>
@@ -1763,6 +1763,7 @@
     <simpleType>
       <uint32_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>The frequency of the OMI channel.</description>
@@ -8209,7 +8210,7 @@
     <id>BOOT_PAU_DPLL_BYPASS</id>
   </enumerationType>
   <enumerationType>
-    <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip.</description>
+    <description>The frequency of the memory controller mesh clock, in MHz. This clock is asynchronous to the nest and drives the MCU queues, and all the associated logic that drives the inputs to the OMI. This can be set differently for each memory controller in the chip. This frequency is 1/16 of the OMI frequency.</description>
     <enumerator>
       <name>1333</name>
       <value>1333</value>
