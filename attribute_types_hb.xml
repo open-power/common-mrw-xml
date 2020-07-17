@@ -1,86 +1,5 @@
 <attributes>
   <attribute>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CYCLE_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CYCLE_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Master seed used to seed the RNG for generating thread seeds for exercisers.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MASTER_SEED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MASTER_SEED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CORE_SEED_SELECT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CORE_SEED_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>RANDOM</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Time between invocations of auxiliary function on GPE1. The time (in is as 2^ATTR_AUX_FUNC_INVOCATION_TIME_MS with 0 indicating the is OFF. Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Provided by the Machine Readable Workbook to tune the collection. Platform default:1</description>
     <hwpfToHbAttrMap>
       <id>ATTR_AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -715,6 +634,102 @@
     <simpleType>
       <uint8_t>
         <default>20</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CYCLE_COUNT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CYCLE_COUNT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Master seed used to seed the RNG for generating thread seeds for exercisers.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_MASTER_SEED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_MASTER_SEED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_RUNN_CORE_SEED_SELECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>RUNN_CORE_SEED_SELECT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>RANDOM</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2173,21 +2188,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -6902,166 +6902,6 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RUNN_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
-    <enumerator>
-      <name>RANDOM</name>
-      <value>0xff</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE00</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE08</name>
-      <value>0x08</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE16</name>
-      <value>0x10</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE24</name>
-      <value>0x18</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE01</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE09</name>
-      <value>0x09</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE17</name>
-      <value>0x11</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE25</name>
-      <value>0x19</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE02</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE10</name>
-      <value>0x0a</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE18</name>
-      <value>0x12</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE26</name>
-      <value>0x1a</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE03</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE11</name>
-      <value>0x0b</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE19</name>
-      <value>0x13</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE27</name>
-      <value>0x1b</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE04</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE12</name>
-      <value>0x0c</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE20</name>
-      <value>0x14</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE28</name>
-      <value>0x1c</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE05</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE13</name>
-      <value>0x0d</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE21</name>
-      <value>0x15</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE29</name>
-      <value>0x1d</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE06</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE14</name>
-      <value>0x0e</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE22</name>
-      <value>0x16</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE30</name>
-      <value>0x1e</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE07</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE15</name>
-      <value>0x0f</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE23</name>
-      <value>0x17</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE31</name>
-      <value>0x1f</value>
-    </enumerator>
-    <id>RUNN_CORE_SEED_SELECT</id>
-  </enumerationType>
-  <enumerationType>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <enumerator>
       <name>NONE</name>
@@ -7296,6 +7136,178 @@
       <value>1</value>
     </enumerator>
     <id>PMCR_MOST_RECENT_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>RUNN_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
+    <enumerator>
+      <name>RANDOM</name>
+      <value>0xff</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE00</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE08</name>
+      <value>0x08</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE16</name>
+      <value>0x10</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE24</name>
+      <value>0x18</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE01</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE09</name>
+      <value>0x09</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE17</name>
+      <value>0x11</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE25</name>
+      <value>0x19</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE02</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE10</name>
+      <value>0x0a</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE18</name>
+      <value>0x12</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE26</name>
+      <value>0x1a</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE03</name>
+      <value>0x03</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE11</name>
+      <value>0x0b</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE19</name>
+      <value>0x13</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE27</name>
+      <value>0x1b</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE04</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE12</name>
+      <value>0x0c</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE20</name>
+      <value>0x14</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE28</name>
+      <value>0x1c</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE05</name>
+      <value>0x05</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE13</name>
+      <value>0x0d</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE21</name>
+      <value>0x15</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE29</name>
+      <value>0x1d</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE06</name>
+      <value>0x06</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE14</name>
+      <value>0x0e</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE22</name>
+      <value>0x16</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE30</name>
+      <value>0x1e</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE07</name>
+      <value>0x07</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE15</name>
+      <value>0x0f</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE23</name>
+      <value>0x17</value>
+    </enumerator>
+    <enumerator>
+      <name>CORE31</name>
+      <value>0x1f</value>
+    </enumerator>
+    <id>RUNN_CORE_SEED_SELECT</id>
+  </enumerationType>
+  <enumerationType>
+    <description>OMI inband BAR enable. Set by platform.</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>OMI_INBAND_BAR_ENABLE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
@@ -8376,18 +8388,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
