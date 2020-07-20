@@ -328,6 +328,12 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>RUNN_MASTER_SEED</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CORE_SEED_SELECT</id>
+    </attribute>
+    <attribute>
       <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
     </attribute>
     <attribute>
@@ -398,12 +404,6 @@
     </attribute>
     <attribute>
       <id>VCS_VDD_OFFSET_MV</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_MASTER_SEED</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CORE_SEED_SELECT</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
@@ -1372,6 +1372,12 @@
       <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
     </attribute>
     <attribute>
+      <id>RUNN_MODE</id>
+    </attribute>
+    <attribute>
+      <id>RUNN_CYCLE_COUNT</id>
+    </attribute>
+    <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1430,15 +1436,6 @@
     </attribute>
     <attribute>
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1550,6 +1547,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
