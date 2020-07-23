@@ -1809,6 +1809,9 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>IO_O_MNFG_ERROR_THRESHOLD</id>
     </attribute>
     <attribute>
@@ -1912,9 +1915,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
