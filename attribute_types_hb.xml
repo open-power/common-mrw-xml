@@ -86,36 +86,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enables pstate parameter block code to use the static #W data Consumer: p10_pstate_parameter_build.C Platform default:OFF</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_POUND_W_STATIC_DATA_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>POUND_W_STATIC_DATA_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enables pstate parameter block code to use the static #V data Consumer: p10_pstate_parameter_block.C Platform default:OFF</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_POUND_V_STATIC_DATA_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>POUND_V_STATIC_DATA_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYS_VRT_STATIC_DATA_ENABLE</id>
@@ -638,87 +608,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Base number of clock cycles to execute in runn mode In cache-contained, this is the base number of clock cycles to execute per quad In chip-contained, this is the base number of clock cycles to execute per chip Consumed by: p10_runn HWP (Cronus platform only, chip/cache-contained mode) Provided by: platform (FW platforms init to 0)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CYCLE_COUNT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CYCLE_COUNT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Master seed used to seed the RNG for generating thread seeds for exercisers.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_MASTER_SEED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_MASTER_SEED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_RUNN_CORE_SEED_SELECT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>RUNN_CORE_SEED_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>RANDOM</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One OMI bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p10_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p10_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>True or false whether row repair is supported MRW attribute</description>
     <hwpfToHbAttrMap>
       <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
@@ -848,20 +737,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Processor fabric topology ID based on memory availability. If the master chip has memory then EFF_TOPOLOGY_ID = TOPOLOGY_ID, if not then the first socket with memory behind it will swap topology IDs with the master chip to form EFF_TOPOLOGY_ID. All else remains the same. This is a 4-bit field in the format specified by ATTR_PROC_FABRIC_TOPOLOGY_MODE.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_EFF_TOPOLOGY_ID</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_EFF_TOPOLOGY_ID</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IOHS_CONFIG_MODE</id>
@@ -916,6 +791,19 @@
       </uint16_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>Fabric dynamic lane reduction psave mode. Disabled =&gt; psave disabled, same as forcing full width. Quarter =&gt; force quarter-width links. Half =&gt; force half-width links. Full/quarter =&gt; start full width, can drop into quarter-width mode. Full/half =&gt; start full width, can drop into half-wdith mode.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FABRIC_DLR_PSAVE_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FABRIC_DLR_PSAVE_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
   </attribute>
   <attribute>
     <description>Processor epsilon table type. Used to calculate the processor nest epsilon register values. Provided by the MRW.</description>
@@ -1047,7 +935,9 @@
     <readable />
     <simpleType>
       <array>6</array>
-      <uint64_t />
+      <uint64_t>
+        <default>0x0000000000000000, 0x0000000100000000, 0x0000000200000000, 0x0000000300000000, 0x0000000400000000, 0x0000000500000000</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -1061,7 +951,9 @@
     <readable />
     <simpleType>
       <array>6</array>
-      <uint64_t />
+      <uint64_t>
+        <default>0x0000000600000000, 0x0000000700000000, 0x0000000800000000, 0x0000000900000000, 0x0000000A00000000, 0x0000000B00000000</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -1075,7 +967,9 @@
     <readable />
     <simpleType>
       <array>6</array>
-      <uint64_t />
+      <uint64_t>
+        <default>0x0000000C00000000, 0x0000000D00000000, 0x0000000E00000000, 0x0000000F00000000, 0x0000001000000000, 0x0000001100000000</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -1089,7 +983,9 @@
     <readable />
     <simpleType>
       <array>3</array>
-      <uint64_t />
+      <uint64_t>
+        <default>0xFFFFFFC000000000, 0xFFFFFFC000000000, 0xFFFFFFC000000000</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -1378,20 +1274,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Holds the state of Security Access Bit (SAB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SECURITY_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SECURITY_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Consumed by p10_sbe_select_ex. Dictates policy for selection of active cores and backing caches CRONUS_MAX_ACTIVE -- request maximum set of active cores possible (use case for Cronus istep 4 to establish run state on all functional cores), no backing caches HB_DEFAULT -- request minset of active cores (2 in fused core mode, 1 otherwise) and backing caches (2) HB_MAX_FOOTPRINT -- request the maximum set of backing caches possible (maintaining a power of 2 size, and guaranteeing minset of active cores) HB_MAX_THREADS -- request the maximum set of active cores possible, logically applied after processing HB_MAX_FOOTPRINT directive if set For memory preserving IPLs, the attribute will be honored in the calcuation of active cores, but no backing caches will be requested For cache-contained IPL types, the selection policy is fixed in code -- request maximum set of active cores possible, no backing caches For chip-contained IPL types, the selection policy is fixed in code -- request based on contents of ATTR_CHIP_CONTAINED_ACTIVE_CORES_VEC, ATTR_CHIP_CONTAINED_BACKING_CACHES_VEC</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SBE_SELECT_EX_POLICY</id>
@@ -1446,20 +1328,6 @@
       <uint32_t>
         <default>0xFFFFFFFF</default>
       </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Indicates if SBE on this chip is serving as hostboot drawer master</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_SBE_MASTER_CHIP</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_SBE_MASTER_CHIP</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
     <writeable />
   </attribute>
@@ -1953,36 +1821,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The minimum number of valid ECs that is required to be used when customizing an SBE image. The customization will fail if it cannot create an image with at least this many ECs.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_IMAGE_MINIMUM_VALID_ECS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_IMAGE_MINIMUM_VALID_ECS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>2</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines the maximum Seeprom storage size for the fully-customized SBE image permitted by the platform. For platforms (FSP/HB FW) which require the image to be constrained into a physical storage device (SEEPROM), this should reflect the maximum size of that memory (e.g., 512KB). For platforms (Cronus) which may use a customized image in a virtual envrionment with no physical storage constraints, this size may be larger than the physical SEEPROM size.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MAX_SBE_SEEPROM_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MAX_SBE_SEEPROM_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x80000</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
@@ -2262,21 +2100,6 @@
     <simpleType>
       <uint8_t />
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>The manufacturing flags. These enums represent which bit/flag to set in numeric form, NOT binary form. These values/policies can no longer be bit wised together. These numeric values match the flags as found in the PDF document: 'Hypervisor Interface Data Specifications v10.5o-1.pdf', section 6.1.9 and should stay in sync with this document and updated when said document gets updated.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MFG_FLAGS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MFG_FLAGS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>NOTE: This is being deprecated and being replaced by the attribute ATTR_MFG_FLAGS, found above. Please switch over to the new attribute, ATTR_MFG_FLAGS, ASAP. @TODO: RTC 252027: Remove this attribute when possible The manufacturing flags. This is a bitfield. Each bit is a flag and multiple flags can be set</description>
@@ -6966,30 +6789,6 @@
     <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
   </enumerationType>
   <enumerationType>
-    <description>Enables pstate parameter block code to use the static #W data Consumer: p10_pstate_parameter_build.C Platform default:OFF</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>POUND_W_STATIC_DATA_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enables pstate parameter block code to use the static #V data Consumer: p10_pstate_parameter_block.C Platform default:OFF</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>POUND_V_STATIC_DATA_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <enumerator>
       <name>OFF</name>
@@ -7138,166 +6937,6 @@
     <id>PMCR_MOST_RECENT_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Set to indicate clock-start/instruction execution in cache-contained or chip-contained mode will be managed by runn Provided by: platform (FW platforms init to OFF)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>RUNN_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Specify a core whose exerciser thread seeds should be duplicated across all other cores. Example: ATTR_RUNN_CORE_SEED_SELECT=CORE05, then when generating exerciser seeds, every other core would first seed the RNG w/ ATTR_RUNN_MASTER_SEED and then discard values until CORE05 before generating per-thread seeds. The default behavior is to randomize each core independently by using ATTR_RUNN_CORE_SEED_SELECT=RANDOM.</description>
-    <enumerator>
-      <name>RANDOM</name>
-      <value>0xff</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE00</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE08</name>
-      <value>0x08</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE16</name>
-      <value>0x10</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE24</name>
-      <value>0x18</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE01</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE09</name>
-      <value>0x09</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE17</name>
-      <value>0x11</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE25</name>
-      <value>0x19</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE02</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE10</name>
-      <value>0x0a</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE18</name>
-      <value>0x12</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE26</name>
-      <value>0x1a</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE03</name>
-      <value>0x03</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE11</name>
-      <value>0x0b</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE19</name>
-      <value>0x13</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE27</name>
-      <value>0x1b</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE04</name>
-      <value>0x04</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE12</name>
-      <value>0x0c</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE20</name>
-      <value>0x14</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE28</name>
-      <value>0x1c</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE05</name>
-      <value>0x05</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE13</name>
-      <value>0x0d</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE21</name>
-      <value>0x15</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE29</name>
-      <value>0x1d</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE06</name>
-      <value>0x06</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE14</name>
-      <value>0x0e</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE22</name>
-      <value>0x16</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE30</name>
-      <value>0x1e</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE07</name>
-      <value>0x07</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE15</name>
-      <value>0x0f</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE23</name>
-      <value>0x17</value>
-    </enumerator>
-    <enumerator>
-      <name>CORE31</name>
-      <value>0x1f</value>
-    </enumerator>
-    <id>RUNN_CORE_SEED_SELECT</id>
-  </enumerationType>
-  <enumerationType>
-    <description>OMI inband BAR enable. Set by platform.</description>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>OMI_INBAND_BAR_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>True or false whether row repair is supported MRW attribute</description>
     <enumerator>
       <name>SUPPORTED</name>
@@ -7421,6 +7060,10 @@
     </enumerator>
     <enumerator>
       <name>OCAPI</name>
+      <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <name>UNUSED</name>
       <value>0x3</value>
     </enumerator>
     <id>IOHS_CONFIG_MODE</id>
@@ -7464,6 +7107,30 @@
       <value>50</value>
     </enumerator>
     <id>LINK_SPEED</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Fabric dynamic lane reduction psave mode. Disabled =&gt; psave disabled, same as forcing full width. Quarter =&gt; force quarter-width links. Half =&gt; force half-width links. Full/quarter =&gt; start full width, can drop into quarter-width mode. Full/half =&gt; start full width, can drop into half-wdith mode.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>QUARTER</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <name>HALF</name>
+      <value>0x04</value>
+    </enumerator>
+    <enumerator>
+      <name>FULL_QUARTER</name>
+      <value>0x0A</value>
+    </enumerator>
+    <enumerator>
+      <name>FULL_HALF</name>
+      <value>0x0C</value>
+    </enumerator>
+    <id>PROC_FABRIC_DLR_PSAVE_MODE</id>
   </enumerationType>
   <enumerationType>
     <description>Increase the L2 re-request jitter for larger systems</description>
@@ -7998,18 +7665,6 @@
     <id>IS_MPIPL</id>
   </enumerationType>
   <enumerationType>
-    <description>Holds the state of Security Access Bit (SAB)</description>
-    <enumerator>
-      <name>ENABLE</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLE</name>
-      <value>0x0</value>
-    </enumerator>
-    <id>SECURITY_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Consumed by p10_sbe_select_ex. Dictates policy for selection of active cores and backing caches CRONUS_MAX_ACTIVE -- request maximum set of active cores possible (use case for Cronus istep 4 to establish run state on all functional cores), no backing caches HB_DEFAULT -- request minset of active cores (2 in fused core mode, 1 otherwise) and backing caches (2) HB_MAX_FOOTPRINT -- request the maximum set of backing caches possible (maintaining a power of 2 size, and guaranteeing minset of active cores) HB_MAX_THREADS -- request the maximum set of active cores possible, logically applied after processing HB_MAX_FOOTPRINT directive if set For memory preserving IPLs, the attribute will be honored in the calcuation of active cores, but no backing caches will be requested For cache-contained IPL types, the selection policy is fixed in code -- request maximum set of active cores possible, no backing caches For chip-contained IPL types, the selection policy is fixed in code -- request based on contents of ATTR_CHIP_CONTAINED_ACTIVE_CORES_VEC, ATTR_CHIP_CONTAINED_BACKING_CACHES_VEC</description>
     <enumerator>
       <name>HB_DEFAULT</name>
@@ -8044,18 +7699,6 @@
       <value>0x1</value>
     </enumerator>
     <id>FUSED_CORE_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Indicates if SBE on this chip is serving as hostboot drawer master</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>PROC_SBE_MASTER_CHIP</id>
   </enumerationType>
   <enumerationType>
     <description>To skip the locking sequence and check for lock of CP TOD Filter PLL</description>
@@ -8414,6 +8057,22 @@
     <id>FUNCTIONAL</id>
   </enumerationType>
   <enumerationType>
+    <description>Returns the type of simics environment that the code is executing inside. 0 = RealHW/AWAN. 1 = Simics. 2 = SUET.</description>
+    <enumerator>
+      <name>REALHW</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>SIMICS</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>SUET</name>
+      <value>0x02</value>
+    </enumerator>
+    <id>IS_SIMICS</id>
+  </enumerationType>
+  <enumerationType>
     <description>Which execution platform the HW Procedure is running on Some HWPs (e.g. special wakeup) use different registers for different platforms to avoid arbitration problems when multiple platforms do the same thing concurrently</description>
     <enumerator>
       <name>HOST</name>
@@ -8428,474 +8087,6 @@
       <value>0x03</value>
     </enumerator>
     <id>EXECUTION_PLATFORM</id>
-  </enumerationType>
-  <enumerationType>
-    <description>The manufacturing flags. These enums represent which bit/flag to set in numeric form, NOT binary form. These values/policies can no longer be bit wised together. These numeric values match the flags as found in the PDF document: 'Hypervisor Interface Data Specifications v10.5o-1.pdf', section 6.1.9 and should stay in sync with this document and updated when said document gets updated.</description>
-    <enumerator>
-      <name>MNFG_PHYP_VAPI</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_FAPI</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_NO_THRESHOLD</name>
-      <value>2</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_TEST_RUN</name>
-      <value>3</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_TERM</name>
-      <value>4</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_NO_RR</name>
-      <value>5</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_ANCHOR</name>
-      <value>6</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_IGNORE_SPCN_ERROR</name>
-      <value>7</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_NO_OS400_DUMP</name>
-      <value>8</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_RUN_COMPU_GARD</name>
-      <value>9</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_UNDEFINED_2</name>
-      <value>10</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PHYP_UNDEFINED_1</name>
-      <value>11</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_CORONA_FBIST</name>
-      <value>15</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_VERIFY_DMA_DATA</name>
-      <value>16</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SVPD_USE_ONLY</name>
-      <value>17</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_TERM_FSP_RR</name>
-      <value>18</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_RBOT</name>
-      <value>19</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_CAPTURE_VPD</name>
-      <value>20</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DO_NOT_PASS_TO_OS</name>
-      <value>21</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_TEST_RBS</name>
-      <value>22</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_AP</name>
-      <value>23</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_SYS_DUMP</name>
-      <value>24</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_TEST_ALL_SPARE_DRAM_ROWS</name>
-      <value>25</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SRC_TERM</name>
-      <value>26</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SPCN_USE_NVS_IP</name>
-      <value>27</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_RBS</name>
-      <value>28</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_THRESHOLDS</name>
-      <value>29</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_NO_GARD</name>
-      <value>30</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ABIST_VPD_DATA</name>
-      <value>31</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_GORM_MODE</name>
-      <value>32</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_FAST_RDT</name>
-      <value>33</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_AVP_COMPLETE</name>
-      <value>34</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_MEM_FAST_IPL_SCRUB</name>
-      <value>35</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_L3_FAST_IPL_SCRUB</name>
-      <value>36</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_MEM_PATTERN</name>
-      <value>37</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_L3_PATTERN</name>
-      <value>38</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_WIRE_RDT</name>
-      <value>39</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_WIRE_CST</name>
-      <value>40</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_ABIST</name>
-      <value>41</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_LBIST</name>
-      <value>42</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_CHKRING</name>
-      <value>43</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_MSL_CHECK</name>
-      <value>47</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_RWRAP</name>
-      <value>48</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_PRBS_CMDLINE</name>
-      <value>49</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_DIMM_SCREEN</name>
-      <value>50</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_TORRENT_PRBS</name>
-      <value>51</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_TORRENT_ELCT</name>
-      <value>52</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_MR_EXT_AB_WRAPTEST_TWO</name>
-      <value>53</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_MORE_MEMORY_PATTERNS</name>
-      <value>54</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_AVP_ENABLE</name>
-      <value>55</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_FAST_BACKGROUND_SCRUB</name>
-      <value>56</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_CLICK_TO_ACCEPT</name>
-      <value>57</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_MEMORY_eREPAIR</name>
-      <value>58</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_FABRIC_eREPAIR</name>
-      <value>59</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_INFINIBAND_WRAP</name>
-      <value>60</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SMA_LINK</name>
-      <value>61</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SYS_DUMP_TERM</name>
-      <value>62</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PSI_DIAGNOSTIC</name>
-      <value>63</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_30</name>
-      <value>64</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_31</name>
-      <value>65</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_32</name>
-      <value>66</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_33</name>
-      <value>67</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_CHKRING_ENABLE</name>
-      <value>68</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_RUN_CUSTOMER_IPL</name>
-      <value>69</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ABIST_VIASCREEN</name>
-      <value>70</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_CLEAR_VPD_ARRAY_REPAIR_DATA</name>
-      <value>71</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POWER_SAVE_CAPABLE</name>
-      <value>72</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_PREVENT_REDUNDANCY_AUTO_ENABLE</name>
-      <value>73</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_IB_FREQ_BIAS_HIGH</name>
-      <value>74</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_IB_FREQ_BIAS_LOW</name>
-      <value>75</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_34</name>
-      <value>79</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_35</name>
-      <value>80</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_36</name>
-      <value>81</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_37</name>
-      <value>82</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_38</name>
-      <value>83</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_39</name>
-      <value>84</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_DMIGB</name>
-      <value>85</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_FABRIC_DEPLOY_LANE_SPARES</name>
-      <value>86</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DMI_DEPLOY_LANE_SPARES</name>
-      <value>87</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENERGYSCALE_SPECIAL_POLICIES</name>
-      <value>88</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_PHYBIST</name>
-      <value>89</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_HDAT_AVP_COMPLETE</name>
-      <value>90</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_HDAT_AVP_ENABLE</name>
-      <value>91</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_IPL_MEMORY_CE_CHECKING</name>
-      <value>92</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_MINIMUM_PATTERN_TEST</name>
-      <value>93</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_STANDARD_PATTERN_TEST</name>
-      <value>94</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_EXHAUSTIVE_PATTERN_TEST</name>
-      <value>95</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_01</name>
-      <value>96</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_02</name>
-      <value>97</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_03</name>
-      <value>98</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_04</name>
-      <value>99</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_05</name>
-      <value>100</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_06</name>
-      <value>101</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_07</name>
-      <value>102</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_08</name>
-      <value>103</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_09</name>
-      <value>104</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_10</name>
-      <value>105</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_11</name>
-      <value>106</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_12</name>
-      <value>107</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_13</name>
-      <value>111</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_14</name>
-      <value>112</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_15</name>
-      <value>113</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_16</name>
-      <value>114</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_17</name>
-      <value>115</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_18</name>
-      <value>116</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_19</name>
-      <value>117</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_20</name>
-      <value>118</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_21</name>
-      <value>119</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_22</name>
-      <value>120</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_23</name>
-      <value>121</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_UPDATE_BOTH_SIDES_OF_SBE</name>
-      <value>122</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_25</name>
-      <value>123</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_26</name>
-      <value>124</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_FSP_UPDATE_SBE_IMAGE</name>
-      <value>125</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_SMP_WRAP_CONFIG</name>
-      <value>126</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_POLICY_FLAG_AVAIL_29</name>
-      <value>127</value>
-    </enumerator>
-    <id>MFG_FLAGS</id>
   </enumerationType>
   <enumerationType>
     <description>NOTE: This is being deprecated and being replaced by the attribute ATTR_MFG_FLAGS, found above. Please switch over to the new attribute, ATTR_MFG_FLAGS, ASAP. @TODO: RTC 252027: Remove this attribute when possible The manufacturing flags. This is a bitfield. Each bit is a flag and multiple flags can be set</description>
