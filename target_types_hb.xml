@@ -445,6 +445,12 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
@@ -470,12 +476,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
