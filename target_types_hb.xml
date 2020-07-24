@@ -400,19 +400,10 @@
       <id>VCS_VDD_OFFSET_MV</id>
     </attribute>
     <attribute>
-      <id>RUNN_MASTER_SEED</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CORE_SEED_SELECT</id>
-    </attribute>
-    <attribute>
       <id>PROC_FABRIC_SL_DOMAIN</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_TOPOLOGY_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_EFF_TOPOLOGY_ID</id>
     </attribute>
     <attribute>
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
@@ -473,9 +464,6 @@
     </attribute>
     <attribute>
       <id>CHIP_CONTAINED_BACKING_CACHES_VEC</id>
-    </attribute>
-    <attribute>
-      <id>PROC_SBE_MASTER_CHIP</id>
     </attribute>
     <attribute>
       <id>CP_PLLTODFLT_BYPASS</id>
@@ -1384,12 +1372,6 @@
       <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
     </attribute>
     <attribute>
-      <id>POUND_W_STATIC_DATA_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>POUND_V_STATIC_DATA_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>SYS_VRT_STATIC_DATA_ENABLE</id>
     </attribute>
     <attribute>
@@ -1432,12 +1414,6 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
-      <id>RUNN_MODE</id>
-    </attribute>
-    <attribute>
-      <id>RUNN_CYCLE_COUNT</id>
-    </attribute>
-    <attribute>
       <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
@@ -1454,6 +1430,9 @@
     </attribute>
     <attribute>
       <id>PROC_FABRIC_TOPOLOGY_MODE</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FABRIC_DLR_PSAVE_MODE</id>
     </attribute>
     <attribute>
       <id>PROC_EPS_TABLE_TYPE</id>
@@ -1484,9 +1463,6 @@
     </attribute>
     <attribute>
       <id>PCI1_REFCLOCK_RCVR_TERM</id>
-    </attribute>
-    <attribute>
-      <id>SECURITY_ENABLE</id>
     </attribute>
     <attribute>
       <id>SBE_SELECT_EX_POLICY</id>
@@ -1543,12 +1519,6 @@
       <id>NUM_KEY_ADDR_PAIR</id>
     </attribute>
     <attribute>
-      <id>SBE_IMAGE_MINIMUM_VALID_ECS</id>
-    </attribute>
-    <attribute>
-      <id>MAX_SBE_SEEPROM_SIZE</id>
-    </attribute>
-    <attribute>
       <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
@@ -1556,9 +1526,6 @@
     </attribute>
     <attribute>
       <id>EXECUTION_PLATFORM</id>
-    </attribute>
-    <attribute>
-      <id>MFG_FLAGS</id>
     </attribute>
     <attribute>
       <id>MNFG_FLAGS</id>
@@ -1951,9 +1918,6 @@
       <default>AXONE</default>
       <id>MODEL</id>
     </attribute>
-    <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
     <id>unit-mc-axone</id>
     <parent>unit-mc-power9</parent>
   </targetType>
@@ -1969,9 +1933,6 @@
     <attribute>
       <default>MC</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
       <id>FREQ_MC_MHZ</id>
@@ -2426,12 +2387,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_INBAND_BAR_ENABLE</id>
-    </attribute>
-    <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
     </attribute>
     <attribute>
@@ -2453,9 +2408,6 @@
     <attribute>
       <default>AXONE</default>
       <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <id>unit-omi-axone</id>
     <parent>unit-omi-power9</parent>
