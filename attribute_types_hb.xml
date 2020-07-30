@@ -56,36 +56,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>if set to 1, p10_dump_stop_info output will be written to error logs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>if set to 1, FAPI_ERR records are suppressed from being produced by</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYS_VRT_STATIC_DATA_ENABLE</id>
@@ -126,100 +96,12 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Disables RVRM enablement in the system Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_RVRM_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_RVRM_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables Work Load Optimized Frequency (WOF) algorithms to modify frequency active core count and other inputs. OFF:Will enable WOF given all validity check pass. If validity checks fail, be disabled for the present IPL. ON: Will disable WOF OFF_SKIP_DD: as but skips any validity checking of the design level (lab use Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOF_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_WOF_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables Workload Optimized Voltage (WOV) undervolting algorithms which voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity WOV overvolting will be disabled for the present IPL. ON:Will disable overvolting Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOV_OVERV_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_WOV_OVERV_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables Workload Optimized Voltage (WOV) undervolting algorithms which voltage below the value calculated from VPD. OFF:Will enable WOV undervolting given all validity check pass. If validity WOV undervolting will be disabled for the present IPL. ON: Will disable undervolting Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SYSTEM_WOV_UNDERV_DISABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>OFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2, 3 Consumers: Hostboot firmware</description>
     <hwpfToHbAttrMap>
       <id>ATTR_WOF_INDEX_SELECT</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>WOF_INDEX_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>If WOF Throttle Control Loop is enabled, then selects the mode to update throttle control values. BINARY: Will update the throttle control values by half the current value of throttle. DECINC: Will update throttle control value by one in each step. Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOF_THROTTLE_CONTROL_LOOP_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WOF_THROTTLE_CONTROL_LOOP_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>BINARY</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enables the PGPE to clip Pstates based on the sibling Dual Chip Module (DCM) Pstate value to have the combination generally track. The DCM values are NOT interlocked as this is to aid in thermal management. Producer: p10_build_pstate_datablock Consumers: PGPE HCode</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOF_DCM_TRACKING_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WOF_DCM_TRACKING_ENABLE</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -264,19 +146,6 @@
     <readable />
     <simpleType>
       <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Producer: Machine Readable Workbook Consumer: p10_pm_pss_init</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SPIPSS_SELECT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SPIPSS_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -367,7 +236,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps and is used as part of the overall voltage time calculation. The consuming code provides a default value of 50mv (5000uV) if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_STEPSIZE</id>
       <macro>DIRECT</macro>
@@ -383,7 +252,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Transition rate (binary in microVolts per microsecond) of the VRM for an transition.This is used as part of the overall voltage time calculation provides a default value of 10000 uV/us (eg if this attribute is zero. the fastest possible rate is limited to Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Transition rate (binary in microVolts per microsecond) of the VRM for a decreasing voltage transition. This is used as part of the overall voltage time calculation. The consuming code provides a default value of 10000 uV/us if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
       <macro>DIRECT</macro>
@@ -399,7 +268,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Transition rate (binary in microVolts per microsecond) of the VRM for an transition.This is used as part of the overall voltage time calculation provides a default value of 10000 uV/us (eg if this attribute is zero. the fastest possible rate is limited to Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Transition rate (binary in microVolts per microsecond) of the VRM for an increasing voltage transition. This is used as part of the overall voltage time calculation. The consuming code provides a default value of 10000 uV/us if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US</id>
       <macro>DIRECT</macro>
@@ -415,7 +284,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Time (binary in nanoseconds) to allow the voltage rail to stabilize before transition to be fully complete. This value is used for both and transitions as part of the overall voltage transition calculation. provides a default value of 5000ns (5us) if this is zero. Note: the delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Time (binary in nanoseconds) to allow the voltage rail to stabilize before transition to be fully complete. This applies to both increasing and decreasing transitions as part of the overall voltage transition calculation. The consuminug code provides a default value of 5000ns (5us) if this attribute is zero. Note: the smallest possible delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</id>
       <macro>DIRECT</macro>
@@ -431,7 +300,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Delay (binary in nanoseconds) from the time the VRM receives the write until the voltage actually moves.This value is used for both and transitions as part of the overall voltage transition calculation. provides a default value of 8000ns (eg 8us)) if attribute is zero. Note: smallest possible delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Delay (binary in nanoseconds) from the time the VRM receives the write until the voltage actually moves. This value is used for both increasing and decreasing transitions as part of the overall voltage transition calculation. The consuming code provides a default value of 8000ns (8us) if this attribute is zero. Note: the smallest possible delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_EXTERNAL_VRM_TRANSITION_START_NS</id>
       <macro>DIRECT</macro>
@@ -445,65 +314,6 @@
         <default>0x00</default>
       </uint32_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Safe mode frequency in MHZ. This attribute is used within the hwp to update DPLL frequency register. Consumer: p10_setup_evid.C Modified by p10_pstate_parameter_build</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SAFE_MODE_FREQUENCY_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SAFE_MODE_FREQUENCY_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Safe mode voltages for VDD and VCS in mV. If not overridden, computed from #V PowerSave voltages uplifted by ATTR_BOOT_VOLTAGE_BIAS_0P5PCT. [index] -&gt;0: VDD; 1: VCS; Consumer: p10_setup_evid.C Modified in p10_pstate_parameter_build</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SAFE_MODE_VOLTAGE_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SAFE_MODE_VOLTAGE_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>2</array>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enables the platform mode where the most recent PMCR update will be the controlling value for Pstate changes. If disabled, the legacy "fastest one wins" algorithm is used. Producer: p10_build_pstate_datablock Consumers: p10_hcode_image_build -&gt; PGPE Header QME attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PMCR_MOST_RECENT_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PMCR_MOST_RECENT_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Size of memory which hostboot must copy from a temp buffer to an unsecure region of main store memory. Once HOMER is built, hostboot reads the attribute and copies the amount of memory specified in this attribute from a temp buffer to an unsecure region of main memory specifed in an attribute ATTR_UNSECURE_HOMER_ADDRESS Producer: Initialized by hostboot firmware based on platform support Consumers: Read by p10_hcode_image_build.C</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_UNSECURE_HOMER_SIZE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>UNSECURE_HOMER_SIZE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0x1000</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Time to delay before powering off the MMA due to the lack of MMA instructions. Time = 1ms * 2**ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS. Valid values of 0x00 - 0x17 to yield times from 1ms to 2.3 hours -: 0x00 - 1ms ... 0x01 - 1 second (default) ... 0x17 - 1 day 0x18 - 0xFD - Reserved (maps as 0x17) 0xFE - every QME FIT timer interrupt (~250us) 0xFF - no power off of MMA (QME Hcode still runs; different behavior ATTR_SYSTEM_MMA_POWEROFF_DISABLE) Producer: Machine Readable Workbook Consumer: QME Hcode</description>
@@ -531,21 +341,8 @@
     <readable />
     <simpleType>
       <uint16_t>
-        <default>0xA410</default>
+        <default>0xB010</default>
       </uint16_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Disables STOP Level operat?ions in the Power Management complex by mapping the respective level to the next lower supported level in a additive manner. Represented as bit vector where bit 0 = STOP0; bit 1 = STOP 1, ..., bit 15 = STOP15.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_STOP_LEVELS_DISABLED</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>STOP_LEVELS_DISABLED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -4979,13 +4776,15 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Base Address of PCI 32 bit Memory Space</description>
-    <id>PCI_BASE_ADDRS_32</id>
+    <description>Designates the System PHB Configuration for NVME Backplanes Creator: MRW Purpose: Used by FW to know which PHBs to deconfigure based on NVME Backplane Data Format: 2x2 array of uint64_t values. The first entry in each array is the CCIN of the NVME backplane. The 2nd entry is a bit definition to show which PHBs on which Procs are disabled. This is also going to emulate the ATTR_PROC_PCIE_PHB_ACTIVE_BASE format. The bit set to 1 signals the particular PHB is disabled. bit 0,1,2: Proc0 Pec0 PHB0/1/2 bit 3: reserved bit 4,5,6: Proc0 Pec1 PHB0/1/2 bit 7: reserved bit 8,9,10: Proc1 Pec0 PHB0/1/2 bit 11: reserved bit 12,13,14: Proc1 Pec1 PHB0/1/2 bit 15: reserved bit 16,17,18: Proc2 Pec0 PHB0/1/2 bit 19: reserved bit 20,21,22: Proc2 Pec1 PHB0/1/2 bit 23: reserved bit 24,25,26: Proc3 Pec0 PHB0/1/2 bit 27: reserved bit 28,29,30: Proc3 Pec1 PHB0/1/2 bit 31: reserved bit 32,33,34: Proc4 Pec0 PHB0/1/2 bit 35: reserved bit 36,37,38: Proc4 Pec1 PHB0/1/2 bit 39: reserved bit 40,41,42: Proc5 Pec0 PHB0/1/2 bit 43: reserved bit 44,45,46: Proc5 Pec1 PHB0/1/2 bit 47: reserved bit 48,49,50: Proc6 Pec0 PHB0/1/2 bit 52: reserved bit 52,53,54: Proc6 Pec1 PHB0/1/2 bit 55: reserved bit 56,57,58: Proc7 Pec0 PHB0/1/2 bit 59: reserved bit 60,61,62: Proc7 Pec1 PHB0/1/2 bit 63: reserved Example: [0x1234, 0x0000, 0x4567, 0x0040080000000000] [0x1234, 0x00000000] -- For NVME Backplane with CCIN 0x1234: Do not deconfigure any PHBs on any Procs [0x4567, 0x0040080000000000) -- For NVME Backplane with CCIN 0x4567: 00 - Do not deconfigure any PHBs on Proc0 40 - Deconfigure PHB1 on Proc1 Pec0 08 - Deconfigure PHB0 on Proc2 Pec1 00 - Do not deconfigure any PHBs on Proc3 00 - Do not deconfigure any PHBs on Proc4 00 - Do not deconfigure any PHBs on Proc5 00 - Do not deconfigure any PHBs on Proc6 00 - Do not deconfigure any PHBs on Proc7</description>
+    <id>PCIE_NVME_PHB_CONFIG</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>4</array>
-      <uint64_t />
+      <array>2,2</array>
+      <uint64_t>
+        <default>0,0, 0,0</default>
+      </uint64_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6831,110 +6630,6 @@
       <value>0x01</value>
     </enumerator>
     <id>PM_HALT_FFDC_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables RVRM enablement in the system Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_RVRM_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables Work Load Optimized Frequency (WOF) algorithms to modify frequency active core count and other inputs. OFF:Will enable WOF given all validity check pass. If validity checks fail, be disabled for the present IPL. ON: Will disable WOF OFF_SKIP_DD: as but skips any validity checking of the design level (lab use Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB) for</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>OFF_SKIP_DD</name>
-      <value>2</value>
-    </enumerator>
-    <id>SYSTEM_WOF_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables Workload Optimized Voltage (WOV) undervolting algorithms which voltage below the value calculated from VPD. OFF: Will enable WOV overvolting given all validity check pass. If validity WOV overvolting will be disabled for the present IPL. ON:Will disable overvolting Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_WOV_OVERV_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Disables Workload Optimized Voltage (WOV) undervolting algorithms which voltage below the value calculated from VPD. OFF:Will enable WOV undervolting given all validity check pass. If validity WOV undervolting will be disabled for the present IPL. ON: Will disable undervolting Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>1</value>
-    </enumerator>
-    <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>If WOF Throttle Control Loop is enabled, then selects the mode to update throttle control values. BINARY: Will update the throttle control values by half the current value of throttle. DECINC: Will update throttle control value by one in each step. Producer: Override Consumers: p10_build_pstate_datablock -&gt; Pstate Parameter Block (PSPB)</description>
-    <enumerator>
-      <name>BINARY</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>DECINC</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>WOF_THROTTLE_CONTROL_LOOP_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enables the PGPE to clip Pstates based on the sibling Dual Chip Module (DCM) Pstate value to have the combination generally track. The DCM values are NOT interlocked as this is to aid in thermal management. Producer: p10_build_pstate_datablock Consumers: PGPE HCode</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <id>WOF_DCM_TRACKING_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Defines which of the PSS chip selects (0 or 1) that the APSS is connected Producer: Machine Readable Workbook Consumer: p10_pm_pss_init</description>
-    <enumerator>
-      <name>NONE</name>
-      <value>0xFF</value>
-    </enumerator>
-    <enumerator>
-      <name>CS0</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>CS1</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>SPIPSS_SELECT</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enables the platform mode where the most recent PMCR update will be the controlling value for Pstate changes. If disabled, the legacy "fastest one wins" algorithm is used. Producer: p10_build_pstate_datablock Consumers: p10_hcode_image_build -&gt; PGPE Header QME attribute</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <id>PMCR_MOST_RECENT_MODE</id>
   </enumerationType>
   <enumerationType>
     <description>True or false whether row repair is supported MRW attribute</description>

@@ -328,22 +328,10 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
-      <id>DUMP_STOP_INFO_ENABLE_ERRORLOG</id>
-    </attribute>
-    <attribute>
-      <id>DUMP_STOP_INFO_SUPPRESS_ERROR_TRACE</id>
-    </attribute>
-    <attribute>
-      <id>WOF_DCM_TRACKING_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>PBAX_CHIPID</id>
     </attribute>
     <attribute>
       <id>PBAX_GROUPID</id>
-    </attribute>
-    <attribute>
-      <id>SPIPSS_SELECT</id>
     </attribute>
     <attribute>
       <id>PROC_R_DISTLOSS_UOHM</id>
@@ -377,18 +365,6 @@
     </attribute>
     <attribute>
       <id>EXTERNAL_VRM_TRANSITION_START_NS</id>
-    </attribute>
-    <attribute>
-      <id>SAFE_MODE_FREQUENCY_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>SAFE_MODE_VOLTAGE_MV</id>
-    </attribute>
-    <attribute>
-      <id>PMCR_MOST_RECENT_MODE</id>
-    </attribute>
-    <attribute>
-      <id>UNSECURE_HOMER_SIZE</id>
     </attribute>
     <attribute>
       <id>SAFE_MODE_THROTTLE_IDX</id>
@@ -714,6 +690,9 @@
     <attribute>
       <default>POWER10</default>
       <id>MODEL</id>
+    </attribute>
+    <attribute>
+      <id>PCIE_NVME_PHB_CONFIG</id>
     </attribute>
     <attribute>
       <id>SECURE_VERSION_SEEPROM</id>
@@ -1381,22 +1360,7 @@
       <id>PM_HALT_FFDC_ENABLE</id>
     </attribute>
     <attribute>
-      <id>SYSTEM_RVRM_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOF_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOV_OVERV_DISABLE</id>
-    </attribute>
-    <attribute>
-      <id>SYSTEM_WOV_UNDERV_DISABLE</id>
-    </attribute>
-    <attribute>
       <id>WOF_INDEX_SELECT</id>
-    </attribute>
-    <attribute>
-      <id>WOF_THROTTLE_CONTROL_LOOP_MODE</id>
     </attribute>
     <attribute>
       <id>SPIPSS_FREQUENCY</id>
@@ -1406,9 +1370,6 @@
     </attribute>
     <attribute>
       <id>STOP_LEVELS_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>STOP_LEVELS_DISABLED</id>
     </attribute>
     <attribute>
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
