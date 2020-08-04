@@ -1373,6 +1373,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1427,6 +1430,9 @@
       <id>SECTOR_BUFFER_STRENGTH</id>
     </attribute>
     <attribute>
+      <id>XSTOP_ON_SPATTN</id>
+    </attribute>
+    <attribute>
       <id>FREQ_CP_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
@@ -1476,9 +1482,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1616,12 +1619,6 @@
       <id>FREQ_X_MHZ</id>
     </attribute>
     <attribute>
-      <id>NEST_PLL_BUCKET</id>
-    </attribute>
-    <attribute>
-      <id>PROC_FABRIC_PUMP_MODE</id>
-    </attribute>
-    <attribute>
       <id>PERF_24x7_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
@@ -1644,6 +1641,9 @@
     </attribute>
     <attribute>
       <id>NEST_LEAKAGE_PERCENT</id>
+    </attribute>
+    <attribute>
+      <id>NEST_PLL_BUCKET</id>
     </attribute>
     <id>sys-sys-power10</id>
     <parent>sys</parent>

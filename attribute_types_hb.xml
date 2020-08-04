@@ -405,6 +405,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then groups of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -1285,6 +1300,20 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Setup the option to checkstop on special attentions.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_XSTOP_ON_SPATTN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>XSTOP_ON_SPATTN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Force the SBE to boot with PAU DPLL in bypass</description>
     <hwpfToHbAttrMap>
       <id>ATTR_BOOT_PAU_DPLL_BYPASS</id>
@@ -1808,21 +1837,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -2627,22 +2641,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Select Nest I2C and pll setting from one of the supported frequencies</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_NEST_PLL_BUCKET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>NEST_PLL_BUCKET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x05</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>The frequency of a processor's Obus mesh clocks, in MHz. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_O_MHZ</id>
@@ -2672,19 +2670,6 @@
       <uint8_t>
         <default>NV</default>
       </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Processor SMP Fabric broadcast scope configuration. CHIP_IS_NODE = MODE1 = default CHIP_IS_GROUP = MODE2 Provided by the MRW.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FABRIC_PUMP_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_FABRIC_PUMP_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3016,6 +3001,22 @@
         <default>0x0</default>
       </uint8_t>
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Select Nest I2C and pll setting from one of the supported frequencies</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_NEST_PLL_BUCKET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>NEST_PLL_BUCKET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x05</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Hierarchical path to the target with respect to logical affinity</description>
@@ -5568,20 +5569,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The frequency of the memory controller channel. In synchronous mode, this is equivalent to ATTR_FREQ_PB_MHZ. This may be independently set per pair of memory channels if operating in asynchronous mode, but this configuration is not anticipated. This clock drives the MCU queues, and all the associated logic that drives the inputs to the DMI and reads its outputs</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_MCA_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_MCA_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <complexType>
       <description>Structure to define the addessing for an I2C slave device.</description>
       <field>
@@ -6622,6 +6609,18 @@
     <id>PM_HALT_FFDC_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -7514,6 +7513,18 @@
     <id>CLOCKSTOP_ON_XSTOP</id>
   </enumerationType>
   <enumerationType>
+    <description>Setup the option to checkstop on special attentions.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>XSTOP_ON_SPATTN</id>
+  </enumerationType>
+  <enumerationType>
     <description>Force the SBE to boot with PAU DPLL in bypass</description>
     <enumerator>
       <name>BYPASS</name>
@@ -7704,18 +7715,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
@@ -8200,18 +8199,6 @@
       <value>0x3</value>
     </enumerator>
     <id>OPTICS_CONFIG_MODE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>The frequency of the memory controller channel. In synchronous mode, this is equivalent to ATTR_FREQ_PB_MHZ. This may be independently set per pair of memory channels if operating in asynchronous mode, but this configuration is not anticipated. This clock drives the MCU queues, and all the associated logic that drives the inputs to the DMI and reads its outputs.</description>
-    <enumerator>
-      <name>2000</name>
-      <value>2000</value>
-    </enumerator>
-    <enumerator>
-      <name>2400</name>
-      <value>2400</value>
-    </enumerator>
-    <id>FREQ_MCA_MHZ</id>
   </enumerationType>
   <enumerationType>
     <description>Enables the SGPE Hcode to enable the CME instruction traces into the L3 Trace array for debug. Note: all configured CMEs will be put into this mode if this attribute is ON. Consumer: p9_hcode_image_build.c -&gt; SGPE Header field Platform default: OFF</description>
@@ -9245,14 +9232,14 @@
     <id>PROC_FABRIC_CAPI_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Processor SMP Fabric broadcast scope configuration. CHIP_IS_NODE = MODE1 = default CHIP_IS_GROUP = MODE2 Provided by the MRW.</description>
+    <description>Enumeration indicating the PROC_FABRIC_PUMP_MODE</description>
     <enumerator>
-      <name>CHIP_IS_NODE</name>
-      <value>0x01</value>
+      <name>MODE1</name>
+      <value>1</value>
     </enumerator>
     <enumerator>
-      <name>CHIP_IS_GROUP</name>
-      <value>0x02</value>
+      <name>MODE2</name>
+      <value>2</value>
     </enumerator>
     <id>PROC_FABRIC_PUMP_MODE</id>
   </enumerationType>
