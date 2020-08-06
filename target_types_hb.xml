@@ -1430,9 +1430,6 @@
       <id>SECTOR_BUFFER_STRENGTH</id>
     </attribute>
     <attribute>
-      <id>XSTOP_ON_SPATTN</id>
-    </attribute>
-    <attribute>
       <id>FREQ_CP_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
