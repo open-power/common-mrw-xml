@@ -1300,20 +1300,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Setup the option to checkstop on special attentions.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_XSTOP_ON_SPATTN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>XSTOP_ON_SPATTN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Force the SBE to boot with PAU DPLL in bypass</description>
     <hwpfToHbAttrMap>
       <id>ATTR_BOOT_PAU_DPLL_BYPASS</id>
@@ -7511,18 +7497,6 @@
       <value>0xFD</value>
     </enumerator>
     <id>CLOCKSTOP_ON_XSTOP</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Setup the option to checkstop on special attentions.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>XSTOP_ON_SPATTN</id>
   </enumerationType>
   <enumerationType>
     <description>Force the SBE to boot with PAU DPLL in bypass</description>
