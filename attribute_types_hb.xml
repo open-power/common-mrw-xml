@@ -535,6 +535,7 @@
   </attribute>
   <attribute>
     <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_IOHS_CONFIG_MODE</id>
       <macro>DIRECT</macro>
