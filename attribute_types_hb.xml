@@ -9207,18 +9207,6 @@
     <id>PROC_FABRIC_CAPI_MODE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enumeration indicating the PROC_FABRIC_PUMP_MODE</description>
-    <enumerator>
-      <name>MODE1</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>MODE2</name>
-      <value>2</value>
-    </enumerator>
-    <id>PROC_FABRIC_PUMP_MODE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enumeration indicating the PROC_FABRIC_SMP_OPTICS_MODE</description>
     <enumerator>
       <name>OPTICS_IS_X_BUS</name>
