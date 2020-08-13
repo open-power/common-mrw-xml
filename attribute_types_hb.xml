@@ -1099,6 +1099,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Sets policy for core LPAR configuration</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CORE_LPAR_MODE_POLICY</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CORE_LPAR_MODE_POLICY</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>FOLLOW_FUSED_STATE</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Chiplet partial good information, direct from module VPD PG keyword</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PG_MVPD</id>
@@ -7346,6 +7361,22 @@
       <value>0x1</value>
     </enumerator>
     <id>FUSED_CORE_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Sets policy for core LPAR configuration</description>
+    <enumerator>
+      <name>FOLLOW_FUSED_STATE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>LPAR_PER_CORE</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>LPAR_PER_THREAD</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>CORE_LPAR_MODE_POLICY</id>
   </enumerationType>
   <enumerationType>
     <description>To skip the locking sequence and check for lock of CP TOD Filter PLL</description>

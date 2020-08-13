@@ -1424,6 +1424,9 @@
       <id>SBE_SELECT_EX_POLICY</id>
     </attribute>
     <attribute>
+      <id>CORE_LPAR_MODE_POLICY</id>
+    </attribute>
+    <attribute>
       <id>SECTOR_BUFFER_STRENGTH</id>
     </attribute>
     <attribute>
