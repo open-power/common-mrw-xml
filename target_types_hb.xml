@@ -1373,6 +1373,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1479,9 +1482,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1817,9 +1817,6 @@
     <parent>unit</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
     <attribute>
       <default>IOHS</default>
       <id>TYPE</id>
@@ -2273,9 +2270,6 @@
       <id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
     </attribute>
     <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <attribute>
       <default>OBUS</default>
       <id>TYPE</id>
     </attribute>
@@ -2283,9 +2277,6 @@
     <parent>unit</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
     <attribute>
       <default>SMPGROUP</default>
       <id>TYPE</id>
@@ -2712,9 +2703,6 @@
     <parent>unit-xbus-power9</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
     <attribute>
       <default>XBUS</default>
       <id>TYPE</id>
