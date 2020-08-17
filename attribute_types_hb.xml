@@ -2628,6 +2628,19 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>The nominal core frequency in MHz. This is the same for all cores in the system. Provided by the #V bucket of module VPD.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_FREQ_CORE_NOMINAL_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>FREQ_CORE_NOMINAL_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>EQ boot frequency</description>
     <hwpfToHbAttrMap>
       <id>ATTR_BOOT_FREQ_MHZ</id>
@@ -4862,6 +4875,17 @@
     <simpleType>
       <array>4</array>
       <uint16_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Peer target's address of a bus (IOHS) connection. NULL means address 0 for no peer target. If a target instance overrides the default with the peer target's PHYS_PATH. The target compiler will convert the valid PHYS_PATH string into the runtime virtual address of the peer target instance.</description>
+    <id>PEER_TARGET</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <Target_t>
+        <default>NULL</default>
+      </Target_t>
     </simpleType>
   </attribute>
   <attribute>
