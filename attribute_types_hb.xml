@@ -405,6 +405,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then groups of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -612,6 +627,126 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specifies if spread spectrum is enabled for the OMI links</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_SPREAD_SPECTRUM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_SPREAD_SPECTRUM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specifies if spread spectrum is enabled for the iohs links</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IOHS_SPREAD_SPECTRUM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IOHS_SPREAD_SPECTRUM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specifies the channel loss</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_IOHS_CHANNEL_LOSS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_IOHS_CHANNEL_LOSS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>HIGH_LOSS</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specifies the channel loss</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_CHANNEL_LOSS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_CHANNEL_LOSS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>HIGH_LOSS</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI PRE1 settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_PRE1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_PRE1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>OMI PRE2 settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_PRE2</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_PRE2</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>IOHS PRE1 settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_IOHS_PRE1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_IOHS_PRE1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>IOHS PRE2 settings</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_IOHS_PRE2</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_IOHS_PRE2</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -1809,21 +1944,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -6609,6 +6729,18 @@
     <id>PM_HALT_FFDC_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -6803,6 +6935,62 @@
       <value>1</value>
     </enumerator>
     <id>MRW_L2_INCREASE_JITTER</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Specifies if spread spectrum is enabled for the OMI links</description>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <id>OMI_SPREAD_SPECTRUM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Specifies if spread spectrum is enabled for the iohs links</description>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <id>IOHS_SPREAD_SPECTRUM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Specifies the channel loss</description>
+    <enumerator>
+      <name>HIGH_LOSS</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>MID_LOSS</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>LOW_LOSS</name>
+      <value>0x02</value>
+    </enumerator>
+    <id>IO_IOHS_CHANNEL_LOSS</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Specifies the channel loss</description>
+    <enumerator>
+      <name>HIGH_LOSS</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>MID_LOSS</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>LOW_LOSS</name>
+      <value>0x02</value>
+    </enumerator>
+    <id>IO_OMI_CHANNEL_LOSS</id>
   </enumerationType>
   <enumerationType>
     <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
@@ -7691,18 +7879,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
