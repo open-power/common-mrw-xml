@@ -385,6 +385,12 @@
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
     </attribute>
     <attribute>
+      <id>OMI_SPREAD_SPECTRUM</id>
+    </attribute>
+    <attribute>
+      <id>IOHS_SPREAD_SPECTRUM</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
     </attribute>
     <attribute>
@@ -1373,6 +1379,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1476,9 +1485,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1832,6 +1838,15 @@
     </attribute>
     <attribute>
       <id>LINK_SPEED</id>
+    </attribute>
+    <attribute>
+      <id>IO_IOHS_CHANNEL_LOSS</id>
+    </attribute>
+    <attribute>
+      <id>IO_IOHS_PRE1</id>
+    </attribute>
+    <attribute>
+      <id>IO_IOHS_PRE2</id>
     </attribute>
     <attribute>
       <id>FREQ_IOHS_MHZ</id>
@@ -2347,6 +2362,15 @@
     </attribute>
     <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_CHANNEL_LOSS</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_PRE1</id>
+    </attribute>
+    <attribute>
+      <id>IO_OMI_PRE2</id>
     </attribute>
     <attribute>
       <id>OMI_DL_GROUP_POS</id>
