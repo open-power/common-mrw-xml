@@ -5240,17 +5240,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The number of reconfig loops allowed due to RCD parity errors when recovery is disabled. PRD will make a predictive callout and stop issuing reconfigs due to RCD parity errors when RCD_PARITY_RECONFIG_LOOP_COUNT is greater than this value. A value of 0 indicates that no reconfig loops are allowed due to RCD parity errors.</description>
-    <id>RCD_PARITY_RECONFIG_LOOPS_ALLOWED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>1 = System has redundant clock oscillators 0 = System does not have redundant clock oscillators From the Machine Readable Workbook</description>
     <id>REDUNDANT_CLOCKS</id>
     <persistency>non-volatile</persistency>
