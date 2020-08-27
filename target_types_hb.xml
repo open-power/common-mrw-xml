@@ -1216,6 +1216,9 @@
       <default>SYS</default>
       <id>TYPE</id>
     </attribute>
+    <attribute>
+      <id>WOF_TABLE_LID_NUMBER</id>
+    </attribute>
     <id>sys</id>
     <parent>base</parent>
   </targetType>
