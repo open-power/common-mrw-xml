@@ -65,6 +65,10 @@
     <parent>chip-tpm-cectpm</parent>
   </targetType>
   <targetType>
+    <id>chip-NPCT750AAC</id>
+    <parent>chip-tpm-cectpm</parent>
+  </targetType>
+  <targetType>
     <id>chip-UCD9090</id>
     <parent>ucd9090</parent>
   </targetType>
@@ -1372,6 +1376,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1475,9 +1482,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
