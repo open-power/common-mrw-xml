@@ -806,6 +806,26 @@
   </targetType>
   <targetType>
     <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
+      <default>GENERIC_I2C_DEVICE</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>I2C_DEV_TYPE</id>
+    </attribute>
+    <attribute>
+      <id>I2C_SUB_POS</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <id>generic_i2c_device</id>
+    <parent>asic</parent>
+  </targetType>
+  <targetType>
+    <attribute>
       <id>I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
