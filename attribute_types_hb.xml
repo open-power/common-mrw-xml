@@ -630,6 +630,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Select workaround type to be applied if HW543384 is present</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_HW543384_WAR_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>HW543384_WAR_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Specifies if spread spectrum is enabled for the OMI links</description>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_SPREAD_SPECTRUM</id>
@@ -6884,6 +6897,22 @@
       <value>1</value>
     </enumerator>
     <id>MRW_L2_INCREASE_JITTER</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Select workaround type to be applied if HW543384 is present</description>
+    <enumerator>
+      <name>NONE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>TIE_NEST_TO_PAU</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>FBC_FLOW_CONTROL</name>
+      <value>2</value>
+    </enumerator>
+    <id>HW543384_WAR_MODE</id>
   </enumerationType>
   <enumerationType>
     <description>Specifies if spread spectrum is enabled for the OMI links</description>
