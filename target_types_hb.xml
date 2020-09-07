@@ -1423,6 +1423,9 @@
       <id>MRW_L2_INCREASE_JITTER</id>
     </attribute>
     <attribute>
+      <id>HW543384_WAR_MODE</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_MMIO_BAR0_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
