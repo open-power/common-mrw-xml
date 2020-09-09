@@ -2951,10 +2951,6 @@
 			<id>CONFIG_APPLY</id>
                         <default></default>
 		</attribute>
-                <attribute>
-			<id>MFG_WRAP_TEST_ABUS_LINKS_SET</id>
-                        <default>SET_NONE</default>
-                </attribute>
 		<attribute>
 			<id>FRU_PATH</id>
 			<default></default>
