@@ -665,6 +665,14 @@
 			<name>DVPD</name>
 			<value>9</value>
 		</enumerator>		
+		<enumerator>
+			<name>SPD</name>
+			<value>10</value>
+		</enumerator>
+		<enumerator>
+			<name>RSPD</name>
+			<value>11</value>
+		</enumerator>
 		<default>NA</default>
 	</enumerationType>
 		<enumerationType>
