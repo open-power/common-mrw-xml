@@ -1011,6 +1011,10 @@
     <parent>lcard-dimm</parent>
   </targetType>
   <targetType>
+    <id>lcard-dimm-ddimm4u</id>
+    <parent>lcard-dimm-ddimm</parent>
+  </targetType>
+  <targetType>
     <id>lcard-dimm-ddr4</id>
     <parent>lcard-dimm</parent>
   </targetType>
@@ -1396,6 +1400,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1502,9 +1509,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
