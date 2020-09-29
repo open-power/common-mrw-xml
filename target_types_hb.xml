@@ -256,6 +256,9 @@
     <attribute>
       <id>MSS_OCMB_EXP_BOOT_CONFIG_ADAPTATION_MODE</id>
     </attribute>
+    <attribute>
+      <id>MEM_PMIC_FORCE_N_MODE</id>
+    </attribute>
     <id>chip-ocmb</id>
     <parent>chip</parent>
   </targetType>
