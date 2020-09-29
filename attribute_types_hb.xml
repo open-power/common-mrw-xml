@@ -3976,6 +3976,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Force one of 4 N-Mode configurations instead of N_PLUS_1 mode. The bits are as follows: [PMIC0, PMIC1, PMIC2, PMIC3, 0, 0, 0, 0] Set the bits high for the desired PMICs to run with. A valid configuration to boot with is at least a pair with one each of [0,2] and [1,3]. This only applies to 4U DDIMMs.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MEM_PMIC_FORCE_N_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MEM_PMIC_FORCE_N_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>N_PLUS_1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>System attribute. If all MCS chiplets are in an interleaving group (1=true, 0=false). - If true the SMP fabric is setup in normal mode and multiple MCSs are grouped (disallowing systems with memory only under 1 MCS (i.e. systems with a single C-DIMM)) - If false the SMP fabric is setup in checkerboard mode. Provided by the Machine Readable Workbook. This attribute is based on Machine-Type-Model (MTM) and is setup by the service processor.</description>
     <id>ALL_MCS_IN_INTERLEAVING_GROUP</id>
     <persistency>non-volatile</persistency>
@@ -10275,6 +10291,30 @@
       <value>1</value>
     </enumerator>
     <id>MSS_OCMB_EXP_BOOT_CONFIG_ADAPTATION_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Force one of 4 N-Mode configurations instead of N_PLUS_1 mode. The bits are as follows: [PMIC0, PMIC1, PMIC2, PMIC3, 0, 0, 0, 0] Set the bits high for the desired PMICs to run with. A valid configuration to boot with is at least a pair with one each of [0,2] and [1,3]. This only applies to 4U DDIMMs.</description>
+    <enumerator>
+      <name>N_PLUS_1</name>
+      <value>0xF0</value>
+    </enumerator>
+    <enumerator>
+      <name>PMIC01</name>
+      <value>0xC0</value>
+    </enumerator>
+    <enumerator>
+      <name>PMIC03</name>
+      <value>0x90</value>
+    </enumerator>
+    <enumerator>
+      <name>PMIC12</name>
+      <value>0x60</value>
+    </enumerator>
+    <enumerator>
+      <name>PMIC23</name>
+      <value>0x30</value>
+    </enumerator>
+    <id>MEM_PMIC_FORCE_N_MODE</id>
   </enumerationType>
   <enumerationType>
     <default>DEFAULT_ALL</default>
