@@ -69,8 +69,16 @@
     <parent>chip-tpm-cectpm</parent>
   </targetType>
   <targetType>
+    <id>chip-PCA9554</id>
+    <parent>generic_i2c_device</parent>
+  </targetType>
+  <targetType>
     <id>chip-UCD9090</id>
     <parent>ucd9090</parent>
+  </targetType>
+  <targetType>
+    <id>chip-adc</id>
+    <parent>generic_i2c_device</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1400,6 +1408,9 @@
       <id>SYSTEM_THROTTLE_PSTATE_NUMBER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>SYSTEM_FMAX_ENABLE</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1449,6 +1460,9 @@
     </attribute>
     <attribute>
       <id>PCI1_REFCLOCK_RCVR_TERM</id>
+    </attribute>
+    <attribute>
+      <id>HW543822_WAR_MODE</id>
     </attribute>
     <attribute>
       <id>SBE_SELECT_EX_POLICY</id>
@@ -1505,6 +1519,9 @@
       <id>NUM_KEY_ADDR_PAIR</id>
     </attribute>
     <attribute>
+      <id>OMI_CHANNEL_FAIL_ACTION</id>
+    </attribute>
+    <attribute>
       <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
@@ -1521,6 +1538,9 @@
     </attribute>
     <attribute>
       <id>MSS_OMI_EDPL_DISABLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_X4_DEGRADE_ACTION</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_SUPPORTED_FREQ</id>
