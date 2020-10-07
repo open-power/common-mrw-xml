@@ -110,6 +110,7 @@
   </attribute>
   <attribute>
     <description>Receive PBAX Chipid. Value that indicates this PBA's PBAX Chipid within the Is matched to pbax_chipid of the Address phase if Provided by the Machine Readable Workbook. Platform default:Nimbus systems - set so value in ATTR_FABRIC_GROUP_ID</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_PBAX_CHIPID</id>
       <macro>DIRECT</macro>
