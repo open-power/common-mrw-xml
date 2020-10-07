@@ -448,6 +448,12 @@
       <id>ENABLED_OBUS_BRICKS</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
     </attribute>
     <attribute>
@@ -557,12 +563,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
@@ -1806,6 +1806,9 @@
       <id>NEST_24x7_PERF_ACCUM_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>NEST_PLL_BUCKET</id>
     </attribute>
     <attribute>
@@ -1909,9 +1912,6 @@
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
