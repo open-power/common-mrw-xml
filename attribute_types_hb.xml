@@ -2614,21 +2614,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_LN_REV_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_DL_LN_REV_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x01</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_OMI_MFG_CHK</id>
@@ -2756,6 +2741,21 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_LN_REV_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_LN_REV_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x01</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -8609,18 +8609,6 @@
     <id>PROC_PCIE_CACHE_INJ_THROTTLE</id>
   </enumerationType>
   <enumerationType>
-    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <id>OMI_DL_LN_REV_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8655,6 +8643,18 @@
       <value>0x1</value>
     </enumerator>
     <id>FUSED_CORE_MODE</id>
+  </enumerationType>
+  <enumerationType>
+    <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <id>OMI_DL_LN_REV_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
