@@ -96,7 +96,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2, 3 Consumers: Hostboot firmware</description>
+    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2 Consumers: Hostboot firmware</description>
     <hwpfToHbAttrMap>
       <id>ATTR_WOF_INDEX_SELECT</id>
       <macro>DIRECT</macro>
@@ -6925,6 +6925,10 @@
     <enumerator>
       <name>FBC_FLOW_CONTROL</name>
       <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH</name>
+      <value>3</value>
     </enumerator>
     <id>HW543384_WAR_MODE</id>
   </enumerationType>
