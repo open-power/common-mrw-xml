@@ -397,6 +397,9 @@
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
     </attribute>
     <attribute>
+      <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
+    </attribute>
+    <attribute>
       <id>OMI_SPREAD_SPECTRUM</id>
     </attribute>
     <attribute>
