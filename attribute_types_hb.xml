@@ -646,6 +646,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Attribute Indicating if Memory Encryption is enabled and what type</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_MEMORY_ENCRYPTION_ENABLED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Select workaround type to be applied if HW543384 is present</description>
     <hwpfToHbAttrMap>
       <id>ATTR_HW543384_WAR_MODE</id>
@@ -6911,6 +6924,22 @@
       <value>1</value>
     </enumerator>
     <id>MRW_L2_INCREASE_JITTER</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Attribute Indicating if Memory Encryption is enabled and what type</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>XTS</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>CTR</name>
+      <value>2</value>
+    </enumerator>
+    <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
   </enumerationType>
   <enumerationType>
     <description>Select workaround type to be applied if HW543384 is present</description>
