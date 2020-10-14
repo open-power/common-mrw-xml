@@ -1660,6 +1660,9 @@
       <id>MSS_MRW_SAFEMODE_DRAM_DATABUS_UTIL</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
+    </attribute>
+    <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
