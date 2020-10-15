@@ -96,7 +96,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2, 3 Consumers: Hostboot firmware</description>
+    <description>Selects the WOF table from a set of WOF tables Valid values: 0, 1, 2 Consumers: Hostboot firmware</description>
     <hwpfToHbAttrMap>
       <id>ATTR_WOF_INDEX_SELECT</id>
       <macro>DIRECT</macro>
@@ -110,6 +110,7 @@
   </attribute>
   <attribute>
     <description>Receive PBAX Chipid. Value that indicates this PBA's PBAX Chipid within the Is matched to pbax_chipid of the Address phase if Provided by the Machine Readable Workbook. Platform default:Nimbus systems - set so value in ATTR_FABRIC_GROUP_ID</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_PBAX_CHIPID</id>
       <macro>DIRECT</macro>
@@ -638,6 +639,19 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>MRW_L2_INCREASE_JITTER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Attribute Indicating if Memory Encryption is enabled and what type</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_MEMORY_ENCRYPTION_ENABLED</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -2717,6 +2731,21 @@
       <uint32_t>
         <default>0x000009C4</default>
       </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Machine Readable Workbook value for polling period of DIMM thermal sensors.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>1000</default>
+      </uint16_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6912,6 +6941,22 @@
     <id>MRW_L2_INCREASE_JITTER</id>
   </enumerationType>
   <enumerationType>
+    <description>Attribute Indicating if Memory Encryption is enabled and what type</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>XTS</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>CTR</name>
+      <value>2</value>
+    </enumerator>
+    <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
+  </enumerationType>
+  <enumerationType>
     <description>Select workaround type to be applied if HW543384 is present</description>
     <enumerator>
       <name>NONE</name>
@@ -6924,6 +6969,10 @@
     <enumerator>
       <name>FBC_FLOW_CONTROL</name>
       <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH</name>
+      <value>3</value>
     </enumerator>
     <id>HW543384_WAR_MODE</id>
   </enumerationType>
