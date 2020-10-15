@@ -185,6 +185,12 @@
 	<child_id>osc1-sys-refclk</child_id>
 	<child_id>osc0-pcie-refclk</child_id>
 	<child_id>osc0-lpc-refclk</child_id>
+   <child_id>e0a-slot-clk</child_id>
+   <child_id>e0b-slot-clk</child_id>
+   <child_id>e0c-slot-clk</child_id>
+   <child_id>e1a-slot-clk</child_id>
+   <child_id>e1b-slot-clk</child_id>
+   <child_id>e1c-slot-clk</child_id>   
 	<child_id>omi-refclk</child_id>
 	<child_id>oc0-refclk</child_id>
 	<child_id>oc1-refclk</child_id>
@@ -15210,6 +15216,234 @@
 	</attribute>
 </targetPart>
 <targetPart>
+	<id>e0a-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e0a-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>e0b-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e0b-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>e0c-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e0c-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>e1a-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e1a-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>e1b-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e1b-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>e1c-slot-clk</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>e1c-slot-clk</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>OSCREFCLK</default>
+	</attribute>
+</targetPart>
+<targetPart>
 	<id>omi-refclk</id>
 	<type>unit-clk-master</type>
 	<is_root>false</is_root>
@@ -15704,6 +15938,12 @@
 	<child_id>osc1-sys-refclk</child_id>
 	<child_id>osc0-pcie-refclk</child_id>
 	<child_id>osc0-lpc-refclk</child_id>
+   <child_id>e0a-slot-clk</child_id>
+   <child_id>e0b-slot-clk</child_id>
+   <child_id>e0c-slot-clk</child_id>
+   <child_id>e1a-slot-clk</child_id>
+   <child_id>e1b-slot-clk</child_id>
+   <child_id>e1c-slot-clk</child_id>      
 	<child_id>omi-refclk</child_id>
 	<child_id>oc0-refclk</child_id>
 	<child_id>oc1-refclk</child_id>
