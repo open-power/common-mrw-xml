@@ -1663,6 +1663,9 @@
       <id>MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_DIMM_SLOT_AIRFLOW</id>
+    </attribute>
+    <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
