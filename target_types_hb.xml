@@ -1414,6 +1414,9 @@
       <id>SYSTEM_FMAX_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1526,9 +1529,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -2591,9 +2591,6 @@
     <attribute>
       <default>PERV</default>
       <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>PG_MVPD</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
