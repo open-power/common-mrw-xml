@@ -824,7 +824,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>IN</default>
+		<default>OUT</default>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
@@ -916,7 +916,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>IN</default>
+		<default>OUT</default>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
@@ -1008,7 +1008,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>IN</default>
+		<default>OUT</default>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>
@@ -1100,7 +1100,7 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>IN</default>
+		<default>OUT</default>
 	</attribute>
 	<attribute>
 		<id>FAN_DOMAIN_REG_ADDRESS</id>

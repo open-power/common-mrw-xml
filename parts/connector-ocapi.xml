@@ -2,18 +2,19 @@
 <version>1.0</version>
 <targetInstances>
 <targetPart>
-	<id>OpenCapi</id>
+	<id>opencapi-conn</id>
 	<type>connector-opencapi</type>
 	<is_root>true</is_root>
-	<instance_name>ocapi</instance_name>
+	<instance_name>ocapi-conn</instance_name>
 	<position>-1</position>
 	<parent>mrw-chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<parent_type>card-pciecard-cablecard</parent_type>
+   <child_id>generic-logic-assoc</child_id>
    <child_id>opbus</child_id>
+	<child_id>gpio.detect</child_id>   
 	<child_id>gpio.reset</child_id>
-	<child_id>gpio.detect</child_id>
 	<child_id>gpio.clk_present</child_id>   
 	<attribute>
 		<id>CLASS</id>
@@ -54,6 +55,41 @@
 	<attribute>
 		<id>TYPE</id>
 		<default/>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>generic-logic-assoc</id>
+	<type>unit-logic_assoc-generic</type>
+	<is_root>false</is_root>
+	<instance_name>generic-logic-assoc</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>ASSOCIATION_TYPE</id>
+		<default>FRU</default>
+	</attribute>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>LOGICAL_ASSOCIATION</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
 	</attribute>
 </targetPart>
 <targetPart>
