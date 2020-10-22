@@ -266,6 +266,9 @@
       <id>MEM_MRW_IS_PLANAR</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_OCMB_RESET_GROUP</id>
+    </attribute>
+    <attribute>
       <id>MSS_OCMB_EXP_BOOT_CONFIG_LANE_MODE</id>
     </attribute>
     <attribute>
@@ -395,9 +398,6 @@
     </attribute>
     <attribute>
       <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
-      <id>PROC_MEMORY_ENCRYPTION_ENABLED</id>
     </attribute>
     <attribute>
       <id>OMI_SPREAD_SPECTRUM</id>
@@ -1414,9 +1414,6 @@
       <id>SYSTEM_FMAX_ENABLE</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1529,6 +1526,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
