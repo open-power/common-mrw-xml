@@ -2736,6 +2736,7 @@
   </attribute>
   <attribute>
     <description>System specific definition of which RESET_N signal is connected to the OCMB's DIMM slot. RESET_N signals are ordered from 0-N</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_OCMB_RESET_GROUP</id>
       <macro>DIRECT</macro>
