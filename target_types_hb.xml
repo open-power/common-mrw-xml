@@ -1250,6 +1250,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>USE_11S_SPD</id>
+    </attribute>
+    <attribute>
       <id>WOF_TABLE_LID_NUMBER</id>
     </attribute>
     <id>sys</id>
