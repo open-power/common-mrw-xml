@@ -1441,6 +1441,9 @@
       <id>MRW_L2_INCREASE_JITTER</id>
     </attribute>
     <attribute>
+      <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
+    </attribute>
+    <attribute>
       <id>HW543384_WAR_MODE</id>
     </attribute>
     <attribute>

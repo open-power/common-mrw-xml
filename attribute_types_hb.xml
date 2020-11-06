@@ -646,6 +646,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Convert dcbz operations into read within to modify transactions in L2</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_CONVERT_DCBZ_TO_RWITM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Select workaround type to be applied if HW543384 is present</description>
     <hwpfToHbAttrMap>
       <id>ATTR_HW543384_WAR_MODE</id>
@@ -6950,6 +6963,18 @@
       <value>1</value>
     </enumerator>
     <id>MRW_L2_INCREASE_JITTER</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Convert dcbz operations into read within to modify transactions in L2</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
   </enumerationType>
   <enumerationType>
     <description>Select workaround type to be applied if HW543384 is present</description>
