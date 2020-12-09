@@ -1414,6 +1414,9 @@
       <id>SYSTEM_FMAX_ENABLE</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1531,9 +1534,6 @@
       <id>SMF_CONFIG</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>IS_SIMULATION</id>
     </attribute>
     <attribute>
@@ -1547,6 +1547,9 @@
     </attribute>
     <attribute>
       <id>OMI_X4_DEGRADE_ACTION</id>
+    </attribute>
+    <attribute>
+      <id>OMI_CRC_DEBUG</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_SUPPORTED_FREQ</id>
