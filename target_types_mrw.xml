@@ -4076,23 +4076,7 @@
 </targetType>    
 <targetType>
     <id>chip-processor-power10</id>
-    <parent>chip-processor</parent>
-    <attribute>
-        <id>ICACHE_SIZE</id>
-        <default>32</default>
-    </attribute>    
-    <attribute>
-        <id>DATA_CACHE_SIZE</id>
-        <default>32</default>
-    </attribute>    
-    <attribute>
-        <id>L2_CACHE_SIZE</id>
-        <default>32</default>
-    </attribute>    
-    <attribute>
-        <id>L3_CACHE_SIZE</id>
-        <default>32</default>
-    </attribute>    
+    <parent>chip-processor</parent>  
     <attribute>
         <id>SYSTEM_TYPE</id>
         <default>32</default>
