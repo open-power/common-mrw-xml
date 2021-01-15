@@ -6139,7 +6139,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
@@ -6149,7 +6149,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint32_t />
     </simpleType>
   </attribute>
@@ -6159,7 +6159,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <string>
         <sizeInclNull>64</sizeInclNull>
       </string>
@@ -6171,7 +6171,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
@@ -6181,7 +6181,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
@@ -6202,7 +6202,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
@@ -6212,7 +6212,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
@@ -6222,7 +6222,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <array>32</array>
+      <array>192</array>
       <uint8_t />
     </simpleType>
   </attribute>
