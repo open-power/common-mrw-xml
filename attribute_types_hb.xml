@@ -9,9 +9,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x01</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -248,7 +246,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>0x00</default>
+        <default>0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -264,7 +262,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>0x00</default>
+        <default>0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -280,7 +278,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>0x00</default>
+        <default>0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -296,7 +294,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>0x00</default>
+        <default>0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -312,7 +310,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>0x00</default>
+        <default>0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -446,9 +444,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2247,7 +2243,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0</default>
+        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2565,7 +2561,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x0</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2580,7 +2576,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x0</default>
+        <default>0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2940,9 +2936,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2955,9 +2949,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2970,9 +2962,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2985,9 +2975,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3000,9 +2988,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3015,9 +3001,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3030,9 +3014,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3045,9 +3027,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3060,9 +3040,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3075,9 +3053,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3090,9 +3066,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3105,9 +3079,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t>
-        <default>0x00</default>
-      </uint64_t>
+      <uint64_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3121,7 +3093,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0x00</default>
+        <default>OFF</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -3135,9 +3107,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3150,9 +3120,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3165,9 +3133,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3180,9 +3146,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3195,9 +3159,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x3C</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3210,9 +3172,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3225,9 +3185,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3240,9 +3198,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3255,9 +3211,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
