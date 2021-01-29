@@ -249,6 +249,9 @@
       <id>FRU_ID</id>
     </attribute>
     <attribute>
+      <id>LOCATION_CODE</id>
+    </attribute>
+    <attribute>
       <default>OCMB</default>
       <id>MODEL</id>
     </attribute>
