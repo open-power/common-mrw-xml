@@ -367,6 +367,12 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
+    </attribute>
+    <attribute>
       <id>VDD_AVSBUS_BUSNUM</id>
     </attribute>
     <attribute>
@@ -473,12 +479,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_CHIP_ID</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <attribute>
       <id>CLOCK_PLL_MUX_TOD</id>
