@@ -532,12 +532,6 @@
       <id>NEST_MEM_X_O_PCI_BYPASS</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
       <id>IO_PB_IOOFIR_MASK</id>
     </attribute>
     <attribute>
@@ -569,6 +563,12 @@
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <id>chip-processor</id>
     <parent>chip</parent>
@@ -2839,16 +2839,16 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    </attribute>
-    <attribute>
-      <id>OMI_REFCLOCK_SWIZZLE</id>
-    </attribute>
-    <attribute>
       <id>OMI_DL_GROUP_POS</id>
     </attribute>
     <attribute>
       <id>OMI_DL_NUM</id>
+    </attribute>
+    <attribute>
+      <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>OMI_REFCLOCK_SWIZZLE</id>
     </attribute>
     <attribute>
       <id>OMI_DL_LN_REV_ENABLE</id>

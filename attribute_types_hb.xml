@@ -15,19 +15,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Indicate if manufacturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_X_MFG_CHK</id>
@@ -97,6 +84,36 @@
     <simpleType>
       <uint8_t>
         <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_GROUP_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_GROUP_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>An OMI target's logical DL number pos | DL_NUM -----+-------------- 0 | 6 1 | 7 2 | 4 3 | 5 4 | 0 5 | 1 6 | 2 7 | 3 8 | 14 9 | 15 10 | 12 11 | 13 12 | 8 13 | 9 14 | 10 15 | 11</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_DL_NUM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>OMI_DL_NUM</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -1460,195 +1477,17 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
+    <description>OMI inband BAR address offset. Set by platform. One Axone bar register is set per MC channel for MMIO and another is set per MC channel for config space. The bar is shared between both sub-channels each with an OCMB. The upper bit of the bar size is used to determine which sub-channel is selected. This means that for two OCMB's their config space is contiguous and their MMIO space is contiguous. Therefore a single OCMB's MMIO and config space cannot be contiguous. However, we can still use one BAR attribute. The p9a_omi_setup_bars procedure can interleave the config space and MMIO space as shown in the table bellow. For example, both MMIO and config bar sizes are 2GB. The 2GB bit becomes the selector for the subchannel. The 4GB bit becomes the offset applied for MMIO operations. Value is also set on MC to match the BAR offset of the child OMI with lowest chip unit. Each OCMB is assigned one base address attribute. ocmb | BAR ATTRIBUTE | Type | Base reg - end addr | size | sub-ch +-----+--------------------+------+-----------------------------------------+------+------- ocmb0 | 0x0006030200000000 | cnfg | 0x0006030200000000 - 0x000603027FFFFFFF | 2GB | 0 ocmb1 | 0x0006030280000000 | cnfg | 0x0006030280000000 - 0x00060302FFFFFFFF | 2GB | 1 ocmb0 | N/A | mmio | 0x0006030300000000 - 0x000603037FFFFFFF | 2GB | 0 ocmb1 | N/A | mmio | 0x0006030380000000 - 0x00060303FFFFFFFF | 2GB | 1 +-----+--------------------+------+-----------------------------------------+------+------- ocmb2 | 0x0006030400000000 | cnfg | 0x0006030400000000 - 0x000603047FFFFFFF | 2GB | 0 ocmb3 | 0x0006030480000000 | cnfg | 0x0006030480000000 - 0x00060304FFFFFFFF | 2GB | 1 ocmb2 | N/A | mmio | 0x0006030500000000 - 0x000603057FFFFFFF | 2GB | 0 ocmb3 | N/A | mmio | 0x0006030580000000 - 0x00060305FFFFFFFF | 2GB | 1 Used by p9a_omi_setup_bars</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+      <id>ATTR_OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
+      <uint64_t />
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>ENABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>DISABLED</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 0 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_0_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_0_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0xF</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 1 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_1_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_1_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 4 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_4_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_4_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template 7 pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_7_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_7_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Downstream Template A pacing</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_TMPL_A_PACING</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_TMPL_A_PACING</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI major version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MAJOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x3</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The OMI OpenCAPI minor version supported by this processor</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_OMI_OC_MINOR_VER</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x1</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
@@ -2246,97 +2085,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_MFG_CHK</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_MFG_CHK</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum eye width to allow passing through manufacturing.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_MFG_MIN_EYE_WIDTH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_MFG_MIN_EYE_WIDTH</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of margin to be applied.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_TX_MARGIN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_TX_MARGIN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe precusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_TX_FFE_PRECURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_TX_FFE_PRECURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Value to select amount of tx ffe postcusor to apply.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_TX_FFE_POSTCURSOR</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_TX_FFE_POSTCURSOR</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>This attribute provides an a way to stress the SMP Abus Even Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>i This attribute provides an a way to stress the SMP Abus Odd Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>PCIE MMIO BAR enable creator: platform consumer: p9_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_BAR_ENABLE</id>
@@ -2660,33 +2408,94 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
+    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_GROUP_POS</id>
+      <id>ATTR_IO_OMI_MFG_CHK</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>OMI_DL_GROUP_POS</id>
+    <id>IO_OMI_MFG_CHK</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0xFF</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
-    <description>An OMI target's logical DL number pos | DL_NUM -----+-------------- 0 | 6 1 | 7 2 | 4 3 | 5 4 | 0 5 | 1 6 | 2 7 | 3 8 | 14 9 | 15 10 | 12 11 | 13 12 | 8 13 | 9 14 | 10 15 | 11</description>
+    <description>Minimum eye width to allow passing through manufacturing.</description>
     <hwpfToHbAttrMap>
-      <id>ATTR_OMI_DL_NUM</id>
+      <id>ATTR_IO_OMI_MFG_MIN_EYE_WIDTH</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
-    <id>OMI_DL_NUM</id>
+    <id>IO_OMI_MFG_MIN_EYE_WIDTH</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0xFF</default>
-      </uint8_t>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of margin to be applied.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_MARGIN_RATIO</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_MARGIN_RATIO</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe precusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_FFE_PRECURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_FFE_PRECURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Value to select amount of tx ffe postcusor to apply.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_TX_FFE_POSTCURSOR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_TX_FFE_POSTCURSOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>This attribute provides an a way to stress the SMP Abus Even Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>i This attribute provides an a way to stress the SMP Abus Odd Lanes in Manufacturing. By applying a phase rotator offset we can further stress the phy. This is a 6-bit 2's complement value that would be right justified in the 8 bit UINT attribute value.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2727,6 +2536,197 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+  </attribute>
+  <attribute>
+    <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_4</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ENABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_7</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_ENABLE_DL_TMPL_A</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 0 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_0_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_0_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xF</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 1 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_1_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_1_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 4 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_4_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_4_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template 7 pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_7_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_7_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>Downstream Template A pacing</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_TMPL_A_PACING</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_TMPL_A_PACING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI major version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MAJOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MAJOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x3</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>The OMI OpenCAPI minor version supported by this processor</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_OMI_OC_MINOR_VER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_OMI_OC_MINOR_VER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x1</default>
+      </uint8_t>
+    </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>The DL lane reversible enable bit in DL_CONFIG0_CFG (bit 38)</description>
@@ -8111,54 +8111,6 @@
     <id>IO_REFCLOCK_RCVR_TERM</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_1</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_4</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_7</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
-    <enumerator>
-      <name>DISABLED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ENABLED</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>PROC_ENABLE_DL_TMPL_A</id>
-  </enumerationType>
-  <enumerationType>
     <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8407,18 +8359,6 @@
     <id>ENABLE_MEM_EARLY_DATA_SCOM</id>
   </enumerationType>
   <enumerationType>
-    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>0x1</value>
-    </enumerator>
-    <id>IO_OMI_MFG_CHK</id>
-  </enumerationType>
-  <enumerationType>
     <description>PCIE MMIO BAR enable creator: platform consumer: p9_pcie_config firmware notes: Array index: BAR number (0:2) index 0~1 for MMIO BAR0/1 index 2 for PHB register space</description>
     <enumerator>
       <name>DISABLE</name>
@@ -8639,6 +8579,18 @@
     <id>PROC_PCIE_CACHE_INJ_THROTTLE</id>
   </enumerationType>
   <enumerationType>
+    <description>Indicate if manufcaturing tests should be taken pre / post linktraining.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IO_OMI_MFG_CHK</id>
+  </enumerationType>
+  <enumerationType>
     <description>Indicate if debug data should be taken pre / post linktraining.</description>
     <enumerator>
       <name>FALSE</name>
@@ -8649,6 +8601,54 @@
       <value>0x1</value>
     </enumerator>
     <id>IO_DMI_PROC_DEBUG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 1. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_1</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 4. Should be enabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_4</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template 7. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_7</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enable proc downstream transmit template A. Should be disabled by default.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>PROC_ENABLE_DL_TMPL_A</id>
   </enumerationType>
   <enumerationType>
     <description>Summarizes the fused status of cores. This is same for all P9 chips in the system. If a core is in a fused state, attribute should read 1 else zero. It needs to be populated during ipl but before istep 15.</description>
