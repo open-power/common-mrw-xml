@@ -1769,7 +1769,7 @@
   </targetType>
   <targetType>
     <id>unit-abus-power10</id>
-    <parent>unit-obus-smpgroup</parent>
+    <parent>unit-smpgroup</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2362,17 +2362,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <attribute>
-      <default>SMPGROUP</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-obus-smpgroup</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>AXONE</default>
       <id>MODEL</id>
     </attribute>
@@ -2769,6 +2758,23 @@
       <id>TYPE</id>
     </attribute>
     <id>unit-sbe-power9</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>PEER_TARGET</id>
+    </attribute>
+    <attribute>
+      <default>SMPGROUP</default>
+      <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+    </attribute>
+    <attribute>
+      <id>FAPI_POS</id>
+    </attribute>
+    <id>unit-smpgroup</id>
     <parent>unit</parent>
   </targetType>
   <targetType>
