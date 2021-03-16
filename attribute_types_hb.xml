@@ -1553,7 +1553,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>The system-wide minimum frequency of the core mesh clock, in MHz. This is the lowest floor frequency across all chips in the system. Used for fabric epsilon calculations.</description>
+    <description>The computed system-wide minumum frequency of the core mesh clock, in MHz This is the lowest floor frequency across all chips in the system. Used for fabric epsilon calculations.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
       <macro>DIRECT</macro>
@@ -1567,7 +1567,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>The system-wide maximum frequency of the core mesh clock, in MHz. This is the highest ceiling frequency across all chips in the system. Used for fabric epsilon calculations.</description>
+    <description>The computed system-wide minumum frequency of the core mesh clock, in MHz This is the highest ceiling frequency across all chips in the system. Used for fabric epsilon calculations.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_SYSTEM_CORE_CEILING_MHZ</id>
       <macro>DIRECT</macro>
