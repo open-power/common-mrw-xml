@@ -1,6 +1,6 @@
 <partInstance>
   <targetPart>
-    <id>lcard-dimm-ddimm4u</id>
+    <id>ddimm4u</id>
     <attribute>
       <id>MODEL</id>
       <default>JEDEC</default>
@@ -23,9 +23,9 @@
     <hidden_child_id>dimm_func_sensor</hidden_child_id>
     <instance_name>ddimm4u</instance_name>
     <is_root>true</is_root>
-    <parent>lcard-dimm</parent>
+    <parent>card</parent>
     <parent_type>connector-dimmconn-ddimm</parent_type>
-    <position>0</position>
+    <position>-1</position>
     <type>lcard-dimm-ddimm4u</type>
   </targetPart>
   <targetPart>
@@ -34,10 +34,10 @@
     <child_id>i2c-ocmb</child_id>
     <child_id>i2c-ts0</child_id>
     <child_id>i2c-ts1</child_id>
+    <child_id>i2c-ts2</child_id>
     <instance_name>ocmb</instance_name>
     <is_root>false</is_root>
     <parent>chip</parent>
-    <parent_type>lcard-dimm-ddimm</parent_type>
     <position>-1</position>
     <type>chip-ocmb</type>
   </targetPart>
@@ -59,7 +59,7 @@
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
-    <type>unit-ocmb</type>
+    <type>unit-omi-power10</type>
   </targetPart>
   <targetPart>
     <id>dimm_func_sensor</id>
@@ -212,20 +212,12 @@
       <default>0x40</default>
     </attribute>
     <attribute>
-      <id>I2C_ENGINE</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
-      <id>I2C_PORT</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
       <id>TYPE</id>
       <default>NA</default>
     </attribute>
     <instance_name>i2c-ocmb</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>mrw-unit</parent>
     <position>-1</position>
     <type>unit-i2c-slave</type>
   </targetPart>
@@ -246,14 +238,6 @@
     <attribute>
       <id>I2C_ADDRESS</id>
       <default>0x30</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ENGINE</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
-      <id>I2C_PORT</id>
-      <default>0x00</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
@@ -284,18 +268,38 @@
       <default>0x32</default>
     </attribute>
     <attribute>
-      <id>I2C_ENGINE</id>
-      <default>0x00</default>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>i2c-ts1</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-i2c-slave</type>
+  </targetPart>
+  <targetPart>
+    <id>i2c-ts2</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>I2C</default>
     </attribute>
     <attribute>
-      <id>I2C_PORT</id>
-      <default>0x00</default>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <attribute>
+      <id>I2C_ADDRESS</id>
+      <default>0x78</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
       <default>NA</default>
     </attribute>
-    <instance_name>i2c-ts1</instance_name>
+    <instance_name>i2c-ts2</instance_name>
     <is_root>false</is_root>
     <parent>unit</parent>
     <position>-1</position>
@@ -318,14 +322,6 @@
     <attribute>
       <id>I2C_ADDRESS</id>
       <default>0xA0</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ENGINE</id>
-      <default>0x00</default>
-    </attribute>
-    <attribute>
-      <id>I2C_PORT</id>
-      <default>0x00</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
