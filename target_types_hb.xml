@@ -1561,9 +1561,6 @@
       <id>OMI_X4_DEGRADE_ACTION</id>
     </attribute>
     <attribute>
-      <id>OMI_CRC_DEBUG</id>
-    </attribute>
-    <attribute>
       <id>MSS_MRW_SUPPORTED_FREQ</id>
     </attribute>
     <attribute>

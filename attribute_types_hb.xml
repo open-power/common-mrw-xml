@@ -2178,22 +2178,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Selects the settings for Host and Explorer FIRs for CRC and NACK errors. Default: MASKED</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_CRC_DEBUG</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>OMI_CRC_DEBUG</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0x00</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>List of memory frequencies supported by the current system.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_SUPPORTED_FREQ</id>
@@ -8121,26 +8105,6 @@
       <value>0x03</value>
     </enumerator>
     <id>OMI_X4_DEGRADE_ACTION</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Selects the settings for Host and Explorer FIRs for CRC and NACK errors. Default: MASKED</description>
-    <enumerator>
-      <name>MASKED</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>XSTOP</name>
-      <value>0x01</value>
-    </enumerator>
-    <enumerator>
-      <name>LOCAL_XSTOP</name>
-      <value>0x02</value>
-    </enumerator>
-    <enumerator>
-      <name>RECOVERABLE</name>
-      <value>0x03</value>
-    </enumerator>
-    <id>OMI_CRC_DEBUG</id>
   </enumerationType>
   <enumerationType>
     <description>List of memory frequencies supported by the current system.</description>
