@@ -409,6 +409,12 @@
       <id>IOHS_SPREAD_SPECTRUM</id>
     </attribute>
     <attribute>
+      <id>SYS_CLK_NE_TERMINATION_SITE</id>
+    </attribute>
+    <attribute>
+      <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
     </attribute>
     <attribute>
@@ -1420,9 +1426,6 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1544,6 +1547,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
