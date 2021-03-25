@@ -479,6 +479,7 @@
   </attribute>
   <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
+    <global />
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_REFCLOCK_SWIZZLE</id>
       <macro>DIRECT</macro>
