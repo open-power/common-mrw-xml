@@ -1292,22 +1292,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Consumed by p10_sbe_select_ex. Dictates policy for selection of active cores and backing caches CRONUS_MAX_ACTIVE -- request maximum set of active cores possible (use case for Cronus istep 4 to establish run state on all functional cores), no backing caches HB_DEFAULT -- request minset of active cores (2 in fused core mode, 1 otherwise) and backing caches (2) HB_MAX_FOOTPRINT -- request the maximum set of backing caches possible (maintaining a power of 2 size, and guaranteeing minset of active cores) HB_MAX_THREADS -- request the maximum set of active cores possible, logically applied after processing HB_MAX_FOOTPRINT directive if set For memory preserving IPLs, the attribute will be honored in the calcuation of active cores, but no backing caches will be requested For cache-contained IPL types, the selection policy is fixed in code -- request maximum set of active cores possible, no backing caches For chip-contained IPL types, the selection policy is fixed in code -- request based on contents of ATTR_CHIP_CONTAINED_ACTIVE_CORES_VEC, ATTR_CHIP_CONTAINED_BACKING_CACHES_VEC</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_SELECT_EX_POLICY</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_SELECT_EX_POLICY</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>HB_MAX_FOOTPRINT</default>
-      </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Bit vector indicating the active cores to be set by p10_sbe_select_ex for a chip contained IPL. Bit 0 = Core 0, Bit 1 = Core 1, ..., Bit 31 = Core 31.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CHIP_CONTAINED_ACTIVE_CORES_VEC</id>
@@ -7652,30 +7636,6 @@
       <value>0x1</value>
     </enumerator>
     <id>IS_MPIPL</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Consumed by p10_sbe_select_ex. Dictates policy for selection of active cores and backing caches CRONUS_MAX_ACTIVE -- request maximum set of active cores possible (use case for Cronus istep 4 to establish run state on all functional cores), no backing caches HB_DEFAULT -- request minset of active cores (2 in fused core mode, 1 otherwise) and backing caches (2) HB_MAX_FOOTPRINT -- request the maximum set of backing caches possible (maintaining a power of 2 size, and guaranteeing minset of active cores) HB_MAX_THREADS -- request the maximum set of active cores possible, logically applied after processing HB_MAX_FOOTPRINT directive if set For memory preserving IPLs, the attribute will be honored in the calcuation of active cores, but no backing caches will be requested For cache-contained IPL types, the selection policy is fixed in code -- request maximum set of active cores possible, no backing caches For chip-contained IPL types, the selection policy is fixed in code -- request based on contents of ATTR_CHIP_CONTAINED_ACTIVE_CORES_VEC, ATTR_CHIP_CONTAINED_BACKING_CACHES_VEC</description>
-    <enumerator>
-      <name>HB_DEFAULT</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>CRONUS_MAX_ACTIVE</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>HB_MAX_FOOTPRINT</name>
-      <value>0x2</value>
-    </enumerator>
-    <enumerator>
-      <name>HB_MAX_THREADS</name>
-      <value>0x4</value>
-    </enumerator>
-    <enumerator>
-      <name>HB_MAX_FOOTPRINT_MAX_THREADS</name>
-      <value>0x6</value>
-    </enumerator>
-    <id>SBE_SELECT_EX_POLICY</id>
   </enumerationType>
   <enumerationType>
     <description>Summarizes the fused status of cores. This is same for all p10 chips in the system. If a core is in a fused state, attribute should read 1 else zero. It needs to be populated during ipl but before istep 15.</description>
