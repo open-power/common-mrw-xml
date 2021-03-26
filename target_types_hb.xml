@@ -1348,7 +1348,13 @@
       <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
     </attribute>
     <attribute>
+      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
+    </attribute>
+    <attribute>
       <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
     </attribute>
     <attribute>
       <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
@@ -1382,6 +1388,15 @@
     </attribute>
     <attribute>
       <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_VRM_VDD_DVFS_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_VRM_VDD_ERROR_TEMP_DEG_C</id>
+    </attribute>
+    <attribute>
+      <id>OPEN_POWER_VRM_VDD_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
@@ -1481,9 +1496,6 @@
     </attribute>
     <attribute>
       <id>HW543822_WAR_MODE</id>
-    </attribute>
-    <attribute>
-      <id>SBE_SELECT_EX_POLICY</id>
     </attribute>
     <attribute>
       <id>SECTOR_BUFFER_STRENGTH</id>
