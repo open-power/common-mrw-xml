@@ -400,9 +400,6 @@
       <id>PROC_FABRIC_TOPOLOGY_ID</id>
     </attribute>
     <attribute>
-      <id>PROC_FABRIC_IOHS_BUS_WIDTH</id>
-    </attribute>
-    <attribute>
       <id>OMI_SPREAD_SPECTRUM</id>
     </attribute>
     <attribute>
@@ -1441,9 +1438,6 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1562,6 +1556,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1928,6 +1925,9 @@
     </attribute>
     <attribute>
       <id>IOHS_FABRIC_LANE_REVERSAL</id>
+    </attribute>
+    <attribute>
+      <id>IOHS_LINK_SPLIT</id>
     </attribute>
     <attribute>
       <id>LINK_SPEED</id>
