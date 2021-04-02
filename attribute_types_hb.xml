@@ -377,19 +377,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Value to set into the Droop Count Control Register to establish the light and heavy droop thresholds. 0:3 DTT_LARGE_OFFSET Used for both DTT[01]_EVENT_SEL="100".This field is added to the Large Droop Bin (FDCR[LARGE_DROOP_DETECT]+ FDCR[TRIP_OFFSET] + FDCR[CAL_ADJ]) to select the target DDS_DATAbin location for "dirty" timing margin. 4:7 DTT0_THRESH_SCALE Droop Throttle Threshold0 Scale Factor (4-bit) for use by the following field. 8:15 DTT0_THRESH_VALUE Droop Throttle Threshold0 Compare Value (8-bit). When the 24-bit DroopThrottle Count0 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 16:19 DTT1_THRESH_SCALE Droop Throttle Threshold1 Scale Factor (4-bit) for use by the following field. 20:17 DTT1_THRESH_VALUE Droop Throttle Threshold1 Compare Value (8-bit). When the 24-bit DroopThrottle Count1 meets or exceeds this field times 2^(16-DTT0_THRESH_SCALE), an encoded event corresponding toCUCR.QME_EVENTS_PENDING bit 60 is sent to QME to set the TTSR. 28:30 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT, when this field is: 000: DROOP_COUNT0 disabled Single occurrence of a droop event leading to performance loss selects what to compare with FTC Event Data(4:6) 001: "110" rising edge of a small throttle response 010: "111" rising edge of a large throttle response 011: "110" or "111" rising edge of a either throttle response Raw timing margin from 0 to 15 bins above the Large detect point. 100: Cycles that the bin selected by LARGE_DROOP_DETECT plus TRIP_OFFSET plus 4-bit DTT_LARGE_OFFSET was '0' (indicating loss of timing margin). How long actually throttling at a "full rate"including due to predicted response (slope and adj and ddp) selects what to compare with FTC Event Data(4:6) 101:"110" or ("01X" and NOT ("011" and Event Data(7))) meaning number of cycles that small throttle was present and not in recovery phase 110: "111`" or 100" meaning number of cycles that large droop was presentand not in either recovery phase 111: either small or large throttle present and not in recovery (OR of the twoabove) 31:33 DTT1_EVENT_SEL Chooses which event increments DMSR DROOP0_COUNT. See DTT0_EVENT_SEL Consumer: p10_pm_pgpe_init</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOF_DCCR_VALUE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>WOF_DCCR_VALUE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Establishes the minimum voltage offset at the module pins in mV that the VCS rail is above the VDD rail during Pstate operations when VCS above any established VCS floor defined by ATTR_VCS_FLOOR_MV. If ATTR_VCS_FLOOR_MV is 0, this offset will apply across the entire VCS voltage range. Producer: MRW Consumers: p10_pstate_parameter_build -&gt; PGPE Hcode</description>
     <hwpfToHbAttrMap>
       <id>ATTR_VCS_VDD_OFFSET_MV</id>
@@ -405,7 +392,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enable the use of the #V Fmax value within each chip in the system. In this mode, Pstate 0 is determined by finding the maximimum of all #V FMax values. If this attribute is OFF, Pstate 0 is set by the UltraTurbo value that is to be common across all parts in the system as they must be from the same sort. Default: OFF Producer: MRW Consumers: p10_pstate_parameter_block</description>
+    <description>Enable the use of the #V Fmax value within each chip in the system. In this mode, Pstate 0 is determined by finding the maximimum of all #V FMax values. If this attribute is OFF, Pstate 0 is set by the UltraTurbo value that is to be common across all parts in the system as they must be from the same sort. Default: OFF Producer: MRW Consumers: p10_pstate_parameter_block RTC: 269546: remove the FMax Enable mode control Changing the default to ON until the RTC removes all support.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYSTEM_FMAX_ENABLE</id>
       <macro>DIRECT</macro>
@@ -415,7 +402,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>OFF</default>
+        <default>ON</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -6759,7 +6746,7 @@
     <id>PM_HALT_FFDC_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Enable the use of the #V Fmax value within each chip in the system. In this mode, Pstate 0 is determined by finding the maximimum of all #V FMax values. If this attribute is OFF, Pstate 0 is set by the UltraTurbo value that is to be common across all parts in the system as they must be from the same sort. Default: OFF Producer: MRW Consumers: p10_pstate_parameter_block</description>
+    <description>Enable the use of the #V Fmax value within each chip in the system. In this mode, Pstate 0 is determined by finding the maximimum of all #V FMax values. If this attribute is OFF, Pstate 0 is set by the UltraTurbo value that is to be common across all parts in the system as they must be from the same sort. Default: OFF Producer: MRW Consumers: p10_pstate_parameter_block RTC: 269546: remove the FMax Enable mode control Changing the default to ON until the RTC removes all support.</description>
     <enumerator>
       <name>OFF</name>
       <value>0</value>
