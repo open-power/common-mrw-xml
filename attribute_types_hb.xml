@@ -328,7 +328,6 @@
         <default>0xA</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Defines the STOP levels supported by the Hcode in the present driver. Represented as bit vector where bit 0 = STOP0; bit 1 = STOP 1, ..., bit 15 = STOP15.</description>
@@ -419,6 +418,21 @@
       <array>8</array>
       <uint8_t>
         <default>1,1,1,1,1,1,1,1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -1681,6 +1695,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>At-speed SPI bus divider for the TPM during measurement SEEPROM execution bits 0:11 - clock divider; fSPI = fPAU / 8 / (divider + 1); minimum allowed value is 4 bits 12:15 - receiver delay in fPAU/4 cycles; allowed range 0..7</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_TPM_SPI_BUS_DIV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>TPM_SPI_BUS_DIV</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>0x00A7</default>
+      </uint16_t>
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>Maximum frequency (in MHz) that this system can run the DIMMs at. There are 5 possible values determined by the dimm configuration. For configurations which have mixed rank configurations, the lowest frequency based on ranks of either DIMM is chosen. For example if there was a 1R and a 2R DIMM installed, and 1R dual drop was a lower max freq than 2R dual drop, then the 1R max freq would be the max allowed. [0]=One rank, single drop [1]=Two rank, single drop [2]=Four rank, single drop [3]=One rank, dual drop [4]=Two rank, dual drop A value of zero would indicate an unsupported configuration. Note: Do not use this attribute to limit configurations, it is not checked during plug rules. If you have an unsupported configuration, use the value 0 as the maximum freq.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MAX_ALLOWED_DIMM_FREQ</id>
@@ -2045,21 +2075,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -6758,6 +6773,18 @@
     <id>SYSTEM_FMAX_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -7968,18 +7995,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>

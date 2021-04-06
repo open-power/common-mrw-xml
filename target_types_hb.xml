@@ -146,50 +146,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>AVDD_ID</id>
-    </attribute>
-    <attribute>
-      <default>0xFF</default>
-      <id>CENTAUR_ECID_FRU_ID</id>
-    </attribute>
-    <attribute>
-      <id>FRU_ID</id>
-    </attribute>
-    <attribute>
-      <default>0,0,0,0,0,400,0,400,400,0,0,0,0,0,0,0</default>
-      <id>I2C_BUS_SPEED_ARRAY</id>
-    </attribute>
-    <attribute>
-      <default>CENTAUR</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>MEMBUF</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>VPP_ID</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>GPIO_INFO</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <id>chip-membuf-centaur</id>
-    <parent>chip</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>
         <field>
           <id>byteAddrOffset</id>
@@ -511,6 +467,9 @@
       <id>FREQ_OMI_MHZ</id>
     </attribute>
     <attribute>
+      <id>TPM_SPI_BUS_DIV</id>
+    </attribute>
+    <attribute>
       <id>PROC_OMI_OC_MAJOR_VER</id>
     </attribute>
     <attribute>
@@ -545,81 +504,10 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>chip-processor-axone</id>
-    <parent>chip-processor-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>chip-processor-cumulus</id>
-    <parent>chip-processor-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>chip-processor-nimbus</id>
-    <parent>chip-processor-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
       <id>I2C_BUS_SPEED_ARRAY</id>
     </attribute>
     <id>chip-processor-power10</id>
-    <parent>chip-processor</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>EEPROM_SBE_BACKUP_INFO</id>
-    </attribute>
-    <attribute>
-      <id>EEPROM_SBE_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>FSP_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
-      <id>I2C_BUS_SPEED_ARRAY</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDDR_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VDN_ID</id>
-    </attribute>
-    <attribute>
-      <id>NEST_VIO_ID</id>
-    </attribute>
-    <attribute>
-      <id>PHB_BASE_ADDRS</id>
-    </attribute>
-    <attribute>
-      <id>PROC_DCM_INSTALLED</id>
-    </attribute>
-    <attribute>
-      <id>RNG_BAR_SIZE</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <attribute>
-      <id>NO_APSS_PROC_POWER_VCS_VIO_WATTS</id>
-    </attribute>
-    <id>chip-processor-power9</id>
     <parent>chip-processor</parent>
   </targetType>
   <targetType>
@@ -717,81 +605,6 @@
       <id>TYPE</id>
     </attribute>
     <id>enc-node-power10</id>
-    <parent>base</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>ENC</default>
-      <id>CLASS</id>
-    </attribute>
-    <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x2</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>FRU_ID</id>
-    </attribute>
-    <attribute>
-      <default>POWER9</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>NODE</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <id>enc-node-power9</id>
     <parent>base</parent>
   </targetType>
   <targetType>
@@ -961,14 +774,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <default>CDIMM</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>lcard-dimm-cdimm</id>
-    <parent>lcard-dimm</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <default>
         <field>
           <id>byteAddrOffset</id>
@@ -1055,7 +860,7 @@
       <id>IPMI_SENSORS</id>
     </attribute>
     <id>occ</id>
-    <parent>unit</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1089,6 +894,17 @@
       <id>TYPE</id>
     </attribute>
     <id>power-supply</id>
+    <parent>unit</parent>
+  </targetType>
+  <targetType>
+    <attribute>
+      <id>CHIPLET_ID</id>
+    </attribute>
+    <attribute>
+      <default>POWER10</default>
+      <id>MODEL</id>
+    </attribute>
+    <id>powerxx-chipunit</id>
     <parent>unit</parent>
   </targetType>
   <targetType>
@@ -1435,6 +1251,9 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1553,9 +1372,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1772,9 +1588,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>CHIPLET_ID</id>
-    </attribute>
-    <attribute>
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
@@ -1790,39 +1603,7 @@
   </targetType>
   <targetType>
     <id>unit-abus-power10</id>
-    <parent>unit-smpgroup</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-capp-axone</id>
-    <parent>unit-capp-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-capp-cumulus</id>
-    <parent>unit-capp-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-capp-nimbus</id>
-    <parent>unit-capp-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CAPP</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-capp-power9</id>
-    <parent>unit</parent>
+    <parent>unit-smpgroup-power10</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1836,34 +1617,11 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-core</id>
-    <parent>unit</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-core-power10</id>
     <parent>unit-core</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>IPMI_SENSORS</id>
-    </attribute>
-    <id>unit-core-power9</id>
-    <parent>unit-core</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-dmi-cumulus</id>
-    <parent>unit-dmi-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>DMI</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-dmi-power9</id>
-    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1877,23 +1635,11 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-eq</id>
-    <parent>unit</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-eq-power10</id>
     <parent>unit-eq</parent>
-  </targetType>
-  <targetType>
-    <id>unit-eq-power9</id>
-    <parent>unit-eq</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>EX</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-ex-power9</id>
-    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1903,8 +1649,12 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-fc</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-fc-power10</id>
-    <parent>unit</parent>
+    <parent>unit-fc</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -1950,48 +1700,12 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-iohs</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-iohs-power10</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CENTAUR</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-l4-centaur</id>
-    <parent>unit-l4-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>L4</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-l4-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MBA</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-mba-centaur</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mc-axone</id>
-    <parent>unit-mc-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mc-cumulus</id>
-    <parent>unit-mc-power9</parent>
+    <parent>unit-iohs</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2010,60 +1724,12 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-mc</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-mc-power10</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MC</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-mc-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mca-nimbus</id>
-    <parent>unit-mca-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>MCA</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-mca-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mcbist-nimbus</id>
-    <parent>unit-mcbist-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>AVDD_ID</id>
-    </attribute>
-    <attribute>
-      <default>MCBIST</default>
-      <id>TYPE</id>
-    </attribute>
-    <attribute>
-      <id>VCS_ID</id>
-    </attribute>
-    <attribute>
-      <id>VDD_ID</id>
-    </attribute>
-    <attribute>
-      <id>VPP_ID</id>
-    </attribute>
-    <id>unit-mcbist-power9</id>
-    <parent>unit</parent>
+    <parent>unit-mc</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2107,95 +1773,11 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-mcc</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mcc-axone</id>
-    <parent>unit-mcc-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-mcc-power10</id>
     <parent>unit-mcc</parent>
-  </targetType>
-  <targetType>
-    <id>unit-mcc-power9</id>
-    <parent>unit-mcc</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mcs-nimbus</id>
-    <parent>unit-mcs-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>
-        <field>
-          <id>byteAddrOffset</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>chipCount</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>devAddr</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>eepromContentType</id>
-          <value>0x2</value>
-        </field>
-        <field>
-          <id>engine</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMasterPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>i2cMuxBusSelector</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>i2cMuxPath</id>
-          <value>physical:sys-0</value>
-        </field>
-        <field>
-          <id>maxMemorySizeKB</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>port</id>
-          <value>0xFF</value>
-        </field>
-        <field>
-          <id>writeCycleTime</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-        <field>
-          <id>writePageSize</id>
-          <value>0xFFFFFFFFFFFFFFFF</value>
-        </field>
-      </default>
-      <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>IBSCOM_MCS_BASE_ADDR</id>
-    </attribute>
-    <attribute>
-      <default>MCS</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-mcs-power9</id>
-    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2226,30 +1808,10 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-mi</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mi-axone</id>
-    <parent>unit-mi-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-mi-cumulus</id>
-    <parent>unit-mi-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-mi-power10</id>
-    <parent>unit-mi</parent>
-  </targetType>
-  <targetType>
-    <id>unit-mi-power9</id>
     <parent>unit-mi</parent>
   </targetType>
   <targetType>
@@ -2263,150 +1825,24 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-nmmu</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-nmmu-power10</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-npu-axone</id>
-    <parent>unit-npu-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-npu-cumulus</id>
-    <parent>unit-npu-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-npu-nimbus</id>
-    <parent>unit-npu-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NPU</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-npu-power9</id>
-    <parent>unit</parent>
+    <parent>unit-nmmu</parent>
   </targetType>
   <targetType>
     <attribute>
       <default>NX</default>
       <id>TYPE</id>
     </attribute>
+    <id>unit-nx</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-nx-power10</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NX</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-nx-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-axone</id>
-    <parent>unit-obus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-brick-axone</id>
-    <parent>unit-obus-brick-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-brick-cumulus</id>
-    <parent>unit-obus-brick-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-brick-nimbus</id>
-    <parent>unit-obus-brick-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>OBUS_BRICK_LANE_MASK</id>
-    </attribute>
-    <attribute>
-      <default>OBUS_BRICK</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-obus-brick-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-cumulus</id>
-    <parent>unit-obus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-obus-nimbus</id>
-    <parent>unit-obus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <attribute>
-      <default>OBUS</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-obus-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-occ-axone</id>
-    <parent>unit-occ-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-occ-cumulus</id>
-    <parent>unit-occ-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-occ-nimbus</id>
-    <parent>unit-occ-power9</parent>
+    <parent>unit-nx</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2418,18 +1854,6 @@
     </attribute>
     <id>unit-occ-power10</id>
     <parent>occ</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>POWER9</default>
-      <id>MODEL</id>
-    </attribute>
-    <attribute>
-      <default>OCC</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-occ-power9</id>
-    <parent>unit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2461,22 +1885,10 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-omi</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-omi-axone</id>
-    <parent>unit-omi-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-omi-power10</id>
-    <parent>unit-omi</parent>
-  </targetType>
-  <targetType>
-    <id>unit-omi-power9</id>
     <parent>unit-omi</parent>
   </targetType>
   <targetType>
@@ -2491,22 +1903,10 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-omic</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-omic-axone</id>
-    <parent>unit-omic-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-omic-power10</id>
-    <parent>unit-omic</parent>
-  </targetType>
-  <targetType>
-    <id>unit-omic-power9</id>
     <parent>unit-omic</parent>
   </targetType>
   <targetType>
@@ -2520,8 +1920,12 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-pau</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-pau-power10</id>
-    <parent>unit</parent>
+    <parent>unit-pau</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2534,8 +1938,12 @@
     <attribute>
       <id>FAPI_POS</id>
     </attribute>
+    <id>unit-pauc</id>
+    <parent>powerxx-chipunit</parent>
+  </targetType>
+  <targetType>
     <id>unit-pauc-power10</id>
-    <parent>unit</parent>
+    <parent>unit-pauc</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2555,7 +1963,7 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-pec</id>
-    <parent>unit</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2565,49 +1973,6 @@
       <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
     </attribute>
     <id>unit-pec-power10</id>
-    <parent>unit-pec</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>PEC_IS_BIFURCATABLE</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_REVERSAL_NON_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_IOP_SWAP_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PEC_PCIE_LANE_MASK_BIFURCATED</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_IOP_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_RX_LOFF_CONTROL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_RX_PHASE_ROTATOR_CNTL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_RX_SIGDET_CNTL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_RX_VGA_CONTRL_REGISTER3</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
-    </attribute>
-    <id>unit-pec-power9</id>
     <parent>unit-pec</parent>
   </targetType>
   <targetType>
@@ -2622,38 +1987,10 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-perv</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-perv-axone</id>
-    <parent>unit-perv-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-perv-cumulus</id>
-    <parent>unit-perv-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-perv-nimbus</id>
-    <parent>unit-perv-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <id>unit-perv-power10</id>
-    <parent>unit-perv</parent>
-  </targetType>
-  <targetType>
-    <id>unit-perv-power9</id>
     <parent>unit-perv</parent>
   </targetType>
   <targetType>
@@ -2671,31 +2008,7 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-phb</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-phb-axone</id>
-    <parent>unit-phb-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-phb-cumulus</id>
-    <parent>unit-phb-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-phb-nimbus</id>
-    <parent>unit-phb-power9</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
     <attribute>
@@ -2712,80 +2025,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>PROC_PCIE_LANE_EQUALIZATION_GEN3</id>
-    </attribute>
-    <attribute>
-      <id>PROC_PCIE_LANE_EQUALIZATION_GEN4</id>
-    </attribute>
-    <id>unit-phb-power9</id>
-    <parent>unit-phb</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-ppe-axone</id>
-    <parent>unit-ppe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-ppe-cumulus</id>
-    <parent>unit-ppe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-ppe-nimbus</id>
-    <parent>unit-ppe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>PPE</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-ppe-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>AXONE</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-sbe-axone</id>
-    <parent>unit-sbe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-sbe-cumulus</id>
-    <parent>unit-sbe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-sbe-nimbus</id>
-    <parent>unit-sbe-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>SBE</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-sbe-power9</id>
-    <parent>unit</parent>
-  </targetType>
-  <targetType>
-    <attribute>
       <id>PEER_TARGET</id>
     </attribute>
     <attribute>
@@ -2799,42 +2038,11 @@
       <id>FAPI_POS</id>
     </attribute>
     <id>unit-smpgroup</id>
-    <parent>unit</parent>
+    <parent>powerxx-chipunit</parent>
   </targetType>
   <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-xbus-axone</id>
-    <parent>unit-xbus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>CUMULUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-xbus-cumulus</id>
-    <parent>unit-xbus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <default>NIMBUS</default>
-      <id>MODEL</id>
-    </attribute>
-    <id>unit-xbus-nimbus</id>
-    <parent>unit-xbus-power9</parent>
-  </targetType>
-  <targetType>
-    <attribute>
-      <id>PEER_TARGET</id>
-    </attribute>
-    <attribute>
-      <default>XBUS</default>
-      <id>TYPE</id>
-    </attribute>
-    <id>unit-xbus-power9</id>
-    <parent>unit</parent>
+    <id>unit-smpgroup-power10</id>
+    <parent>unit-smpgroup</parent>
   </targetType>
   <targetType>
     <attribute>
