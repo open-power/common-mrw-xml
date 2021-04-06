@@ -2839,12 +2839,6 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
-      <id>OMI_DL_GROUP_POS</id>
-    </attribute>
-    <attribute>
-      <id>OMI_DL_NUM</id>
-    </attribute>
-    <attribute>
       <id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
     </attribute>
     <attribute>
@@ -2852,6 +2846,12 @@
     </attribute>
     <attribute>
       <id>OMI_DL_LN_REV_ENABLE</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_GROUP_POS</id>
+    </attribute>
+    <attribute>
+      <id>OMI_DL_NUM</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>
