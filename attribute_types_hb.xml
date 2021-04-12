@@ -13,7 +13,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
+    <description>Indicates the response of the DPLL frequency upon DDS events if the DDS is enabled. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DDS_DPLL_SLEW_MODE</id>
       <macro>DIRECT</macro>
@@ -6653,7 +6653,7 @@
     </simpleType>
   </attribute>
   <enumerationType>
-    <description>Indicates the response of the DPLL frequency upon DDS events if is not ON. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
+    <description>Indicates the response of the DPLL frequency upon DDS events if the DDS is enabled. NONE -&gt; DPLL Mode 2, JUMP_PROTECT -&gt; DPLL Mode 3, SLEW_MODE -&gt; DPLL Mode 4 Producer: MRWB</description>
     <enumerator>
       <name>NONE</name>
       <value>0x00</value>
