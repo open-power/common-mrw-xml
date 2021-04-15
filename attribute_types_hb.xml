@@ -850,6 +850,34 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>This attribute provides a place for Hostboot to save off the PB_PTL_FIR_MASK register during MPIPL, so that it can temporarily mask off FIR bits related to cross-node bus errors. During runtime after an MPIPL, HBRT restores the FIR mask from this attribute in order to let PRD handle cross-node errors. Hostboot will need to save the values in MPIPL during host_discover_targets. Values will need to be restored after the PEER_TARGET values have been updated in HBRT.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SAVED_PB_PTL_FIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SAVED_PB_PTL_FIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
+    <description>This attribute provides a place for Hostboot to save off the DL_FIR_MASK register during MPIPL, so that it can temporarily mask off FIR bits related to cross-node bus errors. During runtime after an MPIPL, HBRT restores the FIR mask from this attribute in order to let PRD handle cross-node errors. Hostboot will need to save the values in MPIPL during host_discover_targets. Values will need to be restored after the PEER_TARGET values have been updated in HBRT.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SAVED_DLP_FIR_MASK</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SAVED_DLP_FIR_MASK</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>This attribute controls the latches required to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_PHB_ACTIVE</id>
@@ -6293,6 +6321,60 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>External MC and DRAM temperature where an error will be generated in degrees C</description>
+    <id>MC_DRAM_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new temperature for the sensor covering both external MC and DRAM before memory throttling will occur</description>
+    <id>MC_DRAM_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>External MC and DRAM temperature threshold where throttling will occur in degrees C</description>
+    <id>MC_DRAM_THROTTLE_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>External MC temperature where an error will be generated in degrees C</description>
+    <id>MC_EXT_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new external MC temperature before memory throttling will occur</description>
+    <id>MC_EXT_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>External MC temperature threshold where throttling will occur in degrees C</description>
+    <id>MC_EXT_THROTTLE_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Power used by components other than CPU, memory, or GPUs in Watts</description>
     <id>MISC_SYSTEM_COMPONENTS_MAX_POWER_WATTS</id>
     <persistency>non-volatile</persistency>
@@ -6620,6 +6702,33 @@
       <uint8_t>
         <default>0xFF</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PMIC temperature where an error will be generated in degrees C</description>
+    <id>PMIC_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new PMIC temperature before memory throttling will occur</description>
+    <id>PMIC_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>PMIC temperature threshold where throttling will occur in degrees C</description>
+    <id>PMIC_THROTTLE_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint64_t />
     </simpleType>
   </attribute>
   <attribute>
