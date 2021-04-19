@@ -390,7 +390,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Establishes the minimum voltage offset at the module pins in mV that the VCS rail is above the VDD rail during Pstate operations when VCS above any established VCS floor defined by ATTR_VCS_FLOOR_MV. If ATTR_VCS_FLOOR_MV is 0, this offset will apply across the entire VCS voltage range. Producer: MRW Consumers: p10_pstate_parameter_build -&gt; PGPE Hcode</description>
+    <description>THIS ATTRIBUTE HAS BEEN DEPRECATED. VCS voltages are exclusively controlled by the part's #V VPD values.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_VCS_VDD_OFFSET_MV</id>
       <macro>DIRECT</macro>
@@ -432,6 +432,21 @@
       <array>8</array>
       <uint8_t>
         <default>1,1,1,1,1,1,1,1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -1858,19 +1873,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>SBE Measurement Seeprom Versioning</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_MEASUREMENT_SEEPROM_VERSION</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_MEASUREMENT_SEEPROM_VERSION</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Instruction for HB Boatloader to pick the HW Key Hash from this memory</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SBE_HW_KEY_HASH_ADDR</id>
@@ -1881,19 +1883,6 @@
     <readable />
     <simpleType>
       <uint64_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Minimum secure version for the container</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SBE_MINIMUM_SECURE_VERSION</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>SBE_MINIMUM_SECURE_VERSION</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2102,21 +2091,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -2814,21 +2788,6 @@
       <uint32_t>
         <default>0x000009C4</default>
       </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Machine Readable Workbook value for polling period of DIMM thermal sensors.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t>
-        <default>1000</default>
-      </uint16_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6908,6 +6867,18 @@
     <id>SYSTEM_FMAX_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -8118,18 +8089,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>

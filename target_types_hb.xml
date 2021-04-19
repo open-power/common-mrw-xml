@@ -141,10 +141,6 @@
     <parent>sp</parent>
   </targetType>
   <targetType>
-    <id>chip-fcdimm-ddr4</id>
-    <parent>lcard-dimm-cdimm</parent>
-  </targetType>
-  <targetType>
     <attribute>
       <default>
         <field>
@@ -1281,6 +1277,9 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1389,19 +1388,10 @@
       <id>NUM_KEY_ADDR_PAIR</id>
     </attribute>
     <attribute>
-      <id>SBE_MEASUREMENT_SEEPROM_VERSION</id>
-    </attribute>
-    <attribute>
       <id>SBE_HW_KEY_HASH_ADDR</id>
     </attribute>
     <attribute>
-      <id>SBE_MINIMUM_SECURE_VERSION</id>
-    </attribute>
-    <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1531,9 +1521,6 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_SAFEMODE_DRAM_DATABUS_UTIL</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_THERMAL_SENSOR_POLLING_PERIOD</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_DIMM_SLOT_AIRFLOW</id>
