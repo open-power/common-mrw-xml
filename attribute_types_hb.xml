@@ -1094,6 +1094,7 @@
         <default>20MA</default>
       </uint8_t>
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>RCS PLL input for TOD Filter PLL</description>
@@ -6095,6 +6096,50 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Weight factor (1 = 0.1) for each core DTS to calculate a core temperature and eventually processor temperatures that is used for DVFS and fan control.</description>
+    <id>CORE_WEIGHT_TENTHS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>8</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>DIMM Temperature in degrees C that a DIMM overtemp error will be logged calling out the DIMM</description>
+    <id>DIMM_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>84</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new DIMM temperature before memory throttling will occur</description>
+    <id>DIMM_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>30</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>DIMM Temperature to invoke memory throttling in degrees C</description>
+    <id>DIMM_THROTTLE_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>69</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <complexType>
       <description>Structure to define the addessing for an I2C slave device.</description>
       <field>
@@ -6269,6 +6314,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Weight factor (1 = 0.1) for each L3 DTS to calculate a core temperature. A value of 0 means not to include L3 DTS in core temperature.</description>
+    <id>L3_WEIGHT_TENTHS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Maximum theoretical Vdd current reading in 10mA units. Used when VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE is set.</description>
     <id>MAX_VDD_CURRENT_READING</id>
     <persistency>non-volatile</persistency>
@@ -6285,7 +6341,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>99</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6294,7 +6352,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>30</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6303,7 +6363,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>89</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6312,7 +6374,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>99</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6321,7 +6385,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>30</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6330,7 +6396,64 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>89</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Memory controller temperature where an error will occur in degrees C</description>
+    <id>MEMCTRL_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>99</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new MC temperature before memory throttling will occur</description>
+    <id>MEMCTRL_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>30</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Memory controller temperature threshold where throttling will occur in degrees C</description>
+    <id>MEMCTRL_THROTTLE_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>89</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The lowest utilization allowed that the OCC could throttle memory due to a memory over temp condition. (percent from 0-100)</description>
+    <id>MIN_MEM_UTILIZATION_THROTTLING</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>25</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Lowest output power in watts that a user may set, and the OCC can guarantee to hold via processor DVFS under all conditions. Aka Hard minimum power cap.</description>
+    <id>MIN_POWER_CAP_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>2700</default>
+      </uint16_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6359,6 +6482,50 @@
     <simpleType>
       <uint16_t>
         <default>0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>System maximum power cap in output watts when Quick Power Drop line is asserted. This value must guarantee WOF base.</description>
+    <id>N_BULK_POWER_LIMIT_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>2880</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The amount of N Bulk Power to allocate to memory, this value will be used to calculate memory throttles to cap memory to this power. This value must be the left over power from N Bulk Power after allocating power for fixed resources and processor power to guarantee WOF base. NOTE: This value is first reduced by Regulator Efficiency Factor before running the procedure to account for regulator loss.</description>
+    <id>N_MAX_MEM_POWER_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>1885</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>System maximum power cap in output watts when Quick Power Drop line is not asserted. (redundant power supplies) This value must guarantee WOF base.</description>
+    <id>N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>3584</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>The amount of N+1 Bulk Power to allocate to memory, this value will be used to calculate memory throttles to cap memory to this power. This value must be the left over power from N+1 Bulk Power after allocating power for fixed resources and processor power to guarantee WOF base. NOTE: This value is first reduced by Regulator Efficiency Factor before running the procedure to account for regulator loss before running the HW procedure.</description>
+    <id>N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>1885</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -6443,7 +6610,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6669,7 +6838,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>95</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6678,7 +6849,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>30</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6687,7 +6860,64 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint64_t />
+      <uint8_t>
+        <default>85</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Per Chip. Degrees C to change (+/-) the processor chip VPD DVFS temperature to invoke DVFS (clip max Pstate). Default is 0 (no change to VPD limit) NOTE: If we fail to read DVFS limit from VPD system will go to safe mode.</description>
+    <id>PROC_DVFS_TEMP_DELTA_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <int8_t>
+        <default>0</default>
+      </int8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Per Chip. Degrees C to change (+/-) the processor chip VPD DVFS temperature that a processor chip over temperature error will be logged calling out the processor.</description>
+    <id>PROC_ERROR_TEMP_DELTA_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <int8_t>
+        <default>0</default>
+      </int8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Per Chip. Degrees C to change (+/-) the processor IO chip VPD DVFS temperature to invoke DVFS (clip max Pstate). Default is 0 (no change to VPD limit)</description>
+    <id>PROC_IO_DVFS_TEMP_DELTA_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <int8_t>
+        <default>0</default>
+      </int8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Per Chip. Degrees C to change (+/-) the processor IO chip VPD DVFS temperature that an over temperature error will be logged calling out the processor.</description>
+    <id>PROC_IO_ERROR_TEMP_DELTA_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <int8_t>
+        <default>0</default>
+      </int8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new processor IO temperature before DVFS (if supported) will occur</description>
+    <id>PROC_IO_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>5</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6702,6 +6932,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Maximum time in seconds allowed without having a new processor temperature before DVFS will occur</description>
+    <id>PROC_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>5</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The maximum power a single procesor socket can support (in watts) This is used to populate CALCULATED_MAX_SYS_POWER_EXCLUDING_GPUS</description>
     <id>PROC_SOCKET_POWER_WATTS</id>
     <persistency>non-volatile</persistency>
@@ -6710,6 +6951,28 @@
       <uint16_t>
         <default>250</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Weight factor (1 = 0.1) for each quad (racetrack) DTS to calculate a core temperature. A value of 0 means not to include racetrack DTS in core temperature.</description>
+    <id>QUAD_WEIGHT_TENTHS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Percentage to lower N+1 Maximum Memory Power and N Maximum Memory Power to account for regulator loss prior to calling procedure to calculate memory throttles. NOTE: The procedure calculating memory throttles do not account for regulator loss.</description>
+    <id>REGULATOR_EFFICIENCY_FACTOR</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>83</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -6724,6 +6987,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Minimum soft power cap, this is the lowest output power in watts that a user may set. A power cap set below the hard minimum (MIN_POWER_CAP_WATTS) is called a soft power cap and is not guaranteed under all conditions.</description>
+    <id>SOFT_MIN_POWER_CAP_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint16_t>
+        <default>500</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used to enable Vdd current overflow worakaround. To enable this attribute should be set to 1 and MAX_VDD_CURRENT_READING must be populated. Set to 0 to disable.</description>
     <id>VDD_CURRENT_OVERFLOW_WORKAROUND_ENABLE</id>
     <persistency>non-volatile</persistency>
@@ -6732,6 +7006,39 @@
       <uint16_t>
         <default>0x0000</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>VRM Vdd Temperature in degrees C to invoke DVFS (clip max Pstate)</description>
+    <id>VRM_VDD_DVFS_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>85</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>VRM Vdd Temperature in degrees C that an overtemp error will be logged</description>
+    <id>VRM_VDD_ERROR_TEMP_DEG_C</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>95</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Maximum time in seconds allowed without having a new VRM Vdd temperature before DVFS will occur</description>
+    <id>VRM_VDD_READ_TIMEOUT_SEC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>5</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <enumerationType>
