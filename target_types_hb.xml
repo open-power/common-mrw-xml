@@ -256,9 +256,6 @@
     <attribute>
       <id>MSS_OCMB_EXP_BOOT_CONFIG_ADAPTATION_MODE</id>
     </attribute>
-    <attribute>
-      <id>MEM_PMIC_FORCE_N_MODE</id>
-    </attribute>
     <id>chip-ocmb</id>
     <parent>chip</parent>
   </targetType>
@@ -559,16 +556,16 @@
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
-      <id>PROC_OMI_OC_MAJOR_VER</id>
-    </attribute>
-    <attribute>
-      <id>PROC_OMI_OC_MINOR_VER</id>
-    </attribute>
-    <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_EVEN</id>
     </attribute>
     <attribute>
       <id>IO_OMI_MFG_STRESS_PR_OFFSET_ODD</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MAJOR_VER</id>
+    </attribute>
+    <attribute>
+      <id>PROC_OMI_OC_MINOR_VER</id>
     </attribute>
     <id>chip-processor</id>
     <parent>chip</parent>
