@@ -946,9 +946,6 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>DPO_MIN_FREQ_PERCENT</id>
-    </attribute>
-    <attribute>
       <id>FIELD_TH_L2_LINE_DELETES</id>
     </attribute>
     <attribute>
@@ -1355,9 +1352,6 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    </attribute>
-    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1470,6 +1464,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
