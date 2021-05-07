@@ -298,6 +298,18 @@
       <id>IPMI_INSTANCE</id>
     </attribute>
     <attribute>
+      <id>PROC_DVFS_TEMP_DELTA_C</id>
+    </attribute>
+    <attribute>
+      <id>PROC_ERROR_TEMP_DELTA_C</id>
+    </attribute>
+    <attribute>
+      <id>PROC_IO_DVFS_TEMP_DELTA_C</id>
+    </attribute>
+    <attribute>
+      <id>PROC_IO_ERROR_TEMP_DELTA_C</id>
+    </attribute>
+    <attribute>
       <id>PBAX_CHIPID</id>
     </attribute>
     <attribute>
@@ -1269,18 +1281,6 @@
     </attribute>
     <attribute>
       <id>PMIC_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>PROC_DVFS_TEMP_DELTA_C</id>
-    </attribute>
-    <attribute>
-      <id>PROC_ERROR_TEMP_DELTA_C</id>
-    </attribute>
-    <attribute>
-      <id>PROC_IO_DVFS_TEMP_DELTA_C</id>
-    </attribute>
-    <attribute>
-      <id>PROC_IO_ERROR_TEMP_DELTA_C</id>
     </attribute>
     <attribute>
       <id>PROC_IO_READ_TIMEOUT_SEC</id>
