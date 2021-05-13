@@ -967,9 +967,6 @@
       <id>HB_SETTINGS</id>
     </attribute>
     <attribute>
-      <id>KEY_CLEAR_REQUEST</id>
-    </attribute>
-    <attribute>
       <id>MNFG_TH_L2_CACHE_CES</id>
     </attribute>
     <attribute>
@@ -1086,9 +1083,6 @@
     </attribute>
     <attribute>
       <id>EARLY_TESTCASES_ISTEP</id>
-    </attribute>
-    <attribute>
-      <id>PHYS_PRES_REIPL</id>
     </attribute>
     <attribute>
       <id>PHYP_SYSTEM_TYPE</id>
