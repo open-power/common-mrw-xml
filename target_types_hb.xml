@@ -373,6 +373,9 @@
       <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
     </attribute>
     <attribute>
+      <id>CP_REFCLOCK_SELECT</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
     </attribute>
     <attribute>

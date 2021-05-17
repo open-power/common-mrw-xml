@@ -1082,6 +1082,20 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>Osc refclock configurations: OSCx - Set up single oscillator BOTH_OSCx - Set up for redundant oscillators, OSCx as primary, both must be good BOTH_OSCx_NORED - Same but without redundancy: Set up for redundant oscillators, OSCx as primary, secondary osc may be bad</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_CP_REFCLOCK_SELECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>CP_REFCLOCK_SELECT</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+    <writeable />
+  </attribute>
+  <attribute>
     <description>RCS PLL input for TOD Filter PLL</description>
     <hwpfToHbAttrMap>
       <id>ATTR_CLOCK_MUX0A_RCS_PLL_INPUT</id>
@@ -7716,6 +7730,34 @@
       <value>0x04</value>
     </enumerator>
     <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Osc refclock configurations: OSCx - Set up single oscillator BOTH_OSCx - Set up for redundant oscillators, OSCx as primary, both must be good BOTH_OSCx_NORED - Same but without redundancy: Set up for redundant oscillators, OSCx as primary, secondary osc may be bad</description>
+    <enumerator>
+      <name>OSC0</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>OSC1</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH_OSC0</name>
+      <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH_OSC1</name>
+      <value>0x3</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH_OSC0_NORED</name>
+      <value>0x4</value>
+    </enumerator>
+    <enumerator>
+      <name>BOTH_OSC1_NORED</name>
+      <value>0x5</value>
+    </enumerator>
+    <id>CP_REFCLOCK_SELECT</id>
   </enumerationType>
   <enumerationType>
     <description>RCS PLL input for TOD Filter PLL</description>
