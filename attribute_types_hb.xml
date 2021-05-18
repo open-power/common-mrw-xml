@@ -50,7 +50,9 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t />
+      <uint8_t>
+        <default>0x88</default>
+      </uint8_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -265,70 +267,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Transition rate (binary in microVolts per microsecond) of the VRM for a decreasing voltage transition. This is used as part of the overall voltage time calculation. The consuming code provides a default value of 10000 uV/us if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXTERNAL_VRM_TRANSITION_RATE_DEC_UV_PER_US</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Transition rate (binary in microVolts per microsecond) of the VRM for an increasing voltage transition. This is used as part of the overall voltage time calculation. The consuming code provides a default value of 10000 uV/us if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXTERNAL_VRM_TRANSITION_RATE_INC_UV_PER_US</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Time (binary in nanoseconds) to allow the voltage rail to stabilize before transition to be fully complete. This applies to both increasing and decreasing transitions as part of the overall voltage transition calculation. The consuminug code provides a default value of 5000ns (5us) if this attribute is zero. Note: the smallest possible delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXTERNAL_VRM_TRANSITION_STABILIZATION_TIME_NS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Delay (binary in nanoseconds) from the time the VRM receives the write until the voltage actually moves. This value is used for both increasing and decreasing transitions as part of the overall voltage transition calculation. The consuming code provides a default value of 8000ns (8us) if this attribute is zero. Note: the smallest possible delay is limited to 1ns. Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_EXTERNAL_VRM_TRANSITION_START_NS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>EXTERNAL_VRM_TRANSITION_START_NS</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>4</array>
-      <uint32_t>
-        <default>0</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Time to delay before powering off the MMA due to the lack of MMA instructions. Time = 1ms * 2**ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS. Valid values of 0x00 - 0x1B to yield times from 1ms to 24 hours -: 0x00 - 1ms ... 0x0A - 1 second (default, 2^10) ... 0x1B - 1 day (2^27) 0x1C - 0xFD - Reserved (maps as 0x1C) 0xFE - every QME FIT timer interrupt (~250us) 0xFF - no power off of MMA (QME Hcode still runs; different behavior ATTR_SYSTEM_MMA_POWEROFF_DISABLE) Producer: Machine Readable Workbook Consumer: QME Hcode</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
@@ -386,21 +324,6 @@
     <simpleType>
       <uint8_t>
         <default>0xFF</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>THIS ATTRIBUTE HAS BEEN DEPRECATED. VCS voltages are exclusively controlled by the part's #V VPD values.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_VCS_VDD_OFFSET_MV</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>VCS_VDD_OFFSET_MV</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
       </uint8_t>
     </simpleType>
   </attribute>
