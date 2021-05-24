@@ -359,21 +359,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 are enabled, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 are possible, if the value BITWISE_AND 0x04 = 0x04, then groups of 3 are possible, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 are possible, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 are possible, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 are possible. If no groups can formed according to this input, then an error will be thrown. Provided by the MRW.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -1824,6 +1809,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Drives whether to update ATTR_PG independently of ATTR_PG_MVPD or to update ATTR_PG equal to ATTR_PG_MVPD during SBE customization. For systems with a service processor that always communicates guarded targets to the SBE via scratch registers, set ATTR_PG_MVPD and ATTR_PG equal to each other to avoid extraneous SBE updates when a target is guarded, otherwise update them independently and potentially go through another SBE update. 0x00: Update ATTR_PG (based on target functional state) and ATTR_PG_MVPD independently of each other 0x01: Update ATTR_PG with the value of ATTR_PG_MVPD</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_CUST_FORCE_MVPD_ONLY</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SBE_CUST_FORCE_MVPD_ONLY</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0x01</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Configures position of where to set bit for mmio addr bar. (Bit position = dialvalue + 43)</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
@@ -2029,6 +2029,21 @@
       </uint8_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -7059,18 +7074,6 @@
     <id>SYSTEM_FMAX_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-  </enumerationType>
-  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -8309,6 +8312,18 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
