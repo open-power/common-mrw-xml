@@ -1334,6 +1334,9 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1449,9 +1452,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
@@ -1584,6 +1584,9 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_DIMM_SLOT_AIRFLOW</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_DIMM_HEIGHT_MIXING_POLICY</id>
     </attribute>
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
