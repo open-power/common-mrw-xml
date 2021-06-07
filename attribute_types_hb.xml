@@ -56,20 +56,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Enables pstate parameter block code to use the static #V data Consumer: p10_pstate_parameter_block.C Platform default:OFF</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_POUND_V_STATIC_DATA_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>POUND_V_STATIC_DATA_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYS_VRT_STATIC_DATA_ENABLE</id>
@@ -355,21 +341,6 @@
       <array>8</array>
       <uint8_t>
         <default>1,1,1,1,1,1,1,1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2044,6 +2015,21 @@
       </uint8_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -7021,18 +7007,6 @@
     <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
   </enumerationType>
   <enumerationType>
-    <description>Enables pstate parameter block code to use the static #V data Consumer: p10_pstate_parameter_block.C Platform default:OFF</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x00</value>
-    </enumerator>
-    <enumerator>
-      <name>ON</name>
-      <value>0x01</value>
-    </enumerator>
-    <id>POUND_V_STATIC_DATA_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <enumerator>
       <name>OFF</name>
@@ -7087,18 +7061,6 @@
       <value>1</value>
     </enumerator>
     <id>SYSTEM_FMAX_ENABLE</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
@@ -8339,6 +8301,18 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>

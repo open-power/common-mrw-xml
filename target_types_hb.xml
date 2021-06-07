@@ -1301,9 +1301,6 @@
       <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
     </attribute>
     <attribute>
-      <id>POUND_V_STATIC_DATA_ENABLE</id>
-    </attribute>
-    <attribute>
       <id>SYS_VRT_STATIC_DATA_ENABLE</id>
     </attribute>
     <attribute>
@@ -1332,9 +1329,6 @@
     </attribute>
     <attribute>
       <id>CURRENT_SCALING_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1452,6 +1446,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
