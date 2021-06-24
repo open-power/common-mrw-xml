@@ -3358,17 +3358,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Used to tell I2C code whether to run I2C Engine 2 Port 0 in diag mode or not 0 = Use Diag Mode 1 = Disable Diag Mode</description>
-    <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>1</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Dummy attribute with read-only permissions</description>
     <id>DUMMY_RO</id>
     <persistency>non-volatile</persistency>
