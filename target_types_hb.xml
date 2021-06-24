@@ -246,9 +246,6 @@
   </targetType>
   <targetType>
     <attribute>
-      <id>DISABLE_I2C_ENGINE2_PORT0_DIAG_MODE</id>
-    </attribute>
-    <attribute>
       <id>FABRIC_CHIP_ID</id>
     </attribute>
     <attribute>
