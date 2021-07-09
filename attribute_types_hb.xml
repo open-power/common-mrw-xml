@@ -56,6 +56,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Enables the XGPE Hcode to support the MPIPL function that coordinates the suspension of the Power Management subsystem. If ON (DISABLED), XGPE provides and immediate good response to allow for general integration testing Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Platform default: OFF</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_XGPE_PM_SUSPEND_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>XGPE_PM_SUSPEND_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>ON</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SYS_VRT_STATIC_DATA_ENABLE</id>
@@ -354,11 +369,8 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0xAF</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
@@ -1673,9 +1685,7 @@
     <readable />
     <simpleType>
       <array>5</array>
-      <uint32_t>
-        <default>2400,2400,2400,2400,2400</default>
-      </uint32_t>
+      <uint32_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -1783,6 +1793,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>SBE Measurement Seeprom Versioning</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_MEASUREMENT_SEEPROM_VERSION</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SBE_MEASUREMENT_SEEPROM_VERSION</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Instruction for HB Boatloader to pick the HW Key Hash from this memory</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SBE_HW_KEY_HASH_ADDR</id>
@@ -1793,6 +1816,19 @@
     <readable />
     <simpleType>
       <uint64_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Minimum secure version for the container</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_MINIMUM_SECURE_VERSION</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>SBE_MINIMUM_SECURE_VERSION</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2072,9 +2108,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint32_t>
-        <default>0xFFFFFFFF</default>
-      </uint32_t>
+      <uint32_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2163,7 +2197,7 @@
     <simpleType>
       <array>4</array>
       <uint32_t>
-        <default>1866,2133,2400,2667</default>
+        <default>1866, 2133, 2400, 2666</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -2209,7 +2243,7 @@
     <simpleType>
       <array>10</array>
       <uint64_t>
-        <default>0xffffe000000006a4,0,0,0,0,0,0,0,0,0</default>
+        <default>0xfffff80000000794</default>
       </uint64_t>
     </simpleType>
   </attribute>
@@ -2225,7 +2259,7 @@
     <simpleType>
       <array>100</array>
       <uint64_t>
-        <default>0xffffe00002CC03AE,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
+        <default>0xfffff8000384044C</default>
       </uint64_t>
     </simpleType>
   </attribute>
@@ -2241,7 +2275,7 @@
     <simpleType>
       <array>100</array>
       <uint64_t>
-        <default>0xffffe00003FD0546,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0, 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0</default>
+        <default>0xfffff800041A044C</default>
       </uint64_t>
     </simpleType>
   </attribute>
@@ -2271,7 +2305,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0</default>
+        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2286,7 +2320,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0</default>
+        <default>0x0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2316,7 +2350,7 @@
     <readable />
     <simpleType>
       <uint32_t>
-        <default>0x00002328</default>
+        <default>0x00002710</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -2360,9 +2394,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2403,9 +2435,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -2499,7 +2529,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>1</default>
+        <default>EXTEND</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -2934,9 +2964,7 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>NV</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
   </attribute>
   <attribute>
@@ -3237,11 +3265,8 @@
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
-      <uint8_t>
-        <default>0x05</default>
-      </uint8_t>
+      <uint8_t />
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Hierarchical path to the target with respect to logical affinity</description>
@@ -5278,30 +5303,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Value of PCS system control creator: platform consumer: p9_pcie_scominit</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_PCIE_PCS_SYSTEM_CNTL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>PROC_PCIE_PCS_SYSTEM_CNTL</id>
-    <ignoreEkb />
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint16_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Value of PCS tx fifo config offset creator: platform consumer: p9_pcie_scominit</description>
-    <id>PROC_PCIE_PCS_TX_FIFO_CONFIG_OFFSET</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>This attribute holds the base values from the MRW to define how to configure the PEC as a x16, x8x8, or x8x4x4 based on what PHBs are active defined from the MRW. On some systems Dynamic Bifurcation can occur (based on VPD values or some other indicator) which may tweak the value provided in this _BASE attribute and the ATTR_PROC_PCIE_PHB_ACTIVE used by the HWP directly. If no dynamic bifurcation occurs the _BASE attribute value and ATTR_PROC_PCIE_PHB_ACTIVE will be identical. creator: platform consumer: p10_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Attribute Name Definition Example Comments Targeted Register Latches ATTR_PROC_PCIE_PHB_ACTIVE_BASE (Stack0, Stack1, Stack2) (1, 0, 0) PHB0 enabled TC_PCI_LANE_CFG_DC_0H, TC_PCI_LANE_CFG_DC_1H PHB1 disabled PHB2 disabled Register Latch Definition: PCI0 / PCI1 Register Address Register Name Bit Signal Name Bit Description 8000009 / 9000009 TPPCI.PCI.CPLT_CONF1 0 TC_PCI_LANE_CFG_DC_0H MSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 1 TC_PCI_LANE_CFG_DC_1H LSB for LANE CFG in the logic that configures x16, x8x8, x8x4x4 2 TC_PCI_SWAP_DC_2H LANE SWAP control for Stack0 3 TC_PCI_SWAP_DC_3H LANE SWAP control for Stack0 4 TC_PCI_SWAP_DC_4H LANE SWAP control for Stack0 8 TC_PCI_IOVALID_DC_8H IOVALID control for Stack0 9 TC_PCI_IOVALID_DC_9H IOVALID control for Stack1 10 TC_PCI_IOVALID_DC_10H IOVALID control for Stack2</description>
     <global />
     <id>PROC_PCIE_PHB_ACTIVE_BASE</id>
@@ -7028,6 +7029,18 @@
       <value>0x1</value>
     </enumerator>
     <id>DDS_TRIP_INTERPOLATION_CONTROL</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enables the XGPE Hcode to support the MPIPL function that coordinates the suspension of the Power Management subsystem. If ON (DISABLED), XGPE provides and immediate good response to allow for general integration testing Consumer: p10_hcode_image_build.c -&gt; XGPE Header field Platform default: OFF</description>
+    <enumerator>
+      <name>OFF</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ON</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>XGPE_PM_SUSPEND_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Enables pstate parameter block code to use the static system vrt data Consumer: p10_pstate_parameter_build.C -&gt; PGPE Hcode Platform default:OFF</description>
