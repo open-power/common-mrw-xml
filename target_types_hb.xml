@@ -1409,6 +1409,9 @@
       <id>FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
     </attribute>
     <attribute>
+      <id>MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
+    </attribute>
+    <attribute>
       <id>FREQ_SYSTEM_CORE_CEILING_MHZ</id>
     </attribute>
     <attribute>

@@ -1536,6 +1536,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>The system defined floor frequency input to MAX(VPD or WOF Override PowerSave, ATTR_MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ) from which ATTR_FREQ_SYSTEM_CORE_FLOOR_MHZ and ATTR_FREQ_CORE_FLOOR_MHZ values are derived.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>3250</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>The computed system-wide minumum frequency of the core mesh clock, in MHz This is the highest ceiling frequency across all chips in the system. Used for fabric epsilon calculations.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_FREQ_SYSTEM_CORE_CEILING_MHZ</id>
