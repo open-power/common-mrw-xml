@@ -1322,6 +1322,9 @@
       <id>SPIPSS_FREQUENCY</id>
     </attribute>
     <attribute>
+      <id>VDN_UPLIFT_MV</id>
+    </attribute>
+    <attribute>
       <id>SYSTEM_MMA_POWEROFF_DELAY_POWEROF2_MS</id>
     </attribute>
     <attribute>
@@ -1475,13 +1478,7 @@
       <id>OMI_X4_DEGRADE_ACTION</id>
     </attribute>
     <attribute>
-      <id>MSS_MRW_SUPPORTED_FREQ</id>
-    </attribute>
-    <attribute>
       <id>MSS_MRW_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
-    </attribute>
-    <attribute>
-      <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_PWR_INTERCEPT</id>
@@ -1593,6 +1590,12 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_DIMM_HEIGHT_MIXING_POLICY</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_SUPPORTED_FREQ</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
