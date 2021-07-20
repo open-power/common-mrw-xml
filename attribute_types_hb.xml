@@ -253,6 +253,22 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>The base TDP power (in 0.01W units) of AVDD, VPCI, and VDN rails that don't vary with I/O configuration. The value comes from the maximum power assumed for the system during WOF table generation minus the computed link power based on the VIO voltage for the system TDP configuration. The value represented is the per socket configuration that supports 4 node operation. Each dimension assumes a different value for the VIO rail. [index] -&gt;2 entries-: 0: 1.0V; 1: 0.9V; 2: Reserved; 3: Reserved; Producer: Machine Readable Workbook Consumers: p10_hcode_image_build -&gt; XGPE Hcode</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_IO_BASE_POWER_0P01W</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>WOF_IO_BASE_POWER_0P01W</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <array>4</array>
+      <uint16_t>
+        <default>1721,2482,0,0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Voltage (in mV) to uplift the VDN rail if the #V PAU frequency is 205OMHz. This value is present in early sorted parts where extra voltage margin is needed. Consumer: p10_setup_evid.C Producer: Machine Readable Workbook</description>
     <hwpfToHbAttrMap>
       <id>ATTR_VDN_UPLIFT_MV</id>
