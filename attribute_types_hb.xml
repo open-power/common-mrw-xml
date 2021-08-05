@@ -420,20 +420,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW. If mirroring is REQUIRED, all MCCs' subchannels must be enabled in order for them to be all grouped. Otherwise, there will be an error results from the memory grouping process (RC_MSS_EFF_GROUPING_UNABLE_TO_GROUP).</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MRW_HW_MIRRORING_ENABLE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
     <global />
     <hwpfToHbAttrMap>
@@ -7125,22 +7111,6 @@
       <value>0x08</value>
     </enumerator>
     <id>MSS_INTERLEAVE_GRANULARITY</id>
-  </enumerationType>
-  <enumerationType>
-    <description>REQUIRED: HW mirroring is enabled, and all channels are required to be part of a mirrored group. REQUESTED: HW mirroring is enabled. Mirroring will be configured for groups which support it, but not all channels are required to be mirrored. OFF: HW mirroring is disabled. Provided by the MRW. If mirroring is REQUIRED, all MCCs' subchannels must be enabled in order for them to be all grouped. Otherwise, there will be an error results from the memory grouping process (RC_MSS_EFF_GROUPING_UNABLE_TO_GROUP).</description>
-    <enumerator>
-      <name>OFF</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>REQUIRED</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>REQUESTED</name>
-      <value>0x2</value>
-    </enumerator>
-    <id>MRW_HW_MIRRORING_ENABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Processor fabric SL domain (proxime) configuration.</description>
