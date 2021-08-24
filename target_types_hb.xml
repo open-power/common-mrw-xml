@@ -352,6 +352,12 @@
       <id>IOHS_SPREAD_SPECTRUM</id>
     </attribute>
     <attribute>
+      <id>IOHS_MNFG_BAD_LANE_MAX</id>
+    </attribute>
+    <attribute>
+      <id>IOHS_MNFG_BAD_LANE_DURATION</id>
+    </attribute>
+    <attribute>
       <id>SYS_CLK_NE_TERMINATION_SITE</id>
     </attribute>
     <attribute>

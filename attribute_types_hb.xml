@@ -641,6 +641,36 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Specifies the number of errors (0 through 127) before marking a lane as bad for the iohs links</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IOHS_MNFG_BAD_LANE_MAX</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IOHS_MNFG_BAD_LANE_MAX</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>46</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Specifies time to reset bad lane counter for the iohs links</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IOHS_MNFG_BAD_LANE_DURATION</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>IOHS_MNFG_BAD_LANE_DURATION</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>15</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Specifies the channel loss</description>
     <global />
     <hwpfToHbAttrMap>
