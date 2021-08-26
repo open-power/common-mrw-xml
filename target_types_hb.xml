@@ -358,9 +358,6 @@
       <id>IOHS_MNFG_BAD_LANE_DURATION</id>
     </attribute>
     <attribute>
-      <id>SYS_CLK_NE_TERMINATION_SITE</id>
-    </attribute>
-    <attribute>
       <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
     </attribute>
     <attribute>
@@ -1195,90 +1192,6 @@
       <id>N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
     </attribute>
     <attribute>
-      <id>OPEN_POWER_DIMM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_DIMM_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_MEM_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_MEM_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_GPU_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_L3_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MEMCTRL_THROTTLE_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_MEM_UTILIZATION_THROTTLING</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_MIN_POWER_CAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_HPC_BULK_POWER_LIMIT_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_DVFS_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_PROC_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_QUAD_WEIGHT</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_REGULATOR_EFFICIENCY_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_SOFT_MIN_PCAP_WATTS</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_TURBO_MODE_SUPPORTED</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_VRM_VDD_DVFS_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_VRM_VDD_ERROR_TEMP_DEG_C</id>
-    </attribute>
-    <attribute>
-      <id>OPEN_POWER_VRM_VDD_READ_TIMEOUT_SEC</id>
-    </attribute>
-    <attribute>
       <id>PMIC_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
@@ -1355,6 +1268,9 @@
     </attribute>
     <attribute>
       <id>CURRENT_SCALING_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1472,9 +1388,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
