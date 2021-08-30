@@ -324,7 +324,7 @@
     <readable />
     <simpleType>
       <uint8_t>
-        <default>0xFF</default>
+        <default>48</default>
       </uint8_t>
     </simpleType>
     <writeable />
