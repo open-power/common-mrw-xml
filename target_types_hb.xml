@@ -1114,16 +1114,10 @@
       <id>ADC_CHANNEL_SENSOR_NUMBERS</id>
     </attribute>
     <attribute>
-      <id>ALLOW_CALLHOME_ESELS_TO_BMC</id>
-    </attribute>
-    <attribute>
       <id>APSS_GPIO_PORT_MODES</id>
     </attribute>
     <attribute>
       <id>APSS_GPIO_PORT_PINS</id>
-    </attribute>
-    <attribute>
-      <id>BMC_MAX_ERROR_LOG_SIZE</id>
     </attribute>
     <attribute>
       <id>CORE_WEIGHT_TENTHS</id>
@@ -1270,6 +1264,9 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1385,9 +1382,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
