@@ -1222,6 +1222,15 @@
       <id>AUX_FUNC_INVOCATION_TIME_MS</id>
     </attribute>
     <attribute>
+      <id>DDS_DELAY_ADJUST</id>
+    </attribute>
+    <attribute>
+      <id>DDS_LARGE_DROOP_DETECT_ADJUST</id>
+    </attribute>
+    <attribute>
+      <id>DDS_TRIP_OFFSET_ADJUST</id>
+    </attribute>
+    <attribute>
       <id>DDS_DPLL_SLEW_MODE</id>
     </attribute>
     <attribute>
@@ -1262,9 +1271,6 @@
     </attribute>
     <attribute>
       <id>CURRENT_SCALING_FACTOR</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1382,6 +1388,9 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
