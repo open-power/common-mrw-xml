@@ -1551,36 +1551,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>The minimum frequency of the core mesh clock, in MHz. Determines the core frequency; nest and caches run at half this value. Must be less than or equal to ATTR_FREQ_CORE_CEILING_MHZ. This can differ per chip in the system. Provided by the #V bucket of module VPD.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_CORE_FLOOR_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_CORE_FLOOR_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>2200</default>
-      </uint32_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>The computed system-wide minumum frequency of the core mesh clock, in MHz This is the lowest floor frequency across all chips in the system. Used for fabric epsilon calculations.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
     <description>The system defined floor frequency input to MAX(VPD or WOF Override PowerSave, ATTR_MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ) from which ATTR_FREQ_SYSTEM_CORE_FLOOR_MHZ and ATTR_FREQ_CORE_FLOOR_MHZ values are derived.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
@@ -1594,20 +1564,6 @@
         <default>3250</default>
       </uint32_t>
     </simpleType>
-  </attribute>
-  <attribute>
-    <description>The computed system-wide minumum frequency of the core mesh clock, in MHz This is the highest ceiling frequency across all chips in the system. Used for fabric epsilon calculations.</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FREQ_SYSTEM_CORE_CEILING_MHZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>FREQ_SYSTEM_CORE_CEILING_MHZ</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t />
-    </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Core boot frequency at 1:1 from Nest DPLL</description>

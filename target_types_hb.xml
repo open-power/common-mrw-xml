@@ -457,9 +457,6 @@
       <id>BOOT_PAU_DPLL_BYPASS</id>
     </attribute>
     <attribute>
-      <id>FREQ_CORE_FLOOR_MHZ</id>
-    </attribute>
-    <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
     </attribute>
     <attribute>
@@ -1339,13 +1336,7 @@
       <id>FREQ_IO_REFCLOCK_KHZ</id>
     </attribute>
     <attribute>
-      <id>FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
-    </attribute>
-    <attribute>
       <id>MRW_FREQ_SYSTEM_CORE_FLOOR_MHZ</id>
-    </attribute>
-    <attribute>
-      <id>FREQ_SYSTEM_CORE_CEILING_MHZ</id>
     </attribute>
     <attribute>
       <id>FREQ_PAU_MHZ</id>
