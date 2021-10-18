@@ -10220,6 +10220,26 @@
     <id>GPU_SENSOR_ARRAY</id>
   </enumerationType>
   <enumerationType>
+    <description>Enumeration defining the states of an SBE HRESET operation. These values correspond to the values of the PLDM_OEM_IBM_SBE_HRESET_STATE PLDM state set.</description>
+    <enumerator>
+      <name>UNKNOWN</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>NOT_READY</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>READY</name>
+      <value>2</value>
+    </enumerator>
+    <enumerator>
+      <name>FAILED</name>
+      <value>3</value>
+    </enumerator>
+    <id>SBE_HRESET_STATUS</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enumeration indicating the IPMI sensor type, these values are defined in the IPMI specification. These values will be used when sending sensor reading events to the BMC.</description>
     <enumerator>
       <name>NA</name>
