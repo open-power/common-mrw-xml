@@ -508,6 +508,59 @@
   </targetType>
   <targetType>
     <attribute>
+      <default>
+        <field>
+          <id>byteAddrOffset</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>chipCount</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>devAddr</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>eepromContentType</id>
+          <value>0x0</value>
+        </field>
+        <field>
+          <id>engine</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMasterPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>i2cMuxBusSelector</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>i2cMuxPath</id>
+          <value>physical:sys-0</value>
+        </field>
+        <field>
+          <id>maxMemorySizeKB</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>port</id>
+          <value>0xFF</value>
+        </field>
+        <field>
+          <id>writeCycleTime</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+        <field>
+          <id>writePageSize</id>
+          <value>0xFFFFFFFFFFFFFFFF</value>
+        </field>
+      </default>
+      <id>EEPROM_VPD_PRIMARY_INFO</id>
+    </attribute>
+    <attribute>
       <default>CECTPM</default>
       <id>MODEL</id>
     </attribute>
