@@ -13,7 +13,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Integer adjustment value applied to the #W DELAY value of the respective curve fit (CF) point. [Point] -&gt;8 entries-: 0: CF0; 1: CF1; 2: CF2; 3: CF3; 4: CF4; 5: CF5; 6: CF6; 7: CF7; Producer:MRW Consumer: p10_pstate_parameter_build</description>
+    <description>Integer adjustment value applied to the #W DELAY value of the respective curve fit (CF) point that depends on the good sorted cores. 10BC/15BC is considered config A; 12BC is considered config B [Point] -&gt;8 entries-: 0: 10BC/15BC CF4; 1: 10BC/15BC CF5; 2: 10BC/15BC CF6; 3: 10BC/15BC CF7; 4: 12BC CF4; 5: 12BC CF5; 6: 12BC CF6; 7: 12BC CF7; Consumer: p10_pstate_parameter_build</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DDS_DELAY_ADJUST</id>
       <macro>DIRECT</macro>
@@ -23,30 +23,18 @@
     <readable />
     <simpleType>
       <array>8</array>
-      <int16_t />
+      <int16_t>
+        <default>0,2,2,2,0,2,2,4</default>
+      </int16_t>
     </simpleType>
   </attribute>
   <attribute>
-    <description>Integer adjustment value applied to the #W LARGE_DROOP_DETECT value of the respective curve fit (CF) point. [Point] -&gt;8 entries-: 0: CF0; 1: CF1; 2: CF2; 3: CF3; 4: CF4; 5: CF5; 6: CF6; 7: CF7; Producer:MRW Consumer: p10_pstate_parameter_build</description>
+    <description>Integer adjustment value applied to the #W LARGE_DROOP_DETECT value of the respective curve fit (CF) point. [Point] -&gt;8 entries-: 0: CF0; 1: CF1; 2: CF2; 3: CF3; 4: CF4; 5: CF5; 6: CF6; 7: CF7; Consumer: p10_pstate_parameter_build</description>
     <hwpfToHbAttrMap>
       <id>ATTR_DDS_LARGE_DROOP_DETECT_ADJUST</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
     <id>DDS_LARGE_DROOP_DETECT_ADJUST</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <array>8</array>
-      <int8_t />
-    </simpleType>
-  </attribute>
-  <attribute>
-    <description>Integer adjustment value applied to the #W TRIP_OFFSET value of the respective curve fit (CF) point. [Point] -&gt;8 entries-: 0: CF0; 1: CF1; 2: CF2; 3: CF3; 4: CF4; 5: CF5; 6: CF6; 7: CF7; Producer:MRW Consumer: p10_pstate_parameter_build</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_DDS_TRIP_OFFSET_ADJUST</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>DDS_TRIP_OFFSET_ADJUST</id>
     <persistency>non-volatile</persistency>
     <readable />
     <simpleType>
@@ -369,7 +357,6 @@
         <default>48</default>
       </uint8_t>
     </simpleType>
-    <writeable />
   </attribute>
   <attribute>
     <description>Limits the number of Pstates below the frequency floor that can be used for throttling. Valid responsive values: 0 to 63. Values above 63 will be capped to 63. Consumer: p10_pstate_parameter_build -&gt; OCC Parameter Block</description>
@@ -414,6 +401,21 @@
       <array>8</array>
       <uint8_t>
         <default>1,1,1,1,1,1,1,1</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -1319,6 +1321,21 @@
     <writeable />
   </attribute>
   <attribute>
+    <description>CHIP_UNIT of the first functional core on the chip after applying all guard records. On genesis ipl, this value will be set to it's default, 0xFF, however this is not a valid core number, and should be ignored by SBE. For resource recovery during a reconfig loop, this attr with be consumed by SBE as follows: if ATTR_PG_MVPD + core guard results in zero good smallcores/FCs if ATTR_DEFAULT_HB_CORE indicates a core that is valid in ATTR_PG_MVPD hbcore = ATTR_DEFAULT_HB_CORE else // needed to handle genesis boot and lab scenarios hbcore = first valid core in ATTR_PG_MVPD else normal behavior</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DEFAULT_HB_CORE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>DEFAULT_HB_CORE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Sector buffer strength</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SECTOR_BUFFER_STRENGTH</id>
@@ -2032,21 +2049,6 @@
       </uint8_t>
     </simpleType>
     <writeable />
-  </attribute>
-  <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -5296,6 +5298,7 @@
   </attribute>
   <attribute>
     <description>Used to tell if a resource is critical to perform an IPL. If this attribute is set to 1 and the target is deconfigured, the IPL MUST terminate.</description>
+    <global />
     <id>RESOURCE_IS_CRITICAL</id>
     <persistency>non-volatile</persistency>
     <readable />
@@ -6732,6 +6735,18 @@
     <id>SYSTEM_FMAX_ENABLE</id>
   </enumerationType>
   <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+  </enumerationType>
+  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -7954,18 +7969,6 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
-  </enumerationType>
-  <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
