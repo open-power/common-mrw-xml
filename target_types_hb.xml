@@ -264,6 +264,12 @@
       <id>PROC_HW_TOPOLOGY</id>
     </attribute>
     <attribute>
+      <id>FRU_PATH</id>
+    </attribute>
+    <attribute>
+      <id>FSI_CALLOUTS</id>
+    </attribute>
+    <attribute>
       <id>HDAT_I2C_ADDR</id>
     </attribute>
     <attribute>
@@ -305,6 +311,18 @@
     </attribute>
     <attribute>
       <id>PROC_IO_ERROR_TEMP_DELTA_C</id>
+    </attribute>
+    <attribute>
+      <id>SPI_MVPD_BACKUP_INFO_CALLOUTS</id>
+    </attribute>
+    <attribute>
+      <id>SPI_MVPD_PRIMARY_INFO_CALLOUTS</id>
+    </attribute>
+    <attribute>
+      <id>SPI_SBE_BOOT_CODE_BACKUP_INFO_CALLOUTS</id>
+    </attribute>
+    <attribute>
+      <id>SPI_SBE_BOOT_CODE_PRIMARY_INFO_CALLOUTS</id>
     </attribute>
     <attribute>
       <id>PBAX_CHIPID</id>
@@ -574,6 +592,9 @@
     <attribute>
       <id>TPM_MODEL</id>
     </attribute>
+    <attribute>
+      <id>FRU_PATH</id>
+    </attribute>
     <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
   </targetType>
@@ -811,6 +832,9 @@
     <attribute>
       <default>DIMM</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>I2C_CALLOUTS</id>
     </attribute>
     <attribute>
       <id>IPMI_SENSORS</id>
@@ -1921,6 +1945,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>FRU_PATH</id>
+    </attribute>
+    <attribute>
       <id>OMI_REFCLOCK_SWIZZLE</id>
     </attribute>
     <attribute>
@@ -2090,6 +2117,9 @@
     <attribute>
       <default>SMPGROUP</default>
       <id>TYPE</id>
+    </attribute>
+    <attribute>
+      <id>FRU_PATH</id>
     </attribute>
     <attribute>
       <id>CHIP_UNIT</id>

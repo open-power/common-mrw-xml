@@ -6000,6 +6000,30 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>A comma-separated list of location codes to be called out when this target is implicated in an error. The format of each callout is "X:Y", where X is a letter 'H', 'M' or 'L' representing "high", "medium", and "low" respectively, and Y is a relative location code.</description>
+    <id>FRU_PATH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>FSI_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
     <complexType>
       <description>Structure to define the addessing for an I2C slave device.</description>
       <field>
@@ -6141,6 +6165,18 @@
     <simpleType>
       <array>192</array>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for a description.</description>
+    <id>I2C_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
     </simpleType>
   </attribute>
   <attribute>
@@ -6564,6 +6600,66 @@
       <uint16_t>
         <default>500</default>
       </uint16_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>SPI_MVPD_BACKUP_INFO_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>SPI_MVPD_PRIMARY_INFO_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>SPI_SBE_BOOT_CODE_BACKUP_INFO_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>SPI_SBE_BOOT_CODE_PRIMARY_INFO_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>See FRU_PATH for description.</description>
+    <id>SPI_TPM_INFO_CALLOUTS</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <string>
+        <default />
+        <sizeInclNull>128</sizeInclNull>
+      </string>
     </simpleType>
   </attribute>
   <attribute>
