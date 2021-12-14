@@ -9950,6 +9950,25 @@
     <id>IPMI_SENSOR_ARRAY</id>
   </enumerationType>
   <enumerationType>
+    <description>Enumeration used for different PM Complex Load Types</description>
+    <enumerator>
+      <description>Load the PM Complex</description>
+      <name>LOAD</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <description>Reload the PM Complex</description>
+      <name>RELOAD</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <description>Do NOT load the PM Complex</description>
+      <name>DO_NOT_LOAD</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>PM_COMPLEX_LOAD_TYPE</id>
+  </enumerationType>
+  <enumerationType>
     <description>Enumeration used in OR expression to indicate why to update SBE.</description>
     <enumerator>
       <description>Just clears the value</description>
