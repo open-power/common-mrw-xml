@@ -405,21 +405,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>UNSUPPORTED</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Used in the setting of groups. It is a bit vector. If the value BITWISE_AND 0x01 = 0x01 then groups of 1 MCC is allowed, if the value BITWISE_AND 0x02 = 0x02, then groups of 2 MCCs is allowed, if the value BITWISE_AND 0x04 = 0x04, then groups of 3 MCCs is allowed, if the value BITWISE_AND 0x08 = 0x08, then groups of 4 MCCs is allowed, if the value BITWISE_AND 0x20 = 0x20, then groups of 6 MCCs is allowed, if the value BITWISE_AND 0x80 = 0x80, then groups of 8 MCCs is allowed. Provided by the MRW. The memory grouping is done at the MCC level and this attribute tells the grouping process how many MCCs are allowed be grouped together. If no groups can be formed according to the allowed groups then an error will be thrown.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_INTERLEAVE_ENABLE</id>
@@ -1035,20 +1020,6 @@
       <uint8_t>
         <default>20MA</default>
       </uint8_t>
-    </simpleType>
-    <writeable />
-  </attribute>
-  <attribute>
-    <description>Osc refclock configurations: OSCx - Set up single oscillator BOTH_OSCx - Set up for redundant oscillators, OSCx as primary, both must be good BOTH_OSCx_NORED - Same but without redundancy: Set up for redundant oscillators, OSCx as primary, secondary osc may be bad</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_CP_REFCLOCK_SELECT</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>CP_REFCLOCK_SELECT</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t />
     </simpleType>
     <writeable />
   </attribute>
@@ -2034,6 +2005,21 @@
       </uint8_t>
     </simpleType>
     <writeable />
+  </attribute>
+  <attribute>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_ROW_REPAIR_SUPPORTED_MRW</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>UNSUPPORTED</default>
+      </uint8_t>
+    </simpleType>
   </attribute>
   <attribute>
     <description>Device type of I2C slave device</description>
@@ -6816,18 +6802,6 @@
     <id>SYSTEM_FMAX_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>True or false whether row repair is supported MRW attribute</description>
-    <enumerator>
-      <name>SUPPORTED</name>
-      <value>1</value>
-    </enumerator>
-    <enumerator>
-      <name>UNSUPPORTED</name>
-      <value>0</value>
-    </enumerator>
-    <id>ROW_REPAIR_SUPPORTED_MRW</id>
-  </enumerationType>
-  <enumerationType>
     <description>Determines the stride covered by each granule in an interleaving group. The default stride -- 128B -- is the only value intended for production FW use. All other combinations are for experimental performance evaluation. Regardless of this attribute value, groups of size 1, 3, and 6 will be forced to 128B stride based on the logic capabilities.</description>
     <enumerator>
       <name>128_B</name>
@@ -7406,34 +7380,6 @@
       <value>0x04</value>
     </enumerator>
     <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
-  </enumerationType>
-  <enumerationType>
-    <description>Osc refclock configurations: OSCx - Set up single oscillator BOTH_OSCx - Set up for redundant oscillators, OSCx as primary, both must be good BOTH_OSCx_NORED - Same but without redundancy: Set up for redundant oscillators, OSCx as primary, secondary osc may be bad</description>
-    <enumerator>
-      <name>OSC0</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>OSC1</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>BOTH_OSC0</name>
-      <value>0x2</value>
-    </enumerator>
-    <enumerator>
-      <name>BOTH_OSC1</name>
-      <value>0x3</value>
-    </enumerator>
-    <enumerator>
-      <name>BOTH_OSC0_NORED</name>
-      <value>0x4</value>
-    </enumerator>
-    <enumerator>
-      <name>BOTH_OSC1_NORED</name>
-      <value>0x5</value>
-    </enumerator>
-    <id>CP_REFCLOCK_SELECT</id>
   </enumerationType>
   <enumerationType>
     <description>RCS PLL input for TOD Filter PLL</description>
@@ -8050,6 +7996,18 @@
       <value>0x01</value>
     </enumerator>
     <id>SMF_CONFIG</id>
+  </enumerationType>
+  <enumerationType>
+    <description>True or false whether row repair is supported MRW attribute</description>
+    <enumerator>
+      <name>SUPPORTED</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>UNSUPPORTED</name>
+      <value>0</value>
+    </enumerator>
+    <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
   <enumerationType>
     <description>Device type of I2C slave device</description>
