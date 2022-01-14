@@ -436,6 +436,9 @@
       <id>CHIP_CONTAINED_BACKING_CACHES_VEC</id>
     </attribute>
     <attribute>
+      <id>HB_FALLBACK_CORES</id>
+    </attribute>
+    <attribute>
       <id>CP_PLLTODFLT_BYPASS</id>
     </attribute>
     <attribute>
