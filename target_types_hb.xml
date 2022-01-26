@@ -436,9 +436,6 @@
       <id>CHIP_CONTAINED_BACKING_CACHES_VEC</id>
     </attribute>
     <attribute>
-      <id>HB_FALLBACK_CORES</id>
-    </attribute>
-    <attribute>
       <id>CP_PLLTODFLT_BYPASS</id>
     </attribute>
     <attribute>
@@ -1344,6 +1341,9 @@
       <id>CURRENT_SCALING_FACTOR</id>
     </attribute>
     <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
     </attribute>
     <attribute>
@@ -1453,9 +1453,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
