@@ -1292,21 +1292,6 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Bit mask of all the functional cores on the chip after applying all guard records. On genesis ipl, this value will be set to it's default, 0xFFFFFFFF, assuming that all cores are functional. For resource recovery during a reconfig loop, this attr with be consumed by SBE as follows: if ATTR_PG_MVPD + core guard results in zero good smallcores/FCs if ATTR_HB_FALLBACK_CORES indicates a core that is valid in ATTR_PG_MVPD hbcore = first valid core in ATTR_HB_FALLBACK_CORES else // needed to handle genesis boot and lab scenarios hbcore = first valid core in ATTR_PG_MVPD else normal behavior</description>
-    <hwpfToHbAttrMap>
-      <id>ATTR_HB_FALLBACK_CORES</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-    <id>HB_FALLBACK_CORES</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint32_t>
-        <default>0xFFFFFFFF</default>
-      </uint32_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>Sector buffer strength</description>
     <hwpfToHbAttrMap>
       <id>ATTR_SECTOR_BUFFER_STRENGTH</id>
@@ -6447,6 +6432,17 @@
       <uint8_t>
         <default>95</default>
       </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Time to wait before PHYP makes HBRT callback to handle the call to do the PMIC health check, time in milliseconds, default to 24 hours, MS_PER_SEC * 60 * 60 * 24, 0xFFFFFFFF = disabled</description>
+    <id>PMIC_HEALTH_CHECK_TIMER</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>86400000</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
