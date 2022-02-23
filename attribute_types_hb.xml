@@ -6437,6 +6437,17 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Socket and dimm_slot connector pdrs are needed to report uninstalled slots which are used to help identify where to plug in new parts. This support connectors encompass DIMM slots and processor sockets. This support is disabled by default until fully supported by all components.</description>
+    <id>PLDM_CONNECTOR_PDRS_ENABLED</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>PMIC temperature where an error will be generated in degrees C</description>
     <id>PMIC_ERROR_TEMP_DEG_C</id>
     <persistency>non-volatile</persistency>
@@ -9312,6 +9323,10 @@
     <enumerator>
       <name>MDS_FORCE_UPDATE</name>
       <value>4</value>
+    </enumerator>
+    <enumerator>
+      <name>FORCE_UPDATE_ONCE</name>
+      <value>5</value>
     </enumerator>
     <id>OCMB_FW_UPDATE_BEHAVIOR</id>
   </enumerationType>
