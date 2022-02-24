@@ -1374,6 +1374,9 @@
       <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
     </attribute>
     <attribute>
+      <id>PROC_LCO_MODE_DISABLE</id>
+    </attribute>
+    <attribute>
       <id>HW543384_WAR_MODE</id>
     </attribute>
     <attribute>
