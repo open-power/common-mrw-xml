@@ -640,6 +640,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Disable Lateral CastOut mode in the caches</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_LCO_MODE_DISABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_LCO_MODE_DISABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Select workaround type to be applied if HW543384 is present</description>
     <hwpfToHbAttrMap>
       <id>ATTR_HW543384_WAR_MODE</id>
@@ -7039,6 +7052,18 @@
       <value>1</value>
     </enumerator>
     <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Disable Lateral CastOut mode in the caches</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>1</value>
+    </enumerator>
+    <id>PROC_LCO_MODE_DISABLE</id>
   </enumerationType>
   <enumerationType>
     <description>Select workaround type to be applied if HW543384 is present</description>
