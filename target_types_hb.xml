@@ -1602,6 +1602,9 @@
       <id>MSS_MRW_THERMAL_MEMORY_POWER_LIMIT</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_OVERRIDE_THERM_SENSOR_USAGE</id>
+    </attribute>
+    <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
