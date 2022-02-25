@@ -2791,6 +2791,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Set to ENABLED to activate a workaround for 4U DDIMMs to set thermal sensor usage from DRAM to DRAM_AND_MEM_BUF_EXT, and from PMIC to MEM_BUF_EXT. Affects power management subsystem fan speed controls.</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_OVERRIDE_THERM_SENSOR_USAGE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_OVERRIDE_THERM_SENSOR_USAGE</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Indicates whether the OCMB is allowed to run in enterprise mode, commodity mode, or either. ALLOW_ENTERPRISE = Most permissive, uses whatever is installed in the way it is intended to be used. REQUIRE_ENTERPRISE = Throws an error for any commodity dimms that are installed. FORCE_NONENTERPRISE = Throws an error for any enterprise dimms that are installed.</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_OCMB_ENTERPRISE_POLICY</id>
@@ -8509,6 +8524,18 @@
       <value>3200</value>
     </enumerator>
     <id>MSS_MRW_SUPPORTED_FREQ</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Set to ENABLED to activate a workaround for 4U DDIMMs to set thermal sensor usage from DRAM to DRAM_AND_MEM_BUF_EXT, and from PMIC to MEM_BUF_EXT. Affects power management subsystem fan speed controls.</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_OVERRIDE_THERM_SENSOR_USAGE</id>
   </enumerationType>
   <enumerationType>
     <description>Indicates whether the OCMB is allowed to run in enterprise mode, commodity mode, or either. ALLOW_ENTERPRISE = Most permissive, uses whatever is installed in the way it is intended to be used. REQUIRE_ENTERPRISE = Throws an error for any commodity dimms that are installed. FORCE_NONENTERPRISE = Throws an error for any enterprise dimms that are installed.</description>
