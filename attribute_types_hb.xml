@@ -651,6 +651,7 @@
     <simpleType>
       <uint8_t />
     </simpleType>
+    <writeable />
   </attribute>
   <attribute>
     <description>Select workaround type to be applied if HW543384 is present</description>
