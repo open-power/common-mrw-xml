@@ -25,14 +25,21 @@
 	<child_id>Rainier-4U-CCINS.128GB-DDIMM-2U</child_id>
 	<child_id>Rainier-4U-CCINS.128GB-EDDIMM-4U</child_id>
 	<child_id>Rainier-4U-CCINS.256GB-EDDIMM-4U</child_id>
-	<child_id>Rainier-4U-CCINS.BearMountain</child_id>
-	<child_id>Rainier-4U-CCINS.PowerSupply-1400W</child_id>
-	<child_id>Rainier-4U-CCINS.PowerSupply-2000W</child_id>
+	<child_id>Rainier-4U-CCINS.BearLake</child_id>
+	<child_id>Rainier-4U-CCINS.PowerSupply-1200W</child_id>
+	<child_id>Rainier-4U-CCINS.PowerSupply-1600W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-30BC-400W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-24BC-400W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-16BC-400W</child_id>
+	<child_id>Rainier-4U-CCINS.ioSCM-DD20-10BC-200W</child_id>
+	<child_id>Rainier-4U-CCINS.ioSCM-DD20-4BC-150W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-30BC-420W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-16BC-395W</child_id>
+	<child_id>Rainier-4U-CCINS.DCM-DD20-12BC-380W</child_id>
+	<child_id>Rainier-4U-CCINS.ioSCM-DD20-8BC-240W</child_id>
+	<child_id>Rainier-4U-CCINS.ioSCM-DD20-4BC-180W</child_id>
 	<child_id>Rainier-4U-CCINS.DCM-DD10-30BC-400W</child_id>
-	<child_id>Rainier-4U-CCINS.DCM-DD10-24BC-400W</child_id>
-	<child_id>Rainier-4U-CCINS.DCM-DD10-16BC-400W</child_id>
-	<child_id>Rainier-4U-CCINS.ioSCM-DD10-8BC-150W</child_id>
-	<child_id>Rainier-4U-CCINS.ioSCM-DD10-4BC-150W</child_id>
+	<child_id>Rainier-4U-CCINS.Blower</child_id>
 	<attribute>
 		<id>CLASS</id>
 		<default></default>
@@ -88,7 +95,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-42B</default>
+		<default>9105-42A,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -137,7 +144,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -186,7 +193,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -235,7 +242,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -284,7 +291,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -333,7 +340,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -382,7 +389,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -431,7 +438,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -480,7 +487,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -505,7 +512,7 @@
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>329B</default>
+		<default>327A</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -529,7 +536,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -554,7 +561,7 @@
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>329C</default>
+		<default>327B</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -578,7 +585,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -603,7 +610,7 @@
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>329D</default>
+		<default>327C</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -627,7 +634,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-22A,9105-42B,9105-22B</default>
+		<default>9105-42A,9105-22A,9105-41B,9105-22B,9786-42H,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -676,7 +683,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-42B</default>
+		<default>9105-42A,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -725,7 +732,7 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-42B</default>
+		<default>9105-42A,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -737,10 +744,10 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Rainier-4U-CCINS.BearMountain</id>
+	<id>Rainier-4U-CCINS.BearLake</id>
 	<type>override-ccin-card</type>
 	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.BearMountain</instance_name>
+	<instance_name>Rainier-4U-CCINS.BearLake</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
@@ -750,7 +757,7 @@
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>2CE2</default>
+		<default>6B99</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
@@ -774,11 +781,11 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-42B</default>
+		<default>9105-42A,9105-41B,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
-		<default>MEX 4U Cable Card for Fanout Module</default>
+		<default>4U PCIe Gen4 x8 Cable Card for MEX, Splitter and Nimitz</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -786,10 +793,59 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Rainier-4U-CCINS.PowerSupply-1400W</id>
+	<id>Rainier-4U-CCINS.PowerSupply-1200W</id>
 	<type>override-ccin-card</type>
 	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.PowerSupply-1400W</instance_name>
+	<instance_name>Rainier-4U-CCINS.PowerSupply-1200W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>2B1D</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-41B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Power Supply 1200W Delta</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.PowerSupply-1600W</id>
+	<type>override-ccin-card</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.PowerSupply-1600W</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
@@ -823,11 +879,11 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A,9105-42B</default>
+		<default>9105-42A,9105-41B,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
-		<default>Power Supply 1400W</default>
+		<default>Power Supply 1600W Delta</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -835,23 +891,35 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Rainier-4U-CCINS.PowerSupply-2000W</id>
-	<type>override-ccin-card</type>
+	<id>Rainier-4U-CCINS.DCM-DD20-30BC-400W</id>
+	<type>override-ccin-cpu</type>
 	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.PowerSupply-2000W</instance_name>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-30BC-400W</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
 	<attribute>
 		<id>CARD_USE</id>
-		<default>FIELD</default>
+		<default>LAB_ONLY</default>
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>51E9</default>
+		<default>5C7C</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>30BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -872,11 +940,560 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-22A,9105-22B</default>
+		<default>9105-42A,9786-42H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
-		<default>Power Supply 2000W</default>
+		<default>Godel DCM ITC DD2.02 30BC 400W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.DCM-DD20-24BC-400W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-24BC-400W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>LAB_ONLY</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C6A</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>24BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-42A,9786-42H</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel DCM ITC DD2.02 24BC 400W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.DCM-DD20-16BC-400W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-16BC-400W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>LAB_ONLY</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C68</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>16BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-42A,9786-42H</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel DCM ITC DD2.02 16BC 400W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.ioSCM-DD20-10BC-200W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.ioSCM-DD20-10BC-200W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>LAB_ONLY</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C74</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>10BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-41B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel ioSCM ITC DD2.02 10BC 200W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.ioSCM-DD20-4BC-150W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.ioSCM-DD20-4BC-150W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>LAB_ONLY</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C64</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>4BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-41B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel ioSCM ITC DD2.02 4BC 150W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.DCM-DD20-30BC-420W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-30BC-420W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C82</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>30BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-42A,9786-42H</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel DCM STC DD2.02 30BC 420W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.DCM-DD20-16BC-395W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-16BC-395W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C83</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>16BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-42A,9786-42H</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel DCM STC DD2.02 16BC 395W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.DCM-DD20-12BC-380W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.DCM-DD20-12BC-380W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C84</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>12BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-42A,9786-42H</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel DCM STC DD2.02 12BC 380W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.ioSCM-DD20-8BC-240W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.ioSCM-DD20-8BC-240W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C8A</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>8BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-41B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel ioSCM STC DD2.02 8BC 240W</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Rainier-4U-CCINS.ioSCM-DD20-4BC-180W</id>
+	<type>override-ccin-cpu</type>
+	<is_root>false</is_root>
+	<instance_name>Rainier-4U-CCINS.ioSCM-DD20-4BC-180W</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CARD_USE</id>
+		<default>FIELD</default>
+	</attribute>
+	<attribute>
+		<id>CCIN</id>
+		<default>5C88</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CORES</id>
+		<default>4BC</default>
+	</attribute>
+	<attribute>
+		<id>EC_LEVEL</id>
+		<default>2.0</default>
+	</attribute>
+	<attribute>
+		<id>FREQUENCY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>PART_NUMBER</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>RU_TYPE</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>SUPPORTED_MTMS</id>
+		<default>9105-41B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Godel ioSCM STC DD2.02 4BC 180W</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
@@ -945,35 +1562,23 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>Rainier-4U-CCINS.DCM-DD10-24BC-400W</id>
-	<type>override-ccin-cpu</type>
+	<id>Rainier-4U-CCINS.Blower</id>
+	<type>override-ccin-card</type>
 	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.DCM-DD10-24BC-400W</instance_name>
+	<instance_name>Rainier-4U-CCINS.Blower</instance_name>
 	<position>-1</position>
 	<parent>targetoverride</parent>
 	<parent_type>targetoverride</parent_type>
 	<attribute>
 		<id>CARD_USE</id>
-		<default>LAB_ONLY</default>
+		<default>FIELD</default>
 	</attribute>
 	<attribute>
 		<id>CCIN</id>
-		<default>5C57</default>
+		<default>7B5F</default>
 	</attribute>
 	<attribute>
 		<id>CLASS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CORES</id>
-		<default>24BC</default>
-	</attribute>
-	<attribute>
-		<id>EC_LEVEL</id>
-		<default>1.0</default>
-	</attribute>
-	<attribute>
-		<id>FREQUENCY</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -994,194 +1599,11 @@
 	</attribute>
 	<attribute>
 		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A</default>
+		<default>9105-42A,9786-42H,9105-41B</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
-		<default>Godel DCM DD1.0 24BC 400W</default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>Rainier-4U-CCINS.DCM-DD10-16BC-400W</id>
-	<type>override-ccin-cpu</type>
-	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.DCM-DD10-16BC-400W</instance_name>
-	<position>-1</position>
-	<parent>targetoverride</parent>
-	<parent_type>targetoverride</parent_type>
-	<attribute>
-		<id>CARD_USE</id>
-		<default>LAB_ONLY</default>
-	</attribute>
-	<attribute>
-		<id>CCIN</id>
-		<default>5C56</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CORES</id>
-		<default>16</default>
-	</attribute>
-	<attribute>
-		<id>EC_LEVEL</id>
-		<default>1.0</default>
-	</attribute>
-	<attribute>
-		<id>FREQUENCY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>TARGET_OVERRIDE</default>
-	</attribute>
-	<attribute>
-		<id>PART_NUMBER</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>RU_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>SUPPORTED_MTMS</id>
-		<default>9105-42A</default>
-	</attribute>
-	<attribute>
-		<id>TARGET_NAME</id>
-		<default>Godel DCM DD1.0 16BC 400W</default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>Rainier-4U-CCINS.ioSCM-DD10-8BC-150W</id>
-	<type>override-ccin-cpu</type>
-	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.ioSCM-DD10-8BC-150W</instance_name>
-	<position>-1</position>
-	<parent>targetoverride</parent>
-	<parent_type>targetoverride</parent_type>
-	<attribute>
-		<id>CARD_USE</id>
-		<default>LAB_ONLY</default>
-	</attribute>
-	<attribute>
-		<id>CCIN</id>
-		<default>5C71</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CORES</id>
-		<default>8BC</default>
-	</attribute>
-	<attribute>
-		<id>EC_LEVEL</id>
-		<default>1.0</default>
-	</attribute>
-	<attribute>
-		<id>FREQUENCY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>TARGET_OVERRIDE</default>
-	</attribute>
-	<attribute>
-		<id>PART_NUMBER</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>RU_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>SUPPORTED_MTMS</id>
-		<default>9105-42B</default>
-	</attribute>
-	<attribute>
-		<id>TARGET_NAME</id>
-		<default>Godel ioSCM DD1.0 8BC 150W</default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>Rainier-4U-CCINS.ioSCM-DD10-4BC-150W</id>
-	<type>override-ccin-cpu</type>
-	<is_root>false</is_root>
-	<instance_name>Rainier-4U-CCINS.ioSCM-DD10-4BC-150W</instance_name>
-	<position>-1</position>
-	<parent>targetoverride</parent>
-	<parent_type>targetoverride</parent_type>
-	<attribute>
-		<id>CARD_USE</id>
-		<default>LAB_ONLY</default>
-	</attribute>
-	<attribute>
-		<id>CCIN</id>
-		<default>5C70</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CORES</id>
-		<default>4BC</default>
-	</attribute>
-	<attribute>
-		<id>EC_LEVEL</id>
-		<default>1.0</default>
-	</attribute>
-	<attribute>
-		<id>FREQUENCY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>TARGET_OVERRIDE</default>
-	</attribute>
-	<attribute>
-		<id>PART_NUMBER</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>RU_TYPE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>SUPPORTED_MTMS</id>
-		<default>9105-42B</default>
-	</attribute>
-	<attribute>
-		<id>TARGET_NAME</id>
-		<default>Godel ioSCM DD1.0 4BC 150W</default>
+		<default>Rainier 4U Blower</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
