@@ -2,19 +2,23 @@
 <version>2.10</version>
 <targetInstances>
 <targetPart>
-	<id>I210</id>
-	<type>chip-I210</type>
+	<id>IDT9ZXL0851E</id>
+	<type>chip-IDT9ZXL0851E</type>
 	<is_root>true</is_root>
-	<instance_name>I210</instance_name>
+	<instance_name>IDT9ZXL0851E</instance_name>
 	<position>-1</position>
 	<parent>chip</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
-	<child_id>I210.ncsi</child_id>
-	<child_id>I210.sdp</child_id>
-	<child_id>I210.ethernet</child_id>
-	<child_id>I210.pcie</child_id>
-	<child_id>I210.clk</child_id>
+	<child_id>IDT9ZXL0851E.DIF0</child_id>
+	<child_id>IDT9ZXL0851E.DIF1</child_id>
+	<child_id>IDT9ZXL0851E.DIF2</child_id>
+	<child_id>IDT9ZXL0851E.DIF3</child_id>
+	<child_id>IDT9ZXL0851E.DIF4</child_id>
+	<child_id>IDT9ZXL0851E.DIF5</child_id>
+	<child_id>IDT9ZXL0851E.DIF6</child_id>
+	<child_id>IDT9ZXL0851E.DIF7</child_id>
+	<child_id>IDT9ZXL0851E.DIFIN</child_id>
 	<attribute>
 		<id>AFFINITY_PATH</id>
 		<default></default>
@@ -68,143 +72,15 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>I210.ncsi</id>
-	<type>unit-gpio-generic</type>
+	<id>IDT9ZXL0851E.DIF0</id>
+	<type>unit-clk-master</type>
 	<is_root>false</is_root>
-	<instance_name>I210.ncsi</instance_name>
+	<instance_name>IDT9ZXL0851E.DIF0</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>GPIO</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>INOUT</default>
-	</attribute>
-	<attribute>
-		<id>DRIVER_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ENGINE</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NAME</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>POR_VALUE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>I210.sdp</id>
-	<type>unit-gpio-generic</type>
-	<is_root>false</is_root>
-	<instance_name>I210.sdp</instance_name>
-	<position>-1</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>GPIO</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>INOUT</default>
-	</attribute>
-	<attribute>
-		<id>DRIVER_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>ENGINE</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>GPIO_TYPE</id>
-		<default>GENERIC_OUTPUT</default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NAME</id>
-		<default>
-				<field><id>Value</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>PIN_NUM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>POR_VALUE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>SCHEMATIC_INTERFACE</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-</targetPart>
-<targetPart>
-	<id>I210.ethernet</id>
-	<type>unit-ethernet-master</type>
-	<is_root>false</is_root>
-	<instance_name>I210.ethernet</instance_name>
-	<position>-1</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>ETHERNET</default>
+		<default>CLK</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -223,10 +99,6 @@
 		<default>NA</default>
 	</attribute>
 	<attribute>
-		<id>NCSI_MODE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>PIN_NAME</id>
 		<default>
 				<field><id>Value</id><value></value></field>
@@ -236,21 +108,17 @@
 		<id>TYPE</id>
 		<default>NA</default>
 	</attribute>
-	<attribute>
-		<id>USE_HW_CHECKSUM</id>
-		<default>0</default>
-	</attribute>
 </targetPart>
 <targetPart>
-	<id>I210.pcie</id>
-	<type>unit-pcie-endpoint</type>
+	<id>IDT9ZXL0851E.DIF1</id>
+	<type>unit-clk-master</type>
 	<is_root>false</is_root>
-	<instance_name>I210.pcie</instance_name>
+	<instance_name>IDT9ZXL0851E.DIF1</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>PCIE</default>
+		<default>CLK</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -262,26 +130,256 @@
 	</attribute>
 	<attribute>
 		<id>DIRECTION</id>
-		<default>IN</default>
+		<default>OUT</default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
 		<default>NA</default>
 	</attribute>
 	<attribute>
-		<id>SLOT_INDEX</id>
-		<default>-1</default>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default>NA</default>
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>I210.clk</id>
+	<id>IDT9ZXL0851E.DIF2</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF2</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIF3</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF3</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIF4</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF4</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIF5</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF5</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIF6</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF6</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIF7</id>
+	<type>unit-clk-master</type>
+	<is_root>false</is_root>
+	<instance_name>IDT9ZXL0851E.DIF7</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>CLK</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>PIN_NAME</id>
+		<default>
+				<field><id>Value</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>IDT9ZXL0851E.DIFIN</id>
 	<type>unit-clk-slave</type>
 	<is_root>false</is_root>
-	<instance_name>I210.clk</instance_name>
+	<instance_name>IDT9ZXL0851E.DIFIN</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>

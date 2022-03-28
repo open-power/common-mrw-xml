@@ -10,7 +10,7 @@
 	<parent>targetoverride</parent>
 	<parent_type>sys-sys-power8</parent_type>
 	<parent_type>sys-sys-power9</parent_type>
-        <parent_type>sys-sys-power10</parent_type>
+	<parent_type>sys-sys-power10</parent_type>
 	<child_id>Rainier-2U-MTMS.2s2u-p10-dcm</child_id>
 	<child_id>Rainier-2U-MTMS.2s2u-p10-ioscm</child_id>
 	<attribute>
@@ -52,7 +52,7 @@
 	</attribute>
 	<attribute>
 		<id>IM_VALUE</id>
-		<default></default>
+		<default>0x50001001</default>
 	</attribute>
 	<attribute>
 		<id>MRW_ID</id>
@@ -64,7 +64,7 @@
 	</attribute>
 	<attribute>
 		<id>MTM_NAME</id>
-		<default>9105-22A</default>
+		<default>9105-22A,9786-22H</default>
 	</attribute>
 	<attribute>
 		<id>TARGET_NAME</id>
@@ -97,7 +97,7 @@
 	</attribute>
 	<attribute>
 		<id>IM_VALUE</id>
-		<default></default>
+		<default>0x50001001</default>
 	</attribute>
 	<attribute>
 		<id>MRW_ID</id>
