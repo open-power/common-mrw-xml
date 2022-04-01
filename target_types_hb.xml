@@ -1386,6 +1386,12 @@
       <id>PROC_LCO_MODE_SETUP</id>
     </attribute>
     <attribute>
+      <id>PROC_LCO_MODE_SETUP_ADAPTIVE_N</id>
+    </attribute>
+    <attribute>
+      <id>PROC_LCO_MODE_SETUP_ADAPTIVE_D</id>
+    </attribute>
+    <attribute>
       <id>HW543384_WAR_MODE</id>
     </attribute>
     <attribute>

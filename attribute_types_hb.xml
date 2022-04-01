@@ -656,7 +656,7 @@
     <writeable />
   </attribute>
   <attribute>
-    <description>Controls lateral castout target set formation. ALL: all cores included in LCO target set ECO_ONLY: only ECO cores included in LCO target set</description>
+    <description>Controls lateral castout target set formation. ALL: all cores included in LCO target set ADAPTIVE: base target set selection on percentage of ECO cores relative to all functional L3s. If the percentage of ECO cores is greater than or equal to ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_N / ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_D, restrict LCO target set to ECO cores only. Else, use all cores. ECO_ONLY: only ECO cores included in LCO target set</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_LCO_MODE_SETUP</id>
       <macro>DIRECT</macro>
@@ -666,6 +666,36 @@
     <readable />
     <simpleType>
       <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Controls lateral castout target set formation, when ATTR_PROC_LCO_MODE_SETUP specifies ADAPTIVE mode. Specifies the numerator of the ECO core threshold percentage required to restrict the LCO target set to ECO cores only</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_N</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_LCO_MODE_SETUP_ADAPTIVE_N</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>333</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+  <attribute>
+    <description>Controls lateral castout target set formation, when ATTR_PROC_LCO_MODE_SETUP specifies ADAPTIVE mode. Specifies the denominator of the ECO core threshold percentage required to restrict the LCO target set to ECO cores only</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_D</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_LCO_MODE_SETUP_ADAPTIVE_D</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint32_t>
+        <default>1000</default>
+      </uint32_t>
     </simpleType>
   </attribute>
   <attribute>
@@ -7121,14 +7151,18 @@
     <id>PROC_LCO_MODE_DISABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Controls lateral castout target set formation. ALL: all cores included in LCO target set ECO_ONLY: only ECO cores included in LCO target set</description>
+    <description>Controls lateral castout target set formation. ALL: all cores included in LCO target set ADAPTIVE: base target set selection on percentage of ECO cores relative to all functional L3s. If the percentage of ECO cores is greater than or equal to ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_N / ATTR_PROC_LCO_MODE_SETUP_ADAPTIVE_D, restrict LCO target set to ECO cores only. Else, use all cores. ECO_ONLY: only ECO cores included in LCO target set</description>
     <enumerator>
-      <name>ECO_ONLY</name>
+      <name>ADAPTIVE</name>
       <value>0</value>
     </enumerator>
     <enumerator>
       <name>ALL</name>
       <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>ECO_ONLY</name>
+      <value>2</value>
     </enumerator>
     <id>PROC_LCO_MODE_SETUP</id>
   </enumerationType>
