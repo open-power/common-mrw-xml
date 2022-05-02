@@ -2025,8 +2025,8 @@
                        Specifies in which node configuration this bus is 
                        applicable to, it is a string value with node numbers 
                        seperated by comma, further a value of "w" is used 
-                       for wrap test and a value of "d" is used for default 
-                       and specifies all nodes 
+                       for wrap test, f is used for Flat8 and a value of "d" is 
+                       used for default and specifies all nodes 
                 </description>
                 <simpleType>
                         <string/>
