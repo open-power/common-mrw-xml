@@ -127,6 +127,131 @@
 	</attribute>
 </targetPart>
 <targetPart>
+	<id>Denali-CCINS</id>
+	<type>targetoverride-Denali-Flat8-CCINS</type>
+	<is_root>true</is_root>
+	<instance_name>Denali-CCINS</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>sys-sys-power8</parent_type>
+	<parent_type>sys-sys-power9</parent_type>
+	<parent_type>sys-sys-power10</parent_type>
+	<child_id>Denali-CCINS.Tanager</child_id>
+	<child_id>Denali-CCINS.gannet</child_id>
+	<child_id>Denali-CCINS.pinyon</child_id>
+	<child_id>Denali-CCINS.heron</child_id>
+	<child_id>Denali-CCINS.thornbill</child_id>
+	<child_id>Denali-CCINS.oriole</child_id>
+	<child_id>Denali-CCINS.sandhill</child_id>
+	<child_id>Denali-CCINS.cormorant</child_id>
+	<child_id>Denali-CCINS.32GB DDR4 DDIMM</child_id>
+	<child_id>Denali-CCINS.64GB DDR4 DDIMM</child_id>
+	<child_id>Denali-CCINS.128GB DDR4 DDIMM</child_id>
+	<child_id>Denali-CCINS.256GB DDR4 DDIMM</child_id>
+	<child_id>Denali-CCINS.512GB DDR4 DDIMM</child_id>
+	<child_id>Denali-CCINS.SMP cable 655mm</child_id>
+	<child_id>Denali-CCINS.SMP cable 780mm</child_id>
+	<child_id>Denali-CCINS.SMP cable 1000mm</child_id>
+	<child_id>Denali-CCINS.SMP cable 1200mm</child_id>
+	<child_id>Denali-CCINS.SMP cable 1400mm</child_id>
+	<child_id>Denali-CCINS.Denali fan</child_id>
+	<child_id>Denali-CCINS.Denali power supply</child_id>
+	<child_id>Denali-CCINS.processor vrm</child_id>
+	<child_id>Denali-CCINS.misc vrm</child_id>
+	<child_id>Denali-CCINS.warbler</child_id>
+	<child_id>Denali-CCINS.grackle</child_id>
+	<child_id>Denali-CCINS.veridian</child_id>
+	<child_id>Denali-CCINS.hyacinth</child_id>
+	<child_id>Denali-CCINS.indigo</child_id>
+	<child_id>Denali-CCINS.rufous</child_id>
+	<child_id>Denali-CCINS.mangrove</child_id>
+	<child_id>Denali-CCINS.dusty</child_id>
+	<child_id>Denali-CCINS.hill</child_id>
+	<child_id>Denali-CCINS.rusty</child_id>
+	<child_id>Denali-CCINS.snowcap</child_id>
+	<child_id>Denali-CCINS.mack fan</child_id>
+	<attribute>
+		<id>AFFINITY_PATH</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>DECONFIG_GARDABLE</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>FAPI_NAME</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>FAPI_POS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>HUID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>HWAS_STATE</id>
+		<default>
+				<field><id>deconfiguredByEid</id><value></value></field>
+				<field><id>poweredOn</id><value></value></field>
+				<field><id>present</id><value></value></field>
+				<field><id>functional</id><value></value></field>
+				<field><id>dumpfunctional</id><value></value></field>
+				<field><id>specdeconfig</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>HWAS_STATE_CHANGED_FLAG</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>ORDINAL_ID</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>PHYS_PATH</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>PRIMARY_CAPABILITIES</id>
+		<default>
+				<field><id>supportsFsiScom</id><value></value></field>
+				<field><id>supportsXscom</id><value></value></field>
+				<field><id>supportsInbandScom</id><value></value></field>
+				<field><id>reserved</id><value></value></field>
+		</default>
+	</attribute>
+	<attribute>
+		<id>RESOURCE_IS_CRITICAL</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
 	<id>Denali-CCINS.Tanager</id>
 	<type>override-ccin-card</type>
 	<is_root>false</is_root>

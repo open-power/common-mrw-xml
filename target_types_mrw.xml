@@ -3090,6 +3090,10 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>				
 	</targetType>	
 	<targetType>
 		<id>POWER</id>
@@ -3162,6 +3166,10 @@
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
 		</attribute>
 		<attribute>
 			<id>BUS_WIDTH</id>
