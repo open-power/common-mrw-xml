@@ -2895,6 +2895,9 @@
 			<id>I2C_PURPOSE</id>
 		</attribute>
 		<attribute>
+			<id>I2C_BUS_ALIAS</id>
+		</attribute>
+		<attribute>
 			<id>BUS_WIDTH</id>
 			<default>2</default>
 		</attribute>
@@ -3090,6 +3093,10 @@
 			<id>CLASS</id>
 			<default>BUS</default>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>
 	</targetType>	
 	<targetType>
 		<id>POWER</id>
@@ -3162,6 +3169,10 @@
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>
+		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
 		</attribute>
 		<attribute>
 			<id>BUS_WIDTH</id>
