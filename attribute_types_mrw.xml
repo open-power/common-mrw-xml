@@ -1711,6 +1711,17 @@
 		<writeable/>
 	</attribute>
 	<attribute>
+		<id>I2C_BUS_ALIAS</id>
+		<description>Describes i2c bus alias for device behind mux</description>
+		<simpleType>
+			<string>
+			</string>
+		</simpleType>
+		<persistency>non-volatile</persistency>
+		<readable/>
+		<writeable/>
+	</attribute>
+	<attribute>
 		<id>FRU_PATH</id>
 		<description>Describes the entire FRU path</description>
 		<simpleType>
