@@ -8,6 +8,7 @@
 	<child_id>presence</child_id>
 	<child_id>cablecard-PCA9551</child_id>
 	<child_id>cablecard-TMP275A</child_id>
+    <child_id>cablecard-TMP435</child_id>
 	<child_id>clk-in</child_id>
 	<child_id>cablecard-CXP-TOP</child_id>
 	<child_id>cablecard-CXP-BOT</child_id>
@@ -184,6 +185,14 @@
     <type>chip-tmp-device</type>
   </targetPart>
   <targetPart>
+    <id>cablecard-TMP435</id>
+    <child_id>TMP435-i2c</child_id>
+    <instance_name>cablecard-TMP435</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>chip-tmp-device</type>
+  </targetPart>
+  <targetPart>
     <id>cablecard-LED-CXP-TOP</id>
     <child_id>led_enable</child_id>
     <child_id>generic-logic-assoc</child_id>
@@ -269,6 +278,34 @@
     <position>-1</position>
     <type>unit-i2c-slave</type>
   </targetPart>  
+  <targetPart>
+    <id>TMP435-i2c</id>
+ 	<attribute>
+		<id>BUS_TYPE</id>
+		<default>I2C</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default/>
+	</attribute>
+    <instance_name>TMP435-i2c</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-i2c-slave</type>
+  </targetPart>
   <targetPart>
     <id>clk-in</id>
 	<attribute>
