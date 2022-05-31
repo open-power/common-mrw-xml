@@ -1290,6 +1290,12 @@
       <id>SOFT_MIN_POWER_CAP_WATTS</id>
     </attribute>
     <attribute>
+      <id>SYS_CLOCK_DECONFIG_STATE</id>
+    </attribute>
+    <attribute>
+      <id>SYS_CLOCK_INTEGRATED_SPARES</id>
+    </attribute>
+    <attribute>
       <id>VRM_VDD_DVFS_TEMP_DEG_C</id>
     </attribute>
     <attribute>
@@ -1348,6 +1354,9 @@
     </attribute>
     <attribute>
       <id>CURRENT_SCALING_FACTOR</id>
+    </attribute>
+    <attribute>
+      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>MSS_INTERLEAVE_ENABLE</id>
@@ -1474,9 +1483,6 @@
     </attribute>
     <attribute>
       <id>SMF_CONFIG</id>
-    </attribute>
-    <attribute>
-      <id>ROW_REPAIR_SUPPORTED_MRW</id>
     </attribute>
     <attribute>
       <id>IS_SIMULATION</id>
