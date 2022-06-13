@@ -2503,7 +2503,7 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
+    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1 Note: DDR5 will use either the NORMAL or DDR5_FINE enum values For DDR5, MR4's settings are set based upon the values of this attribute</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_FINE_REFRESH_MODE</id>
       <macro>DIRECT</macro>
@@ -8446,7 +8446,7 @@
     <id>MSS_MRW_VDDR_OFFSET_ENABLE</id>
   </enumerationType>
   <enumerationType>
-    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1</description>
+    <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1 Note: DDR5 will use either the NORMAL or DDR5_FINE enum values For DDR5, MR4's settings are set based upon the values of this attribute</description>
     <enumerator>
       <name>NORMAL</name>
       <value>0</value>
@@ -8466,6 +8466,10 @@
     <enumerator>
       <name>FLY_4X</name>
       <value>6</value>
+    </enumerator>
+    <enumerator>
+      <name>DDR5_FINE</name>
+      <value>7</value>
     </enumerator>
     <id>MSS_MRW_FINE_REFRESH_MODE</id>
   </enumerationType>
