@@ -642,6 +642,19 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Adjust core, cache, memory controller dials to favor agressive prefetch</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t />
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Disable Lateral CastOut mode in the caches</description>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_LCO_MODE_DISABLE</id>
@@ -6535,17 +6548,6 @@
     </simpleType>
   </attribute>
   <attribute>
-    <description>Socket and dimm_slot connector pdrs are needed to report uninstalled slots which are used to help identify where to plug in new parts. This support connectors encompass DIMM slots and processor sockets. This support is disabled by default until fully supported by all components.</description>
-    <id>PLDM_CONNECTOR_PDRS_ENABLED</id>
-    <persistency>non-volatile</persistency>
-    <readable />
-    <simpleType>
-      <uint8_t>
-        <default>0</default>
-      </uint8_t>
-    </simpleType>
-  </attribute>
-  <attribute>
     <description>PMIC temperature where an error will be generated in degrees C</description>
     <id>PMIC_ERROR_TEMP_DEG_C</id>
     <persistency>non-volatile</persistency>
@@ -6618,7 +6620,7 @@
     <readable />
     <simpleType>
       <int8_t>
-        <default>0x0a</default>
+        <default>0x0</default>
       </int8_t>
     </simpleType>
   </attribute>
@@ -6629,7 +6631,7 @@
     <readable />
     <simpleType>
       <int8_t>
-        <default>0</default>
+        <default>0x0a</default>
       </int8_t>
     </simpleType>
   </attribute>
@@ -7137,6 +7139,18 @@
       <value>1</value>
     </enumerator>
     <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Adjust core, cache, memory controller dials to favor agressive prefetch</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>1</value>
+    </enumerator>
+    <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
   </enumerationType>
   <enumerationType>
     <description>Disable Lateral CastOut mode in the caches</description>
@@ -10112,6 +10126,11 @@
       <description>Do NOT load the PM Complex</description>
       <name>DO_NOT_LOAD</name>
       <value>0x2</value>
+    </enumerator>
+    <enumerator>
+      <description>Skip first load of the PM Complex</description>
+      <name>SKIP_FIRST_LOAD</name>
+      <value>0x3</value>
     </enumerator>
     <id>PM_COMPLEX_LOAD_TYPE</id>
   </enumerationType>

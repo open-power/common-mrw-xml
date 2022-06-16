@@ -1263,9 +1263,6 @@
       <id>N_PLUS_ONE_MAX_MEM_POWER_WATTS</id>
     </attribute>
     <attribute>
-      <id>PLDM_CONNECTOR_PDRS_ENABLED</id>
-    </attribute>
-    <attribute>
       <id>PMIC_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
@@ -1378,6 +1375,9 @@
     </attribute>
     <attribute>
       <id>MRW_CONVERT_DCBZ_TO_RWITM</id>
+    </attribute>
+    <attribute>
+      <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
     </attribute>
     <attribute>
       <id>PROC_LCO_MODE_DISABLE</id>
