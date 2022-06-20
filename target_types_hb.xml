@@ -157,7 +157,7 @@
         </field>
         <field>
           <id>eepromContentType</id>
-          <value>0x4</value>
+          <value>0xFFFFFFFF</value>
         </field>
         <field>
           <id>engine</id>
