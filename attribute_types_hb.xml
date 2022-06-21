@@ -2608,6 +2608,21 @@
     </simpleType>
   </attribute>
   <attribute>
+    <description>Enables DRAM Read CRC</description>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DDR5_DRAM_READ_CRC</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+    <id>MSS_MRW_DDR5_DRAM_READ_CRC</id>
+    <persistency>non-volatile</persistency>
+    <readable />
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+  <attribute>
     <description>Used in MR4 A3 Temperature refresh mode Should be defaulted to disable</description>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_TEMP_REFRESH_MODE</id>
@@ -8524,6 +8539,18 @@
       <value>1</value>
     </enumerator>
     <id>MSS_MRW_DRAM_WRITE_CRC</id>
+  </enumerationType>
+  <enumerationType>
+    <description>Enables DRAM Read CRC</description>
+    <enumerator>
+      <name>DISABLE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLE</name>
+      <value>1</value>
+    </enumerator>
+    <id>MSS_MRW_DDR5_DRAM_READ_CRC</id>
   </enumerationType>
   <enumerationType>
     <description>An override switch to shut off broadcast mode Enum values: YES: broadcast mode is forced off NO: broadcast mode uses the default value</description>
