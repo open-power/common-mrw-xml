@@ -1800,6 +1800,9 @@
       <id>IO_IOHS_PRE2</id>
     </attribute>
     <attribute>
+      <id>IO_IOHS_XTALK</id>
+    </attribute>
+    <attribute>
       <id>FREQ_IOHS_MHZ</id>
     </attribute>
     <attribute>
