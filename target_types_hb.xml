@@ -1858,6 +1858,9 @@
       <id>IO_IOHS_PRE2</id>
     </attribute>
     <attribute>
+      <id>IO_IOHS_XTALK</id>
+    </attribute>
+    <attribute>
       <id>LINK_SPEED</id>
     </attribute>
     <attribute>
