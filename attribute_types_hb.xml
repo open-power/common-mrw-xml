@@ -295,6 +295,22 @@
   </enumerationType>
 
   <attribute>
+    <description>Chip position relative to the "parent" chip of the bus.</description>
+    <id>BUS_POS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0xFF</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_BUS_POS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Cec Degraded Mode Policy flags Use the CDM_POLICIES enum to decode. If the appropriate bit is 1 then the policy mode is enabled, and those type of Guard records are disabled.</description>
     <id>CDM_POLICIES</id>
     <persistency>non-volatile</persistency>

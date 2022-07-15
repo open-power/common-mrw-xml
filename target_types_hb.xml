@@ -155,6 +155,9 @@
     <id>chip-ocmb</id>
     <parent>chip</parent>
     <attribute>
+      <id>BUS_POS</id>
+    </attribute>
+    <attribute>
       <default>
         <field>
           <id>byteAddrOffset</id>
