@@ -155,7 +155,7 @@
     <id>chip-ocmb</id>
     <parent>chip</parent>
     <attribute>
-      <id>BUS_POS</id>
+      <id>CLOCKSTOP_ON_XSTOP</id>
     </attribute>
     <attribute>
       <default>
@@ -214,10 +214,10 @@
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
+      <id>FRU_ID</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
+      <id>IO_TANK_PLL_BYPASS</id>
     </attribute>
     <attribute>
       <id>LOCATION_CODE</id>
@@ -360,9 +360,6 @@
     </attribute>
     <attribute>
       <id>FABRIC_GROUP_ID</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>FREQ_CORE_BOOT_MHZ</id>
@@ -727,9 +724,6 @@
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <id>I2C_DEV_TYPE</id>
     </attribute>
     <attribute>
@@ -831,9 +825,6 @@
         </field>
       </default>
       <id>EEPROM_VPD_PRIMARY_INFO</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>FRU_ID</id>
@@ -952,9 +943,6 @@
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <id>POSITION</id>
     </attribute>
     <attribute>
@@ -995,9 +983,6 @@
     <parent>asic</parent>
     <attribute>
       <id>FAPI_I2C_CONTROL_INFO</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <default>PMIC</default>
@@ -1774,9 +1759,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>CORE</default>
       <id>TYPE</id>
     </attribute>
@@ -1794,9 +1776,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>EQ</default>
       <id>TYPE</id>
     </attribute>
@@ -1810,9 +1789,6 @@
   <targetType>
     <id>unit-fc</id>
     <parent>powerxx-chipunit</parent>
-    <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
     <attribute>
       <default>FC</default>
       <id>TYPE</id>
@@ -1829,9 +1805,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>FREQ_IOHS_LINK_MHZ</id>
@@ -1887,12 +1860,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <id>FREQ_MC_MHZ</id>
     </attribute>
     <attribute>
@@ -1911,9 +1878,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>PROC_DSTLCFG_MMIO_ADDRBIT_POS</id>
@@ -1966,9 +1930,6 @@
       <id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>MEM_PORT</default>
       <id>TYPE</id>
     </attribute>
@@ -1979,9 +1940,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <default>MI</default>
@@ -1999,9 +1957,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <default>NMMU</default>
@@ -2047,9 +2002,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <id>FRU_PATH</id>
     </attribute>
     <attribute>
@@ -2088,9 +2040,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>OMIC</default>
       <id>TYPE</id>
     </attribute>
@@ -2106,9 +2055,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <default>PAU</default>
@@ -2128,9 +2074,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>PAUC</default>
       <id>TYPE</id>
     </attribute>
@@ -2146,9 +2089,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_LANE_REVERSAL</id>
@@ -2180,9 +2120,6 @@
       <id>CHIP_UNIT</id>
     </attribute>
     <attribute>
-      <id>FAPI_POS</id>
-    </attribute>
-    <attribute>
       <default>PERV</default>
       <id>TYPE</id>
     </attribute>
@@ -2198,9 +2135,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>PROC_PCIE_BAR_ENABLE</id>
@@ -2230,9 +2164,6 @@
     <parent>powerxx-chipunit</parent>
     <attribute>
       <id>CHIP_UNIT</id>
-    </attribute>
-    <attribute>
-      <id>FAPI_POS</id>
     </attribute>
     <attribute>
       <id>FRU_PATH</id>
