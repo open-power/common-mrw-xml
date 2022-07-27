@@ -295,22 +295,6 @@
   </enumerationType>
 
   <attribute>
-    <description>Chip position relative to the "parent" chip of the bus.</description>
-    <id>BUS_POS</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>0xFF</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_BUS_POS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <attribute>
     <description>Cec Degraded Mode Policy flags Use the CDM_POLICIES enum to decode. If the appropriate bit is 1 then the policy mode is enabled, and those type of Guard records are disabled.</description>
     <id>CDM_POLICIES</id>
     <persistency>non-volatile</persistency>
@@ -2206,32 +2190,6 @@
       </string>
     </simpleType>
   </attribute>
-
-  <attribute>
-    <description>Logical position of target within a system. This is derived from the SMP location of each processor and each target's relationship to a proc. - PROC = based on SMP groupid+chipid - MEMBUF = PROC:FAPI_POS * [max membuf per proc] - 1st level child unit = [parent chip]:FAPI_POS * [max children of this type per chip] - 2nd+ level child unit = [immediate parent unit]:FAPI_POS * [max units below parent] Note: This should not be used algorithmically by HWPs directly. Note: Value ignores physical drawer boundaries, the value is unique across the entire system. This data is derived from the MRW.</description>
-    <id>FAPI_POS</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint32_t>
-        <default>0xFFFFFFFF</default>
-      </uint32_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_FAPI_POS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <default>NA</default>
-    <description>Enumeration defining special FAPI_POS values</description>
-    <enumerator>
-      <name>NA</name>
-      <value>0xFFFFFFFF</value>
-    </enumerator>
-    <id>FAPI_POS</id>
-  </enumerationType>
 
   <attribute>
     <description>This attribute represents the Maximum number of L2 Line Deletes allowed in the Field. creator: platform (generated based on MRW data)</description>
