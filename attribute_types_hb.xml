@@ -8357,33 +8357,6 @@
   </enumerationType>
 
   <attribute>
-    <description>Adjust core, cache, memory controller dials to favor agressive prefetch</description>
-    <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t/>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <description>Adjust core, cache, memory controller dials to favor agressive prefetch</description>
-    <enumerator>
-      <name>FALSE</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>TRUE</name>
-      <value>1</value>
-    </enumerator>
-    <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
-  </enumerationType>
-
-  <attribute>
     <description>Hardware topology for HDAT creator:MRW consumer:HDAT firmware notes: Hardware Topology 2 Bytes Byte 1: bit 0-3: Node Id bit 4-7: Socket id inside the node bit 8-11: Proc id inside socket bit 12-15:Hub Id inside proc</description>
     <id>PROC_HW_TOPOLOGY</id>
     <persistency>non-volatile</persistency>
