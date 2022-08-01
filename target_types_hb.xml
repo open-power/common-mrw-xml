@@ -1561,9 +1561,6 @@
       <id>PROC_FABRIC_TOPOLOGY_MODE</id>
     </attribute>
     <attribute>
-      <id>PROC_FAVOR_AGGRESSIVE_PREFETCH</id>
-    </attribute>
-    <attribute>
       <id>PROC_IO_READ_TIMEOUT_SEC</id>
     </attribute>
     <attribute>
