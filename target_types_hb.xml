@@ -1654,9 +1654,6 @@
       <id>SYSTEM_VDM_DISABLE</id>
     </attribute>
     <attribute>
-      <id>SYS_CLOCK_DECONFIG_STATE</id>
-    </attribute>
-    <attribute>
       <id>SYS_CLOCK_INTEGRATED_SPARES</id>
     </attribute>
     <attribute>
