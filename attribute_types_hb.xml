@@ -2413,10 +2413,6 @@
       <name>2000</name>
       <value>2000</value>
     </enumerator>
-    <enumerator>
-      <name>2400</name>
-      <value>2400</value>
-    </enumerator>
     <id>FREQ_MC_MHZ</id>
   </enumerationType>
 
@@ -2452,10 +2448,6 @@
     <enumerator>
       <name>32000</name>
       <value>32000</value>
-    </enumerator>
-    <enumerator>
-      <name>38400</name>
-      <value>38400</value>
     </enumerator>
     <id>FREQ_OMI_MHZ</id>
   </enumerationType>
