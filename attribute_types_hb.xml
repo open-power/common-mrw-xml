@@ -1488,7 +1488,7 @@
 
   <enumerationType>
     <default>RAW</default>
-    <description>Enumeration indicating a target's eeprom content type. RAW - eeprom has no specified layout ISDIMM - uses standard JEDEC layout for DDR memory IBM_FRUVPD - uses ipz converged vpd layout with records/keywords for generic FRUs IBM_MVPD - use ipz converged vpd layout with records/keywords for processor modules DDIMM - uses Differential DIMM layout SBE_BOOT_CODE - SBE code SBE_MEASUREMENT_CODE - Measurement code WOF_DATA - WOF data KEYSTORE - Keystore data</description>
+    <description>Enumeration indicating a target's eeprom content type. RAW - eeprom has no specified layout ISDIMM - uses standard JEDEC layout for DDR memory IBM_FRUVPD - uses ipz converged vpd layout with records/keywords for generic FRUs IBM_MVPD - use ipz converged vpd layout with records/keywords for processor modules DDIMM - uses Differential DIMM layout SBE_BOOT_CODE - SBE code SBE_MEASUREMENT_CODE - Measurement code WOF_DATA - WOF data KEYSTORE - Keystore data PLANAR_OCMB_SPD - eeproms found on the backplane for ocmb SPD</description>
     <enumerator>
       <name>RAW</name>
       <value>0</value>
