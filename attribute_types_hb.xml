@@ -3585,6 +3585,35 @@
   </attribute>
 
   <attribute>
+    <description>Indicates if the link is reliant on SMP9 cabling to to connect between drawers. Should be considered valid only if ATTR_IOHS_CONFIG_MODE for the given link is configured as an SMPX or SMPA. Provided by the MRW.</description>
+    <id>IOHS_SMP9_INTERCONNECT</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>FALSE</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IOHS_SMP9_INTERCONNECT</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Indicates if the link is reliant on SMP9 cabling to to connect between drawers. Should be considered valid only if ATTR_IOHS_CONFIG_MODE for the given link is configured as an SMPX or SMPA. Provided by the MRW.</description>
+    <enumerator>
+      <name>FALSE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>TRUE</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>IOHS_SMP9_INTERCONNECT</id>
+  </enumerationType>
+
+  <attribute>
     <description>Specifies if spread spectrum is enabled for the iohs links</description>
     <id>IOHS_SPREAD_SPECTRUM</id>
     <persistency>non-volatile</persistency>
@@ -6828,6 +6857,10 @@
     <enumerator>
       <name>EXPLORER</name>
       <value>0x8</value>
+    </enumerator>
+    <enumerator>
+      <name>ODYSSEY</name>
+      <value>0xB</value>
     </enumerator>
     <enumerator>
       <name>GEMINI</name>
