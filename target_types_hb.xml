@@ -1825,6 +1825,9 @@
       <id>IOHS_LINK_SPLIT</id>
     </attribute>
     <attribute>
+      <id>IOHS_SMP9_INTERCONNECT</id>
+    </attribute>
+    <attribute>
       <id>IO_IOHS_CHANNEL_LOSS</id>
     </attribute>
     <attribute>
