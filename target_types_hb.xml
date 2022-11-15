@@ -1258,9 +1258,6 @@
       <id>PROC_MODULE_TYPE</id>
     </attribute>
     <attribute>
-      <id>RCD_PARITY_RECONFIG_LOOPS_ALLOWED</id>
-    </attribute>
-    <attribute>
       <id>REDUNDANT_CLOCKS</id>
     </attribute>
     <attribute>
