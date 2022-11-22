@@ -1110,6 +1110,15 @@
   </targetType>
 
   <targetType>
+    <id>power_ic</id>
+    <parent>asic</parent>
+    <attribute>
+      <default>POWER_IC</default>
+      <id>TYPE</id>
+    </attribute>
+  </targetType>
+
+  <targetType>
     <id>powerxx-chipunit</id>
     <parent>unit</parent>
     <attribute>
@@ -1797,6 +1806,15 @@
     </attribute>
     <attribute>
       <id>WOF_VRATIO_SELECT</id>
+    </attribute>
+  </targetType>
+
+  <targetType>
+    <id>temp_sensor</id>
+    <parent>asic</parent>
+    <attribute>
+      <default>TEMP_SENSOR</default>
+      <id>TYPE</id>
     </attribute>
   </targetType>
 
