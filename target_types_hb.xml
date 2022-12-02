@@ -153,10 +153,7 @@
 
   <targetType>
     <id>chip-ocmb</id>
-    <parent>chip</parent>
-    <attribute>
-      <id>CLOCKSTOP_ON_XSTOP</id>
-    </attribute>
+    <parent>chip-ocmb-generic</parent>
     <attribute>
       <default>
         <field>
@@ -264,6 +261,17 @@
       <id>EEPROM_VPD_PRIMARY_INFO</id>
     </attribute>
     <attribute>
+      <id>LOCATION_CODE</id>
+    </attribute>
+  </targetType>
+
+  <targetType>
+    <id>chip-ocmb-generic</id>
+    <parent>chip</parent>
+    <attribute>
+      <id>CLOCKSTOP_ON_XSTOP</id>
+    </attribute>
+    <attribute>
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
@@ -271,9 +279,6 @@
     </attribute>
     <attribute>
       <id>IO_TANK_PLL_BYPASS</id>
-    </attribute>
-    <attribute>
-      <id>LOCATION_CODE</id>
     </attribute>
     <attribute>
       <id>MEM_MRW_IS_PLANAR</id>
@@ -301,6 +306,11 @@
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
+  </targetType>
+
+  <targetType>
+    <id>chip-ocmb-planar</id>
+    <parent>chip-ocmb-generic</parent>
   </targetType>
 
   <targetType>
@@ -1650,6 +1660,9 @@
     </attribute>
     <attribute>
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
+    </attribute>
+    <attribute>
+      <id>MSS_OCMB_ODY_OMI_CFG_ENDIAN_CTRL</id>
     </attribute>
     <attribute>
       <id>MSS_OMI_EDPL_DISABLE</id>
