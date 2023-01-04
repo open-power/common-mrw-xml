@@ -1123,6 +1123,9 @@
     <id>power_ic</id>
     <parent>asic</parent>
     <attribute>
+      <id>FAPI_I2C_CONTROL_INFO</id>
+    </attribute>
+    <attribute>
       <default>POWER_IC</default>
       <id>TYPE</id>
     </attribute>
