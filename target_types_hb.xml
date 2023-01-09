@@ -1539,6 +1539,9 @@
       <id>MSS_INTERLEAVE_GRANULARITY</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_ALLOW_DDR5</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
     </attribute>
     <attribute>
