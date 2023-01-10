@@ -5585,6 +5585,35 @@
   </attribute>
 
   <attribute>
+    <description>Used for to determine if DDR5 is supported by this system.</description>
+    <id>MSS_MRW_ALLOW_DDR5</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>REJECT</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_ALLOW_DDR5</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Used for to determine if DDR5 is supported by this system.</description>
+    <enumerator>
+      <name>ALLOW</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>REJECT</name>
+      <value>0</value>
+    </enumerator>
+    <id>MSS_MRW_ALLOW_DDR5</id>
+  </enumerationType>
+
+  <attribute>
     <description>Switch that allows unsupported raw card references by providing a default raw card setting.</description>
     <id>MSS_MRW_ALLOW_UNSUPPORTED_RCW</id>
     <persistency>non-volatile</persistency>
