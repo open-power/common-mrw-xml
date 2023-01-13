@@ -10395,7 +10395,7 @@
     <readable/>
     <simpleType>
       <string>
-        <default>ibm,rainier</default>
+        <default>ibm,unknown</default>
         <sizeInclNull>64</sizeInclNull>
       </string>
     </simpleType>
