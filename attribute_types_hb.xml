@@ -5599,7 +5599,7 @@
     <readable/>
     <simpleType>
       <uint8_t>
-        <default>REJECT</default>
+        <default>ALLOW</default>
       </uint8_t>
     </simpleType>
     <hwpfToHbAttrMap>
