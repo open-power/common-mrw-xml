@@ -1551,6 +1551,9 @@
       <id>MSS_MRW_DDR5_DRAM_READ_CRC</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_DDR5_MAX_DRAM_DATABUS_UTIL</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_DIMM_HEIGHT_MIXING_POLICY</id>
     </attribute>
     <attribute>
