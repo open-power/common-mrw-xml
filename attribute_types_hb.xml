@@ -5707,6 +5707,22 @@
   </enumerationType>
 
   <attribute>
+    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%) for DDR5 config. Used to determine memory throttle values. Max databus utilization on a per port basis Default to 100%</description>
+    <id>MSS_MRW_DDR5_MAX_DRAM_DATABUS_UTIL</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t>
+        <default>0x00002710</default>
+      </uint32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_DDR5_MAX_DRAM_DATABUS_UTIL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>System specific DIMM height mixing plug rule</description>
     <id>MSS_MRW_DIMM_HEIGHT_MIXING_POLICY</id>
     <persistency>non-volatile</persistency>
@@ -5969,7 +5985,7 @@
   </enumerationType>
 
   <attribute>
-    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values. Max databus utilization on a per port basis Default to 90%</description>
+    <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values. Max databus utilization on a per port basis Default to 100%</description>
     <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
     <persistency>non-volatile</persistency>
     <readable/>
