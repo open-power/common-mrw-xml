@@ -914,6 +914,9 @@
       <id>POS_ON_MEM_PORT</id>
     </attribute>
     <attribute>
+      <id>SPPE_TARGET_STATE</id>
+    </attribute>
+    <attribute>
       <id>TEMP_SENSOR_I2C_CONFIG</id>
     </attribute>
     <attribute>
@@ -1880,6 +1883,12 @@
     <id>temp_sensor</id>
     <parent>asic</parent>
     <attribute>
+      <id>SPPE_I2C_DEV_ADDR</id>
+    </attribute>
+    <attribute>
+      <id>SPPE_TARGET_STATE</id>
+    </attribute>
+    <attribute>
       <default>TEMP_SENSOR</default>
       <id>TYPE</id>
     </attribute>
@@ -2125,6 +2134,9 @@
     </attribute>
     <attribute>
       <id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+    </attribute>
+    <attribute>
+      <id>SPPE_TARGET_STATE</id>
     </attribute>
     <attribute>
       <default>MEM_PORT</default>
