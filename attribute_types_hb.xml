@@ -10292,6 +10292,38 @@
   </attribute>
 
   <attribute>
+    <description>The i2c address of the temperature sensor behind the Odyssey. Value is left-justified 7-bit address, e.g. 0x34 not 0x1A</description>
+    <id>SPPE_I2C_DEV_ADDR</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SPPE_I2C_DEV_ADDR</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Contains state information for each Target. Used to sync the fapi2::TargetState from the Host to the SPPE.</description>
+    <id>SPPE_TARGET_STATE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SPPE_TARGET_STATE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <complexType>
       <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only. Default values match OpenBMC implementation.</description>
       <field>
