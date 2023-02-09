@@ -1,0 +1,78 @@
+<partInstance>
+<version>2.10</version>
+<targetInstances>
+<targetPart>
+	<id>Bonnell-2U-MTMS</id>
+	<type>targetoverride-Bonnell-2U-MTMS</type>
+	<is_root>true</is_root>
+	<instance_name>Bonnell-2U-MTMS</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>sys-sys-power8</parent_type>
+	<parent_type>sys-sys-power9</parent_type>
+	<parent_type>sys-sys-power10</parent_type>
+	<child_id>Bonnell-2U-MTMS.1s2u-p10-ioscm</child_id>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>Bonnell-2U-MTMS.1s2u-p10-ioscm</id>
+	<type>override-system-mtm</type>
+	<is_root>false</is_root>
+	<instance_name>Bonnell-2U-MTMS.1s2u-p10-ioscm</instance_name>
+	<position>-1</position>
+	<parent>targetoverride</parent>
+	<parent_type>targetoverride</parent_type>
+	<attribute>
+		<id>CLASS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>GROUP_KEY</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>IM_ID</id>
+		<default>IM-Bonnell</default>
+	</attribute>
+	<attribute>
+		<id>IM_VALUE</id>
+		<default>0x50001001</default>
+	</attribute>
+	<attribute>
+		<id>MRW_ID</id>
+		<default>Bonnell</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>TARGET_OVERRIDE</default>
+	</attribute>
+	<attribute>
+		<id>MTM_NAME</id>
+		<default>9028-21B</default>
+	</attribute>
+	<attribute>
+		<id>TARGET_NAME</id>
+		<default>Bonnell 1s2u P10-ioSCM</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+</targetInstances>
+</partInstance>
