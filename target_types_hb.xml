@@ -6,6 +6,9 @@
       <default>ASIC</default>
       <id>CLASS</id>
     </attribute>
+    <attribute>
+      <id>POSITION</id>
+    </attribute>
   </targetType>
 
   <targetType>
@@ -1057,9 +1060,6 @@
     <parent>asic</parent>
     <attribute>
       <id>FAPI_I2C_CONTROL_INFO</id>
-    </attribute>
-    <attribute>
-      <id>POSITION</id>
     </attribute>
     <attribute>
       <default>MDS_CTLR</default>
