@@ -6062,14 +6062,14 @@
   </enumerationType>
 
   <attribute>
-    <description>Machine Readable Workbook Current Curve Intercept and limit for DIMM Used to calculate throttles to meet regulator current per DIMM limit Per DIMM basis, uses first matching KEY entry For DDIMM, use PMIC SW output that provides worst case throttling KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-39): Current limit (dA) DDIMM: PMIC output current limit per DDIMM non-DDIMM: VMEM regulator current limit per DIMM VALUE (bits 40-51): Current slope (cA/utilization) DDIMM: PMIC output current slope per DDIMM non-DDIMM: VMEM regulator current slope per DIMM VALUE (bits 52-63): Current intercept (cA) DDIMM: PMIC output current intercept per DDIMM non-DDIMM: VMEM regulator current intercept per DIMM</description>
+    <description>Machine Readable Workbook Current Curve Intercept and limit for DIMM Used to calculate throttles to meet regulator current per DIMM limit Per DIMM basis, uses first matching KEY entry For DDIMM, use PMIC SW output that provides worst case throttling KEY (0-27): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = Bits 22-25, DIMM_ATTACHED = 26-27, Bits 28-31: Not used VALUE (bits 32-39): Current limit (dA) DDIMM: PMIC output current limit per DDIMM non-DDIMM: VMEM regulator current limit per DIMM VALUE (bits 40-51): Current slope (cA/utilization) DDIMM: PMIC output current slope per DDIMM non-DDIMM: VMEM regulator current slope per DIMM VALUE (bits 52-63): Current intercept (cA) DDIMM: PMIC output current intercept per DDIMM non-DDIMM: VMEM regulator current intercept per DIMM</description>
     <id>MSS_MRW_OCMB_CURRENT_CURVE_WITH_LIMIT</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <array>25</array>
       <uint64_t>
-        <default>0xFFFFFC0064152094</default>
+        <default>0xFFFFFC3064152094</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6079,14 +6079,14 @@
   </attribute>
 
   <attribute>
-    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: DIMM power intercept DDIMM: Total OCMB+DRAM power intercept per DDIMM non-DDIMM: VMEM+VPP power intercept per DIMM</description>
+    <description>Machine Readable Workbook Power Curve Intercept for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-27): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = Bits 22-25 (Number of configured DIMMs under processor (supported values are 2,4,6,8,16,32) 0b0000 = 2 DIMMs 0b0001 = 4 DIMMs 0b0010 = 6 DIMMs 0b0011 = 8 DIMMs 0b0100 = 16 DIMMs 0b0101 = 32 DIMMs 0b1111 = wildcard, DIMM_ATTACHED = 26-27, Bits 28-31: Not used VALUE (bits 32-47) in cW/utilization: DIMM power intercept DDIMM: Total OCMB+DRAM power intercept per DDIMM non-DDIMM: VMEM+VPP power intercept per DIMM</description>
     <id>MSS_MRW_OCMB_PWR_INTERCEPT</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xfffffc0005260000</default>
+        <default>0xFFFFFC3005260000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6096,14 +6096,14 @@
   </attribute>
 
   <attribute>
-    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW/utilization: DIMM power slope DDIMM: Total OCMB+DRAM power slope per DDIMM non-DDIMM: VMEM+VPP power slope per DIMM</description>
+    <description>Machine Readable Workbook Power Curve Slope for DIMM Used to calculate thermal throttles and port power Per DIMM basis, uses first matching KEY entry KEY (0-27): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = Bits 22-25, DIMM_ATTACHED = 26-27, Bits 28-31: Not used VALUE (bits 32-47) in cW/utilization: DIMM power slope DDIMM: Total OCMB+DRAM power slope per DDIMM non-DDIMM: VMEM+VPP power slope per DIMM</description>
     <id>MSS_MRW_OCMB_PWR_SLOPE</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xfffffc0004620000</default>
+        <default>0xFFFFFC3004620000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6128,14 +6128,14 @@
   </attribute>
 
   <attribute>
-    <description>Memory safemode throttle settings based on DIMM configurations Key Value pair KEY (0-25): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = Bits 22-25 (Number of configured DIMMs under processor (supported values are 2,4,6,8,16,32) 0b0000 = 2 DIMMs 0b0001 = 4 DIMMs 0b0010 = 6 DIMMs 0b0011 = 8 DIMMs 0b0100 = 16 DIMMs 0b0101 = 32 DIMMs 0b1111 = wildcard Bits 26-31: Not used VALUE (bits 32-47) safemode dram data bus utilization in c%</description>
+    <description>Memory safemode throttle settings based on DIMM configurations Key Value pair KEY (0-27): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = Bits 22-25 (Number of configured DIMMs under processor (supported values are 2,4,6,8,16,32) 0b0000 = 2 DIMMs 0b0001 = 4 DIMMs 0b0010 = 6 DIMMs 0b0011 = 8 DIMMs 0b0100 = 16 DIMMs 0b0101 = 32 DIMMs 0b1111 = wildcard, DIMM_ATTACHED = 26-27, Bits 28-31: Not used VALUE (bits 32-47) safemode dram data bus utilization in c%</description>
     <id>MSS_MRW_OCMB_SAFEMODE_UTIL_ARRAY</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xFFFFFFC009C40000</default>
+        <default>0xFFFFFFF009C40000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6145,14 +6145,14 @@
   </attribute>
 
   <attribute>
-    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to meet the thermal power per DIMM limit Per DIMM basis, uses first matching KEY entry KEY (0-21): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, Bits 22-32: Not used VALUE (bits 32-47) in cW: thermal power limit DDIMM: Total OCMB+DRAM power limit per DDIMM non-DDIMM: VMEM+VPP power limit per DIMM</description>
+    <description>Machine Readable Workbook Thermal Memory Power Limit Used to calculate throttles to meet the thermal power per DIMM limit Per DIMM basis, uses first matching KEY entry KEY (0-27): In order DIMM_SIZE = bits 0-3, DIMM_GEN = 4-5, DIMM_TYPE = 6-8, DIMM_WIDTH = 9-11, DIMM_DENSITY = 12-14, DIMM_STACK_TYPE = 15-16, DRAM_MFGID = 17-19, DIMM_HEIGHT = 20-21, DIMM_COUNT = 22-25, DIMM_ATTACHED = 26-27, Bits 28-31: Not used VALUE (bits 32-47) in cW: thermal power limit DDIMM: Total OCMB+DRAM power limit per DDIMM non-DDIMM: VMEM+VPP power limit per DIMM</description>
     <id>MSS_MRW_OCMB_THERMAL_MEMORY_POWER_LIMIT</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <array>25</array>
       <uint64_t>
-        <default>0xfffffc0009c40000</default>
+        <default>0xFFFFFC3009C40000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6399,7 +6399,7 @@
     <readable/>
     <simpleType>
       <uint8_t>
-        <default>0xc0</default>
+        <default>0xC0</default>
       </uint8_t>
     </simpleType>
     <hwpfToHbAttrMap>

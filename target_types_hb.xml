@@ -278,6 +278,9 @@
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
+      <id>FREQ_OMI_MHZ</id>
+    </attribute>
+    <attribute>
       <id>FRU_ID</id>
     </attribute>
     <attribute>
