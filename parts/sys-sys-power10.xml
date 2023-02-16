@@ -436,21 +436,12 @@
       <id>BMC_FRU_ID</id>
     </attribute>
     <attribute>
-      <id>BRAZOS_RX_FIFO_OVERRIDE</id>
-    </attribute>
-    <attribute>
-      <id>CDM_POLICIES</id>
-    </attribute>
-    <attribute>
       <id>CHECK_SCRIPT</id>
       <default>run_checks.pl</default>
     </attribute>
     <attribute>
       <id>CLASS</id>
       <default>SYS</default>
-    </attribute>
-    <attribute>
-      <id>DO_ABUS_DECONFIG</id>
     </attribute>
     <attribute>
       <id>EXECUTION_PLATFORM</id>
@@ -471,9 +462,6 @@
     <attribute>
     	<id>LED-STRATEGY</id>
     </attribute>    
-    <attribute>
-      <id>MAX_CHIPLETS_PER_PROC</id>
-    </attribute>
     <attribute>
       <id>MAX_DIMMS_PER_MBA_PORT</id>
     </attribute>
@@ -500,39 +488,6 @@
     </attribute>
     <attribute>
       <id>MNFG_FLAGS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_L4_CACHE_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_IPL_SOFT_CE_TH_ALGO</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_RT_RCE_PER_RANK</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_CEN_MBA_RT_SOFT_CE_TH_ALGO</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_DIR_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L2_LINE_DELETES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_CACHE_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_COL_REPAIRS</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_DIR_CES</id>
-    </attribute>
-    <attribute>
-      <id>MNFG_TH_P8EX_L3_LINE_DELETES</id>
     </attribute>
     <attribute>
       <id>MNFG_XBUS_MIN_EYE_WIDTH</id>
@@ -651,9 +606,6 @@
       <id>PROC_EPS_TABLE_TYPE</id>
     </attribute>
     <attribute>
-      <id>PROC_FABRIC_PUMP_MODE</id>
-    </attribute>
-    <attribute>
       <id>PROC_REFCLOCK_RCVR_TERM</id>
     </attribute>
     <attribute>
@@ -680,12 +632,6 @@
     <attribute>
       <id>TYPE</id>
       <default>SYS</default>
-    </attribute>
-    <attribute>
-      <id>X_EREPAIR_THRESHOLD_FIELD</id>
-    </attribute>
-    <attribute>
-      <id>X_EREPAIR_THRESHOLD_MNFG</id>
     </attribute>
     <attribute>
       <id>SYSTEM_NAME</id>

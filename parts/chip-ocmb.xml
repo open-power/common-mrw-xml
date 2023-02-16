@@ -70,10 +70,6 @@
 		<default>NA</default>
 	</attribute>
 	<attribute>
-		<id>CDM_DOMAIN</id>
-		<default>MEM</default>
-	</attribute>
-	<attribute>
 		<id>CHIPLET_ID</id>
 		<default>0xFF</default>
 	</attribute>
@@ -100,10 +96,6 @@
 	<attribute>
 		<id>OMI_DL_NUM</id>
 		<default>0xFF</default>
-	</attribute>
-	<attribute>
-		<id>OMI_INBAND_BAR_BASE_ADDR_OFFSET</id>
-		<default></default>
 	</attribute>
 	<attribute>
 		<id>OMI_REFCLOCK_SWIZZLE</id>

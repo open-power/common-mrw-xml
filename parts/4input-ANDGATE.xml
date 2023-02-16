@@ -20,10 +20,6 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>CHIP_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
 	</attribute>
@@ -38,10 +34,6 @@
 	<attribute>
 		<id>MODEL</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRU_ID</id>
-		<default>0</default>
 	</attribute>
 	<attribute>
 		<id>MRW_TYPE</id>
