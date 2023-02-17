@@ -19,22 +19,6 @@
 		<default>NA</default>
 	</attribute>
 	<attribute>
-		<id>CDM_DOMAIN</id>
-		<default>DIMM</default>
-	</attribute>
-	<attribute>
-		<id>CEN_DQ_TO_DIMM_CONN_DQ</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CEN_MBA_DIMM</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>CEN_MBA_PORT</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>CLASS</id>
 		<default>LOGICAL_CARD</default>
 	</attribute>

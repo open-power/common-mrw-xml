@@ -46,10 +46,6 @@
   <targetPart>
     <id>enc-node-power10</id>
     <attribute>
-      <id>CDM_DOMAIN</id>
-      <default>NODE</default>
-    </attribute>
-    <attribute>
       <id>CLASS</id>
       <default>ENC</default>
     </attribute>

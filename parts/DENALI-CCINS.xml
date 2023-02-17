@@ -54,42 +54,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -101,21 +70,8 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -179,42 +135,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -226,21 +151,8 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -277,42 +189,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -324,25 +205,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -391,42 +259,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -438,25 +275,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -505,42 +329,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -552,25 +345,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -619,42 +399,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -666,25 +415,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -733,42 +469,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -780,25 +485,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -847,42 +539,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -894,25 +555,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -961,42 +609,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1008,25 +625,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1075,42 +679,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1122,25 +695,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1189,42 +749,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1236,25 +765,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1303,42 +819,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1350,25 +835,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1417,42 +889,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1464,25 +905,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1531,42 +959,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1578,25 +975,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1645,42 +1029,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1692,25 +1045,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1759,42 +1099,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1806,25 +1115,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1873,42 +1169,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -1920,25 +1185,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -1987,42 +1239,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2034,25 +1255,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2101,42 +1309,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2148,25 +1325,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2215,42 +1379,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2262,25 +1395,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2329,42 +1449,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2376,25 +1465,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2443,42 +1519,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2490,25 +1535,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2557,42 +1589,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2604,25 +1605,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2671,42 +1659,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2718,25 +1675,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2785,42 +1729,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2832,25 +1745,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -2899,42 +1799,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -2946,25 +1815,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3013,42 +1869,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3060,25 +1885,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3127,42 +1939,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3174,25 +1955,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3241,42 +2009,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3288,25 +2025,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3355,42 +2079,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3402,25 +2095,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3469,42 +2149,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3516,25 +2165,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3583,42 +2219,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3630,25 +2235,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3697,42 +2289,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3744,25 +2305,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3811,42 +2359,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3858,25 +2375,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -3925,42 +2429,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -3972,25 +2445,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
@@ -4039,42 +2499,11 @@
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>DECONFIG_GARDABLE</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
 		<id>FAPI_NAME</id>
 		<default></default>
 	</attribute>
 	<attribute>
-		<id>FAPI_POS</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>GROUP_KEY</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HUID</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE</id>
-		<default>
-				<field><id>deconfiguredByEid</id><value></value></field>
-				<field><id>poweredOn</id><value></value></field>
-				<field><id>present</id><value></value></field>
-				<field><id>functional</id><value></value></field>
-				<field><id>dumpfunctional</id><value></value></field>
-				<field><id>specdeconfig</id><value></value></field>
-		</default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_FLAG</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>HWAS_STATE_CHANGED_SUBSCRIPTION_MASK</id>
 		<default></default>
 	</attribute>
 	<attribute>
@@ -4086,25 +2515,12 @@
 		<default>TARGET_OVERRIDE</default>
 	</attribute>
 	<attribute>
-		<id>ORDINAL_ID</id>
-		<default></default>
-	</attribute>
-	<attribute>
 		<id>PART_NUMBER</id>
 		<default></default>
 	</attribute>
 	<attribute>
 		<id>PHYS_PATH</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>PRIMARY_CAPABILITIES</id>
-		<default>
-				<field><id>supportsFsiScom</id><value></value></field>
-				<field><id>supportsXscom</id><value></value></field>
-				<field><id>supportsInbandScom</id><value></value></field>
-				<field><id>reserved</id><value></value></field>
-		</default>
 	</attribute>
 	<attribute>
 		<id>RESOURCE_IS_CRITICAL</id>
