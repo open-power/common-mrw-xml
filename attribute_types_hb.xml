@@ -4386,6 +4386,18 @@
   </attribute>
 
   <attribute>
+    <description>Attribute to determine if this is full system or standalone simics config. Useful for when full system configs should behave different from standalone. 1 = Standalone simics 0 = Full system hardware or simics</description>
+    <id>IS_STANDALONE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>Weight factor (1 = 0.1) for each L3 DTS to calculate a core temperature. A value of 0 means not to include L3 DTS in core temperature.</description>
     <id>L3_WEIGHT_TENTHS</id>
     <persistency>non-volatile</persistency>

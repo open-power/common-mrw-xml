@@ -317,6 +317,10 @@
   <targetType>
     <id>chip-ocmb-planar</id>
     <parent>chip-ocmb-generic</parent>
+    <attribute>
+      <default>TRUE</default>
+      <id>MEM_MRW_IS_PLANAR</id>
+    </attribute>
   </targetType>
 
   <targetType>
@@ -1199,6 +1203,10 @@
     </attribute>
     <attribute>
       <id>HB_SETTINGS</id>
+    </attribute>
+    <attribute>
+      <default>0x0</default>
+      <id>IS_STANDALONE</id>
     </attribute>
     <attribute>
       <id>MNFG_TH_L2_CACHE_CES</id>
