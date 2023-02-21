@@ -317,6 +317,10 @@
   <targetType>
     <id>chip-ocmb-planar</id>
     <parent>chip-ocmb-generic</parent>
+    <attribute>
+      <default>TRUE</default>
+      <id>MEM_MRW_IS_PLANAR</id>
+    </attribute>
   </targetType>
 
   <targetType>
