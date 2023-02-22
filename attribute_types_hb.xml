@@ -3635,6 +3635,45 @@
   </attribute>
 
   <attribute>
+    <description>Array of system maximum power caps in output watts from MRW when system config in INDEX_POWER_LIMIT_CONFIG matches, and system is oversubscribed.</description>
+    <id>INDEX_N_BULK_POWER_LIMIT_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>12</array>
+      <uint16_t>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
+    <description>Array of system maximum power cap in output watts from MRW when system config in INDEX_POWER_LIMIT_CONFIG matches, and system has redundant power supplies (not oversubscribed).</description>
+    <id>INDEX_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>12</array>
+      <uint16_t>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
+    <description>Array of PS Configs that need special N, N+1 bulk power limits. This index from this array must match the index for needed power limits in INDEX_N_BULK_POWER_LIMIT_WATTS and INDEX_N_PLUS_ONE_BULK_POWER_LIMIT_WATTS. Power Supply Config Format: Byte 0,1 : CCIN Not_Used(0000), CCIN, Any(FFFF) Byte 2 : Type Not_Used(00), 110(01), 220(02) Byte 3 : #_PS Not_Used(00), Number of PS should be installed.</description>
+    <id>INDEX_POWER_LIMIT_CONFIG</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>12</array>
+      <uint32_t>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+      </uint32_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>Per-link optics configuration OPT0 = SMPA/SMPX/OCAPI OPT1 = SMPA/SMPX OPT2 = SMPA/SMPX OPT3 = SMPA/SMPX/OCAPI OPT4 = SMPA/SMPX/OCAPI OPT5 = SMPA/SMPX/OCAPI OPT6 = SMPA/SMPX/OCAPI OPT7 = SMPA/SMPX/OCAPI Provided by the MRW.</description>
     <global/>
     <id>IOHS_CONFIG_MODE</id>
@@ -7414,7 +7453,7 @@
   </attribute>
 
   <attribute>
-    <description>System maximum power cap in output watts when Quick Power Drop line is asserted. This value must guarantee WOF base.</description>
+    <description>System maximum power cap in output watts from MRW when system is oversubscribed.</description>
     <id>N_BULK_POWER_LIMIT_WATTS</id>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -7438,7 +7477,7 @@
   </attribute>
 
   <attribute>
-    <description>System maximum power cap in output watts when Quick Power Drop line is not asserted. (redundant power supplies) This value must guarantee WOF base.</description>
+    <description>System maximum power cap in output watts from MRW when system has redundant power supplies (not oversubscribed).</description>
     <id>N_PLUS_ONE_BULK_POWER_LIMIT_WATTS</id>
     <persistency>non-volatile</persistency>
     <readable/>
