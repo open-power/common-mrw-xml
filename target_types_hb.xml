@@ -309,6 +309,21 @@
       <id>OCMB_COUNTER</id>
     </attribute>
     <attribute>
+      <id>OMI_BIST_DAC_TEST</id>
+    </attribute>
+    <attribute>
+      <id>OMI_BIST_ESD_TEST</id>
+    </attribute>
+    <attribute>
+      <id>OMI_BIST_TIMER</id>
+    </attribute>
+    <attribute>
+      <id>OMI_RX_LANES</id>
+    </attribute>
+    <attribute>
+      <id>OMI_TX_LANES</id>
+    </attribute>
+    <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
