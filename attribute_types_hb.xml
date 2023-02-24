@@ -7557,6 +7557,80 @@
   </enumerationType>
 
   <attribute>
+    <description>Specifies if the BIST DAC test is going to run</description>
+    <id>OMI_BIST_DAC_TEST</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_BIST_DAC_TEST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies if the BIST DAC test is going to run</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>OMI_BIST_DAC_TEST</id>
+  </enumerationType>
+
+  <attribute>
+    <description>Specifies if the BIST ESD test is going to run</description>
+    <id>OMI_BIST_ESD_TEST</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_BIST_ESD_TEST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies if the BIST ESD test is going to run</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>OMI_BIST_ESD_TEST</id>
+  </enumerationType>
+
+  <attribute>
+    <description>Specifies the BIST timer value.</description>
+    <id>OMI_BIST_TIMER</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>5</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_BIST_TIMER</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
     <id>OMI_DL_GROUP_POS</id>
     <persistency>non-volatile</persistency>
@@ -7604,6 +7678,39 @@
   </attribute>
 
   <attribute>
+    <description>Specifies the number of Rx lanes.</description>
+    <id>OMI_RX_LANES</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t>
+        <default>X8</default>
+      </uint32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_LANES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies the number of Rx lanes.</description>
+    <enumerator>
+      <name>X8</name>
+      <value>0xFF</value>
+    </enumerator>
+    <enumerator>
+      <name>X4</name>
+      <value>0xA5</value>
+    </enumerator>
+    <enumerator>
+      <name>X2</name>
+      <value>0x81</value>
+    </enumerator>
+    <id>OMI_RX_LANES</id>
+  </enumerationType>
+
+  <attribute>
     <description>Specifies if spread spectrum is enabled for the OMI links</description>
     <id>OMI_SPREAD_SPECTRUM</id>
     <persistency>non-volatile</persistency>
@@ -7630,6 +7737,39 @@
       <value>0x00</value>
     </enumerator>
     <id>OMI_SPREAD_SPECTRUM</id>
+  </enumerationType>
+
+  <attribute>
+    <description>Specifies the number of Tx lanes.</description>
+    <id>OMI_TX_LANES</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t>
+        <default>X8</default>
+      </uint32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_TX_LANES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies the number of Tx lanes.</description>
+    <enumerator>
+      <name>X8</name>
+      <value>0xFF</value>
+    </enumerator>
+    <enumerator>
+      <name>X4</name>
+      <value>0xA5</value>
+    </enumerator>
+    <enumerator>
+      <name>X2</name>
+      <value>0x81</value>
+    </enumerator>
+    <id>OMI_TX_LANES</id>
   </enumerationType>
 
   <attribute>
