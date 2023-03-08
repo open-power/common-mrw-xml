@@ -6108,7 +6108,7 @@
     <simpleType>
       <array>25</array>
       <uint64_t>
-        <default>0xFFFFFC3064152094</default>
+        <default>0xFFFFFC0064152094</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6125,7 +6125,7 @@
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xFFFFFC3005260000</default>
+        <default>0xFFFFFC0005260000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6142,7 +6142,7 @@
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xFFFFFC3004620000</default>
+        <default>0xFFFFFC0004620000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6174,7 +6174,7 @@
     <simpleType>
       <array>50</array>
       <uint64_t>
-        <default>0xFFFFFFF009C40000</default>
+        <default>0xFFFFFFC009C40000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -6191,7 +6191,7 @@
     <simpleType>
       <array>25</array>
       <uint64_t>
-        <default>0xFFFFFC3009C40000</default>
+        <default>0xFFFFFC0009C40000</default>
       </uint64_t>
     </simpleType>
     <hwpfToHbAttrMap>
