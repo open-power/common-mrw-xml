@@ -272,9 +272,6 @@
     <id>chip-ocmb-generic</id>
     <parent>chip</parent>
     <attribute>
-      <id>CLOCKSTOP_ON_XSTOP</id>
-    </attribute>
-    <attribute>
       <id>FAPI_I2C_CONTROL_INFO</id>
     </attribute>
     <attribute>
@@ -361,9 +358,6 @@
     </attribute>
     <attribute>
       <id>CHIP_CONTAINED_BACKING_CACHES_VEC</id>
-    </attribute>
-    <attribute>
-      <id>CLOCKSTOP_ON_XSTOP</id>
     </attribute>
     <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
