@@ -7595,6 +7595,22 @@
   </attribute>
 
   <attribute>
+    <description>Specifies the Channel Length in Mils</description>
+    <id>OMI_CHANNEL_LENGTH</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t>
+        <default>0</default>
+      </uint32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_CHANNEL_LENGTH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>An OMI target's relative logical postion to its OMIC parent target. pos | DL_GROUP_POS -----+-------------- 4 | 0 5 | 1 6 | 2 7 | 0 2 | 1 3 | 2 0 | 0 1 | 1 12 | 0 13 | 1 14 | 2 15 | 0 10 | 1 11 | 2 8 | 0 9 | 1</description>
     <id>OMI_DL_GROUP_POS</id>
     <persistency>non-volatile</persistency>
@@ -7642,6 +7658,22 @@
   </attribute>
 
   <attribute>
+    <description>OMI Rx Horizontal Offset for Functional Margining</description>
+    <id>OMI_RX_HORIZ_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_HORIZ_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Specifies the number of Rx lanes.</description>
     <id>OMI_RX_LANES</id>
     <persistency>non-volatile</persistency>
@@ -7661,18 +7693,82 @@
     <description>Specifies the number of Rx lanes.</description>
     <enumerator>
       <name>X8</name>
-      <value>0xFF</value>
+      <value>0xFF000000</value>
     </enumerator>
     <enumerator>
       <name>X4</name>
-      <value>0xA5</value>
+      <value>0xA5000000</value>
     </enumerator>
     <enumerator>
       <name>X2</name>
-      <value>0x81</value>
+      <value>0x81000000</value>
     </enumerator>
     <id>OMI_RX_LANES</id>
   </enumerationType>
+
+  <attribute>
+    <description>OMI Rx LTE Gain</description>
+    <id>OMI_RX_LTEG</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <int32_t>
+        <default>-1</default>
+      </int32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_LTEG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Rx LTE Zero</description>
+    <id>OMI_RX_LTEZ</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <int32_t>
+        <default>-1</default>
+      </int32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_LTEZ</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Rx Phase Step (RX CDR Bandwidth)</description>
+    <id>OMI_RX_PHASE_STEP</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <int32_t>
+        <default>-1</default>
+      </int32_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_PHASE_STEP</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Rx Vertical Offset for Functional Margining</description>
+    <id>OMI_RX_VERT_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_VERT_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
 
   <attribute>
     <description>Specifies if spread spectrum is enabled for the OMI links</description>
@@ -7723,18 +7819,66 @@
     <description>Specifies the number of Tx lanes.</description>
     <enumerator>
       <name>X8</name>
-      <value>0xFF</value>
+      <value>0xFF000000</value>
     </enumerator>
     <enumerator>
       <name>X4</name>
-      <value>0xA5</value>
+      <value>0xA5000000</value>
     </enumerator>
     <enumerator>
       <name>X2</name>
-      <value>0x81</value>
+      <value>0x81000000</value>
     </enumerator>
     <id>OMI_TX_LANES</id>
   </enumerationType>
+
+  <attribute>
+    <description>OMI Tx Post Cursor</description>
+    <id>OMI_TX_POST</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_TX_POST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Tx Pre1 Cursor</description>
+    <id>OMI_TX_PRE1</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_TX_PRE1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Tx Pre2 Cursor</description>
+    <id>OMI_TX_PRE2</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_TX_PRE2</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
 
   <attribute>
     <description>Selects the settings for Host and Explorer FIRs for when x4 channel degrade occurs. Default: RECOVERABLE (channel degrade will cause recoverable error) Performance team request is to XSTOP when degrade occurs</description>
