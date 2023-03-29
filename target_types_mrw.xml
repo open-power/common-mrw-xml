@@ -939,6 +939,30 @@
 		</attribute>
 	</targetType>	
 	<targetType>
+		<id>unit-ddr5-jedec</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MODEL</id>
+			<default>JEDEC</default>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>DDR5</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>connector-cdimm-cdimm</id>
 		<parent>connector</parent>
 		<parent_type>card-motherboard</parent_type>
@@ -3082,6 +3106,13 @@
 	</targetType>
 	<targetType>
 		<id>DDR4</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>DDR5</id>
 		<attribute>
 			<id>CLASS</id>
 			<default>BUS</default>

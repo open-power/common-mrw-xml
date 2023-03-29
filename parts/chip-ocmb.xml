@@ -7,13 +7,15 @@
 	<is_root>false</is_root>
 	<instance_name>ocmb</instance_name>
 	<position>-1</position>
-	<parent>chip</parent>
+	<parent>chip-ocmb-generic</parent>
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>ocmb.omi</child_id>
-	<child_id>ocmb.i2c-ocmb</child_id>
+	<child_id>ocmb.i2c-ocmb-master</child_id>
+	<child_id>ocmb.i2c-ocmb-slave</child_id>
 	<child_id>ocmb.i2c-ts0</child_id>
 	<child_id>ocmb.i2c-ts1</child_id>
+	<child_id>ocmb.i2c-ts2</child_id>
 	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
@@ -115,10 +117,50 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>ocmb.i2c-ocmb</id>
+	<id>ocmb.i2c-ocmb-master</id>
+	<type>unit-i2c-master</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.i2c-ocmb-master</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>I2C</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>VPD_SIZE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>ocmb.i2c-ocmb-slave</id>
 	<type>unit-i2c-slave</type>
 	<is_root>false</is_root>
-	<instance_name>ocmb.i2c-ocmb</instance_name>
+	<instance_name>ocmb.i2c-ocmb-slave</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
@@ -199,6 +241,46 @@
 	<type>unit-i2c-slave</type>
 	<is_root>false</is_root>
 	<instance_name>ocmb.i2c-ts1</instance_name>
+	<position>-1</position>
+	<parent>mrw-unit</parent>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>I2C</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>VPD_SIZE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>ocmb.i2c-ts2</id>
+	<type>unit-i2c-slave</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.i2c-ts2</instance_name>
 	<position>-1</position>
 	<parent>mrw-unit</parent>
 	<attribute>
