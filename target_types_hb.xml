@@ -348,9 +348,6 @@
       <id>OMI_TX_PRE2</id>
     </attribute>
     <attribute>
-      <id>SCAN0_SCAN_RATIO</id>
-    </attribute>
-    <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
@@ -607,9 +604,6 @@
     </attribute>
     <attribute>
       <id>SAFE_MODE_THROTTLE_IDX</id>
-    </attribute>
-    <attribute>
-      <id>SCAN0_SCAN_RATIO</id>
     </attribute>
     <attribute>
       <id>SKEWADJ_BYPASS</id>
