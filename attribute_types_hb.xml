@@ -10192,22 +10192,6 @@
   </enumerationType>
 
   <attribute>
-    <description>To choose scan ratio value for SCAN0 operation</description>
-    <id>SCAN0_SCAN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SCAN0_SCAN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <attribute>
     <description>Sector buffer strength</description>
     <id>SECTOR_BUFFER_STRENGTH</id>
     <persistency>non-volatile</persistency>
