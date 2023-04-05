@@ -351,6 +351,9 @@
       <id>SCAN0_SCAN_RATIO</id>
     </attribute>
     <attribute>
+      <id>SPPE_BOOT_SIDE</id>
+    </attribute>
+    <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
@@ -625,6 +628,9 @@
     </attribute>
     <attribute>
       <id>SPI_SBE_BOOT_CODE_PRIMARY_INFO_CALLOUTS</id>
+    </attribute>
+    <attribute>
+      <id>SPPE_BOOT_SIDE</id>
     </attribute>
     <attribute>
       <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>

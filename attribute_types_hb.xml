@@ -10595,6 +10595,37 @@
   </attribute>
 
   <attribute>
+    <description>Controls the SBE boot side, written to SB_CS prior to sbe boot</description>
+    <id>SPPE_BOOT_SIDE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SPPE_BOOT_SIDE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Controls the SBE boot side, written to SB_CS prior to sbe boot</description>
+    <enumerator>
+      <name>SIDE0</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>SIDE1</name>
+      <value>0x1</value>
+    </enumerator>
+    <enumerator>
+      <name>GOLDEN</name>
+      <value>0x2</value>
+    </enumerator>
+    <id>SPPE_BOOT_SIDE</id>
+  </enumerationType>
+
+  <attribute>
     <complexType>
       <description>Structure which defines a system's SP functions. Applicable for System target only. Structure is read-only. Default values match OpenBMC implementation.</description>
       <field>
