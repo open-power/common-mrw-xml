@@ -7713,7 +7713,7 @@
     <readable/>
     <simpleType>
       <int32_t>
-        <default>-1</default>
+        <default>7</default>
       </int32_t>
     </simpleType>
     <hwpfToHbAttrMap>
@@ -7729,7 +7729,7 @@
     <readable/>
     <simpleType>
       <int32_t>
-        <default>-1</default>
+        <default>0</default>
       </int32_t>
     </simpleType>
     <hwpfToHbAttrMap>
