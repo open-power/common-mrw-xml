@@ -7658,8 +7658,8 @@
   </attribute>
 
   <attribute>
-    <description>OMI Rx Horizontal Offset for Functional Margining</description>
-    <id>OMI_RX_HORIZ_OFFSET</id>
+    <description>OMI Rx Horizontal Data Offset for Functional Margining</description>
+    <id>OMI_RX_HORIZ_DATA_OFFSET</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
@@ -7668,7 +7668,23 @@
       </uint8_t>
     </simpleType>
     <hwpfToHbAttrMap>
-      <id>ATTR_OMI_RX_HORIZ_OFFSET</id>
+      <id>ATTR_OMI_RX_HORIZ_DATA_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>OMI Rx Horizontal Edge Offset for Functional Margining</description>
+    <id>OMI_RX_HORIZ_EDGE_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_RX_HORIZ_EDGE_OFFSET</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
