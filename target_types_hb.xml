@@ -648,6 +648,9 @@
     <attribute>
       <id>WOF_IO_BASE_POWER_0P01W</id>
     </attribute>
+    <attribute>
+      <id>WOF_IO_POWER_MODE</id>
+    </attribute>
   </targetType>
 
   <targetType>
