@@ -11873,6 +11873,35 @@
   </attribute>
 
   <attribute>
+    <description>Value of attribute determines if DLR is done or a static computation is done with updated dynamic configuration.</description>
+    <id>WOF_IO_POWER_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>STATIC</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WOF_IO_POWER_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Value of attribute determines if DLR is done or a static computation is done with updated dynamic configuration.</description>
+    <enumerator>
+      <name>STATIC</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>DYNAMIC</name>
+      <value>1</value>
+    </enumerator>
+    <id>WOF_IO_POWER_MODE</id>
+  </enumerationType>
+
+  <attribute>
     <description>System control to set the power limit for Workload Optimized Frequency (WOF) algorithms. This is used to select the proper VFRT tables. Producer: TMGT Consumers: FW that selects VFRT tables</description>
     <id>WOF_POWER_LIMIT</id>
     <persistency>non-volatile</persistency>
