@@ -351,12 +351,6 @@
       <id>OMI_TX_PRE2</id>
     </attribute>
     <attribute>
-      <id>SCAN0_SCAN_RATIO</id>
-    </attribute>
-    <attribute>
-      <id>SPPE_BOOT_SIDE</id>
-    </attribute>
-    <attribute>
       <default>OCMB_CHIP</default>
       <id>TYPE</id>
     </attribute>
@@ -615,9 +609,6 @@
       <id>SAFE_MODE_THROTTLE_IDX</id>
     </attribute>
     <attribute>
-      <id>SCAN0_SCAN_RATIO</id>
-    </attribute>
-    <attribute>
       <id>SKEWADJ_BYPASS</id>
     </attribute>
     <attribute>
@@ -633,9 +624,6 @@
       <id>SPI_SBE_BOOT_CODE_PRIMARY_INFO_CALLOUTS</id>
     </attribute>
     <attribute>
-      <id>SPPE_BOOT_SIDE</id>
-    </attribute>
-    <attribute>
       <id>SYS_CLK_NE_TERMINATION_STRENGTH</id>
     </attribute>
     <attribute>
@@ -647,9 +635,6 @@
     </attribute>
     <attribute>
       <id>WOF_IO_BASE_POWER_0P01W</id>
-    </attribute>
-    <attribute>
-      <id>WOF_IO_POWER_MODE</id>
     </attribute>
   </targetType>
 
