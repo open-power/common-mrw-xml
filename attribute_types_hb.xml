@@ -10208,22 +10208,6 @@
   </enumerationType>
 
   <attribute>
-    <description>To choose scan ratio value for SCAN0 operation</description>
-    <id>SCAN0_SCAN_RATIO</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>0x0</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SCAN0_SCAN_RATIO</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <attribute>
     <description>Sector buffer strength</description>
     <id>SECTOR_BUFFER_STRENGTH</id>
     <persistency>non-volatile</persistency>
@@ -10609,37 +10593,6 @@
       </string>
     </simpleType>
   </attribute>
-
-  <attribute>
-    <description>Controls the SBE boot side, written to SB_CS prior to sbe boot</description>
-    <id>SPPE_BOOT_SIDE</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t/>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SPPE_BOOT_SIDE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <description>Controls the SBE boot side, written to SB_CS prior to sbe boot</description>
-    <enumerator>
-      <name>SIDE0</name>
-      <value>0x0</value>
-    </enumerator>
-    <enumerator>
-      <name>SIDE1</name>
-      <value>0x1</value>
-    </enumerator>
-    <enumerator>
-      <name>GOLDEN</name>
-      <value>0x2</value>
-    </enumerator>
-    <id>SPPE_BOOT_SIDE</id>
-  </enumerationType>
 
   <attribute>
     <complexType>
@@ -11871,35 +11824,6 @@
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
-
-  <attribute>
-    <description>Value of attribute determines if DLR is done or a static computation is done with updated dynamic configuration.</description>
-    <id>WOF_IO_POWER_MODE</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>STATIC</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_WOF_IO_POWER_MODE</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <description>Value of attribute determines if DLR is done or a static computation is done with updated dynamic configuration.</description>
-    <enumerator>
-      <name>STATIC</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>DYNAMIC</name>
-      <value>1</value>
-    </enumerator>
-    <id>WOF_IO_POWER_MODE</id>
-  </enumerationType>
 
   <attribute>
     <description>System control to set the power limit for Workload Optimized Frequency (WOF) algorithms. This is used to select the proper VFRT tables. Producer: TMGT Consumers: FW that selects VFRT tables</description>
