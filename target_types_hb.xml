@@ -963,6 +963,9 @@
       <id>POS_ON_MEM_PORT</id>
     </attribute>
     <attribute>
+      <id>PREHEAT_PERCENT</id>
+    </attribute>
+    <attribute>
       <id>TEMP_SENSOR_I2C_CONFIG</id>
     </attribute>
     <attribute>
