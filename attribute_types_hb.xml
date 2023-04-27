@@ -8554,6 +8554,22 @@
   </attribute>
 
   <attribute>
+    <description>The percentage of this DIMM's preheat that affects the associated processor socket. (value in 0.01%)</description>
+    <id>PREHEAT_PERCENT</id>
+    <persistency>non-volatile</persistency>
+    <range>
+      <max>10000</max>
+      <min>0</min>
+    </range>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>Required Processor Compatibility Setting</description>
     <id>PROC_COMPATIBILITY_REQ</id>
     <persistency>non-volatile</persistency>
