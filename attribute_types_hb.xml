@@ -3452,9 +3452,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -3465,9 +3465,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -3478,9 +3478,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint32_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint32_t>
     </simpleType>
   </attribute>
