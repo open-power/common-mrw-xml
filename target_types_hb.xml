@@ -3017,6 +3017,9 @@
       <id>PROC_PCIE_CACHE_INJ_THROTTLE</id>
     </attribute>
     <attribute>
+      <id>PROC_PCIE_ECC_HANDLING_MODE</id>
+    </attribute>
+    <attribute>
       <id>PROC_PCIE_IOP_CONFIG</id>
     </attribute>
     <attribute>
