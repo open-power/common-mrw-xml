@@ -10131,6 +10131,35 @@
   </enumerationType>
 
   <attribute>
+    <description>Attribute which controls the FIR reaction to inbound SUE, UE errors from the system fabric: FREEZE = 0x0 - default CHECKSTOP = 0x1 - trigger system checkstop</description>
+    <id>PROC_PCIE_ECC_HANDLING_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>FREEZE</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_PROC_PCIE_ECC_HANDLING_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Attribute which controls the FIR reaction to inbound SUE, UE errors from the system fabric: FREEZE = 0x0 - default CHECKSTOP = 0x1 - trigger system checkstop</description>
+    <enumerator>
+      <name>FREEZE</name>
+      <value>0x0</value>
+    </enumerator>
+    <enumerator>
+      <name>CHECKSTOP</name>
+      <value>0x1</value>
+    </enumerator>
+    <id>PROC_PCIE_ECC_HANDLING_MODE</id>
+  </enumerationType>
+
+  <attribute>
     <description>PCIE IOP lane configuration creator: platform consumer: p9_pcie_scominit firmware notes: These are config dependent attributes based on PCIe Lane/sideband signal routing and PCIe endpoints attached. Encoded PCIE IOP lane configuration PEC0: PHB0 CFG[0:1] SWP[0] Examples: Config #1 PEC0 Lane Config[0:1] = 0b00 PHB0 Swap bit[0] = 0 (Straight lane wiring) Config #2 PEC0 Lane Config[0:1] = 0b00 PHB0 Swap bit[0] = 1 (Reverse lane wiring) PEC1: PHB1 CFG[0:1] SWP[0] PHB2 CFG[2:3] SWP[1] Examples: Config #1 PEC1 Lane Config[0:3] = 0b0000 PHB1 Swap bit[0] = 0 (Straight lane wiring) PHB2 Swap bit[1] = 0 (Straight lane wiring) Config #2 PEC1 Lane Config[0:3] = 0b0000 PHB1 Swap bit[0] = 1 (Reverse lane wiring) PHB2 Swap bit[1] = 0 (Straight lane wiring) PEC2: CFG[0:1] = 0b00 PHB3 CFG[2:3]; SWP[0] CFG[4:5] = don't care SWP[1:2] = don't care CFG[0:1] = 0b01 PHB3 CFG[2:3]; SWP[0] PHB4 CFG[4:5]; SWP[1] PHB5 SWP[2] = don't care CFG[0:1] = 0b10 PHB3 CFG[2:3]; SWP[0] PHB4 CFG[4]; SWP[1] PHB5 CFG[5]; SWP[2] Examples: Config #1 (PEC2 Lane Config[0:5] = 0b000000) PHB3 Swap bit[0] = 0 (Straight lane wiring) PHB4 Swap bit[1] = don't care PHB5 Swap bit[2] = don't care Config #1 (PEC2 Lane Config[0:5] = 0b010000) PHB3 Swap bit[0] = 1 (Reverse lane wiring) PHB4 Swap bit[1] = 0 (Straight lane wiring) PHB5 Swap bit[2] = don't care Config #3 (PEC2 Lane Config[0:5] = 0b100000) PHB3 Swap bit[0] = 1 (Reverse lane wiring) PHB4 Swap bit[1] = 0 (Straight lane wiring) PHB5 Swap bit[2] = 1 (Reverse lane wiring)</description>
     <id>PROC_PCIE_IOP_CONFIG</id>
     <ignoreEkb/>
