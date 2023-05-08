@@ -1101,11 +1101,6 @@
   </targetType>
 
   <targetType>
-    <id>lcard-dimm-ddr5</id>
-    <parent>lcard-dimm</parent>
-  </targetType>
-
-  <targetType>
     <id>lcard-dimm-jedec</id>
     <parent>lcard-dimm</parent>
     <attribute>
@@ -1576,9 +1571,6 @@
       <id>MIN_POWER_CAP_WATTS</id>
     </attribute>
     <attribute>
-      <id>MNFG_FLAGS</id>
-    </attribute>
-    <attribute>
       <default>POWER10</default>
       <id>MODEL</id>
     </attribute>
@@ -2029,6 +2021,21 @@
   <targetType>
     <id>unit-core-power10</id>
     <parent>unit-core</parent>
+  </targetType>
+
+  <targetType>
+    <id>unit-ddr</id>
+    <parent>lcard-dimm-ddimm</parent>
+  </targetType>
+
+  <targetType>
+    <id>unit-ddr4-jedec</id>
+    <parent>lcard-dimm-ddimm</parent>
+  </targetType>
+
+  <targetType>
+    <id>unit-ddr5-jedec</id>
+    <parent>lcard-dimm-ddimm</parent>
   </targetType>
 
   <targetType>

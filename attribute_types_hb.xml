@@ -4819,64 +4819,6 @@
   </attribute>
 
   <attribute>
-    <description>NOTE: This is being deprecated and being replaced by the attribute ATTR_MFG_FLAGS, found above. Please switch over to the new attribute, ATTR_MFG_FLAGS, ASAP. @TODO: RTC 252027: Remove this attribute when possible The manufacturing flags. This is a bitfield. Each bit is a flag and multiple flags can be set</description>
-    <id>MNFG_FLAGS</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint64_t>
-        <default>0x0000000000000000</default>
-      </uint64_t>
-    </simpleType>
-    <writeable/>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MNFG_FLAGS</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <description>NOTE: This is being deprecated and being replaced by the attribute ATTR_MFG_FLAGS, found above. Please switch over to the new attribute, ATTR_MFG_FLAGS, ASAP. @TODO: RTC 252027: Remove this attribute when possible The manufacturing flags. This is a bitfield. Each bit is a flag and multiple flags can be set</description>
-    <enumerator>
-      <name>MNFG_NO_FLAG</name>
-      <value>0x0000000000000000</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_THRESHOLDS</name>
-      <value>0x0000000000000001</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_TEST_ALL_SPARE_DRAM_ROWS</name>
-      <value>0x0000000000000040</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_DRAM_REPAIRS</name>
-      <value>0x0000000000000080</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_ENABLE_STANDARD_PATTERN_TEST</name>
-      <value>0x0000000000000200</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_FABRIC_eREPAIR</name>
-      <value>0x0000000000000800</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DISABLE_MEMORY_eREPAIR</name>
-      <value>0x0000000000001000</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_FABRIC_DEPLOY_LANE_SPARES</name>
-      <value>0x0000000000002000</value>
-    </enumerator>
-    <enumerator>
-      <name>MNFG_DMI_DEPLOY_LANE_SPARES</name>
-      <value>0x0000000000004000</value>
-    </enumerator>
-    <id>MNFG_FLAGS</id>
-  </enumerationType>
-
-  <attribute>
     <description>This attribute represents the Maximum number of L2 Cache CEs allowed during Manufacturing. creator: platform (generated based on MRW data)</description>
     <id>MNFG_TH_L2_CACHE_CES</id>
     <persistency>non-volatile</persistency>
