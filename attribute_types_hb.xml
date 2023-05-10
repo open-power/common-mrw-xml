@@ -1612,7 +1612,7 @@
     <readable/>
     <simpleType>
       <uint16_t>
-        <default>0x0609</default>
+        <default>0x1402</default>
       </uint16_t>
     </simpleType>
   </attribute>
