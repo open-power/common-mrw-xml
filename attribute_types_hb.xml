@@ -1606,18 +1606,6 @@
   </attribute>
 
   <attribute>
-    <description>Indicates which istep we should execute the CXX testcases after, if CONFIG_EARLY_TESTCASES is set. Format: 0xMMmm, where MM=major step, mm=minor step, e.g. 6.9=0x0609.</description>
-    <id>EARLY_TESTCASES_ISTEP</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint16_t>
-        <default>0x1402</default>
-      </uint16_t>
-    </simpleType>
-  </attribute>
-
-  <attribute>
     <description>Specifies a target's eeprom content type.</description>
     <hasStringConversion/>
     <id>EEPROM_CONTENT_TYPE</id>

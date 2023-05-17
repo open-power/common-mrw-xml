@@ -1472,9 +1472,6 @@
       <id>DIMM_THROTTLE_TEMP_DEG_C</id>
     </attribute>
     <attribute>
-      <id>EARLY_TESTCASES_ISTEP</id>
-    </attribute>
-    <attribute>
       <id>EXECUTION_PLATFORM</id>
     </attribute>
     <attribute>
