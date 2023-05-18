@@ -333,9 +333,6 @@
       <id>OMI_RX_LTEZ</id>
     </attribute>
     <attribute>
-      <id>OMI_RX_PHASE_STEP</id>
-    </attribute>
-    <attribute>
       <id>OMI_RX_VERT_OFFSET</id>
     </attribute>
     <attribute>
