@@ -3592,9 +3592,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -3605,9 +3605,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint16_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint16_t>
     </simpleType>
   </attribute>
@@ -3618,9 +3618,9 @@
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
-      <array>12</array>
+      <array>24</array>
       <uint32_t>
-        <default>0,0,0,0,0,0,0,0,0,0,0,0</default>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
       </uint32_t>
     </simpleType>
   </attribute>
@@ -7675,27 +7675,11 @@
     <readable/>
     <simpleType>
       <int32_t>
-        <default>0</default>
+        <default>1</default>
       </int32_t>
     </simpleType>
     <hwpfToHbAttrMap>
       <id>ATTR_OMI_RX_LTEZ</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <attribute>
-    <description>OMI Rx Phase Step (RX CDR Bandwidth)</description>
-    <id>OMI_RX_PHASE_STEP</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <int32_t>
-        <default>-1</default>
-      </int32_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_OMI_RX_PHASE_STEP</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -7801,7 +7785,7 @@
     <readable/>
     <simpleType>
       <uint8_t>
-        <default>0</default>
+        <default>4</default>
       </uint8_t>
     </simpleType>
     <hwpfToHbAttrMap>
