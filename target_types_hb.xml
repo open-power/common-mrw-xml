@@ -1725,9 +1725,6 @@
       <id>MSS_OCMB_ENTERPRISE_POLICY</id>
     </attribute>
     <attribute>
-      <id>MSS_OCMB_ODY_OMI_CFG_ENDIAN_CTRL</id>
-    </attribute>
-    <attribute>
       <id>MSS_OMI_EDPL_DISABLE</id>
     </attribute>
     <attribute>
