@@ -6737,35 +6737,6 @@
   </enumerationType>
 
   <attribute>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <id>MSS_OCMB_ODY_OMI_CFG_ENDIAN_CTRL</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>LITTLE_ENDIAN</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_MSS_OCMB_ODY_OMI_CFG_ENDIAN_CTRL</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <enumerationType>
-    <description>Controls whether OMI CFG reg accesses are considered big or little endian.</description>
-    <enumerator>
-      <name>LITTLE_ENDIAN</name>
-      <value>0</value>
-    </enumerator>
-    <enumerator>
-      <name>BIG_ENDIAN</name>
-      <value>1</value>
-    </enumerator>
-    <id>MSS_OCMB_ODY_OMI_CFG_ENDIAN_CTRL</id>
-  </enumerationType>
-
-  <attribute>
     <description>EDPL (Error Detection Per Lane) is a feature in the DL that adds some additional checks to the traffic going across the OpenCAPI link in order to better track which lanes are having issues. Note: EDPL must be set the same on both sides of the link. This attribute affects both the proc/mc side and the OCMB side.</description>
     <id>MSS_OMI_EDPL_DISABLE</id>
     <persistency>non-volatile</persistency>
