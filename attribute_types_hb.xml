@@ -10140,6 +10140,7 @@
         <default>FREEZE</default>
       </uint8_t>
     </simpleType>
+    <writeable/>
     <hwpfToHbAttrMap>
       <id>ATTR_PROC_PCIE_ECC_HANDLING_MODE</id>
       <macro>DIRECT</macro>
