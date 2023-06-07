@@ -14,8 +14,8 @@
     <child_id>pmic1</child_id>	
 	<child_id>spdA</child_id>
     <child_id>spdB</child_id>
-    <child_id>ddr4</child_id>
-    <child_id>ddr5</child_id>
+    <child_id>ddrA</child_id>
+    <child_id>ddrB</child_id>
     <hidden_child_id>dimm_temp_sensor0</hidden_child_id>
     <hidden_child_id>dimm_temp_sensor1</hidden_child_id>
     <hidden_child_id>dimm_func_sensor</hidden_child_id>
@@ -70,7 +70,7 @@
 	<position>-1</position>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>DDR5</default>
+		<default>DDR</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -97,7 +97,7 @@
 	<position>-1</position>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>DDR5</default>
+		<default>DDR</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -433,14 +433,14 @@
     </attribute>        
 </targetPart>
 <targetPart>
-	<id>ddr4</id>
-	<type>unit-ddr4-jedec</type>
+	<id>ddrA</id>
+	<type>unit-ddr-jedec</type>
 	<is_root>false</is_root>
-	<instance_name>ddr4</instance_name>
+	<instance_name>ddrA</instance_name>
 	<position>-1</position>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>DDR4</default>
+		<default>DDR</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>
@@ -460,14 +460,14 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>ddr5</id>
-	<type>unit-ddr5-jedec</type>
+	<id>ddrB</id>
+	<type>unit-ddr-jedec</type>
 	<is_root>false</is_root>
-	<instance_name>ddr5</instance_name>
+	<instance_name>ddrB</instance_name>
 	<position>-1</position>
 	<attribute>
 		<id>BUS_TYPE</id>
-		<default>DDR5</default>
+		<default>DDR</default>
 	</attribute>
 	<attribute>
 		<id>CHIP_UNIT</id>

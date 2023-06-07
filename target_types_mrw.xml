@@ -891,6 +891,30 @@
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
 	</targetType>
 	<targetType>
+		<id>unit-ddr-jedec</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MODEL</id>
+			<default>JEDEC</default>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>DDR</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>unit-ddr3-jedec</id>
 		<parent>unit</parent>
 		<attribute>
