@@ -891,6 +891,30 @@
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
 	</targetType>
 	<targetType>
+		<id>unit-ddr-jedec</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MODEL</id>
+			<default>JEDEC</default>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>DDR</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+	</targetType>	
+	<targetType>
 		<id>unit-ddr3-jedec</id>
 		<parent>unit</parent>
 		<attribute>
@@ -932,6 +956,30 @@
 		<attribute>
 			<id>BUS_TYPE</id>
 			<default>DDR4</default>
+		</attribute>
+		<attribute>
+			<id>DIRECTION</id>
+			<default>IN</default>
+		</attribute>
+	</targetType>	
+	<targetType>
+		<id>unit-ddr5-jedec</id>
+		<parent>unit</parent>
+		<attribute>
+			<id>MODEL</id>
+			<default>JEDEC</default>
+		</attribute>
+		<attribute>
+			<id>TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>MRW_TYPE</id>
+			<default>NA</default>
+		</attribute>
+		<attribute>
+			<id>BUS_TYPE</id>
+			<default>DDR5</default>
 		</attribute>
 		<attribute>
 			<id>DIRECTION</id>
@@ -3087,6 +3135,20 @@
 			<default>BUS</default>
 		</attribute>
 	</targetType>
+	<targetType>
+		<id>DDR5</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>
+	<targetType>
+		<id>DDR</id>
+		<attribute>
+			<id>CLASS</id>
+			<default>BUS</default>
+		</attribute>
+	</targetType>	
 	<targetType>
 		<id>OMI</id>
 		<attribute>

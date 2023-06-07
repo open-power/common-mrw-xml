@@ -12,7 +12,10 @@
 	<child_id>ocmb</child_id>
     <child_id>pmic0</child_id>
     <child_id>pmic1</child_id>	
-	<child_id>spd</child_id>
+	<child_id>spdA</child_id>
+    <child_id>spdB</child_id>
+    <child_id>ddrA</child_id>
+    <child_id>ddrB</child_id>
     <hidden_child_id>dimm_temp_sensor0</hidden_child_id>
     <hidden_child_id>dimm_temp_sensor1</hidden_child_id>
     <hidden_child_id>dimm_func_sensor</hidden_child_id>
@@ -29,9 +32,15 @@
     <position>-1</position>
     <parent>chip</parent>
 	<child_id>omi</child_id>
-	<child_id>i2c-ocmb</child_id>
+	<child_id>mem_port0</child_id>
+	<child_id>mem_port1</child_id>
+	<child_id>odyperv1</child_id>
+	<child_id>odyperv8</child_id>
+	<child_id>i2c-ocmb-master</child_id>
+	<child_id>i2c-ocmb-slave</child_id>
 	<child_id>i2c-ts0</child_id>
 	<child_id>i2c-ts1</child_id>
+	<child_id>i2c-ts2</child_id>
 </targetPart>
 <targetPart>
     <id>omi</id>
@@ -54,10 +63,150 @@
     </attribute>    
 </targetPart>
 <targetPart>
-    <id>i2c-ocmb</id>
+	<id>mem_port0</id>
+	<type>unit-mem_port</type>
+	<is_root>false</is_root>
+	<instance_name>mem_port0</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>mem_port1</id>
+	<type>unit-mem_port</type>
+	<is_root>false</is_root>
+	<instance_name>mem_port1</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>odyperv1</id>
+	<type>unit-perv</type>
+	<is_root>false</is_root>
+	<instance_name>odyperv1</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x1</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>1</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>	
+</targetPart>
+<targetPart>
+	<id>odyperv8</id>
+	<type>unit-perv</type>
+	<is_root>false</is_root>
+	<instance_name>odyperv8</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x8</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>8</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>	
+</targetPart>
+<targetPart>
+    <id>i2c-ocmb-master</id>
+    <type>unit-i2c-master</type>
+    <is_root>false</is_root>
+    <instance_name>i2c-ocmb-master</instance_name>
+    <position>-1</position>
+    <parent>mrw-unit</parent>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>I2C</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>I2C_PORT</id>
+	  <default>0x00</default>
+	</attribute>
+	<attribute>
+	  <id>I2C_ENGINE</id>
+	  <default>0x00</default>
+	</attribute> 
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>     
+</targetPart>
+<targetPart>
+    <id>i2c-ocmb-slave</id>
     <type>unit-i2c-slave</type>
     <is_root>false</is_root>
-    <instance_name>i2c-ocmb</instance_name>
+    <instance_name>i2c-ocmb-slave</instance_name>
     <position>-1</position>
     <parent>mrw-unit</parent>
     <attribute>
@@ -138,6 +287,34 @@
     </attribute>       
 </targetPart>
 <targetPart>
+    <id>i2c-ts2</id>
+    <type>unit-i2c-slave</type>
+    <is_root>false</is_root>
+    <instance_name>i2c-ts2</instance_name>
+    <position>-1</position>
+    <parent>mrw-unit</parent>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>I2C</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>IN</default>
+    </attribute>
+    <attribute>
+      <id>I2C_ADDRESS</id>
+      <default>0x34</default>
+    </attribute> 
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>       
+</targetPart>
+<targetPart>
     <id>pmic0</id>
     <type>chip-vreg-generic</type>
     <is_root>false</is_root>
@@ -162,10 +339,43 @@
     </attribute>
 </targetPart>
 <targetPart>
-    <id>spd</id>
+    <id>spdA</id>
     <type>chip-spd-device</type>
     <is_root>false</is_root>
-    <instance_name>spd</instance_name>
+    <instance_name>spdA</instance_name>
+    <position>-1</position>
+    <parent>chip-vpd-device</parent>
+    <child_id>i2c-spd</child_id>
+    <attribute>
+      <id>BYTE_ADDRESS_OFFSET</id>
+      <default>0x01</default>
+    </attribute>
+    <attribute>
+      <id>MEMORY_SIZE_IN_KB</id>
+      <default>0x01</default>
+    </attribute>
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>SPD</default>
+    </attribute>
+    <attribute>
+      <id>VPD_TYPE</id>
+      <default>SPD</default>
+    </attribute>
+    <attribute>
+      <id>WRITE_CYCLE_TIME</id>
+      <default>0x05</default>
+    </attribute>
+    <attribute>
+      <id>WRITE_PAGE_SIZE</id>
+      <default>0x50</default>
+    </attribute>    
+</targetPart>
+<targetPart>
+    <id>spdB</id>
+    <type>chip-spd-device</type>
+    <is_root>false</is_root>
+    <instance_name>spdB</instance_name>
     <position>-1</position>
     <parent>chip-vpd-device</parent>
     <child_id>i2c-spd</child_id>
@@ -221,6 +431,60 @@
       <id>TYPE</id>
       <default>NA</default>
     </attribute>        
+</targetPart>
+<targetPart>
+	<id>ddrA</id>
+	<type>unit-ddr-jedec</type>
+	<is_root>false</is_root>
+	<instance_name>ddrA</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default>JEDEC</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>ddrB</id>
+	<type>unit-ddr-jedec</type>
+	<is_root>false</is_root>
+	<instance_name>ddrB</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default>JEDEC</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
 </targetPart>
 <targetPart>
     <id>dimm_func_sensor</id>

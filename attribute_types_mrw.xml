@@ -815,6 +815,14 @@
             <name>DP</name>
             <value>29</value>
         </enumerator>
+        <enumerator>
+            <name>DDR5</name>
+            <value>30</value>
+        </enumerator>   
+        <enumerator>
+            <name>DDR</name>
+            <value>31</value>
+        </enumerator>                
     </enumerationType>
     <enumerationType>
         <id>MRW_TYPE</id>
