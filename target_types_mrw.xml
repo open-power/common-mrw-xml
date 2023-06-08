@@ -891,7 +891,7 @@
 		<parent_type>connector-dimmconn-ddr3_jedec</parent_type>
 	</targetType>
 	<targetType>
-		<id>unit-ddr-jedec</id>
+		<id>unit-ddr</id>
 		<parent>unit</parent>
 		<attribute>
 			<id>MODEL</id>
