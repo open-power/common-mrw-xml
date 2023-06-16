@@ -10,6 +10,10 @@
     <child_id>pmic1</child_id>
     <child_id>pmic2</child_id>
     <child_id>pmic3</child_id>
+    <child_id>dt0</child_id>
+    <child_id>dt1</child_id>
+    <child_id>dt2</child_id>
+    <child_id>dt3</child_id>            
     <child_id>PCA9554A</child_id>
     <child_id>PCA9554B</child_id>
     <child_id>spdA</child_id>
@@ -17,7 +21,9 @@
     <child_id>rcd0</child_id>
     <child_id>rcd1</child_id>
     <child_id>adc0</child_id>
-    <child_id>adc1</child_id>        
+    <child_id>adc1</child_id>   
+    <child_id>ddrA</child_id>
+    <child_id>ddrB</child_id>         
     <hidden_child_id>dimm_temp_sensor0</hidden_child_id>
     <hidden_child_id>dimm_temp_sensor1</hidden_child_id>
     <hidden_child_id>dimm_func_sensor</hidden_child_id>
@@ -31,7 +37,12 @@
   <targetPart>
     <id>ocmb</id>
     <child_id>omi</child_id>
-    <child_id>i2c-ocmb</child_id>
+	<child_id>mem_port0</child_id>
+	<child_id>mem_port1</child_id>
+	<child_id>odyperv1</child_id>
+	<child_id>odyperv8</child_id>	    
+	<child_id>i2c-ocmb-master</child_id>
+	<child_id>i2c-ocmb-slave</child_id>
     <child_id>i2c-ts0</child_id>
     <child_id>i2c-ts1</child_id>
     <child_id>i2c-ts2</child_id>
@@ -61,6 +72,118 @@
     <position>-1</position>
     <type>unit-omi-power10</type>
   </targetPart>
+  <targetPart>
+    <id>mem_port0</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>DDR</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>    
+    <instance_name>mem_port0</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-mem_port</type>
+  </targetPart>  
+  <targetPart>
+    <id>mem_port1</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>DDR</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>1</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>    
+    <instance_name>mem_port1</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-mem_port</type>
+  </targetPart>   
+  <targetPart>
+    <id>odyperv1</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>NA</default>
+    </attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x1</default>
+	</attribute>    
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>1</default>
+    </attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>
+    <instance_name>odyperv1</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-perv</type>
+  </targetPart>    
+  <targetPart>
+    <id>odyperv8</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>NA</default>
+    </attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x8</default>
+	</attribute>    
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>8</default>
+    </attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>
+    <instance_name>odyperv8</instance_name>
+    <is_root>false</is_root>
+    <parent>unit</parent>
+    <position>-1</position>
+    <type>unit-perv</type>
+  </targetPart>  
   <targetPart>
     <id>dimm_func_sensor</id>
     <attribute>
@@ -194,7 +317,39 @@
     <type>unit-ipmi-sensor</type>
   </targetPart>
   <targetPart>
-    <id>i2c-ocmb</id>
+    <id>i2c-ocmb-master</id>
+    <attribute>
+      <id>BUS_TYPE</id>
+      <default>I2C</default>
+    </attribute>
+    <attribute>
+      <id>CHIP_UNIT</id>
+      <default>0</default>
+    </attribute>
+    <attribute>
+      <id>DIRECTION</id>
+      <default>OUT</default>
+    </attribute>
+	<attribute>
+	  <id>I2C_PORT</id>
+	  <default>0x00</default>
+	</attribute>
+	<attribute>
+	  <id>I2C_ENGINE</id>
+	  <default>0x00</default>
+	</attribute> 
+    <attribute>
+      <id>TYPE</id>
+      <default>NA</default>
+    </attribute>
+    <instance_name>i2c-ocmb-master</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-unit</parent>
+    <position>-1</position>
+    <type>unit-i2c-master</type>
+  </targetPart>  
+  <targetPart>
+    <id>i2c-ocmb-slave</id>
     <attribute>
       <id>BUS_TYPE</id>
       <default>I2C</default>
@@ -215,7 +370,7 @@
       <id>TYPE</id>
       <default>NA</default>
     </attribute>
-    <instance_name>i2c-ocmb</instance_name>
+    <instance_name>i2c-ocmb-slave</instance_name>
     <is_root>false</is_root>
     <parent>mrw-unit</parent>
     <position>-1</position>
@@ -241,7 +396,7 @@
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
     <instance_name>i2c-ts0</instance_name>
     <is_root>false</is_root>
@@ -269,7 +424,7 @@
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
     <instance_name>i2c-ts1</instance_name>
     <is_root>false</is_root>
@@ -293,11 +448,11 @@
     </attribute>
     <attribute>
       <id>I2C_ADDRESS</id>
-      <default>0x78</default>
+      <default>0x34</default>
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
     <instance_name>i2c-ts2</instance_name>
     <is_root>false</is_root>
@@ -334,11 +489,78 @@
     <type>unit-i2c-slave</type>
   </targetPart>
   <targetPart>
+    <id>ddrA</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default>JEDEC</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+    <instance_name>ddrA</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>unit-ddr</type>
+  </targetPart>  
+  <targetPart>
+    <id>ddrB</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>MODEL</id>
+		<default>JEDEC</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+    <instance_name>ddrB</instance_name>
+    <is_root>false</is_root>
+    <position>-1</position>
+    <type>unit-ddr</type>
+  </targetPart>  
+  <targetPart>
     <id>pmic0</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>    
     <attribute>
       <id>MRW_TYPE</id>
       <default>VOLTAGE_REGULATOR</default>
     </attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PMIC</default>
+	</attribute>    
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>
     <instance_name>pmic0</instance_name>
     <is_root>false</is_root>
     <parent>mrw-chip</parent>
@@ -346,11 +568,203 @@
     <type>chip-vreg-generic</type>
   </targetPart>
   <targetPart>
+	<id>i2c-slave</id>
+	<type>unit-i2c-slave</type>
+	<is_root>false</is_root>
+	<instance_name>i2c-slave</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>I2C</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>I2C_ADDRESS</id>
+		<default></default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>VPD</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>VPD_SIZE</id>
+		<default>NA</default>
+	</attribute>
+  </targetPart>  
+  <targetPart>
+	<id>vreg_enable</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>IN</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>ENABLE</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<instance_name>vreg_enable</instance_name>	
+	<is_root>false</is_root>	
+	<position>-1</position>		
+	<type>unit-vreg_enable-generic</type>
+  </targetPart>
+  <targetPart>
+	<id>vreg_pgood</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>GPIO</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>GPIO_TYPE</id>
+		<default>PGOOD</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<instance_name>vreg_pgood</instance_name>
+	<is_root>false</is_root>
+	<position>-1</position>		
+	<type>unit-vreg_pgood-generic</type>
+  </targetPart>
+  <targetPart>
+	<id>vout</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>POWER</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>RAIL_NAME</id>
+		<default>UNKNOWN</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<instance_name>vout</instance_name>	
+	<is_root>false</is_root>
+	<position>-1</position>	
+	<type>unit-vreg_vout-generic</type>
+  </targetPart>
+  <targetPart>
+	<id>avs</id>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>POWER</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>MRW_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>RAIL_NAME</id>
+		<default>UNKNOWN</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<instance_name>avs</instance_name>
+	<is_root>false</is_root>
+	<position>-1</position>	
+	<type>unit-vreg_avs-generic</type>
+  </targetPart> 
+  <targetPart>
     <id>pmic1</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>
     <attribute>
       <id>MRW_TYPE</id>
       <default>VOLTAGE_REGULATOR</default>
     </attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PMIC</default>
+	</attribute>    
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>
     <instance_name>pmic1</instance_name>
     <is_root>false</is_root>
     <parent>mrw-chip</parent>
@@ -359,10 +773,23 @@
   </targetPart>
   <targetPart>
     <id>pmic2</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>
     <attribute>
       <id>MRW_TYPE</id>
       <default>VOLTAGE_REGULATOR</default>
     </attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PMIC</default>
+	</attribute>    
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>
     <instance_name>pmic2</instance_name>
     <is_root>false</is_root>
     <parent>mrw-chip</parent>
@@ -371,16 +798,129 @@
   </targetPart>
   <targetPart>
     <id>pmic3</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>
     <attribute>
       <id>MRW_TYPE</id>
       <default>VOLTAGE_REGULATOR</default>
     </attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PMIC</default>
+	</attribute>    
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>
     <instance_name>pmic3</instance_name>
     <is_root>false</is_root>
     <parent>mrw-chip</parent>
     <position>-1</position>
     <type>chip-vreg-generic</type>
   </targetPart>
+  <targetPart>
+    <id>dt0</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>    
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>VOLTAGE_REGULATOR</default>
+    </attribute>
+ 	<attribute>
+		<id>TYPE</id>
+		<default>POWER_IC</default>
+	</attribute>
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>	    
+    <instance_name>dt0</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-chip</parent>
+    <position>-1</position>
+    <type>chip-vreg-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>dt1</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>    
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>VOLTAGE_REGULATOR</default>
+    </attribute>
+ 	<attribute>
+		<id>TYPE</id>
+		<default>POWER_IC</default>
+	</attribute>
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>	  
+    <instance_name>dt1</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-chip</parent>
+    <position>-1</position>
+    <type>chip-vreg-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>dt2</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>    
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>VOLTAGE_REGULATOR</default>
+    </attribute>
+ 	<attribute>
+		<id>TYPE</id>
+		<default>POWER_IC</default>
+	</attribute>
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>	  
+    <instance_name>dt2</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-chip</parent>
+    <position>-1</position>
+    <type>chip-vreg-generic</type>
+  </targetPart>
+  <targetPart>
+    <id>dt3</id>
+	<attribute>
+		<id>CLASS</id>
+		<default>CHIP</default>
+	</attribute>    
+    <attribute>
+      <id>MRW_TYPE</id>
+      <default>VOLTAGE_REGULATOR</default>
+    </attribute>
+ 	<attribute>
+		<id>TYPE</id>
+		<default>POWER_IC</default>
+	</attribute>
+    <child_id>i2c-slave</child_id>
+	<child_id>vreg_enable</child_id>
+	<child_id>vreg_pgood</child_id>
+	<child_id>vout</child_id>
+	<child_id>avs</child_id>	  
+    <instance_name>dt3</instance_name>
+    <is_root>false</is_root>
+    <parent>mrw-chip</parent>
+    <position>-1</position>
+    <type>chip-vreg-generic</type>
+  </targetPart> 
   <targetPart>
   	<id>PCA9554A</id>
   	<type>chip-PCA9554</type>
@@ -1480,7 +2020,7 @@
   	</attribute>
   	<attribute>
   		<id>I2C_ADDRESS</id>
-  		<default></default>
+  		<default>0x20</default>
   	</attribute>
   	<attribute>
   		<id>MRW_TYPE</id>
