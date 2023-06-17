@@ -255,7 +255,7 @@
     </attribute> 
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>   
 </targetPart>
 <targetPart>
@@ -283,7 +283,7 @@
     </attribute> 
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>       
 </targetPart>
 <targetPart>
@@ -311,7 +311,7 @@
     </attribute> 
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>       
 </targetPart>
 <targetPart>

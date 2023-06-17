@@ -396,7 +396,7 @@
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>
     <instance_name>i2c-ts0</instance_name>
     <is_root>false</is_root>
@@ -424,7 +424,7 @@
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>
     <instance_name>i2c-ts1</instance_name>
     <is_root>false</is_root>
@@ -452,7 +452,7 @@
     </attribute>
     <attribute>
       <id>TYPE</id>
-      <default>TEMP_SENSOR</default>
+      <default>NA</default>
     </attribute>
     <instance_name>i2c-ts2</instance_name>
     <is_root>false</is_root>
