@@ -43,9 +43,9 @@
 	<child_id>odyperv8</child_id>	    
 	<child_id>i2c-ocmb-master</child_id>
 	<child_id>i2c-ocmb-slave</child_id>
-    <child_id>i2c-ts0</child_id>
-    <child_id>i2c-ts1</child_id>
-    <child_id>i2c-ts2</child_id>
+    <child_id>ts0</child_id>
+    <child_id>ts1</child_id>
+    <child_id>ts2</child_id>
     <instance_name>ocmb</instance_name>
     <is_root>false</is_root>
     <parent>chip</parent>
@@ -377,88 +377,43 @@
     <type>unit-i2c-slave</type>
   </targetPart>
   <targetPart>
-    <id>i2c-ts0</id>
-    <attribute>
-      <id>BUS_TYPE</id>
-      <default>I2C</default>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-      <default>0</default>
-    </attribute>
-    <attribute>
-      <id>DIRECTION</id>
-      <default>IN</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ADDRESS</id>
-      <default>0x30</default>
-    </attribute>
+    <id>ts0</id>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
-    <instance_name>i2c-ts0</instance_name>
+    <child_id>i2c-slave</child_id>
+    <instance_name>ts0</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>asic</parent>
     <position>-1</position>
-    <type>unit-i2c-slave</type>
+    <type>temp_sensor</type>
   </targetPart>
   <targetPart>
-    <id>i2c-ts1</id>
-    <attribute>
-      <id>BUS_TYPE</id>
-      <default>I2C</default>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-      <default>0</default>
-    </attribute>
-    <attribute>
-      <id>DIRECTION</id>
-      <default>IN</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ADDRESS</id>
-      <default>0x32</default>
-    </attribute>
+    <id>ts1</id>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
-    <instance_name>i2c-ts1</instance_name>
+    <child_id>i2c-slave</child_id>
+    <instance_name>ts1</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>asic</parent>
     <position>-1</position>
-    <type>unit-i2c-slave</type>
+    <type>temp_sensor</type>
   </targetPart>
   <targetPart>
-    <id>i2c-ts2</id>
-    <attribute>
-      <id>BUS_TYPE</id>
-      <default>I2C</default>
-    </attribute>
-    <attribute>
-      <id>CHIP_UNIT</id>
-      <default>0</default>
-    </attribute>
-    <attribute>
-      <id>DIRECTION</id>
-      <default>IN</default>
-    </attribute>
-    <attribute>
-      <id>I2C_ADDRESS</id>
-      <default>0x34</default>
-    </attribute>
+    <id>ts2</id>
     <attribute>
       <id>TYPE</id>
-      <default>NA</default>
+      <default>TEMP_SENSOR</default>
     </attribute>
-    <instance_name>i2c-ts2</instance_name>
+    <child_id>i2c-slave</child_id>
+    <instance_name>ts2</instance_name>
     <is_root>false</is_root>
-    <parent>unit</parent>
+    <parent>asic</parent>
     <position>-1</position>
-    <type>unit-i2c-slave</type>
+    <type>temp_sensor</type>
   </targetPart>
   <targetPart>
     <id>i2c-spd</id>
