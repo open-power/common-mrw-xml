@@ -11,11 +11,15 @@
 	<parent_type>card-motherboard</parent_type>
 	<parent_type>card-daughtercard</parent_type>
 	<child_id>ocmb.omi</child_id>
+	<child_id>ocmb.mem_port0</child_id>
+	<child_id>ocmb.mem_port1</child_id>
+	<child_id>ocmb.odyperv1</child_id>
+	<child_id>ocmb.odyperv8</child_id>		
 	<child_id>ocmb.i2c-ocmb-master</child_id>
 	<child_id>ocmb.i2c-ocmb-slave</child_id>
-	<child_id>ocmb.i2c-ts0</child_id>
-	<child_id>ocmb.i2c-ts1</child_id>
-	<child_id>ocmb.i2c-ts2</child_id>
+	<child_id>ocmb.ts0</child_id>
+	<child_id>ocmb.ts1</child_id>
+	<child_id>ocmb.ts2</child_id>
 	<attribute>
 		<id>CLASS</id>
 		<default>CHIP</default>
@@ -57,7 +61,7 @@
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
-		<default></default>
+		<default>OCMB_CHIP</default>
 	</attribute>
 </targetPart>
 <targetPart>
@@ -115,6 +119,114 @@
 		<id>TYPE</id>
 		<default>OMI</default>
 	</attribute>
+</targetPart>
+<targetPart>
+	<id>ocmb.mem_port0</id>
+	<type>unit-mem_port</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.mem_port0</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>0</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>ocmb.mem_port1</id>
+	<type>unit-mem_port</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.mem_port1</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>DDR</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>1</default>
+	</attribute>
+	<attribute>
+		<id>DIRECTION</id>
+		<default>OUT</default>
+	</attribute>
+	<attribute>
+		<id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
+		<default>32</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>MEM_PORT</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>ocmb.odyperv1</id>
+	<type>unit-perv</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.odyperv1</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x1</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>1</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>	
+</targetPart>
+<targetPart>
+	<id>ocmb.odyperv8</id>
+	<type>unit-perv</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.odyperv8</instance_name>
+	<position>-1</position>
+	<attribute>
+		<id>BUS_TYPE</id>
+		<default>NA</default>
+	</attribute>
+	<attribute>
+		<id>CHIPLET_ID</id>
+		<default>0x8</default>
+	</attribute>
+	<attribute>
+		<id>CHIP_UNIT</id>
+		<default>8</default>
+	</attribute>
+	<attribute>
+		<id>CLASS</id>
+		<default>UNIT</default>
+	</attribute>
+	<attribute>
+		<id>TYPE</id>
+		<default>PERV</default>
+	</attribute>	
 </targetPart>
 <targetPart>
 	<id>ocmb.i2c-ocmb-master</id>
@@ -197,92 +309,50 @@
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>ocmb.i2c-ts0</id>
-	<type>unit-i2c-slave</type>
+	<id>ocmb.ts0</id>
+	<type>temp_sensor</type>
 	<is_root>false</is_root>
-	<instance_name>ocmb.i2c-ts0</instance_name>
+	<instance_name>ocmb.ts0</instance_name>
 	<position>-1</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>I2C</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>IN</default>
-	</attribute>
-	<attribute>
-		<id>I2C_ADDRESS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
+	<parent>asic</parent>
+	<child_id>i2c-slave</child_id>
 	<attribute>
 		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>VPD_SIZE</id>
-		<default>NA</default>
+		<default>TEMP_SENSOR</default>
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>ocmb.i2c-ts1</id>
-	<type>unit-i2c-slave</type>
+	<id>ocmb.ts1</id>
+	<type>temp_sensor</type>
 	<is_root>false</is_root>
-	<instance_name>ocmb.i2c-ts1</instance_name>
+	<instance_name>ocmb.ts1</instance_name>
 	<position>-1</position>
-	<parent>mrw-unit</parent>
-	<attribute>
-		<id>BUS_TYPE</id>
-		<default>I2C</default>
-	</attribute>
-	<attribute>
-		<id>CHIP_UNIT</id>
-		<default>0</default>
-	</attribute>
-	<attribute>
-		<id>CLASS</id>
-		<default>UNIT</default>
-	</attribute>
-	<attribute>
-		<id>DIRECTION</id>
-		<default>IN</default>
-	</attribute>
-	<attribute>
-		<id>I2C_ADDRESS</id>
-		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
-	</attribute>
+	<parent>asic</parent>
+	<child_id>i2c-slave</child_id>
 	<attribute>
 		<id>TYPE</id>
-		<default>NA</default>
-	</attribute>
-	<attribute>
-		<id>VPD_SIZE</id>
-		<default>NA</default>
+		<default>TEMP_SENSOR</default>
 	</attribute>
 </targetPart>
 <targetPart>
-	<id>ocmb.i2c-ts2</id>
+	<id>ocmb.ts2</id>
+	<type>temp_sensor</type>
+	<is_root>false</is_root>
+	<instance_name>ocmb.ts2</instance_name>
+	<position>-1</position>
+	<parent>asic</parent>
+	<child_id>i2c-slave</child_id>
+	<attribute>
+		<id>TYPE</id>
+		<default>TEMP_SENSOR</default>
+	</attribute>
+</targetPart>
+<targetPart>
+	<id>i2c-slave</id>
 	<type>unit-i2c-slave</type>
 	<is_root>false</is_root>
-	<instance_name>ocmb.i2c-ts2</instance_name>
+	<instance_name>i2c-slave</instance_name>
 	<position>-1</position>
-	<parent>mrw-unit</parent>
 	<attribute>
 		<id>BUS_TYPE</id>
 		<default>I2C</default>
@@ -302,10 +372,6 @@
 	<attribute>
 		<id>I2C_ADDRESS</id>
 		<default></default>
-	</attribute>
-	<attribute>
-		<id>MRW_TYPE</id>
-		<default>NA</default>
 	</attribute>
 	<attribute>
 		<id>TYPE</id>
