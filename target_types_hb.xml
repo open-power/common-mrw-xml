@@ -109,9 +109,6 @@
       <id>BMC_SW_TYPE</id>
     </attribute>
     <attribute>
-      <id>FRU_ID</id>
-    </attribute>
-    <attribute>
       <default>AST2500</default>
       <id>MODEL</id>
     </attribute>
@@ -140,9 +137,6 @@
     </attribute>
     <attribute>
       <id>BMC_SW_TYPE</id>
-    </attribute>
-    <attribute>
-      <id>FRU_ID</id>
     </attribute>
     <attribute>
       <default>AST2600</default>
