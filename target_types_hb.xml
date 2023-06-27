@@ -381,6 +381,9 @@
       <id>CHIP_CONTAINED_BACKING_CACHES_VEC</id>
     </attribute>
     <attribute>
+      <id>CHIP_FAN_CFM</id>
+    </attribute>
+    <attribute>
       <id>CLOCK_MUX0A_RCS_PLL_INPUT</id>
     </attribute>
     <attribute>
@@ -1234,6 +1237,9 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
+      <id>DIMM_POWER_UTIL_INTERMEDIATE_POINTS</id>
+    </attribute>
+    <attribute>
       <id>FIELD_TH_L2_LINE_DELETES</id>
     </attribute>
     <attribute>
@@ -1241,6 +1247,9 @@
     </attribute>
     <attribute>
       <id>HB_SETTINGS</id>
+    </attribute>
+    <attribute>
+      <id>MAX_DIMM_POWER</id>
     </attribute>
     <attribute>
       <id>MNFG_TH_L2_CACHE_CES</id>
@@ -1341,6 +1350,9 @@
     </attribute>
     <attribute>
       <id>SYSTEM_FAMILY</id>
+    </attribute>
+    <attribute>
+      <id>SYSTEM_THERMAL_RESISTANCE</id>
     </attribute>
     <attribute>
       <id>SYSTEM_TYPE</id>
