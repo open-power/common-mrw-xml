@@ -375,6 +375,16 @@
   </attribute>
 
   <attribute>
+    <description>The reference CFM for this processor at max fan speed. Value will be used to determine the WOF DIMM ambient credit.</description>
+    <id>CHIP_FAN_CFM</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t/>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>A unit's position within the chip with respect to similar units. Note that this value is relative to the parent chip, not a parent unit. This data is from the MRW.</description>
     <id>CHIP_UNIT</id>
     <persistency>non-volatile</persistency>
@@ -1565,6 +1575,19 @@
     <simpleType>
       <uint8_t>
         <default>84</default>
+      </uint8_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
+    <description>The intermediate utilization values that should be used to determine the power to allocate to the DIMMs under an OCMB. The minimum (MSS_MRW_SAFEMODE_DRAM_DATABUS_UTIL) and the maximum (100%) are always used, so they do not need to be specified here. Any values less than the minimum or greater than the maximum will be ignored. Values must be listed in increasing order and the array size must be less than or equal to 10.</description>
+    <id>DIMM_POWER_UTIL_INTERMEDIATE_POINTS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>10</array>
+      <uint8_t>
+        <default>50,75,0,0,0,0,0,0,0,0</default>
       </uint8_t>
     </simpleType>
   </attribute>
@@ -4502,6 +4525,16 @@
     <readable/>
     <simpleType>
       <uint8_t/>
+    </simpleType>
+  </attribute>
+
+  <attribute>
+    <description>The reference max power per OCMB of the largest DIMM accounted for in the system design (value in cW)</description>
+    <id>MAX_DIMM_POWER</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t/>
     </simpleType>
   </attribute>
 
@@ -10849,6 +10882,16 @@
     </enumerator>
     <id>SYSTEM_RING_DBG_MODE</id>
   </enumerationType>
+
+  <attribute>
+    <description>Used to convert ambient temperature changes to watts to prevent exceeding the socket limitations (value in degreesC/Watts * 100)</description>
+    <id>SYSTEM_THERMAL_RESISTANCE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t/>
+    </simpleType>
+  </attribute>
 
   <attribute>
     <description>Limits the number of Pstates below the frequency floor that can be used for throttling. Valid responsive values: 0 to 63. Values above 63 will be capped to 63. Consumer: p10_pstate_parameter_build -&gt; OCC Parameter Block</description>
