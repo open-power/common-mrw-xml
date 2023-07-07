@@ -3599,6 +3599,19 @@
   </attribute>
 
   <attribute>
+    <description>Array of system minimum power cap in output watts from MRW when system config in INDEX_POWER_LIMIT_CONFIG matches.</description>
+    <id>INDEX_MIN_POWER_CAP_WATTS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>24</array>
+      <uint16_t>
+        <default>0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>Array of system maximum power caps in output watts from MRW when system config in INDEX_POWER_LIMIT_CONFIG matches, and system is oversubscribed.</description>
     <id>INDEX_N_BULK_POWER_LIMIT_WATTS</id>
     <persistency>non-volatile</persistency>
