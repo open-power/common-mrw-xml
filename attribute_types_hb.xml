@@ -7422,6 +7422,19 @@
   </attribute>
 
   <attribute>
+    <description>Whether or not we have successfully updated code on this OCMB on this boot attempt (including any reconfig loops) before.</description>
+    <id>OCMB_CODE_UPDATED</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable/>
+  </attribute>
+
+  <attribute>
     <description>Tracks the sequence id for OCMB command transactions. The platform is expected to guarantee a unique value on each read.</description>
     <id>OCMB_COUNTER</id>
     <persistency>non-volatile</persistency>
@@ -7466,6 +7479,19 @@
     </enumerator>
     <id>OCMB_FW_UPDATE_BEHAVIOR</id>
   </enumerationType>
+
+  <attribute>
+    <description>Whether or not we have booted from the golden firmware image on this OCMB on this boot attempt (including any reconfig loops) before. Note that this is set to false (0) if we are currently attempting to boot from the golden side (because we have not booted from the golden side *before*).</description>
+    <id>OCMB_GOLDEN_BOOT_ATTEMPTED</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable/>
+  </attribute>
 
   <attribute>
     <description>Specifies if the BIST DAC test is going to run</description>
