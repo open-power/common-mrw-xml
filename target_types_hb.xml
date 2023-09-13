@@ -603,9 +603,6 @@
       <id>PROC_VRM_VOFFSET_UV</id>
     </attribute>
     <attribute>
-      <id>SAFE_MODE_THROTTLE_IDX</id>
-    </attribute>
-    <attribute>
       <id>SKEWADJ_BYPASS</id>
     </attribute>
     <attribute>
