@@ -10035,22 +10035,6 @@
   </enumerationType>
 
   <attribute>
-    <description>Set the index into a 64 entry Core Throttle Table to use while in Safe Mode. Legal values are 0 to 63. All others are invalid. Consumer: p10_pstate_parameter_build -&gt; PGPE Hcode -&gt; QME Hcode</description>
-    <id>SAFE_MODE_THROTTLE_IDX</id>
-    <persistency>non-volatile</persistency>
-    <readable/>
-    <simpleType>
-      <uint8_t>
-        <default>48</default>
-      </uint8_t>
-    </simpleType>
-    <hwpfToHbAttrMap>
-      <id>ATTR_SAFE_MODE_THROTTLE_IDX</id>
-      <macro>DIRECT</macro>
-    </hwpfToHbAttrMap>
-  </attribute>
-
-  <attribute>
     <description>Instruction for HB Boatloader to pick the Add-Key Stash Pair from this memory into the exception vector</description>
     <id>SBE_ADDR_KEY_STASH_ADDR</id>
     <persistency>non-volatile</persistency>
