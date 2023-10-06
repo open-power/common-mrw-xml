@@ -780,7 +780,7 @@
     <id>dt0</id>
 	<attribute>
 		<id>CLASS</id>
-		<default>CHIP</default>
+		<default>ASIC</default>
 	</attribute>    
     <attribute>
       <id>MRW_TYPE</id>
@@ -805,7 +805,7 @@
     <id>dt1</id>
 	<attribute>
 		<id>CLASS</id>
-		<default>CHIP</default>
+		<default>ASIC</default>
 	</attribute>    
     <attribute>
       <id>MRW_TYPE</id>
@@ -830,7 +830,7 @@
     <id>dt2</id>
 	<attribute>
 		<id>CLASS</id>
-		<default>CHIP</default>
+		<default>ASIC</default>
 	</attribute>    
     <attribute>
       <id>MRW_TYPE</id>
@@ -855,7 +855,7 @@
     <id>dt3</id>
 	<attribute>
 		<id>CLASS</id>
-		<default>CHIP</default>
+		<default>ASIC</default>
 	</attribute>    
     <attribute>
       <id>MRW_TYPE</id>
