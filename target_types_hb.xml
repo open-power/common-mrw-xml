@@ -1375,6 +1375,9 @@
       <id>DD1_SLOW_PCI_REF_CLOCK</id>
     </attribute>
     <attribute>
+      <id>DISABLE_TPM</id>
+    </attribute>
+    <attribute>
       <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
     </attribute>
     <attribute>

@@ -2455,6 +2455,23 @@
   </attribute>
 
   <attribute>
+    <description>Setting that determins if the TPM(s) on the system should be disabled 0x00 - Do NOT Disable TPM 0x01 - Disable TPM</description>
+    <id>DISABLE_TPM</id>
+    <persistency>non-volatile</persistency>
+    <range>
+      <max>1</max>
+      <min>0</min>
+    </range>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0</default>
+      </uint8_t>
+    </simpleType>
+    <writeable/>
+  </attribute>
+
+  <attribute>
     <description>Firmware specified eRepair threshold limit of Memory Bus for Field usage This value must be initialized by platforms by reading the value from System Model - dmi_threshold_field of system_policy_table</description>
     <id>DMI_EREPAIR_THRESHOLD_FIELD</id>
     <persistency>non-volatile</persistency>
@@ -11251,6 +11268,10 @@
     <enumerator>
       <name>TPM_REQUIRED</name>
       <value>0xCC03</value>
+    </enumerator>
+    <enumerator>
+      <name>DISABLE_TPM</name>
+      <value>0xCC04</value>
     </enumerator>
     <enumerator>
       <name>PCI_BIFURCATED</name>
