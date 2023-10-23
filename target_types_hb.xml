@@ -1463,6 +1463,9 @@
       <id>DDS_TRIP_MODE</id>
     </attribute>
     <attribute>
+      <id>DEFAULT_MIN_PROC_POWER_PER_CHIP</id>
+    </attribute>
+    <attribute>
       <id>DIMM_ERROR_TEMP_DEG_C</id>
     </attribute>
     <attribute>
@@ -1569,6 +1572,9 @@
     </attribute>
     <attribute>
       <id>MIN_POWER_CAP_WATTS</id>
+    </attribute>
+    <attribute>
+      <id>MISC_POWER_PER_SYSTEM</id>
     </attribute>
     <attribute>
       <default>POWER10</default>

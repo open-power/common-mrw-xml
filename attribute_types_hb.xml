@@ -1568,6 +1568,18 @@
   </enumerationType>
 
   <attribute>
+    <description>if MIN_PROC_POWER_PER_CHIP is not filled in from WOF table, use this value.</description>
+    <id>DEFAULT_MIN_PROC_POWER_PER_CHIP</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
     <description>DIMM Temperature in degrees C that a DIMM overtemp error will be logged calling out the DIMM</description>
     <id>DIMM_ERROR_TEMP_DEG_C</id>
     <persistency>non-volatile</persistency>
@@ -4798,6 +4810,18 @@
     <simpleType>
       <uint16_t>
         <default>2700</default>
+      </uint16_t>
+    </simpleType>
+  </attribute>
+
+  <attribute>
+    <description>Fixed power to account for all non-processor, non-memory power of the system in watts.</description>
+    <id>MISC_POWER_PER_SYSTEM</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>0</default>
       </uint16_t>
     </simpleType>
   </attribute>
