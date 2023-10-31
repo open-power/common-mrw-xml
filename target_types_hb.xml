@@ -1448,6 +1448,9 @@
       <id>DDR5_PMIC_THROTTLE_TEMP_DEG_C</id>
     </attribute>
     <attribute>
+      <id>DDR5_VDN_UPLIFT_MV</id>
+    </attribute>
+    <attribute>
       <id>DDS_DELAY_ADJUST</id>
     </attribute>
     <attribute>
@@ -1843,6 +1846,9 @@
     </attribute>
     <attribute>
       <id>ROW_REPAIR_SUPPORTED_MRW</id>
+    </attribute>
+    <attribute>
+      <id>SADDLEBACK_VRM_ROLLOVER_ENABLE</id>
     </attribute>
     <attribute>
       <id>SBE_ADDR_KEY_STASH_ADDR</id>
