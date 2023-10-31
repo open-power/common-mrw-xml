@@ -1423,6 +1423,20 @@
   </attribute>
 
   <attribute>
+    <description>Defines the VDN rail uplift (in mV) if DDR5 DIMMs are installed in the node</description>
+    <id>DDR5_VDN_UPLIFT_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_DDR5_VDN_UPLIFT_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Integer adjustment value applied to the #W DELAY value of the respective curve fit (CF) point that depends on the good sorted cores. 10BC/15BC is considered config A; 12BC is considered config B [Point] -&gt;8 entries-: 0: 10BC/15BC CF4; 1: 10BC/15BC CF5; 2: 10BC/15BC CF6; 3: 10BC/15BC CF7; 4: 12BC CF4; 5: 12BC CF5; 6: 12BC CF6; 7: 12BC CF7; Consumer: p10_pstate_parameter_build</description>
     <id>DDS_DELAY_ADJUST</id>
     <persistency>non-volatile</persistency>
@@ -2251,7 +2265,7 @@
   </attribute>
 
   <attribute>
-    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps and is used as part of the overall voltage time calculation. The consuming code provides a default value of 50mv (5000uV) if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PSPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
+    <description>Step size (binary in microvolts) to take upon external VRM voltage. This provide a limit of the external VRMs steps and is used as part of the overall voltage time calculation. The consuming code provides a default value of 50mv (5000uV) if this attribute is zero. Consumer: p10_pstate_parameter_build -&gt; p10_setup_evid Pstate Parameter (PPB) for PGPE [index] -&gt;0: VDD; 1: VCS; 2: VDN; 3: VIO; Provided by the Machine Readable Workbook after system characterization.</description>
     <id>EXTERNAL_VRM_STEPSIZE</id>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -10007,6 +10021,20 @@
     </enumerator>
     <id>ROW_REPAIR_SUPPORTED_MRW</id>
   </enumerationType>
+
+  <attribute>
+    <description>Enable the Saddleback rollover errata correction Consumer: p10_pstate_parameter_build -&gt; Pstate Parameter Block (PPB) for PGPE Provided by the Machine Readable Workbook based on system use of the Saddleback contoller.</description>
+    <id>SADDLEBACK_VRM_ROLLOVER_ENABLE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SADDLEBACK_VRM_ROLLOVER_ENABLE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
 
   <attribute>
     <description>Instruction for HB Boatloader to pick the Add-Key Stash Pair from this memory into the exception vector</description>
