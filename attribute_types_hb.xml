@@ -7529,6 +7529,23 @@
     <id>OCMB_FW_UPDATE_BEHAVIOR</id>
   </enumerationType>
 
+  <enumerationType>
+    <description>Enumeration of possible Odyssey SBE states. 0 - VIABLE - Ody may attempt an hreset 1 - IN_PROGRESS - Ody is currently running an hreset. Block other hreset requests. 2 - DEAD - Ody has failed hreset</description>
+    <enumerator>
+      <name>VIABLE</name>
+      <value>0</value>
+    </enumerator>
+    <enumerator>
+      <name>IN_PROGRESS</name>
+      <value>1</value>
+    </enumerator>
+    <enumerator>
+      <name>DEAD</name>
+      <value>2</value>
+    </enumerator>
+    <id>ODY_RECOVERY_STATUS</id>
+  </enumerationType>
+
   <attribute>
     <description>Specifies if the BIST DAC test is going to run</description>
     <id>OMI_BIST_DAC_TEST</id>
