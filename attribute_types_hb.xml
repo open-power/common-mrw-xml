@@ -10185,6 +10185,20 @@
   </attribute>
 
   <attribute>
+    <description>Secure Container Version</description>
+    <id>SBE_SECURE_BOOT_MODE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_SECURE_BOOT_MODE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Control execution of updateProcessorSbeSeeproms() if 0, enable SBE update of processor SEEPROM if 1, disable SBE update of processor SEEPROM Consumer: sbe_update.C Default: 0</description>
     <id>SBE_UPDATE_DISABLE</id>
     <persistency>non-volatile</persistency>
