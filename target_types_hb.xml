@@ -2220,6 +2220,9 @@
       <id>EXP_SAFEMODE_MEM_THROTTLED_N_COMMANDS_PER_PORT</id>
     </attribute>
     <attribute>
+      <id>MEM_VPD_DQ_MAP</id>
+    </attribute>
+    <attribute>
       <default>MEM_PORT</default>
       <id>TYPE</id>
     </attribute>
