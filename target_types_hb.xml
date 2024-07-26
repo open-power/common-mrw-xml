@@ -285,6 +285,9 @@
       <id>MODEL</id>
     </attribute>
     <attribute>
+      <id>MRW_MAX_DDR_FREQ_PER_SLOT</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_OCMB_RESET_GROUP</id>
     </attribute>
     <attribute>
@@ -310,6 +313,9 @@
     </attribute>
     <attribute>
       <id>OMI_CHANNEL_LENGTH</id>
+    </attribute>
+    <attribute>
+      <id>OMI_EDPL</id>
     </attribute>
     <attribute>
       <id>OMI_RX_HORIZ_DATA_OFFSET</id>
@@ -340,6 +346,9 @@
     </attribute>
     <attribute>
       <id>OMI_TX_PRE2</id>
+    </attribute>
+    <attribute>
+      <id>PREHEAT_PERCENT</id>
     </attribute>
     <attribute>
       <default>OCMB_CHIP</default>
