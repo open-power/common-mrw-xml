@@ -1447,7 +1447,7 @@
   </attribute>
 
   <attribute>
-    <description>Defines the VDN rail uplift (in mV) if DDR5 DIMMs are installed in the node</description>
+    <description>This attribute has no effect.</description>
     <id>DDR5_VDN_UPLIFT_MV</id>
     <persistency>non-volatile</persistency>
     <readable/>
@@ -7686,6 +7686,35 @@
   </attribute>
 
   <attribute>
+    <description>Specifies if OMI Error Detection Per Lane is Enabled</description>
+    <id>OMI_EDPL</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>DISABLED</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_OMI_EDPL</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies if OMI Error Detection Per Lane is Enabled</description>
+    <enumerator>
+      <name>DISABLED</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>ENABLED</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>OMI_EDPL</id>
+  </enumerationType>
+
+  <attribute>
     <description>Define OMI Ref clock/Swizzle for OCMB/Explorer.. Mapper from OMI unit id -&gt; ROOT CNTL 7 refclk drive enable bit consumer: p10_ocmb_enable</description>
     <global/>
     <id>OMI_REFCLOCK_SWIZZLE</id>
@@ -11753,13 +11782,13 @@
   </enumerationType>
 
   <attribute>
-    <description>Voltage (in mV) to uplift the VDN rail if the #V PAU frequency is 205OMHz. This value is present in early sorted parts where extra voltage margin is needed. Consumer: p10_setup_evid.C Producer: Machine Readable Workbook</description>
+    <description>Voltage (in mV) to uplift the VDN rail for P10 systems Consumer: p10_setup_evid.C Producer: Machine Readable Workbook</description>
     <id>VDN_UPLIFT_MV</id>
     <persistency>non-volatile</persistency>
     <readable/>
     <simpleType>
       <uint32_t>
-        <default>25</default>
+        <default>125</default>
       </uint32_t>
     </simpleType>
     <hwpfToHbAttrMap>
