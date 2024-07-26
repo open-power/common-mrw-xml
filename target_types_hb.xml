@@ -312,6 +312,9 @@
       <id>OMI_CHANNEL_LENGTH</id>
     </attribute>
     <attribute>
+      <id>OMI_EDPL</id>
+    </attribute>
+    <attribute>
       <id>OMI_RX_HORIZ_DATA_OFFSET</id>
     </attribute>
     <attribute>
