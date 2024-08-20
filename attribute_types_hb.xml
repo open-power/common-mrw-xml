@@ -1667,6 +1667,19 @@
   </attribute>
 
   <attribute>
+    <description>Predictive memory guard creation enable/disable. This attribute controls whether or not PRD will create guard records for predictive memory errors.</description>
+    <id>DISABLE_PREDICTIVE_MEM_GUARD</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+    <writeable/>
+  </attribute>
+
+  <attribute>
     <description>Dummy attribute with read-only permissions</description>
     <id>DUMMY_RO</id>
     <persistency>non-volatile</persistency>
