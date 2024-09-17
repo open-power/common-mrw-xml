@@ -11998,7 +11998,7 @@
   </attribute>
 
   <attribute>
-    <description>Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
+    <description>(deprecated in favor of TPM_MODEL_DETERMINED) Indicates TPM Model (or family) for a TPM Target 0x00 = Undetermined (reserved if actively detected in the future) 0x01 = Nuvoton 65x (default) 0x02 = Nuvoton 75x</description>
     <id>TPM_MODEL</id>
     <persistency>non-volatile</persistency>
     <readable/>
