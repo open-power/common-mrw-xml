@@ -1632,6 +1632,9 @@
       <id>MSS_MRW_AVDD_OFFSET_ENABLE</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_CONFIG_FREQ_LIMIT</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_DDR5_DRAM_READ_CRC</id>
     </attribute>
     <attribute>
