@@ -2735,6 +2735,10 @@
 		<attribute>
 			<id>OBUS_CONFIG</id>
 		</attribute>
+		<attribute>
+			<id>FRU_PATH</id>
+			<default></default>
+		</attribute>
 	</targetType>
 	<targetType>
 		<id>OMI</id>
