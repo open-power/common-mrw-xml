@@ -5981,6 +5981,22 @@
   </enumerationType>
 
   <attribute>
+    <description>Default STR entry time in IDLE intervals</description>
+    <id>MSS_MRW_ENTER_STR_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>8</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_ENTER_STR_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Fine refresh mode. Sets DDR4 MRS3. ZZ uses normal mode. From JEDEC DDR4 Spec 1716.78C from 07-2016 Page 47 Table 4.9.1 Note: DDR5 will use either the NORMAL or DDR5_FINE enum values For DDR5, MR4's settings are set based upon the values of this attribute</description>
     <id>MSS_MRW_FINE_REFRESH_MODE</id>
     <persistency>non-volatile</persistency>
@@ -6091,6 +6107,38 @@
   </enumerationType>
 
   <attribute>
+    <description>STR entry time in IDLE intervals for IDLE power save mode</description>
+    <id>MSS_MRW_IDLE_PSMODE_ENTER_STR_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>4</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_IDLE_PSMODE_ENTER_STR_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Min domain reduction time in IDLE intervals for IDLE power save mode</description>
+    <id>MSS_MRW_IDLE_PSMODE_MIN_DOMAIN_REDUCTION_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>1</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_IDLE_PSMODE_MIN_DOMAIN_REDUCTION_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Machine Readable Workbook value for maximum dram data bus utilization in centi percent (c%). Used to determine memory throttle values. Max databus utilization on a per port basis Default to 100%</description>
     <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
     <persistency>non-volatile</persistency>
@@ -6134,6 +6182,38 @@
     </simpleType>
     <hwpfToHbAttrMap>
       <id>ATTR_MSS_MRW_MEM_M_DRAM_CLOCKS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Default min domain reduction time in IDLE intervals</description>
+    <id>MSS_MRW_MIN_DOMAIN_REDUCTION_TIME</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>4</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_MIN_DOMAIN_REDUCTION_TIME</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Min domain reduction time in IDLE intervals for power control request OFF</description>
+    <id>MSS_MRW_MIN_DOMAIN_REDUCTION_TIME_FOR_POWER_CONTROL_OFF</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>64</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MSS_MRW_MIN_DOMAIN_REDUCTION_TIME_FOR_POWER_CONTROL_OFF</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>
@@ -10346,7 +10426,7 @@
   </enumerationType>
 
   <enumerationType>
-    <description>Enumeration used for SB_SIGNING_MODE, as defined in the HDAT specification</description>
+    <description>Enumeration used for SB_SIGNING_MODE, as defined in the HDAT specification NOTE: SYSTEM_CONTAINER value will be used internally in Hostboot code</description>
     <enumerator>
       <description>V1 Container Signing</description>
       <name>V1_CONTAINER</name>
@@ -10356,6 +10436,16 @@
       <description>V2 Container Signing</description>
       <name>V2_CONTAINER</name>
       <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <description>V3 Container Signing</description>
+      <name>V3_CONTAINER</name>
+      <value>0x02</value>
+    </enumerator>
+    <enumerator>
+      <description>System Container Signing - Use whatever value the system is using for the IPL NOTE: using 0xEE to not conflict with default "INVALID" value of 0xFF</description>
+      <name>SYSTEM_CONTAINER</name>
+      <value>0xEE</value>
     </enumerator>
     <id>SB_SIGNING</id>
   </enumerationType>
@@ -11849,6 +11939,21 @@
     </simpleType>
     <hwpfToHbAttrMap>
       <id>ATTR_VDN_UPLIFT_MV</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>The VIO Setpoint in mv</description>
+    <id>VIO_SET_POINT_MV</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint32_t/>
+    </simpleType>
+    <writeable/>
+    <hwpfToHbAttrMap>
+      <id>ATTR_VIO_SET_POINT_MV</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>

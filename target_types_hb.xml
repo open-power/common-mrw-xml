@@ -634,6 +634,9 @@
       <id>TYPE</id>
     </attribute>
     <attribute>
+      <id>VIO_SET_POINT_MV</id>
+    </attribute>
+    <attribute>
       <id>WOF_IO_BASE_POWER_0P01W</id>
     </attribute>
   </targetType>
@@ -1659,6 +1662,9 @@
       <id>MSS_MRW_DRAM_WRITE_CRC</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_ENTER_STR_TIME</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_FINE_REFRESH_MODE</id>
     </attribute>
     <attribute>
@@ -1668,6 +1674,12 @@
       <id>MSS_MRW_IDLE_POWER_CONTROL_REQUESTED</id>
     </attribute>
     <attribute>
+      <id>MSS_MRW_IDLE_PSMODE_ENTER_STR_TIME</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_IDLE_PSMODE_MIN_DOMAIN_REDUCTION_TIME</id>
+    </attribute>
+    <attribute>
       <id>MSS_MRW_MAX_DRAM_DATABUS_UTIL</id>
     </attribute>
     <attribute>
@@ -1675,6 +1687,12 @@
     </attribute>
     <attribute>
       <id>MSS_MRW_MEM_M_DRAM_CLOCKS</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MIN_DOMAIN_REDUCTION_TIME</id>
+    </attribute>
+    <attribute>
+      <id>MSS_MRW_MIN_DOMAIN_REDUCTION_TIME_FOR_POWER_CONTROL_OFF</id>
     </attribute>
     <attribute>
       <id>MSS_MRW_NVDIMM_PLUG_RULES</id>
