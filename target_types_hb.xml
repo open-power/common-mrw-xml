@@ -1340,6 +1340,9 @@
       <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
     </attribute>
     <attribute>
+      <id>POWERVS_P10_MTM</id>
+    </attribute>
+    <attribute>
       <id>PROC_MODULE_TYPE</id>
     </attribute>
     <attribute>
