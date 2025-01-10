@@ -1985,6 +1985,24 @@
     <attribute>
       <id>WOF_VRATIO_SELECT</id>
     </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_CORE_COUNT_INDEX_ARRAY</id>
+    </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_EFFICIENCY_ALG</id>
+    </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_EFFICIENCY_CEFF_ADJUST</id>
+    </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_EFFICIENCY_FREQ_LIMITS</id>
+    </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_EFFICIENCY_IDLE_THRESH</id>
+    </attribute>
+    <attribute>
+      <id>WTH_OVERRIDE_EFFICIENCY_IDLE_TIMES</id>
+    </attribute>
   </targetType>
 
   <targetType>

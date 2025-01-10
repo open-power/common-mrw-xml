@@ -12170,4 +12170,114 @@
     <id>WOF_VRATIO_SELECT</id>
   </enumerationType>
 
+  <attribute>
+    <description>Holds the core count for the index number represented. The index that matches the WOF Table Header "Core Count" field is then used to index all other override WTH Override attributes. Array[Index] [Sort Index]-&gt;8 entries-: 0: Core Count 0; 1: Core Count 1; 2: Core Count 2; 3: Core Count 3; 4: Core Count 4; 5: Core Count 5; 6: Core Count 6; 7: Core Count 7; Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pstate_parameter_block.C</description>
+    <id>WTH_OVERRIDE_CORE_COUNT_INDEX_ARRAY</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>8</array>
+      <uint8_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_CORE_COUNT_INDEX_ARRAY</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Defines how to intrepret ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_IDLE_TIMES and EFFICIENCY_MODE_IDLE_THRESHOLDS attributes as a override for the WTH Flags[Efficiency Mode Algorithm] field. CEFF: Ceff based adjustment. UTIL: Utilization based adjustment. Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <id>WTH_OVERRIDE_EFFICIENCY_ALG</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>UTIL</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_EFFICIENCY_ALG</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Defines how to intrepret ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_IDLE_TIMES and EFFICIENCY_MODE_IDLE_THRESHOLDS attributes as a override for the WTH Flags[Efficiency Mode Algorithm] field. CEFF: Ceff based adjustment. UTIL: Utilization based adjustment. Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <enumerator>
+      <name>UTIL</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>CEFF</name>
+      <value>0x01</value>
+    </enumerator>
+    <id>WTH_OVERRIDE_EFFICIENCY_ALG</id>
+  </enumerationType>
+
+  <attribute>
+    <description>Holds overrides for the WOF Table Header "Ceff Adj Pct" values by mode. Values are in unit percentages with the following form: 0: sign; 1:7 percent value The first dimension index is determined by the entry in ATTR_WTH_OVERRIDE_CORE_COUNT_INDEX that matches the WOF Table Header "Core Count" field. Array[Core Count Index][Mode] [Sort Index]-&gt;8 entries-: 0: Core Count 0; 1: Core Count 1; 2: Core Count 2; 3: Core Count 3; 4: Core Count 4; 5: Core Count 5; 6: Core Count 6; 7: Core Count 7;; [Mode] -&gt;4 entries-: 0: Favor Power; 1: Favor Performance; 2: Balanced Performance; 3: Non-determinisitic Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <id>WTH_OVERRIDE_EFFICIENCY_CEFF_ADJUST</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>8,4</array>
+      <uint8_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_EFFICIENCY_CEFF_ADJUST</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Holds overrides for the WOF Table Header "Freq Limit MHz" values by mode. Values are MHz units The first dimension index is determined by the entry in ATTR_WTH_OVERRIDE_CORE_COUNT_INDEX that matches the WOF Table Header "Core Count" field. Array[Core Count Index][Frequency] [Sort Index]-&gt;8 entries-: 0: Core Count 0; 1: Core Count 1; 2: Core Count 2; 3: Core Count 3; 4: Core Count 4; 5: Core Count 5; 6: Core Count 6; 7: Core Count 7;; [Frequency] -&gt;4 entries-: 0: Favor Power; 1: Favor Performance; 2: Balanced Performance; 3: Non-determinisitic Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <id>WTH_OVERRIDE_EFFICIENCY_FREQ_LIMITS</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>8,4</array>
+      <uint16_t>
+        <default>0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF, 0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF, 0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF, 0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_EFFICIENCY_FREQ_LIMITS</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Holds overrides for the WOF Table Header "Efficiency Mode Idle Chip Entry/Exit Threshold" fields. Entry: Threshold to be under to enter idle chip frequency. Exit: Threshold to be above to exit idle chip frequency. For both transition types, the values are defined by: If ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_ALGORITHM=CEFF based Ceff in 0.01% (eg 8% -&gt; 800). If ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_ALGORITHM=UTIL: utilization in 0.01% (eg 8% -&gt; 800). The first dimension index is determined by the entry in ATTR_WTH_OVERRIDE_CORE_COUNT_INDEX that matches the WOF Table Header "Core Count" field. Array[Core Count Index][Transistion] [Sort Index]-&gt;8 entries-: 0: Core Count 0; 1: Core Count 1; 2: Core Count 2; 3: Core Count 3; 4: Core Count 4; 5: Core Count 5; 6: Core Count 6; 7: Core Count 7;; [Transistion] -&gt;8 entries-: 0: Entry; 1: Exit; Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <id>WTH_OVERRIDE_EFFICIENCY_IDLE_THRESH</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>8,2</array>
+      <uint16_t>
+        <default>0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF, 0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_EFFICIENCY_IDLE_THRESH</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Holds overrides for the WOF Table Header "Efficiency Mode Idle Chip Entry/Exit Time" fields. The meaning of the field depends on WTH Flags[Efficiency Mode Algorithm] field. Entry: 0 indicates disabled else time under entry threshold to enter idle chip frequency. Exit: Time above exit threshold to exit idle chip frequency. For both transition types, the values are defined by: If ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_ALGORITHM=CEFF: time in ms. If ATTR_WTH_OVERRIDE_EFFICIENCY_MODE_ALGORITHM=UTIL: number of 32ms ticks The first dimension index is determined by the entry in ATTR_WTH_OVERRIDE_CORE_COUNT_INDEX that matches the WOF Table Header "Core Count" field. Array[Core Count Index][Transition] [Sort Index]-&gt;8 entries-: 0: Core Count 0; 1: Core Count 1; 2: Core Count 2; 3: Core Count 3; 4: Core Count 4; 5: Core Count 5; 6: Core Count 6; 7: Core Count 7;; [Transition] -&gt;2 entries-: 0: Entry; 1: Exit; Producer: MRW to override the WOF Tables used for the matched core count. Consumer: p10_pm_utils.C</description>
+    <id>WTH_OVERRIDE_EFFICIENCY_IDLE_TIMES</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <array>8,2</array>
+      <uint16_t>
+        <default>0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF, 0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF,0xFFFF</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_WTH_OVERRIDE_EFFICIENCY_IDLE_TIMES</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
 </attributes>
