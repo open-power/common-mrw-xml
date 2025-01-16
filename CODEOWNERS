@@ -5,4 +5,4 @@
 # the repo. Unless a later match takes precedence,
 # @ibm-system-owners : includes all of the MRW owners
 # @dcrowell : Dan Crowell, Hostboot lead
-*       @open-power/ibm-system-owners @dcrowell
+*       @dcrowell @open-power/ibm-system-owners 
