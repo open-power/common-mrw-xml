@@ -1614,6 +1614,9 @@
       <id>MRW_L2_INCREASE_JITTER</id>
     </attribute>
     <attribute>
+      <id>MRW_MAX_DDR_FREQ_ON_IOSCM</id>
+    </attribute>
+    <attribute>
       <id>MRW_P1PF_MIN_CONFIDENCE_3</id>
     </attribute>
     <attribute>

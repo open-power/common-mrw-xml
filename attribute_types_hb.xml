@@ -5313,6 +5313,22 @@
   </enumerationType>
 
   <attribute>
+    <description>Max frequency of the ioSCM memory</description>
+    <id>MRW_MAX_DDR_FREQ_ON_IOSCM</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint16_t>
+        <default>4000</default>
+      </uint16_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_MRW_MAX_DDR_FREQ_ON_IOSCM</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Used for setting maximum system frequency based on each OCMB.</description>
     <id>MRW_MAX_DDR_FREQ_PER_SLOT</id>
     <persistency>non-volatile</persistency>
