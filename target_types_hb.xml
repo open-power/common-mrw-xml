@@ -1337,7 +1337,7 @@
       <id>PLCK_IPL_ATTR_OVERRIDES_EXIST</id>
     </attribute>
     <attribute>
-      <id>POWERVS_P10_MTM</id>
+      <id>POWERVS_P10_FW_VER</id>
     </attribute>
     <attribute>
       <id>PROC_MODULE_TYPE</id>
