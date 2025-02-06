@@ -1637,7 +1637,7 @@
     <simpleType>
       <array>10</array>
       <uint8_t>
-        <default>25,50,75,0,0,0,0,0,0,0</default>
+        <default>30,50,0,0,0,0,0,0,0,0</default>
       </uint8_t>
     </simpleType>
   </attribute>
