@@ -651,6 +651,11 @@
   </targetType>
 
   <targetType>
+    <id>chip-processor-power11</id>
+    <parent>chip-processor-power10</parent>
+  </targetType>
+
+  <targetType>
     <id>chip-tpm-cectpm</id>
     <parent>chip</parent>
     <attribute>
