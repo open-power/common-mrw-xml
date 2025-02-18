@@ -3942,6 +3942,39 @@
   </enumerationType>
 
   <attribute>
+    <description>Specifies the channel loss for P11 ISC1</description>
+    <id>IO_IOHS_CHANNEL_LOSS_ISC1_WORKAROUND</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>HIGH_LOSS</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_IOHS_CHANNEL_LOSS_ISC1_WORKAROUND</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <enumerationType>
+    <description>Specifies the channel loss for P11 ISC1</description>
+    <enumerator>
+      <name>HIGH_LOSS</name>
+      <value>0x00</value>
+    </enumerator>
+    <enumerator>
+      <name>MID_LOSS</name>
+      <value>0x01</value>
+    </enumerator>
+    <enumerator>
+      <name>LOW_LOSS</name>
+      <value>0x02</value>
+    </enumerator>
+    <id>IO_IOHS_CHANNEL_LOSS_ISC1_WORKAROUND</id>
+  </enumerationType>
+
+  <attribute>
     <description>IOHS PRE1 settings</description>
     <id>IO_IOHS_PRE1</id>
     <persistency>non-volatile</persistency>
@@ -3953,6 +3986,22 @@
     </simpleType>
     <hwpfToHbAttrMap>
       <id>ATTR_IO_IOHS_PRE1</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>IOHS PRE1 settings for P11 ISC1</description>
+    <id>IO_IOHS_PRE1_ISC1_WORKAROUND</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint8_t>
+        <default>0x00</default>
+      </uint8_t>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_IO_IOHS_PRE1_ISC1_WORKAROUND</id>
       <macro>DIRECT</macro>
     </hwpfToHbAttrMap>
   </attribute>

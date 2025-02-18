@@ -2174,7 +2174,13 @@
       <id>IO_IOHS_CHANNEL_LOSS</id>
     </attribute>
     <attribute>
+      <id>IO_IOHS_CHANNEL_LOSS_ISC1_WORKAROUND</id>
+    </attribute>
+    <attribute>
       <id>IO_IOHS_PRE1</id>
+    </attribute>
+    <attribute>
+      <id>IO_IOHS_PRE1_ISC1_WORKAROUND</id>
     </attribute>
     <attribute>
       <id>IO_IOHS_PRE2</id>
