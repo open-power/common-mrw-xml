@@ -609,6 +609,12 @@
       <id>PROC_VRM_VOFFSET_UV</id>
     </attribute>
     <attribute>
+      <id>SBE_LOAD_BOOTLOADER_CHUNK_OFFSET</id>
+    </attribute>
+    <attribute>
+      <id>SBE_LOAD_BOOTLOADER_HBBL_SIZE</id>
+    </attribute>
+    <attribute>
       <id>SKEWADJ_BYPASS</id>
     </attribute>
     <attribute>

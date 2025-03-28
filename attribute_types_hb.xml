@@ -10457,6 +10457,35 @@
   </attribute>
 
   <attribute>
+    <description>Defines offset to be applied to SBE bootloader installation for current image segment</description>
+    <id>SBE_LOAD_BOOTLOADER_CHUNK_OFFSET</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint64_t/>
+    </simpleType>
+    <writeable/>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_LOAD_BOOTLOADER_CHUNK_OFFSET</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
+    <description>Defines size of complete HBBL image to be loaded, in B</description>
+    <id>SBE_LOAD_BOOTLOADER_HBBL_SIZE</id>
+    <persistency>non-volatile</persistency>
+    <readable/>
+    <simpleType>
+      <uint64_t/>
+    </simpleType>
+    <hwpfToHbAttrMap>
+      <id>ATTR_SBE_LOAD_BOOTLOADER_HBBL_SIZE</id>
+      <macro>DIRECT</macro>
+    </hwpfToHbAttrMap>
+  </attribute>
+
+  <attribute>
     <description>Control execution of updateProcessorSbeSeeproms() if 0, enable SBE update of processor SEEPROM if 1, disable SBE update of processor SEEPROM Consumer: sbe_update.C Default: 0</description>
     <id>SBE_UPDATE_DISABLE</id>
     <persistency>non-volatile</persistency>
