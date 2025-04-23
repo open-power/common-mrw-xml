@@ -572,6 +572,9 @@
       <id>PBAX_GROUPID</id>
     </attribute>
     <attribute>
+      <id>PCIE_FW_LEGACY_MODE</id>
+    </attribute>
+    <attribute>
       <id>PROC_DVFS_TEMP_DELTA_C</id>
     </attribute>
     <attribute>
