@@ -894,9 +894,6 @@
       <id>CLASS</id>
     </attribute>
     <attribute>
-      <id>EEPROM_NV_INFO</id>
-    </attribute>
-    <attribute>
       <default>
         <field>
           <id>byteAddrOffset</id>
